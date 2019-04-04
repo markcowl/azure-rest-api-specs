@@ -3,7 +3,7 @@
 > see https://aka.ms/autorest
 
 ``` yaml $(enable-multi-api)
-noun-prefix: Az
+noun-prefix: ''
 skip-model-cmdlets: true
 directive: 
   - where:
@@ -19,10 +19,6 @@ directive:
       parameter-name: VmName
     set:
       parameter-name: Name
-  - where: 
-      noun: (.*)Compute(.*)
-    set:
-      noun: $1$2
 input-file:
   - Microsoft.Compute/stable/2018-10-01/compute.json
   - Microsoft.Compute/stable/2018-10-01/runCommands.json
