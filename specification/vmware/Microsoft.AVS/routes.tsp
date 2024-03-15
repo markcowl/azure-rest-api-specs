@@ -1,11 +1,13 @@
 import "@azure-tools/typespec-azure-core";
 import "@typespec/rest";
+import "@azure-tools/typespec-client-generator-core";
 import "./models.tsp";
 
 using TypeSpec.Rest;
 using TypeSpec.Http;
 using Azure.ResourceManager;
 using Azure.ResourceManager.Foundations;
+using Azure.ClientGenerator.Core;
 using OpenAPI;
 
 namespace Microsoft.AVS;
@@ -99,6 +101,7 @@ interface PrivateClouds {
   "x-ms-client-name",
   "privateCloud"
 );
+@@clientName(PrivateClouds.createOrUpdate::parameters.resource, "privateCloud");
 
 @armResourceOperations
 interface Clusters {
@@ -156,6 +159,7 @@ interface Clusters {
   "x-ms-client-name",
   "cluster"
 );
+@@clientName(Clusters.createOrUpdate::parameters.resource, "cluster");
 
 @armResourceOperations
 interface Datastores {
@@ -176,6 +180,7 @@ interface Datastores {
   "application/json",
   "datastore"
 );
+@@clientName(Datastores.createOrUpdate::parameters.resource, "datastore");
 @@OpenAPI.extension(Datastores.createOrUpdate::parameters.resource,
   "x-ms-client-name",
   "datastore"
@@ -196,6 +201,9 @@ interface HcxEnterpriseSites {
 
 @@encodedName(HcxEnterpriseSites.createOrUpdate::parameters.resource,
   "application/json",
+  "hcxEnterpriseSite"
+);
+@@clientName(HcxEnterpriseSites.createOrUpdate::parameters.resource,
   "hcxEnterpriseSite"
 );
 @@OpenAPI.extension(HcxEnterpriseSites.createOrUpdate::parameters.resource,
@@ -225,6 +233,9 @@ interface Authorizations {
   "application/json",
   "authorization"
 );
+@@clientName(Authorizations.createOrUpdate::parameters.resource,
+  "authorization"
+);
 @@OpenAPI.extension(Authorizations.createOrUpdate::parameters.resource,
   "x-ms-client-name",
   "authorization"
@@ -247,6 +258,9 @@ interface GlobalReachConnections {
 
 @@encodedName(GlobalReachConnections.createOrUpdate::parameters.resource,
   "application/json",
+  "globalReachConnection"
+);
+@@clientName(GlobalReachConnections.createOrUpdate::parameters.resource,
   "globalReachConnection"
 );
 @@OpenAPI.extension(GlobalReachConnections.createOrUpdate::parameters.resource,
@@ -298,12 +312,19 @@ interface WorkloadNetworkSegments {
   "application/json",
   "workloadNetworkSegment"
 );
+@@clientName(WorkloadNetworkSegments.create::parameters.resource,
+  "workloadNetworkSegment"
+);
 @@OpenAPI.extension(WorkloadNetworkSegments.create::parameters.resource,
   "x-ms-client-name",
   "workloadNetworkSegment"
 );
 
 @@encodedName(WorkloadNetworkSegments.update::parameters.properties,
+  "application/json",
+  "workloadNetworkSegment"
+);
+@@clientName(WorkloadNetworkSegments.update::parameters.properties,
   "application/json",
   "workloadNetworkSegment"
 );
@@ -351,6 +372,9 @@ interface WorkloadNetworkDhcpConfigurations {
   "application/json",
   "workloadNetworkDhcp"
 );
+@@clientName(WorkloadNetworkDhcpConfigurations.create::parameters.resource,
+  "workloadNetworkDhcp"
+);
 @@OpenAPI.extension(WorkloadNetworkDhcpConfigurations.create::parameters.resource,
   "x-ms-client-name",
   "workloadNetworkDhcp"
@@ -360,6 +384,9 @@ interface WorkloadNetworkDhcpConfigurations {
   "application/json",
   "workloadNetworkDhcp"
 );
+@@clientName(WorkloadNetworkDhcpConfigurations.update::parameters.properties,
+  "workloadNetworkDhcp"
+);
 @@OpenAPI.extension(WorkloadNetworkDhcpConfigurations.update::parameters.properties,
   "x-ms-client-name",
   "workloadNetworkDhcp"
@@ -367,6 +394,9 @@ interface WorkloadNetworkDhcpConfigurations {
 
 @@encodedName(WorkloadNetworkDhcpConfigurations.update::parameters.properties,
   "application/json",
+  "workloadNetworkDhcp"
+);
+@@clientName(WorkloadNetworkDhcpConfigurations.update::parameters.properties,
   "workloadNetworkDhcp"
 );
 @@OpenAPI.extension(WorkloadNetworkDhcpConfigurations.update::parameters.properties,
@@ -439,6 +469,9 @@ interface WorkloadNetworkPortMirroringProfiles {
   "application/json",
   "workloadNetworkPortMirroring"
 );
+@@clientName(WorkloadNetworkPortMirroringProfiles.create::parameters.resource,
+  "workloadNetworkPortMirroring"
+);
 @@OpenAPI.extension(WorkloadNetworkPortMirroringProfiles.create::parameters.resource,
   "x-ms-client-name",
   "workloadNetworkPortMirroring"
@@ -446,6 +479,9 @@ interface WorkloadNetworkPortMirroringProfiles {
 
 @@encodedName(WorkloadNetworkPortMirroringProfiles.update::parameters.properties,
   "application/json",
+  "workloadNetworkPortMirroring"
+);
+@@clientName(WorkloadNetworkPortMirroringProfiles.update::parameters.properties,
   "workloadNetworkPortMirroring"
 );
 @@OpenAPI.extension(WorkloadNetworkPortMirroringProfiles.update::parameters.properties,
@@ -507,6 +543,10 @@ interface WorkloadNetworkVmGroups {
   "application/json",
   "workloadNetworkVMGroup"
 );
+@@clientName(WorkloadNetworkVmGroups.create::parameters.resource,
+  "application/json",
+  "workloadNetworkVMGroup"
+);
 @@OpenAPI.extension(WorkloadNetworkVmGroups.create::parameters.resource,
   "x-ms-client-name",
   "workloadNetworkVMGroup"
@@ -514,6 +554,9 @@ interface WorkloadNetworkVmGroups {
 
 @@encodedName(WorkloadNetworkVmGroups.update::parameters.properties,
   "application/json",
+  "workloadNetworkVMGroup"
+);
+@@clientName(WorkloadNetworkVmGroups.update::parameters.properties,
   "workloadNetworkVMGroup"
 );
 @@OpenAPI.extension(WorkloadNetworkVmGroups.update::parameters.properties,
@@ -586,6 +629,9 @@ interface WorkloadNetworkDnsServices {
   "application/json",
   "workloadNetworkDnsService"
 );
+@@clientName(WorkloadNetworkDnsServices.create::parameters.resource,
+  "workloadNetworkDnsService"
+);
 @@OpenAPI.extension(WorkloadNetworkDnsServices.create::parameters.resource,
   "x-ms-client-name",
   "workloadNetworkDnsService"
@@ -593,6 +639,9 @@ interface WorkloadNetworkDnsServices {
 
 @@encodedName(WorkloadNetworkDnsServices.update::parameters.properties,
   "application/json",
+  "workloadNetworkDnsService"
+);
+@@clientName(WorkloadNetworkDnsServices.update::parameters.properties,
   "workloadNetworkDnsService"
 );
 @@OpenAPI.extension(WorkloadNetworkDnsServices.update::parameters.properties,
@@ -654,6 +703,9 @@ interface WorkloadNetworkDnsZones {
   "application/json",
   "workloadNetworkDnsZone"
 );
+@@clientName(WorkloadNetworkDnsZones.create::parameters.resource,
+  "workloadNetworkDnsZone"
+);
 @@OpenAPI.extension(WorkloadNetworkDnsZones.create::parameters.resource,
   "x-ms-client-name",
   "workloadNetworkDnsZone"
@@ -661,6 +713,9 @@ interface WorkloadNetworkDnsZones {
 
 @@encodedName(WorkloadNetworkDnsZones.update::parameters.properties,
   "application/json",
+  "workloadNetworkDnsZone"
+);
+@@clientName(WorkloadNetworkDnsZones.update::parameters.properties,
   "workloadNetworkDnsZone"
 );
 @@OpenAPI.extension(WorkloadNetworkDnsZones.update::parameters.properties,
@@ -713,6 +768,9 @@ interface WorkloadNetworkPublicIps {
   "application/json",
   "workloadNetworkPublicIP"
 );
+@@clientName(WorkloadNetworkPublicIps.create::parameters.resource,
+  "workloadNetworkPublicIP"
+);
 @@OpenAPI.extension(WorkloadNetworkPublicIps.create::parameters.resource,
   "x-ms-client-name",
   "workloadNetworkPublicIP"
@@ -737,6 +795,7 @@ interface CloudLinks {
   "application/json",
   "cloudLink"
 );
+@@clientName(CloudLinks.createOrUpdate::parameters.resource, "cloudLink");
 @@OpenAPI.extension(CloudLinks.createOrUpdate::parameters.resource,
   "x-ms-client-name",
   "cloudLink"
@@ -761,6 +820,7 @@ interface Addons {
   "application/json",
   "addon"
 );
+@@clientName(Addons.createOrUpdate::parameters.resource, "addon");
 @@OpenAPI.extension(Addons.createOrUpdate::parameters.resource,
   "x-ms-client-name",
   "addon"
@@ -836,6 +896,9 @@ interface PlacementPolicies {
   "application/json",
   "placementPolicy"
 );
+@@clientName(PlacementPolicies.createOrUpdate::parameters.resource,
+  "placementPolicy"
+);
 @@OpenAPI.extension(PlacementPolicies.createOrUpdate::parameters.resource,
   "x-ms-client-name",
   "placementPolicy"
@@ -889,6 +952,9 @@ interface ScriptExecutions {
 
 @@encodedName(ScriptExecutions.createOrUpdate::parameters.resource,
   "application/json",
+  "scriptExecution"
+);
+@@clientName(ScriptExecutions.createOrUpdate::parameters.resource,
   "scriptExecution"
 );
 @@OpenAPI.extension(ScriptExecutions.createOrUpdate::parameters.resource,
