@@ -60,15 +60,8 @@ interface PrivateClouds {
 
   // This could be modeled with ArmCustomPatchAsync if a 202 response with no body is used instead of a 201.
   // update is ArmCustomPatchAsync<PrivateCloud, PrivateCloudUpdate>;
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
+
   @doc("Update a PrivateCloud")
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   @armResourceUpdate(PrivateCloud)
   @patch
   update(
@@ -82,7 +75,7 @@ interface PrivateClouds {
     ...CreatedResponse;
 
     ...Azure.Core.Foundations.RetryAfterHeader;
-    ...LocationHeader;
+    ...ArmLroLocationHeader<FinalResult = PrivateCloud>;
 
     @bodyRoot
     @doc("The updated private cloud.")
@@ -130,15 +123,7 @@ interface Clusters {
 
   // This could be modeled with ArmCustomPatchAsync if a 202 response with no body is used instead of a 201.
   // update is ArmCustomPatchAsync<Cluster, ClusterUpdate>;
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @doc("Update a Cluster")
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   @armResourceUpdate(Cluster)
   @patch
   update(
@@ -152,7 +137,7 @@ interface Clusters {
     ...CreatedResponse;
 
     ...Azure.Core.Foundations.RetryAfterHeader;
-    ...LocationHeader;
+    ...ArmLroLocationHeader<FinalResult = Cluster>;
 
     @bodyRoot
     @doc("The updated cluster.")
@@ -426,21 +411,13 @@ interface WorkloadNetworkPortMirroringProfiles {
   >;
 
   #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-operation" "PortMirroringProfileParameter should be last, but it is breaking to correct it."
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "Can not change existing operationId."
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
+  #suppress "@azure-tools/typespec-azure-core/no-openapi" "Breaking change"
   @operationId("WorkloadNetworks_DeletePortMirroring")
   // delete is ArmResourceDeleteAsync<WorkloadNetworkPortMirroring>;
   @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/portMirroringProfiles/{portMirroringId}")
   @doc("Delete a {name}", WorkloadNetworkPortMirroring)
   @delete
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
-  delete(
+  deletePortMirroring(
     ...BaseParameters<WorkloadNetworkPortMirroring>,
     ...PortMirroringProfileParameter,
     ...PrivateCloudNameParameter,
@@ -496,13 +473,6 @@ interface WorkloadNetworkVmGroups {
   @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/vmGroups/{vmGroupId}")
   @doc("Delete a {name}", WorkloadNetworkVMGroup)
   @delete
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   delete(
     ...BaseParameters<WorkloadNetworkVMGroup>,
     ...VmGroupIdParameter,
@@ -582,13 +552,6 @@ interface WorkloadNetworkDnsServices {
   @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dnsServices/{dnsServiceId}")
   @doc("Delete a {name}", WorkloadNetworkDnsService)
   @delete
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   delete(
     ...BaseParameters<WorkloadNetworkDnsService>,
     ...DnsServiceIdParameter,
@@ -645,13 +608,6 @@ interface WorkloadNetworkDnsZones {
   @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dnsZones/{dnsZoneId}")
   @doc("Delete a {name}", WorkloadNetworkDnsZone)
   @delete
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   delete(
     ...BaseParameters<WorkloadNetworkDnsZone>,
     ...DnsZoneIdParameter,
@@ -701,13 +657,6 @@ interface WorkloadNetworkPublicIps {
   @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/publicIPs/{publicIPId}")
   @doc("Delete a {name}", WorkloadNetworkPublicIP)
   @delete
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   delete(
     ...BaseParameters<WorkloadNetworkPublicIP>,
     ...PublicIPIdParameter,
@@ -785,11 +734,9 @@ interface VirtualMachines {
   get is ArmResourceRead<VirtualMachine>;
 
   // restrictMovement should be a ArmResourceActionNoContentAsync, but does not respond with a 204.
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @doc("Enable or disable DRS-driven VM movement restriction")
   @armResourceAction(Location)
   @post
-  @extension("x-ms-long-running-operation", true)
   restrictMovement(
     ...ResourceInstanceParameters<VirtualMachine>,
 
@@ -823,15 +770,7 @@ interface PlacementPolicies {
   // 202 response has a body, but it should not to match ArmCustomPatchAsync.
   // update is ArmCustomPatchAsync<PlacementPolicy, PlacementPolicyUpdate>;
   #suppress "@azure-tools/typespec-azure-resource-manager/no-response-body"
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @doc("Update a PlacementPolicy")
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   @armResourceUpdate(PlacementPolicy)
   @patch
   update(
@@ -843,7 +782,7 @@ interface PlacementPolicies {
   ): ArmResponse<PlacementPolicy> | {
     ...AcceptedResponse;
     ...Azure.Core.Foundations.RetryAfterHeader;
-    ...LocationHeader;
+    ...ArmLroLocationHeader<FinalResult = PlacementPolicy>;
 
     @bodyRoot
     @doc("The updatd placement policy.")
@@ -980,15 +919,7 @@ op ArmResourceActionNoContentAsyncNoRequestBody<
 // Just like ArmResourceActionAsyncBase, but with no request body.
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-operation"
 #suppress "@azure-tools/typespec-azure-core/documentation-required" "MUST fix in next update"
-#suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
 @autoRoute
-@extension("x-ms-long-running-operation", true)
-@extension(
-  "x-ms-long-running-operation-options",
-  {
-    `final-state-via`: "location",
-  }
-)
 @armResourceAction(TResource)
 @post
 op ArmResourceActionAsyncBaseNoRequestBody<
