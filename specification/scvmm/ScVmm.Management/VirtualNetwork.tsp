@@ -39,30 +39,26 @@ interface VirtualNetworks {
     LroHeaders = Azure.Core.Foundations.RetryAfterHeader
   >;
   /** Updates the VirtualNetworks resource. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Implements the VirtualNetworks PATCH method.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
-  update is ArmTagsPatchAsync<VirtualNetwork>;
+  @Azure.Core.useFinalStateVia("azure-async-operation")
+  update is ArmTagsPatchAsync<
+    VirtualNetwork,
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader<FinalResult = VirtualNetwork> &
+      ArmAsyncOperationHeader<FinalResult = VirtualNetwork>
+  >;
   /** Deregisters the ScVmm virtual network from Azure. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Implements VirtualNetwork DELETE method.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
+  @Azure.Core.useFinalStateVia("azure-async-operation")
   delete is ArmResourceDeleteWithoutOkAsync<
     VirtualNetwork,
     {
       ...Foundations.BaseParameters<VirtualNetwork>;
       ...QueryForceDelete;
-    }
+    },
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader &
+      ArmAsyncOperationHeader
   >;
   /** List of VirtualNetworks in a resource group. */
   @summary("Implements GET VirtualNetworks in a resource group.")

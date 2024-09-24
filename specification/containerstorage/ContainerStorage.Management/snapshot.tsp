@@ -12,15 +12,8 @@ namespace Microsoft.ContainerStorage;
 @armResourceOperations
 interface Snapshots {
   get is ArmResourceRead<Snapshot>;
-  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST CHANGE ON NEXT UPDATE"
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DOT NOT COPY - migrate to LRO apis"
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
-  @Azure.Core.useFinalStateVia("azure-async-operation")
+  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST FIX ON NEXT CHECK-IN final-state-via value header should occur in the spec"
+  @Azure.Core.useFinalStateVia("location")
   createOrUpdate is ArmResourceCreateOrReplaceAsync<
     Snapshot,
     LroHeaders = Azure.Core.Foundations.RetryAfterHeader

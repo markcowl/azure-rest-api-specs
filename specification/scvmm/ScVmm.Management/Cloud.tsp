@@ -31,7 +31,7 @@ interface Clouds {
   @summary("Gets a Cloud.")
   get is ArmResourceRead<Cloud>;
   /** Onboards the ScVmm fabric cloud as an Azure cloud resource. */
-  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST CHANGE ON NEXT UPDATE"
+  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST FIX ON NEXT CHECK-IN final-state-via value header should occur in the spec"
   @summary("Implements Clouds PUT method.")
   @Azure.Core.useFinalStateVia("azure-async-operation")
   createOrUpdate is ArmResourceCreateOrReplaceAsync<
@@ -39,30 +39,26 @@ interface Clouds {
     LroHeaders = Azure.Core.Foundations.RetryAfterHeader
   >;
   /** Updates the Clouds resource. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Implements the Clouds PATCH method.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
-  update is ArmTagsPatchAsync<Cloud>;
+  @Azure.Core.useFinalStateVia("azure-async-operation")
+  update is ArmTagsPatchAsync<
+    Cloud,
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmAsyncOperationHeader<FinalResult = Cloud> &
+      ArmLroLocationHeader<FinalResult = Cloud>
+  >;
   /** Deregisters the ScVmm fabric cloud from Azure. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Implements Cloud resource DELETE method.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
+  @Azure.Core.useFinalStateVia("azure-async-operation")
   delete is ArmResourceDeleteWithoutOkAsync<
     Cloud,
     {
       ...Foundations.BaseParameters<Cloud>;
       ...QueryForceDelete;
-    }
+    },
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader &
+      ArmAsyncOperationHeader
   >;
   /** List of Clouds in a resource group. */
   @summary("Implements GET Clouds in a resource group.")

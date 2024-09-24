@@ -11,17 +11,10 @@ namespace Microsoft.MobilePacketCore;
  * @template TBaseParameters Optional. Allows overriding the operation parameters
  */
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-operation" "This is a valid template"
-#suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - migrate to LRO apis"
 @autoRoute
 @doc("Create a {name}", TResource)
-@OpenAPI.extension("x-ms-long-running-operation", true)
-@OpenAPI.extension(
-  "x-ms-long-running-operation-options",
-  {
-    `final-state-via`: "azure-async-operation",
-  }
-)
 @armResourceCreateOrUpdate(TResource)
+@Azure.Core.useFinalStateVia("azure-async-operation")
 @put
 op ArmResourceCreateOrUpdate2Async<
   TResource extends Azure.ResourceManager.Foundations.Resource,
@@ -32,7 +25,11 @@ op ArmResourceCreateOrUpdate2Async<
   @doc("Resource create parameters.")
   @bodyRoot
   resource: TResource,
-): ArmUpdatedResponse<TResource> | ArmCreatedResponse<TResource> | ErrorResponse;
+): ArmResourceUpdatedResponse<TResource> | ArmResourceCreatedResponse<
+  TResource,
+  LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+    ArmAsyncOperationHeader<FinalResult = TResource>
+> | ErrorResponse;
 
 @doc("ARM resource update successful")
 model ArmUpdatedResponse<TResource extends Azure.ResourceManager.Foundations.Resource>

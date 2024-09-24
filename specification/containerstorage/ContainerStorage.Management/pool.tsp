@@ -14,16 +14,11 @@ interface Pools {
   get is ArmResourceRead<Pool>;
   #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST CHANGE ON NEXT UPDATE"
   #suppress "@azure-tools/typespec-azure-core/no-openapi" "DOT NOT COPY - migrate to LRO apis"
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
+  @Azure.Core.useFinalStateVia("location")
   @Azure.Core.useFinalStateVia("azure-async-operation")
   createOrUpdate is ArmResourceCreateOrReplaceAsync<
     Pool,
-    LroHeaders = Azure.Core.Foundations.RetryAfterHeader
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader & ArmLroLocationHeader
   >;
   delete is ArmResourceDeleteWithoutOkAsync<Pool>;
   update is ArmCustomPatchAsync<

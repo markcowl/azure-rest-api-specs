@@ -67,27 +67,18 @@ interface VirtualMachineInstances {
     LroHeaders = Azure.Core.Foundations.RetryAfterHeader
   >;
   /** The operation to update a virtual machine instance. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Updates a virtual machine.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
+  @Azure.Core.useFinalStateVia("azure-async-operation")
   update is ArmCustomPatchAsync<
     VirtualMachineInstance,
-    VirtualMachineInstanceUpdate
+    VirtualMachineInstanceUpdate,
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader &
+      ArmAsyncOperationHeader<FinalResult = VirtualMachineInstance>
   >;
   /** The operation to delete a virtual machine instance. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Deletes an virtual machine.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
+  @Azure.Core.useFinalStateVia("azure-async-operation")
   delete is ArmResourceDeleteWithoutOkAsync<
     VirtualMachineInstance,
     {
@@ -97,7 +88,10 @@ interface VirtualMachineInstances {
       /** Whether to disable the VM from azure and also delete it from Vmm. */
       @query("deleteFromHost")
       deleteFromHost?: DeleteFromHost;
-    }
+    },
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader &
+      ArmAsyncOperationHeader
   >;
   /** Lists all of the virtual machine instances within the specified parent resource. */
   @summary("Implements List virtual machine instances.")

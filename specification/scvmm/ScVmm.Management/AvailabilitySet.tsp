@@ -38,15 +38,14 @@ interface AvailabilitySets {
       Azure.Core.Foundations.RetryAfterHeader
   >;
   /** Updates the AvailabilitySets resource. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Implements the AvailabilitySets PATCH method.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
-  update is ArmTagsPatchAsync<AvailabilitySet>;
+  @Azure.Core.useFinalStateVia("azure-async-operation")
+  update is ArmTagsPatchAsync<
+    AvailabilitySet,
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmAsyncOperationHeader<FinalResult = AvailabilitySet> &
+      ArmLroLocationHeader<FinalResult = AvailabilitySet>
+  >;
   /** Deregisters the ScVmm availability set from Azure. */
   @summary("Implements AvailabilitySet DELETE method.")
   delete is ArmResourceDeleteWithoutOkAsync<

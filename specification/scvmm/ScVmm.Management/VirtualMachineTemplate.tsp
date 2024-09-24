@@ -40,30 +40,26 @@ interface VirtualMachineTemplates {
     LroHeaders = Azure.Core.Foundations.RetryAfterHeader
   >;
   /** Updates the VirtualMachineTemplate resource. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Implements the VirtualMachineTemplate PATCH method.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
-  update is ArmTagsPatchAsync<VirtualMachineTemplate>;
+  @Azure.Core.useFinalStateVia("azure-async-operation")
+  update is ArmTagsPatchAsync<
+    VirtualMachineTemplate,
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader<FinalResult = VirtualMachineTemplate> &
+      ArmAsyncOperationHeader<FinalResult = VirtualMachineTemplate>
+  >;
   /** Deregisters the ScVmm VM Template from Azure. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Implements VirtualMachineTemplate DELETE method.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
+  @Azure.Core.useFinalStateVia("azure-async-operation")
   delete is ArmResourceDeleteWithoutOkAsync<
     VirtualMachineTemplate,
     {
       ...Foundations.BaseParameters<VirtualMachineTemplate>;
       ...QueryForceDelete;
-    }
+    },
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader &
+      ArmAsyncOperationHeader
   >;
   /** List of VirtualMachineTemplates in a resource group. */
   @summary("Implements GET VirtualMachineTemplates in a resource group.")
