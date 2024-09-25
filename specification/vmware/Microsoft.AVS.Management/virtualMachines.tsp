@@ -19,18 +19,17 @@ interface VirtualMachines {
   get is ArmResourceRead<VirtualMachine>;
 
   // restrictMovement should be a ArmResourceActionNoContentAsync, but does not respond with a 204.
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @doc("Enable or disable DRS-driven VM movement restriction")
   @armResourceAction(Location)
   @post
-  @extension("x-ms-long-running-operation", true)
   restrictMovement(
     ...ResourceInstanceParameters<VirtualMachine>,
 
     @bodyRoot
     @doc("The body type of the operation request.")
     restrictMovement: VirtualMachineRestrictMovement,
-  ): ArmAcceptedLroResponse | ErrorResponse;
+  ): ArmAcceptedLroResponse<LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+    ArmLroLocationHeader<FinalResult = VirtualMachine>> | ErrorResponse;
 }
 
 @doc("Virtual Machine Restrict Movement state")

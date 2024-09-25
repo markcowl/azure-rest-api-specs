@@ -44,13 +44,6 @@ interface WorkloadNetworkVmGroups {
   @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/vmGroups/{vmGroupId}")
   @doc("Delete a {name}", WorkloadNetworkVMGroup)
   @delete
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   delete(
     ...Foundations.BaseParameters<WorkloadNetworkVMGroup>,
     ...VmGroupIdParameter,

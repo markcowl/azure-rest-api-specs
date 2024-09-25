@@ -47,44 +47,28 @@ interface Report {
   /**
    * Get the AppComplianceAutomation report and its properties.
    */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "For backward compatibility"
-  @operationId("Report_Get")
   get is ArmResourceRead<ReportResource>;
 
   /**
    * Create a new AppComplianceAutomation report or update an exiting AppComplianceAutomation report.
    */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "For backward compatibility"
-  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST CHANGE ON NEXT UPDATE"
-  @operationId("Report_CreateOrUpdate")
   @Azure.Core.useFinalStateVia("azure-async-operation")
   createOrUpdate is ArmResourceCreateOrReplaceAsync<
     ReportResource,
-    Azure.ResourceManager.Foundations.BaseParameters<ReportResource>,
-    LroHeaders = Azure.Core.Foundations.RetryAfterHeader
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmAsyncOperationHeader<FinalResult = ReportResource>
   >;
 
   /**
    * Update an exiting AppComplianceAutomation report.
    */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "For backward compatibility"
   @parameterVisibility
-  @operationId("Report_Update")
-  update is ArmCustomPatchAsync<
-    ReportResource,
-    ReportResourcePatch,
-    Azure.ResourceManager.Foundations.BaseParameters<ReportResource>
-  >;
+  update is ArmCustomPatchAsync<ReportResource, ReportResourcePatch>;
 
   /**
    * Delete an AppComplianceAutomation report.
    */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "For backward compatibility"
-  @operationId("Report_Delete")
-  delete is ArmResourceDeleteWithoutOkAsync<
-    ReportResource,
-    Azure.ResourceManager.Foundations.BaseParameters<ReportResource>
-  >;
+  delete is ArmResourceDeleteWithoutOkAsync<ReportResource>;
 
   /**
    * Get the AppComplianceAutomation report list for the tenant.

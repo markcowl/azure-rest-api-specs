@@ -39,30 +39,23 @@ interface VmmServers {
     LroHeaders = Azure.Core.Foundations.RetryAfterHeader
   >;
   /** Updates the VmmServers resource. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Implements VmmServers PATCH method.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
-  update is ArmTagsPatchAsync<VmmServer>;
+  @Azure.Core.useFinalStateVia("azure-async-operation")
+  update is ArmTagsPatchAsync<
+    VmmServer,
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader &
+      ArmAsyncOperationHeader<FinalResult = VmmServer>
+  >;
   /** Removes the SCVmm fabric from Azure. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Implements VmmServers DELETE method.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
+  @Azure.Core.useFinalStateVia("azure-async-operation")
   delete is ArmResourceDeleteWithoutOkAsync<
     VmmServer,
-    {
-      ...Foundations.BaseParameters<VmmServer>;
-      ...QueryForceDelete;
-    }
+    Parameters = QueryForceDelete,
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader &
+      ArmAsyncOperationHeader
   >;
   /** List of VmmServers in a resource group. */
   @summary("Implements GET VmmServers in a resource group.")

@@ -50,13 +50,6 @@ interface WorkloadNetworkDnsServices {
   @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/dnsServices/{dnsServiceId}")
   @doc("Delete a {name}", WorkloadNetworkDnsService)
   @delete
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   delete(
     ...Foundations.BaseParameters<WorkloadNetworkDnsService>,
     ...DnsServiceIdParameter,

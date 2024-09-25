@@ -38,13 +38,6 @@ interface WorkloadNetworkPublicIps {
   @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/publicIPs/{publicIPId}")
   @doc("Delete a {name}", WorkloadNetworkPublicIP)
   @delete
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   delete(
     ...Foundations.BaseParameters<WorkloadNetworkPublicIP>,
     ...PublicIPIdParameter,

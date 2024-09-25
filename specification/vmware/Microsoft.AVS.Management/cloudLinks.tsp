@@ -9,8 +9,6 @@ using TypeSpec.Versioning;
 
 @armResourceOperations
 interface CloudLinks {
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "Can not change existing operationId."
-  @operationId("CloudLinks_List")
   list is ArmResourceListByParent<
     CloudLink,
     Response = ArmResponse<ResourceList<CloudLink>>
@@ -18,12 +16,8 @@ interface CloudLinks {
 
   get is ArmResourceRead<CloudLink>;
 
-  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST CHANGE ON NEXT UPDATE"
   @Azure.Core.useFinalStateVia("azure-async-operation")
-  createOrUpdate is ArmResourceCreateOrUpdateAsync<
-    CloudLink,
-    LroHeaders = Azure.Core.Foundations.RetryAfterHeader
-  >;
+  createOrUpdate is ArmResourceCreateOrUpdateAsync<CloudLink>;
 
   #suppress "deprecated"
   #suppress "@azure-tools/typespec-azure-resource-manager/arm-delete-operation-response-codes"

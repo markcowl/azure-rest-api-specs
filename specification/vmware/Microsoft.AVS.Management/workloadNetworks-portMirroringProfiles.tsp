@@ -47,13 +47,6 @@ interface WorkloadNetworkPortMirroringProfiles {
   @route("/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.AVS/privateClouds/{privateCloudName}/workloadNetworks/default/portMirroringProfiles/{portMirroringId}")
   @doc("Delete a {name}", WorkloadNetworkPortMirroring)
   @delete
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   delete(
     ...Foundations.BaseParameters<WorkloadNetworkPortMirroring>,
     ...PortMirroringProfileParameter,

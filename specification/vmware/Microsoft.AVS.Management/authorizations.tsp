@@ -9,8 +9,6 @@ using TypeSpec.Versioning;
 
 @armResourceOperations
 interface Authorizations {
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "Can not change existing operationId."
-  @operationId("Authorizations_List")
   list is ArmResourceListByParent<
     ExpressRouteAuthorization,
     Response = ArmResponse<ResourceList<ExpressRouteAuthorization>>
@@ -18,13 +16,7 @@ interface Authorizations {
 
   get is ArmResourceRead<ExpressRouteAuthorization>;
 
-  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST REMOVE AT NEXT API VERSION UPDATE"
-  @Azure.Core.useFinalStateVia("azure-async-operation")
-  createOrUpdate is ArmResourceCreateOrUpdateAsync<
-    ExpressRouteAuthorization,
-    Foundations.BaseParameters<PrivateCloud>,
-    LroHeaders = Azure.Core.Foundations.RetryAfterHeader
-  >;
+  createOrUpdate is ArmResourceCreateOrUpdateAsync<ExpressRouteAuthorization>;
 
   #suppress "deprecated"
   #suppress "@azure-tools/typespec-azure-resource-manager/arm-delete-operation-response-codes"

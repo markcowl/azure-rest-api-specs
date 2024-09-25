@@ -33,15 +33,7 @@ interface PrivateClouds {
 
   // This could be modeled with ArmCustomPatchAsync if a 202 response with no body is used instead of a 201.
   // update is ArmCustomPatchAsync<PrivateCloud, PrivateCloudUpdate>;
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @doc("Update a PrivateCloud")
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
   @armResourceUpdate(PrivateCloud)
   @patch
   update(
@@ -55,7 +47,7 @@ interface PrivateClouds {
     ...CreatedResponse;
 
     ...Azure.Core.Foundations.RetryAfterHeader;
-    ...LocationHeader;
+    ...ArmLroLocationHeader<FinalResult = PrivateCloud>;
 
     @bodyRoot
     @doc("The updated private cloud.")

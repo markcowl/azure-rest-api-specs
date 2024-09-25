@@ -9,8 +9,6 @@ using TypeSpec.Versioning;
 
 @armResourceOperations
 interface Addons {
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "Can not change existing operationId."
-  @operationId("Addons_List")
   list is ArmResourceListByParent<
     Addon,
     Response = ArmResponse<ResourceList<Addon>>
@@ -18,12 +16,8 @@ interface Addons {
 
   get is ArmResourceRead<Addon>;
 
-  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST CHANGE ON NEXT UPDATE"
   @Azure.Core.useFinalStateVia("azure-async-operation")
-  createOrUpdate is ArmResourceCreateOrUpdateAsync<
-    Addon,
-    LroHeaders = Azure.Core.Foundations.RetryAfterHeader
-  >;
+  createOrUpdate is ArmResourceCreateOrUpdateAsync<Addon>;
 
   #suppress "deprecated"
   #suppress "@azure-tools/typespec-azure-resource-manager/arm-delete-operation-response-codes"

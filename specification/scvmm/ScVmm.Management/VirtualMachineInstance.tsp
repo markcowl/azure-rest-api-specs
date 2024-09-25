@@ -59,45 +59,34 @@ interface VirtualMachineInstances {
   @summary("Gets a virtual machine.")
   get is ArmResourceRead<VirtualMachineInstance>;
   /** The operation to create or update a virtual machine instance. Please note some properties can be set only during virtual machine instance creation. */
-  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST CHANGE ON NEXT UPDATE"
   @summary("Implements virtual machine PUT method.")
   @Azure.Core.useFinalStateVia("azure-async-operation")
-  createOrUpdate is ArmResourceCreateOrUpdateAsync<
-    VirtualMachineInstance,
-    LroHeaders = Azure.Core.Foundations.RetryAfterHeader
-  >;
+  createOrUpdate is ArmResourceCreateOrUpdateAsync<VirtualMachineInstance>;
   /** The operation to update a virtual machine instance. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Updates a virtual machine.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
+  @Azure.Core.useFinalStateVia("azure-async-operation")
   update is ArmCustomPatchAsync<
     VirtualMachineInstance,
-    VirtualMachineInstanceUpdate
+    VirtualMachineInstanceUpdate,
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader &
+      ArmAsyncOperationHeader<FinalResult = VirtualMachineInstance>
   >;
   /** The operation to delete a virtual machine instance. */
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @summary("Deletes an virtual machine.")
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "azure-async-operation",
-    }
-  )
+  @Azure.Core.useFinalStateVia("azure-async-operation")
   delete is ArmResourceDeleteWithoutOkAsync<
     VirtualMachineInstance,
-    {
-      ...Foundations.BaseParameters<VirtualMachineInstance>;
+    Parameters = {
       ...QueryForceDelete;
 
       /** Whether to disable the VM from azure and also delete it from Vmm. */
       @query("deleteFromHost")
       deleteFromHost?: DeleteFromHost;
-    }
+    },
+    LroHeaders = Azure.Core.Foundations.RetryAfterHeader &
+      ArmLroLocationHeader &
+      ArmAsyncOperationHeader
   >;
   /** Lists all of the virtual machine instances within the specified parent resource. */
   @summary("Implements List virtual machine instances.")

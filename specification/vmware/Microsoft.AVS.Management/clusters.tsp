@@ -9,8 +9,6 @@ using TypeSpec.Versioning;
 
 @armResourceOperations
 interface Clusters {
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "Can not change existing operationId."
-  @operationId("Clusters_List")
   list is ArmResourceListByParent<
     Cluster,
     Response = ArmResponse<ResourceList<Cluster>>
@@ -18,24 +16,13 @@ interface Clusters {
 
   get is ArmResourceRead<Cluster>;
 
-  #suppress "@azure-tools/typespec-azure-core/invalid-final-state" "MUST CHANGE ON NEXT UPDATE"
   @Azure.Core.useFinalStateVia("azure-async-operation")
-  createOrUpdate is ArmResourceCreateOrUpdateAsync<
-    Cluster,
-    LroHeaders = Azure.Core.Foundations.RetryAfterHeader
-  >;
+  createOrUpdate is ArmResourceCreateOrUpdateAsync<Cluster>;
 
   // This could be modeled with ArmCustomPatchAsync if a 202 response with no body is used instead of a 201.
   // update is ArmCustomPatchAsync<Cluster, ClusterUpdate>;
-  #suppress "@azure-tools/typespec-azure-core/no-openapi" "DO NOT COPY - TODO migrate to LRO apis"
   @doc("Update a Cluster")
-  @extension("x-ms-long-running-operation", true)
-  @extension(
-    "x-ms-long-running-operation-options",
-    {
-      `final-state-via`: "location",
-    }
-  )
+  @Azure.Core.useFinalStateVia("location")
   @armResourceUpdate(Cluster)
   @patch
   update(
@@ -49,7 +36,7 @@ interface Clusters {
     ...CreatedResponse;
 
     ...Azure.Core.Foundations.RetryAfterHeader;
-    ...LocationHeader;
+    ...ArmLroLocationHeader<FinalResult = Cluster>;
 
     @bodyRoot
     @doc("The updated cluster.")
