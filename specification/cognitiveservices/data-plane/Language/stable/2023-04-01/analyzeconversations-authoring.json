@@ -238,6 +238,9 @@
             "$ref": "./examples/analyzeconversations-authoring/SuccessfulDeleteProject.json"
           }
         },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
+        },
         "x-ms-long-running-operation": true
       }
     },
@@ -344,6 +347,9 @@
             "$ref": "./examples/analyzeconversations-authoring/SuccessfulExportProject.json"
           }
         },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
+        },
         "x-ms-long-running-operation": true
       }
     },
@@ -424,6 +430,9 @@
             "$ref": "./examples/analyzeconversations-authoring/SuccessfulImportProject.json"
           }
         },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
+        },
         "x-ms-long-running-operation": true
       }
     },
@@ -475,6 +484,10 @@
           "Successful Train Project": {
             "$ref": "./examples/analyzeconversations-authoring/SuccessfulTrainProject.json"
           }
+        },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location",
+          "final-state-schema": "#/definitions/ConversationalAnalysisAuthoringTrainingJobResult"
         },
         "x-ms-long-running-operation": true
       }
@@ -628,6 +641,10 @@
             "$ref": "./examples/analyzeconversations-authoring/SuccessfulDeployProject.json"
           }
         },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location",
+          "final-state-schema": "#/definitions/ConversationalAnalysisAuthoringProjectDeployment"
+        },
         "x-ms-long-running-operation": true
       },
       "delete": {
@@ -675,6 +692,9 @@
           "Successful Delete Deployment": {
             "$ref": "./examples/analyzeconversations-authoring/SuccessfulDeleteDeployment.json"
           }
+        },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
         },
         "x-ms-long-running-operation": true
       }
@@ -779,6 +799,9 @@
           "Successful Swap Deployments": {
             "$ref": "./examples/analyzeconversations-authoring/SuccessfulSwapDeployments.json"
           }
+        },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
         },
         "x-ms-long-running-operation": true
       }
@@ -1099,6 +1122,9 @@
           "Successful Load Snapshot": {
             "$ref": "./examples/analyzeconversations-authoring/SuccessfulLoadSnapshot.json"
           }
+        },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
         },
         "x-ms-long-running-operation": true
       }

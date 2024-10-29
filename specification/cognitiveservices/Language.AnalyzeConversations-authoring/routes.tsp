@@ -280,9 +280,11 @@ interface ConversationalAnalysisAuthoring {
    * Creates a new deployment or replaces an existing one.
    */
   #suppress "@azure-tools/typespec-azure-core/use-standard-operations"
+  @createsOrReplacesResource(ConversationalAnalysisAuthoringProjectDeployment)
   @route("/authoring/analyze-conversations/projects/{projectName}/deployments/{deploymentName}")
   @put
   @pollingOperation(ConversationalAnalysisAuthoring.getDeploymentStatus)
+  @useFinalStateVia("operation-location")
   deployProject is Foundations.LongRunningOperation<
     {
       /**
@@ -867,6 +869,7 @@ interface ConversationalAnalysisAuthoring {
    * Deletes an existing exported model.
    */
   #suppress "@azure-tools/typespec-azure-core/use-standard-operations"
+  @deletesResource(ConversationalAnalysisAuthoringExportedTrainedModel)
   @route("/authoring/analyze-conversations/projects/{projectName}/exported-models/{exportedModelName}")
   @delete
   @pollingOperation(ConversationalAnalysisAuthoring.getExportedModelJobStatus)
@@ -893,10 +896,14 @@ interface ConversationalAnalysisAuthoring {
    * Creates a new exported model or replaces an existing one.
    */
   #suppress "@azure-tools/typespec-azure-core/use-standard-operations"
+  @createsOrReplacesResource(
+    ConversationalAnalysisAuthoringExportedTrainedModel
+  )
   @route("/authoring/analyze-conversations/projects/{projectName}/exported-models/{exportedModelName}")
   @put
   @pollingOperation(ConversationalAnalysisAuthoring.getExportedModelJobStatus)
   @added(Versions.v2024_11_15_preview)
+  @useFinalStateVia("operation-location")
   createOrUpdateExportedModel is Foundations.LongRunningOperation<
     {
       /**

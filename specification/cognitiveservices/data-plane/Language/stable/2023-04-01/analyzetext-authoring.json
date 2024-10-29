@@ -230,6 +230,9 @@
             "$ref": "./examples/analyzetext-authoring/SuccessfulDeleteProject.json"
           }
         },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
+        },
         "x-ms-long-running-operation": true
       }
     },
@@ -307,6 +310,9 @@
             "$ref": "./examples/analyzetext-authoring/SuccessfulExportProject.json"
           }
         },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
+        },
         "x-ms-long-running-operation": true
       }
     },
@@ -358,6 +364,9 @@
             "$ref": "./examples/analyzetext-authoring/SuccessfulImportProject.json"
           }
         },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
+        },
         "x-ms-long-running-operation": true
       }
     },
@@ -408,6 +417,10 @@
           "SuccessfulTrainProject": {
             "$ref": "./examples/analyzetext-authoring/SuccessfulTrainProject.json"
           }
+        },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location",
+          "final-state-schema": "#/definitions/TextAnalysisAuthoringTrainingJobResult"
         },
         "x-ms-long-running-operation": true
       }
@@ -558,6 +571,10 @@
             "$ref": "./examples/analyzetext-authoring/SuccessfulDeployProject.json"
           }
         },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location",
+          "final-state-schema": "#/definitions/TextAnalysisAuthoringProjectDeployment"
+        },
         "x-ms-long-running-operation": true
       },
       "delete": {
@@ -604,6 +621,9 @@
           "Successful Delete Deployment": {
             "$ref": "./examples/analyzetext-authoring/SuccessfulDeleteDeployment.json"
           }
+        },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
         },
         "x-ms-long-running-operation": true
       }
@@ -706,6 +726,9 @@
           "SuccessfulSwapDeployments": {
             "$ref": "./examples/analyzetext-authoring/SuccessfulSwapDeployments.json"
           }
+        },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
         },
         "x-ms-long-running-operation": true
       }
@@ -1019,6 +1042,9 @@
           "SuccessfulLoadSnapshot": {
             "$ref": "./examples/analyzetext-authoring/SuccessfulLoadSnapshot.json"
           }
+        },
+        "x-ms-long-running-operation-options": {
+          "final-state-via": "operation-location"
         },
         "x-ms-long-running-operation": true
       }

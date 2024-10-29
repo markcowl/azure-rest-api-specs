@@ -239,8 +239,10 @@ interface TextAnalysisAuthoring {
    */
   #suppress "@azure-tools/typespec-azure-core/use-standard-operations"
   @route("/authoring/analyze-text/projects/{projectName}/deployments/{deploymentName}")
+  @createsOrReplacesResource(TextAnalysisAuthoringProjectDeployment)
   @put
   @pollingOperation(TextAnalysisAuthoring.getDeploymentStatus)
+  @useFinalStateVia("operation-location")
   deployProject is Foundations.LongRunningOperation<
     {
       /**
@@ -394,7 +396,9 @@ interface TextAnalysisAuthoring {
    * Creates a new exported model or replaces an existing one.
    */
   #suppress "@azure-tools/typespec-azure-core/use-standard-operations"
+  @createsOrReplacesResource(TextAnalysisAuthoringExportedTrainedModel)
   @route("/authoring/analyze-text/projects/{projectName}/exported-models/{exportedModelName}")
+  @useFinalStateVia("operation-location")
   @put
   @pollingOperation(TextAnalysisAuthoring.getExportedModelJobStatus)
   @added(Versions.v2023_04_15_preview)
