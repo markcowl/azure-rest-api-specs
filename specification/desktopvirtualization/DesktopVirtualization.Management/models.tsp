@@ -1485,12 +1485,12 @@ model KeyVaultCredentialProperties {
   /**
    * The uri to access the secret that the username is stored in.
    */
-  usernameKeyVaultSecretUri: Azure.ResourceManager.ResourceUriParameter;
+  usernameKeyVaultSecretUri: Azure.Core.armResourceIdentifier;
 
   /**
    * The uri to access the secret that the password is stored in.
    */
-  passwordKeyVaultSecretUri: Azure.ResourceManager.ResourceUriParameter;
+  passwordKeyVaultSecretUri: Azure.Core.armResourceIdentifier;
 }
 
 /**
@@ -1500,12 +1500,12 @@ model KeyVaultCredentialPatchProperties {
   /**
    * The uri to access the secret that the username is stored in.
    */
-  usernameKeyVaultSecretUri: Azure.ResourceManager.ResourceUriParameter;
+  usernameKeyVaultSecretUri: Azure.Core.armResourceIdentifier;
 
   /**
    * The uri to access the secret that the password is stored in.
    */
-  passwordKeyVaultSecretUri: Azure.ResourceManager.ResourceUriParameter;
+  passwordKeyVaultSecretUri: Azure.Core.armResourceIdentifier;
 }
 
 /**
@@ -1652,7 +1652,7 @@ model BootDiagnosticsInfoProperties {
   /**
    * Uri of the storage account to use for placing the console output and screenshot. <br><br>If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
    */
-  storageUri: Azure.ResourceManager.ResourceUriParameter;
+  storageUri: Azure.Core.armResourceIdentifier;
 }
 
 /**
@@ -1667,7 +1667,7 @@ model BootDiagnosticsInfoPatchProperties {
   /**
    * Uri of the storage account to use for placing the console output and screenshot. <br><br>If storageUri is not specified while enabling boot diagnostics, managed storage will be used.
    */
-  storageUri: Azure.ResourceManager.ResourceUriParameter;
+  storageUri: Azure.Core.armResourceIdentifier;
 }
 
 /**
@@ -4057,7 +4057,7 @@ model SessionHostConfigurationProperties {
   /**
    * The uri to the storage blob containing the arm template to be run on the virtual machine after provisioning.
    */
-  customConfigurationScriptUrl?: Azure.ResourceManager.ResourceUriParameter;
+  customConfigurationScriptUrl?: Azure.Core.armResourceIdentifier;
 
   /**
    * Image configurations of HostPool.
@@ -4139,7 +4139,7 @@ model SessionHostConfigurationPatchProperties {
   /**
    * The uri to the storage blob containing the arm template to be run on the virtual machine after provisioning.
    */
-  customConfigurationScriptUrl?: Azure.ResourceManager.ResourceUriParameter;
+  customConfigurationScriptUrl?: Azure.Core.armResourceIdentifier;
 
   /**
    * Image configurations of HostPool.
