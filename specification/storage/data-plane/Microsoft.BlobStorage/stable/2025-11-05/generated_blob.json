@@ -2286,21 +2286,6 @@
             "x-ms-client-name": "clientRequestId"
           },
           {
-            "name": "Content-Length",
-            "in": "header",
-            "description": "The length of the request.",
-            "required": true,
-            "type": "integer",
-            "format": "int64",
-            "x-ms-client-name": "contentLength"
-          },
-          {
-            "name": "name",
-            "in": "formData",
-            "required": true,
-            "type": "string"
-          },
-          {
             "name": "body",
             "in": "formData",
             "required": true,
@@ -14449,16 +14434,17 @@
             "x-ms-client-name": "clientRequestId"
           },
           {
-            "name": "containerName",
-            "in": "path",
-            "description": "The name of the container.",
+            "name": "Content-Length",
+            "in": "header",
+            "description": "The length of the request.",
             "required": true,
-            "type": "string"
+            "type": "integer",
+            "format": "int64",
+            "x-ms-client-name": "contentLength"
           },
           {
-            "name": "blobName",
-            "in": "path",
-            "description": "The name of the blob.",
+            "name": "body",
+            "in": "formData",
             "required": true,
             "type": "string",
             "minLength": 1,
