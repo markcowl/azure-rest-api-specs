@@ -1,6 +1,6 @@
 import "@azure-tools/typespec-azure-core";
 import "@typespec/rest";
-import "./models.tsp";
+import "./CommonModels.tsp";
 import "@azure-tools/typespec-azure-resource-manager";
 
 using TypeSpec.Rest;
@@ -9,6 +9,10 @@ using Azure.ResourceManager;
 using Versioning;
 
 namespace Microsoft.ContainerService;
+
+// =============================================================================
+// Location-scoped operation groups
+// =============================================================================
 
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-interface-requires-decorator" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
 interface ManagedClustersOperationGroup {
@@ -60,22 +64,4 @@ interface ContainerServiceOperationGroup {
     Scope = SubscriptionActionScope,
     Parameters = LocationResourceParameter
   >;
-}
-
-interface Operations {
-  /**
-   * Gets a list of operations.
-   */
-  @tag("ManagedClusters")
-  @autoRoute
-  @segment("operations")
-  @list
-  list(
-    ...CommonTypes.ApiVersionParameter,
-
-    @doc("Microsoft.ContainerService provider")
-    @path
-    @segment("providers")
-    provider: "Microsoft.ContainerService",
-  ): ArmResponse<OperationListResult> | ErrorResponse;
 }
