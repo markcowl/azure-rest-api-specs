@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Video Translation",
-    "version": "2025-05-20",
+    "version": "2026-03-01",
     "description": "Video translation API to translate video from source locale to target locale.",
     "contact": {
       "name": "Azure AI - Speech Services",
@@ -877,6 +877,24 @@
       "description": "Guid, for example: 8e2da02e-f9b3-4a1c-941f-8da60f16c2e5",
       "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
     },
+    "InputFileSourceKind": {
+      "type": "string",
+      "description": "Input source kind for the input video, audio or webvtt files.",
+      "enum": [
+        "AzureStorageBlobManagedIdentity"
+      ],
+      "x-ms-enum": {
+        "name": "InputFileSourceKind",
+        "modelAsString": true,
+        "values": [
+          {
+            "name": "AzureStorageBlobManagedIdentity",
+            "value": "AzureStorageBlobManagedIdentity",
+            "description": "Azure storage blob with managed identity authentication."
+          }
+        ]
+      }
+    },
     "Iteration": {
       "type": "object",
       "description": "Do one iteration to translate one video file from source locale to target locale, webvtt for content editing is optional for requesting parameter.",
@@ -986,6 +1004,40 @@
         "enableEmotionalPlatformVoice": {
           "$ref": "#/definitions/EnableEmotionalPlatformVoice",
           "description": "Recommended: Do not set this parameter unless you have specific requirements. The default behavior is optimized for most customers. This parameter specifies whether to enable emotion for platform voice. By default, the server determines whether to apply emotion based on the target locale to optimize quality. If not specified, the API will automatically decide whether to enable emotional expression on the server side."
+        },
+        "adjustWebvttAlignment": {
+          "type": "boolean",
+          "description": "Recommended: Do not set this parameter unless you have specific requirements. The default behavior is optimized for most customers. Specify whether to adjust webvtt alignment according to the synthesized audio for the translated text. If true (default), alignment will be adjusted. If false, alignment will not be adjusted. When not specified, the default value is true (provided as null to the API)."
+        },
+        "exportAdjustedPromptAudioInWebvtt": {
+          "type": "boolean",
+          "description": "Specify whether to export adjusted prompt audio in webvtt, if not specified, the default value is false."
+        },
+        "subtitleVerticalMargin": {
+          "type": "integer",
+          "format": "int32",
+          "description": "Specify subtitle vertical margin, the value range is from 0 to 200, if not specified, the default value is 10.",
+          "minimum": 0,
+          "maximum": 200
+        },
+        "adjustBackgroundVolumeMultiplier": {
+          "type": "number",
+          "format": "double",
+          "description": "Recommended: Do not set this parameter unless you have specific requirements. The default behavior is optimized for most customers. Adjust the background volume based on the maximum volume with this multiplier factor. The value range is (0, 1], the suggested value is 0.6 if you want to adjust the background volume. If not specified, the original background audio volume will be kept unchanged.",
+          "maximum": 1
+        },
+        "pushResultToAzureStorageBlobDirUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "Azure storage blob directory URL to push iteration results to. When specified, the API will push the translation results to the specified Azure storage blob directory."
+        },
+        "pushResultToAzureStorageBlobManagedIdentityClientId": {
+          "$ref": "#/definitions/Guid",
+          "description": "Managed identity client ID for user-assigned managed identity to push results to Azure storage blob, if not specified, API will use system-assigned managed identity. This property is only used when pushResultToAzureStorageBlobDirUrl is specified."
+        },
+        "use24kPromptAudio": {
+          "type": "boolean",
+          "description": "Recommended: Do not set this parameter unless you have specific requirements. The default behavior is optimized for most customers. When this parameter is set to true, the service uses a higher sample rate (24 kHz) prompt audio for voice prompting. If this parameter is not specified or is set to false, the service continues to use 16 kHz prompt audio by default, which generally provides better overall synthesis quality."
         }
       }
     },
@@ -1145,6 +1197,10 @@
           "$ref": "#/definitions/TranslationInput",
           "description": "Translation input."
         },
+        "firstIterationInput": {
+          "$ref": "#/definitions/IterationInput",
+          "description": "First iteration input for the translation, this property is only used when autoCreateFirstIteration is true."
+        },
         "displayName": {
           "type": "string",
           "description": "Translation display name."
@@ -1157,6 +1213,12 @@
           "type": "string",
           "format": "date-time",
           "description": "The timestamp when the object was created. The timestamp is encoded as ISO 8601 date and time format (\"YYYY-MM-DDThh:mm:ssZ\", see https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations).",
+          "readOnly": true
+        },
+        "expiresDateTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp when the translation will be automatically deleted. The timestamp is encoded as ISO 8601 date and time format (\"YYYY-MM-DDThh:mm:ssZ\", see https://en.wikipedia.org/wiki/ISO_8601#Combined_date_and_time_representations).",
           "readOnly": true
         },
         "latestIteration": {
@@ -1223,6 +1285,18 @@
         "exportSubtitleInVideo": {
           "type": "boolean",
           "description": "Export subtitle in video, if not specified, the default value is false, it will not burn subtitle to the translated video file."
+        },
+        "autoCreateFirstIteration": {
+          "type": "boolean",
+          "description": "Indicate whether to automatically create the first iteration when creating a translation, if not specified, the default value is false without creating the first iteration automatically."
+        },
+        "inputFileSourceKind": {
+          "$ref": "#/definitions/InputFileSourceKind",
+          "description": "Input file source kind, if not specified, the default value is to access input file with anonymous access."
+        },
+        "inputFileAzureStorageBlobManagedIdentityClientId": {
+          "$ref": "#/definitions/Guid",
+          "description": "Managed identity client ID for user-assigned managed identity to access input file from Azure storage blob, if not specified, API will use system-assigned managed identity. This property is only used when inputFileSourceKind is AzureStorageBlobManagedIdentity."
         }
       },
       "required": [
