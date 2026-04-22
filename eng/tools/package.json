@@ -14,6 +14,8 @@
     "@azure-tools/typespec-requirement": "file:typespec-requirement",
     "@azure-tools/typespec-validation": "file:typespec-validation",
     "@azure-tools/summarize-impact": "file:summarize-impact"
+    ,
+    "@azure-tools/typespec-suppressions": "file:typespec-suppressions"
   },
   "scripts": {
     "build": "tsc --build",

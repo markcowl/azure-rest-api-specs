@@ -1,0 +1,87 @@
+name: "TypeSpec Suppressions - Analyze Code"
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - edited
+
+permissions:
+  contents: read
+
+jobs:
+  typespec-suppressions:
+    name: "TypeSpec Suppressions - Analyze Code"
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Setup Node and install deps
+        uses: ./.github/actions/setup-node-install-deps
+
+      - name: Get impacted TypeSpec folders
+        shell: pwsh
+        run: |
+          $ignoreCoreFiles = -not (@('main', 'RPSaaSMaster') -contains $Env:GITHUB_BASE_REF)
+          $typespecFolders, $checkedAll = & "./eng/scripts/Get-TypeSpec-Folders.ps1" `
+            -BaseCommitish:"${{ github.event.pull_request.base.sha }}" `
+            -HeadCommitish:"HEAD" `
+            -IgnoreCoreFiles:$ignoreCoreFiles
+
+          $typespecFolders | Set-Content -Path typespec-folders.txt
+
+          if ($checkedAll) {
+            Write-Host "Checking all TypeSpec folders because core files changed."
+          }
+
+          Write-Host "Found $($typespecFolders.Count) impacted TypeSpec folders."
+          foreach ($typespecFolder in $typespecFolders) {
+            Write-Host "  $typespecFolder"
+          }
+
+      - name: Run TypeSpec suppressions analysis
+        id: run-typespec-suppressions
+        shell: bash
+        run: |
+          echo "summary=$GITHUB_STEP_SUMMARY" >> "$GITHUB_OUTPUT"
+
+          if [[ ! -s typespec-folders.txt ]]; then
+            {
+              echo "# TypeSpec Suppressions"
+              echo
+              echo "No impacted TypeSpec folders were found."
+            } > "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          mapfile -t spec_folders < typespec-folders.txt
+
+          npm exec --no -- typespec-suppressions \
+            --base "${{ github.event.pull_request.base.sha }}" \
+            --head HEAD \
+            --json-output "typespec-suppressions-report.json" \
+            --markdown-output "$GITHUB_STEP_SUMMARY" \
+            --fail-on-approval \
+            "${spec_folders[@]}"
+
+      - name: Upload report artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: typespec-suppressions-report
+          path: typespec-suppressions-report.json
+          if-no-files-found: ignore
+
+      - name: Set job-summary artifact
+        if: ${{ always() && steps.run-typespec-suppressions.outputs.summary }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: job-summary
+          path: ${{ steps.run-typespec-suppressions.outputs.summary }}
+          if-no-files-found: ignore
