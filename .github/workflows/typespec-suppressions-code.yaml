@@ -57,6 +57,24 @@ jobs:
               echo
               echo "No impacted TypeSpec folders were found."
             } > "$GITHUB_STEP_SUMMARY"
+            printf '%s\n' \
+              '{' \
+              '  "repoRoot": "'"$GITHUB_WORKSPACE"'",' \
+              '  "baseRevision": "'"${{ github.event.pull_request.base.sha }}"'",' \
+              '  "headRevision": "HEAD",' \
+              '  "specPaths": [],' \
+              '  "requiresApproval": false,' \
+              '  "counts": {' \
+              '    "specs": 0,' \
+              '    "base": 0,' \
+              '    "head": 0,' \
+              '    "new": 0,' \
+              '    "removed": 0,' \
+              '    "changed": 0,' \
+              '    "unchanged": 0' \
+              '  },' \
+              '  "specs": []' \
+              '}' > "typespec-suppressions-report.json"
             exit 0
           fi
 
