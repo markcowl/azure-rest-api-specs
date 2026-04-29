@@ -58,3 +58,9 @@ export interface AnalyzeSuppressionsOptions {
   headRevision: string;
   specPaths: string[];
 }
+
+export interface AnalyzeSuppressionsDirectoriesOptions {
+  baseRoot: string;
+  headRoot: string;
+  specPaths: string[];
+}

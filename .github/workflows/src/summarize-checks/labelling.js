@@ -987,8 +987,8 @@ const rulesPri1Suppressions = [
     anyPrerequisiteLabels: ["SuppressionReviewRequired"],
     anyRequiredLabels: ["Approved-Suppression"],
     troubleshootingGuide:
-      `The suppressions added to the AutoRest config files (README.mds) require review. ${diagramTsg(1, true)}, ` +
-      `or to step 3, depending on the kind of suppression you did.`,
+      `This PR introduced suppressions that require review. Inspect the suppression details surfaced by automation and ` +
+      `ask the appropriate reviewer to apply the <code>Approved-Suppression</code> label. ${diagramTsg(1, true)}.`,
   },
 ];
 

@@ -85,7 +85,6 @@ jobs:
             --head HEAD \
             --json-output "typespec-suppressions-report.json" \
             --markdown-output "$GITHUB_STEP_SUMMARY" \
-            --fail-on-approval \
             "${spec_folders[@]}"
 
       - name: Upload report artifact

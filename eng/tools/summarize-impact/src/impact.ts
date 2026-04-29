@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { analyzeTypeSpecSuppressionsFromDirectories } from "@azure-tools/typespec-suppressions";
 import { existsSync, readFileSync } from "fs";
 import { glob } from "glob";
 import { dirname, join, resolve } from "path";
@@ -455,10 +456,68 @@ async function processSuppression(context: PRContext, labelContext: LabelContext
   });
   await processPrChanges(context, handlers);
 
+  const changedTypeSpecProjectFolders = getChangedTypeSpecProjectFolders(context);
+  console.log(
+    `Changed TypeSpec project folders for suppression review: ${changedTypeSpecProjectFolders.join(",")}`,
+  );
+
+  if (changedTypeSpecProjectFolders.length > 0) {
+    const report = await analyzeTypeSpecSuppressionsFromDirectories({
+      baseRoot: context.targetDirectory,
+      headRoot: context.sourceDirectory,
+      specPaths: changedTypeSpecProjectFolders,
+    });
+    suppressionReviewRequiredLabel.shouldBePresent ||= report.requiresApproval;
+  }
+
   suppressionReviewRequiredLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);
   console.log("RETURN definition processSuppression");
 
   return suppressionReviewRequiredLabel.shouldBePresent;
+}
+
+function getChangedTypeSpecProjectFolders(context: PRContext): string[] {
+  const folders = new Set<string>();
+
+  for (const filePath of context.getChangedFiles()) {
+    if (!filePath.endsWith(".tsp") && !filePath.endsWith("tspconfig.yaml")) {
+      continue;
+    }
+
+    const projectFolder = findTypeSpecProjectFolder(context, filePath);
+    if (projectFolder) {
+      folders.add(projectFolder);
+    }
+  }
+
+  return [...folders].sort((left, right) => left.localeCompare(right));
+}
+
+function findTypeSpecProjectFolder(context: PRContext, filePath: string): string | undefined {
+  let currentDirectory = dirname(filePath);
+
+  while (
+    currentDirectory &&
+    currentDirectory !== "." &&
+    currentDirectory !== "/" &&
+    currentDirectory !== "specification"
+  ) {
+    const hasConfig = [context.sourceDirectory, context.targetDirectory].some((root) =>
+      existsSync(join(root, currentDirectory, "tspconfig.yaml")),
+    );
+
+    if (hasConfig) {
+      return currentDirectory;
+    }
+
+    const parentDirectory = dirname(currentDirectory);
+    if (parentDirectory === currentDirectory) {
+      break;
+    }
+    currentDirectory = parentDirectory;
+  }
+
+  return undefined;
 }
 
 function getSuppressions(readmePath: string) {

@@ -8,6 +8,7 @@ import {
   getCheckRunTuple,
   getExistingLabels,
   getImpactAssessment,
+  getTypeSpecSuppressionsSection,
   updateLabels,
 } from "../../src/summarize-checks/summarize-checks.js";
 import { createMockCore, createMockGithub } from "../mocks.js";
@@ -1341,8 +1342,117 @@ describe("Summarize Checks Unit Tests", () => {
       await expect(
         getImpactAssessment(github, mockCore, "test-owner", "test-repo", 123),
       ).rejects.toThrowErrorMatchingInlineSnapshot(
-        `[Error: Unable to find job-summary artifact for run ID: 123. This should never happen, as this section of code should only run with a valid runId.]`,
+        `[Error: Unable to find job-summary artifact for run ID: 123.]`,
       );
+    });
+  });
+
+  describe("getTypeSpecSuppressionsSection", async () => {
+    const unzipExists = await execFile("unzip")
+      .then(() => true)
+      .catch(() => false);
+
+    it.runIf(unzipExists)(
+      "returns a details section when TypeSpec suppressions require approval",
+      async () => {
+        const github = createMockGithub();
+
+        github.rest.actions.listWorkflowRunsForRepo.mockResolvedValue({
+          data: {
+            workflow_runs: [
+              {
+                id: 123,
+                name: "TypeSpec Suppressions - Analyze Code",
+                status: "completed",
+                updated_at: "2025-01-01T00:00:00Z",
+              },
+            ],
+          },
+        });
+
+        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
+          if (name === "typespec-suppressions-report") {
+            return { data: { artifacts: [{ id: 1, name }] } };
+          }
+
+          if (name === "job-summary") {
+            return { data: { artifacts: [{ id: 2, name }] } };
+          }
+
+          return { data: { artifacts: [] } };
+        });
+
+        github.rest.actions.downloadArtifact.mockImplementation(async ({ artifact_id }) => {
+          const zip =
+            artifact_id === 1
+              ? zipSync({
+                  "typespec-suppressions-report.json": strToU8(
+                    JSON.stringify({ requiresApproval: true }),
+                  ),
+                })
+              : zipSync({
+                  "job-summary.md": strToU8(
+                    "# TypeSpec Suppressions\n\n## New suppressions requiring approval (1)\n",
+                  ),
+                });
+
+          return { data: Buffer.from(zip) };
+        });
+
+        const impactAssessment = {
+          resourceManagerRequired: false,
+          dataPlaneRequired: false,
+          suppressionReviewRequired: true,
+          isNewApiVersion: false,
+          rpaasRpNotInPrivateRepo: false,
+          rpaasChange: false,
+          newRP: false,
+          rpaasRPMissing: false,
+          typeSpecChanged: true,
+          isDraft: false,
+          targetBranch: "main",
+        };
+
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            impactAssessment,
+          ),
+        ).resolves.toContain("TypeSpec suppressions requiring review");
+      },
+    );
+
+    it("returns undefined when suppression review is not required", async () => {
+      const github = createMockGithub();
+
+      const impactAssessment = {
+        resourceManagerRequired: false,
+        dataPlaneRequired: false,
+        suppressionReviewRequired: false,
+        isNewApiVersion: false,
+        rpaasRpNotInPrivateRepo: false,
+        rpaasChange: false,
+        newRP: false,
+        rpaasRPMissing: false,
+        typeSpecChanged: true,
+        isDraft: false,
+        targetBranch: "main",
+      };
+
+      await expect(
+        getTypeSpecSuppressionsSection(
+          github,
+          mockCore,
+          "test-owner",
+          "test-repo",
+          "abc123",
+          impactAssessment,
+        ),
+      ).resolves.toBeUndefined();
     });
   });
 });

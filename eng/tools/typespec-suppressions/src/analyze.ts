@@ -1,3 +1,4 @@
+import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { simpleGit } from "simple-git";
 import {
@@ -9,6 +10,7 @@ import {
 import { normalizeRepoPath, toRepoRelativePath } from "./path-utils.js";
 import {
   AnalyzeSuppressionsOptions,
+  AnalyzeSuppressionsDirectoriesOptions,
   SpecSuppressionReport,
   SuppressionChange,
   SuppressionRecord,
@@ -84,6 +86,73 @@ async function collectRevisionSuppressions(
   const suppressions: SuppressionRecord[] = [];
   for (const filePath of relevantFiles) {
     const content = await readRevisionFile(repoRoot, revision, filePath);
+    if (content === undefined) {
+      continue;
+    }
+
+    if (isTypeSpecConfigFile(filePath)) {
+      suppressions.push(...extractTspconfigSuppressions(specPath, filePath, content));
+    } else if (isTypeSpecSourceFile(filePath)) {
+      suppressions.push(...extractInlineSuppressions(specPath, filePath, content));
+    }
+  }
+
+  return suppressions.sort(compareSuppressions);
+}
+
+async function listDirectoryFiles(repoRoot: string, specPath: string): Promise<string[]> {
+  const normalizedRoot = normalizeRepoPath(repoRoot);
+  const specDirectory = path.join(normalizedRoot, specPath);
+  const files: string[] = [];
+
+  async function walk(directory: string): Promise<void> {
+    let entries;
+    try {
+      entries = await readdir(directory, { withFileTypes: true });
+    } catch (error) {
+      if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+        return;
+      }
+      throw error;
+    }
+
+    for (const entry of entries) {
+      const entryPath = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        await walk(entryPath);
+      } else if (entry.isFile()) {
+        files.push(normalizeRepoPath(path.relative(normalizedRoot, entryPath)));
+      }
+    }
+  }
+
+  await walk(specDirectory);
+  return files.sort((left, right) => left.localeCompare(right));
+}
+
+async function readDirectoryFile(repoRoot: string, filePath: string): Promise<string | undefined> {
+  try {
+    return await readFile(path.join(repoRoot, filePath), "utf-8");
+  } catch (error) {
+    if (error instanceof Error && "code" in error && error.code === "ENOENT") {
+      return undefined;
+    }
+    throw error;
+  }
+}
+
+async function collectDirectorySuppressions(
+  repoRoot: string,
+  specPath: string,
+): Promise<SuppressionRecord[]> {
+  const files = await listDirectoryFiles(repoRoot, specPath);
+  const relevantFiles = files.filter(
+    (filePath) => isTypeSpecSourceFile(filePath) || isTypeSpecConfigFile(filePath),
+  );
+
+  const suppressions: SuppressionRecord[] = [];
+  for (const filePath of relevantFiles) {
+    const content = await readDirectoryFile(repoRoot, filePath);
     if (content === undefined) {
       continue;
     }
@@ -214,6 +283,79 @@ export async function analyzeTypeSpecSuppressions(
     repoRoot,
     baseRevision: options.baseRevision,
     headRevision: options.headRevision,
+    specPaths,
+    requiresApproval: newSuppressions.length > 0 || changedSuppressions.length > 0,
+    counts,
+    specs: specReports,
+    newSuppressions,
+    removedSuppressions,
+    changedSuppressions,
+  };
+}
+
+export async function analyzeTypeSpecSuppressionsFromDirectories(
+  options: AnalyzeSuppressionsDirectoriesOptions,
+): Promise<SuppressionReport> {
+  const baseRoot = normalizeRepoPath(options.baseRoot);
+  const headRoot = normalizeRepoPath(options.headRoot);
+  const specPaths = Array.from(new Set(options.specPaths.map(normalizeRepoPath))).sort((a, b) =>
+    a.localeCompare(b),
+  );
+
+  const specReports: SpecSuppressionReport[] = [];
+
+  for (const specPath of specPaths) {
+    const [baseFiles, headFiles] = await Promise.all([
+      listDirectoryFiles(baseRoot, specPath),
+      listDirectoryFiles(headRoot, specPath),
+    ]);
+
+    const hasConfig = [...baseFiles, ...headFiles].some(
+      (filePath) => path.posix.basename(filePath) === "tspconfig.yaml",
+    );
+    if (!hasConfig) {
+      throw new Error(
+        `Spec path '${specPath}' does not contain tspconfig.yaml under '${baseRoot}' or '${headRoot}'.`,
+      );
+    }
+
+    const [baseSuppressions, headSuppressions] = await Promise.all([
+      collectDirectorySuppressions(baseRoot, specPath),
+      collectDirectorySuppressions(headRoot, specPath),
+    ]);
+
+    specReports.push({
+      specPath,
+      baseSuppressions,
+      headSuppressions,
+      ...diffSuppressions(baseSuppressions, headSuppressions),
+    });
+  }
+
+  const newSuppressions = specReports
+    .flatMap((spec) => spec.newSuppressions)
+    .sort(compareSuppressions);
+  const removedSuppressions = specReports
+    .flatMap((spec) => spec.removedSuppressions)
+    .sort(compareSuppressions);
+  const changedSuppressions = specReports
+    .flatMap((spec) => spec.changedSuppressions)
+    .sort(compareChanges);
+
+  const counts = {
+    specs: specReports.length,
+    base: specReports.reduce((total, spec) => total + spec.baseSuppressions.length, 0),
+    head: specReports.reduce((total, spec) => total + spec.headSuppressions.length, 0),
+    new: newSuppressions.length,
+    removed: removedSuppressions.length,
+    changed: changedSuppressions.length,
+    unchanged: specReports.reduce((total, spec) => total + spec.unchangedSuppressions.length, 0),
+  };
+
+  return {
+    repoRoot: headRoot,
+    baseRevision: baseRoot,
+    headRevision: headRoot,
     specPaths,
     requiresApproval: newSuppressions.length > 0 || changedSuppressions.length > 0,
     counts,

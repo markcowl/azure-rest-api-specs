@@ -109,6 +109,9 @@ const FYI_CHECK_NAMES = [
 const AUTOMATED_CHECK_NAME = "Automated merging requirements met";
 const IMPACT_CHECK_NAME = "Summarize PR Impact";
 const NEXT_STEPS_COMMENT_ID = "NextStepsToMerge";
+const TYPESPEC_SUPPRESSIONS_WORKFLOW_NAME = "TypeSpec Suppressions - Analyze Code";
+const TYPESPEC_SUPPRESSIONS_REPORT_ARTIFACT_NAME = "typespec-suppressions-report";
+const TYPESPEC_SUPPRESSIONS_SECTION_TITLE = "TypeSpec suppressions requiring review";
 
 /** @type {CheckMetadata[]} */
 const CHECK_METADATA = [
@@ -412,13 +415,24 @@ export async function summarizeChecksImpl(
     impactAssessment !== undefined,
     target_url,
   );
+  const typeSpecSuppressionsSection = await getTypeSpecSuppressionsSection(
+    github,
+    core,
+    owner,
+    repo,
+    head_sha,
+    impactAssessment,
+  );
+  const mergedCommentBody = typeSpecSuppressionsSection
+    ? `${commentBody}${typeSpecSuppressionsSection}`
+    : commentBody;
 
   automatedChecksMet.target_url = target_url;
 
   core.info(
-    `Updating comment '${NEXT_STEPS_COMMENT_ID}' on ${owner}/${repo}#${issue_number} with body: ${commentBody}`,
+    `Updating comment '${NEXT_STEPS_COMMENT_ID}' on ${owner}/${repo}#${issue_number} with body: ${mergedCommentBody}`,
   );
-  core.summary.addRaw(`\n${commentBody}\n\n`);
+  core.summary.addRaw(`\n${mergedCommentBody}\n\n`);
   await core.summary.write();
 
   // this will remain commented until we're comfortable with the change.
@@ -428,7 +442,7 @@ export async function summarizeChecksImpl(
     owner,
     repo,
     issue_number,
-    commentBody,
+    mergedCommentBody,
     NEXT_STEPS_COMMENT_ID,
   );
 
@@ -1099,6 +1113,55 @@ function buildViolatedLabelRulesNextStepsText(violatedRequiredLabelsRules) {
 
 // #region artifact downloading
 /**
+ * Downloads a text artifact for a given workflow run.
+ * @param {import('@actions/github-script').AsyncFunctionArguments['github']} github
+ * @param {typeof import("@actions/core")} core
+ * @param {string} owner
+ * @param {string} repo
+ * @param {number} runId
+ * @param {string} artifactName
+ * @returns {Promise<string>}
+ */
+export async function downloadArtifactText(github, core, owner, repo, runId, artifactName) {
+  const artifacts = await github.paginate(github.rest.actions.listWorkflowRunArtifacts, {
+    owner,
+    repo,
+    run_id: runId,
+    name: artifactName,
+    per_page: PER_PAGE_MAX,
+  });
+
+  const artifact = artifacts.sort(invert(byDate((item) => item.updated_at || "1970")))[0];
+  if (!artifact) {
+    throw new Error(`Unable to find ${artifactName} artifact for run ID: ${runId}.`);
+  }
+
+  const download = await github.rest.actions.downloadArtifact({
+    owner,
+    repo,
+    artifact_id: artifact.id,
+    archive_format: "zip",
+  });
+
+  core.info(`Successfully downloaded ${artifactName} artifact ID: ${artifact.id}`);
+
+  const tmpZip = path.join(
+    process.env.RUNNER_TEMP || os.tmpdir(),
+    `${artifactName.replace(/[^A-Za-z0-9_.-]/g, "-")}-${runId}.zip`,
+  );
+  const arrayBuffer = /** @type {ArrayBuffer} */ (download.data);
+  const zipBuffer = Buffer.from(new Uint8Array(arrayBuffer));
+  await fs.writeFile(tmpZip, zipBuffer);
+
+  try {
+    const { stdout } = await execFile("unzip", ["-p", tmpZip]);
+    return stdout;
+  } finally {
+    await fs.unlink(tmpZip);
+  }
+}
+
+/**
  * Downloads the job-summary artifact for a given workflow run.
  * @param {import('@actions/github-script').AsyncFunctionArguments['github']} github
  * @param {typeof import("@actions/core")} core
@@ -1108,51 +1171,98 @@ function buildViolatedLabelRulesNextStepsText(violatedRequiredLabelsRules) {
  * @returns {Promise<import("./labelling.js").ImpactAssessment>} The parsed job summary data
  */
 export async function getImpactAssessment(github, core, owner, repo, runId) {
-  // List artifacts for provided workflow run
-  const jobSummaryArtifacts = await github.paginate(github.rest.actions.listWorkflowRunArtifacts, {
+  const jsonContent = await downloadArtifactText(github, core, owner, repo, runId, "job-summary");
+  return ImpactAssessmentSchema.parse(JSON.parse(jsonContent));
+}
+
+/**
+ * @param {import('@actions/github-script').AsyncFunctionArguments['github']} github
+ * @param {typeof import("@actions/core")} core
+ * @param {string} owner
+ * @param {string} repo
+ * @param {string} head_sha
+ * @returns {Promise<WorkflowRunInfo | undefined>}
+ */
+async function getLatestTypeSpecSuppressionsWorkflowRun(github, core, owner, repo, head_sha) {
+  const workflowRuns = await github.paginate(github.rest.actions.listWorkflowRunsForRepo, {
     owner,
     repo,
-    run_id: runId,
-    name: "job-summary",
+    event: "pull_request",
+    head_sha,
     per_page: PER_PAGE_MAX,
   });
 
-  // If multiple artifacts with same name, select latest updated
-  const jobSummaryArtifact = jobSummaryArtifacts.sort(
-    invert(byDate((a) => a.updated_at || "1970")),
-  )[0];
+  const targetRuns = workflowRuns
+    .filter(
+      (workflowRun) =>
+        workflowRun.name === TYPESPEC_SUPPRESSIONS_WORKFLOW_NAME ||
+        workflowRun.name === `[TEST-IGNORE] ${TYPESPEC_SUPPRESSIONS_WORKFLOW_NAME}`,
+    )
+    .sort(invert(byDate((workflowRun) => workflowRun.updated_at)));
 
-  if (!jobSummaryArtifact) {
-    throw new Error(
-      `Unable to find job-summary artifact for run ID: ${runId}. This should never happen, as this section of code should only run with a valid runId.`,
-    );
+  const run = targetRuns[0];
+  if (run) {
+    core.info(`Using TypeSpec suppressions workflow run ${run.id}.`);
+  }
+  return run;
+}
+
+/**
+ * @param {import('@actions/github-script').AsyncFunctionArguments['github']} github
+ * @param {typeof import("@actions/core")} core
+ * @param {string} owner
+ * @param {string} repo
+ * @param {string} head_sha
+ * @param {import("./labelling.js").ImpactAssessment | undefined} impactAssessment
+ * @returns {Promise<string | undefined>}
+ */
+export async function getTypeSpecSuppressionsSection(
+  github,
+  core,
+  owner,
+  repo,
+  head_sha,
+  impactAssessment,
+) {
+  if (!impactAssessment?.suppressionReviewRequired) {
+    return undefined;
   }
 
-  // Download the artifact as a zip archive
-  const download = await github.rest.actions.downloadArtifact({
-    owner,
-    repo,
-    artifact_id: jobSummaryArtifact.id,
-    archive_format: "zip",
-  });
+  const run = await getLatestTypeSpecSuppressionsWorkflowRun(github, core, owner, repo, head_sha);
+  if (!run || run.status !== "completed") {
+    return undefined;
+  }
 
-  core.info(`Successfully downloaded job-summary artifact ID: ${jobSummaryArtifact.id}`);
+  let reportContent;
+  try {
+    reportContent = await downloadArtifactText(
+      github,
+      core,
+      owner,
+      repo,
+      run.id,
+      TYPESPEC_SUPPRESSIONS_REPORT_ARTIFACT_NAME,
+    );
+  } catch {
+    return undefined;
+  }
 
-  // Write zip buffer to temp file and extract JSON
-  const tmpZip = path.join(process.env.RUNNER_TEMP || os.tmpdir(), `job-summary-${runId}.zip`);
-  // Convert ArrayBuffer to Buffer
-  // Convert ArrayBuffer (download.data) to Node Buffer
-  const arrayBuffer = /** @type {ArrayBuffer} */ (download.data);
-  const zipBuffer = Buffer.from(new Uint8Array(arrayBuffer));
-  await fs.writeFile(tmpZip, zipBuffer);
+  const report = /** @type {{ requiresApproval?: boolean }} */ (JSON.parse(reportContent));
+  if (!report.requiresApproval) {
+    return undefined;
+  }
 
-  // Extract JSON content from zip archive
-  // Could replace with library like 'fflate' instead of 'exec unzip', but
-  // this would require 'npm i', while 'unzip' is pre-installed.
-  const { stdout: jsonContent } = await execFile("unzip", ["-p", tmpZip]);
+  let summaryMarkdown;
+  try {
+    summaryMarkdown = await downloadArtifactText(github, core, owner, repo, run.id, "job-summary");
+  } catch {
+    return undefined;
+  }
 
-  await fs.unlink(tmpZip);
-
-  return ImpactAssessmentSchema.parse(JSON.parse(jsonContent));
+  return (
+    `<br/><br/><details><summary><strong>${TYPESPEC_SUPPRESSIONS_SECTION_TITLE}</strong></summary>\n\n` +
+    `${summaryMarkdown}\n` +
+    `</details>`
+  );
 }
 // #endregion

@@ -77,6 +77,29 @@ describe("Impact Detection - default fixture", () => {
       },
     },
     {
+      description: "Should require suppression review for new TypeSpec suppressions",
+      changedFileDetails: {
+        additions: [],
+        modifications: ["specification/contososuppressiondemo/Contoso.SuppressionDemo/main.tsp"],
+        deletions: [],
+        renames: [],
+        total: 1,
+      },
+      expectedImpact: {
+        suppressionReviewRequired: true,
+        rpaasChange: false,
+        newRP: false,
+        rpaasRPMissing: false,
+        rpaasRpNotInPrivateRepo: false,
+        resourceManagerRequired: false,
+        dataPlaneRequired: false,
+        typeSpecChanged: true,
+        isNewApiVersion: false,
+        isDraft: false,
+        targetBranch: "main",
+      },
+    },
+    {
       description: "Should properly identify when suppression review is required",
       changedFileDetails: {
         additions: [],

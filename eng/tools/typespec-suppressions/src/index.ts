@@ -2,7 +2,10 @@ import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { exit } from "node:process";
 import { parseArgs } from "node:util";
-import { analyzeTypeSpecSuppressions } from "./analyze.js";
+import {
+  analyzeTypeSpecSuppressions,
+  analyzeTypeSpecSuppressionsFromDirectories,
+} from "./analyze.js";
 import { renderMarkdownSummary } from "./report.js";
 import { AnalyzeSuppressionsOptions } from "./types.js";
 
@@ -74,4 +77,4 @@ export async function main() {
   }
 }
 
-export { analyzeTypeSpecSuppressions, renderMarkdownSummary };
+export { analyzeTypeSpecSuppressions, analyzeTypeSpecSuppressionsFromDirectories, renderMarkdownSummary };
