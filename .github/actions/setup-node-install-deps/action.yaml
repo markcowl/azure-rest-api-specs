@@ -24,13 +24,14 @@ runs:
 
     - name: Regenerate package-lock.json with latest "next" versions
       run: |
-        rm package-lock.json
+        rm -f package-lock.json
         npm install --package-lock-only
         echo "::group::echo package-lock.json"
         cat package-lock.json
         echo "::endgroup::"
       shell: bash
-      
+      working-directory: ${{ inputs.working-directory }}
+
     - run: |
         echo "::group::$INSTALL_COMMAND"
         $INSTALL_COMMAND
