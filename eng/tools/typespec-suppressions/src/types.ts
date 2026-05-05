@@ -3,6 +3,14 @@ export interface SourceLocation {
   column: number;
 }
 
+export interface RuleMetadata {
+  packageName?: string;
+  localRuleName?: string;
+  description?: string;
+  documentationUrl?: string;
+  guidelineCodes?: string[];
+}
+
 export interface SuppressionRecord {
   specPath: string;
   sourceKind: "inline" | "tspconfig";
@@ -12,6 +20,7 @@ export interface SuppressionRecord {
   anchorPath: string;
   location: SourceLocation;
   rawText: string;
+  ruleMetadata?: RuleMetadata;
 }
 
 export interface SuppressionChange {

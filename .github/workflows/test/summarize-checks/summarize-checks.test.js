@@ -1375,28 +1375,79 @@ describe("Summarize Checks Unit Tests", () => {
             return { data: { artifacts: [{ id: 1, name }] } };
           }
 
-          if (name === "job-summary") {
-            return { data: { artifacts: [{ id: 2, name }] } };
-          }
-
           return { data: { artifacts: [] } };
         });
 
-        github.rest.actions.downloadArtifact.mockImplementation(async ({ artifact_id }) => {
-          const zip =
-            artifact_id === 1
-              ? zipSync({
-                  "typespec-suppressions-report.json": strToU8(
-                    JSON.stringify({ requiresApproval: true }),
-                  ),
-                })
-              : zipSync({
-                  "job-summary.md": strToU8(
-                    "# TypeSpec Suppressions\n\n## New suppressions requiring approval (1)\n",
-                  ),
-                });
-
-          return { data: Buffer.from(zip) };
+        github.rest.actions.downloadArtifact.mockResolvedValue({
+          data: Buffer.from(
+            zipSync({
+              "typespec-suppressions-report.json": strToU8(
+                JSON.stringify({
+                  requiresApproval: true,
+                  newSuppressions: [
+                    {
+                      specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
+                      sourceKind: "inline",
+                      ruleName: "@azure-tools/typespec-azure-core/no-rpc-path-params",
+                      justification: "approved for demo",
+                      sourceFile:
+                        "specification/demo/resource-manager/Microsoft.Demo/Demo/main.tsp",
+                      anchorPath: "namespace:Demo/interface:Widgets/op:read",
+                      location: { line: 12, column: 3 },
+                      rawText:
+                        '#suppress "@azure-tools/typespec-azure-core/no-rpc-path-params" "approved for demo"',
+                      ruleMetadata: {
+                        description:
+                          "Operations defined using RpcOperation should not have path parameters.",
+                        documentationUrl:
+                          "https://azure.github.io/typespec-azure/docs/libraries/azure-core/rules/no-rpc-path-params",
+                      },
+                    },
+                  ],
+                  changedSuppressions: [
+                    {
+                      before: {
+                        specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
+                        sourceKind: "tspconfig",
+                        ruleName: "@azure-tools/typespec-azure-core/documentation-required",
+                        justification: "old reason",
+                        sourceFile:
+                          "specification/demo/resource-manager/Microsoft.Demo/Demo/tspconfig.yaml",
+                        anchorPath:
+                          "tspconfig:linter.disable.@azure-tools/typespec-azure-core/documentation-required",
+                        location: { line: 3, column: 5 },
+                        rawText:
+                          "@azure-tools/typespec-azure-core/documentation-required: old reason",
+                        ruleMetadata: {
+                          description: "Require documentation over enums, models, and operations.",
+                          documentationUrl:
+                            "https://azure.github.io/typespec-azure/docs/libraries/azure-core/rules/documentation-required",
+                        },
+                      },
+                      after: {
+                        specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
+                        sourceKind: "tspconfig",
+                        ruleName: "@azure-tools/typespec-azure-core/documentation-required",
+                        justification: "new reason",
+                        sourceFile:
+                          "specification/demo/resource-manager/Microsoft.Demo/Demo/tspconfig.yaml",
+                        anchorPath:
+                          "tspconfig:linter.disable.@azure-tools/typespec-azure-core/documentation-required",
+                        location: { line: 3, column: 5 },
+                        rawText:
+                          "@azure-tools/typespec-azure-core/documentation-required: new reason",
+                        ruleMetadata: {
+                          description: "Require documentation over enums, models, and operations.",
+                          documentationUrl:
+                            "https://azure.github.io/typespec-azure/docs/libraries/azure-core/rules/documentation-required",
+                        },
+                      },
+                    },
+                  ],
+                }),
+              ),
+            }),
+          ),
         });
 
         const impactAssessment = {
@@ -1422,7 +1473,29 @@ describe("Summarize Checks Unit Tests", () => {
             "abc123",
             impactAssessment,
           ),
-        ).resolves.toContain("TypeSpec suppressions requiring review");
+        ).resolves.toContain("Approved-Suppression");
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            impactAssessment,
+          ),
+        ).resolves.toContain(
+          "https://github.com/test-owner/test-repo/blob/abc123/specification/demo/resource-manager/Microsoft.Demo/Demo/main.tsp#L12",
+        );
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            impactAssessment,
+          ),
+        ).resolves.toContain("Previous justification: old reason");
       },
     );
 

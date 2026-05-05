@@ -8,9 +8,10 @@ import {
   isTypeSpecSourceFile,
 } from "./extract.js";
 import { normalizeRepoPath, toRepoRelativePath } from "./path-utils.js";
+import { enrichSuppressionChanges, enrichSuppressionRecords } from "./rule-metadata.js";
 import {
-  AnalyzeSuppressionsOptions,
   AnalyzeSuppressionsDirectoriesOptions,
+  AnalyzeSuppressionsOptions,
   SpecSuppressionReport,
   SuppressionChange,
   SuppressionRecord,
@@ -279,6 +280,9 @@ export async function analyzeTypeSpecSuppressions(
     unchanged: specReports.reduce((total, spec) => total + spec.unchangedSuppressions.length, 0),
   };
 
+  const enrichedNewSuppressions = await enrichSuppressionRecords(newSuppressions);
+  const enrichedChangedSuppressions = await enrichSuppressionChanges(changedSuppressions);
+
   return {
     repoRoot,
     baseRevision: options.baseRevision,
@@ -287,9 +291,9 @@ export async function analyzeTypeSpecSuppressions(
     requiresApproval: newSuppressions.length > 0 || changedSuppressions.length > 0,
     counts,
     specs: specReports,
-    newSuppressions,
+    newSuppressions: enrichedNewSuppressions,
     removedSuppressions,
-    changedSuppressions,
+    changedSuppressions: enrichedChangedSuppressions,
   };
 }
 
@@ -352,6 +356,9 @@ export async function analyzeTypeSpecSuppressionsFromDirectories(
     unchanged: specReports.reduce((total, spec) => total + spec.unchangedSuppressions.length, 0),
   };
 
+  const enrichedNewSuppressions = await enrichSuppressionRecords(newSuppressions);
+  const enrichedChangedSuppressions = await enrichSuppressionChanges(changedSuppressions);
+
   return {
     repoRoot: headRoot,
     baseRevision: baseRoot,
@@ -360,8 +367,8 @@ export async function analyzeTypeSpecSuppressionsFromDirectories(
     requiresApproval: newSuppressions.length > 0 || changedSuppressions.length > 0,
     counts,
     specs: specReports,
-    newSuppressions,
+    newSuppressions: enrichedNewSuppressions,
     removedSuppressions,
-    changedSuppressions,
+    changedSuppressions: enrichedChangedSuppressions,
   };
 }

@@ -83,6 +83,47 @@ import path from "path";
  */
 
 /**
+ * @typedef {Object} TypeSpecRuleMetadata
+ * @property {string} [packageName]
+ * @property {string} [localRuleName]
+ * @property {string} [description]
+ * @property {string} [documentationUrl]
+ * @property {string[]} [guidelineCodes]
+ */
+
+/**
+ * @typedef {Object} TypeSpecSourceLocation
+ * @property {number} line
+ * @property {number} column
+ */
+
+/**
+ * @typedef {Object} TypeSpecSuppressionRecord
+ * @property {string} specPath
+ * @property {"inline" | "tspconfig"} sourceKind
+ * @property {string} ruleName
+ * @property {string} justification
+ * @property {string} sourceFile
+ * @property {string} anchorPath
+ * @property {TypeSpecSourceLocation} location
+ * @property {string} rawText
+ * @property {TypeSpecRuleMetadata} [ruleMetadata]
+ */
+
+/**
+ * @typedef {Object} TypeSpecSuppressionChange
+ * @property {TypeSpecSuppressionRecord} before
+ * @property {TypeSpecSuppressionRecord} after
+ */
+
+/**
+ * @typedef {Object} TypeSpecSuppressionsReport
+ * @property {boolean} [requiresApproval]
+ * @property {TypeSpecSuppressionRecord[]} [newSuppressions]
+ * @property {TypeSpecSuppressionChange[]} [changedSuppressions]
+ */
+
+/**
  * @typedef {import("./labelling.js").RequiredLabelRule} RequiredLabelRule
  */
 
@@ -1207,6 +1248,82 @@ async function getLatestTypeSpecSuppressionsWorkflowRun(github, core, owner, rep
   return run;
 }
 
+function escapeHtml(value) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function getPathSegment(filePath) {
+  return filePath.split("/").slice(-4).join("/");
+}
+
+function getBlobLineLink(owner, repo, sha, filePath, line) {
+  const normalizedPath = filePath.startsWith("/") ? filePath.slice(1) : filePath;
+  return `https://github.com/${owner}/${repo}/blob/${sha}/${normalizedPath}#L${line}`;
+}
+
+function pluralize(count, singular, plural = `${singular}s`) {
+  return `${count} ${count === 1 ? singular : plural}`;
+}
+
+function renderRuleLabel(suppression) {
+  const label = `<code>${escapeHtml(suppression.ruleName)}</code>`;
+  const documentationUrl = suppression.ruleMetadata?.documentationUrl;
+  return documentationUrl ? `<a href="${documentationUrl}">${label}</a>` : label;
+}
+
+function renderSourceLink(owner, repo, head_sha, suppression) {
+  const sourceLabel = `${getPathSegment(suppression.sourceFile)}#L${suppression.location.line}`;
+  const sourceUrl = getBlobLineLink(
+    owner,
+    repo,
+    head_sha,
+    suppression.sourceFile,
+    suppression.location.line,
+  );
+  return `<a href="${sourceUrl}">${escapeHtml(sourceLabel)}</a>`;
+}
+
+function renderGuidelineCodes(ruleMetadata) {
+  if (!ruleMetadata?.guidelineCodes?.length) {
+    return "";
+  }
+
+  return `<br/>Azure guidance: ${ruleMetadata.guidelineCodes
+    .map((code) => `<code>${escapeHtml(code)}</code>`)
+    .join(", ")}`;
+}
+
+function renderNewSuppressionItem(owner, repo, head_sha, suppression) {
+  const description = suppression.ruleMetadata?.description
+    ? ` — ${escapeHtml(suppression.ruleMetadata.description)}`
+    : "";
+  return (
+    `<li><strong>${renderRuleLabel(suppression)}</strong>${description}` +
+    `<br/>Source: ${renderSourceLink(owner, repo, head_sha, suppression)}` +
+    `<br/>Justification: ${escapeHtml(suppression.justification)}` +
+    `${renderGuidelineCodes(suppression.ruleMetadata)}` +
+    `</li>`
+  );
+}
+
+function renderChangedSuppressionItem(owner, repo, head_sha, change) {
+  const description = change.after.ruleMetadata?.description
+    ? ` — ${escapeHtml(change.after.ruleMetadata.description)}`
+    : "";
+  return (
+    `<li><strong>${renderRuleLabel(change.after)}</strong>${description}` +
+    `<br/>Source: ${renderSourceLink(owner, repo, head_sha, change.after)}` +
+    `<br/>Previous justification: ${escapeHtml(change.before.justification)}` +
+    `<br/>New justification: ${escapeHtml(change.after.justification)}` +
+    `${renderGuidelineCodes(change.after.ruleMetadata)}` +
+    `</li>`
+  );
+}
+
 /**
  * @param {import('@actions/github-script').AsyncFunctionArguments['github']} github
  * @param {typeof import("@actions/core")} core
@@ -1247,22 +1364,51 @@ export async function getTypeSpecSuppressionsSection(
     return undefined;
   }
 
-  const report = /** @type {{ requiresApproval?: boolean }} */ (JSON.parse(reportContent));
+  const report = /** @type {TypeSpecSuppressionsReport} */ (JSON.parse(reportContent));
   if (!report.requiresApproval) {
     return undefined;
   }
 
-  let summaryMarkdown;
-  try {
-    summaryMarkdown = await downloadArtifactText(github, core, owner, repo, run.id, "job-summary");
-  } catch {
-    return undefined;
+  const newSuppressions = report.newSuppressions ?? [];
+  const changedSuppressions = report.changedSuppressions ?? [];
+  const summaryParts = [];
+  if (newSuppressions.length > 0) {
+    summaryParts.push(pluralize(newSuppressions.length, "new suppression"));
+  }
+  if (changedSuppressions.length > 0) {
+    summaryParts.push(pluralize(changedSuppressions.length, "changed suppression"));
   }
 
-  return (
-    `<br/><br/><details><summary><strong>${TYPESPEC_SUPPRESSIONS_SECTION_TITLE}</strong></summary>\n\n` +
-    `${summaryMarkdown}\n` +
-    `</details>`
-  );
+  const sectionLines = [
+    `<br/><br/><details><summary><strong>${TYPESPEC_SUPPRESSIONS_SECTION_TITLE}</strong>${
+      summaryParts.length > 0 ? ` — ${summaryParts.join(", ")}` : ""
+    }</summary>`,
+    "",
+    "The following suppressions were added or updated in this PR. Review the linked rule documentation and source location, then apply <code>Approved-Suppression</code> if the justification is acceptable.",
+    "",
+  ];
+
+  if (newSuppressions.length > 0) {
+    sectionLines.push("<strong>New suppressions</strong>", "<ul>");
+    sectionLines.push(
+      ...newSuppressions.map((suppression) =>
+        renderNewSuppressionItem(owner, repo, head_sha, suppression),
+      ),
+    );
+    sectionLines.push("</ul>", "");
+  }
+
+  if (changedSuppressions.length > 0) {
+    sectionLines.push("<strong>Changed suppressions</strong>", "<ul>");
+    sectionLines.push(
+      ...changedSuppressions.map((change) =>
+        renderChangedSuppressionItem(owner, repo, head_sha, change),
+      ),
+    );
+    sectionLines.push("</ul>", "");
+  }
+
+  sectionLines.push("</details>");
+  return sectionLines.join("\n");
 }
 // #endregion

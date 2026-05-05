@@ -46,11 +46,8 @@ jobs:
           }
 
       - name: Run TypeSpec suppressions analysis
-        id: run-typespec-suppressions
         shell: bash
         run: |
-          echo "summary=$GITHUB_STEP_SUMMARY" >> "$GITHUB_OUTPUT"
-
           if [[ ! -s typespec-folders.txt ]]; then
             {
               echo "# TypeSpec Suppressions"
@@ -93,12 +90,4 @@ jobs:
         with:
           name: typespec-suppressions-report
           path: typespec-suppressions-report.json
-          if-no-files-found: ignore
-
-      - name: Set job-summary artifact
-        if: ${{ always() && steps.run-typespec-suppressions.outputs.summary }}
-        uses: actions/upload-artifact@v7
-        with:
-          name: job-summary
-          path: ${{ steps.run-typespec-suppressions.outputs.summary }}
           if-no-files-found: ignore

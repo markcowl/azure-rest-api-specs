@@ -1,37 +1,66 @@
 import { SuppressionChange, SuppressionRecord } from "./types.js";
 
-function escapeMarkdownCell(value: string): string {
-  return value.replaceAll("|", "\\|").replaceAll("\n", "<br/>");
+function escapeMarkdown(value: string): string {
+  return value.replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 }
 
-function renderSuppressionTable(suppressions: SuppressionRecord[]): string {
-  const lines = [
-    "| Spec | Rule | Anchor | Source | Justification |",
-    "| --- | --- | --- | --- | --- |",
-  ];
-
-  for (const suppression of suppressions) {
-    lines.push(
-      `| ${escapeMarkdownCell(suppression.specPath)} | ${escapeMarkdownCell(suppression.ruleName)} | ${escapeMarkdownCell(suppression.anchorPath)} | ${escapeMarkdownCell(`${suppression.sourceFile}:${suppression.location.line}`)} | ${escapeMarkdownCell(suppression.justification)} |`,
-    );
-  }
-
-  return `${lines.join("\n")}\n`;
+function formatSource(suppression: SuppressionRecord): string {
+  return `${suppression.sourceFile}#L${suppression.location.line}`;
 }
 
-function renderChangedTable(changes: SuppressionChange[]): string {
-  const lines = [
-    "| Spec | Rule | Anchor | Source | Before | After |",
-    "| --- | --- | --- | --- | --- | --- |",
-  ];
+function renderSuppressionList(suppressions: SuppressionRecord[]): string[] {
+  return suppressions.flatMap((suppression) => {
+    const header = suppression.ruleMetadata?.documentationUrl
+      ? `- [\`${escapeMarkdown(suppression.ruleName)}\`](${suppression.ruleMetadata.documentationUrl})`
+      : `- \`${escapeMarkdown(suppression.ruleName)}\``;
+    const lines = [
+      header,
+      `  - Source: \`${escapeMarkdown(formatSource(suppression))}\``,
+      `  - Justification: ${escapeMarkdown(suppression.justification)}`,
+    ];
 
-  for (const change of changes) {
-    lines.push(
-      `| ${escapeMarkdownCell(change.after.specPath)} | ${escapeMarkdownCell(change.after.ruleName)} | ${escapeMarkdownCell(change.after.anchorPath)} | ${escapeMarkdownCell(`${change.after.sourceFile}:${change.after.location.line}`)} | ${escapeMarkdownCell(change.before.justification)} | ${escapeMarkdownCell(change.after.justification)} |`,
-    );
-  }
+    if (suppression.ruleMetadata?.description) {
+      lines.splice(1, 0, `  - Rule: ${escapeMarkdown(suppression.ruleMetadata.description)}`);
+    }
 
-  return `${lines.join("\n")}\n`;
+    if (suppression.ruleMetadata?.guidelineCodes?.length) {
+      lines.push(
+        `  - Azure guidance: ${suppression.ruleMetadata.guidelineCodes
+          .map((code) => `\`${escapeMarkdown(code)}\``)
+          .join(", ")}`,
+      );
+    }
+
+    return lines;
+  });
+}
+
+function renderChangedList(changes: SuppressionChange[]): string[] {
+  return changes.flatMap((change) => {
+    const header = change.after.ruleMetadata?.documentationUrl
+      ? `- [\`${escapeMarkdown(change.after.ruleName)}\`](${change.after.ruleMetadata.documentationUrl})`
+      : `- \`${escapeMarkdown(change.after.ruleName)}\``;
+    const lines = [
+      header,
+      `  - Source: \`${escapeMarkdown(formatSource(change.after))}\``,
+      `  - Previous justification: ${escapeMarkdown(change.before.justification)}`,
+      `  - New justification: ${escapeMarkdown(change.after.justification)}`,
+    ];
+
+    if (change.after.ruleMetadata?.description) {
+      lines.splice(1, 0, `  - Rule: ${escapeMarkdown(change.after.ruleMetadata.description)}`);
+    }
+
+    if (change.after.ruleMetadata?.guidelineCodes?.length) {
+      lines.push(
+        `  - Azure guidance: ${change.after.ruleMetadata.guidelineCodes
+          .map((code) => `\`${escapeMarkdown(code)}\``)
+          .join(", ")}`,
+      );
+    }
+
+    return lines;
+  });
 }
 
 export function renderMarkdownSummary(params: {
@@ -64,7 +93,8 @@ export function renderMarkdownSummary(params: {
     lines.push(
       `## New suppressions requiring approval (${newSuppressions.length})`,
       "",
-      renderSuppressionTable(newSuppressions),
+      ...renderSuppressionList(newSuppressions),
+      "",
     );
   }
 
@@ -72,7 +102,8 @@ export function renderMarkdownSummary(params: {
     lines.push(
       `## Changed suppressions requiring approval (${changedSuppressions.length})`,
       "",
-      renderChangedTable(changedSuppressions),
+      ...renderChangedList(changedSuppressions),
+      "",
     );
   }
 

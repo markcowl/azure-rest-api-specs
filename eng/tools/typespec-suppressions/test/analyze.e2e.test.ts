@@ -112,4 +112,55 @@ interface Widgets {
     expect(report.changedSuppressions[0].before.justification).toBe("base reason");
     expect(report.changedSuppressions[0].after.justification).toBe("updated reason");
   });
+
+  it("enriches known TypeSpec Azure rules with documentation metadata", async () => {
+    const repoRoot = await initTempRepo();
+    tempRepos.push(repoRoot);
+
+    const specPath = "specification/demo/resource-manager/Microsoft.Demo/Demo";
+    const specFolder = path.join(repoRoot, specPath);
+    await mkdir(specFolder, { recursive: true });
+
+    await writeFile(
+      path.join(specFolder, "tspconfig.yaml"),
+      `linter:
+  disable:
+    "@azure-tools/typespec-azure-core/no-rpc-path-params": "approved for demo"
+`,
+    );
+    await writeFile(path.join(specFolder, "main.tsp"), "namespace Demo;\n");
+
+    git(repoRoot, ["add", "."]);
+    git(repoRoot, ["commit", "-m", "base"]);
+    const baseRevision = git(repoRoot, ["rev-parse", "HEAD"]);
+
+    await writeFile(
+      path.join(specFolder, "main.tsp"),
+      `namespace Demo;
+
+interface Widgets {
+  #suppress "@azure-tools/typespec-azure-core/rpc-operation-request-body" "approved for demo"
+  read(): void;
+}
+`,
+    );
+
+    git(repoRoot, ["add", "."]);
+    git(repoRoot, ["commit", "-m", "head"]);
+    const headRevision = git(repoRoot, ["rev-parse", "HEAD"]);
+
+    const report = await analyzeTypeSpecSuppressions({
+      cwd: repoRoot,
+      baseRevision,
+      headRevision,
+      specPaths: [specPath],
+    });
+
+    expect(report.newSuppressions[0].ruleMetadata).toMatchObject({
+      packageName: "@azure-tools/typespec-azure-core",
+      localRuleName: "rpc-operation-request-body",
+      documentationUrl:
+        "https://azure.github.io/typespec-azure/docs/libraries/azure-core/rules/rpc-operation-request-body",
+    });
+  });
 });
