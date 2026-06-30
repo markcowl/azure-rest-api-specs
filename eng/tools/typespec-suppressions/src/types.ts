@@ -48,17 +48,32 @@ export interface SuppressionCounts {
   unchanged: number;
 }
 
+export interface CheckedSuppressions {
+  checkRules: string[];
+  requiresApproval: boolean;
+  counts: {
+    new: number;
+    removed: number;
+    changed: number;
+  };
+  newSuppressions: SuppressionRecord[];
+  removedSuppressions: SuppressionRecord[];
+  changedSuppressions: SuppressionChange[];
+}
+
 export interface SuppressionReport {
   repoRoot: string;
   baseRevision: string;
   headRevision: string;
   specPaths: string[];
+  checkRules?: string[];
   requiresApproval: boolean;
   counts: SuppressionCounts;
   specs: SpecSuppressionReport[];
   newSuppressions: SuppressionRecord[];
   removedSuppressions: SuppressionRecord[];
   changedSuppressions: SuppressionChange[];
+  checkedSuppressions?: CheckedSuppressions;
 }
 
 export interface AnalyzeSuppressionsOptions {
@@ -66,10 +81,12 @@ export interface AnalyzeSuppressionsOptions {
   baseRevision: string;
   headRevision: string;
   specPaths: string[];
+  checkRules?: string[];
 }
 
 export interface AnalyzeSuppressionsDirectoriesOptions {
   baseRoot: string;
   headRoot: string;
   specPaths: string[];
+  checkRules?: string[];
 }

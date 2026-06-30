@@ -82,6 +82,7 @@ jobs:
             --head HEAD \
             --json-output "typespec-suppressions-report.json" \
             --markdown-output "$GITHUB_STEP_SUMMARY" \
+            --check-rules-file "eng/tools/typespec-suppressions/check-rules.json" \
             "${spec_folders[@]}"
 
       - name: Upload report artifact

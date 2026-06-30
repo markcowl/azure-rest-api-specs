@@ -12,6 +12,7 @@ import { enrichSuppressionChanges, enrichSuppressionRecords } from "./rule-metad
 import {
   AnalyzeSuppressionsDirectoriesOptions,
   AnalyzeSuppressionsOptions,
+  CheckedSuppressions,
   SpecSuppressionReport,
   SuppressionChange,
   SuppressionRecord,
@@ -41,6 +42,58 @@ function compareSuppressions(left: SuppressionRecord, right: SuppressionRecord):
 
 function compareChanges(left: SuppressionChange, right: SuppressionChange): number {
   return compareSuppressions(left.after, right.after);
+}
+
+/**
+ * Normalizes a list of check rules while preserving the distinction between
+ * `undefined` (no `--check-rules-file` provided, i.e. legacy mode) and `[]`
+ * (file provided but resolving to zero rules, i.e. checked-only mode with no
+ * rules). The empty array must NOT be collapsed to `undefined`.
+ */
+function normalizeCheckRules(checkRules?: string[]): string[] | undefined {
+  if (checkRules === undefined) {
+    return undefined;
+  }
+
+  return Array.from(
+    new Set(checkRules.map((rule) => rule.trim()).filter((rule) => rule.length > 0)),
+  ).sort((left, right) => left.localeCompare(right));
+}
+
+/**
+ * Builds the checked-only view of a suppression diff by filtering to exact
+ * full rule-name matches. Returns `undefined` in legacy mode (checkRules
+ * `undefined`); otherwise always returns a block, even when empty.
+ */
+function buildCheckedSuppressions(
+  checkRules: string[] | undefined,
+  newSuppressions: SuppressionRecord[],
+  removedSuppressions: SuppressionRecord[],
+  changedSuppressions: SuppressionChange[],
+): CheckedSuppressions | undefined {
+  if (checkRules === undefined) {
+    return undefined;
+  }
+
+  const ruleSet = new Set(checkRules);
+  const checkedNew = newSuppressions.filter((suppression) => ruleSet.has(suppression.ruleName));
+  const checkedRemoved = removedSuppressions.filter((suppression) =>
+    ruleSet.has(suppression.ruleName),
+  );
+  const checkedChanged = changedSuppressions.filter((change) => ruleSet.has(change.after.ruleName));
+
+  return {
+    checkRules,
+    requiresApproval: checkedNew.length > 0 || checkedChanged.length > 0,
+    counts: {
+      new: checkedNew.length,
+      removed: checkedRemoved.length,
+      changed: checkedChanged.length,
+    },
+    newSuppressions: checkedNew,
+    removedSuppressions: checkedRemoved,
+    changedSuppressions: checkedChanged,
+  };
 }
 
 async function listRevisionFiles(
@@ -283,17 +336,27 @@ export async function analyzeTypeSpecSuppressions(
   const enrichedNewSuppressions = await enrichSuppressionRecords(newSuppressions);
   const enrichedChangedSuppressions = await enrichSuppressionChanges(changedSuppressions);
 
+  const checkRules = normalizeCheckRules(options.checkRules);
+  const checkedSuppressions = buildCheckedSuppressions(
+    checkRules,
+    enrichedNewSuppressions,
+    removedSuppressions,
+    enrichedChangedSuppressions,
+  );
+
   return {
     repoRoot,
     baseRevision: options.baseRevision,
     headRevision: options.headRevision,
     specPaths,
+    checkRules,
     requiresApproval: newSuppressions.length > 0 || changedSuppressions.length > 0,
     counts,
     specs: specReports,
     newSuppressions: enrichedNewSuppressions,
     removedSuppressions,
     changedSuppressions: enrichedChangedSuppressions,
+    checkedSuppressions,
   };
 }
 
@@ -359,16 +422,26 @@ export async function analyzeTypeSpecSuppressionsFromDirectories(
   const enrichedNewSuppressions = await enrichSuppressionRecords(newSuppressions);
   const enrichedChangedSuppressions = await enrichSuppressionChanges(changedSuppressions);
 
+  const checkRules = normalizeCheckRules(options.checkRules);
+  const checkedSuppressions = buildCheckedSuppressions(
+    checkRules,
+    enrichedNewSuppressions,
+    removedSuppressions,
+    enrichedChangedSuppressions,
+  );
+
   return {
     repoRoot: headRoot,
     baseRevision: baseRoot,
     headRevision: headRoot,
     specPaths,
+    checkRules,
     requiresApproval: newSuppressions.length > 0 || changedSuppressions.length > 0,
     counts,
     specs: specReports,
     newSuppressions: enrichedNewSuppressions,
     removedSuppressions,
     changedSuppressions: enrichedChangedSuppressions,
+    checkedSuppressions,
   };
 }

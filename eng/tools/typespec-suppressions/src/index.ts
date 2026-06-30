@@ -6,16 +6,17 @@ import {
   analyzeTypeSpecSuppressions,
   analyzeTypeSpecSuppressionsFromDirectories,
 } from "./analyze.js";
+import { loadCheckRulesFile } from "./check-rules.js";
 import { renderMarkdownSummary } from "./report.js";
 import { AnalyzeSuppressionsOptions } from "./types.js";
 
 function getUsage(): string {
   return `Usage:
-  npx typespec-suppressions --base <commitish> [--head <commitish>] [--json-output <path>] [--markdown-output <path>] [--fail-on-approval] <spec-folder> [<spec-folder> ...]
+  npx typespec-suppressions --base <commitish> [--head <commitish>] [--json-output <path>] [--markdown-output <path>] [--check-rules-file <path>] [--fail-on-approval] <spec-folder> [<spec-folder> ...]
 
 Examples:
   npx typespec-suppressions --base origin/main --head HEAD specification/widget/resource-manager/Microsoft.Widget/Widget
-  npx typespec-suppressions --base abc123 --head def456 --json-output report.json --markdown-output report.md --fail-on-approval specification/foo/Service`;
+  npx typespec-suppressions --base abc123 --head def456 --json-output report.json --markdown-output report.md --check-rules-file eng/tools/typespec-suppressions/check-rules.json --fail-on-approval specification/foo/Service`;
 }
 
 async function ensureParentDirectory(filePath: string): Promise<void> {
@@ -30,6 +31,7 @@ export async function main() {
       head: { type: "string", default: "HEAD" },
       "json-output": { type: "string" },
       "markdown-output": { type: "string" },
+      "check-rules-file": { type: "string" },
       "fail-on-approval": { type: "boolean", default: false },
     },
     allowPositionals: true,
@@ -44,18 +46,26 @@ export async function main() {
     exit(1);
   }
 
+  const checkRulesFile = parsedArgs.values["check-rules-file"];
+  const checkRules = checkRulesFile === undefined ? undefined : loadCheckRulesFile(checkRulesFile);
+
   const options: AnalyzeSuppressionsOptions = {
     baseRevision,
     headRevision,
     specPaths,
+    checkRules,
   };
   const report = await analyzeTypeSpecSuppressions(options);
+
+  // In checked-only mode (a check-rules file was provided), surface and gate on
+  // the checked subset; otherwise fall back to the full diff (legacy behavior).
+  const reported = report.checkedSuppressions ?? report;
   const markdown = renderMarkdownSummary({
     baseRevision: report.baseRevision,
     headRevision: report.headRevision,
     specPaths: report.specPaths,
-    newSuppressions: report.newSuppressions,
-    changedSuppressions: report.changedSuppressions,
+    newSuppressions: reported.newSuppressions,
+    changedSuppressions: reported.changedSuppressions,
   });
 
   const jsonOutput = parsedArgs.values["json-output"];
@@ -72,9 +82,15 @@ export async function main() {
     await writeFile(markdownOutput, markdown);
   }
 
-  if (parsedArgs.values["fail-on-approval"] && report.requiresApproval) {
+  if (parsedArgs.values["fail-on-approval"] && reported.requiresApproval) {
     exit(1);
   }
 }
 
-export { analyzeTypeSpecSuppressions, analyzeTypeSpecSuppressionsFromDirectories, renderMarkdownSummary };
+export { CHECK_RULES_RELATIVE_PATH } from "./check-rules.js";
+export {
+  analyzeTypeSpecSuppressions,
+  analyzeTypeSpecSuppressionsFromDirectories,
+  loadCheckRulesFile,
+  renderMarkdownSummary,
+};

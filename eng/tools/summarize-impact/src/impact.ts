@@ -1,6 +1,10 @@
 #!/usr/bin/env node
 
-import { analyzeTypeSpecSuppressionsFromDirectories } from "@azure-tools/typespec-suppressions";
+import {
+  analyzeTypeSpecSuppressionsFromDirectories,
+  CHECK_RULES_RELATIVE_PATH,
+  loadCheckRulesFile,
+} from "@azure-tools/typespec-suppressions";
 import { existsSync, readFileSync } from "fs";
 import { glob } from "glob";
 import { dirname, join, resolve } from "path";
@@ -462,12 +466,17 @@ async function processSuppression(context: PRContext, labelContext: LabelContext
   );
 
   if (changedTypeSpecProjectFolders.length > 0) {
+    const checkRules = loadCheckRulesFile(join(context.sourceDirectory, CHECK_RULES_RELATIVE_PATH));
     const report = await analyzeTypeSpecSuppressionsFromDirectories({
       baseRoot: context.targetDirectory,
       headRoot: context.sourceDirectory,
       specPaths: changedTypeSpecProjectFolders,
+      checkRules,
     });
-    suppressionReviewRequiredLabel.shouldBePresent ||= report.requiresApproval;
+    // Checked-only mode: approval is required solely for suppressions of curated
+    // check rules. Falls back to the full diff if no checked block is produced.
+    suppressionReviewRequiredLabel.shouldBePresent ||=
+      report.checkedSuppressions?.requiresApproval ?? report.requiresApproval;
   }
 
   suppressionReviewRequiredLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);

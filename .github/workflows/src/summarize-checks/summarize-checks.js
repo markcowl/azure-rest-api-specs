@@ -117,10 +117,20 @@ import path from "path";
  */
 
 /**
+ * @typedef {Object} TypeSpecCheckedSuppressions
+ * @property {string[]} checkRules
+ * @property {boolean} requiresApproval
+ * @property {TypeSpecSuppressionRecord[]} [newSuppressions]
+ * @property {TypeSpecSuppressionRecord[]} [removedSuppressions]
+ * @property {TypeSpecSuppressionChange[]} [changedSuppressions]
+ */
+
+/**
  * @typedef {Object} TypeSpecSuppressionsReport
  * @property {boolean} [requiresApproval]
  * @property {TypeSpecSuppressionRecord[]} [newSuppressions]
  * @property {TypeSpecSuppressionChange[]} [changedSuppressions]
+ * @property {TypeSpecCheckedSuppressions} [checkedSuppressions]
  */
 
 /**
@@ -1365,12 +1375,16 @@ export async function getTypeSpecSuppressionsSection(
   }
 
   const report = /** @type {TypeSpecSuppressionsReport} */ (JSON.parse(reportContent));
-  if (!report.requiresApproval) {
+
+  // In checked-only mode (a check-rules file was used), gate and render the
+  // checked subset; otherwise fall back to the full diff (legacy behavior).
+  const reported = report.checkedSuppressions ?? report;
+  if (!reported.requiresApproval) {
     return undefined;
   }
 
-  const newSuppressions = report.newSuppressions ?? [];
-  const changedSuppressions = report.changedSuppressions ?? [];
+  const newSuppressions = reported.newSuppressions ?? [];
+  const changedSuppressions = reported.changedSuppressions ?? [];
   const summaryParts = [];
   if (newSuppressions.length > 0) {
     summaryParts.push(pluralize(newSuppressions.length, "new suppression"));

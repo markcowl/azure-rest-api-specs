@@ -38,19 +38,55 @@ npx typespec-suppressions --base <commitish> [--head <commitish>] [options] <spe
 
 ### Arguments
 
-| Argument | Description |
-|----------|-------------|
+| Argument        | Description                                                                       |
+| --------------- | --------------------------------------------------------------------------------- |
 | `<spec-folder>` | One or more paths to TypeSpec project directories (must contain `tspconfig.yaml`) |
 
 ### Options
 
-| Option | Default | Description |
-|--------|---------|-------------|
-| `--base` | *(required)* | Base git revision to compare against (e.g., `origin/main`, a commit SHA) |
-| `--head` | `HEAD` | Head git revision to analyze |
-| `--json-output <path>` | stdout | Write JSON report to a file instead of stdout |
-| `--markdown-output <path>` | *(none)* | Write a Markdown summary to a file |
-| `--fail-on-approval` | `false` | Exit with code 1 if new/changed suppressions require approval |
+| Option                      | Default      | Description                                                                                                                                                                    |
+| --------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `--base`                    | _(required)_ | Base git revision to compare against (e.g., `origin/main`, a commit SHA)                                                                                                       |
+| `--head`                    | `HEAD`       | Head git revision to analyze                                                                                                                                                   |
+| `--json-output <path>`      | stdout       | Write JSON report to a file instead of stdout                                                                                                                                  |
+| `--markdown-output <path>`  | _(none)_     | Write a Markdown summary to a file                                                                                                                                             |
+| `--check-rules-file <path>` | _(none)_     | Path to a JSON file listing the lint rules whose suppressions require approval. Enables **checked-only mode** (see below). Resolved relative to the current working directory. |
+| `--fail-on-approval`        | `false`      | Exit with code 1 if new/changed suppressions require approval                                                                                                                  |
+
+### Check rules (scoped approval)
+
+By default (no `--check-rules-file`), the tool reports **all** new/changed
+suppressions and `requiresApproval` reflects the full diff (**legacy mode**).
+
+When `--check-rules-file <path>` is provided, the tool runs in **checked-only
+mode**: it additionally emits a `checkedSuppressions` block scoped to the listed
+rules (exact, fully-qualified rule-name match), and the Markdown summary / gating
+focus on that subset. The full diff is still retained at the top level for other
+flows.
+
+The file is a JSON object:
+
+```json
+{
+  "name": "New TypeSpec ruleset",
+  "description": "optional",
+  "rules": [
+    "@azure-tools/typespec-azure-core/no-enum",
+    "@azure-tools/typespec-azure-resource-manager/arm-resource-operation-response"
+  ]
+}
+```
+
+Behavior notes:
+
+- **Mode is determined by the presence of the flag, not the number of rules.**
+  Passing the flag with an empty `rules` array still enables checked-only mode
+  (with nothing gated).
+- **Graceful degradation:** if the file is missing, unreadable, not valid JSON,
+  or lacks a `rules` string array, a warning is logged and the tool proceeds with
+  zero rules (no suppressions require approval). It never hard-fails.
+- The curated list for this repo lives at
+  `eng/tools/typespec-suppressions/check-rules.json`.
 
 ### Examples
 
@@ -71,6 +107,7 @@ npx typespec-suppressions --base abc123 --head def456 \
 ### Suppression Identity
 
 Each suppression is uniquely identified by the tuple:
+
 - `specPath` – the TypeSpec project folder
 - `sourceKind` – `"inline"` or `"tspconfig"`
 - `ruleName` – the suppressed rule (e.g., `@azure-tools/typespec-azure-core/no-enum`)
@@ -89,6 +126,7 @@ Parses `tspconfig.yaml` using the `yaml` library and reads entries under `linter
 ### Rule Metadata Enrichment
 
 For each suppressed rule, the tool attempts to dynamically import the linter package and look up the rule definition to attach:
+
 - Rule description
 - Documentation URL
 - Azure guideline codes (if available)
@@ -119,7 +157,8 @@ interface SuppressionReport {
   baseRevision: string;
   headRevision: string;
   specPaths: string[];
-  requiresApproval: boolean;  // true if new or changed suppressions exist
+  checkRules?: string[]; // normalized rules when --check-rules-file is used
+  requiresApproval: boolean; // true if new or changed suppressions exist (full diff)
   counts: {
     specs: number;
     base: number;
@@ -133,6 +172,15 @@ interface SuppressionReport {
   newSuppressions: SuppressionRecord[];
   removedSuppressions: SuppressionRecord[];
   changedSuppressions: SuppressionChange[];
+  // Present only in checked-only mode (--check-rules-file provided), scoped to checkRules:
+  checkedSuppressions?: {
+    checkRules: string[];
+    requiresApproval: boolean;
+    counts: { new: number; removed: number; changed: number };
+    newSuppressions: SuppressionRecord[];
+    removedSuppressions: SuppressionRecord[];
+    changedSuppressions: SuppressionChange[];
+  };
 }
 ```
 
@@ -173,6 +221,7 @@ The "Summarize PR Impact" check aggregates results from multiple PR checks, incl
 **File:** `.github/workflows/typespec-suppressions-test.yaml`
 
 Runs the tool's own unit and e2e tests. Triggers on:
+
 - Pushes to `main` and `typespec-next` branches
 - PRs that modify files under `eng/tools/typespec-suppressions/**` or related config files
 
