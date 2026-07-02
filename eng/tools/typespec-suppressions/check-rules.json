@@ -1,5 +1,5 @@
 {
-  "name": "New TypeSpec ruleset",
+  "name": "TypeSpec LintDiff",
   "description": "Curated list of TypeSpec linter rules whose suppressions require explicit reviewer approval. Suppressions for rules not listed here do not gate the PR. Add fully-qualified rule names (package/rule).",
   "rules": [
     "@azure-tools/typespec-azure-core/no-enum",
