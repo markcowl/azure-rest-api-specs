@@ -1307,6 +1307,13 @@ function renderGuidelineCodes(ruleMetadata) {
     .join(", ")}`;
 }
 
+function renderJustification(label, justification) {
+  if (!justification || !justification.trim()) {
+    return `<br/>${label}: <strong>NO JUSTIFICATION PROVIDED, THIS IS A REQUIRED SUPPRESSION COMPONENT</strong>`;
+  }
+  return `<br/>${label}: ${escapeHtml(justification)}`;
+}
+
 function renderNewSuppressionItem(owner, repo, head_sha, suppression) {
   const description = suppression.ruleMetadata?.description
     ? ` — ${escapeHtml(suppression.ruleMetadata.description)}`
@@ -1314,7 +1321,7 @@ function renderNewSuppressionItem(owner, repo, head_sha, suppression) {
   return (
     `<li><strong>${renderRuleLabel(suppression)}</strong>${description}` +
     `<br/>Source: ${renderSourceLink(owner, repo, head_sha, suppression)}` +
-    `<br/>Justification: ${escapeHtml(suppression.justification)}` +
+    `${renderJustification("Justification", suppression.justification)}` +
     `${renderGuidelineCodes(suppression.ruleMetadata)}` +
     `</li>`
   );
@@ -1327,8 +1334,8 @@ function renderChangedSuppressionItem(owner, repo, head_sha, change) {
   return (
     `<li><strong>${renderRuleLabel(change.after)}</strong>${description}` +
     `<br/>Source: ${renderSourceLink(owner, repo, head_sha, change.after)}` +
-    `<br/>Previous justification: ${escapeHtml(change.before.justification)}` +
-    `<br/>New justification: ${escapeHtml(change.after.justification)}` +
+    `${renderJustification("Previous justification", change.before.justification)}` +
+    `${renderJustification("New justification", change.after.justification)}` +
     `${renderGuidelineCodes(change.after.ruleMetadata)}` +
     `</li>`
   );
