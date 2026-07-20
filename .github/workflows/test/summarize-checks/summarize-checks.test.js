@@ -1495,7 +1495,7 @@ describe("Summarize Checks Unit Tests", () => {
             "abc123",
             impactAssessment,
           ),
-        ).resolves.toContain("Previous justification: old reason");
+        ).resolves.toContain("Previous: old reason");
       },
     );
 
@@ -1574,7 +1574,184 @@ describe("Summarize Checks Unit Tests", () => {
             impactAssessment,
           ),
         ).resolves.toContain(
-          "Justification: <strong>NO JUSTIFICATION PROVIDED, THIS IS A REQUIRED SUPPRESSION COMPONENT</strong>",
+          "<strong>NO JUSTIFICATION PROVIDED, THIS IS A REQUIRED SUPPRESSION COMPONENT</strong>",
+        );
+      },
+    );
+
+    it.runIf(unzipExists)(
+      "reflects approval status: ❌ pending by default, ✅ when the label is present",
+      async () => {
+        const github = createMockGithub();
+
+        github.rest.actions.listWorkflowRunsForRepo.mockResolvedValue({
+          data: {
+            workflow_runs: [
+              {
+                id: 123,
+                name: "TypeSpec Suppressions - Analyze Code",
+                status: "completed",
+                updated_at: "2025-01-01T00:00:00Z",
+              },
+            ],
+          },
+        });
+
+        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
+          if (name === "typespec-suppressions-report") {
+            return { data: { artifacts: [{ id: 1, name }] } };
+          }
+
+          return { data: { artifacts: [] } };
+        });
+
+        github.rest.actions.downloadArtifact.mockResolvedValue({
+          data: Buffer.from(
+            zipSync({
+              "typespec-suppressions-report.json": strToU8(
+                JSON.stringify({
+                  requiresApproval: true,
+                  newSuppressions: [
+                    {
+                      specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
+                      sourceKind: "inline",
+                      ruleName: "@azure-tools/typespec-azure-core/no-rpc-path-params",
+                      justification: "approved for demo",
+                      sourceFile:
+                        "specification/demo/resource-manager/Microsoft.Demo/Demo/main.tsp",
+                      anchorPath: "namespace:Demo/interface:Widgets/op:read",
+                      location: { line: 12, column: 3 },
+                      rawText:
+                        '#suppress "@azure-tools/typespec-azure-core/no-rpc-path-params" "approved for demo"',
+                    },
+                  ],
+                }),
+              ),
+            }),
+          ),
+        });
+
+        const impactAssessment = {
+          resourceManagerRequired: false,
+          dataPlaneRequired: false,
+          suppressionReviewRequired: true,
+          isNewApiVersion: false,
+          rpaasRpNotInPrivateRepo: false,
+          rpaasChange: false,
+          newRP: false,
+          rpaasRPMissing: false,
+          typeSpecChanged: true,
+          isDraft: false,
+          targetBranch: "main",
+        };
+
+        const pending = await getTypeSpecSuppressionsSection(
+          github,
+          mockCore,
+          "test-owner",
+          "test-repo",
+          "abc123",
+          impactAssessment,
+          [],
+        );
+        expect(pending).toContain("❌ Approval required");
+        expect(pending).toContain('<td align="center">❌</td>');
+
+        const approved = await getTypeSpecSuppressionsSection(
+          github,
+          mockCore,
+          "test-owner",
+          "test-repo",
+          "abc123",
+          impactAssessment,
+          ["Approved-Suppression"],
+        );
+        expect(approved).toContain("✅ Approved");
+        expect(approved).toContain('<td align="center">✅</td>');
+      },
+    );
+
+    it.runIf(unzipExists)(
+      "limits the table to 5 suppressions and links to the analysis log",
+      async () => {
+        const github = createMockGithub();
+
+        github.rest.actions.listWorkflowRunsForRepo.mockResolvedValue({
+          data: {
+            workflow_runs: [
+              {
+                id: 123,
+                name: "TypeSpec Suppressions - Analyze Code",
+                status: "completed",
+                updated_at: "2025-01-01T00:00:00Z",
+                html_url: "https://github.com/test-owner/test-repo/actions/runs/123",
+              },
+            ],
+          },
+        });
+
+        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
+          if (name === "typespec-suppressions-report") {
+            return { data: { artifacts: [{ id: 1, name }] } };
+          }
+
+          return { data: { artifacts: [] } };
+        });
+
+        const newSuppressions = Array.from({ length: 7 }, (_, i) => ({
+          specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
+          sourceKind: "inline",
+          ruleName: "@azure-tools/typespec-azure-core/no-rpc-path-params",
+          justification: `reason-${i}`,
+          sourceFile: "specification/demo/resource-manager/Microsoft.Demo/Demo/main.tsp",
+          anchorPath: `namespace:Demo/interface:Widgets/op:read${i}`,
+          location: { line: 12 + i, column: 3 },
+          rawText: `#suppress "@azure-tools/typespec-azure-core/no-rpc-path-params" "reason-${i}"`,
+        }));
+
+        github.rest.actions.downloadArtifact.mockResolvedValue({
+          data: Buffer.from(
+            zipSync({
+              "typespec-suppressions-report.json": strToU8(
+                JSON.stringify({ requiresApproval: true, newSuppressions }),
+              ),
+            }),
+          ),
+        });
+
+        const impactAssessment = {
+          resourceManagerRequired: false,
+          dataPlaneRequired: false,
+          suppressionReviewRequired: true,
+          isNewApiVersion: false,
+          rpaasRpNotInPrivateRepo: false,
+          rpaasChange: false,
+          newRP: false,
+          rpaasRPMissing: false,
+          typeSpecChanged: true,
+          isDraft: false,
+          targetBranch: "main",
+        };
+
+        const section = await getTypeSpecSuppressionsSection(
+          github,
+          mockCore,
+          "test-owner",
+          "test-repo",
+          "abc123",
+          impactAssessment,
+          [],
+        );
+
+        // Only the first 5 rows are rendered.
+        expect(section).toContain("reason-0");
+        expect(section).toContain("reason-4");
+        expect(section).not.toContain("reason-5");
+        expect(section).not.toContain("reason-6");
+        expect((section.match(/<td align="center">/g) ?? []).length).toBe(5);
+        expect(section).toContain("Showing 5 of 7 suppressions");
+        expect(section).toContain(
+          '<a href="https://github.com/test-owner/test-repo/actions/runs/123">full analysis log</a>',
         );
       },
     );
