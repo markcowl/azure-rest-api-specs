@@ -1422,8 +1422,8 @@ export async function getTypeSpecSuppressionsSection(
       " — ",
     )}</summary>`,
     "",
-    "⚠️ This PR adds or updates the TypeSpec suppressions listed below. <strong>Suppressions are strongly discouraged</strong> — they bypass linter rules that protect API quality and consistency. Authors should avoid adding new suppressions and prefer fixing the underlying issue; reviewers should approve only when there is a clear, compelling justification and no reasonable alternative. Review each linked rule and source location, then apply <code>Approved-Suppression</code> only if every justification is acceptable. The <strong>Status</strong> column shows ✅ once the label is applied and ❌ while approval is pending.",
     "",
+    "⚠️ This PR adds or updates the TypeSpec suppressions listed below. <strong>Suppressions are strongly discouraged</strong> — they bypass linter rules that protect API quality and consistency. Authors should avoid adding new suppressions and prefer fixing the underlying issue; reviewers should approve only when there is a clear, compelling justification and no reasonable alternative. Review each linked rule and source location, then apply <code>Approved-Suppression</code> only if every justification is acceptable. The <strong>Status</strong> column shows ✅ once the label is applied and ❌ while approval is pending.",
     "",
   ];
 
