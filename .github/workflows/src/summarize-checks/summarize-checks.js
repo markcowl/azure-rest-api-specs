@@ -166,7 +166,7 @@ const TYPESPEC_SUPPRESSIONS_REPORT_ARTIFACT_NAME = "typespec-suppressions-report
 const TYPESPEC_SUPPRESSIONS_SECTION_TITLE = "TypeSpec suppressions requiring review";
 const APPROVED_SUPPRESSION_LABEL = "Approved-Suppression";
 // GitHub caps comment bodies at ~65k characters, so only render a handful of suppressions
-// inline and link to the analysis log for the full list.
+// inline per table (new and changed) and link to the analysis log for the full list.
 const MAX_SUPPRESSIONS_SHOWN = 5;
 
 /** @type {CheckMetadata[]} */
@@ -1336,24 +1336,22 @@ function renderJustificationValue(justification) {
   return escapeHtml(justification);
 }
 
-function renderSuppressionRow(owner, repo, head_sha, row, statusCell) {
-  if (row.kind === "New") {
-    const suppression = row.suppression;
-    return (
-      `<tr><td align="center">${statusCell}</td><td>New</td>` +
-      `<td>${renderRuleCell(suppression)}</td>` +
-      `<td>${renderSourceLink(owner, repo, head_sha, suppression)}</td>` +
-      `<td>${renderJustificationValue(suppression.justification)}</td></tr>`
-    );
-  }
-
-  const change = row.change;
+function renderNewSuppressionRow(owner, repo, head_sha, suppression, statusCell) {
   return (
-    `<tr><td align="center">${statusCell}</td><td>Changed</td>` +
+    `<tr><td align="center">${statusCell}</td>` +
+    `<td>${renderRuleCell(suppression)}</td>` +
+    `<td>${renderSourceLink(owner, repo, head_sha, suppression)}</td>` +
+    `<td>${renderJustificationValue(suppression.justification)}</td></tr>`
+  );
+}
+
+function renderChangedSuppressionRow(owner, repo, head_sha, change, statusCell) {
+  return (
+    `<tr><td align="center">${statusCell}</td>` +
     `<td>${renderRuleCell(change.after)}</td>` +
     `<td>${renderSourceLink(owner, repo, head_sha, change.after)}</td>` +
-    `<td>Previous: ${renderJustificationValue(change.before.justification)}` +
-    `<br/>New: ${renderJustificationValue(change.after.justification)}</td></tr>`
+    `<td>${renderJustificationValue(change.before.justification)}</td>` +
+    `<td>${renderJustificationValue(change.after.justification)}</td></tr>`
   );
 }
 
@@ -1432,27 +1430,48 @@ export async function getTypeSpecSuppressionsSection(
     "",
   ];
 
-  const rows = [
-    ...newSuppressions.map((suppression) => ({ kind: "New", suppression })),
-    ...changedSuppressions.map((change) => ({ kind: "Changed", change })),
-  ];
-  const shownRows = rows.slice(0, MAX_SUPPRESSIONS_SHOWN);
-  const hiddenCount = rows.length - shownRows.length;
+  const totalCount = newSuppressions.length + changedSuppressions.length;
+  const shownNew = newSuppressions.slice(0, MAX_SUPPRESSIONS_SHOWN);
+  const shownChanged = changedSuppressions.slice(0, MAX_SUPPRESSIONS_SHOWN);
+  const shownCount = shownNew.length + shownChanged.length;
+  const hiddenCount = totalCount - shownCount;
 
-  sectionLines.push(
-    "<table>",
-    "<thead><tr><th>Status</th><th>Change</th><th>Rule</th><th>Source</th><th>Justification</th></tr></thead>",
-    "<tbody>",
-    ...shownRows.map((row) => renderSuppressionRow(owner, repo, head_sha, row, statusCell)),
-    "</tbody>",
-    "</table>",
-    "",
-  );
+  if (shownNew.length > 0) {
+    sectionLines.push(
+      `<strong>New suppressions (${newSuppressions.length})</strong>`,
+      "",
+      "<table>",
+      "<thead><tr><th>Status</th><th>Rule</th><th>Source</th><th>Justification</th></tr></thead>",
+      "<tbody>",
+      ...shownNew.map((suppression) =>
+        renderNewSuppressionRow(owner, repo, head_sha, suppression, statusCell),
+      ),
+      "</tbody>",
+      "</table>",
+      "",
+    );
+  }
+
+  if (shownChanged.length > 0) {
+    sectionLines.push(
+      `<strong>Changed suppressions (${changedSuppressions.length})</strong>`,
+      "",
+      "<table>",
+      "<thead><tr><th>Status</th><th>Rule</th><th>Source</th><th>Previous justification</th><th>New justification</th></tr></thead>",
+      "<tbody>",
+      ...shownChanged.map((change) =>
+        renderChangedSuppressionRow(owner, repo, head_sha, change, statusCell),
+      ),
+      "</tbody>",
+      "</table>",
+      "",
+    );
+  }
 
   if (hiddenCount > 0) {
     const runUrl = run.html_url ?? `https://github.com/${owner}/${repo}/actions/runs/${run.id}`;
     sectionLines.push(
-      `<em>Showing ${shownRows.length} of ${rows.length} suppressions. See the <a href="${runUrl}">full analysis log</a> for the complete list.</em>`,
+      `<em>Showing ${shownCount} of ${totalCount} suppressions. See the <a href="${runUrl}">full analysis log</a> for the complete list.</em>`,
       "",
     );
   }

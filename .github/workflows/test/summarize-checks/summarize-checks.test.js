@@ -1495,7 +1495,29 @@ describe("Summarize Checks Unit Tests", () => {
             "abc123",
             impactAssessment,
           ),
-        ).resolves.toContain("Previous: old reason");
+        ).resolves.toContain("New suppressions (1)");
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            impactAssessment,
+          ),
+        ).resolves.toContain("Changed suppressions (1)");
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            impactAssessment,
+          ),
+        ).resolves.toContain(
+          "<thead><tr><th>Status</th><th>Rule</th><th>Source</th><th>Previous justification</th><th>New justification</th></tr></thead>",
+        );
       },
     );
 
@@ -1753,6 +1775,96 @@ describe("Summarize Checks Unit Tests", () => {
         expect(section).toContain(
           '<a href="https://github.com/test-owner/test-repo/actions/runs/123">full analysis log</a>',
         );
+      },
+    );
+
+    it.runIf(unzipExists)(
+      "caps new and changed tables independently at 5 rows each so both render",
+      async () => {
+        const github = createMockGithub();
+
+        github.rest.actions.listWorkflowRunsForRepo.mockResolvedValue({
+          data: {
+            workflow_runs: [
+              {
+                id: 123,
+                name: "TypeSpec Suppressions - Analyze Code",
+                status: "completed",
+                updated_at: "2025-01-01T00:00:00Z",
+                html_url: "https://github.com/test-owner/test-repo/actions/runs/123",
+              },
+            ],
+          },
+        });
+
+        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
+          if (name === "typespec-suppressions-report") {
+            return { data: { artifacts: [{ id: 1, name }] } };
+          }
+
+          return { data: { artifacts: [] } };
+        });
+
+        const makeSuppression = (label, i) => ({
+          specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
+          sourceKind: "inline",
+          ruleName: "@azure-tools/typespec-azure-core/no-rpc-path-params",
+          justification: `${label}-${i}`,
+          sourceFile: "specification/demo/resource-manager/Microsoft.Demo/Demo/main.tsp",
+          anchorPath: `namespace:Demo/interface:Widgets/op:read${label}${i}`,
+          location: { line: 12 + i, column: 3 },
+          rawText: `#suppress "@azure-tools/typespec-azure-core/no-rpc-path-params" "${label}-${i}"`,
+        });
+
+        const newSuppressions = Array.from({ length: 7 }, (_, i) => makeSuppression("new", i));
+        const changedSuppressions = Array.from({ length: 7 }, (_, i) => ({
+          before: makeSuppression("old", i),
+          after: makeSuppression("changed", i),
+        }));
+
+        github.rest.actions.downloadArtifact.mockResolvedValue({
+          data: Buffer.from(
+            zipSync({
+              "typespec-suppressions-report.json": strToU8(
+                JSON.stringify({ requiresApproval: true, newSuppressions, changedSuppressions }),
+              ),
+            }),
+          ),
+        });
+
+        const impactAssessment = {
+          resourceManagerRequired: false,
+          dataPlaneRequired: false,
+          suppressionReviewRequired: true,
+          isNewApiVersion: false,
+          rpaasRpNotInPrivateRepo: false,
+          rpaasChange: false,
+          newRP: false,
+          rpaasRPMissing: false,
+          typeSpecChanged: true,
+          isDraft: false,
+          targetBranch: "main",
+        };
+
+        const section = await getTypeSpecSuppressionsSection(
+          github,
+          mockCore,
+          "test-owner",
+          "test-repo",
+          "abc123",
+          impactAssessment,
+          [],
+        );
+
+        // Both tables render, each capped at 5 rows (10 status cells total).
+        expect(section).toContain("New suppressions (7)");
+        expect(section).toContain("Changed suppressions (7)");
+        expect(section).toContain("new-4");
+        expect(section).not.toContain("new-5");
+        expect(section).toContain("changed-4");
+        expect(section).not.toContain("changed-5");
+        expect((section.match(/<td align="center">/g) ?? []).length).toBe(10);
+        expect(section).toContain("Showing 10 of 14 suppressions");
       },
     );
 
