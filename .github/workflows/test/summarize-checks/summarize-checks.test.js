@@ -1499,6 +1499,86 @@ describe("Summarize Checks Unit Tests", () => {
       },
     );
 
+    it.runIf(unzipExists)(
+      "renders a bold warning when a suppression justification is missing",
+      async () => {
+        const github = createMockGithub();
+
+        github.rest.actions.listWorkflowRunsForRepo.mockResolvedValue({
+          data: {
+            workflow_runs: [
+              {
+                id: 123,
+                name: "TypeSpec Suppressions - Analyze Code",
+                status: "completed",
+                updated_at: "2025-01-01T00:00:00Z",
+              },
+            ],
+          },
+        });
+
+        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
+          if (name === "typespec-suppressions-report") {
+            return { data: { artifacts: [{ id: 1, name }] } };
+          }
+
+          return { data: { artifacts: [] } };
+        });
+
+        github.rest.actions.downloadArtifact.mockResolvedValue({
+          data: Buffer.from(
+            zipSync({
+              "typespec-suppressions-report.json": strToU8(
+                JSON.stringify({
+                  requiresApproval: true,
+                  newSuppressions: [
+                    {
+                      specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
+                      sourceKind: "inline",
+                      ruleName: "@azure-tools/typespec-azure-core/no-rpc-path-params",
+                      justification: "",
+                      sourceFile:
+                        "specification/demo/resource-manager/Microsoft.Demo/Demo/main.tsp",
+                      anchorPath: "namespace:Demo/interface:Widgets/op:read",
+                      location: { line: 12, column: 3 },
+                      rawText: '#suppress "@azure-tools/typespec-azure-core/no-rpc-path-params" ""',
+                    },
+                  ],
+                }),
+              ),
+            }),
+          ),
+        });
+
+        const impactAssessment = {
+          resourceManagerRequired: false,
+          dataPlaneRequired: false,
+          suppressionReviewRequired: true,
+          isNewApiVersion: false,
+          rpaasRpNotInPrivateRepo: false,
+          rpaasChange: false,
+          newRP: false,
+          rpaasRPMissing: false,
+          typeSpecChanged: true,
+          isDraft: false,
+          targetBranch: "main",
+        };
+
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            impactAssessment,
+          ),
+        ).resolves.toContain(
+          "Justification: <strong>NO JUSTIFICATION PROVIDED, THIS IS A REQUIRED SUPPRESSION COMPONENT</strong>",
+        );
+      },
+    );
+
     it("returns undefined when suppression review is not required", async () => {
       const github = createMockGithub();
 
