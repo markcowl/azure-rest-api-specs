@@ -1,66 +1,79 @@
 import { SuppressionChange, SuppressionRecord } from "./types.js";
 
-function escapeMarkdown(value: string): string {
-  return value.replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+function escapeHtml(value: string): string {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
 }
 
 function formatSource(suppression: SuppressionRecord): string {
   return `${suppression.sourceFile}#L${suppression.location.line}`;
 }
 
-function renderSuppressionList(suppressions: SuppressionRecord[]): string[] {
-  return suppressions.flatMap((suppression) => {
-    const header = suppression.ruleMetadata?.documentationUrl
-      ? `- [\`${escapeMarkdown(suppression.ruleName)}\`](${suppression.ruleMetadata.documentationUrl})`
-      : `- \`${escapeMarkdown(suppression.ruleName)}\``;
-    const lines = [
-      header,
-      `  - Source: \`${escapeMarkdown(formatSource(suppression))}\``,
-      `  - Justification: ${escapeMarkdown(suppression.justification)}`,
-    ];
-
-    if (suppression.ruleMetadata?.description) {
-      lines.splice(1, 0, `  - Rule: ${escapeMarkdown(suppression.ruleMetadata.description)}`);
-    }
-
-    if (suppression.ruleMetadata?.guidelineCodes?.length) {
-      lines.push(
-        `  - Azure guidance: ${suppression.ruleMetadata.guidelineCodes
-          .map((code) => `\`${escapeMarkdown(code)}\``)
-          .join(", ")}`,
-      );
-    }
-
-    return lines;
-  });
+function renderRuleCell(suppression: SuppressionRecord): string {
+  const ruleMetadata = suppression.ruleMetadata;
+  const label = `<code>${escapeHtml(suppression.ruleName)}</code>`;
+  const rule = ruleMetadata?.documentationUrl
+    ? `<a href="${escapeHtml(ruleMetadata.documentationUrl)}">${label}</a>`
+    : label;
+  const description = ruleMetadata?.description
+    ? `<br/>${escapeHtml(ruleMetadata.description)}`
+    : "";
+  const guidance = ruleMetadata?.guidelineCodes?.length
+    ? `<br/>Azure guidance: ${ruleMetadata.guidelineCodes
+        .map((code) => `<code>${escapeHtml(code)}</code>`)
+        .join(", ")}`
+    : "";
+  return `<strong>${rule}</strong>${description}${guidance}`;
 }
 
-function renderChangedList(changes: SuppressionChange[]): string[] {
-  return changes.flatMap((change) => {
-    const header = change.after.ruleMetadata?.documentationUrl
-      ? `- [\`${escapeMarkdown(change.after.ruleName)}\`](${change.after.ruleMetadata.documentationUrl})`
-      : `- \`${escapeMarkdown(change.after.ruleName)}\``;
-    const lines = [
-      header,
-      `  - Source: \`${escapeMarkdown(formatSource(change.after))}\``,
-      `  - Previous justification: ${escapeMarkdown(change.before.justification)}`,
-      `  - New justification: ${escapeMarkdown(change.after.justification)}`,
-    ];
+function renderSourceCell(suppression: SuppressionRecord): string {
+  return `<code>${escapeHtml(formatSource(suppression))}</code>`;
+}
 
-    if (change.after.ruleMetadata?.description) {
-      lines.splice(1, 0, `  - Rule: ${escapeMarkdown(change.after.ruleMetadata.description)}`);
-    }
+function renderJustificationCell(justification: string): string {
+  if (!justification || !justification.trim()) {
+    return "<strong>NO JUSTIFICATION PROVIDED, THIS IS A REQUIRED SUPPRESSION COMPONENT</strong>";
+  }
+  return escapeHtml(justification);
+}
 
-    if (change.after.ruleMetadata?.guidelineCodes?.length) {
-      lines.push(
-        `  - Azure guidance: ${change.after.ruleMetadata.guidelineCodes
-          .map((code) => `\`${escapeMarkdown(code)}\``)
-          .join(", ")}`,
-      );
-    }
+function renderSuppressionTable(suppressions: SuppressionRecord[]): string {
+  const rows = suppressions
+    .map(
+      (suppression) =>
+        `<tr><td>${renderRuleCell(suppression)}</td>` +
+        `<td>${renderSourceCell(suppression)}</td>` +
+        `<td>${renderJustificationCell(suppression.justification)}</td></tr>`,
+    )
+    .join("");
+  return (
+    "<table>" +
+    "<thead><tr><th>Rule</th><th>Source</th><th>Justification</th></tr></thead>" +
+    `<tbody>${rows}</tbody>` +
+    "</table>"
+  );
+}
 
-    return lines;
-  });
+function renderChangedTable(changes: SuppressionChange[]): string {
+  const rows = changes
+    .map(
+      (change) =>
+        `<tr><td>${renderRuleCell(change.after)}</td>` +
+        `<td>${renderSourceCell(change.after)}</td>` +
+        `<td>${renderJustificationCell(change.before.justification)}</td>` +
+        `<td>${renderJustificationCell(change.after.justification)}</td></tr>`,
+    )
+    .join("");
+  return (
+    "<table>" +
+    "<thead><tr><th>Rule</th><th>Source</th><th>Previous justification</th>" +
+    "<th>New justification</th></tr></thead>" +
+    `<tbody>${rows}</tbody>` +
+    "</table>"
+  );
 }
 
 export function renderMarkdownSummary(params: {
@@ -93,7 +106,7 @@ export function renderMarkdownSummary(params: {
     lines.push(
       `## New suppressions requiring approval (${newSuppressions.length})`,
       "",
-      ...renderSuppressionList(newSuppressions),
+      renderSuppressionTable(newSuppressions),
       "",
     );
   }
@@ -102,7 +115,7 @@ export function renderMarkdownSummary(params: {
     lines.push(
       `## Changed suppressions requiring approval (${changedSuppressions.length})`,
       "",
-      ...renderChangedList(changedSuppressions),
+      renderChangedTable(changedSuppressions),
       "",
     );
   }
