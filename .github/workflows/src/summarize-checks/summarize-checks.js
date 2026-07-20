@@ -1413,24 +1413,19 @@ export async function getTypeSpecSuppressionsSection(
   const statusCell = isApproved ? "✅" : "❌";
   const approvalState = isApproved ? "✅ Approved" : "❌ Approval required";
 
-  const summaryParts = [approvalState];
-  if (newSuppressions.length > 0) {
-    summaryParts.push(pluralize(newSuppressions.length, "new suppression"));
-  }
-  if (changedSuppressions.length > 0) {
-    summaryParts.push(pluralize(changedSuppressions.length, "changed suppression"));
-  }
+  const totalCount = newSuppressions.length + changedSuppressions.length;
+
+  const summaryParts = [approvalState, pluralize(totalCount, "suppression")];
 
   const sectionLines = [
     `<br/><br/><details><summary><strong>${TYPESPEC_SUPPRESSIONS_SECTION_TITLE}</strong> — ${summaryParts.join(
       " — ",
     )}</summary>`,
     "",
-    "The following suppressions were added or updated in this PR. Review the linked rule documentation and source location, then apply <code>Approved-Suppression</code> if the justifications are acceptable. The <strong>Status</strong> column shows ✅ once the label is applied and ❌ while approval is pending.",
+    "⚠️ This PR adds or updates the TypeSpec suppressions listed below. <strong>Suppressions are strongly discouraged</strong> — they bypass linter rules that protect API quality and consistency. Authors should avoid adding new suppressions and prefer fixing the underlying issue; reviewers should approve only when there is a clear, compelling justification and no reasonable alternative. Review each linked rule and source location, then apply <code>Approved-Suppression</code> only if every justification is acceptable. The <strong>Status</strong> column shows ✅ once the label is applied and ❌ while approval is pending.",
     "",
   ];
 
-  const totalCount = newSuppressions.length + changedSuppressions.length;
   const shownNew = newSuppressions.slice(0, MAX_SUPPRESSIONS_SHOWN);
   const shownChanged = changedSuppressions.slice(0, MAX_SUPPRESSIONS_SHOWN);
   const shownCount = shownNew.length + shownChanged.length;
@@ -1476,7 +1471,11 @@ export async function getTypeSpecSuppressionsSection(
     );
   }
 
-  sectionLines.push("</details>");
+  sectionLines.push(
+    "",
+    '💬 Have feedback on the TypeSpec suppression flow? <a href="https://aka.ms/azsdk/tspsuppressionfeedback">Let us know</a>.',
+    "</details>",
+  );
   return sectionLines.join("\n");
 }
 // #endregion

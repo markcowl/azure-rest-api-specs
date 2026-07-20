@@ -1518,6 +1518,36 @@ describe("Summarize Checks Unit Tests", () => {
         ).resolves.toContain(
           "<thead><tr><th>Status</th><th>Rule</th><th>Source</th><th>Previous justification</th><th>New justification</th></tr></thead>",
         );
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            impactAssessment,
+          ),
+        ).resolves.toContain("Suppressions are strongly discouraged");
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            impactAssessment,
+          ),
+        ).resolves.toContain("https://aka.ms/azsdk/tspsuppressionfeedback");
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            impactAssessment,
+          ),
+        ).resolves.toContain("❌ Approval required — 2 suppressions");
       },
     );
 
