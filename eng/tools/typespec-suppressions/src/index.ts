@@ -6,13 +6,14 @@ import {
   analyzeTypeSpecSuppressions,
   analyzeTypeSpecSuppressionsFromDirectories,
 } from "./analyze.js";
+import { emitSuppressionAnnotations } from "./annotations.js";
 import { loadCheckRulesFile } from "./check-rules.js";
 import { renderMarkdownSummary } from "./report.js";
 import { AnalyzeSuppressionsOptions } from "./types.js";
 
 function getUsage(): string {
   return `Usage:
-  npx typespec-suppressions --base <commitish> [--head <commitish>] [--json-output <path>] [--markdown-output <path>] [--check-rules-file <path>] [--fail-on-approval] <spec-folder> [<spec-folder> ...]
+  npx typespec-suppressions --base <commitish> [--head <commitish>] [--json-output <path>] [--markdown-output <path>] [--check-rules-file <path>] [--github-annotations] [--fail-on-approval] <spec-folder> [<spec-folder> ...]
 
 Examples:
   npx typespec-suppressions --base origin/main --head HEAD specification/widget/resource-manager/Microsoft.Widget/Widget
@@ -32,6 +33,7 @@ export async function main() {
       "json-output": { type: "string" },
       "markdown-output": { type: "string" },
       "check-rules-file": { type: "string" },
+      "github-annotations": { type: "boolean", default: false },
       "fail-on-approval": { type: "boolean", default: false },
     },
     allowPositionals: true,
@@ -80,6 +82,13 @@ export async function main() {
   if (markdownOutput) {
     await ensureParentDirectory(markdownOutput);
     await writeFile(markdownOutput, markdown);
+  }
+
+  if (parsedArgs.values["github-annotations"]) {
+    emitSuppressionAnnotations({
+      newSuppressions: reported.newSuppressions,
+      changedSuppressions: reported.changedSuppressions,
+    });
   }
 
   if (parsedArgs.values["fail-on-approval"] && reported.requiresApproval) {
