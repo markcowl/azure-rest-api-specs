@@ -5,11 +5,11 @@ import { parseArgs } from "node:util";
 import {
   analyzeTypeSpecSuppressions,
   analyzeTypeSpecSuppressionsFromDirectories,
-} from "./analyze.js";
-import { emitSuppressionAnnotations } from "./annotations.js";
-import { loadCheckRulesFile } from "./check-rules.js";
-import { renderMarkdownSummary } from "./report.js";
-import { AnalyzeSuppressionsOptions } from "./types.js";
+} from "./analyze.ts";
+import { emitSuppressionAnnotations } from "./annotations.ts";
+import { loadCheckRulesFile } from "./check-rules.ts";
+import { renderMarkdownSummary } from "./report.ts";
+import type { AnalyzeSuppressionsOptions } from "./types.ts";
 
 function getUsage(): string {
   return `Usage:
@@ -96,7 +96,6 @@ export async function main() {
   }
 }
 
-export { CHECK_RULES_RELATIVE_PATH } from "./check-rules.js";
 export {
   analyzeTypeSpecSuppressions,
   analyzeTypeSpecSuppressionsFromDirectories,

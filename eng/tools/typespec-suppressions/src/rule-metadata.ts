@@ -1,4 +1,4 @@
-import { RuleMetadata, SuppressionChange, SuppressionRecord } from "./types.js";
+import type { RuleMetadata, SuppressionChange, SuppressionRecord } from "./types.ts";
 
 type RuleDefinition = {
   name?: string;

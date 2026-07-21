@@ -2,10 +2,9 @@
 
 import {
   analyzeTypeSpecSuppressionsFromDirectories,
-  CHECK_RULES_RELATIVE_PATH,
   loadCheckRulesFile,
 } from "@azure-tools/typespec-suppressions";
-import { existsSync, readFileSync } from "fs";
+import { existsSync, readdirSync, readFileSync, statSync } from "fs";
 import { glob } from "glob";
 import { dirname, join, resolve } from "path";
 
@@ -15,22 +14,21 @@ import pkg from "lodash";
 const { isEqual } = pkg;
 
 import {
-  ChangeHandler,
+  type ChangeHandler,
   ChangeTypes,
-  DiffResult,
+  type DiffResult,
   FileTypes,
-  PRChange,
-  ReadmeTag,
-} from "./diff-types.js";
+  type PRChange,
+  type ReadmeTag,
+} from "./diff-types.ts";
 
-import { Label, LabelContext, PRType } from "./labelling-types.js";
+import { Label, type LabelContext, PRType } from "./labelling-types.ts";
 
-import { ImpactAssessment } from "./ImpactAssessment.js";
-import { PRContext } from "./PRContext.js";
+import { type ImpactAssessment } from "./ImpactAssessment.ts";
+import { PRContext } from "./PRContext.ts";
 
 import { dataPlane, resourceManager } from "@azure-tools/specs-shared/changed-files";
 import { Readme } from "@azure-tools/specs-shared/readme";
-import { Octokit } from "@octokit/rest";
 
 // todo: we need to populate this so that we can tell if it's a new APIVersion down stream
 // TODO: move to .github/shared
@@ -112,6 +110,11 @@ export async function evaluateImpact(
   // as a label
   const suppressionRequired = await processSuppression(context, labelContext);
 
+  // Evaluated as its own category, independent of the autorest/README
+  // suppression flow above. Gating is currently disabled (see
+  // processTypeSpecSuppression), so this is always false today.
+  const typeSpecSuppressionRequired = await processTypeSpecSuppression(context, labelContext);
+
   // needs to examine "after" context to understand if a readme that was changed is RPaaS or not
   const { rpaasLabelShouldBePresent } = await processRPaaS(context, labelContext);
 
@@ -148,6 +151,7 @@ export async function evaluateImpact(
 
   return {
     suppressionReviewRequired: suppressionRequired,
+    typeSpecSuppressionReviewRequired: typeSpecSuppressionRequired,
     rpaasChange: rpaasLabelShouldBePresent,
     newRP: newRPNamespaceLabelShouldBePresent,
     rpaasRPMissing: ciNewRPNamespaceWithoutRpaaSLabelShouldBePresent,
@@ -460,29 +464,79 @@ async function processSuppression(context: PRContext, labelContext: LabelContext
   });
   await processPrChanges(context, handlers);
 
+  suppressionReviewRequiredLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);
+  console.log("RETURN definition processSuppression");
+
+  return suppressionReviewRequiredLabel.shouldBePresent;
+}
+
+/**
+ * Relative path (from the head checkout root, i.e. `context.sourceDirectory`) to
+ * the committed curated check-rules file used to scope TypeSpec suppression
+ * review. Kept in the head checkout so the ruleset is versioned with the specs.
+ */
+const TYPESPEC_CHECK_RULES_RELATIVE_PATH = "eng/tools/typespec-suppressions/check-rules.json";
+
+/**
+ * Evaluates TypeSpec suppressions as their OWN category, independent of the
+ * autorest/README `SuppressionReviewRequired` flow handled by
+ * {@link processSuppression}.
+ *
+ * The curated check-rules file (see {@link TYPESPEC_CHECK_RULES_RELATIVE_PATH})
+ * scopes which suppressions would require approval once gating is enabled.
+ *
+ * NOTE: gating is intentionally OFF during the initial rollout. TypeSpec
+ * suppressions are still surfaced for visibility (via the Analyze Code report
+ * artifact rendered in summarize-checks), but the
+ * `TypeSpecSuppressionReviewRequired` label is forced off here so nothing blocks
+ * merges yet. See the single "gating disabled" line below for how to flip it on.
+ */
+async function processTypeSpecSuppression(
+  context: PRContext,
+  labelContext: LabelContext,
+): Promise<boolean> {
+  console.log("ENTER definition processTypeSpecSuppression");
+
+  const typeSpecSuppressionReviewRequiredLabel = new Label("TypeSpecSuppressionReviewRequired");
+  typeSpecSuppressionReviewRequiredLabel.shouldBePresent = false;
+
   const changedTypeSpecProjectFolders = getChangedTypeSpecProjectFolders(context);
   console.log(
     `Changed TypeSpec project folders for suppression review: ${changedTypeSpecProjectFolders.join(",")}`,
   );
 
   if (changedTypeSpecProjectFolders.length > 0) {
-    const checkRules = loadCheckRulesFile(join(context.sourceDirectory, CHECK_RULES_RELATIVE_PATH));
+    // Load the curated check-rules file from the head checkout. Missing/invalid
+    // file degrades gracefully to zero rules (nothing requires approval).
+    const checkRules = loadCheckRulesFile(
+      resolve(context.sourceDirectory, TYPESPEC_CHECK_RULES_RELATIVE_PATH),
+    );
+
     const report = await analyzeTypeSpecSuppressionsFromDirectories({
       baseRoot: context.targetDirectory,
       headRoot: context.sourceDirectory,
       specPaths: changedTypeSpecProjectFolders,
       checkRules,
     });
-    // Checked-only mode: approval is required solely for suppressions of curated
-    // check rules. Falls back to the full diff if no checked block is produced.
-    suppressionReviewRequiredLabel.shouldBePresent ||=
+
+    typeSpecSuppressionReviewRequiredLabel.shouldBePresent =
       report.checkedSuppressions?.requiresApproval ?? report.requiresApproval;
   }
 
-  suppressionReviewRequiredLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);
-  console.log("RETURN definition processSuppression");
+  // --- Initial rollout: gating disabled ------------------------------------
+  // Force the TypeSpec suppression label off regardless of the computed value
+  // above. Suppressions remain visible in the summarize-checks report, but do
+  // not block merges yet. To ENABLE gating, delete the single line below so the
+  // computed value from the check-rules file takes effect.
+  typeSpecSuppressionReviewRequiredLabel.shouldBePresent = false;
 
-  return suppressionReviewRequiredLabel.shouldBePresent;
+  typeSpecSuppressionReviewRequiredLabel.applyStateChange(
+    labelContext.toAdd,
+    labelContext.toRemove,
+  );
+  console.log("RETURN definition processTypeSpecSuppression");
+
+  return typeSpecSuppressionReviewRequiredLabel.shouldBePresent;
 }
 
 function getChangedTypeSpecProjectFolders(context: PRContext): string[] {
@@ -726,37 +780,35 @@ async function processNewRpNamespaceWithoutRpaasLabel(
   return ciNewRPNamespaceWithoutRpaaSLabel.shouldBePresent;
 }
 
-export const getRPaaSFolderList = async (
-  client: Octokit,
-  owner: string,
-  repoName: string,
-): Promise<string[]> => {
-  const branch = "main";
-  const folder = "specification";
+export const getRPaaSFolderList = (targetDirectory: string): string[] => {
+  const armLeasesFolder = join(targetDirectory, ".github", "arm-leases");
 
-  const res = await client.rest.repos.getContent({
-    owner,
-    repo: repoName,
-    path: folder,
-    ref: branch,
-  });
+  const folderNames: Set<string> = new Set();
 
-  console.log(
-    `Get RPSaaS folder list from ${owner}/${repoName}/${folder} successfully. status: ${res.status}`,
-  );
+  // Read folders from arm-leases directory to include RPs that have active leases
+  // (indicating they are already registered in RPSaaSMaster)
+  try {
+    if (!existsSync(armLeasesFolder)) {
+      console.log(`arm-leases folder not found at ${armLeasesFolder}`);
+      return [];
+    }
 
-  // Extract folder names from the response
-  if (Array.isArray(res.data)) {
-    const folderNames = res.data
-      .filter((item: any) => item.type === "dir") // Only get directories
-      .map((item: any) => item.name); // Extract the name property
+    const entries = readdirSync(armLeasesFolder);
+    const armLeasesFolders = entries.filter((name: string) => {
+      const fullPath = join(armLeasesFolder, name);
+      return statSync(fullPath).isDirectory() && name !== "scripts";
+    });
 
-    console.log(`Found ${folderNames.length} folders: ${folderNames.join(", ")}`);
-    return folderNames;
+    armLeasesFolders.forEach((name: string) => folderNames.add(name));
+    console.log(
+      `Found ${armLeasesFolders.length} arm-lease folders: ${armLeasesFolders.join(", ")}`,
+    );
+  } catch (error) {
+    console.log(`Failed to get folder list from ${armLeasesFolder}: ${error}`);
   }
 
-  console.log("No folders found or unexpected response format");
-  return [];
+  console.log(`Total unique RP folders: ${folderNames.size}`);
+  return Array.from(folderNames);
 };
 
 export function getRPRootFolderName(swaggerFile: string): string | undefined {

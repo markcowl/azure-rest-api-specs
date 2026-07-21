@@ -2,7 +2,7 @@ import { mkdtemp, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { loadCheckRulesFile } from "../src/check-rules.js";
+import { loadCheckRulesFile } from "../src/check-rules.ts";
 
 describe("loadCheckRulesFile", () => {
   const tempDirs: string[] = [];

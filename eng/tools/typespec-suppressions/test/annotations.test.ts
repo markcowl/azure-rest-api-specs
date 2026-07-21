@@ -1,6 +1,6 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { emitSuppressionAnnotations, formatSuppressionAnnotation } from "../src/annotations.js";
-import { SuppressionChange, SuppressionRecord } from "../src/types.js";
+import { emitSuppressionAnnotations, formatSuppressionAnnotation } from "../src/annotations.ts";
+import type { SuppressionChange, SuppressionRecord } from "../src/types.ts";
 
 function makeRecord(overrides: Partial<SuppressionRecord> = {}): SuppressionRecord {
   return {

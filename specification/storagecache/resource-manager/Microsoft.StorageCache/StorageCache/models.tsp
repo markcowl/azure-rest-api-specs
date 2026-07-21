@@ -1195,6 +1195,7 @@ model SkuName {
   /**
    * SKU name for this resource.
    */
+  @visibility(Lifecycle.Read, Lifecycle.Create)
   name?: string;
 }
 
@@ -1363,6 +1364,7 @@ model KeyVaultKeyReference {
   /**
    * The URL referencing a key encryption key in key vault.
    */
+  #suppress "@azure-tools/typespec-client-generator-core/csharp-no-url-suffix" "Name kept for backward compatibility"
   keyUrl: string;
 
   /**
@@ -2970,6 +2972,7 @@ model CacheProperties {
   /**
    * Specifies the space allocation percentage for each storage target in the cache.
    */
+  @visibility(Lifecycle.Read)
   spaceAllocation?: StorageTargetSpaceAllocation[];
 }
 
@@ -3260,6 +3263,7 @@ model CacheActiveDirectorySettingsCredentials {
    */
   #suppress "@azure-tools/typespec-azure-resource-manager/secret-prop" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
   @visibility(Lifecycle.Read, Lifecycle.Create, Lifecycle.Update)
+  @secret
   password?: string;
 }
 
@@ -3364,6 +3368,7 @@ model PrimingJob {
   /**
    * The URL for the priming manifest file to download. This file must be readable from the HPC Cache. When the file is in Azure blob storage the URL should include a Shared Access Signature (SAS) granting read permissions on the blob.
    */
+  #suppress "@azure-tools/typespec-client-generator-core/csharp-no-url-suffix" "Name kept for backward compatibility"
   @secret
   @visibility(Lifecycle.Create)
   primingManifestUrl: string;

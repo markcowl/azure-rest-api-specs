@@ -70,17 +70,7 @@ import path from "path";
  */
 
 /**
- * @typedef {Object} WorkflowRunInfo
- * @property {string} name
- * @property {number} id
- * @property {number} databaseId
- * @property {string} url
- * @property {number} workflowId
- * @property {string} status
- * @property {string} conclusion
- * @property {string} createdAt
- * @property {string} updatedAt
- * @property {string} [html_url]
+ * @typedef {import("../github.js").WorkflowRuns[0]} WorkflowRunInfo
  */
 
 /**
@@ -164,7 +154,7 @@ const NEXT_STEPS_COMMENT_ID = "NextStepsToMerge";
 const TYPESPEC_SUPPRESSIONS_WORKFLOW_NAME = "TypeSpec Suppressions - Analyze Code";
 const TYPESPEC_SUPPRESSIONS_REPORT_ARTIFACT_NAME = "typespec-suppressions-report";
 const TYPESPEC_SUPPRESSIONS_SECTION_TITLE = "TypeSpec suppressions requiring review";
-const APPROVED_SUPPRESSION_LABEL = "Approved-Suppression";
+const APPROVED_SUPPRESSION_LABEL = "Approved-TypeSpecSuppression";
 // GitHub caps comment bodies at ~65k characters, so only render a handful of suppressions
 // inline per table (new and changed) and link to the analysis log for the full list.
 const MAX_SUPPRESSIONS_SHOWN = 5;
@@ -290,6 +280,12 @@ const CHECK_METADATA = [
     name: "SDK azure-sdk-for-python-track2",
     suppressionLabels: [],
     troubleshootingGuide: checkAndDiagramTsg(3),
+  },
+  {
+    precedence: 1,
+    name: "Namespace Approval",
+    suppressionLabels: [],
+    troubleshootingGuide: defaultTsg,
   },
   {
     precedence: 10,
@@ -1277,6 +1273,10 @@ async function getLatestTypeSpecSuppressionsWorkflowRun(github, core, owner, rep
   return run;
 }
 
+/**
+ * @param {string} value
+ * @returns {string}
+ */
 function escapeHtml(value) {
   return value
     .replaceAll("&", "&amp;")
@@ -1285,25 +1285,54 @@ function escapeHtml(value) {
     .replaceAll('"', "&quot;");
 }
 
+/**
+ * @param {string} filePath
+ * @returns {string}
+ */
 function getPathSegment(filePath) {
   return filePath.split("/").slice(-4).join("/");
 }
 
+/**
+ * @param {string} owner
+ * @param {string} repo
+ * @param {string} sha
+ * @param {string} filePath
+ * @param {number} line
+ * @returns {string}
+ */
 function getBlobLineLink(owner, repo, sha, filePath, line) {
   const normalizedPath = filePath.startsWith("/") ? filePath.slice(1) : filePath;
   return `https://github.com/${owner}/${repo}/blob/${sha}/${normalizedPath}#L${line}`;
 }
 
+/**
+ * @param {number} count
+ * @param {string} singular
+ * @param {string} [plural]
+ * @returns {string}
+ */
 function pluralize(count, singular, plural = `${singular}s`) {
   return `${count} ${count === 1 ? singular : plural}`;
 }
 
+/**
+ * @param {TypeSpecSuppressionRecord} suppression
+ * @returns {string}
+ */
 function renderRuleLabel(suppression) {
   const label = `<code>${escapeHtml(suppression.ruleName)}</code>`;
   const documentationUrl = suppression.ruleMetadata?.documentationUrl;
   return documentationUrl ? `<a href="${documentationUrl}">${label}</a>` : label;
 }
 
+/**
+ * @param {string} owner
+ * @param {string} repo
+ * @param {string} head_sha
+ * @param {TypeSpecSuppressionRecord} suppression
+ * @returns {string}
+ */
 function renderSourceLink(owner, repo, head_sha, suppression) {
   const sourceLabel = `${getPathSegment(suppression.sourceFile)}#L${suppression.location.line}`;
   const sourceUrl = getBlobLineLink(
@@ -1316,6 +1345,10 @@ function renderSourceLink(owner, repo, head_sha, suppression) {
   return `<a href="${sourceUrl}">${escapeHtml(sourceLabel)}</a>`;
 }
 
+/**
+ * @param {TypeSpecSuppressionRecord} suppression
+ * @returns {string}
+ */
 function renderRuleCell(suppression) {
   const ruleMetadata = suppression.ruleMetadata;
   const description = ruleMetadata?.description
@@ -1329,6 +1362,10 @@ function renderRuleCell(suppression) {
   return `<strong>${renderRuleLabel(suppression)}</strong>${description}${guidance}`;
 }
 
+/**
+ * @param {string | undefined} justification
+ * @returns {string}
+ */
 function renderJustificationValue(justification) {
   if (!justification || !justification.trim()) {
     return "<strong>NO JUSTIFICATION PROVIDED, THIS IS A REQUIRED SUPPRESSION COMPONENT</strong>";
@@ -1336,6 +1373,14 @@ function renderJustificationValue(justification) {
   return escapeHtml(justification);
 }
 
+/**
+ * @param {string} owner
+ * @param {string} repo
+ * @param {string} head_sha
+ * @param {TypeSpecSuppressionRecord} suppression
+ * @param {string} statusCell
+ * @returns {string}
+ */
 function renderNewSuppressionRow(owner, repo, head_sha, suppression, statusCell) {
   return (
     `<tr><td align="center">${statusCell}</td>` +
@@ -1345,6 +1390,14 @@ function renderNewSuppressionRow(owner, repo, head_sha, suppression, statusCell)
   );
 }
 
+/**
+ * @param {string} owner
+ * @param {string} repo
+ * @param {string} head_sha
+ * @param {TypeSpecSuppressionChange} change
+ * @param {string} statusCell
+ * @returns {string}
+ */
 function renderChangedSuppressionRow(owner, repo, head_sha, change, statusCell) {
   return (
     `<tr><td align="center">${statusCell}</td>` +
@@ -1374,9 +1427,13 @@ export async function getTypeSpecSuppressionsSection(
   impactAssessment,
   labelNames = [],
 ) {
-  if (!impactAssessment?.suppressionReviewRequired) {
-    return undefined;
-  }
+  // Reporting is driven by the Analyze Code report artifact, not the shared
+  // swagger/README `suppressionReviewRequired` signal. The `impactAssessment`
+  // parameter is retained for signature/backward compatibility but no longer
+  // gates rendering. Gating (the TypeSpecSuppressionReviewRequired label) is
+  // applied separately by summarize-impact and is currently disabled during the
+  // initial rollout.
+  void impactAssessment;
 
   const run = await getLatestTypeSpecSuppressionsWorkflowRun(github, core, owner, repo, head_sha);
   if (!run || run.status !== "completed") {
@@ -1397,10 +1454,14 @@ export async function getTypeSpecSuppressionsSection(
     return undefined;
   }
 
-  const report = /** @type {TypeSpecSuppressionsReport} */ (JSON.parse(reportContent));
+  /** @type {unknown} */
+  const parsedReport = JSON.parse(reportContent);
+  const report = /** @type {TypeSpecSuppressionsReport} */ (parsedReport);
 
-  // In checked-only mode (a check-rules file was used), gate and render the
-  // checked subset; otherwise fall back to the full diff (legacy behavior).
+  // In checked-only mode (a check-rules file was used), render only the checked
+  // subset; otherwise fall back to the full diff (legacy behavior). An empty
+  // ruleset yields an empty checked subset, so nothing is reported — the same as
+  // a PR that added no suppressions.
   const reported = report.checkedSuppressions ?? report;
   if (!reported.requiresApproval) {
     return undefined;
@@ -1423,7 +1484,7 @@ export async function getTypeSpecSuppressionsSection(
     )}</summary>`,
     "",
     "",
-    "⚠️ This PR adds or updates the TypeSpec suppressions listed below. <strong>Suppressions are strongly discouraged</strong> — they bypass linter rules that protect API quality and consistency. Authors should avoid adding new suppressions and prefer fixing the underlying issue; reviewers should approve only when there is a clear, compelling justification and no reasonable alternative. Review each linked rule and source location, then apply <code>Approved-Suppression</code> only if every justification is acceptable. The <strong>Status</strong> column shows ✅ once the label is applied and ❌ while approval is pending.",
+    "⚠️ This PR adds or updates the TypeSpec suppressions listed below. <strong>Suppressions are strongly discouraged</strong> — they bypass linter rules that protect API quality and consistency. Authors should avoid adding new suppressions and prefer fixing the underlying issue; reviewers should approve only when there is a clear, compelling justification and no reasonable alternative. Review each linked rule and source location, then apply <code>Approved-TypeSpecSuppression</code> only if every justification is acceptable. The <strong>Status</strong> column shows ✅ once the label is applied and ❌ while approval is pending.",
     "",
   ];
 

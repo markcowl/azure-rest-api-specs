@@ -50,6 +50,9 @@ export const ImpactAssessmentSchema = z.object({
   resourceManagerRequired: z.boolean().describe("Whether a resource manager review is required."),
   dataPlaneRequired: z.boolean().describe("Whether a data plane review is required."),
   suppressionReviewRequired: z.boolean().describe("Whether a suppression review is required."),
+  typeSpecSuppressionReviewRequired: z
+    .boolean()
+    .describe("Whether a TypeSpec suppression review is required."),
   isNewApiVersion: z.boolean().describe("Whether this PR introduces a new API version."),
   rpaasRpNotInPrivateRepo: z
     .boolean()
@@ -497,6 +500,13 @@ export function processImpactAssessment(labelContext, impactAssessment) {
   suppressionReviewRequiredLabel.shouldBePresent =
     impactAssessment.suppressionReviewRequired || false;
 
+  const typeSpecSuppressionReviewRequiredLabel = new Label(
+    "TypeSpecSuppressionReviewRequired",
+    labelContext.present,
+  );
+  typeSpecSuppressionReviewRequiredLabel.shouldBePresent =
+    impactAssessment.typeSpecSuppressionReviewRequired || false;
+
   const rpassReviewRequiredLabel = new Label("RPaaS", labelContext.present);
   rpassReviewRequiredLabel.shouldBePresent = impactAssessment.rpaasChange || false;
 
@@ -555,6 +565,10 @@ export function processImpactAssessment(labelContext, impactAssessment) {
   armReviewLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);
   typeSpecLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);
   suppressionReviewRequiredLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);
+  typeSpecSuppressionReviewRequiredLabel.applyStateChange(
+    labelContext.toAdd,
+    labelContext.toRemove,
+  );
   rpassReviewRequiredLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);
   newRPNamespaceLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);
   ciNewRPNamespaceWithoutRpaaSLabel.applyStateChange(labelContext.toAdd, labelContext.toRemove);
@@ -651,7 +665,13 @@ function processARMReviewWorkflowLabels(
     ciRpaasRPNotInPrivateRepoLabelShouldBePresent,
   );
 
-  const blocked = blockedOnRpaas || blockedOnVersioningPolicy;
+  // Block if ARMModelingReviewRequired is present (new RP namespace or new resource type detected)
+  const armModelingReviewLabel = new Label("ARMModelingReviewRequired", labelContext.present);
+  // Block if the label is already present or if it's being added by another check (e.g. detect-new-resource-provider)
+  const blockedOnArmModeling =
+    armModelingReviewLabel.present || labelContext.toAdd.has("ARMModelingReviewRequired");
+
+  const blocked = blockedOnRpaas || blockedOnVersioningPolicy || blockedOnArmModeling;
 
   // If given PR is in scope of ARM review and it is blocked for any reason,
   // the "NotReadyForARMReview" label should be present, to the exclusion
@@ -707,7 +727,8 @@ function processARMReviewWorkflowLabels(
   console.log(
     `RETURN definition processARMReviewWorkflowLabels. ` +
       `presentLabels: ${[...labelContext.present].join(",")}, ` +
-      `blockedOnRpaas: ${blockedOnRpaas}. ` +
+      `blockedOnRpaas: ${blockedOnRpaas}, ` +
+      `blockedOnArmModeling: ${blockedOnArmModeling}. ` +
       `exactlyOneArmReviewWorkflowLabelShouldBePresent: ${exactlyOneArmReviewWorkflowLabelShouldBePresent}. `,
   );
 }
@@ -831,8 +852,7 @@ const rulesPri0dataPlane = [
     anyRequiredLabels: ["APIStewardshipBoard-SignedOff"],
     troubleshootingGuide:
       `Your PR requires an API stewardship board review as it introduces a new API version (label: <code>new-api-version</code>). ` +
-      `Schedule the review by following ` +
-      `${href("aka.ms/azsdk/onboarding/restapischedule", "https://aka.ms/azsdk/onboarding/restapischedule")}.`,
+      `Send an email to ${href("azureapirbcore@microsoft.com", "mailto:azureapirbcore@microsoft.com")} with your PR link for offline review.`,
   },
 ];
 
@@ -884,6 +904,25 @@ const rulesPri0NotReadyForArmReview = [
     allPrerequisiteLabels: ["NotReadyForARMReview", brChRev],
     anyRequiredLabels: [brChRevApproval],
     troubleshootingGuide: notReadyForArmReviewReason(brChRev),
+  },
+  {
+    precedence: 0,
+    anyPrerequisiteLabels: ["ARMModelingReviewRequired"],
+    anyRequiredLabels: [],
+    troubleshootingGuide: wrapInArmReviewMessage(
+      "This PR has <code>ARMModelingReviewRequired</code> label. " +
+        "This means it is introducing a new Resource Provider namespace or a new resource type. " +
+        "New RPs and new resource types require a discussion with the ARM Modeling Review team before merging.<br/><br/>" +
+        "<b>If you haven't discussed yet:</b><br/>" +
+        "Please schedule a meeting at " +
+        `${href("ARM API Modeling Office Hours", "https://outlook.office365.com/book/ARMOfficeHours1@microsoft.onmicrosoft.com/?ismsaljsauthenabled=true")}.<br/><br/>` +
+        "<b>If <code>ARMModelingSignedOff</code> label was removed by automation:</b><br/>" +
+        "This happens when the lease file is not found. Please check with the PM you discussed your design with " +
+        "to confirm if the lease file PR has been merged. " +
+        "In the public repo, lease files reflect immediately after merge. " +
+        "In the private repo (<code>azure-rest-api-specs-pr</code>), lease files typically sync within a few hours, but it can take up to 1-2 business days depending on sync pipeline timing and queue load. " +
+        "Please wait for the sync to complete.",
+    ),
   },
 ];
 
@@ -989,6 +1028,24 @@ const rulesPri1Suppressions = [
     troubleshootingGuide:
       `This PR introduced suppressions that require review. Inspect the suppression details surfaced by automation and ` +
       `ask the appropriate reviewer to apply the <code>Approved-Suppression</code> label. ${diagramTsg(1, true)}.`,
+  },
+];
+
+/** @type {RequiredLabelRule[]} */
+const rulesPri1TypeSpecSuppressions = [
+  // Gates on the dedicated TypeSpec suppression category, independent of the
+  // autorest/README `SuppressionReviewRequired` rule above. This rule is always
+  // active but only takes effect when the `TypeSpecSuppressionReviewRequired`
+  // label is present, which is currently never applied (gating is disabled in
+  // the summarize-impact `processTypeSpecSuppression`). It becomes effective
+  // once TypeSpec suppression gating is enabled there.
+  {
+    precedence: 1,
+    anyPrerequisiteLabels: ["TypeSpecSuppressionReviewRequired"],
+    anyRequiredLabels: ["Approved-TypeSpecSuppression"],
+    troubleshootingGuide:
+      `This PR introduced TypeSpec suppressions that require review. Inspect the suppression details surfaced by automation and ` +
+      `ask the appropriate reviewer to apply the <code>Approved-TypeSpecSuppression</code> label. ${diagramTsg(1, true)}.`,
   },
 ];
 
@@ -1131,6 +1188,25 @@ const rulesPri3Blockers = [
   },
 ];
 
+/** @type {RequiredLabelRule[]} */
+const rulesPri1Namespace = [
+  // When namespace-review-required is present, require namespace-approved before merge.
+  // See .github/workflows/src/namespace-approval/NAMESPACE-REVIEW-PROCESS.md for details.
+  {
+    precedence: 1,
+    anyPrerequisiteLabels: ["namespace-review-required"],
+    allPrerequisiteAbsentLabels: ["namespace-approved"],
+    anyRequiredLabels: ["namespace-approved"],
+    troubleshootingGuide:
+      "This PR modifies SDK namespace configuration in <code>tspconfig.yaml</code> and requires " +
+      "namespace approval from language architects before it can be merged.<br/>" +
+      "Check the <b>Namespace Review Required</b> comment on this PR for a detailed status table " +
+      "showing which languages are pending and who can approve.<br/>" +
+      "Architects: apply <code>namespace-&lt;language&gt;-approved</code> labels for each language. " +
+      "For management-plane PRs, <code>namespace-approved-all</code> can be used to approve all languages at once.",
+  },
+];
+
 export const requiredLabelsRules = rulesPri0dataPlane
   .concat(rulesPri0NotReadyForArmReview)
   .concat(rulesPri0ArmRpaas)
@@ -1138,6 +1214,8 @@ export const requiredLabelsRules = rulesPri0dataPlane
   .concat(rulesPri0ArmRev)
   .concat(rulesPri1ArmRev)
   .concat(rulesPri1Suppressions)
+  .concat(rulesPri1TypeSpecSuppressions)
+  .concat(rulesPri1Namespace)
   .concat(rulesPri2Sdk)
   .concat(rulesPri2LegacySdk)
   .concat(rulesPri3Blockers);

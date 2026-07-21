@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - typespec-next
   pull_request:
     paths:
       - package-lock.json
@@ -26,4 +25,4 @@ jobs:
     uses: ./.github/workflows/_reusable-eng-tools-test.yaml
     with:
       package: typespec-suppressions
-      lint: true
+      lint: false

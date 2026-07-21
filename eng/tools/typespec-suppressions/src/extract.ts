@@ -2,8 +2,8 @@ import { createSourceFile } from "@typespec/compiler";
 import { parse, SyntaxKind, visitChildren } from "@typespec/compiler/ast";
 import path from "node:path";
 import { isMap, LineCounter, parseDocument } from "yaml";
-import { normalizeRepoPath } from "./path-utils.js";
-import { SuppressionRecord } from "./types.js";
+import { normalizeRepoPath } from "./path-utils.ts";
+import type { SuppressionRecord } from "./types.ts";
 
 type AstNode = {
   kind?: number;

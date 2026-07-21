@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { renderMarkdownSummary } from "../src/report.js";
-import { SuppressionChange, SuppressionRecord } from "../src/types.js";
+import { renderMarkdownSummary } from "../src/report.ts";
+import type { SuppressionChange, SuppressionRecord } from "../src/types.ts";
 
 function makeRecord(overrides: Partial<SuppressionRecord> = {}): SuppressionRecord {
   return {

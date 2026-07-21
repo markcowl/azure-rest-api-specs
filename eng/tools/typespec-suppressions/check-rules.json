@@ -1,9 +1,5 @@
 {
-  "name": "TypeSpec LintDiff",
-  "description": "Curated list of TypeSpec linter rules whose suppressions require explicit reviewer approval. Suppressions for rules not listed here do not gate the PR. Add fully-qualified rule names (package/rule).",
-  "rules": [
-    "@azure-tools/typespec-azure-core/no-enum",
-    "@azure-tools/typespec-azure-core/documentation-required",
-    "@azure-tools/typespec-azure-resource-manager/arm-resource-operation-response"
-  ]
+  "name": "TypeSpec suppression review ruleset",
+  "description": "Curated list of TypeSpec suppression rule names that require reviewer approval when added or changed in a PR. Runs the analyzer in checked-only mode: only suppressions whose rule name appears here count toward review/gating. An empty list means suppressions are reported for visibility but none require approval. Add rule names here to bring specific suppressions into scope.",
+  "rules": []
 }

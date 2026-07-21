@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { extractInlineSuppressions, extractTspconfigSuppressions } from "../src/extract.js";
+import { extractInlineSuppressions, extractTspconfigSuppressions } from "../src/extract.ts";
 
 describe("extractTspconfigSuppressions", () => {
   it("extracts linter.disable suppressions with locations", () => {

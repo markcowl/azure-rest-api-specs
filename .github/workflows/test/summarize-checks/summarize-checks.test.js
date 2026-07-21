@@ -1277,6 +1277,7 @@ describe("Summarize Checks Unit Tests", () => {
         resourceManagerRequired: false,
         dataPlaneRequired: true,
         suppressionReviewRequired: false,
+        typeSpecSuppressionReviewRequired: false,
         isNewApiVersion: true,
         rpaasRpNotInPrivateRepo: true,
         rpaasChange: false,
@@ -1370,12 +1371,10 @@ describe("Summarize Checks Unit Tests", () => {
           },
         });
 
-        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
-          if (name === "typespec-suppressions-report") {
-            return { data: { artifacts: [{ id: 1, name }] } };
-          }
-
-          return { data: { artifacts: [] } };
+        github.rest.actions.listWorkflowRunArtifacts.mockResolvedValue({
+          data: {
+            artifacts: [{ id: 1, name: "typespec-suppressions-report" }],
+          },
         });
 
         github.rest.actions.downloadArtifact.mockResolvedValue({
@@ -1473,7 +1472,7 @@ describe("Summarize Checks Unit Tests", () => {
             "abc123",
             impactAssessment,
           ),
-        ).resolves.toContain("Approved-Suppression");
+        ).resolves.toContain("Approved-TypeSpecSuppression");
         await expect(
           getTypeSpecSuppressionsSection(
             github,
@@ -1569,12 +1568,10 @@ describe("Summarize Checks Unit Tests", () => {
           },
         });
 
-        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
-          if (name === "typespec-suppressions-report") {
-            return { data: { artifacts: [{ id: 1, name }] } };
-          }
-
-          return { data: { artifacts: [] } };
+        github.rest.actions.listWorkflowRunArtifacts.mockResolvedValue({
+          data: {
+            artifacts: [{ id: 1, name: "typespec-suppressions-report" }],
+          },
         });
 
         github.rest.actions.downloadArtifact.mockResolvedValue({
@@ -1649,12 +1646,10 @@ describe("Summarize Checks Unit Tests", () => {
           },
         });
 
-        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
-          if (name === "typespec-suppressions-report") {
-            return { data: { artifacts: [{ id: 1, name }] } };
-          }
-
-          return { data: { artifacts: [] } };
+        github.rest.actions.listWorkflowRunArtifacts.mockResolvedValue({
+          data: {
+            artifacts: [{ id: 1, name: "typespec-suppressions-report" }],
+          },
         });
 
         github.rest.actions.downloadArtifact.mockResolvedValue({
@@ -1716,7 +1711,7 @@ describe("Summarize Checks Unit Tests", () => {
           "test-repo",
           "abc123",
           impactAssessment,
-          ["Approved-Suppression"],
+          ["Approved-TypeSpecSuppression"],
         );
         expect(approved).toContain("✅ Approved");
         expect(approved).toContain('<td align="center">✅</td>');
@@ -1742,12 +1737,10 @@ describe("Summarize Checks Unit Tests", () => {
           },
         });
 
-        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
-          if (name === "typespec-suppressions-report") {
-            return { data: { artifacts: [{ id: 1, name }] } };
-          }
-
-          return { data: { artifacts: [] } };
+        github.rest.actions.listWorkflowRunArtifacts.mockResolvedValue({
+          data: {
+            artifacts: [{ id: 1, name: "typespec-suppressions-report" }],
+          },
         });
 
         const newSuppressions = Array.from({ length: 7 }, (_, i) => ({
@@ -1800,7 +1793,7 @@ describe("Summarize Checks Unit Tests", () => {
         expect(section).toContain("reason-4");
         expect(section).not.toContain("reason-5");
         expect(section).not.toContain("reason-6");
-        expect((section.match(/<td align="center">/g) ?? []).length).toBe(5);
+        expect(((section ?? "").match(/<td align="center">/g) ?? []).length).toBe(5);
         expect(section).toContain("Showing 5 of 7 suppressions");
         expect(section).toContain(
           '<a href="https://github.com/test-owner/test-repo/actions/runs/123">full analysis log</a>',
@@ -1827,14 +1820,16 @@ describe("Summarize Checks Unit Tests", () => {
           },
         });
 
-        github.rest.actions.listWorkflowRunArtifacts.mockImplementation(async ({ name }) => {
-          if (name === "typespec-suppressions-report") {
-            return { data: { artifacts: [{ id: 1, name }] } };
-          }
-
-          return { data: { artifacts: [] } };
+        github.rest.actions.listWorkflowRunArtifacts.mockResolvedValue({
+          data: {
+            artifacts: [{ id: 1, name: "typespec-suppressions-report" }],
+          },
         });
 
+        /**
+         * @param {string} label
+         * @param {number} i
+         */
         const makeSuppression = (label, i) => ({
           specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
           sourceKind: "inline",
@@ -1893,18 +1888,172 @@ describe("Summarize Checks Unit Tests", () => {
         expect(section).not.toContain("new-5");
         expect(section).toContain("changed-4");
         expect(section).not.toContain("changed-5");
-        expect((section.match(/<td align="center">/g) ?? []).length).toBe(10);
+        expect(((section ?? "").match(/<td align="center">/g) ?? []).length).toBe(10);
         expect(section).toContain("Showing 10 of 14 suppressions");
       },
     );
 
-    it("returns undefined when suppression review is not required", async () => {
+    it.runIf(unzipExists)(
+      "renders only the checked subset when a check-rules file was used",
+      async () => {
+        const github = createMockGithub();
+
+        github.rest.actions.listWorkflowRunsForRepo.mockResolvedValue({
+          data: {
+            workflow_runs: [
+              {
+                id: 123,
+                name: "TypeSpec Suppressions - Analyze Code",
+                status: "completed",
+                updated_at: "2025-01-01T00:00:00Z",
+              },
+            ],
+          },
+        });
+
+        github.rest.actions.listWorkflowRunArtifacts.mockResolvedValue({
+          data: { artifacts: [{ id: 1, name: "typespec-suppressions-report" }] },
+        });
+
+        const inScope = {
+          specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
+          sourceKind: "inline",
+          ruleName: "@azure-tools/typespec-azure-core/in-scope-rule",
+          justification: "in scope",
+          sourceFile: "specification/demo/resource-manager/Microsoft.Demo/Demo/main.tsp",
+          anchorPath: "namespace:Demo/interface:Widgets/op:read",
+          location: { line: 12, column: 3 },
+          rawText: '#suppress "@azure-tools/typespec-azure-core/in-scope-rule" "in scope"',
+        };
+        const outOfScope = {
+          ...inScope,
+          ruleName: "@azure-tools/typespec-azure-core/out-of-scope-rule",
+          justification: "out of scope",
+          rawText: '#suppress "@azure-tools/typespec-azure-core/out-of-scope-rule" "out of scope"',
+        };
+
+        github.rest.actions.downloadArtifact.mockResolvedValue({
+          data: Buffer.from(
+            zipSync({
+              "typespec-suppressions-report.json": strToU8(
+                JSON.stringify({
+                  // Full diff has both suppressions...
+                  requiresApproval: true,
+                  newSuppressions: [inScope, outOfScope],
+                  changedSuppressions: [],
+                  // ...but only the in-scope one is checked.
+                  checkedSuppressions: {
+                    checkRules: ["@azure-tools/typespec-azure-core/in-scope-rule"],
+                    requiresApproval: true,
+                    newSuppressions: [inScope],
+                    removedSuppressions: [],
+                    changedSuppressions: [],
+                  },
+                }),
+              ),
+            }),
+          ),
+        });
+
+        const section = await getTypeSpecSuppressionsSection(
+          github,
+          mockCore,
+          "test-owner",
+          "test-repo",
+          "abc123",
+          undefined,
+          [],
+        );
+
+        expect(section).toContain("New suppressions (1)");
+        expect(section).toContain("in-scope-rule");
+        expect(section).not.toContain("out-of-scope-rule");
+      },
+    );
+
+    it.runIf(unzipExists)(
+      "returns undefined when the checked subset is empty even if the full diff has suppressions",
+      async () => {
+        const github = createMockGithub();
+
+        github.rest.actions.listWorkflowRunsForRepo.mockResolvedValue({
+          data: {
+            workflow_runs: [
+              {
+                id: 123,
+                name: "TypeSpec Suppressions - Analyze Code",
+                status: "completed",
+                updated_at: "2025-01-01T00:00:00Z",
+              },
+            ],
+          },
+        });
+
+        github.rest.actions.listWorkflowRunArtifacts.mockResolvedValue({
+          data: { artifacts: [{ id: 1, name: "typespec-suppressions-report" }] },
+        });
+
+        github.rest.actions.downloadArtifact.mockResolvedValue({
+          data: Buffer.from(
+            zipSync({
+              "typespec-suppressions-report.json": strToU8(
+                JSON.stringify({
+                  // Full diff has a suppression, but with an empty ruleset the
+                  // checked subset is empty, so nothing should be reported.
+                  requiresApproval: true,
+                  newSuppressions: [
+                    {
+                      specPath: "specification/demo/resource-manager/Microsoft.Demo/Demo",
+                      sourceKind: "inline",
+                      ruleName: "@azure-tools/typespec-azure-core/no-rpc-path-params",
+                      justification: "not in scope",
+                      sourceFile:
+                        "specification/demo/resource-manager/Microsoft.Demo/Demo/main.tsp",
+                      anchorPath: "namespace:Demo/interface:Widgets/op:read",
+                      location: { line: 12, column: 3 },
+                      rawText:
+                        '#suppress "@azure-tools/typespec-azure-core/no-rpc-path-params" "not in scope"',
+                    },
+                  ],
+                  changedSuppressions: [],
+                  checkedSuppressions: {
+                    checkRules: [],
+                    requiresApproval: false,
+                    newSuppressions: [],
+                    removedSuppressions: [],
+                    changedSuppressions: [],
+                  },
+                }),
+              ),
+            }),
+          ),
+        });
+
+        await expect(
+          getTypeSpecSuppressionsSection(
+            github,
+            mockCore,
+            "test-owner",
+            "test-repo",
+            "abc123",
+            undefined,
+            [],
+          ),
+        ).resolves.toBeUndefined();
+      },
+    );
+
+    it("returns undefined when no completed Analyze Code run is available", async () => {
       const github = createMockGithub();
 
+      // No workflow runs are mocked (createMockGithub defaults to an empty list),
+      // so there is no completed Analyze Code run / report artifact to render.
+      // Rendering is driven by the artifact, not by impactAssessment.
       const impactAssessment = {
         resourceManagerRequired: false,
         dataPlaneRequired: false,
         suppressionReviewRequired: false,
+        typeSpecSuppressionReviewRequired: false,
         isNewApiVersion: false,
         rpaasRpNotInPrivateRepo: false,
         rpaasChange: false,

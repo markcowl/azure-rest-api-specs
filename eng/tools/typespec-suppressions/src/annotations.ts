@@ -1,4 +1,4 @@
-import { SuppressionChange, SuppressionRecord } from "./types.js";
+import type { SuppressionChange, SuppressionRecord } from "./types.ts";
 
 const ANNOTATION_TITLE = "TypeSpec suppression requires review";
 

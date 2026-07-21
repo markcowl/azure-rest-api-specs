@@ -6,10 +6,10 @@ import {
   extractTspconfigSuppressions,
   isTypeSpecConfigFile,
   isTypeSpecSourceFile,
-} from "./extract.js";
-import { normalizeRepoPath, toRepoRelativePath } from "./path-utils.js";
-import { enrichSuppressionChanges, enrichSuppressionRecords } from "./rule-metadata.js";
-import {
+} from "./extract.ts";
+import { normalizeRepoPath, toRepoRelativePath } from "./path-utils.ts";
+import { enrichSuppressionChanges, enrichSuppressionRecords } from "./rule-metadata.ts";
+import type {
   AnalyzeSuppressionsDirectoriesOptions,
   AnalyzeSuppressionsOptions,
   CheckedSuppressions,
@@ -17,7 +17,7 @@ import {
   SuppressionChange,
   SuppressionRecord,
   SuppressionReport,
-} from "./types.js";
+} from "./types.ts";
 
 function suppressionIdentityKey(suppression: SuppressionRecord): string {
   return [
