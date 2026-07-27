@@ -284,7 +284,7 @@ const CHECK_METADATA = [
   },
   {
     precedence: 1,
-    name: "Namespace Approval",
+    name: "Package Name Approval",
     suppressionLabels: [],
     troubleshootingGuide: defaultTsg,
   },

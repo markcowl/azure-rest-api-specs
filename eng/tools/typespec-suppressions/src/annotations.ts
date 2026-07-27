@@ -28,10 +28,6 @@ interface SuppressionAnnotationCategory {
   body: string;
 }
 
-const SUPPRESSION_GUIDANCE =
-  "Authors should avoid adding new suppressions and prefer fixing the underlying issue; " +
-  "reviewers should approve only when there is a clear, compelling justification and no reasonable alternative.";
-
 const SUPPRESSION_ANNOTATION_CATEGORIES: Record<
   SuppressionAnnotationCategoryId,
   SuppressionAnnotationCategory
@@ -41,16 +37,17 @@ const SUPPRESSION_ANNOTATION_CATEGORIES: Record<
     icon: "❌",
     title: "Missing Justification",
     body:
-      "This suppression is missing a justification and requires author action before review can be " +
-      "completed. Review stays pending until a justification is added.",
+      "Authors must justify this suppression before review can proceed. Please add a separate " +
+      'justification string after the rule id. (for example #suppress "<rule-id>" "<valid ' +
+      'justification>" ). Review stays pending until a justification is added.',
   },
   "new-suppression": {
     level: "warning",
     icon: "⚠️",
     title: "New Suppression",
     body:
-      "This PR introduces a new suppression that requires review and approval. Prefer fixing the " +
-      "underlying issue when reasonable.",
+      "Authors should avoid adding new suppressions and prefer fixing the underlying issue; " +
+      "reviewers should approve only when there is a clear, compelling justification and no reasonable alternative.",
   },
   "changed-justification": {
     level: "warning",
@@ -94,23 +91,6 @@ function escapeAnnotationProperty(value: string): string {
   return escapeAnnotationMessage(value).replaceAll(",", "%2C").replaceAll(":", "%3A");
 }
 
-function buildAnnotationMessage(
-  suppression: SuppressionRecord,
-  category: SuppressionAnnotationCategory,
-): string {
-  // GitHub renders `%0A`-encoded newlines in the annotation message body (but not in the
-  // `title` property), so lay the details out one per line for readability. Newline
-  // encoding is handled by escapeAnnotationMessage in formatSuppressionAnnotation.
-  const lines: string[] = [category.body, SUPPRESSION_GUIDANCE];
-
-  const documentationUrl = suppression.ruleMetadata?.documentationUrl;
-  if (documentationUrl) {
-    lines.push(`**Rule docs**: ${documentationUrl}`);
-  }
-
-  return lines.join("\n");
-}
-
 /**
  * Formats a single GitHub Actions annotation for a suppression, anchored to its source
  * file and location so it renders inline on the pull request diff. The annotation level
@@ -129,9 +109,7 @@ export function formatSuppressionAnnotation(
     `col=${suppression.location.column}`,
     `title=${escapeAnnotationProperty(title)}`,
   ].join(",");
-  return `::${category.level} ${properties}::${escapeAnnotationMessage(
-    buildAnnotationMessage(suppression, category),
-  )}`;
+  return `::${category.level} ${properties}::${escapeAnnotationMessage(category.body)}`;
 }
 
 /**
