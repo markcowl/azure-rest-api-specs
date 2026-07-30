@@ -80,6 +80,7 @@ interface ClusterMetricsConfigurations {
   /**
    * Delete the metrics configuration of the provided cluster.
    */
+  #suppress "@azure-tools/typespec-azure-resource-manager/lro-response-mismatch" "fixme-invalid-lro-result"
   #suppress "@azure-tools/typespec-azure-core/no-openapi" "non-standard operations"
   @operationId("MetricsConfigurations_Delete")
   delete is ArmResourceDeleteWithoutOkAsync<
