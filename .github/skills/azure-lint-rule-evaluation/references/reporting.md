@@ -35,8 +35,8 @@ A count table:
 For **user-error** and **false-positive** (and **indeterminate** if any), a table
 with one row per violation:
 
-| Source | Operation | Variant | Encoded (actual) | Expected | Evidence |
-| --- | --- | --- | --- | --- | --- |
+| Source | Operation | Variant | Encoded (actual) | Expected | Evidence | How to fix instead of suppress |
+| --- | --- | --- | --- | --- | --- | --- |
 
 - **Source** is a clickable link to the exact line on the evaluated branch:
   `https://github.com/Azure/azure-rest-api-specs/blob/<branch>/<path>#L<line>`.
@@ -45,10 +45,17 @@ with one row per violation:
   the wire/Swagger, the source construct, the rule's comparison, and/or the
   requester's policy. This is the most important column; make it specific to the
   instance, not boilerplate.
+- **How to fix instead of suppress** — for each user-error, the concrete source
+  change that makes the encoding match intent (the correct template, parameter,
+  header, or response shape), so suppression is a last resort rather than the only
+  option. Suppression records that a deviation is known; it does not fix the model.
+  Group the recurring fixes into a short "correction playbook" above the table.
 
-Precede each section with a short paragraph describing the dominant patterns (e.g.
-"body-returning DELETEs kept for backward compat", "double-wrapped action
-responses").
+Precede each section with a short paragraph describing the dominant patterns for
+the rule under evaluation (for `lro-response-mismatch`, e.g. "body-returning
+DELETEs kept for backward compat", "envelope passed as an action `Response`",
+"`void` final result from custom `LroHeaders`"). Adapt the patterns to whatever
+rule you are evaluating.
 
 ## 6. Specs with no violations
 

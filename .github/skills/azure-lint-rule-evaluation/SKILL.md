@@ -75,9 +75,14 @@ false positives visible, and report the analysis with evidence.
    clean (changes committed) or `tsv`'s git checks fail.
 
 8. **Report.** Write a markdown report grouping violations by determination, each
-   with a base-branch source link, the encoded vs expected values, and the
-   evidence. Include the no-violation specs. See
-   [reporting](references/reporting.md).
+   with a base-branch source link, the encoded vs expected values, the evidence,
+   and — for user-errors — **how to fix it at the source instead of suppressing**.
+   Include the no-violation specs. See [reporting](references/reporting.md).
+
+> The steps above are rule-agnostic: they apply to any new or changed
+> TypeSpec/OpenAPI linter rule, not just `lro-response-mismatch`. Everywhere this
+> skill uses that rule, treat it as a worked example — substitute the rule under
+> evaluation's own contract, computed values, and conventions.
 
 ## Examples
 

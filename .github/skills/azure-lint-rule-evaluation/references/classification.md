@@ -29,32 +29,56 @@ For each violation decide one of three labels, and always record the **evidence*
 
 ## Worked example: `lro-response-mismatch`
 
+The procedure above is rule-agnostic. This section applies it to one concrete
+rule as an illustration — the same steps (ground truth → intent → compare →
+classify → fix/suppress) transfer to any rule; only the rule's contract and the
+"expected" convention change.
+
 This rule compares an ARM LRO's **encoded `finalResult`** (from `getLroMetadata`)
-against the expected result for the operation shape. Policy used to classify:
+against the expected result for the operation shape. Establish the encoded
+`finalResult` from `getLroMetadata` (instrument the rule if needed) — **do not
+guess it** from the source. Policy used to classify:
 
 - **PUT / PATCH must resolve `finalResult` to the resource type.**
   - `finalResult = void` (custom `LroHeaders`/response dropped
     `FinalResult=<resource>`) → **user-error**: the LRO yields no resource.
-  - `finalResult` = the resource type → pass.
-- **POST actions must return their intended response** (the body of any declared
-  200 response).
-  - encoded `finalResult` ≠ the declared 200 body (e.g. `void`, or a
-    double-wrapped `ArmXResponse is ArmResponse<T>` envelope instead of `T`) →
-    **user-error**: the action is not returning its intended type correctly.
-  - encoded `finalResult` = the 200 body → pass.
+  - `finalResult` = a *different* named type than the resource (e.g. a sub-resource
+    `PrivateEndpointConnection` on an interface whose resource is the parent) →
+    **user-error**: the operation should resolve to the resource it is modeled on;
+    fix by modeling the create on the correct resource or setting `FinalResult`.
+  - `finalResult` = the resource type → pass. A **false-positive** would require the
+    rule to flag a PUT/PATCH whose `finalResult` *actually equals* the resource type.
 - **DELETE must be void on the wire.**
-  - `finalResult` ends in `OperationStatusResult` (a status envelope that is not
-    what is returned on the wire) → **user-error**: incorrectly encoded; suppress.
-  - `finalResult` = a resource/body the operation **deliberately returns** for
-    backward compatibility (declared response body matches `finalResult`) →
-    **false-positive**: the rule flags any non-void delete result, but here it
-    matches intent.
-- **Legacy parent-modeled sub-resource PUT** (e.g. a `PrivateEndpointConnection`
-  `createOrUpdate` whose `finalResult` correctly equals the sub-resource it
-  creates, while the rule compares against the interface's *parent* resource
-  type) → **false-positive**: the rule's expected target is wrong for the pattern.
+  - `finalResult` is anything non-void — `OperationStatusResult`, a named result
+    model, a resource type, or `unknown` (e.g. a body-returning delete kept for
+    backward compatibility) → **user-error**: delete LROs must resolve to `void`;
+    suppress the deliberate deviation, or drop the body (a breaking change).
+  - A **false-positive** would require the rule to flag a delete whose `finalResult`
+    is *actually* `void`.
+- **POST actions must return their intended response.** Intent comes from **either**
+  the operation template's `Response` parameter **or** the declared 200 response
+  body (a 204 / no-body action → `void`). POST is the only shape with genuine
+  wiggle room, so check both signals.
+  - `finalResult = void` while a non-void `Response`/200 body is declared (often a
+    custom `LroHeaders`/`final-state-via` that drops the body) → **user-error**: the
+    action delivers nothing. Fix by using the standard template or setting
+    `FinalResult=<Response>` on the intended terminal header.
+  - `finalResult` = an `ArmResponse<T>` **envelope** (including a named alias like
+    `ArmXResponse is ArmResponse<T>`) passed as `Response`, while the intended
+    payload is the bare `T` → **user-error**: the envelope carries HTTP
+    status/headers; the intended `finalResult` is `T`. Fix by passing `Response = T`
+    (`ArmResourceActionAsync` already wraps it in the 200 envelope). This is the rule
+    acting as intended, **not** a false positive, even though the envelope's wire
+    body is `T`.
+  - POST declares both a 200-with-body and a 204 → **user-error** (`conflicting
+    responses`): keep one terminal shape.
+  - A **false-positive** would require the rule to flag a POST whose `finalResult`
+    *actually equals* its intended response (template `Response` param or 200 body).
 
-The transferable lesson: the same computed mismatch can be a user-error in one
-context and a false-positive in another — the deciding factor is always **what
-the wire response is meant to be**, which you establish from Swagger + source +
-the requester's policy, not from the rule alone.
+The transferable lesson: a **false-positive means the encoding already matches the
+convention but the rule fired anyway** (a computation bug) — e.g. it would have to
+flag an actually-void delete or an actually-resource PUT. An author *intending* to
+encode a non-idiomatic value (body-returning delete, envelope-as-`Response`,
+sub-resource PUT) is a **user-error**, not a false positive. Decide from **what the
+wire response is meant to be** (Swagger + source + `getLroMetadata` + the
+requester's policy), not from the rule alone.
