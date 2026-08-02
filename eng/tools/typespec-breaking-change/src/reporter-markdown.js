@@ -1,4 +1,4 @@
-import { formatSuppressionDiff } from "./suppression-guidance.js";
+import { formatSuppressionDiff, formatSuppressionHint } from "./suppression-guidance.js";
 import { resolveFindingLocation } from "./resolve-location.js";
 /** Default URL for the violations reference docs in the typespec-azure repo. */
 const DEFAULT_VIOLATIONS_REF_URL = "https://github.com/markcowl/typespec-azure/blob/prototype/breaking-change-tool/packages/typespec-breaking-change/docs/violations-reference.md";
@@ -45,37 +45,71 @@ export function renderMarkdownSummary(result, options) {
     parts.push(`${result.summary.comparisonsPerformed} version pair${result.summary.comparisonsPerformed === 1 ? "" : "s"} compared`);
     lines.push("");
     lines.push(parts.join(" · "));
-    // Unsuppressed breaking changes
+    // Unsuppressed breaking changes — grouped by version pair
     if (errors.length > 0) {
         lines.push("");
         lines.push("### Unsuppressed Breaking Changes");
-        lines.push("");
-        lines.push("| Kind | Identity | Versions | Suppression |");
-        lines.push("|------|----------|----------|-------------|");
-        for (const finding of errors) {
-            const kind = fmtKindLink(finding.diff.kind, finding.phase, options);
-            const identity = fmtIdentityLink(finding, options);
-            const versions = esc(fmtVer(finding));
-            const diffSnippet = formatSuppressionDiff(finding);
-            const suppressionCell = `<pre lang="diff">${escHtml(diffSnippet).replace(/\n/g, "&#10;")}</pre>`;
-            lines.push(`| ${kind} | ${identity} | ${versions} | ${suppressionCell} |`);
+        const grouped = groupByVersionPair(errors);
+        let suppressionIndex = 0;
+        const suppressionBlocks = [];
+        for (const [versionLabel, findings] of grouped) {
+            lines.push("");
+            lines.push(`#### ${versionLabel}`);
+            lines.push("");
+            lines.push("| Kind | Identity | Suppression |");
+            lines.push("|------|----------|-------------|");
+            for (const finding of findings) {
+                suppressionIndex++;
+                const kind = fmtKindLink(finding.diff.kind, finding.phase, options);
+                const identity = fmtIdentityLink(finding, options);
+                const hint = formatSuppressionHint(finding);
+                lines.push(`| ${kind} | ${identity} | \`${esc(hint)}\` |`);
+                const diffSnippet = formatSuppressionDiff(finding);
+                const element = finding.diff.identity.element;
+                const shortElement = element.split(".").pop() ?? element;
+                suppressionBlocks.push({
+                    index: suppressionIndex,
+                    diff: diffSnippet,
+                    label: `${finding.diff.kind} (${shortElement})`,
+                });
+            }
+        }
+        // Render diff blocks below the tables
+        if (suppressionBlocks.length > 0) {
+            lines.push("");
+            lines.push("<details>");
+            lines.push("<summary>Suppression examples</summary>");
+            lines.push("");
+            for (const block of suppressionBlocks) {
+                lines.push(`**${block.label}:**`);
+                lines.push("```diff");
+                lines.push(block.diff);
+                lines.push("```");
+                lines.push("");
+            }
+            lines.push("</details>");
         }
     }
-    // New suppressed breaking changes
+    // New suppressed breaking changes — grouped by version pair
     if (suppressed.length > 0) {
         lines.push("");
         lines.push("### New Suppressed Breaking Changes");
         lines.push("");
-        lines.push("The following breaking changes have `@approvedBreakingChange` decorators.");
+        lines.push("The following breaking changes have suppression decorators.");
         lines.push("Reviewers should verify these changes are intentional and properly justified.");
-        lines.push("");
-        lines.push("| Kind | Identity | Reason |");
-        lines.push("|------|----------|--------|");
-        for (const finding of suppressed) {
-            const kind = fmtKindLink(finding.diff.kind, finding.phase, options);
-            const identity = fmtIdentityLink(finding, options);
-            const reason = esc(finding.suppressionReason ?? "—");
-            lines.push(`| ${kind} | ${identity} | ${reason} |`);
+        const grouped = groupByVersionPair(suppressed);
+        for (const [versionLabel, findings] of grouped) {
+            lines.push("");
+            lines.push(`#### ${versionLabel}`);
+            lines.push("");
+            lines.push("| Kind | Identity | Reason |");
+            lines.push("|------|----------|--------|");
+            for (const finding of findings) {
+                const kind = fmtKindLink(finding.diff.kind, finding.phase, options);
+                const identity = fmtIdentityLink(finding, options);
+                const reason = esc(finding.suppressionReason ?? "—");
+                lines.push(`| ${kind} | ${identity} | ${reason} |`);
+            }
         }
     }
     if (result.summary.versionComparisons.length > 0) {
@@ -171,6 +205,22 @@ function escHtml(value) {
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;");
+}
+/** Group findings by version pair, returning label → findings entries. */
+function groupByVersionPair(findings) {
+    const groups = new Map();
+    for (const f of findings) {
+        const label = f.phase === "same-version"
+            ? `${f.versionPair.headVersion} (base → head)`
+            : `${f.versionPair.baseVersion} → ${f.versionPair.headVersion}`;
+        let list = groups.get(label);
+        if (!list) {
+            list = [];
+            groups.set(label, list);
+        }
+        list.push(f);
+    }
+    return [...groups.entries()];
 }
 function formatNoFindingsMessage(phase, comparisonsPerformed) {
     const pairLabel = `${comparisonsPerformed} version pair${comparisonsPerformed === 1 ? "" : "s"} compared`;

@@ -13,6 +13,17 @@ import { getSourceLocation } from "@typespec/compiler";
  */
 export function resolveFindingLocation(finding) {
     const diff = finding.diff;
+    // Special case: removed property — link to parent model instead of the
+    // removed property itself, since the property no longer exists in head.
+    if (!diff.headType && !diff.headSourceLocation && diff.baseType?.kind === "ModelProperty") {
+        const parentModel = diff.baseType.model;
+        if (parentModel) {
+            const modelLoc = safeGetSourceLocation(parentModel);
+            if (modelLoc && isValidSourceLocation(modelLoc)) {
+                return modelLoc;
+            }
+        }
+    }
     // 1. Origin source location (property/type declaration in user code)
     if (diff.origin?.sourceLocation && isValidSourceLocation(diff.origin.sourceLocation)) {
         return diff.origin.sourceLocation;
