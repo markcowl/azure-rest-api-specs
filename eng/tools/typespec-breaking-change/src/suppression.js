@@ -75,7 +75,21 @@ function collectSuppressions(finding, program, targetType) {
     return suppressions;
 }
 function matchesKind(suppression, finding) {
-    return (suppression.suppression.kind === undefined || suppression.suppression.kind === finding.diff.kind);
+    if (suppression.suppression.kind === undefined)
+        return true;
+    if (suppression.suppression.kind === finding.diff.kind)
+        return true;
+    // For Resource* findings (merged from Request + Response), also match
+    // if the suppression uses the constituent Request* or Response* kind
+    const findingKind = finding.diff.kind;
+    const suppressionKind = suppression.suppression.kind;
+    if (findingKind.startsWith("Resource")) {
+        const suffix = findingKind.slice("Resource".length);
+        if (suppressionKind === `Request${suffix}` || suppressionKind === `Response${suffix}`) {
+            return true;
+        }
+    }
+    return false;
 }
 function matchesVersion(suppression, finding) {
     return (suppression.suppression.version === undefined ||

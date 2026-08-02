@@ -13,30 +13,18 @@ import { getSourceLocation } from "@typespec/compiler";
  */
 export function resolveFindingLocation(finding) {
     const diff = finding.diff;
-    // Special case: Phase A removed property — link to parent model instead of the
-    // removed property itself, since the property does not exist in the head spec.
-    // Phase B (cross-version) removals use @removed, so the property still exists
-    // in the head source (just projected out for that version) — link to the property.
-    if (finding.phase === "same-version" &&
-        !diff.headType &&
-        !diff.headSourceLocation &&
-        diff.baseType?.kind === "ModelProperty") {
-        const parentModel = diff.baseType.model;
-        if (parentModel) {
-            const modelLoc = safeGetSourceLocation(parentModel);
-            if (modelLoc && isValidSourceLocation(modelLoc)) {
-                return modelLoc;
-            }
-        }
+    // 1. Head source location (highest priority — set by resolveHeadSourceLocations
+    // for cross-compilation findings, or by the diff engine for same-program findings)
+    if (diff.headSourceLocation && isValidSourceLocation(diff.headSourceLocation)) {
+        return diff.headSourceLocation;
     }
-    // 1. Origin source location (property/type declaration in user code)
+    // 2. Origin source location (property/type declaration in user code)
     if (diff.origin?.sourceLocation && isValidSourceLocation(diff.origin.sourceLocation)) {
         return diff.origin.sourceLocation;
     }
-    // 2. Direct source location on the diff
-    const directLoc = diff.headSourceLocation ?? diff.baseSourceLocation;
-    if (directLoc && isValidSourceLocation(directLoc)) {
-        return directLoc;
+    // 3. Base source location fallback
+    if (diff.baseSourceLocation && isValidSourceLocation(diff.baseSourceLocation)) {
+        return diff.baseSourceLocation;
     }
     // 3. Parent model fallback — when type exists but has no useful location
     const type = diff.headType ?? diff.baseType;
@@ -123,5 +111,76 @@ function safeGetSourceLocation(type) {
     catch {
         return undefined;
     }
+}
+/**
+ * Post-process findings to resolve headSourceLocation by looking up types
+ * in the unmutated head program. This handles cross-compilation scenarios
+ * (Phase A) where headType is null because the type is projected out, but
+ * the type still exists in the head source.
+ *
+ * For each finding with null headType:
+ * - If the property exists in the head program → sets headSourceLocation to property
+ * - If only the parent model exists → sets headSourceLocation to the model
+ * - If neither exists → leaves headSourceLocation null (truly deleted)
+ *
+ * This must be called before reporting so that resolveFindingLocation can
+ * correctly distinguish "type projected out" from "type truly deleted."
+ */
+export function resolveHeadSourceLocations(findings, headProgram) {
+    for (const finding of findings) {
+        const diff = finding.diff;
+        // Only process findings where head type is missing
+        if (diff.headType || diff.headSourceLocation)
+            continue;
+        if (!diff.baseType || diff.baseType.kind !== "ModelProperty")
+            continue;
+        const prop = diff.baseType;
+        const propName = prop.name;
+        // Use the node's parent to get the SOURCE model name (not the projected model)
+        const modelName = prop.node?.parent?.id?.sv ?? prop.model?.name;
+        if (!modelName)
+            continue;
+        // Look up the model by name in the head program's namespace tree
+        const headModel = findModelInProgram(headProgram, modelName);
+        if (!headModel)
+            continue;
+        // Check if the property exists on the head model
+        const headProp = headModel.properties.get(propName);
+        if (headProp) {
+            // Property exists in head source — link to it
+            const loc = safeGetSourceLocation(headProp);
+            if (loc && isValidSourceLocation(loc)) {
+                diff.headSourceLocation = loc;
+                continue;
+            }
+        }
+        // Property doesn't exist but model does — link to parent model
+        const modelLoc = safeGetSourceLocation(headModel);
+        if (modelLoc && isValidSourceLocation(modelLoc)) {
+            diff.headSourceLocation = modelLoc;
+        }
+    }
+}
+/**
+ * Find a model by name in a program's namespace tree.
+ * Walks all namespaces recursively looking for a model with the given name.
+ */
+function findModelInProgram(program, modelName) {
+    // Walk the global namespace and all sub-namespaces
+    const globalNs = program.getGlobalNamespaceType();
+    return findModelInNamespace(globalNs, modelName);
+}
+function findModelInNamespace(ns, modelName) {
+    // Check models directly in this namespace
+    const model = ns.models.get(modelName);
+    if (model)
+        return model;
+    // Recurse into sub-namespaces
+    for (const [, subNs] of ns.namespaces) {
+        const found = findModelInNamespace(subNs, modelName);
+        if (found)
+            return found;
+    }
+    return undefined;
 }
 //# sourceMappingURL=resolve-location.js.map

@@ -5,6 +5,12 @@
   "type": "module",
   "main": "src/index.js",
   "tspMain": "lib/main.tsp",
+  "exports": {
+    ".": {
+      "typespec": "./lib/main.tsp",
+      "default": "./src/index.js"
+    }
+  },
   "bin": {
     "typespec-breaking-change": "src/cli.js"
   },

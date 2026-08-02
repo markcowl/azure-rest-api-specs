@@ -50,6 +50,11 @@ extern dec approvedBreakingChange(
 model ApprovedUnversionedChangeOptions {
   /** Optional DiffKind filter (e.g., "ResponsePropertyRemoved"). */
   kind?: string;
+  /**
+   * Identity path from the suppression site to the violation target.
+   * Required when the suppression is not on the target node itself.
+   */
+  path?: string;
 }
 
 /**

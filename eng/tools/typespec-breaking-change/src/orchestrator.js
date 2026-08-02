@@ -1,5 +1,6 @@
 import { computeDiffs } from "./diff-engine.js";
 import { classifyDiffs } from "./policy.js";
+import { resolveHeadSourceLocations } from "./resolve-location.js";
 import { applySuppressions } from "./suppression.js";
 import { buildPhaseAPairs, buildPhaseBPairs, createVersionedView, defaultVersionClassifier, enumerateVersions, } from "./versions.js";
 /**
@@ -48,11 +49,11 @@ export function analyzeProgram(program, options) {
     const dedupStart = Date.now();
     const dedupedFindings = deduplicateBySourceType(allFindings);
     timing.classifyMs += Date.now() - dedupStart;
+    const merged = mergeRequestResponseToResource(dedupedFindings);
+    const deduped = collapsePhaseADuplicates(merged);
     const suppressStart = Date.now();
-    const suppressedFindings = applySuppressions(dedupedFindings, program);
+    const findings = applySuppressions(deduped, program);
     timing.suppressMs += Date.now() - suppressStart;
-    const merged = mergeRequestResponseToResource(suppressedFindings);
-    const findings = collapsePhaseADuplicates(merged);
     timing.totalMs = Date.now() - totalStart;
     const summary = buildSummary(servicesAnalyzed, comparisonsPerformed, versionComparisons, options, hasStableVersion);
     return { findings, timing, summary };
@@ -136,11 +137,16 @@ export function analyzeBaseAndHead(baseProgram, headProgram, options) {
     const dedupStart = Date.now();
     const dedupedFindings = deduplicateBySourceType(allFindings);
     timing.classifyMs += Date.now() - dedupStart;
+    const merged = mergeRequestResponseToResource(dedupedFindings);
+    const deduped = collapsePhaseADuplicates(merged);
     const suppressStart = Date.now();
-    const suppressedFindings = applySuppressions(dedupedFindings, headProgram);
+    const findings = applySuppressions(deduped, headProgram);
     timing.suppressMs += Date.now() - suppressStart;
-    const merged = mergeRequestResponseToResource(suppressedFindings);
-    const findings = collapsePhaseADuplicates(merged);
+    // Resolve head source locations for cross-compilation findings.
+    // Looks up types by name in the unmutated head program to determine
+    // whether a type truly doesn't exist in head (link to parent) vs
+    // exists but is projected out (link to the type itself).
+    resolveHeadSourceLocations(findings, headProgram);
     timing.totalMs = Date.now() - totalStart;
     const summary = buildSummary(servicesAnalyzed, comparisonsPerformed, versionComparisons, options, hasStableVersion);
     return { findings, timing, summary };

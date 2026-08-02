@@ -70,6 +70,15 @@ const validDiffKinds = new Set([
     "DefaultValueAdded",
     "DefaultValueRemoved",
     "DefaultValueChanged",
+    // Resource-level (merged from matching Request + Response findings)
+    "ResourcePropertyAdded",
+    "ResourcePropertyRemoved",
+    "ResourcePropertyRenamed",
+    "ResourcePropertyTypeChanged",
+    "ResourcePropertyTypeNarrowed",
+    "ResourcePropertyTypeWidened",
+    "ResourcePropertyMadeRequired",
+    "ResourcePropertyMadeOptional",
 ]);
 export function $approvedBreakingChange(context, target, reason, options) {
     const normalizedReason = getDecoratorStringValue(reason) ?? String(reason);
