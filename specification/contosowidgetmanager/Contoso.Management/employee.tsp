@@ -27,9 +27,6 @@ model EmployeeProperties {
   @removed(Versions.v2025_01_01)
   city?: string;
 
-  /** City of employee */
-  city?: string;
-
   /** Profile of employee */
   @encode("base64url")
   profile?: bytes;
