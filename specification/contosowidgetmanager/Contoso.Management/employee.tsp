@@ -2,6 +2,7 @@ import "@typespec/rest";
 import "@typespec/http";
 import "@azure-tools/typespec-azure-core";
 import "@azure-tools/typespec-azure-resource-manager";
+import "@azure-tools/typespec-breaking-change";
 
 using TypeSpec.Rest;
 using TypeSpec.Http;
@@ -16,6 +17,7 @@ model Employee is TrackedResource<EmployeeProperties> {
 }
 
 /** Employee properties */
+@approvedUnversionedChange("City field removed per API simplification", #{ kind: "ResourcePropertyRemoved", path: "city" })
 model EmployeeProperties {
   /** Age of employee */
   age?: int32;
