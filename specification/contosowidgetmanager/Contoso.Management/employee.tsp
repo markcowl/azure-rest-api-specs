@@ -23,11 +23,7 @@ model EmployeeProperties {
   /** Age of employee */
   @approvedBreakingChange(
     "Intentional type change from int32 to int64 for expanded range",
-    #{ kind: "ResponsePropertyTypeChanged" }
-  )
-  @approvedBreakingChange(
-    "Intentional type change from int32 to int64 for expanded range",
-    #{ kind: "RequestPropertyTypeChanged" }
+    #{ kind: "ResourcePropertyTypeChanged" }
   )
   @typeChangedFrom(Versions.v2025_01_01, int32)
   age?: int64;
@@ -35,16 +31,9 @@ model EmployeeProperties {
   /** City of employee */
   @approvedBreakingChange(
     "City field removed in favor of structured address model",
-    #{ kind: "ResponsePropertyRemoved" }
-  )
-  @approvedBreakingChange(
-    "City field removed in favor of structured address model",
-    #{ kind: "RequestPropertyRemoved" }
+    #{ kind: "ResourcePropertyRemoved" }
   )
   @removed(Versions.v2025_01_01)
-  city?: string;
-
-  /** City of employee */
   city?: string;
 
   /** Profile of employee */
