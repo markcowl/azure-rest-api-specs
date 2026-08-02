@@ -1,4 +1,4 @@
-import { formatSuppressionHint } from "./suppression-guidance.js";
+import { formatSuppressionDiff } from "./suppression-guidance.js";
 import { resolveFindingLocation } from "./resolve-location.js";
 /** Default URL for the violations reference docs in the typespec-azure repo. */
 const DEFAULT_VIOLATIONS_REF_URL = "https://github.com/markcowl/typespec-azure/blob/prototype/breaking-change-tool/packages/typespec-breaking-change/docs/violations-reference.md";
@@ -56,8 +56,9 @@ export function renderMarkdownSummary(result, options) {
             const kind = fmtKindLink(finding.diff.kind, finding.phase, options);
             const identity = fmtIdentityLink(finding, options);
             const versions = esc(fmtVer(finding));
-            const hint = esc(formatSuppressionHint(finding));
-            lines.push(`| ${kind} | ${identity} | ${versions} | \`${hint}\` |`);
+            const diffSnippet = formatSuppressionDiff(finding);
+            const suppressionCell = `<pre lang="diff">${escHtml(diffSnippet).replace(/\n/g, "&#10;")}</pre>`;
+            lines.push(`| ${kind} | ${identity} | ${versions} | ${suppressionCell} |`);
         }
     }
     // New suppressed breaking changes
@@ -163,6 +164,13 @@ function fmtMs(ms) {
 }
 function esc(value) {
     return value.replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
+}
+function escHtml(value) {
+    return value
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
 }
 function formatNoFindingsMessage(phase, comparisonsPerformed) {
     const pairLabel = `${comparisonsPerformed} version pair${comparisonsPerformed === 1 ? "" : "s"} compared`;

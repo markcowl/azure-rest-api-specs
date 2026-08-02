@@ -85,11 +85,13 @@ export function $approvedBreakingChange(context, target, reason, options) {
 export function $approvedUnversionedChange(context, target, reason, options) {
     const normalizedReason = getDecoratorStringValue(reason) ?? String(reason);
     const normalizedKind = options?.kind ? getDecoratorStringValue(options.kind) ?? options.kind : undefined;
+    const normalizedPath = options?.path ? getDecoratorStringValue(options.path) ?? options.path : undefined;
     const resolvedKind = validateDiffKind(context, target, normalizedKind);
     if (normalizedKind !== undefined && resolvedKind === undefined) {
         return;
     }
-    addSuppression(context.program, BreakingChangeStateKeys.approvedUnversionedChange, target, resolvedKind, normalizedReason);
+    addSuppression(context.program, BreakingChangeStateKeys.approvedUnversionedChange, target, resolvedKind, normalizedReason, undefined, // since
+    normalizedPath);
 }
 export function getSuppressions(program, type) {
     return program.stateMap(BreakingChangeStateKeys.approvedBreakingChange).get(type) ?? [];
