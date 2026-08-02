@@ -1,7 +1,7 @@
 import { computeDiffs } from "./diff-engine.js";
 import { classifyDiffs } from "./policy.js";
 import { applySuppressions } from "./suppression.js";
-import { buildPhaseAPairs, buildPhaseBPairs, createVersionedView, enumerateVersions, } from "./versions.js";
+import { buildPhaseAPairs, buildPhaseBPairs, createVersionedView, defaultVersionClassifier, enumerateVersions, } from "./versions.js";
 /**
  * Run full breaking change analysis on a single program (Phase B only).
  * Compares consecutive versions within the head program.
@@ -13,11 +13,15 @@ export function analyzeProgram(program, options) {
     const versionComparisons = [];
     let servicesAnalyzed = 0;
     let comparisonsPerformed = 0;
+    let hasStableVersion = false;
     for (const service of enumerateVersions(program)) {
         if (!shouldAnalyzeService(service.service, options)) {
             continue;
         }
         servicesAnalyzed++;
+        if (service.versions.some((v) => defaultVersionClassifier(v) === "stable")) {
+            hasStableVersion = true;
+        }
         options?.log?.(`Analyzing service: ${service.service.name} (${service.versions.length} versions)`);
         if (options?.phase === "same-version") {
             continue;
@@ -50,7 +54,7 @@ export function analyzeProgram(program, options) {
     const merged = mergeRequestResponseToResource(suppressedFindings);
     const findings = collapsePhaseADuplicates(merged);
     timing.totalMs = Date.now() - totalStart;
-    const summary = buildSummary(servicesAnalyzed, comparisonsPerformed, versionComparisons, options);
+    const summary = buildSummary(servicesAnalyzed, comparisonsPerformed, versionComparisons, options, hasStableVersion);
     return { findings, timing, summary };
 }
 /**
@@ -64,11 +68,15 @@ export function analyzeBaseAndHead(baseProgram, headProgram, options) {
     let servicesAnalyzed = 0;
     let comparisonsPerformed = 0;
     const baseServices = enumerateVersions(baseProgram);
+    let hasStableVersion = false;
     for (const headService of enumerateVersions(headProgram)) {
         if (!shouldAnalyzeService(headService.service, options)) {
             continue;
         }
         servicesAnalyzed++;
+        if (headService.versions.some((v) => defaultVersionClassifier(v) === "stable")) {
+            hasStableVersion = true;
+        }
         options?.log?.(`Analyzing service: ${headService.service.name} (${headService.versions.length} versions)`);
         const baseService = baseServices.find((candidate) => candidate.service.name === headService.service.name);
         const changedVersions = [];
@@ -134,7 +142,7 @@ export function analyzeBaseAndHead(baseProgram, headProgram, options) {
     const merged = mergeRequestResponseToResource(suppressedFindings);
     const findings = collapsePhaseADuplicates(merged);
     timing.totalMs = Date.now() - totalStart;
-    const summary = buildSummary(servicesAnalyzed, comparisonsPerformed, versionComparisons, options);
+    const summary = buildSummary(servicesAnalyzed, comparisonsPerformed, versionComparisons, options, hasStableVersion);
     return { findings, timing, summary };
 }
 function analyzePair(baseView, headView, versionPair, timing) {
@@ -169,7 +177,7 @@ function createEmptyTiming() {
         totalMs: 0,
     };
 }
-function buildSummary(servicesAnalyzed, comparisonsPerformed, versionComparisons = [], options) {
+function buildSummary(servicesAnalyzed, comparisonsPerformed, versionComparisons = [], options, hasStableVersion) {
     const summary = {
         servicesAnalyzed,
         comparisonsPerformed,
@@ -183,6 +191,10 @@ function buildSummary(servicesAnalyzed, comparisonsPerformed, versionComparisons
         else if (options?.phase === "same-version") {
             summary.noComparisonReason =
                 "Phase A (same-version) requires a base program for comparison. Use analyzeBaseAndHead() instead.";
+        }
+        else if (hasStableVersion) {
+            summary.noComparisonReason =
+                "No cross-version comparisons needed: no comparisons to stable versions needed.";
         }
         else {
             summary.noComparisonReason =

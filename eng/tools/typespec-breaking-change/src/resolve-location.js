@@ -13,9 +13,14 @@ import { getSourceLocation } from "@typespec/compiler";
  */
 export function resolveFindingLocation(finding) {
     const diff = finding.diff;
-    // Special case: removed property — link to parent model instead of the
-    // removed property itself, since the property no longer exists in head.
-    if (!diff.headType && !diff.headSourceLocation && diff.baseType?.kind === "ModelProperty") {
+    // Special case: Phase A removed property — link to parent model instead of the
+    // removed property itself, since the property does not exist in the head spec.
+    // Phase B (cross-version) removals use @removed, so the property still exists
+    // in the head source (just projected out for that version) — link to the property.
+    if (finding.phase === "same-version" &&
+        !diff.headType &&
+        !diff.headSourceLocation &&
+        diff.baseType?.kind === "ModelProperty") {
         const parentModel = diff.baseType.model;
         if (parentModel) {
             const modelLoc = safeGetSourceLocation(parentModel);

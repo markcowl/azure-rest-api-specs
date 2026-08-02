@@ -1,5 +1,12 @@
-import { findSuppressions, findUnversionedSuppressions, } from "./decorators.js";
+import { findSuppressions, findUnversionedSuppressions, scanAllUnversionedSuppressions, } from "./decorators.js";
 import { isOperationIdentity } from "./types.js";
+/**
+ * Scan the head program's unversioned suppression state map for Phase A
+ * cross-compilation fallback. Returns all suppressions — the caller filters by kind/path.
+ */
+function scanUnversionedSuppressions(program) {
+    return scanAllUnversionedSuppressions(program);
+}
 /**
  * Apply suppression metadata to classified findings.
  *
@@ -41,6 +48,12 @@ export function applySuppressions(findings, program) {
 }
 /**
  * Collect suppressions from the wire type, origin type, and operation type.
+ *
+ * For Phase A (same-version) findings, the targetType comes from the base program
+ * but suppressions are stored in the head program's state map. Since TypeSpec state
+ * maps use object identity, base types will never match head program entries.
+ * In this case we fall back to scanning all unversioned suppressions in the head
+ * program and matching by kind + path.
  */
 function collectSuppressions(finding, program, targetType) {
     const finder = finding.phase === "same-version" ? findUnversionedSuppressions : findSuppressions;
@@ -52,6 +65,12 @@ function collectSuppressions(finding, program, targetType) {
     const operationType = finding.diff.operationType;
     if (operationType && operationType !== targetType && operationType !== originType) {
         suppressions.push(...finder(program, operationType));
+    }
+    // Phase A cross-compilation fallback: when targetType is from the base program,
+    // identity-based lookup against the head program's state map won't match.
+    // Scan all unversioned suppressions in the head program for kind+path matches.
+    if (finding.phase === "same-version" && suppressions.length === 0) {
+        suppressions.push(...scanUnversionedSuppressions(program));
     }
     return suppressions;
 }

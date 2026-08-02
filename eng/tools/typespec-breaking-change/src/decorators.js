@@ -99,6 +99,21 @@ export function getSuppressions(program, type) {
 export function getUnversionedSuppressions(program, type) {
     return program.stateMap(BreakingChangeStateKeys.approvedUnversionedChange).get(type) ?? [];
 }
+/**
+ * Scan ALL entries in the head program's unversioned suppression state map.
+ * Used for Phase A cross-compilation fallback when identity-based lookup fails
+ * because the target type is from a different (base) program.
+ */
+export function scanAllUnversionedSuppressions(program) {
+    const results = [];
+    const stateMap = program.stateMap(BreakingChangeStateKeys.approvedUnversionedChange);
+    for (const [target, suppressions] of stateMap) {
+        for (const suppression of suppressions) {
+            results.push({ suppression, target: target });
+        }
+    }
+    return results;
+}
 export function findSuppressions(program, type) {
     return findSuppressionsWith(program, type, getSuppressions);
 }
