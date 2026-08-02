@@ -29,7 +29,6 @@ enum Versions {
 
   /** 2025-01-01 version */
   @armCommonTypesVersion(Azure.ResourceManager.CommonTypes.Versions.v5)
-  @added(Microsoft.Contoso.Versions.v2025_01_01)
   v2025_01_01: "2025-01-01",
 }
 
