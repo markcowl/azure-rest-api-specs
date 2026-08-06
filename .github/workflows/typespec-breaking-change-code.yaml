@@ -92,7 +92,7 @@ jobs:
           for folder in "${spec_folders[@]}"; do
             folder_json="${folder//\//_}-report.json"
             folder_md="${folder//\//_}-report.md"
-            node eng/tools/typespec-breaking-change/src/cli.js "$folder" \
+            node eng/tools/typespec-breaking-change/src/cli/cli.js "$folder" \
               --phase cross-version \
               --json-output "$folder_json" \
               --markdown-output "$folder_md" \
