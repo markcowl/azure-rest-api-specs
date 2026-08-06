@@ -12,7 +12,7 @@
     }
   },
   "bin": {
-    "typespec-breaking-change": "src/cli.js"
+    "typespec-breaking-change": "src/cli/cli.js"
   },
   "dependencies": {
     "@typespec/compiler": "1.14.0",
