@@ -3,6 +3,7 @@ import "@typespec/rest";
 import "@typespec/versioning";
 import "@azure-tools/typespec-azure-core";
 import "@azure-tools/typespec-azure-resource-manager";
+import "@azure-tools/typespec-breaking-change";
 import "./employee.tsp";
 
 using TypeSpec.Http;
@@ -26,6 +27,10 @@ enum Versions {
   /** 2021-11-01 version */
   @armCommonTypesVersion(Azure.ResourceManager.CommonTypes.Versions.v5)
   v2021_11_01: "2021-11-01",
+
+  /** 2025-01-01 version */
+  @armCommonTypesVersion(Azure.ResourceManager.CommonTypes.Versions.v5)
+  v2025_01_01: "2025-01-01",
 }
 
 interface Operations extends Azure.ResourceManager.Operations {}
