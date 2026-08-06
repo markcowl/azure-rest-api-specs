@@ -94,6 +94,9 @@ enum Features {
   /** Interconnect group resource type for managing interconnect groups. */
   @added(Versions.v2025_07_01)
   interconnectGroup,
+
+  vmssNetworkConfiguration,
+  vmssPublicIPAddress,
 }
 
 /**

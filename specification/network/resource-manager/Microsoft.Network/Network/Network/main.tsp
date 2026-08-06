@@ -114,6 +114,9 @@ import "./VirtualNetworkTap.tsp";
 import "./VirtualRouter.tsp";
 import "./VirtualRouterPeering.tsp";
 import "./VirtualWAN.tsp";
+import "./VmssNetworkInterface.tsp";
+import "./VmssNetworkInterfaceIpConfiguration.tsp";
+import "./VmssPublicIPAddress.tsp";
 import "./VpnSite.tsp";
 import "./VpnSiteLink.tsp";
 import "./VpnServerConfiguration.tsp";
@@ -148,7 +151,8 @@ using Common;
 /**
  * APIs to manage web application firewall rules.
  */
-@Azure.ResourceManager.Legacy.features(Features)
+#suppress "@azure-tools/typespec-azure-resource-manager/arm-feature-file-usage-discourage" "Need for documentation support"
+@Azure.ResourceManager.featureFiles(Features)
 @armProviderNamespace
 @service(#{ title: "WebApplicationFirewallManagement" })
 @versioned(Versions)
