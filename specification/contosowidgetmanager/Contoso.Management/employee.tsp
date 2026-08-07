@@ -22,7 +22,12 @@ model Employee is TrackedResource<EmployeeProperties> {
 /** Employee properties */
 model EmployeeProperties {
   /** Age of employee */
-  age?: int32;
+  @approvedBreakingChange(
+    "Age widened from int32 to int64 for demo coverage",
+    #{ kind: "ResourcePropertyTypeChanged" }
+  )
+  @typeChangedFrom(Versions.v2025_01_01, int32)
+  age?: int64;
 
   /** City of employee */
   @approvedBreakingChange(
