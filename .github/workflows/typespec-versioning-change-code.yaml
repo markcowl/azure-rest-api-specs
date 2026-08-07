@@ -115,7 +115,7 @@ jobs:
               base_flag=(--base "$base_folder")
             fi
 
-            node eng/tools/typespec-breaking-change/src/cli.js "$folder" \
+            node eng/tools/typespec-breaking-change/src/cli/cli.js "$folder" \
               "${base_flag[@]}" \
               --phase same-version \
               --report-title "TypeSpec Versioning Change Analysis" \
