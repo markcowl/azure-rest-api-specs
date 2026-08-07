@@ -20,7 +20,8 @@ model Employee is TrackedResource<EmployeeProperties> {
 /** Employee properties */
 model EmployeeProperties {
   /** Age of employee */
-  age?: int32;
+  @typeChangedFrom(Versions.v2025_01_01, int32)
+  age?: int64;
 
   /** City of employee */
   @removed(Versions.v2025_01_01)
