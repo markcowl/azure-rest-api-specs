@@ -1,12 +1,16 @@
 import "@typespec/rest";
 import "@typespec/http";
+import "@typespec/versioning";
 import "@azure-tools/typespec-azure-core";
 import "@azure-tools/typespec-azure-resource-manager";
+import "@azure-tools/typespec-breaking-change";
 
 using TypeSpec.Rest;
 using TypeSpec.Http;
+using TypeSpec.Versioning;
 using Azure.Core;
 using Azure.ResourceManager;
+using Azure.BreakingChange;
 
 namespace Microsoft.Contoso;
 
@@ -18,9 +22,19 @@ model Employee is TrackedResource<EmployeeProperties> {
 /** Employee properties */
 model EmployeeProperties {
   /** Age of employee */
-  age?: int32;
+  @approvedBreakingChange(
+    "Age widened from int32 to int64 for demo coverage",
+    #{ kind: "ResourcePropertyTypeChanged" }
+  )
+  @typeChangedFrom(Versions.v2025_01_01, int32)
+  age?: int64;
 
   /** City of employee */
+  @approvedBreakingChange(
+    "City field removed intentionally for demo coverage",
+    #{ kind: "ResourcePropertyRemoved" }
+  )
+  @removed(Versions.v2025_01_01)
   city?: string;
 
   /** Profile of employee */
