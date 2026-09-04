@@ -1,5 +1,4 @@
 import "./Network/main.tsp";
-import "./Vmss/main.tsp";
 import "@azure-tools/typespec-client-generator-core";
 import "@typespec/versioning";
 
@@ -67,13 +66,25 @@ namespace Common {
 );
 
 @@clientLocation(
-  Microsoft.Compute.NetworkInterfacesOperationGroup.listVirtualMachineScaleSetNetworkInterfaces,
+  Microsoft.Network.VmssNetworkInterfacesOperationGroup.listVirtualMachineScaleSetNetworkInterfaces,
   Microsoft.Network.NetworkInterfaces,
   "java,javascript,python,go"
 );
 
 @@clientLocation(
-  Microsoft.Compute.PublicIPAddressesOperationGroup.listVirtualMachineScaleSetPublicIPAddresses,
+  Microsoft.Network.VmssNetworkInterfaces.getVirtualMachineScaleSetNetworkInterface,
+  Microsoft.Network.NetworkInterfaces,
+  "java"
+);
+
+@@clientLocation(
+  Microsoft.Network.VmssNetworkInterfaces.listVirtualMachineScaleSetVMNetworkInterfaces,
+  Microsoft.Network.NetworkInterfaces,
+  "java"
+);
+
+@@clientLocation(
+  Microsoft.Network.VmssPublicIPAddressesOperationGroup.listVirtualMachineScaleSetPublicIPAddresses,
   Microsoft.Network.PublicIPAddresses,
   "java,javascript,python,go"
 );
@@ -1596,7 +1607,7 @@ union ProvisioningStateUnion {
 
 // Move VMSS listVirtualMachineScaleSetNetworkInterfaces to NetworkInterfaces client for Java
 @@clientLocation(
-  Microsoft.Compute.NetworkInterfacesOperationGroup.listVirtualMachineScaleSetNetworkInterfaces,
+  Microsoft.Network.VmssNetworkInterfacesOperationGroup.listVirtualMachineScaleSetNetworkInterfaces,
   Microsoft.Network.NetworkInterfaces,
   "java"
 );
@@ -3848,14 +3859,14 @@ op replaceprivateDnsZoneGroupsList(
   "python,javascript"
 );
 
-// Move Microsoft.Compute.PublicIPAddresses operations to Microsoft.Network.PublicIPAddresses for Java
+// Move VMSS public IP address operations to Microsoft.Network.PublicIPAddresses for Java
 @@clientLocation(
-  Microsoft.Compute.PublicIPAddresses.getVirtualMachineScaleSetPublicIPAddress,
+  Microsoft.Network.VmssPublicIPAddresses.getVirtualMachineScaleSetPublicIPAddress,
   Microsoft.Network.PublicIPAddresses,
   "java"
 );
 @@clientLocation(
-  Microsoft.Compute.PublicIPAddresses.listVirtualMachineScaleSetVMPublicIPAddresses,
+  Microsoft.Network.VmssPublicIPAddresses.listVirtualMachineScaleSetVMPublicIPAddresses,
   Microsoft.Network.PublicIPAddresses,
   "java"
 );
@@ -3895,17 +3906,17 @@ op replaceprivateDnsZoneGroupsList(
   "java"
 );
 @@clientName(
-  Microsoft.Compute.PublicIPAddresses.getVirtualMachineScaleSetPublicIPAddress,
+  Microsoft.Network.VmssPublicIPAddresses.getVirtualMachineScaleSetPublicIPAddress,
   "getVirtualMachineScaleSetPublicIpAddress",
   "java"
 );
 @@clientName(
-  Microsoft.Compute.PublicIPAddresses.listVirtualMachineScaleSetVMPublicIPAddresses,
+  Microsoft.Network.VmssPublicIPAddresses.listVirtualMachineScaleSetVMPublicIPAddresses,
   "listVirtualMachineScaleSetVMPublicIpAddresses",
   "java"
 );
 @@clientName(
-  Microsoft.Compute.PublicIPAddressesOperationGroup.listVirtualMachineScaleSetPublicIPAddresses,
+  Microsoft.Network.VmssPublicIPAddressesOperationGroup.listVirtualMachineScaleSetPublicIPAddresses,
   "listVirtualMachineScaleSetPublicIpAddresses",
   "java"
 );
@@ -6235,19 +6246,19 @@ op replaceprivateDnsZoneGroupsList(
 );
 
 @@clientLocation(
-  Microsoft.Compute.NetworkInterfacesOperationGroup.listVirtualMachineScaleSetNetworkInterfaces,
+  Microsoft.Network.VmssNetworkInterfacesOperationGroup.listVirtualMachineScaleSetNetworkInterfaces,
   "VirtualMachineScaleSetNetwork",
   "csharp"
 );
 
 @@clientLocation(
-  Microsoft.Compute.NetworkInterfaces.listVirtualMachineScaleSetVMNetworkInterfaces,
+  Microsoft.Network.VmssNetworkInterfaces.listVirtualMachineScaleSetVMNetworkInterfaces,
   "VirtualMachineScaleSetNetworkInterfaces",
   "csharp"
 );
 
 @@clientLocation(
-  Microsoft.Compute.NetworkInterfaces.getVirtualMachineScaleSetNetworkInterface,
+  Microsoft.Network.VmssNetworkInterfaces.getVirtualMachineScaleSetNetworkInterface,
   "VirtualMachineScaleSetNetworkInterfaces",
   "csharp"
 );
@@ -6259,7 +6270,7 @@ op replaceprivateDnsZoneGroupsList(
 );
 
 @@clientName(
-  Microsoft.Compute.PublicIPAddresses,
+  Microsoft.Network.VmssPublicIPAddresses,
   "VirtualMachineScaleSetNetworkInterfaceIPConfigurationPublicIPAddresses",
   "csharp"
 );
