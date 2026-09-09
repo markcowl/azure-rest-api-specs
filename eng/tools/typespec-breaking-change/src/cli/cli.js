@@ -1,13 +1,31 @@
 #!/usr/bin/env node
-import { resolve } from "path";
-import { writeFile, mkdir } from "fs/promises";
-import { dirname } from "path";
+import { resolve, relative, dirname } from "path";
+import { writeFile, mkdir, stat } from "fs/promises";
 import { compileService } from "./compile.js";
+import { checkoutRevision, getRepoRoot, mapPathIntoWorktree } from "./git-checkout.js";
 import { analyzeBaseAndHead, analyzeProgram } from "../pipeline/orchestrator.js";
 import { formatConsoleReport } from "../reporting/reporter-console.js";
 import { formatGithubReport } from "../reporting/reporter-github.js";
 import { formatJsonReport } from "../reporting/reporter-json.js";
 import { renderMarkdownSummary } from "../reporting/reporter-markdown.js";
+import { formatDiagnostic } from "@typespec/compiler";
+/**
+ * Fail loudly if `program` has any compile-time error diagnostics, instead of
+ * letting analysis silently proceed against an effectively-empty Program
+ * (e.g. because every `import` failed to resolve). A program with unresolved
+ * imports/decorators compiles "successfully" (no exception) but produces no
+ * usable namespaces, so downstream analysis would otherwise report a
+ * misleadingly benign "no changes found" instead of surfacing the real
+ * problem.
+ */
+function assertNoCompileErrors(program, label) {
+    const errors = (program.diagnostics ?? []).filter((d) => d.severity === "error");
+    if (errors.length === 0) {
+        return;
+    }
+    const details = errors.map((d) => `  ${formatDiagnostic(d)}`).join("\n");
+    throw new Error(`Failed to compile the ${label}: ${errors.length} error(s) found:\n${details}`);
+}
 /**
  * Parse CLI arguments into CliOptions.
  */
@@ -26,6 +44,9 @@ export function parseArgs(args) {
             case "--base":
             case "-b":
                 options.base = args[++i];
+                break;
+            case "--base-ref":
+                options.baseRef = args[++i];
                 break;
             case "--format":
             case "-f":
@@ -60,6 +81,9 @@ export function parseArgs(args) {
             case "--report-title":
                 options.reportTitle = args[++i];
                 break;
+            case "--omit-title":
+                options.omitTitle = true;
+                break;
             case "--help":
             case "-h":
                 printUsage();
@@ -86,6 +110,9 @@ Arguments:
 Options:
   -e, --entry <path>         Path to the head TypeSpec entry point (file-to-file mode)
   -b, --base <path>          Path to the base TypeSpec entry point (file-to-file comparison)
+  --base-ref <commitish>     Git revision (SHA, branch, tag) to check out as the base for
+                             comparison, instead of an explicit --base path. Checked out into
+                             an isolated, disposable git worktree. Ignored if --base is set.
   -f, --format <format>      Console output format: console, json, github (default: console)
   --json-output <path>       Write JSON report to file
   --markdown-output <path>   Write Markdown summary to file
@@ -95,6 +122,10 @@ Options:
   -s, --service <name>       Filter to a specific service name
   --show-suppressed          Include suppressed findings in output
   --show-ignored             Include ignored findings in output
+  --report-title <title>     Custom H2 title for the Markdown summary (default: "Breaking Change Analysis")
+  --omit-title               Omit the H2 title line from the Markdown summary. Use when a
+                              caller (e.g. a CI workflow looping over multiple folders) prints
+                              the title once itself, ahead of per-folder sections.
   -h, --help                 Show this help message
 
 Exit codes:
@@ -108,6 +139,9 @@ Examples:
 
   # File-to-file comparison (Phase A + B)
   typespec-breaking-change --entry ./head/main.tsp --base ./base/main.tsp
+
+  # Compare against a base revision resolved directly from git (no manual checkout)
+  typespec-breaking-change ./specification/widget/Microsoft.Widget/Widget --base-ref origin/main
 
   # CI mode: JSON + Markdown output, fail on breaking
   typespec-breaking-change ./spec --json-output report.json --markdown-output report.md --fail-on-breaking
@@ -156,20 +190,64 @@ export async function main(args) {
         phase: options.phase,
         log: (message) => console.log(message),
     };
+    let baseCheckoutCleanup;
     try {
+        // Resolve --base-ref into a concrete --base path by checking the
+        // revision out into an isolated git worktree. Explicit --base always
+        // wins if both are provided.
+        if (options.baseRef && !options.base) {
+            const entryPath = resolve(options.entry);
+            const repoRoot = await getRepoRoot(entryPath);
+            // Scope the worktree checkout to the entry folder's *parent* directory
+            // via sparse checkout — checking out the full repository at the base
+            // revision is far too slow for large monorepos (e.g.
+            // azure-rest-api-specs) where only one spec folder's history actually
+            // needs to be compared. The parent (rather than just the entry folder
+            // itself) is required because some TypeSpec projects import sibling
+            // folders (e.g. a `Foo.Shared` namespace next to `Foo`); scoping to
+            // only the entry folder would leave those imports unresolvable and
+            // silently break compilation of the checked-out revision.
+            const parentPath = dirname(entryPath);
+            const parentRelative = relative(repoRoot, parentPath);
+            // Guard against the entry folder being the repo root itself (or
+            // otherwise outside it), where the parent would resolve outside the
+            // repository (a leading ".." segment) — sparse-checkout can't scope to
+            // a path outside the repo, so fall back to just the entry folder.
+            const sparsePath = parentRelative.length > 0 && !parentRelative.startsWith("..")
+                ? parentRelative
+                : relative(repoRoot, entryPath);
+            const { worktreePath, cleanup } = await checkoutRevision(options.baseRef, entryPath, {
+                sparsePaths: [sparsePath],
+            });
+            baseCheckoutCleanup = cleanup;
+            const mappedBasePath = await mapPathIntoWorktree(entryPath, entryPath, worktreePath);
+            // The entry folder may not have existed yet at the base revision (e.g.
+            // a PR that adds a brand-new spec folder) — in that case there's
+            // nothing to compare against, so fall back to single-program (Phase B
+            // only) analysis rather than failing with an ENOENT compile error.
+            const baseExistsAtRevision = await stat(mappedBasePath)
+                .then(() => true)
+                .catch(() => false);
+            if (baseExistsAtRevision) {
+                options.base = mappedBasePath;
+            }
+        }
         let result;
         if (options.base) {
             // Two-program comparison (Phase A + Phase B)
             const basePath = resolve(options.base);
             const headPath = resolve(options.entry);
             const baseProgram = await compileService(basePath);
+            assertNoCompileErrors(baseProgram, `base revision (${options.baseRef ?? basePath})`);
             const headProgram = await compileService(headPath);
+            assertNoCompileErrors(headProgram, "head revision");
             result = analyzeBaseAndHead(baseProgram, headProgram, analysisOptions);
         }
         else {
             // Single-program analysis (Phase B only)
             const entryPath = resolve(options.entry);
             const program = await compileService(entryPath);
+            assertNoCompileErrors(program, "head revision");
             result = analyzeProgram(program, analysisOptions);
         }
         // Console output
@@ -195,6 +273,7 @@ export async function main(args) {
                 workspacePath: process.env.GITHUB_WORKSPACE,
                 violationsReferenceUrl: process.env.VIOLATIONS_REFERENCE_URL,
                 reportTitle: options.reportTitle,
+                omitTitle: options.omitTitle,
             };
             const mdContent = renderMarkdownSummary(result, mdOptions);
             await writeFile(mdPath, mdContent);
@@ -215,6 +294,11 @@ export async function main(args) {
         const message = error instanceof Error ? error.message : String(error);
         console.error(`Analysis failed: ${message}`);
         return 2;
+    }
+    finally {
+        if (baseCheckoutCleanup) {
+            await baseCheckoutCleanup();
+        }
     }
 }
 /**

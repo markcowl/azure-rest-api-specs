@@ -5,6 +5,13 @@ export interface CliOptions {
     entry: string;
     /** Path to the base TypeSpec entry point (file-to-file mode). */
     base?: string;
+    /**
+     * Git commitish (SHA, branch, tag, etc.) to check out as the base revision
+     * for comparison, as an alternative to `--base <path>`. The tool checks
+     * this out into an isolated, disposable git worktree and analyzes the
+     * equivalent path within it. Ignored if `--base` is also set.
+     */
+    baseRef?: string;
     /** Output format for console: console, json, or github. */
     format: "console" | "json" | "github";
     /** Write JSON report to this file path. */

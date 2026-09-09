@@ -1,0 +1,37 @@
+name: "TypeSpec Breaking Change - Post Comment"
+
+on:
+  # Fires once each analyze workflow completes. Either firing triggers a full
+  # re-render using the latest available artifacts from BOTH workflows for the
+  # same head_sha, so the combined comment stays consistent regardless of
+  # which phase happens to finish first (or second, or is re-run alone).
+  workflow_run:
+    workflows:
+      ["TypeSpec Breaking Change - Analyze Code", "TypeSpec Unversioned Change - Analyze Code"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+
+jobs:
+  post-comment:
+    name: Post combined TypeSpec breaking/versioning change comment
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          sparse-checkout: |
+            .github/
+
+      - name: Install dependencies for github-script actions
+        uses: ./.github/actions/install-deps-github-script
+
+      - name: Post combined TypeSpec breaking/versioning change comment
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { default: postCombinedBreakingChangeComment } =
+              await import('${{ github.workspace }}/.github/workflows/src/typespec-breaking-change/post-combined-comment.js');
+            await postCombinedBreakingChangeComment({ github, context, core });

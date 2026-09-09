@@ -14,6 +14,9 @@
   "bin": {
     "typespec-breaking-change": "src/cli/cli.js"
   },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
   "dependencies": {
     "@typespec/compiler": "1.14.0",
     "@typespec/http": "1.14.0",

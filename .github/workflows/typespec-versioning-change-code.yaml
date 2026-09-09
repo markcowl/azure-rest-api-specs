@@ -1,4 +1,4 @@
-name: "TypeSpec Versioning Change - Analyze Code"
+name: "TypeSpec Unversioned Change - Analyze Code"
 
 on:
   pull_request:
@@ -12,11 +12,14 @@ on:
 
 permissions:
   contents: read
-  pull-requests: write
+  # Only needs read access now: comment posting moved to
+  # typespec-breaking-change-comment.yaml, which has its own scoped
+  # pull-requests: write permission.
+  pull-requests: read
 
 jobs:
   typespec-versioning-change:
-    name: "TypeSpec Versioning Change - Analyze Code"
+    name: "TypeSpec Unversioned Change - Analyze Code"
     runs-on: ubuntu-24.04
 
     steps:
@@ -61,7 +64,7 @@ jobs:
             echo "approved=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Run TypeSpec Versioning Change analysis
+      - name: Run TypeSpec Unversioned Change analysis
         id: typespec-versioning-change-analyze
         shell: bash
         env:
@@ -71,7 +74,7 @@ jobs:
         run: |
           if [[ ! -s typespec-folders.txt ]]; then
             {
-              echo "## TypeSpec Versioning Change Analysis"
+              echo "## Unversioned Change Analysis"
               echo
               echo "No impacted TypeSpec folders were found."
             } > "$GITHUB_STEP_SUMMARY"
@@ -87,47 +90,31 @@ jobs:
           fi
 
           has_errors=0
-          > "versioning-change-comment.md"
+          # Print the phase title once, since each per-folder CLI invocation
+          # below is run with --omit-title so folders read as subsections of
+          # one report instead of each repeating their own "## ..." heading.
+          echo "## Unversioned Change Analysis" > "versioning-change-comment.md"
+          echo "" >> "versioning-change-comment.md"
 
           for folder in "${spec_folders[@]}"; do
             folder_md="${folder//\//_}-versioning-report.md"
             folder_json="${folder//\//_}-versioning-report.json"
 
-            # Save the head (PR) version of the spec folder
-            cp -r "$folder" "${folder}.head-backup"
-
-            # Check out the base version in-place (same repo root = same node_modules)
-            git checkout "$BASE_SHA" -- "$folder" 2>/dev/null
-            base_exists=$?
-
-            # Restore head version
-            rm -rf "$folder"
-            mv "${folder}.head-backup" "$folder"
-
-            base_flag=()
-            if [[ $base_exists -eq 0 ]]; then
-              # The base version was successfully checked out — save it
-              # alongside the head in the repo root so both compile identically
-              base_folder="${folder}.base"
-              git checkout "$BASE_SHA" -- "$folder" 2>/dev/null
-              mv "$folder" "$base_folder"
-              git checkout HEAD -- "$folder" 2>/dev/null
-              base_flag=(--base "$base_folder")
-            fi
-
+            # Let the CLI check out the base revision itself, into an isolated
+            # git worktree scoped via sparse-checkout to just this folder — this
+            # replaces a fragile hand-rolled checkout/restore dance that left
+            # the repo's index inconsistent with the working tree for the
+            # remainder of the job (see eng/tools/typespec-breaking-change
+            # git-checkout.ts for the shared, unit-tested implementation).
             node eng/tools/typespec-breaking-change/src/cli/cli.js "$folder" \
-              "${base_flag[@]}" \
+              --base-ref "$BASE_SHA" \
               --phase same-version \
-              --report-title "TypeSpec Versioning Change Analysis" \
+              --report-title "Unversioned Change Analysis" \
+              --omit-title \
               --json-output "$folder_json" \
               --markdown-output "$folder_md" \
               "${annotations_flag[@]}" \
               --fail-on-breaking || has_errors=1
-
-            # Clean up base copy
-            if [[ -d "${folder}.base" ]]; then
-              rm -rf "${folder}.base"
-            fi
 
             if [[ -f "$folder_md" ]]; then
               cat "$folder_md" >> "versioning-change-comment.md"
@@ -150,20 +137,20 @@ jobs:
             exit 1
           fi
 
-      - name: Post PR comment
-        if: always() && hashFiles('versioning-change-comment.md') != ''
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          # Delete previous comment from this workflow if it exists
-          COMMENT_ID=$(gh api "repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments" \
-            --jq '.[] | select(.user.login == "github-actions[bot]" and (.body | startswith("## TypeSpec Versioning"))) | .id' \
-            2>/dev/null | head -1)
-          if [[ -n "$COMMENT_ID" ]]; then
-            gh api -X DELETE "repos/${{ github.repository }}/issues/comments/$COMMENT_ID" 2>/dev/null || true
-          fi
-          gh pr comment "${{ github.event.pull_request.number }}" --body-file versioning-change-comment.md
+      # The PR comment is no longer posted from here. A separate workflow
+      # (typespec-breaking-change-comment.yaml), triggered by workflow_run of
+      # this workflow completing, downloads this artifact (by head_sha) along
+      # with the TypeSpec Breaking Change workflow's equivalent artifact, and
+      # posts/updates ONE combined comment for both phases. This avoids two
+      # separate bot comments per PR and keeps comment-posting decoupled from
+      # this job's own success/failure.
+      - name: Upload PR comment markdown artifact
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: typespec-versioning-change-comment-md
+          path: versioning-change-comment.md
+          if-no-files-found: ignore
 
       # Upload artifact for 'VersioningReviewRequired' label
       - if: |

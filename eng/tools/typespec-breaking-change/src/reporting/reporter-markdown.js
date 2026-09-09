@@ -10,13 +10,20 @@ export function renderMarkdownSummary(result, options) {
     const suppressed = result.findings.filter((f) => f.suppressed);
     const lines = [];
     const title = options?.reportTitle ?? "Breaking Change Analysis";
-    // Header
-    lines.push(`## ${title}`);
-    lines.push("");
-    // Spec path context
+    // Header. Skippable via omitTitle for callers (e.g. a CI workflow looping
+    // over several impacted folders in the same phase) that print the H2
+    // title once themselves, so it isn't repeated per folder in the combined
+    // PR comment.
+    if (!options?.omitTitle) {
+        lines.push(`## ${title}`);
+        lines.push("");
+    }
+    // Spec path context. Rendered as an H3 subheading (not another H2) so
+    // multiple folders analyzed under the same phase/title read as
+    // subsections of one report instead of separate top-level reports.
     if (options?.specPaths && options.specPaths.length > 0) {
         for (const sp of options.specPaths) {
-            lines.push(`**Spec:** \`${sp}\``);
+            lines.push(`### ${sp}`);
         }
         lines.push("");
     }
@@ -31,10 +38,10 @@ export function renderMarkdownSummary(result, options) {
         lines.push(`✅ **${formatNoFindingsMessage(result.summary.phase, result.summary.comparisonsPerformed)}**`);
     }
     else if (errors.length === 0) {
-        lines.push(`⚠️ **${suppressed.length} new suppressed breaking change${suppressed.length === 1 ? "" : "s"}** — review required`);
+        lines.push(`⚠️ **${suppressed.length} suppressed ${formatFindingNoun(result.summary.phase, suppressed.length)} ${suppressed.length === 1 ? "requires" : "require"} review**`);
     }
     else {
-        lines.push(`❌ **${errors.length} unsuppressed breaking change${errors.length === 1 ? "" : "s"} detected**`);
+        lines.push(`❌ **${errors.length} ${formatFindingNoun(result.summary.phase, errors.length)} must be resolved**`);
     }
     // Summary stats
     const parts = [];
@@ -45,43 +52,43 @@ export function renderMarkdownSummary(result, options) {
     parts.push(`${result.summary.comparisonsPerformed} version pair${result.summary.comparisonsPerformed === 1 ? "" : "s"} compared`);
     lines.push("");
     lines.push(parts.join(" · "));
-    // Unsuppressed breaking changes — grouped by version pair
+    if (errors.length > 0 || suppressed.length > 0) {
+        lines.push("");
+        lines.push(formatPolicyMessage(result.summary.phase));
+    }
+    // Unsuppressed findings
     if (errors.length > 0) {
         lines.push("");
-        lines.push("### Unsuppressed Breaking Changes");
-        const grouped = groupByVersionPair(errors);
-        let suppressionIndex = 0;
+        lines.push(`### ${formatActionHeading(result.summary.phase)}`);
+        lines.push("");
+        lines.push("The suggested fix is guidance only and has **not** been applied in this pull request.");
+        lines.push("");
+        lines.push("| Change | Target | Source | Version comparison | Suggested Fix |");
+        lines.push("|--------|--------|--------|--------------------|--------------------------------|");
         const suppressionBlocks = [];
-        for (const [versionLabel, findings] of grouped) {
-            lines.push("");
-            lines.push(`#### ${versionLabel}`);
-            lines.push("");
-            lines.push("| Kind | Identity | Suppression |");
-            lines.push("|------|----------|-------------|");
-            for (const finding of findings) {
-                suppressionIndex++;
-                const kind = fmtKindLink(finding.diff.kind, finding.phase, options);
-                const identity = fmtIdentityLink(finding, options);
-                const hint = formatSuppressionHint(finding);
-                lines.push(`| ${kind} | ${identity} | \`${esc(hint)}\` |`);
-                const diffSnippet = formatSuppressionDiff(finding);
-                const element = finding.diff.identity.element;
-                const shortElement = element.split(".").pop() ?? element;
-                suppressionBlocks.push({
-                    index: suppressionIndex,
-                    diff: diffSnippet,
-                    label: `${finding.diff.kind} (${shortElement})`,
-                });
-            }
+        for (const finding of errors) {
+            const kind = fmtKindLink(finding.diff.kind, finding.phase, options);
+            const target = fmtTarget(finding);
+            const source = fmtSourceLink(finding, options);
+            const version = esc(formatFindingVersionPair(finding));
+            const hint = formatSuppressionHint(finding);
+            lines.push(`| ${kind} | ${target} | ${source} | ${version} | Add \`${esc(hint)}\` only if unavoidable |`);
+            suppressionBlocks.push({
+                diff: formatSuppressionDiff(finding),
+                identity: finding.diff.identity.element,
+                label: `${finding.diff.kind} (${formatShortElement(finding.diff.identity.element)})`,
+            });
         }
-        // Render diff blocks below the tables
         if (suppressionBlocks.length > 0) {
             lines.push("");
             lines.push("<details>");
-            lines.push("<summary>Suppression examples</summary>");
+            lines.push("<summary>Suggested fix examples and full identities (not yet applied)</summary>");
             lines.push("");
             for (const block of suppressionBlocks) {
                 lines.push(`**${block.label}:**`);
+                lines.push("");
+                lines.push(`Full target: \`${esc(block.identity)}\``);
+                lines.push("");
                 lines.push("```diff");
                 lines.push(block.diff);
                 lines.push("```");
@@ -90,26 +97,22 @@ export function renderMarkdownSummary(result, options) {
             lines.push("</details>");
         }
     }
-    // New suppressed breaking changes — grouped by version pair
+    // Suppressed findings
     if (suppressed.length > 0) {
         lines.push("");
-        lines.push("### New Suppressed Breaking Changes");
+        lines.push(`### Suppressed ${formatFindingTitle(result.summary.phase)} Requiring Review`);
         lines.push("");
-        lines.push("The following breaking changes have suppression decorators.");
-        lines.push("Reviewers should verify these changes are intentional and properly justified.");
-        const grouped = groupByVersionPair(suppressed);
-        for (const [versionLabel, findings] of grouped) {
-            lines.push("");
-            lines.push(`#### ${versionLabel}`);
-            lines.push("");
-            lines.push("| Kind | Identity | Reason |");
-            lines.push("|------|----------|--------|");
-            for (const finding of findings) {
-                const kind = fmtKindLink(finding.diff.kind, finding.phase, options);
-                const identity = fmtIdentityLink(finding, options);
-                const reason = esc(finding.suppressionReason ?? "—");
-                lines.push(`| ${kind} | ${identity} | ${reason} |`);
-            }
+        lines.push("A suppression decorator does not make an API change acceptable. Reviewers must confirm that a non-breaking design was attempted, the change is unavoidable, and the justification is specific.");
+        lines.push("");
+        lines.push("| Change | Target | Source | Version comparison | Justification in PR |");
+        lines.push("|--------|--------|--------|--------------------|---------------------|");
+        for (const finding of suppressed) {
+            const kind = fmtKindLink(finding.diff.kind, finding.phase, options);
+            const target = fmtTarget(finding);
+            const source = fmtSourceLink(finding, options);
+            const version = esc(formatFindingVersionPair(finding));
+            const reason = esc(finding.suppressionReason ?? "—");
+            lines.push(`| ${kind} | ${target} | ${source} | ${version} | ${reason} |`);
         }
     }
     if (result.summary.versionComparisons.length > 0) {
@@ -120,7 +123,7 @@ export function renderMarkdownSummary(result, options) {
         lines.push("| Service | Version Pair | Phase | Result |");
         lines.push("|---------|-------------|-------|--------|");
         for (const comparison of result.summary.versionComparisons) {
-            lines.push(`| ${esc(comparison.serviceName)} | ${esc(formatComparisonPair(comparison.phase, comparison.baseVersion, comparison.headVersion))} | ${esc(comparison.phase)} | ${formatComparisonResult(comparison.findingCount)} |`);
+            lines.push(`| ${esc(comparison.serviceName)} | ${esc(formatComparisonPair(comparison.phase, comparison.baseVersion, comparison.headVersion))} | ${formatPhaseLabel(comparison.phase)} | ${formatComparisonResult(comparison.findingCount)} |`);
         }
         lines.push("");
         lines.push("</details>");
@@ -146,15 +149,24 @@ function fmtKindLink(kind, phase, options) {
         : "#phase-b-detailed-reference";
     return `[\`${esc(kind)}\`](${baseUrl}${anchor})`;
 }
-/** Format the identity as a link to the source file, or plain text if no link available. */
-function fmtIdentityLink(finding, options) {
+/** Format the terminal identity element for a compact target column. */
+function fmtTarget(finding) {
     const element = finding.diff.identity.element;
+    const shortElement = formatShortElement(element);
+    return `\`${esc(shortElement)}\``;
+}
+/** Format a compact source link while retaining the full path in the URL. */
+function fmtSourceLink(finding, options) {
     const resolvedLocation = resolveFindingLocation(finding);
-    const url = buildSourceUrl(resolvedLocation?.location, options);
+    const location = resolvedLocation?.location;
+    const url = buildSourceUrl(location, options);
     if (url) {
-        return `[\`${esc(element)}\`](${url})`;
+        const fileName = getFileName(location.file.path);
+        const line = getLineNumber(location);
+        const label = line > 0 ? `${fileName}#L${line}` : fileName;
+        return `[\`${esc(label)}\`](${url})`;
     }
-    return `\`${esc(element)}\``;
+    return "—";
 }
 /** Build a GitHub source URL from a SourceLocation. */
 function buildSourceUrl(location, options) {
@@ -190,37 +202,38 @@ function getLineNumber(location) {
     const text = location.file.text.substring(0, location.pos);
     return text.split("\n").length;
 }
-function fmtVer(finding) {
-    return `${finding.versionPair.baseVersion} → ${finding.versionPair.headVersion}`;
-}
 function fmtMs(ms) {
     return ms >= 1000 ? `${(ms / 1000).toFixed(1)}s` : `${ms}ms`;
 }
 function esc(value) {
     return value.replace(/\|/g, "\\|").replace(/\r?\n/g, " ");
 }
-function escHtml(value) {
-    return value
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;");
+function getFileName(filePath) {
+    return filePath.replace(/\\/g, "/").split("/").pop() ?? filePath;
 }
-/** Group findings by version pair, returning label → findings entries. */
-function groupByVersionPair(findings) {
-    const groups = new Map();
-    for (const f of findings) {
-        const label = f.phase === "same-version"
-            ? `${f.versionPair.headVersion} (base → head)`
-            : `${f.versionPair.baseVersion} → ${f.versionPair.headVersion}`;
-        let list = groups.get(label);
-        if (!list) {
-            list = [];
-            groups.set(label, list);
-        }
-        list.push(f);
+function formatShortElement(element) {
+    return element.split(".").pop() ?? element;
+}
+function formatFindingVersionPair(finding) {
+    return formatComparisonPair(finding.phase, finding.versionPair.baseVersion, finding.versionPair.headVersion);
+}
+function formatFindingNoun(phase, count) {
+    const noun = phase === "same-version" ? "unversioned change" : "breaking change";
+    return `${noun}${count === 1 ? "" : "s"}`;
+}
+function formatFindingTitle(phase) {
+    return phase === "same-version" ? "Unversioned Changes" : "Breaking Changes";
+}
+function formatActionHeading(phase) {
+    return phase === "same-version"
+        ? "Unversioned Changes Requiring Action"
+        : "Breaking Changes Requiring Action";
+}
+function formatPolicyMessage(phase) {
+    if (phase === "same-version") {
+        return "**Existing API versions must remain immutable.** Move API changes to a new version instead of changing an existing version. An approval decorator should be used only for an exceptional, explicitly reviewed correction.";
     }
-    return [...groups.entries()];
+    return "**Breaking API changes must be avoided and should be rare.** The service team must first attempt to deliver new functionality without breaking existing API consumers. Use an approval decorator only when the change is unavoidable and has explicit reviewer approval.";
 }
 function formatNoFindingsMessage(phase, comparisonsPerformed) {
     const pairLabel = `${comparisonsPerformed} version pair${comparisonsPerformed === 1 ? "" : "s"} compared`;
@@ -244,4 +257,7 @@ function formatComparisonResult(findingCount) {
         ? "✅ No changes"
         : `❌ ${findingCount} finding${findingCount === 1 ? "" : "s"}`;
 }
-//# sourceMappingURL=reporter-markdown.js.map
+/** Format a comparison phase as a human-readable label for the Version Comparisons table. */
+function formatPhaseLabel(phase) {
+    return phase === "same-version" ? "Same-version" : "Cross-version";
+}
