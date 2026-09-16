@@ -11,8 +11,8 @@ steps:
     parameters:
       NodeVersion: ${{ parameters.NodeVersion }}
 
-  - script: npm install --no-package-lock
-    displayName: npm install --no-package-lock
+  - script: npm ci
+    displayName: npm ci
     workingDirectory: ${{ parameters.WorkingDirectory }}
 
   - script: npm ls -a || true
