@@ -38,7 +38,7 @@ alias VmssPublicIPAddressListOps = Azure.ResourceManager.Legacy.RoutedOperations
 
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-interface-requires-decorator" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
 #suppress "@azure-tools/typespec-azure-core/casing-style" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
-#suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "needed for foreign api version"
+#suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "The fixed VMSS API version is required for backward compatibility."
 @Azure.Core.Legacy.overrideApiVersion("2018-10-01")
 @featureFile(Features.vmssPublicIPAddress)
 interface VmssPublicIPAddressesOperationGroup {
@@ -66,7 +66,7 @@ interface VmssPublicIPAddressesOperationGroup {
   >;
 }
 
-#suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "needed for foreign api version"
+#suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "The fixed VMSS API version is required for backward compatibility."
 @featureFile(Features.vmssPublicIPAddress)
 @Azure.Core.Legacy.overrideApiVersion("2018-10-01")
 @armResourceOperations(#{ allowStaticRoutes: true, omitTags: true })

@@ -28,7 +28,7 @@ alias NetworkInterfaceIPConfigurationOps = Azure.ResourceManager.Legacy.RoutedOp
   }
 >;
 
-#suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "needed for foreign api version"
+#suppress "@azure-tools/typespec-azure-core/no-legacy-usage" "The fixed VMSS API version is required for backward compatibility."
 @featureFile(Features.vmssNetworkConfiguration)
 @Azure.Core.Legacy.overrideApiVersion("2018-10-01")
 @armResourceOperations(#{ allowStaticRoutes: true, omitTags: true })
