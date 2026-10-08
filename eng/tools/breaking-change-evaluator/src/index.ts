@@ -1,4 +1,5 @@
 import { prepareTool } from "./prepare.ts";
+import { evaluate } from "./evaluate.ts";
 
 function option(args: string[], name: string): string | undefined {
   const index = args.indexOf(name);
@@ -21,6 +22,22 @@ export async function main(args: string[]): Promise<number> {
       console.log(JSON.stringify(prepared, null, 2));
       return 0;
     }
+    if (args[0] === "evaluate") {
+      const pr = option(args, "--pr");
+      const jsonOutput = option(args, "--json-output");
+      const markdownOutput = option(args, "--markdown-output");
+      if (!pr || !jsonOutput || !markdownOutput) {
+        usage();
+        return 2;
+      }
+      return await evaluate({
+        pr,
+        jsonOutput,
+        markdownOutput,
+        toolRevision: option(args, "--tool-revision"),
+        cacheDir: option(args, "--cache-dir"),
+      });
+    }
     usage();
     return 2;
   } catch (error) {
@@ -30,6 +47,7 @@ export async function main(args: string[]): Promise<number> {
 }
 
 export * from "./correlation.ts";
+export * from "./evaluate.ts";
 export * from "./github.ts";
 export * from "./matcher.ts";
 export * from "./oad.ts";

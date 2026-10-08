@@ -33,7 +33,39 @@
       },
       "additionalProperties": false
     },
-    "provenance": { "type": "object" },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "evaluator": {
+          "type": "object",
+          "required": ["commit"],
+          "properties": {
+            "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$" }
+          },
+          "additionalProperties": false
+        },
+        "pr": {
+          "type": "object",
+          "required": ["url", "headSha", "baseSha"],
+          "properties": {
+            "url": { "type": "string", "format": "uri" },
+            "headSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+            "baseSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" }
+          },
+          "additionalProperties": false
+        },
+        "tool": {
+          "type": "object",
+          "required": ["sourceSha", "artifactDigest"],
+          "properties": {
+            "sourceSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+            "artifactDigest": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
     "dimensions": { "type": "array", "items": { "type": "object" } },
     "oadFindings": { "type": "array", "items": { "type": "object" } },
     "typeSpecProjects": { "type": "array", "items": { "type": "object" } },

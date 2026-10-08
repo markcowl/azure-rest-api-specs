@@ -170,6 +170,7 @@ export interface EvaluationReport {
   generatedAt: string;
   qualification: Qualification;
   provenance: {
+    evaluator?: { commit: string };
     pr?: { url: string; headSha: string; baseSha: string };
     tool?: { sourceSha: string; artifactDigest: string };
   };
