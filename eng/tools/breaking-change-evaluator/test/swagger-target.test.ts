@@ -1,6 +1,6 @@
 import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 import {
   buildSchemaUsageGraph,
@@ -78,6 +78,37 @@ describe("Swagger target resolution", () => {
 
     await expect(resolveOadTargets(finding, checkout)).resolves.toEqual([
       expect.objectContaining({ propertyPath: ["parent", "name"] }),
+    ]);
+  });
+
+  it("recovers a property name when OAD identifies only the properties container", async () => {
+    const checkout = await mkdtemp(join(tmpdir(), "oad-property-container-"));
+    temporaryDirectories.push(checkout);
+    const relativePath = "specification/widgets/data-plane/Widgets/stable/2026-01-01/openapi.json";
+    const filePath = join(checkout, ...relativePath.split("/"));
+    await mkdir(dirname(filePath), { recursive: true });
+    await writeFile(
+      filePath,
+      JSON.stringify({
+        swagger: "2.0",
+        paths: {},
+        definitions: { Widget: { type: "object", properties: {} } },
+      }),
+    );
+    const finding: OadFinding = {
+      occurrenceId: "A-oad-0",
+      phase: "A",
+      id: "1045",
+      rule: "AddedOptionalProperty",
+      severity: "Error",
+      message: "The new version has a new optional property 'crossPoolScaling' that was not found.",
+      newJsonPath: "definitions.Widget.properties",
+      comparison: { phase: "A", oldPath: relativePath, newPath: relativePath },
+      evidence: "{}",
+    };
+
+    await expect(resolveOadTargets(finding, checkout)).resolves.toEqual([
+      expect.objectContaining({ propertyPath: ["crossPoolScaling"] }),
     ]);
   });
 

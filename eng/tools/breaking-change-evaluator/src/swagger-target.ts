@@ -133,6 +133,10 @@ function inferDirection(rule: string): "request" | "response" | undefined {
   return undefined;
 }
 
+function propertyNameFromMessage(message: string): string | undefined {
+  return message.match(/\bproperty '([^']+)'/)?.[1];
+}
+
 export async function resolveOadTargets(
   finding: OadFinding,
   checkout: string,
@@ -157,12 +161,16 @@ export async function resolveOadTargets(
       ? segments[definitionIndex + 1]
       : undefined;
   const propertyIndex = segments.indexOf("properties");
-  const propertyPath =
+  let propertyPath =
     propertyIndex >= 0
       ? segments
           .slice(propertyIndex + 1)
           .filter((segment) => segment !== "properties" && segment !== "schema")
       : undefined;
+  if (propertyPath?.length === 0) {
+    const propertyName = propertyNameFromMessage(finding.message);
+    propertyPath = propertyName ? [propertyName] : propertyPath;
+  }
   const pathIndex = segments.findIndex(
     (segment) => segment === "paths" || segment === "x-ms-paths",
   );
