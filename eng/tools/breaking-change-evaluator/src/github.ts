@@ -32,9 +32,12 @@ export interface QualifiedPr {
 }
 
 interface WorkflowRunLike {
+  id: number;
   name?: string | null;
   head_sha: string;
   status: string | null;
+  conclusion?: string | null;
+  html_url?: string;
   updated_at: string;
   event?: string;
   pull_requests?:
@@ -43,6 +46,13 @@ interface WorkflowRunLike {
         base?: { sha?: string | null } | null;
       }[]
     | null;
+}
+
+interface WorkflowArtifactLike {
+  id: number;
+  name: string;
+  expired: boolean;
+  updated_at?: string | null;
 }
 
 export function selectLatestCompletedRun<T extends WorkflowRunLike>(
@@ -248,6 +258,10 @@ export async function qualifyPullRequest(
       );
       continue;
     }
+    if (!run.html_url) {
+      reasons.push("evidence-incomplete");
+      continue;
+    }
     let logs: string;
     try {
       const response = await octokit.rest.actions.downloadWorkflowRunLogs({
@@ -267,12 +281,12 @@ export async function qualifyPullRequest(
       reasons.push("run-association-unverified");
       continue;
     }
-    const artifacts = await octokit.paginate(octokit.rest.actions.listWorkflowRunArtifacts, {
+    const artifacts = (await octokit.paginate(octokit.rest.actions.listWorkflowRunArtifacts, {
       owner: reference.owner,
       repo: reference.repo,
       run_id: run.id,
       per_page: 100,
-    });
+    })) as WorkflowArtifactLike[];
     const summaryArtifact = artifacts
       .filter((artifact) => artifact.name === "job-summary" && !artifact.expired)
       .sort(
@@ -304,7 +318,7 @@ export async function qualifyPullRequest(
         name: run.name ?? workflowNames[phase],
         headSha: run.head_sha,
         status: run.status ?? "completed",
-        conclusion: run.conclusion,
+        conclusion: run.conclusion ?? null,
         htmlUrl: run.html_url,
         logDigest: parsed.digest,
         summaryDigest: summaryValidation.digest,
