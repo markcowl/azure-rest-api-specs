@@ -29,10 +29,14 @@ export async function main(args: string[]): Promise<number> {
   }
 }
 
+export * from "./correlation.ts";
 export * from "./github.ts";
+export * from "./matcher.ts";
 export * from "./oad.ts";
 export * from "./prepare.ts";
 export * from "./process.ts";
 export * from "./projects.ts";
+export * from "./report.ts";
 export * from "./schema.ts";
+export * from "./swagger-target.ts";
 export * from "./types.ts";

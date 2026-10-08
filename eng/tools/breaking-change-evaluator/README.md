@@ -11,8 +11,8 @@ breaking-change-evaluator evaluate --pr <url|owner/repo#n> --json-output <file> 
 ```
 
 `prepare` is the only command that can clone, install, build, and cache the pinned TypeSpec
-prototype. `evaluate` remains unavailable and returns usage exit code `2`; matching and reporting
-are not reachable in this stage.
+prototype. `evaluate` remains unavailable and returns usage exit code `2`; end-to-end checkout
+and orchestration are not reachable in this stage.
 
 ```bash
 pnpm exec breaking-change-evaluator prepare \
@@ -24,3 +24,8 @@ reinstalls the pinned workspace dependencies, applies a versioned compatibility 
 prototype's compiled TypeSpec entry-point resolution, and verifies the final cached executable
 before publishing `current.json`. Cache reuse requires matching source and artifact digests,
 cache-format and compatibility markers, and a successful runtime check.
+
+The aggregation contract is
+[`breaking-change-evaluator.schema.json`](breaking-change-evaluator.schema.json). Complete reports
+separate exact, review-required probable, intentional Swagger-only, missed-equivalent,
+TypeSpec-only, and ambiguous findings. Incomplete reports suppress rollups and recall rates.

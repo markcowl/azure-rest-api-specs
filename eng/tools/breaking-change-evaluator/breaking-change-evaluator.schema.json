@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azure/azure-rest-api-specs/eng/tools/breaking-change-evaluator/breaking-change-evaluator.schema.json",
+  "title": "Breaking-change evaluator report",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "status",
+    "complete",
+    "generatedAt",
+    "qualification",
+    "provenance",
+    "dimensions",
+    "oadFindings",
+    "typeSpecProjects",
+    "matches",
+    "errors"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "status": {
+      "enum": ["evaluated", "partial", "not-qualified", "failed"]
+    },
+    "complete": { "type": "boolean" },
+    "generatedAt": { "type": "string", "format": "date-time" },
+    "qualification": {
+      "type": "object",
+      "required": ["qualified", "reasonCodes", "evidence"],
+      "properties": {
+        "qualified": { "type": "boolean" },
+        "reasonCodes": { "type": "array", "items": { "type": "string" } },
+        "evidence": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+    "provenance": { "type": "object" },
+    "dimensions": { "type": "array", "items": { "type": "object" } },
+    "oadFindings": { "type": "array", "items": { "type": "object" } },
+    "typeSpecProjects": { "type": "array", "items": { "type": "object" } },
+    "matches": { "type": "array", "items": { "type": "object" } },
+    "rollup": { "type": "object" },
+    "errors": { "type": "array", "items": { "type": "string" } }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "complete": { "const": false } } },
+      "then": { "not": { "required": ["rollup"] } }
+    },
+    {
+      "if": { "properties": { "status": { "const": "evaluated" } } },
+      "then": {
+        "properties": { "complete": { "const": true } },
+        "required": ["rollup"]
+      }
+    }
+  ],
+  "additionalProperties": false
+}
