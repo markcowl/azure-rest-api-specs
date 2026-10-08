@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
+    "@azure-tools/breaking-change-evaluator": "workspace:*",
     "@azure-tools/lint-diff": "workspace:*",
     "@azure-tools/oav-runner": "workspace:*",
     "@azure-tools/release-plan": "workspace:*",

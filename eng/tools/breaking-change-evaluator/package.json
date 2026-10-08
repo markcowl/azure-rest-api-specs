@@ -1,0 +1,28 @@
+{
+  "name": "@azure-tools/breaking-change-evaluator",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "bin": {
+    "breaking-change-evaluator": "cmd/breaking-change-evaluator.js"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "check": "pnpm run build && pnpm run lint && pnpm run format:check && pnpm run test:ci",
+    "format": "oxfmt . --write",
+    "format:check": "oxfmt . --check",
+    "lint": "oxlint .",
+    "test": "vitest",
+    "test:ci": "vitest run --coverage --reporter=verbose"
+  },
+  "engines": {
+    "node": ">=24.14.1"
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:"
+  },
+  "version": "0.0.0"
+}
