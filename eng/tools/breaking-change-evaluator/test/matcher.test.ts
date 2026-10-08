@@ -114,6 +114,50 @@ describe("finding matching", () => {
     expect(matches[0].candidates[0].score).toBeGreaterThanOrEqual(9);
   });
 
+  it("normalizes structural TypeSpec property wrappers for probable matching", () => {
+    const addedOptional: OadFinding = {
+      ...oad,
+      occurrenceId: "oad-property",
+      phase: "A",
+      rule: "AddedOptionalProperty",
+    };
+    const targets = new Map([
+      [
+        addedOptional.occurrenceId,
+        [
+          {
+            phase: "A" as const,
+            method: "PATCH",
+            route: "/widgets/{}",
+            direction: "request" as const,
+            propertyPath: ["crossPoolScaling"],
+            schema: "WidgetPatchProperties",
+            baseVersion: "2026-01-01",
+            headVersion: "2026-01-01",
+            evidence: [],
+          },
+        ],
+      ],
+    ]);
+    const finding: TypeSpecFinding = {
+      ...requestTsp("tsp-property", "/widgets/{name}"),
+      kind: "RequestPropertyAdded",
+      phase: "same-version",
+      operation: { method: "PATCH", path: "/widgets/{name}" },
+      element: "body.properties.properties.crossPoolScaling",
+      component: "request",
+      versionPair: { baseVersion: "2026-01-01", headVersion: "2026-01-01" },
+    };
+
+    const matches = matchFindings([addedOptional], targets, [finding]);
+    expect(matches[0].category).toBe("probable-review");
+    expect(matches[0].selectedTypeSpecOccurrenceIds).toEqual(["tsp-property"]);
+    expect(matches[0].candidates[0].score).toBe(11);
+    expect(matches[0].candidates[0].exactIdentity).toEqual(
+      expect.arrayContaining(["method", "route", "direction", "property"]),
+    );
+  });
+
   it("does not exact-match the same leaf under a different nested property", () => {
     const nestedTarget = { ...target, propertyPath: ["parent", "name"] };
     const matches = matchFindings([oad], new Map([["oad-1", [nestedTarget]]]), [

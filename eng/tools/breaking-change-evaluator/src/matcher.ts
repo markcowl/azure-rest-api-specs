@@ -10,6 +10,11 @@ import type {
 
 const probableThreshold = 9;
 
+function propertyPath(value: string | string[] | undefined): string[] {
+  const segments = Array.isArray(value) ? value : value?.split(".");
+  return segments?.filter((segment) => !["body", "properties", "schema"].includes(segment)) ?? [];
+}
+
 function typeSpecTarget(finding: TypeSpecFinding): CanonicalTarget {
   return {
     project: finding.project,
@@ -60,6 +65,10 @@ function score(oad: CanonicalTarget, tsp: CanonicalTarget): MatchCandidate {
   };
   const equal = (left?: string, right?: string) =>
     Boolean(left && right && left.toLowerCase() === right.toLowerCase());
+  const oadPropertyPath = propertyPath(oad.propertyPath);
+  const typeSpecPropertyPath = propertyPath(tsp.element);
+  const oadProperty = oadPropertyPath.join(".");
+  const typeSpecProperty = typeSpecPropertyPath.join(".");
   for (const [name, left, right] of [
     ["method", oad.method, tsp.method],
     ["route", oad.route, tsp.route],
@@ -67,7 +76,7 @@ function score(oad: CanonicalTarget, tsp: CanonicalTarget): MatchCandidate {
     ["status", oad.statusCode, tsp.statusCode],
     ["schema", oad.schema, tsp.schema],
     ["declaration", oad.declaration, tsp.declaration],
-    ["property", oad.propertyPath?.join("."), tsp.element],
+    ["property", oadProperty, typeSpecProperty],
   ] as const) {
     if (equal(left, right)) exactIdentity.push(name);
   }
@@ -81,8 +90,8 @@ function score(oad: CanonicalTarget, tsp: CanonicalTarget): MatchCandidate {
     4,
     "schema/declaration",
   );
-  add(equal(oad.propertyPath?.join("."), tsp.element), 4, "full property path");
-  add(equal(oad.propertyPath?.at(-1), tsp.element), 2, "leaf property");
+  add(equal(oadProperty, typeSpecProperty), 4, "full property path");
+  add(equal(oadPropertyPath.at(-1), typeSpecPropertyPath.at(-1)), 2, "leaf property");
   add(equal(oad.operationId, tsp.operationId), 3, "operation identity");
   add(equal(oad.direction, tsp.direction), 2, "direction");
   add(equal(oad.statusCode, tsp.statusCode), 2, "response status");
