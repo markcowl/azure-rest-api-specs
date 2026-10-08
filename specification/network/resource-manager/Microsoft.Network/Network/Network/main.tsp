@@ -118,6 +118,9 @@ import "./VirtualNetworkTap.tsp";
 import "./VirtualRouter.tsp";
 import "./VirtualRouterPeering.tsp";
 import "./VirtualWAN.tsp";
+import "./VmssNetworkInterface.tsp";
+import "./VmssNetworkInterfaceIpConfiguration.tsp";
+import "./VmssPublicIPAddress.tsp";
 import "./VpnSite.tsp";
 import "./VpnSiteLink.tsp";
 import "./VpnServerConfiguration.tsp";
@@ -153,7 +156,8 @@ using TypeSpec.Versioning;
 /**
  * APIs to manage Microsoft Azure network resources.
  */
-@Azure.ResourceManager.Legacy.features(Features)
+#suppress "@azure-tools/typespec-azure-resource-manager/arm-feature-file-usage-discourage" "Need for documentation support"
+@featureFiles(Features)
 @armProviderNamespace
 @service(#{ title: "WebApplicationFirewallManagement" })
 @versioned(Versions)
@@ -182,7 +186,6 @@ enum Versions {
   /**
    * The 2026-01-01 API version.
    */
-  @useDependency(Common.Versions.v2026_01_01)
   v2026_01_01: "2026-01-01",
 }
 
@@ -227,6 +230,9 @@ enum Features {
   vmssPublicIPAddress,
   #suppress "@azure-tools/typespec-azure-core/documentation-required"
   firstPartyServiceTag,
+
+  /** Authentication policy resource type for managing identity integration policies. */
+  authenticationPolicy,
 }
 
 @featureFile(Features.networkingOperations)
