@@ -9,6 +9,8 @@ export function main(_args: string[]): Promise<number> {
   return Promise.resolve(2);
 }
 
+export * from "./github.ts";
+export * from "./oad.ts";
 export * from "./process.ts";
 export * from "./schema.ts";
 export * from "./types.ts";
