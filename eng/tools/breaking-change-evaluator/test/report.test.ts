@@ -169,8 +169,9 @@ describe("report aggregation", () => {
           typeSpecOnly: 0,
           ambiguous: 0,
           errors: 0,
-          exactRecall: 1,
-          probableInclusiveRecall: 1,
+          exactRecall: undefined,
+          probableInclusiveRecall: undefined,
+          outcome: "concordant-zero",
         },
         B: {
           oadTotal: 5,
@@ -185,6 +186,7 @@ describe("report aggregation", () => {
           errors: 0,
           exactRecall: 0.25,
           probableInclusiveRecall: 0.5,
+          outcome: "compared",
         },
       },
     });
@@ -261,6 +263,7 @@ describe("report aggregation", () => {
       exact: 1,
       probableReview: 0,
       typeSpecOnly: 0,
+      outcome: "compared",
     });
     expect(rollup.byPhase.B).toMatchObject({
       oadTotal: 1,
@@ -268,6 +271,7 @@ describe("report aggregation", () => {
       exact: 0,
       probableReview: 1,
       typeSpecOnly: 0,
+      outcome: "compared",
     });
   });
 
@@ -299,6 +303,38 @@ describe("report aggregation", () => {
     expect(markdown).toContain(
       "[Breaking Change (Cross-Version) run 200](https://github.com/Azure/azure-rest-api-specs/actions/runs/200)",
     );
+    expect(markdown).toContain("| A |");
+    expect(markdown).toContain("| `same-version` | concordant-zero |");
+    expect(markdown).toContain("| B |");
+    expect(markdown).toContain("| `cross-version` | concordant-zero |");
+    expect(markdown).toContain("| N/A | N/A |");
+  });
+
+  it("calls out TypeSpec-only divergence when OAD is zero", () => {
+    const value = report();
+    value.typeSpecProjects = [
+      {
+        project: "specification/foo/Foo",
+        status: "complete",
+        findings: [
+          {
+            occurrenceId: "tsp-b",
+            project: "specification/foo/Foo",
+            kind: "OperationAdded",
+            rule: "operation-added",
+            phase: "cross-version",
+            severity: "error",
+            message: "added",
+            versionPair: { baseVersion: "v1", headVersion: "v2" },
+          },
+        ],
+      },
+    ];
+    value.rollup = computeRollup([], value.typeSpecProjects[0].findings, []);
+
+    const markdown = renderMarkdown(value);
+    expect(value.rollup.byPhase.B.outcome).toBe("typespec-only-divergence");
+    expect(markdown).toContain("| `cross-version` | typespec-only-divergence |");
   });
 
   it("requires exactly one category per OAD occurrence", () => {
@@ -332,7 +368,7 @@ describe("report aggregation", () => {
     const value = report();
     value.rollup!.probableReview = 1;
     expect(renderMarkdown(value)).toContain("Probable (review required)");
-    expect(renderMarkdown(value)).toContain("Exact recall");
+    expect(renderMarkdown(value)).toContain("Exact OAD coverage");
   });
 
   it("renders review evidence and TypeSpec-only finding details", () => {

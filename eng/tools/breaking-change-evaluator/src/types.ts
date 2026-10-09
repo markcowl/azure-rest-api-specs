@@ -189,8 +189,14 @@ export interface RollupMetrics {
   probableInclusiveRecall?: number;
 }
 
+export type PhaseComparisonOutcome = "compared" | "concordant-zero" | "typespec-only-divergence";
+
+export interface PhaseRollup extends RollupMetrics {
+  outcome: PhaseComparisonOutcome;
+}
+
 export interface Rollup extends RollupMetrics {
-  byPhase: Record<Phase, RollupMetrics>;
+  byPhase: Record<Phase, PhaseRollup>;
 }
 
 export interface ProjectResult {

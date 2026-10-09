@@ -8,6 +8,7 @@ import type {
   MatchTrace,
   OadFinding,
   Phase,
+  PhaseRollup,
   Rollup,
   RollupMetrics,
   SourceReference,
@@ -41,8 +42,8 @@ function computeRollupMetrics(
     typeSpecOnly: typeSpecFindings.filter((finding) => !selected.has(finding.occurrenceId)).length,
     ambiguous: count("ambiguous"),
     errors: count("errors"),
-    exactRecall: comparable === 0 ? 1 : exact / comparable,
-    probableInclusiveRecall: comparable === 0 ? 1 : (exact + probableReview) / comparable,
+    exactRecall: comparable === 0 ? undefined : exact / comparable,
+    probableInclusiveRecall: comparable === 0 ? undefined : (exact + probableReview) / comparable,
   };
 }
 
@@ -59,9 +60,16 @@ export function computeRollup(
         (finding) => finding.phase === (phase === "A" ? "same-version" : "cross-version"),
       );
       const phaseMatches = matches.filter((match) => phaseOadIds.has(match.oadOccurrenceId));
-      return [phase, computeRollupMetrics(phaseOadFindings, phaseTypeSpecFindings, phaseMatches)];
+      const metrics = computeRollupMetrics(phaseOadFindings, phaseTypeSpecFindings, phaseMatches);
+      const outcome =
+        metrics.oadTotal > 0
+          ? "compared"
+          : metrics.typeSpecTotal > 0
+            ? "typespec-only-divergence"
+            : "concordant-zero";
+      return [phase, { ...metrics, outcome }];
     }),
-  ) as Record<Phase, RollupMetrics>;
+  ) as Record<Phase, PhaseRollup>;
   return {
     ...computeRollupMetrics(oadFindings, typeSpecFindings, matches),
     byPhase,
@@ -205,6 +213,12 @@ function percent(value?: number): string {
   return value === undefined ? "suppressed (incomplete)" : `${(value * 100).toFixed(1)}%`;
 }
 
+function coverage(matches: number, comparableOad: number): string {
+  return comparableOad === 0
+    ? "N/A"
+    : `${matches} / ${comparableOad} (${percent(matches / comparableOad)})`;
+}
+
 function renderSource(source: SourceReference): string {
   const location = [source.path, source.line ? `line ${source.line}` : undefined]
     .filter(Boolean)
@@ -312,20 +326,24 @@ export function renderMarkdown(report: EvaluationReport): string {
       `| TypeSpec-only | ${report.rollup.typeSpecOnly} |`,
       `| Ambiguous | ${report.rollup.ambiguous} |`,
       "",
-      `**Exact recall:** ${percent(report.rollup.exactRecall)}`,
-      `**Probable-inclusive recall:** ${percent(report.rollup.probableInclusiveRecall)}`,
+      `**Exact OAD coverage:** ${coverage(report.rollup.exact, report.rollup.oadTotal)}`,
+      `**Review-inclusive OAD coverage:** ${coverage(
+        report.rollup.exact + report.rollup.probableReview,
+        report.rollup.oadTotal,
+      )}`,
       "",
       "### By phase",
       "",
-      "| Phase | OAD check | Comparable OAD | Informational OAD | TypeSpec findings | Exact | Probable | Intentional gap | Missed equivalent | TypeSpec-only | Exact recall | Probable-inclusive recall |",
-      "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+      "| Phase | Independent OAD execution | TypeSpec mode | Outcome | Comparable OAD | Informational OAD | TypeSpec findings | Exact | Probable | Intentional gap | Missed equivalent | TypeSpec-only | Exact OAD coverage | Review-inclusive OAD coverage |",
+      "| --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
       ...(["A", "B"] as const).map((phase) => {
         const phaseRollup = report.rollup!.byPhase[phase];
         const checkName =
           phase === "A" ? "Swagger Breaking Change" : "Breaking Change (Cross-Version)";
         const run = report.qualification.evidence.runs?.[phase];
         const check = run ? `[${checkName} run ${run.id}](${run.htmlUrl})` : checkName;
-        return `| ${phase} | ${check} | ${phaseRollup.oadTotal} | ${phaseRollup.oadInformational} | ${phaseRollup.typeSpecTotal} | ${phaseRollup.exact} | ${phaseRollup.probableReview} | ${phaseRollup.intentionalSwaggerOnly} | ${phaseRollup.missedEquivalent} | ${phaseRollup.typeSpecOnly} | ${percent(phaseRollup.exactRecall)} | ${percent(phaseRollup.probableInclusiveRecall)} |`;
+        const typeSpecMode = phase === "A" ? "`same-version`" : "`cross-version`";
+        return `| ${phase} | ${check} | ${typeSpecMode} | ${phaseRollup.outcome} | ${phaseRollup.oadTotal} | ${phaseRollup.oadInformational} | ${phaseRollup.typeSpecTotal} | ${phaseRollup.exact} | ${phaseRollup.probableReview} | ${phaseRollup.intentionalSwaggerOnly} | ${phaseRollup.missedEquivalent} | ${phaseRollup.typeSpecOnly} | ${coverage(phaseRollup.exact, phaseRollup.oadTotal)} | ${coverage(phaseRollup.exact + phaseRollup.probableReview, phaseRollup.oadTotal)} |`;
       }),
       "",
     );
