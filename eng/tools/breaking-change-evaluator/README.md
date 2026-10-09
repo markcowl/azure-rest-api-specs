@@ -15,10 +15,10 @@ prototype. `evaluate` requires a previously prepared immutable revision and neve
 prototype clone/install/build path.
 
 ```bash
-pnpm exec breaking-change-evaluator prepare \
+node cmd/breaking-change-evaluator.js prepare \
   --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0
 
-pnpm exec breaking-change-evaluator evaluate \
+node cmd/breaking-change-evaluator.js evaluate \
   --pr Azure/azure-rest-api-specs#46675 \
   --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 \
   --json-output evaluator.json \

@@ -192,7 +192,7 @@ function createReproduction(
   const evaluatorCommit = report.provenance.evaluator!.commit;
   const tool = report.provenance.tool!;
   const pr = report.pullRequest!;
-  const packageDirectory = "evaluator/eng/tools/breaking-change-evaluator";
+  const cli = "evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js";
   return {
     shell: "powershell",
     evaluatorCommit,
@@ -211,7 +211,7 @@ function createReproduction(
       },
       {
         label: "Prepare the immutable analyzer",
-        command: `$prepared = corepack pnpm --dir ${packageDirectory} exec breaking-change-evaluator prepare --typespec-revision ${tool.sourceSha} | ConvertFrom-Json\nif ($prepared.artifactDigest -ne ${quotePowerShell(tool.artifactDigest)}) { throw 'Prepared analyzer digest does not match the report' }`,
+        command: `$prepared = node ${cli} prepare --typespec-revision ${tool.sourceSha} | ConvertFrom-Json\nif ($prepared.artifactDigest -ne ${quotePowerShell(tool.artifactDigest)}) { throw 'Prepared analyzer digest does not match the report' }`,
       },
       {
         label: "Check out the evaluated target",
@@ -225,7 +225,7 @@ function createReproduction(
     ],
     evaluatorCommand: {
       label: "Rerun the complete evaluator",
-      command: `corepack pnpm --dir ${packageDirectory} exec breaking-change-evaluator evaluate --pr ${quotePowerShell(pr.url)} --tool-revision ${tool.sourceSha} --json-output evaluator.json --markdown-output evaluator.md`,
+      command: `node ${cli} evaluate --pr ${quotePowerShell(pr.url)} --tool-revision ${tool.sourceSha} --json-output evaluator.json --markdown-output evaluator.md`,
     },
     directAnalyzerCommands: projects.map((project) => ({
       label: `Run the TypeSpec analyzer for ${project}`,
