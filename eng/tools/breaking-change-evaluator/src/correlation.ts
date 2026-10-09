@@ -22,15 +22,26 @@ export const oadCorrelation = {
     phaseB: "directional",
   },
   AddedOperation: { diffKinds: ["OperationAdded"], phaseB: "ignore" },
-  AddedOptionalProperty: { diffKinds: ["RequestPropertyAdded"], phaseB: "ignore" },
+  AddedOptionalProperty: {
+    diffKinds: ["RequestPropertyAdded", "ResourcePropertyAdded"],
+    phaseB: "ignore",
+  },
   AddedPath: { diffKinds: ["OperationAdded"], phaseB: "ignore" },
-  AddedPropertyInResponse: { diffKinds: ["ResponsePropertyAdded"], phaseB: "ignore" },
+  AddedPropertyInResponse: {
+    diffKinds: ["ResponsePropertyAdded", "ResourcePropertyAdded"],
+    phaseB: "ignore",
+  },
   AddedReadOnlyPropertyInResponse: {
-    diffKinds: ["ResponsePropertyAdded"],
+    diffKinds: ["ResponsePropertyAdded", "ResourcePropertyAdded"],
     phaseB: "ignore",
   },
   AddedRequiredProperty: {
-    diffKinds: ["RequestPropertyAdded", "ResponsePropertyMadeRequired"],
+    diffKinds: [
+      "RequestPropertyAdded",
+      "ResponsePropertyMadeRequired",
+      "ResourcePropertyAdded",
+      "ResourcePropertyMadeRequired",
+    ],
     phaseB: "error",
   },
   AddedXmsEnum: gap("SDK/code-generation concern"),
@@ -86,7 +97,12 @@ export const oadCorrelation = {
   },
   ProtocolNoLongerSupported: gap("Transport scheme is outside the per-version contract"),
   ReadonlyPropertyChanged: {
-    diffKinds: ["RequestPropertyRemoved", "RequestPropertyAdded"],
+    diffKinds: [
+      "RequestPropertyRemoved",
+      "RequestPropertyAdded",
+      "ResourcePropertyRemoved",
+      "ResourcePropertyAdded",
+    ],
     phaseB: "error",
   },
   ReferenceRedirection: gap("OpenAPI reference structure is not wire-level"),
@@ -107,7 +123,7 @@ export const oadCorrelation = {
   },
   RemovedPath: { diffKinds: ["OperationRemoved"], phaseB: "error" },
   RemovedProperty: {
-    diffKinds: ["RequestPropertyRemoved", "ResponsePropertyRemoved"],
+    diffKinds: ["RequestPropertyRemoved", "ResponsePropertyRemoved", "ResourcePropertyRemoved"],
     phaseB: "error",
   },
   RemovedRequiredParameter: {
@@ -131,6 +147,8 @@ export const oadCorrelation = {
       "RequestPropertyMadeRequired",
       "ResponsePropertyMadeOptional",
       "ResponsePropertyMadeRequired",
+      "ResourcePropertyMadeOptional",
+      "ResourcePropertyMadeRequired",
     ],
     phaseB: "directional",
   },
@@ -146,6 +164,9 @@ export const oadCorrelation = {
       "RequestTypeWidened",
       "ResponseTypeNarrowed",
       "ResponseTypeWidened",
+      "ResourcePropertyTypeChanged",
+      "ResourcePropertyTypeNarrowed",
+      "ResourcePropertyTypeWidened",
     ],
     phaseB: "error",
   },

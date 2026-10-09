@@ -16,4 +16,20 @@ describe("OAD correlation", () => {
       }
     }
   });
+
+  it("correlates request and response OAD rules with merged resource findings", () => {
+    expect(oadCorrelation.AddedOptionalProperty.diffKinds).toContain("ResourcePropertyAdded");
+    expect(oadCorrelation.AddedPropertyInResponse.diffKinds).toContain("ResourcePropertyAdded");
+    expect(oadCorrelation.RemovedProperty.diffKinds).toContain("ResourcePropertyRemoved");
+    expect(oadCorrelation.RequiredStatusChange.diffKinds).toEqual(
+      expect.arrayContaining(["ResourcePropertyMadeOptional", "ResourcePropertyMadeRequired"]),
+    );
+    expect(oadCorrelation.TypeChanged.diffKinds).toEqual(
+      expect.arrayContaining([
+        "ResourcePropertyTypeChanged",
+        "ResourcePropertyTypeNarrowed",
+        "ResourcePropertyTypeWidened",
+      ]),
+    );
+  });
 });

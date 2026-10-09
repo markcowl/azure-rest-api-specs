@@ -16,19 +16,23 @@ function propertyPath(value: string | string[] | undefined): string[] {
 }
 
 function typeSpecTarget(finding: TypeSpecFinding): CanonicalTarget {
+  const resourceFinding = finding.kind.startsWith("Resource");
   return {
     project: finding.project,
     phase: finding.phase === "same-version" ? "A" : "B",
     baseVersion: finding.versionPair.baseVersion,
     headVersion: finding.versionPair.headVersion,
-    method: finding.operation?.method.toUpperCase(),
-    route: finding.operation ? normalizeRoute(finding.operation.path) : undefined,
-    direction: finding.kind.startsWith("Request")
-      ? "request"
-      : finding.kind.startsWith("Response")
-        ? "response"
-        : undefined,
-    statusCode: finding.statusCode,
+    method: resourceFinding ? undefined : finding.operation?.method.toUpperCase(),
+    route:
+      resourceFinding || !finding.operation ? undefined : normalizeRoute(finding.operation.path),
+    direction: resourceFinding
+      ? undefined
+      : finding.kind.startsWith("Request")
+        ? "request"
+        : finding.kind.startsWith("Response")
+          ? "response"
+          : undefined,
+    statusCode: resourceFinding ? undefined : finding.statusCode,
     declaration: finding.component,
     schema: finding.component,
     element: finding.element,

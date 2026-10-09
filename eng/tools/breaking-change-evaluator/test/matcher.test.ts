@@ -195,6 +195,65 @@ describe("finding matching", () => {
     ]);
   });
 
+  it("uses one merged resource finding for every request and response usage", () => {
+    const responseFinding: OadFinding = {
+      ...oad,
+      occurrenceId: "oad-response-property",
+      phase: "A",
+      rule: "AddedPropertyInResponse",
+    };
+    const resourceFinding: TypeSpecFinding = {
+      ...requestTsp("resource-property", "/widgets/{name}"),
+      kind: "ResourcePropertyAdded",
+      phase: "same-version",
+      operation: { method: "PUT", path: "/widgets/{name}" },
+      element: "body.properties.properties.crossPoolScaling",
+      component: "request",
+      versionPair: { baseVersion: "2026-01-01", headVersion: "2026-01-01" },
+    };
+    const responseTargets: CanonicalTarget[] = [
+      {
+        phase: "A",
+        method: "GET",
+        route: "/widgets/{}",
+        direction: "response",
+        statusCode: "200",
+        propertyPath: ["crossPoolScaling"],
+        baseVersion: "2026-01-01",
+        headVersion: "2026-01-01",
+        evidence: [],
+      },
+      {
+        phase: "A",
+        method: "PATCH",
+        route: "/widgets/{}",
+        direction: "response",
+        statusCode: "202",
+        propertyPath: ["crossPoolScaling"],
+        baseVersion: "2026-01-01",
+        headVersion: "2026-01-01",
+        evidence: [],
+      },
+    ];
+
+    const matches = matchFindings(
+      [responseFinding],
+      new Map([[responseFinding.occurrenceId, responseTargets]]),
+      [resourceFinding],
+    );
+
+    expect(matches[0]).toMatchObject({
+      category: "probable-review",
+      reviewRequired: true,
+      selectedTypeSpecOccurrenceIds: ["resource-property"],
+    });
+    expect(matches[0].candidates).toHaveLength(2);
+    expect(matches[0].candidates.every((candidate) => candidate.score === 9)).toBe(true);
+    expect(
+      matches[0].candidates.every((candidate) => candidate.rejectionReasons.length === 0),
+    ).toBe(true);
+  });
+
   it("supports directional one-to-many exact matches", () => {
     const matches = matchFindings(
       [oad],
