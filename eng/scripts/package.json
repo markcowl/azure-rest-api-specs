@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
+    "compare-suppressions": "node compare-typespec-suppressions.ts",
     "test": "vitest",
     "test:ci": "vitest run --coverage"
   },
@@ -12,6 +13,7 @@
   },
   "devDependencies": {
     "@types/node": "catalog:",
+    "@typespec/compiler": "catalog:",
     "vitest": "catalog:"
   }
 }
