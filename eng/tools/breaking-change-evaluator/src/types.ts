@@ -174,7 +174,7 @@ export interface MatchTrace {
   reviewRequired: boolean;
 }
 
-export interface Rollup {
+export interface RollupMetrics {
   oadTotal: number;
   oadInformational: number;
   typeSpecTotal: number;
@@ -187,6 +187,10 @@ export interface Rollup {
   errors: number;
   exactRecall?: number;
   probableInclusiveRecall?: number;
+}
+
+export interface Rollup extends RollupMetrics {
+  byPhase: Record<Phase, RollupMetrics>;
 }
 
 export interface ProjectResult {

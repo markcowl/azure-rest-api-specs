@@ -157,7 +157,148 @@ describe("report aggregation", () => {
       errors: 0,
       exactRecall: 0.25,
       probableInclusiveRecall: 0.5,
+      byPhase: {
+        A: {
+          oadTotal: 0,
+          oadInformational: 0,
+          typeSpecTotal: 0,
+          exact: 0,
+          probableReview: 0,
+          intentionalSwaggerOnly: 0,
+          missedEquivalent: 0,
+          typeSpecOnly: 0,
+          ambiguous: 0,
+          errors: 0,
+          exactRecall: 1,
+          probableInclusiveRecall: 1,
+        },
+        B: {
+          oadTotal: 5,
+          oadInformational: 1,
+          typeSpecTotal: 2,
+          exact: 1,
+          probableReview: 1,
+          intentionalSwaggerOnly: 1,
+          missedEquivalent: 1,
+          typeSpecOnly: 1,
+          ambiguous: 1,
+          errors: 0,
+          exactRecall: 0.25,
+          probableInclusiveRecall: 0.5,
+        },
+      },
     });
+  });
+
+  it("aggregates OAD and TypeSpec findings by corresponding phase", () => {
+    const oadFindings: OadFinding[] = [
+      {
+        occurrenceId: "oad-a",
+        phase: "A",
+        id: "a",
+        rule: "AddedPath",
+        severity: "Info",
+        message: "added",
+        evidence: "{}",
+      },
+      {
+        occurrenceId: "oad-b",
+        phase: "B",
+        id: "b",
+        rule: "RemovedProperty",
+        severity: "Error",
+        message: "removed",
+        evidence: "{}",
+      },
+    ];
+    const typeSpecFindings: TypeSpecFinding[] = [
+      {
+        occurrenceId: "tsp-a",
+        project: "specification/foo/Foo",
+        kind: "OperationAdded",
+        rule: "operation-added",
+        phase: "same-version",
+        severity: "error",
+        message: "added",
+        versionPair: { baseVersion: "v1", headVersion: "v1" },
+      },
+      {
+        occurrenceId: "tsp-b",
+        project: "specification/foo/Foo",
+        kind: "ResponsePropertyRemoved",
+        rule: "response-property-removed",
+        phase: "cross-version",
+        severity: "error",
+        message: "removed",
+        versionPair: { baseVersion: "v1", headVersion: "v2" },
+      },
+    ];
+    const matches: MatchTrace[] = [
+      {
+        oadOccurrenceId: "oad-a",
+        target: { phase: "A", evidence: [] },
+        targets: [{ phase: "A", evidence: [] }],
+        candidates: [],
+        selectedTypeSpecOccurrenceIds: ["tsp-a"],
+        category: "exact",
+        reviewRequired: false,
+      },
+      {
+        oadOccurrenceId: "oad-b",
+        target: { phase: "B", evidence: [] },
+        targets: [{ phase: "B", evidence: [] }],
+        candidates: [],
+        selectedTypeSpecOccurrenceIds: ["tsp-b"],
+        category: "probable-review",
+        reviewRequired: true,
+      },
+    ];
+
+    const rollup = computeRollup(oadFindings, typeSpecFindings, matches);
+    expect(rollup.byPhase.A).toMatchObject({
+      oadTotal: 1,
+      typeSpecTotal: 1,
+      exact: 1,
+      probableReview: 0,
+      typeSpecOnly: 0,
+    });
+    expect(rollup.byPhase.B).toMatchObject({
+      oadTotal: 1,
+      typeSpecTotal: 1,
+      exact: 0,
+      probableReview: 1,
+      typeSpecOnly: 0,
+    });
+  });
+
+  it("links each phase rollup to its independent OAD check execution", () => {
+    const value = report();
+    value.qualification.evidence.runs = {
+      A: {
+        id: 100,
+        name: "Swagger BreakingChange - Analyze Code",
+        headSha: "a".repeat(40),
+        status: "completed",
+        conclusion: "success",
+        htmlUrl: "https://github.com/Azure/azure-rest-api-specs/actions/runs/100",
+      },
+      B: {
+        id: 200,
+        name: "Breaking Change(Cross-Version) - Analyze Code",
+        headSha: "a".repeat(40),
+        status: "completed",
+        conclusion: "success",
+        htmlUrl: "https://github.com/Azure/azure-rest-api-specs/actions/runs/200",
+      },
+    };
+
+    const markdown = renderMarkdown(value);
+    expect(markdown).toContain(
+      "[Swagger Breaking Change run 100](https://github.com/Azure/azure-rest-api-specs/actions/runs/100)",
+    );
+    expect(markdown).toContain(
+      "[Breaking Change (Cross-Version) run 200](https://github.com/Azure/azure-rest-api-specs/actions/runs/200)",
+    );
   });
 
   it("requires exactly one category per OAD occurrence", () => {

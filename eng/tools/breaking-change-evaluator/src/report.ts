@@ -7,16 +7,18 @@ import type {
   MatchCategory,
   MatchTrace,
   OadFinding,
+  Phase,
   Rollup,
+  RollupMetrics,
   SourceReference,
   TypeSpecFinding,
 } from "./types.ts";
 
-export function computeRollup(
+function computeRollupMetrics(
   oadFindings: OadFinding[],
   typeSpecFindings: TypeSpecFinding[],
   matches: MatchTrace[],
-): Rollup {
+): RollupMetrics {
   const count = (category: MatchTrace["category"]) =>
     matches.filter((match) => match.category === category).length;
   const selected = new Set(matches.flatMap((match) => match.selectedTypeSpecOccurrenceIds));
@@ -41,6 +43,28 @@ export function computeRollup(
     errors: count("errors"),
     exactRecall: comparable === 0 ? 1 : exact / comparable,
     probableInclusiveRecall: comparable === 0 ? 1 : (exact + probableReview) / comparable,
+  };
+}
+
+export function computeRollup(
+  oadFindings: OadFinding[],
+  typeSpecFindings: TypeSpecFinding[],
+  matches: MatchTrace[],
+): Rollup {
+  const byPhase = Object.fromEntries(
+    (["A", "B"] as const).map((phase) => {
+      const phaseOadFindings = oadFindings.filter((finding) => finding.phase === phase);
+      const phaseOadIds = new Set(phaseOadFindings.map((finding) => finding.occurrenceId));
+      const phaseTypeSpecFindings = typeSpecFindings.filter(
+        (finding) => finding.phase === (phase === "A" ? "same-version" : "cross-version"),
+      );
+      const phaseMatches = matches.filter((match) => phaseOadIds.has(match.oadOccurrenceId));
+      return [phase, computeRollupMetrics(phaseOadFindings, phaseTypeSpecFindings, phaseMatches)];
+    }),
+  ) as Record<Phase, RollupMetrics>;
+  return {
+    ...computeRollupMetrics(oadFindings, typeSpecFindings, matches),
+    byPhase,
   };
 }
 
@@ -290,6 +314,19 @@ export function renderMarkdown(report: EvaluationReport): string {
       "",
       `**Exact recall:** ${percent(report.rollup.exactRecall)}`,
       `**Probable-inclusive recall:** ${percent(report.rollup.probableInclusiveRecall)}`,
+      "",
+      "### By phase",
+      "",
+      "| Phase | OAD check | Comparable OAD | Informational OAD | TypeSpec findings | Exact | Probable | Intentional gap | Missed equivalent | TypeSpec-only | Exact recall | Probable-inclusive recall |",
+      "| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+      ...(["A", "B"] as const).map((phase) => {
+        const phaseRollup = report.rollup!.byPhase[phase];
+        const checkName =
+          phase === "A" ? "Swagger Breaking Change" : "Breaking Change (Cross-Version)";
+        const run = report.qualification.evidence.runs?.[phase];
+        const check = run ? `[${checkName} run ${run.id}](${run.htmlUrl})` : checkName;
+        return `| ${phase} | ${check} | ${phaseRollup.oadTotal} | ${phaseRollup.oadInformational} | ${phaseRollup.typeSpecTotal} | ${phaseRollup.exact} | ${phaseRollup.probableReview} | ${phaseRollup.intentionalSwaggerOnly} | ${phaseRollup.missedEquivalent} | ${phaseRollup.typeSpecOnly} | ${percent(phaseRollup.exactRecall)} | ${percent(phaseRollup.probableInclusiveRecall)} |`;
+      }),
       "",
     );
   }
