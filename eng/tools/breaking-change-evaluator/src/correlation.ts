@@ -4,12 +4,19 @@ export interface Correlation {
   diffKinds: readonly string[];
   phaseB: "error" | "directional" | "ignore" | "n/a";
   intentionalGap?: string;
+  informationalRecord?: string;
 }
 
 const gap = (reason: string): Correlation => ({
   diffKinds: [],
   phaseB: "n/a",
   intentionalGap: reason,
+});
+
+const informational = (reason: string): Correlation => ({
+  diffKinds: [],
+  phaseB: "n/a",
+  informationalRecord: reason,
 });
 
 export const oadCorrelation = {
@@ -86,7 +93,9 @@ export const oadCorrelation = {
   DifferentDiscriminator: { diffKinds: ["DiscriminatorChanged"], phaseB: "error" },
   DifferentExtends: gap("OpenAPI structural change"),
   ModifiedOperationId: gap("Operation ID is not wire-level"),
-  NoVersionChange: gap("Phase A inherently detects same-version changes"),
+  NoVersionChange: informational(
+    "OAD reports unchanged document versions as comparison context; this is not an API difference",
+  ),
   ParameterInHasChanged: {
     diffKinds: ["RequestParameterLocationChanged"],
     phaseB: "error",

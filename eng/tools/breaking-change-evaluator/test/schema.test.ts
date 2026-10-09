@@ -13,7 +13,19 @@ function validReport() {
       servicesAnalyzed: 1,
       comparisonsPerformed: 1,
     },
-    summary: { servicesAnalyzed: 1, comparisonsPerformed: 1 },
+    summary: {
+      servicesAnalyzed: 1,
+      comparisonsPerformed: 1,
+      versionComparisons: [
+        {
+          serviceName: "Foo",
+          baseVersion: "v1",
+          headVersion: "v1",
+          phase: "same-version",
+          findingCount: 1,
+        },
+      ],
+    },
     findings: [
       {
         kind: "OperationRemoved",

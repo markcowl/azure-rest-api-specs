@@ -8,10 +8,10 @@ describe("OAD correlation", () => {
     expect(new Set(Object.keys(oadCorrelation))).toEqual(oadRules);
   });
 
-  it("records every unsupported rule as an intentional gap", () => {
+  it("records every unsupported rule as an intentional gap or informational record", () => {
     for (const correlation of Object.values(oadCorrelation)) {
       if (correlation.phaseB === "n/a") {
-        expect(correlation.intentionalGap).toBeTruthy();
+        expect(correlation.intentionalGap || correlation.informationalRecord).toBeTruthy();
         expect(correlation.diffKinds).toEqual([]);
       }
     }

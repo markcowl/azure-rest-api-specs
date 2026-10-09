@@ -123,6 +123,9 @@ export async function runTypeSpecProject(
       status: "complete",
       exitCode: result.code,
       reportDigest: createHash("sha256").update(content).digest("hex"),
+      comparisonsPerformed: parsed.summary.comparisonsPerformed,
+      versionComparisons: parsed.summary.versionComparisons,
+      noComparisonReason: parsed.summary.noComparisonReason,
       findings: mapFindings(project, parsed),
     };
   } catch (error) {

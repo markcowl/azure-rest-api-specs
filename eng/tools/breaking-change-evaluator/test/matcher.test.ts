@@ -303,7 +303,7 @@ describe("finding matching", () => {
     const intentional: OadFinding = {
       ...oad,
       occurrenceId: "intentional",
-      rule: "NoVersionChange",
+      rule: "ChangedParameterOrder",
     };
     const missed: OadFinding = { ...oad, occurrenceId: "missed" };
     const matches = matchFindings(
@@ -317,6 +317,22 @@ describe("finding matching", () => {
     expect(matches.map((match) => match.category)).toEqual([
       "intentional-swagger-only",
       "missed-equivalent",
+    ]);
+  });
+
+  it("separates informational OAD records from detector coverage gaps", () => {
+    const finding: OadFinding = {
+      ...oad,
+      occurrenceId: "informational",
+      rule: "NoVersionChange",
+    };
+
+    expect(matchFindings([finding], new Map(), [])).toEqual([
+      expect.objectContaining({
+        oadOccurrenceId: "informational",
+        category: "informational-oad",
+        reviewRequired: false,
+      }),
     ]);
   });
 });

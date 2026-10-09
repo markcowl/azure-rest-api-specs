@@ -35,11 +35,15 @@ The aggregation contract is
 [`breaking-change-evaluator.schema.json`](breaking-change-evaluator.schema.json). Complete reports
 are per-PR evaluation dossiers with immutable PR metadata, workflow evidence links, source
 permalinks, normalized target evidence, and portable PowerShell reproduction commands. They
-separate exact, review-required probable, intentional Swagger-only, missing-from-TypeSpec,
-missing-from-Swagger, and ambiguous findings. Matched findings are grouped by
+separate exact, review-required probable, informational OAD records, intentional Swagger-only,
+missing-from-TypeSpec, missing-from-Swagger, and ambiguous findings. Matched findings are grouped by
 `SwaggerRule → TypeSpecFindingKind`; unmatched Swagger findings are grouped by Swagger rule; and
 TypeSpec-only findings are grouped by TypeSpec finding kind. “Missing from Swagger” means the
 Swagger checks did not report an equivalent finding, not that a Swagger defect has been confirmed.
+Each TypeSpec project also records every executed same-version and cross-version comparison,
+including zero-finding comparisons, so phase execution does not have to be inferred from findings.
+OAD `NoVersionChange` records are retained as informational comparison context but excluded from
+comparable-finding totals and detector coverage rates.
 Incomplete reports suppress rollups and recall rates.
 
 Each complete dossier includes commands to reproduce both the full evaluator run and each direct

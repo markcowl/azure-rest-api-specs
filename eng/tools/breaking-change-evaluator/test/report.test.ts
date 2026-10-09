@@ -71,8 +71,42 @@ describe("report aggregation", () => {
     expect(renderMarkdown(value)).not.toContain("Exact recall");
   });
 
+  it("renders phase execution independently of finding presence", () => {
+    const value = report();
+    value.typeSpecProjects = [
+      {
+        project: "specification/foo/Foo",
+        status: "complete",
+        exitCode: 0,
+        comparisonsPerformed: 2,
+        versionComparisons: [
+          {
+            serviceName: "Foo",
+            baseVersion: "v1",
+            headVersion: "v1",
+            phase: "same-version",
+            findingCount: 0,
+          },
+          {
+            serviceName: "Foo",
+            baseVersion: "v1",
+            headVersion: "v2",
+            phase: "cross-version",
+            findingCount: 0,
+          },
+        ],
+        findings: [],
+      },
+    ];
+
+    const markdown = renderMarkdown(value);
+    expect(markdown).toContain("## TypeSpec phase execution");
+    expect(markdown).toContain("| `same-version` | `v1` → `v1` | 1 | 0 |");
+    expect(markdown).toContain("| `cross-version` | `v1` → `v2` | 1 | 0 |");
+  });
+
   it("accounts for every category and unconsumed TypeSpec occurrence", () => {
-    const oadFindings = Array.from({ length: 5 }, (_, index) => ({
+    const oadFindings = Array.from({ length: 6 }, (_, index) => ({
       occurrenceId: `oad-${index}`,
       phase: "B",
       id: String(index),
@@ -94,6 +128,7 @@ describe("report aggregation", () => {
     const categories: MatchTrace["category"][] = [
       "exact",
       "probable-review",
+      "informational-oad",
       "intentional-swagger-only",
       "missed-equivalent",
       "ambiguous",
@@ -111,6 +146,7 @@ describe("report aggregation", () => {
 
     expect(computeRollup(oadFindings, typeSpecFindings, matches)).toEqual({
       oadTotal: 5,
+      oadInformational: 1,
       typeSpecTotal: 2,
       exact: 1,
       probableReview: 1,
@@ -164,9 +200,9 @@ describe("report aggregation", () => {
       occurrenceId: "oad-gap",
       phase: "A",
       id: "gap",
-      rule: "NoVersionChange",
+      rule: "ChangedParameterOrder",
       severity: "Error",
-      message: "API version was not changed",
+      message: "Parameter order changed",
       evidence: "{}",
     };
     const typeSpecFinding: TypeSpecFinding = {
@@ -200,7 +236,6 @@ describe("report aggregation", () => {
 
     const markdown = renderMarkdown(value);
     expect(markdown).toContain("Intentional Swagger-only coverage gaps");
-    expect(markdown).toContain("Phase A inherently detects same-version changes");
     expect(markdown).toContain("Findings missing from the Swagger detector");
     expect(markdown).toContain("GET /widgets");
   });

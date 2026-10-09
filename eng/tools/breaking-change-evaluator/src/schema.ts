@@ -31,6 +31,16 @@ export const typeSpecJsonReportSchema = z
     summary: z.object({
       servicesAnalyzed: z.number().int().nonnegative(),
       comparisonsPerformed: z.number().int().nonnegative(),
+      versionComparisons: z.array(
+        z.object({
+          serviceName: z.string(),
+          baseVersion: z.string(),
+          headVersion: z.string(),
+          phase: z.enum(["same-version", "cross-version"]),
+          findingCount: z.number().int().nonnegative(),
+        }),
+      ),
+      noComparisonReason: z.string().optional(),
     }),
     timing: z.unknown(),
   })
@@ -65,6 +75,12 @@ export const typeSpecJsonReportSchema = z
       context.addIssue({
         code: "custom",
         message: "requiresAction does not agree with unsuppressed error findings",
+      });
+    }
+    if (report.summary.comparisonsPerformed !== report.summary.versionComparisons.length) {
+      context.addIssue({
+        code: "custom",
+        message: "summary.comparisonsPerformed does not equal versionComparisons.length",
       });
     }
   });

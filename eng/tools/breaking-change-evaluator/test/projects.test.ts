@@ -41,7 +41,19 @@ function validReport(requiresAction: boolean) {
       comparisonsPerformed: 1,
     },
     findings,
-    summary: { servicesAnalyzed: 1, comparisonsPerformed: 1 },
+    summary: {
+      servicesAnalyzed: 1,
+      comparisonsPerformed: 1,
+      versionComparisons: [
+        {
+          serviceName: "Foo",
+          baseVersion: "v1",
+          headVersion: "v1",
+          phase: "same-version",
+          findingCount: findings.length,
+        },
+      ],
+    },
     timing: {},
   };
 }
@@ -104,6 +116,15 @@ describe("TypeSpec project execution", () => {
     });
     expect(project.findings).toHaveLength(testCase.findings);
     expect(project.reportDigest).toMatch(/^[0-9a-f]{64}$/);
+    expect(project.versionComparisons).toEqual([
+      {
+        serviceName: "Foo",
+        baseVersion: "v1",
+        headVersion: "v1",
+        phase: "same-version",
+        findingCount: testCase.findings,
+      },
+    ]);
   });
 
   it.each([

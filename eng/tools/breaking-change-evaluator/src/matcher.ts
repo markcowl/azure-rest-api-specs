@@ -144,6 +144,18 @@ export function matchFindings(
       resolvedTargets && resolvedTargets.length > 0
         ? resolvedTargets
         : [{ phase: finding.phase, evidence: ["Target resolution unavailable"] }];
+    if ("informationalRecord" in correlation && correlation.informationalRecord) {
+      traces.push({
+        oadOccurrenceId: finding.occurrenceId,
+        target: targets[0],
+        targets,
+        candidates: [],
+        selectedTypeSpecOccurrenceIds: [],
+        category: "informational-oad",
+        reviewRequired: false,
+      });
+      continue;
+    }
     if (correlation.phaseB === "n/a") {
       traces.push({
         oadOccurrenceId: finding.occurrenceId,

@@ -5,6 +5,7 @@ export type EvaluationStatus = "evaluated" | "partial" | "not-qualified" | "fail
 export type MatchCategory =
   | "exact"
   | "probable-review"
+  | "informational-oad"
   | "intentional-swagger-only"
   | "missed-equivalent"
   | "typespec-only"
@@ -175,6 +176,7 @@ export interface MatchTrace {
 
 export interface Rollup {
   oadTotal: number;
+  oadInformational: number;
   typeSpecTotal: number;
   exact: number;
   probableReview: number;
@@ -192,8 +194,19 @@ export interface ProjectResult {
   status: "complete" | "error";
   exitCode?: number;
   reportDigest?: string;
+  comparisonsPerformed?: number;
+  versionComparisons?: VersionComparisonExecution[];
+  noComparisonReason?: string;
   findings: TypeSpecFinding[];
   error?: string;
+}
+
+export interface VersionComparisonExecution {
+  serviceName: string;
+  baseVersion: string;
+  headVersion: string;
+  phase: "same-version" | "cross-version";
+  findingCount: number;
 }
 
 export interface FindingGroup {

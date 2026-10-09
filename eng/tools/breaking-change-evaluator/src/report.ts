@@ -21,12 +21,16 @@ export function computeRollup(
     matches.filter((match) => match.category === category).length;
   const selected = new Set(matches.flatMap((match) => match.selectedTypeSpecOccurrenceIds));
   const comparable = matches.filter(
-    (match) => match.category !== "intentional-swagger-only" && match.category !== "errors",
+    (match) =>
+      match.category !== "informational-oad" &&
+      match.category !== "intentional-swagger-only" &&
+      match.category !== "errors",
   ).length;
   const exact = count("exact");
   const probableReview = count("probable-review");
   return {
-    oadTotal: oadFindings.length,
+    oadTotal: oadFindings.length - count("informational-oad"),
+    oadInformational: count("informational-oad"),
     typeSpecTotal: typeSpecFindings.length,
     exact,
     probableReview,
@@ -226,6 +230,7 @@ function renderTypeSpecFinding(finding: TypeSpecFinding): string[] {
 const categoryTitles: Record<MatchCategory, string> = {
   exact: "Exact matched findings",
   "probable-review": "Probable matched findings (review required)",
+  "informational-oad": "Informational OAD records",
   "intentional-swagger-only": "Intentional Swagger-only coverage gaps",
   "missed-equivalent": "Findings missing from the TypeSpec detector",
   "typespec-only": "Findings missing from the Swagger detector",
@@ -273,7 +278,8 @@ export function renderMarkdown(report: EvaluationReport): string {
       "",
       "| Dimension | Count |",
       "| --- | ---: |",
-      `| OAD findings | ${report.rollup.oadTotal} |`,
+      `| Comparable OAD findings | ${report.rollup.oadTotal} |`,
+      `| Informational OAD records | ${report.rollup.oadInformational} |`,
       `| TypeSpec findings | ${report.rollup.typeSpecTotal} |`,
       `| Exact | ${report.rollup.exact} |`,
       `| Probable (review required) | ${report.rollup.probableReview} |`,
@@ -287,6 +293,29 @@ export function renderMarkdown(report: EvaluationReport): string {
       "",
     );
   }
+  if (report.typeSpecProjects.length) {
+    lines.push(
+      "## TypeSpec phase execution",
+      "",
+      "| Project | Phase | Version pair | Comparisons | Findings |",
+      "| --- | --- | --- | ---: | ---: |",
+    );
+    for (const project of report.typeSpecProjects) {
+      const comparisons = project.versionComparisons ?? [];
+      if (!comparisons.length) {
+        lines.push(
+          `| \`${project.project}\` | Not performed | ${project.noComparisonReason ?? "No comparison details reported"} | 0 | 0 |`,
+        );
+        continue;
+      }
+      for (const comparison of comparisons) {
+        lines.push(
+          `| \`${project.project}\` | \`${comparison.phase}\` | \`${comparison.baseVersion}\` → \`${comparison.headVersion}\` | 1 | ${comparison.findingCount} |`,
+        );
+      }
+    }
+    lines.push("");
+  }
   const oadById = new Map(report.oadFindings.map((finding) => [finding.occurrenceId, finding]));
   const typeSpecById = new Map(
     report.typeSpecProjects
@@ -296,6 +325,7 @@ export function renderMarkdown(report: EvaluationReport): string {
   for (const category of [
     "exact",
     "probable-review",
+    "informational-oad",
     "intentional-swagger-only",
     "missed-equivalent",
     "typespec-only",
@@ -325,8 +355,15 @@ export function renderMarkdown(report: EvaluationReport): string {
           }`,
         );
         const correlation = oadCorrelation[finding.rule];
+        const informationalRecord =
+          correlation && "informationalRecord" in correlation
+            ? correlation.informationalRecord
+            : undefined;
         const intentionalGap =
           correlation && "intentionalGap" in correlation ? correlation.intentionalGap : undefined;
+        if (informationalRecord) {
+          lines.push(`- **Informational record:** ${informationalRecord}`);
+        }
         if (intentionalGap) lines.push(`- **Intentional gap:** ${intentionalGap}`);
         for (const id of match.selectedTypeSpecOccurrenceIds) {
           const selected = typeSpecById.get(id);
