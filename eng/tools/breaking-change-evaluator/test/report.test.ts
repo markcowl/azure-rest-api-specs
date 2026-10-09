@@ -2,21 +2,52 @@ import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { computeRollup, renderMarkdown, validateRollup, writeReportFiles } from "../src/report.ts";
+import {
+  computeFindingGroups,
+  computeRollup,
+  renderMarkdown,
+  validateRollup,
+  writeReportFiles,
+} from "../src/report.ts";
 import type { EvaluationReport, MatchTrace, OadFinding, TypeSpecFinding } from "../src/types.ts";
 
 function report(): EvaluationReport {
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     status: "evaluated",
     complete: true,
     generatedAt: "2026-01-01T00:00:00.000Z",
+    pullRequest: {
+      owner: "Azure",
+      repo: "azure-rest-api-specs",
+      number: 1,
+      merged: false,
+      url: "https://github.com/Azure/azure-rest-api-specs/pull/1",
+      baseSha: "b".repeat(40),
+      headSha: "a".repeat(40),
+      changedTypeSpecFiles: [],
+    },
     qualification: { qualified: true, reasonCodes: [], evidence: {} },
-    provenance: {},
+    provenance: {
+      evaluator: { commit: "e".repeat(40) },
+      tool: { sourceSha: "c".repeat(40), artifactDigest: "d".repeat(64) },
+    },
     dimensions: [],
     oadFindings: [],
     typeSpecProjects: [],
     matches: [],
+    findingGroups: [],
+    reproduction: {
+      shell: "powershell",
+      evaluatorCommit: "e".repeat(40),
+      analyzerSourceSha: "c".repeat(40),
+      analyzerArtifactDigest: "d".repeat(64),
+      prHeadSha: "a".repeat(40),
+      prBaseSha: "b".repeat(40),
+      setupCommands: [],
+      evaluatorCommand: { label: "Evaluate", command: "evaluate" },
+      directAnalyzerCommands: [],
+    },
     rollup: computeRollup([], [], []),
     errors: [],
   };
@@ -104,6 +135,16 @@ describe("report aggregation", () => {
         severity: "Error",
         message: "removed",
         evidence: "{}",
+        detectorEvidence: {
+          label: "Swagger workflow",
+          url: "https://github.com/Azure/azure-rest-api-specs/actions/runs/1",
+        },
+        sources: [
+          {
+            revision: "head",
+            unavailableReason: "fixture has no source",
+          },
+        ],
       },
     ];
     value.rollup = computeRollup(value.oadFindings, [], []);
@@ -155,12 +196,105 @@ describe("report aggregation", () => {
       },
     ];
     value.rollup = computeRollup(value.oadFindings, [typeSpecFinding], value.matches);
+    value.findingGroups = computeFindingGroups(value.oadFindings, [typeSpecFinding], value.matches);
 
     const markdown = renderMarkdown(value);
-    expect(markdown).toContain("Review and non-match details");
+    expect(markdown).toContain("Intentional Swagger-only coverage gaps");
     expect(markdown).toContain("Phase A inherently detects same-version changes");
-    expect(markdown).toContain("TypeSpec-only findings");
+    expect(markdown).toContain("Findings missing from the Swagger detector");
     expect(markdown).toContain("GET /widgets");
+  });
+
+  it("groups matches by correlation pair and unmatched findings by detector type", () => {
+    const oadFindings = [
+      {
+        occurrenceId: "oad-exact",
+        phase: "A",
+        id: "1",
+        rule: "AddedPath",
+        severity: "Info",
+        message: "path added",
+        evidence: "{}",
+      },
+      {
+        occurrenceId: "oad-missed",
+        phase: "B",
+        id: "2",
+        rule: "RemovedProperty",
+        severity: "Error",
+        message: "property removed",
+        evidence: "{}",
+      },
+    ] as OadFinding[];
+    const typeSpecFindings: TypeSpecFinding[] = [
+      {
+        occurrenceId: "tsp-match",
+        project: "specification/foo/Foo",
+        kind: "OperationAdded",
+        rule: "phase-a-any-change",
+        phase: "same-version",
+        severity: "error",
+        message: "added",
+        versionPair: { baseVersion: "v1", headVersion: "v1" },
+      },
+      {
+        occurrenceId: "tsp-only",
+        project: "specification/foo/Foo",
+        kind: "ResponsePropertyRemoved",
+        rule: "removed-response-property",
+        phase: "cross-version",
+        severity: "error",
+        message: "removed",
+        versionPair: { baseVersion: "v1", headVersion: "v2" },
+      },
+    ];
+    const matches: MatchTrace[] = [
+      {
+        oadOccurrenceId: "oad-exact",
+        target: { evidence: [] },
+        targets: [{ evidence: [] }],
+        candidates: [],
+        selectedTypeSpecOccurrenceIds: ["tsp-match"],
+        category: "exact",
+        reviewRequired: false,
+      },
+      {
+        oadOccurrenceId: "oad-missed",
+        target: { evidence: [] },
+        targets: [{ evidence: [] }],
+        candidates: [],
+        selectedTypeSpecOccurrenceIds: [],
+        category: "missed-equivalent",
+        reviewRequired: false,
+      },
+    ];
+
+    expect(computeFindingGroups(oadFindings, typeSpecFindings, matches)).toEqual([
+      {
+        category: "exact",
+        key: "AddedPath → OperationAdded",
+        swaggerRule: "AddedPath",
+        typeSpecKind: "OperationAdded",
+        oadOccurrenceIds: ["oad-exact"],
+        typeSpecOccurrenceIds: ["tsp-match"],
+      },
+      {
+        category: "missed-equivalent",
+        key: "RemovedProperty",
+        swaggerRule: "RemovedProperty",
+        typeSpecKind: undefined,
+        oadOccurrenceIds: ["oad-missed"],
+        typeSpecOccurrenceIds: [],
+      },
+      {
+        category: "typespec-only",
+        key: "ResponsePropertyRemoved",
+        swaggerRule: undefined,
+        typeSpecKind: "ResponsePropertyRemoved",
+        oadOccurrenceIds: [],
+        typeSpecOccurrenceIds: ["tsp-only"],
+      },
+    ]);
   });
 
   it("writes byte-equivalent normalized JSON for fixed report input", async () => {

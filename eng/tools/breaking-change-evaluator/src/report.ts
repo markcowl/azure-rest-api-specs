@@ -1,7 +1,16 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { oadCorrelation } from "./correlation.ts";
-import type { EvaluationReport, MatchTrace, OadFinding, Rollup, TypeSpecFinding } from "./types.ts";
+import type {
+  EvaluationReport,
+  FindingGroup,
+  MatchCategory,
+  MatchTrace,
+  OadFinding,
+  Rollup,
+  SourceReference,
+  TypeSpecFinding,
+} from "./types.ts";
 
 export function computeRollup(
   oadFindings: OadFinding[],
@@ -31,11 +40,90 @@ export function computeRollup(
   };
 }
 
+export function computeFindingGroups(
+  oadFindings: OadFinding[],
+  typeSpecFindings: TypeSpecFinding[],
+  matches: MatchTrace[],
+): FindingGroup[] {
+  const oadById = new Map(oadFindings.map((finding) => [finding.occurrenceId, finding]));
+  const typeSpecById = new Map(typeSpecFindings.map((finding) => [finding.occurrenceId, finding]));
+  const groups = new Map<string, FindingGroup>();
+  const add = (
+    category: MatchCategory,
+    key: string,
+    oadIds: string[],
+    typeSpecIds: string[],
+    swaggerRule?: string,
+    typeSpecKind?: string,
+  ) => {
+    const id = `${category}:${key}`;
+    const group = groups.get(id) ?? {
+      category,
+      key,
+      swaggerRule,
+      typeSpecKind,
+      oadOccurrenceIds: [],
+      typeSpecOccurrenceIds: [],
+    };
+    group.oadOccurrenceIds = [...new Set([...group.oadOccurrenceIds, ...oadIds])].sort();
+    group.typeSpecOccurrenceIds = [
+      ...new Set([...group.typeSpecOccurrenceIds, ...typeSpecIds]),
+    ].sort();
+    groups.set(id, group);
+  };
+  for (const match of matches) {
+    const oad = oadById.get(match.oadOccurrenceId);
+    if (!oad) continue;
+    if (match.category === "exact" || match.category === "probable-review") {
+      const kinds = [
+        ...new Set(
+          match.selectedTypeSpecOccurrenceIds
+            .map((id) => typeSpecById.get(id)?.kind)
+            .filter((kind): kind is string => Boolean(kind)),
+        ),
+      ].sort();
+      const typeSpecKind = kinds.join(" + ") || "UnknownTypeSpecKind";
+      add(
+        match.category,
+        `${oad.rule} → ${typeSpecKind}`,
+        [oad.occurrenceId],
+        match.selectedTypeSpecOccurrenceIds,
+        oad.rule,
+        typeSpecKind,
+      );
+    } else {
+      add(match.category, oad.rule, [oad.occurrenceId], [], oad.rule);
+    }
+  }
+  const selected = new Set(matches.flatMap((match) => match.selectedTypeSpecOccurrenceIds));
+  for (const finding of typeSpecFindings.filter(
+    (candidate) => !selected.has(candidate.occurrenceId),
+  )) {
+    add("typespec-only", finding.kind, [], [finding.occurrenceId], undefined, finding.kind);
+  }
+  return [...groups.values()].sort(
+    (left, right) =>
+      left.category.localeCompare(right.category) || left.key.localeCompare(right.key),
+  );
+}
+
 export function validateRollup(report: EvaluationReport): void {
   if (!report.complete && report.rollup) {
     throw new Error("Incomplete reports must suppress rollups and rates");
   }
   if (!report.rollup) return;
+  if (!report.pullRequest || !report.reproduction) {
+    throw new Error("Complete reports require pull-request and reproduction metadata");
+  }
+  for (const finding of report.oadFindings) {
+    if (
+      !finding.detectorEvidence ||
+      !finding.sources?.length ||
+      finding.sources.some((source) => !source.url && !source.unavailableReason)
+    ) {
+      throw new Error(`OAD finding ${finding.occurrenceId} is missing source or detector evidence`);
+    }
+  }
   const expectedOadIds = new Set(report.oadFindings.map((finding) => finding.occurrenceId));
   const matchedOadIds = report.matches.map((match) => match.oadOccurrenceId);
   if (
@@ -46,6 +134,27 @@ export function validateRollup(report: EvaluationReport): void {
     throw new Error("Every OAD occurrence must have exactly one match category");
   }
   const typeSpecFindings = report.typeSpecProjects.flatMap((project) => project.findings);
+  for (const finding of typeSpecFindings) {
+    if (
+      !finding.detectorEvidence ||
+      !finding.source ||
+      (!finding.source.url && !finding.source.unavailableReason)
+    ) {
+      throw new Error(
+        `TypeSpec finding ${finding.occurrenceId} is missing source or detector evidence`,
+      );
+    }
+  }
+  if (report.reproduction.directAnalyzerCommands.length !== report.typeSpecProjects.length) {
+    throw new Error("Complete reports require one direct analyzer command per TypeSpec project");
+  }
+  if (
+    /breaking-change-evaluation-|typespec-breaking-change-base-/i.test(
+      JSON.stringify(report.reproduction),
+    )
+  ) {
+    throw new Error("Reproduction commands must not contain temporary checkout paths");
+  }
   const typeSpecIds = new Set(typeSpecFindings.map((finding) => finding.occurrenceId));
   if (
     report.matches.some((match) =>
@@ -58,11 +167,71 @@ export function validateRollup(report: EvaluationReport): void {
   if (JSON.stringify(report.rollup) !== JSON.stringify(expected)) {
     throw new Error("Report rollup does not recompute from detailed findings");
   }
+  const expectedGroups = computeFindingGroups(report.oadFindings, typeSpecFindings, report.matches);
+  if (JSON.stringify(report.findingGroups) !== JSON.stringify(expectedGroups)) {
+    throw new Error("Finding groups do not recompute from detailed findings");
+  }
 }
 
 function percent(value?: number): string {
   return value === undefined ? "suppressed (incomplete)" : `${(value * 100).toFixed(1)}%`;
 }
+
+function renderSource(source: SourceReference): string {
+  const location = [source.path, source.line ? `line ${source.line}` : undefined]
+    .filter(Boolean)
+    .join(", ");
+  if (source.url) {
+    return `[${source.revision}: ${location || "source"}](${source.url})${
+      source.jsonPath ? ` — JSONPath \`${source.jsonPath}\`` : ""
+    }`;
+  }
+  return `${source.revision}: ${location || "unavailable"} — ${
+    source.unavailableReason ?? "source link unavailable"
+  }${source.jsonPath ? ` — JSONPath \`${source.jsonPath}\`` : ""}`;
+}
+
+function renderOadFinding(finding: OadFinding): string[] {
+  return [
+    `- **Swagger finding:** \`${finding.occurrenceId}\` — \`${finding.rule}\` — ${finding.message}`,
+    `- **Detector evidence:** ${
+      finding.detectorEvidence
+        ? `[${finding.detectorEvidence.label}](${finding.detectorEvidence.url})${
+            finding.detectorEvidence.digest
+              ? ` (digest \`${finding.detectorEvidence.digest}\`)`
+              : ""
+          }`
+        : "unavailable"
+    }`,
+    `- **Swagger source:** ${finding.sources?.map(renderSource).join("; ") || "unavailable"}`,
+  ];
+}
+
+function renderTypeSpecFinding(finding: TypeSpecFinding): string[] {
+  const target = finding.operation
+    ? `${finding.operation.method.toUpperCase()} ${finding.operation.path}`
+    : finding.element || finding.component || "no operation target";
+  return [
+    `- **TypeSpec finding:** \`${finding.occurrenceId}\` — \`${finding.kind}\` — ${finding.message}`,
+    `- **TypeSpec target:** ${target}; project \`${finding.project}\`; versions \`${finding.versionPair.baseVersion}\` → \`${finding.versionPair.headVersion}\``,
+    `- **Detector evidence:** ${
+      finding.detectorEvidence
+        ? `[${finding.detectorEvidence.label}](${finding.detectorEvidence.url})`
+        : "unavailable"
+    }`,
+    `- **TypeSpec source:** ${finding.source ? renderSource(finding.source) : "unavailable"}`,
+  ];
+}
+
+const categoryTitles: Record<MatchCategory, string> = {
+  exact: "Exact matched findings",
+  "probable-review": "Probable matched findings (review required)",
+  "intentional-swagger-only": "Intentional Swagger-only coverage gaps",
+  "missed-equivalent": "Findings missing from the TypeSpec detector",
+  "typespec-only": "Findings missing from the Swagger detector",
+  ambiguous: "Ambiguous findings",
+  errors: "Finding evidence errors",
+};
 
 export function renderMarkdown(report: EvaluationReport): string {
   const lines = [
@@ -72,6 +241,24 @@ export function renderMarkdown(report: EvaluationReport): string {
     `**Complete:** ${report.complete ? "yes" : "no"}`,
     "",
   ];
+  if (report.pullRequest) {
+    const pr = report.pullRequest;
+    lines.push(
+      "## Pull request",
+      "",
+      `- **PR:** [${pr.owner}/${pr.repo}#${pr.number} — ${pr.title ?? "title unavailable"}](${pr.url})`,
+      `- **Author:** ${pr.author ?? "unavailable"}`,
+      `- **State:** ${pr.state ?? "unknown"}${pr.merged ? " (merged)" : ""}${
+        pr.mergedAt ? ` at ${pr.mergedAt}` : ""
+      }`,
+      `- **Base:** \`${pr.baseBranch ?? "unknown"}\` at \`${pr.baseSha}\``,
+      `- **Head:** \`${pr.headBranch ?? "unknown"}\` at \`${pr.headSha}\``,
+      `- **Changed TypeSpec files:** ${
+        pr.changedTypeSpecFiles.map((path) => `\`${path}\``).join(", ") || "none"
+      }`,
+      "",
+    );
+  }
   if (!report.qualification.qualified) {
     lines.push(
       "## Not qualified",
@@ -100,84 +287,105 @@ export function renderMarkdown(report: EvaluationReport): string {
       "",
     );
   }
-  if (report.matches.length) {
-    lines.push(
-      "## Correlation details",
-      "",
-      "| OAD occurrence | Category | TypeSpec occurrence(s) | Review |",
-      "| --- | --- | --- | --- |",
-      ...report.matches.map(
-        (match) =>
-          `| \`${match.oadOccurrenceId}\` | ${match.category} | ${
-            match.selectedTypeSpecOccurrenceIds.map((id) => `\`${id}\``).join(", ") || "-"
-          } | ${match.reviewRequired ? "required" : "-"} |`,
-      ),
-      "",
-    );
-  }
   const oadById = new Map(report.oadFindings.map((finding) => [finding.occurrenceId, finding]));
-  const reviewDetails = report.matches.filter((match) => match.category !== "exact");
-  if (reviewDetails.length) {
-    lines.push("## Review and non-match details", "");
-    for (const match of reviewDetails) {
-      const finding = oadById.get(match.oadOccurrenceId);
-      lines.push(
-        `### \`${match.oadOccurrenceId}\` — ${match.category}`,
-        "",
-        `- **OAD finding:** ${finding ? `\`${finding.rule}\` — ${finding.message}` : "missing"}`,
-        `- **Resolved targets:** ${
-          match.targets
-            .map(
-              (target) =>
-                [target.method, target.route, target.direction, target.statusCode]
-                  .filter(Boolean)
-                  .join(" ") || target.evidence.join("; "),
-            )
-            .join(" | ") || "none"
-        }`,
-        `- **Selected TypeSpec occurrence(s):** ${
-          match.selectedTypeSpecOccurrenceIds.map((id) => `\`${id}\``).join(", ") || "none"
-        }`,
-      );
-      const correlation = finding ? oadCorrelation[finding.rule] : undefined;
-      const intentionalGap =
-        correlation && "intentionalGap" in correlation ? correlation.intentionalGap : undefined;
-      if (intentionalGap) lines.push(`- **Intentional gap:** ${intentionalGap}`);
-      if (match.candidates.length) {
+  const typeSpecById = new Map(
+    report.typeSpecProjects
+      .flatMap((project) => project.findings)
+      .map((finding) => [finding.occurrenceId, finding]),
+  );
+  for (const category of [
+    "exact",
+    "probable-review",
+    "intentional-swagger-only",
+    "missed-equivalent",
+    "typespec-only",
+    "ambiguous",
+    "errors",
+  ] as const) {
+    const groups = report.findingGroups.filter((group) => group.category === category);
+    if (!groups.length) continue;
+    lines.push(`## ${categoryTitles[category]}`, "");
+    for (const group of groups) {
+      lines.push(`### ${group.key}`, "");
+      for (const oadId of group.oadOccurrenceIds) {
+        const finding = oadById.get(oadId);
+        const match = report.matches.find((candidate) => candidate.oadOccurrenceId === oadId);
+        if (!finding || !match) continue;
+        lines.push(...renderOadFinding(finding));
         lines.push(
-          "- **Candidates:**",
-          ...match.candidates.map(
-            (candidate) =>
-              `  - \`${candidate.typeSpecOccurrenceId}\`: score ${candidate.score}; ${
-                candidate.rejectionReasons.length
-                  ? `rejected because ${candidate.rejectionReasons.join(", ")}`
-                  : candidate.scoreEvidence.join(", ") || "no supporting identity evidence"
-              }`,
-          ),
+          `- **Resolved targets:** ${
+            match.targets
+              .map(
+                (target) =>
+                  [target.method, target.route, target.direction, target.statusCode]
+                    .filter(Boolean)
+                    .join(" ") || target.evidence.join("; "),
+              )
+              .join(" | ") || "none"
+          }`,
         );
-      } else {
-        lines.push("- **Candidates:** none");
+        const correlation = oadCorrelation[finding.rule];
+        const intentionalGap =
+          correlation && "intentionalGap" in correlation ? correlation.intentionalGap : undefined;
+        if (intentionalGap) lines.push(`- **Intentional gap:** ${intentionalGap}`);
+        for (const id of match.selectedTypeSpecOccurrenceIds) {
+          const selected = typeSpecById.get(id);
+          if (selected) lines.push(...renderTypeSpecFinding(selected));
+        }
+        lines.push(
+          `- **Decision trace:** ${
+            match.candidates.length
+              ? match.candidates
+                  .map(
+                    (candidate) =>
+                      `\`${candidate.typeSpecOccurrenceId}\` score ${candidate.score}: ${
+                        candidate.rejectionReasons.join(", ") ||
+                        candidate.exactIdentity.join(", ") ||
+                        candidate.scoreEvidence.join(", ") ||
+                        "no identity evidence"
+                      }`,
+                  )
+                  .join("; ")
+              : "no candidates"
+          }`,
+          "",
+        );
       }
-      lines.push("");
+      for (const id of group.typeSpecOccurrenceIds) {
+        if (group.oadOccurrenceIds.length) continue;
+        const finding = typeSpecById.get(id);
+        if (finding) lines.push(...renderTypeSpecFinding(finding), "");
+      }
     }
   }
-  const selected = new Set(report.matches.flatMap((match) => match.selectedTypeSpecOccurrenceIds));
-  const typeSpecOnly = report.typeSpecProjects
-    .flatMap((project) => project.findings)
-    .filter((finding) => !selected.has(finding.occurrenceId));
-  if (typeSpecOnly.length) {
+  if (report.reproduction) {
     lines.push(
-      "## TypeSpec-only findings",
+      "## Reproduce",
       "",
-      ...typeSpecOnly.map(
-        (finding) =>
-          `- \`${finding.occurrenceId}\` — \`${finding.kind}\` in \`${finding.project}\`${
-            finding.operation
-              ? ` (${finding.operation.method.toUpperCase()} ${finding.operation.path})`
-              : ""
-          }: ${finding.message}`,
-      ),
+      `**Shell:** ${report.reproduction.shell}`,
       "",
+      ...report.reproduction.setupCommands.flatMap((entry) => [
+        `### ${entry.label}`,
+        "",
+        "```powershell",
+        entry.command,
+        "```",
+        "",
+      ]),
+      `### ${report.reproduction.evaluatorCommand.label}`,
+      "",
+      "```powershell",
+      report.reproduction.evaluatorCommand.command,
+      "```",
+      "",
+      ...report.reproduction.directAnalyzerCommands.flatMap((entry) => [
+        `### ${entry.label}`,
+        "",
+        "```powershell",
+        entry.command,
+        "```",
+        "",
+      ]),
     );
   }
   if (report.errors.length) {

@@ -2,14 +2,21 @@ import { mkdir, mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { enrichOadFindingEvidence, normalizeTypeSpecFindingEvidence } from "./evidence.ts";
 import { parsePrReference, qualifyPullRequest, type QualifiedPr } from "./github.ts";
 import { matchFindings } from "./matcher.ts";
 import { defaultCacheDir, findPreparedTool } from "./prepare.ts";
 import { runProcess, type ProcessResult } from "./process.ts";
 import { resolveProjectRoots, runTypeSpecProjects } from "./projects.ts";
-import { computeRollup, writeReportFiles } from "./report.ts";
+import { computeFindingGroups, computeRollup, writeReportFiles } from "./report.ts";
 import { resolveOadTargets } from "./swagger-target.ts";
-import type { CanonicalTarget, EvaluationReport, Phase } from "./types.ts";
+import type {
+  CanonicalTarget,
+  EvaluationReport,
+  Phase,
+  PullRequestDetails,
+  Reproduction,
+} from "./types.ts";
 
 export const DEFAULT_EVALUATION_TOOL_SHA = "d0ab464d60c47d6699bfea0292c901864b5d8ba0";
 export const EXIT_NOT_QUALIFIED = 3;
@@ -26,11 +33,37 @@ export interface EvaluateOptions {
 }
 
 function baseReport(qualifiedPr: QualifiedPr): EvaluationReport {
+  const pullRequest: PullRequestDetails | undefined =
+    qualifiedPr.details ??
+    (qualifiedPr.headSha
+      ? {
+          ...qualifiedPr.reference,
+          merged: Boolean(qualifiedPr.qualification.evidence.merged),
+          state: qualifiedPr.qualification.evidence.state,
+          url:
+            qualifiedPr.qualification.evidence.prUrl ??
+            `https://github.com/${qualifiedPr.reference.owner}/${qualifiedPr.reference.repo}/pull/${qualifiedPr.reference.number}`,
+          headSha: qualifiedPr.headSha,
+          baseSha: qualifiedPr.baseSha,
+          changedTypeSpecFiles: qualifiedPr.changedTypeSpecFiles,
+        }
+      : undefined);
+  const oadFindings = qualifiedPr.oadFindings.map((finding) =>
+    pullRequest
+      ? enrichOadFindingEvidence(
+          finding,
+          pullRequest,
+          qualifiedPr.qualification.evidence.runs?.[finding.phase]?.htmlUrl,
+          qualifiedPr.qualification.evidence.runs?.[finding.phase]?.logDigest,
+        )
+      : finding,
+  );
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     status: qualifiedPr.qualification.qualified ? "failed" : "not-qualified",
     complete: false,
     generatedAt: new Date().toISOString(),
+    pullRequest,
     qualification: qualifiedPr.qualification,
     provenance: qualifiedPr.headSha
       ? {
@@ -44,9 +77,10 @@ function baseReport(qualifiedPr: QualifiedPr): EvaluationReport {
         }
       : {},
     dimensions: [],
-    oadFindings: qualifiedPr.oadFindings,
+    oadFindings,
     typeSpecProjects: [],
     matches: [],
+    findingGroups: [],
     errors: [],
   };
 }
@@ -131,7 +165,7 @@ async function removeEvaluationDirectory(path: string): Promise<string | undefin
 
 function failedReport(error: unknown): EvaluationReport {
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     status: "failed",
     complete: false,
     generatedAt: new Date().toISOString(),
@@ -141,7 +175,63 @@ function failedReport(error: unknown): EvaluationReport {
     oadFindings: [],
     typeSpecProjects: [],
     matches: [],
+    findingGroups: [],
     errors: [error instanceof Error ? error.message : String(error)],
+  };
+}
+
+function quotePowerShell(value: string): string {
+  return `'${value.replaceAll("'", "''")}'`;
+}
+
+function createReproduction(
+  report: EvaluationReport,
+  qualifiedPr: QualifiedPr,
+  projects: string[],
+): Reproduction {
+  const evaluatorCommit = report.provenance.evaluator!.commit;
+  const tool = report.provenance.tool!;
+  const pr = report.pullRequest!;
+  const packageDirectory = "evaluator/eng/tools/breaking-change-evaluator";
+  return {
+    shell: "powershell",
+    evaluatorCommit,
+    analyzerSourceSha: tool.sourceSha,
+    analyzerArtifactDigest: tool.artifactDigest,
+    prHeadSha: pr.headSha,
+    prBaseSha: pr.baseSha,
+    setupCommands: [
+      {
+        label: "Check out the evaluator",
+        command: [
+          `git clone ${quotePowerShell("https://github.com/markcowl/azure-rest-api-specs.git")} evaluator`,
+          `git -C evaluator checkout ${quotePowerShell(evaluatorCommit)}`,
+          `corepack pnpm --dir evaluator install --frozen-lockfile`,
+        ].join("\n"),
+      },
+      {
+        label: "Prepare the immutable analyzer",
+        command: `$prepared = corepack pnpm --dir ${packageDirectory} exec breaking-change-evaluator prepare --typespec-revision ${tool.sourceSha} | ConvertFrom-Json\nif ($prepared.artifactDigest -ne ${quotePowerShell(tool.artifactDigest)}) { throw 'Prepared analyzer digest does not match the report' }`,
+      },
+      {
+        label: "Check out the evaluated target",
+        command: [
+          `git clone --filter=blob:none --no-checkout ${quotePowerShell(qualifiedPr.cloneUrl)} target`,
+          `git -C target fetch --no-tags origin ${pr.baseSha} ${pr.headSha}`,
+          `git -C target checkout --detach ${pr.headSha}`,
+          `corepack pnpm --dir target install --frozen-lockfile`,
+        ].join("\n"),
+      },
+    ],
+    evaluatorCommand: {
+      label: "Rerun the complete evaluator",
+      command: `corepack pnpm --dir ${packageDirectory} exec breaking-change-evaluator evaluate --pr ${quotePowerShell(pr.url)} --tool-revision ${tool.sourceSha} --json-output evaluator.json --markdown-output evaluator.md`,
+    },
+    directAnalyzerCommands: projects.map((project) => ({
+      label: `Run the TypeSpec analyzer for ${project}`,
+      project,
+      command: `Push-Location target\nnode $prepared.executable ${quotePowerShell(project)} --base-ref ${pr.baseSha} --json-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-typespec.json`)} --fail-on-breaking\nPop-Location`,
+    })),
   };
 }
 
@@ -210,8 +300,19 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
       projects,
       outputDir,
     );
-    report.typeSpecProjects = execution.projects;
-    const allTypeSpecFindings = execution.projects.flatMap((project) => project.findings);
+    report.typeSpecProjects = execution.projects.map((project) => ({
+      ...project,
+      findings: project.findings.map((finding) =>
+        normalizeTypeSpecFindingEvidence(
+          finding,
+          checkout,
+          report.pullRequest!,
+          prepared.sourceSha,
+        ),
+      ),
+    }));
+    report.reproduction = createReproduction(report, qualifiedPr, projects);
+    const allTypeSpecFindings = report.typeSpecProjects.flatMap((project) => project.findings);
     const targets = new Map<string, CanonicalTarget[]>();
     const targetResolutionErrors = new Map<string, string>();
     for (const finding of report.oadFindings) {
@@ -248,6 +349,11 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
     report.complete = execution.complete && targetResolutionErrors.size === 0;
     report.status = report.complete ? "evaluated" : "partial";
     report.errors.push(...execution.errors, ...targetResolutionErrors.values());
+    report.findingGroups = computeFindingGroups(
+      report.oadFindings,
+      allTypeSpecFindings,
+      report.matches,
+    );
     if (report.complete) {
       report.rollup = computeRollup(report.oadFindings, allTypeSpecFindings, report.matches);
     }

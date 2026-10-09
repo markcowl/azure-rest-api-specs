@@ -14,15 +14,46 @@
     "oadFindings",
     "typeSpecProjects",
     "matches",
+    "findingGroups",
     "errors"
   ],
   "properties": {
-    "schemaVersion": { "const": 1 },
+    "schemaVersion": { "const": 2 },
     "status": {
       "enum": ["evaluated", "partial", "not-qualified", "failed"]
     },
     "complete": { "type": "boolean" },
     "generatedAt": { "type": "string", "format": "date-time" },
+    "pullRequest": {
+      "type": "object",
+      "required": [
+        "owner",
+        "repo",
+        "number",
+        "merged",
+        "url",
+        "baseSha",
+        "headSha",
+        "changedTypeSpecFiles"
+      ],
+      "properties": {
+        "owner": { "type": "string" },
+        "repo": { "type": "string" },
+        "number": { "type": "integer", "minimum": 1 },
+        "title": { "type": "string" },
+        "author": { "type": "string" },
+        "state": { "type": "string" },
+        "merged": { "type": "boolean" },
+        "url": { "type": "string", "format": "uri" },
+        "baseBranch": { "type": "string" },
+        "headBranch": { "type": "string" },
+        "baseSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "headSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "mergedAt": { "type": "string", "format": "date-time" },
+        "changedTypeSpecFiles": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
     "qualification": {
       "type": "object",
       "required": ["qualified", "reasonCodes", "evidence"],
@@ -70,6 +101,61 @@
     "oadFindings": { "type": "array", "items": { "type": "object" } },
     "typeSpecProjects": { "type": "array", "items": { "type": "object" } },
     "matches": { "type": "array", "items": { "type": "object" } },
+    "findingGroups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["category", "key", "oadOccurrenceIds", "typeSpecOccurrenceIds"],
+        "properties": {
+          "category": {
+            "enum": [
+              "exact",
+              "probable-review",
+              "intentional-swagger-only",
+              "missed-equivalent",
+              "typespec-only",
+              "ambiguous",
+              "errors"
+            ]
+          },
+          "key": { "type": "string" },
+          "swaggerRule": { "type": "string" },
+          "typeSpecKind": { "type": "string" },
+          "oadOccurrenceIds": { "type": "array", "items": { "type": "string" } },
+          "typeSpecOccurrenceIds": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    },
+    "reproduction": {
+      "type": "object",
+      "required": [
+        "shell",
+        "evaluatorCommit",
+        "analyzerSourceSha",
+        "analyzerArtifactDigest",
+        "prHeadSha",
+        "prBaseSha",
+        "setupCommands",
+        "evaluatorCommand",
+        "directAnalyzerCommands"
+      ],
+      "properties": {
+        "shell": { "const": "powershell" },
+        "evaluatorCommit": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "analyzerSourceSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "analyzerArtifactDigest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "prHeadSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "prBaseSha": { "type": "string", "pattern": "^[0-9a-f]{40}$" },
+        "setupCommands": { "type": "array", "items": { "$ref": "#/$defs/command" } },
+        "evaluatorCommand": { "$ref": "#/$defs/command" },
+        "directAnalyzerCommands": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/command" }
+        }
+      },
+      "additionalProperties": false
+    },
     "rollup": { "type": "object" },
     "errors": { "type": "array", "items": { "type": "string" } }
   },
@@ -82,9 +168,21 @@
       "if": { "properties": { "status": { "const": "evaluated" } } },
       "then": {
         "properties": { "complete": { "const": true } },
-        "required": ["rollup"]
+        "required": ["rollup", "pullRequest", "reproduction"]
       }
     }
   ],
+  "$defs": {
+    "command": {
+      "type": "object",
+      "required": ["label", "command"],
+      "properties": {
+        "label": { "type": "string" },
+        "command": { "type": "string" },
+        "project": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
   "additionalProperties": false
 }

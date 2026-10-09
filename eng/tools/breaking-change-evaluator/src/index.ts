@@ -47,6 +47,7 @@ export async function main(args: string[]): Promise<number> {
 }
 
 export * from "./correlation.ts";
+export * from "./evidence.ts";
 export * from "./evaluate.ts";
 export * from "./github.ts";
 export * from "./matcher.ts";

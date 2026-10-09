@@ -7,6 +7,7 @@ import type {
   OadFinding,
   Phase,
   PrReference,
+  PullRequestDetails,
   Qualification,
   ReasonCode,
   RunEvidence,
@@ -23,6 +24,7 @@ const workflowNames: Record<Phase, string> = {
 
 export interface QualifiedPr {
   reference: PrReference;
+  details?: PullRequestDetails;
   qualification: Qualification;
   headSha: string;
   baseSha: string;
@@ -198,9 +200,24 @@ export async function qualifyPullRequest(
     baseSha: pr.base.sha,
     runs: {},
   };
+  const details: PullRequestDetails = {
+    ...reference,
+    title: pr.title,
+    author: pr.user?.login,
+    state: pr.state,
+    merged: Boolean(pr.merged_at),
+    url: pr.html_url,
+    baseBranch: pr.base.ref,
+    headBranch: pr.head.ref,
+    baseSha: pr.base.sha,
+    headSha: pr.head.sha,
+    mergedAt: pr.merged_at ?? undefined,
+    changedTypeSpecFiles: [],
+  };
   if (pr.state !== "open" && !pr.merged_at) {
     return {
       reference,
+      details,
       qualification: notQualified(["pull-request-not-open-or-merged"], evidence),
       headSha: pr.head.sha,
       baseSha: pr.base.sha,
@@ -214,9 +231,11 @@ export async function qualifyPullRequest(
     .filter((file) => file.filename.endsWith(".tsp"))
     .map((file) => file.filename);
   evidence.changedTypeSpecFiles = tspFiles;
+  details.changedTypeSpecFiles = tspFiles;
   if (tspFiles.length === 0) {
     return {
       reference,
+      details,
       qualification: notQualified(["no-typespec-changes"], evidence),
       headSha: pr.head.sha,
       baseSha: pr.base.sha,
@@ -335,6 +354,7 @@ export async function qualifyPullRequest(
   }
   return {
     reference,
+    details,
     qualification: {
       qualified: reasons.length === 0,
       reasonCodes: [...new Set(reasons)],

@@ -31,6 +31,35 @@ export interface PrReference {
   number: number;
 }
 
+export interface PullRequestDetails extends PrReference {
+  title?: string;
+  author?: string;
+  state?: string;
+  merged: boolean;
+  url: string;
+  baseBranch?: string;
+  headBranch?: string;
+  baseSha: string;
+  headSha: string;
+  mergedAt?: string;
+  changedTypeSpecFiles: string[];
+}
+
+export interface EvidenceLink {
+  label: string;
+  url: string;
+  digest?: string;
+}
+
+export interface SourceReference {
+  revision: "base" | "head";
+  path?: string;
+  line?: number;
+  url?: string;
+  jsonPath?: string;
+  unavailableReason?: string;
+}
+
 export interface QualificationEvidence {
   prUrl?: string;
   state?: string;
@@ -81,6 +110,8 @@ export interface OadFinding {
   newJsonPath?: string;
   comparison?: SwaggerComparison;
   evidence: string;
+  detectorEvidence?: EvidenceLink;
+  sources?: SourceReference[];
 }
 
 export interface TypeSpecFinding {
@@ -97,6 +128,8 @@ export interface TypeSpecFinding {
   statusCode?: string;
   versionPair: { baseVersion: string; headVersion: string };
   location?: { file: string; line: number };
+  detectorEvidence?: EvidenceLink;
+  source?: SourceReference;
 }
 
 export interface CanonicalTarget {
@@ -163,11 +196,39 @@ export interface ProjectResult {
   error?: string;
 }
 
+export interface FindingGroup {
+  category: MatchCategory;
+  key: string;
+  swaggerRule?: string;
+  typeSpecKind?: string;
+  oadOccurrenceIds: string[];
+  typeSpecOccurrenceIds: string[];
+}
+
+export interface ReproductionCommand {
+  label: string;
+  command: string;
+  project?: string;
+}
+
+export interface Reproduction {
+  shell: "powershell";
+  evaluatorCommit: string;
+  analyzerSourceSha: string;
+  analyzerArtifactDigest: string;
+  prHeadSha: string;
+  prBaseSha: string;
+  setupCommands: ReproductionCommand[];
+  evaluatorCommand: ReproductionCommand;
+  directAnalyzerCommands: ReproductionCommand[];
+}
+
 export interface EvaluationReport {
-  schemaVersion: 1;
+  schemaVersion: 2;
   status: EvaluationStatus;
   complete: boolean;
   generatedAt: string;
+  pullRequest?: PullRequestDetails;
   qualification: Qualification;
   provenance: {
     evaluator?: { commit: string };
@@ -178,6 +239,8 @@ export interface EvaluationReport {
   oadFindings: OadFinding[];
   typeSpecProjects: ProjectResult[];
   matches: MatchTrace[];
+  findingGroups: FindingGroup[];
+  reproduction?: Reproduction;
   rollup?: Rollup;
   errors: string[];
 }
