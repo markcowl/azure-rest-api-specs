@@ -67,11 +67,14 @@ export function normalizeTypeSpecFindingEvidence(
   checkout: string,
   details: PullRequestDetails,
   analyzerSourceSha: string,
+  reportEvidence?: EvidenceLink,
 ): TypeSpecFinding {
-  const detectorEvidence: EvidenceLink = {
-    label: `TypeSpec analyzer ${analyzerSourceSha}`,
-    url: `https://github.com/Azure/typespec-azure/commit/${analyzerSourceSha}`,
-  };
+  const detectorEvidence: EvidenceLink =
+    reportEvidence ??
+    ({
+      label: `TypeSpec analyzer ${analyzerSourceSha}`,
+      url: `https://github.com/Azure/typespec-azure/commit/${analyzerSourceSha}`,
+    } satisfies EvidenceLink);
   if (!finding.location) {
     return {
       ...finding,

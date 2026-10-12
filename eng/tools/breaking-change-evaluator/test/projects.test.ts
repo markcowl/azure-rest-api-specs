@@ -15,14 +15,30 @@ afterEach(async () => {
   );
 });
 
-function validReport(requiresAction: boolean) {
+const timing = {
+  compileBaseMs: 1,
+  compileHeadMs: 2,
+  versionMutatorsMs: 3,
+  canonicalizeMs: 4,
+  identityMatchingMs: 5,
+  diffEngineMs: 6,
+  classifyMs: 7,
+  suppressMs: 8,
+  reportMs: 9,
+  totalMs: 45,
+};
+
+function validReport(
+  requiresAction: boolean,
+  phase: "same-version" | "cross-version" = "same-version",
+) {
   const findings = requiresAction
     ? [
         {
           kind: "OperationRemoved",
           severity: "error",
           rule: "operation-removed",
-          phase: "same-version",
+          phase,
           suppressed: false,
           message: "Operation removed",
           versionPair: { baseVersion: "v1", headVersion: "v1" },
@@ -49,12 +65,12 @@ function validReport(requiresAction: boolean) {
           serviceName: "Foo",
           baseVersion: "v1",
           headVersion: "v1",
-          phase: "same-version",
+          phase,
           findingCount: findings.length,
         },
       ],
     },
-    timing: {},
+    timing,
   };
 }
 
@@ -91,13 +107,16 @@ describe("TypeSpec project discovery", () => {
 describe("TypeSpec project execution", () => {
   it.each([
     { code: 0, requiresAction: false, findings: 0 },
-    { code: 1, requiresAction: true, findings: 1 },
+    { code: 1, requiresAction: true, findings: 2 },
   ])("accepts exit $code only with an agreeing valid report", async (testCase) => {
     const outputDir = await mkdtemp(join(tmpdir(), "project-output-"));
     temporaryDirectories.push(outputDir);
     const processRunner = vi.fn(async (_command, args: string[]) => {
       const output = args[args.indexOf("--json-output") + 1];
-      await writeFile(output, JSON.stringify(validReport(testCase.requiresAction)));
+      const markdown = args[args.indexOf("--markdown-output") + 1];
+      const phase = args[args.indexOf("--phase") + 1] as "same-version" | "cross-version";
+      await writeFile(output, JSON.stringify(validReport(testCase.requiresAction, phase)));
+      await writeFile(markdown, `# ${phase}`);
       return result({ code: testCase.code });
     });
 
@@ -116,15 +135,9 @@ describe("TypeSpec project execution", () => {
     });
     expect(project.findings).toHaveLength(testCase.findings);
     expect(project.reportDigest).toMatch(/^[0-9a-f]{64}$/);
-    expect(project.versionComparisons).toEqual([
-      {
-        serviceName: "Foo",
-        baseVersion: "v1",
-        headVersion: "v1",
-        phase: "same-version",
-        findingCount: testCase.findings,
-      },
-    ]);
+    expect(project.phaseExecutions?.A?.markdownDigest).toMatch(/^[0-9a-f]{64}$/);
+    expect(project.phaseExecutions?.B?.timing?.totalMs).toBe(45);
+    expect(project.versionComparisons).toHaveLength(2);
   });
 
   it.each([
@@ -158,6 +171,7 @@ describe("TypeSpec project execution", () => {
       const processRunner = vi.fn(async (_command, args: string[]) => {
         if (report) {
           await writeFile(args[args.indexOf("--json-output") + 1], JSON.stringify(report));
+          await writeFile(args[args.indexOf("--markdown-output") + 1], "# report");
         }
         return result({ code: 0 });
       });
@@ -180,8 +194,13 @@ describe("TypeSpec project execution", () => {
     let invocation = 0;
     const processRunner = vi.fn(async (_command, args: string[]) => {
       invocation++;
-      if (invocation === 1) {
-        await writeFile(args[args.indexOf("--json-output") + 1], JSON.stringify(validReport(true)));
+      if (invocation <= 2) {
+        const phase = args[args.indexOf("--phase") + 1] as "same-version" | "cross-version";
+        await writeFile(
+          args[args.indexOf("--json-output") + 1],
+          JSON.stringify(validReport(true, phase)),
+        );
+        await writeFile(args[args.indexOf("--markdown-output") + 1], `# ${phase}`);
         return result({ code: 1 });
       }
       return result({ code: 2, stderr: "controlled failure" });
@@ -197,7 +216,7 @@ describe("TypeSpec project execution", () => {
     );
 
     expect(summary).toMatchObject({ status: "partial", complete: false, exitCode: 4 });
-    expect(summary.projects[0].findings).toHaveLength(1);
+    expect(summary.projects[0].findings).toHaveLength(2);
     expect(summary.projects[1]).toMatchObject({ status: "error", findings: [] });
     expect(summary.errors).toHaveLength(1);
   });

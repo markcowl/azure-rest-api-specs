@@ -42,7 +42,18 @@ export const typeSpecJsonReportSchema = z
       ),
       noComparisonReason: z.string().optional(),
     }),
-    timing: z.unknown(),
+    timing: z.object({
+      compileBaseMs: z.number().nonnegative(),
+      compileHeadMs: z.number().nonnegative(),
+      versionMutatorsMs: z.number().nonnegative(),
+      canonicalizeMs: z.number().nonnegative(),
+      identityMatchingMs: z.number().nonnegative(),
+      diffEngineMs: z.number().nonnegative(),
+      classifyMs: z.number().nonnegative(),
+      suppressMs: z.number().nonnegative(),
+      reportMs: z.number().nonnegative(),
+      totalMs: z.number().nonnegative(),
+    }),
   })
   .passthrough()
   .superRefine((report, context) => {

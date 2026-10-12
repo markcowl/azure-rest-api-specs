@@ -1,6 +1,6 @@
 import { mkdir, mkdtemp, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { dirname, join } from "node:path";
+import { basename, dirname, extname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { enrichOadFindingEvidence, normalizeTypeSpecFindingEvidence } from "./evidence.ts";
 import { parsePrReference, qualifyPullRequest, type QualifiedPr } from "./github.ts";
@@ -230,7 +230,7 @@ function createReproduction(
     directAnalyzerCommands: projects.map((project) => ({
       label: `Run the TypeSpec analyzer for ${project}`,
       project,
-      command: `Push-Location target\nnode $prepared.executable ${quotePowerShell(project)} --base-ref ${pr.baseSha} --json-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-typespec.json`)} --fail-on-breaking\nPop-Location`,
+      command: `Push-Location target\nnode $prepared.executable ${quotePowerShell(project)} --base-ref ${pr.baseSha} --phase same-version --json-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-a.json`)} --markdown-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-a.md`)} --fail-on-breaking\nnode $prepared.executable ${quotePowerShell(project)} --base-ref ${pr.baseSha} --phase cross-version --json-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-b.json`)} --markdown-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-b.md`)} --fail-on-breaking\nPop-Location`,
     })),
   };
 }
@@ -281,7 +281,9 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
 
   const temporary = await mkdtemp(join(tmpdir(), "breaking-change-evaluation-"));
   const checkout = join(temporary, "repo");
-  const outputDir = join(temporary, "reports");
+  const markdownPath = resolve(options.markdownOutput);
+  const reportStem = basename(markdownPath, extname(markdownPath));
+  const outputDir = join(dirname(markdownPath), `${reportStem}-artifacts`, "typespec");
   try {
     await checkoutPullRequest(qualifiedPr, checkout);
     await mkdir(outputDir, { recursive: true });
@@ -302,12 +304,46 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
     );
     report.typeSpecProjects = execution.projects.map((project) => ({
       ...project,
+      phaseExecutions: project.phaseExecutions
+        ? Object.fromEntries(
+            Object.entries(project.phaseExecutions).map(([phase, phaseExecution]) => [
+              phase,
+              phaseExecution
+                ? {
+                    ...phaseExecution,
+                    jsonReport: relative(
+                      dirname(markdownPath),
+                      phaseExecution.jsonReport,
+                    ).replaceAll("\\", "/"),
+                    markdownReport: relative(
+                      dirname(markdownPath),
+                      phaseExecution.markdownReport,
+                    ).replaceAll("\\", "/"),
+                  }
+                : phaseExecution,
+            ]),
+          )
+        : undefined,
       findings: project.findings.map((finding) =>
         normalizeTypeSpecFindingEvidence(
           finding,
           checkout,
           report.pullRequest!,
           prepared.sourceSha,
+          (() => {
+            const phase = finding.phase === "same-version" ? "A" : "B";
+            const phaseExecution = project.phaseExecutions?.[phase];
+            return phaseExecution?.markdownDigest
+              ? {
+                  label: `TypeSpec Phase ${phase} analyzer report`,
+                  url: relative(dirname(markdownPath), phaseExecution.markdownReport).replaceAll(
+                    "\\",
+                    "/",
+                  ),
+                  digest: phaseExecution.markdownDigest,
+                }
+              : undefined;
+          })(),
         ),
       ),
     }));

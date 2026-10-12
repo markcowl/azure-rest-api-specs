@@ -342,6 +342,8 @@ export async function qualifyPullRequest(
         logDigest: parsed.digest,
         summaryDigest: summaryValidation.digest,
         oadVersion: summaryValidation.oadVersion,
+        detectorDurationMs: parsed.detectorDurationMs,
+        detectorTimingSource: parsed.detectorDurationMs === undefined ? undefined : "workflow-log",
       };
       evidence.runs![phase] = runEvidence;
     } catch (error) {

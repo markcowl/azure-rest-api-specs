@@ -37,7 +37,18 @@ function validReport() {
         versionPair: { baseVersion: "2024-01-01", headVersion: "2025-01-01" },
       },
     ],
-    timing: {},
+    timing: {
+      compileBaseMs: 1,
+      compileHeadMs: 2,
+      versionMutatorsMs: 3,
+      canonicalizeMs: 4,
+      identityMatchingMs: 5,
+      diffEngineMs: 6,
+      classifyMs: 7,
+      suppressMs: 8,
+      reportMs: 9,
+      totalMs: 45,
+    },
   };
 }
 

@@ -82,6 +82,8 @@ export interface RunEvidence {
   logDigest?: string;
   summaryDigest?: string;
   oadVersion?: string;
+  detectorDurationMs?: number;
+  detectorTimingSource?: "workflow-log" | "job-summary";
 }
 
 export interface Qualification {
@@ -122,6 +124,7 @@ export interface TypeSpecFinding {
   rule: string;
   phase: string;
   severity: string;
+  suppressed?: boolean;
   message: string;
   operation?: { method: string; path: string };
   element?: string;
@@ -189,6 +192,17 @@ export interface RollupMetrics {
   probableInclusiveRecall?: number;
 }
 
+export interface ErrorEquivalenceMetrics {
+  oadErrors: number;
+  typeSpecErrors: number;
+  matchedErrorOad: number;
+  matchedErrorTypeSpec: number;
+  oadErrorMatchedToTypeSpecNonError: number;
+  typeSpecErrorMatchedToOadNonError: number;
+  oadErrorsWithoutEquivalent: number;
+  typeSpecErrorsWithoutEquivalent: number;
+}
+
 export type PhaseComparisonOutcome = "compared" | "concordant-zero" | "typespec-only-divergence";
 
 export interface PhaseRollup extends RollupMetrics {
@@ -197,6 +211,7 @@ export interface PhaseRollup extends RollupMetrics {
 
 export interface Rollup extends RollupMetrics {
   byPhase: Record<Phase, PhaseRollup>;
+  errorEquivalence: Record<Phase, ErrorEquivalenceMetrics>;
 }
 
 export interface ProjectResult {
@@ -204,10 +219,40 @@ export interface ProjectResult {
   status: "complete" | "error";
   exitCode?: number;
   reportDigest?: string;
+  phaseExecutions?: Partial<Record<Phase, TypeSpecPhaseExecution>>;
   comparisonsPerformed?: number;
   versionComparisons?: VersionComparisonExecution[];
   noComparisonReason?: string;
   findings: TypeSpecFinding[];
+  error?: string;
+}
+
+export interface TimingInfo {
+  compileBaseMs: number;
+  compileHeadMs: number;
+  versionMutatorsMs: number;
+  canonicalizeMs: number;
+  identityMatchingMs: number;
+  diffEngineMs: number;
+  classifyMs: number;
+  suppressMs: number;
+  reportMs: number;
+  totalMs: number;
+}
+
+export interface TypeSpecPhaseExecution {
+  phase: Phase;
+  analyzerPhase: "same-version" | "cross-version";
+  status: "complete" | "error";
+  exitCode?: number;
+  jsonReport: string;
+  markdownReport: string;
+  jsonDigest?: string;
+  markdownDigest?: string;
+  timing?: TimingInfo;
+  comparisonsPerformed?: number;
+  versionComparisons?: VersionComparisonExecution[];
+  noComparisonReason?: string;
   error?: string;
 }
 

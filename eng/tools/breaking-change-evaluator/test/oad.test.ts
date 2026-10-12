@@ -31,6 +31,17 @@ RETURN definition runOad`;
     expect(parsed.zeroResultWithoutOutput).toBe(false);
   });
 
+  it("captures only explicitly labeled OAD detector timing", () => {
+    const timed = parseOadLog(
+      `OAD analysis duration: 1.25 s\noadCompareOutput: ${JSON.stringify([message])}`,
+      "A",
+    );
+    const untimed = parseOadLog(`oadCompareOutput: ${JSON.stringify([message])}`, "A");
+
+    expect(timed.detectorDurationMs).toBe(1250);
+    expect(untimed.detectorDurationMs).toBeUndefined();
+  });
+
   it("rejects incomplete structured output", () => {
     expect(() => parseOadLog("oadCompareOutput: [{", "A")).toThrow("Incomplete oadCompareOutput");
   });

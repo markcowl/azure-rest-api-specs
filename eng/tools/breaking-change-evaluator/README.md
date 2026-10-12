@@ -42,12 +42,23 @@ TypeSpec-only findings are grouped by TypeSpec finding kind. “Missing from Swa
 Swagger checks did not report an equivalent finding, not that a Swagger defect has been confirmed.
 Each TypeSpec project also records every executed same-version and cross-version comparison,
 including zero-finding comparisons, so phase execution does not have to be inferred from findings.
+The prepared analyzer runs independently for each phase and emits durable JSON and Markdown
+artifacts next to the evaluator report. TypeSpec findings link to the exact generated Markdown
+artifact rather than using the analyzer source commit as detector evidence; the source commit
+remains provenance.
 OAD `NoVersionChange` records are retained as informational comparison context but excluded from
 comparable-finding totals and detector coverage rates.
 Rollups are reported overall and separately by phase: Phase A compares the PR's Swagger Breaking
 Change findings with TypeSpec `same-version` findings, while Phase B compares Breaking Change
 (Cross-Version) findings with TypeSpec `cross-version` findings.
-Incomplete reports suppress rollups and recall rates.
+Detailed reports compare actionable errors before non-error findings. A semantic match remains a
+match when detector severities disagree, but the error-status mismatch is reported explicitly.
+TypeSpec error state accounts for suppression. Decision summaries show the selected evidence in
+plain language and reserve the full candidate trace for JSON.
+
+Detector performance is reported independently by phase using timing emitted by the detector
+itself. The evaluator never substitutes GitHub Actions workflow duration for missing OAD detector
+timing. Incomplete reports suppress rollups and coverage rates.
 
 Each complete dossier includes commands to reproduce both the full evaluator run and each direct
 TypeSpec analyzer project run. The commands pin the evaluator commit, analyzer source SHA and

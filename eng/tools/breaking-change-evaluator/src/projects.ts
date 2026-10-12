@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { runProcess } from "./process.ts";
 import { typeSpecJsonReportSchema, type TypeSpecJsonReport } from "./schema.ts";
-import type { ProjectResult, TypeSpecFinding } from "./types.ts";
+import type { Phase, ProjectResult, TypeSpecFinding, TypeSpecPhaseExecution } from "./types.ts";
 
 type ProcessRunner = typeof runProcess;
 
@@ -65,6 +65,7 @@ function mapFindings(project: string, report: TypeSpecJsonReport): TypeSpecFindi
     rule: finding.rule,
     phase: finding.phase,
     severity: finding.severity,
+    suppressed: finding.suppressed,
     message: finding.message,
     operation: finding.operation,
     element: finding.element,
@@ -76,20 +77,105 @@ function mapFindings(project: string, report: TypeSpecJsonReport): TypeSpecFindi
 }
 
 function processFailure(
-  project: string,
+  phase: Phase,
+  jsonReport: string,
+  markdownReport: string,
   result: Awaited<ReturnType<typeof runProcess>>,
-): ProjectResult {
+): TypeSpecPhaseExecution {
   return {
-    project,
+    phase,
+    analyzerPhase: phase === "A" ? "same-version" : "cross-version",
     status: "error",
     exitCode: result.code ?? undefined,
-    findings: [],
+    jsonReport,
+    markdownReport,
     error: result.timedOut
       ? "TypeSpec analysis timed out"
       : result.signal
         ? `TypeSpec analysis terminated by ${result.signal}`
         : result.stderr || result.stdout || "TypeSpec analysis failed without output",
   };
+}
+
+async function runTypeSpecPhase(
+  executable: string,
+  checkout: string,
+  baseSha: string,
+  project: string,
+  outputDir: string,
+  phase: Phase,
+  processRunner: ProcessRunner = runProcess,
+): Promise<{ execution: TypeSpecPhaseExecution; findings: TypeSpecFinding[] }> {
+  const safeName = createHash("sha256").update(project).digest("hex").slice(0, 16);
+  const suffix = phase.toLowerCase();
+  const jsonOutput = join(outputDir, `${safeName}-phase-${suffix}.json`);
+  const markdownOutput = join(outputDir, `${safeName}-phase-${suffix}.md`);
+  const analyzerPhase = phase === "A" ? "same-version" : "cross-version";
+  const result = await processRunner(
+    process.execPath,
+    [
+      executable,
+      project,
+      "--base-ref",
+      baseSha,
+      "--phase",
+      analyzerPhase,
+      "--json-output",
+      jsonOutput,
+      "--markdown-output",
+      markdownOutput,
+      "--fail-on-breaking",
+    ],
+    { cwd: checkout, timeoutMs: 10 * 60_000 },
+  );
+  if (result.code !== 0 && result.code !== 1) {
+    return {
+      execution: processFailure(phase, jsonOutput, markdownOutput, result),
+      findings: [],
+    };
+  }
+  try {
+    const [jsonContent, markdownContent] = await Promise.all([
+      readFile(jsonOutput, "utf8"),
+      readFile(markdownOutput, "utf8"),
+    ]);
+    const parsed = typeSpecJsonReportSchema.parse(JSON.parse(jsonContent));
+    if ((result.code === 1) !== parsed.requiresAction) {
+      throw new Error(
+        `exit ${result.code} disagrees with requiresAction=${String(parsed.requiresAction)}`,
+      );
+    }
+    return {
+      execution: {
+        phase,
+        analyzerPhase,
+        status: "complete",
+        exitCode: result.code,
+        jsonReport: jsonOutput,
+        markdownReport: markdownOutput,
+        jsonDigest: createHash("sha256").update(jsonContent).digest("hex"),
+        markdownDigest: createHash("sha256").update(markdownContent).digest("hex"),
+        timing: parsed.timing,
+        comparisonsPerformed: parsed.summary.comparisonsPerformed,
+        versionComparisons: parsed.summary.versionComparisons,
+        noComparisonReason: parsed.summary.noComparisonReason,
+      },
+      findings: mapFindings(project, parsed),
+    };
+  } catch (error) {
+    return {
+      execution: {
+        phase,
+        analyzerPhase,
+        status: "error",
+        exitCode: result.code,
+        jsonReport: jsonOutput,
+        markdownReport: markdownOutput,
+        error: `Missing, malformed, or schema-invalid TypeSpec report: ${String(error)}`,
+      },
+      findings: [],
+    };
+  }
 }
 
 export async function runTypeSpecProject(
@@ -100,43 +186,51 @@ export async function runTypeSpecProject(
   outputDir: string,
   processRunner: ProcessRunner = runProcess,
 ): Promise<ProjectResult> {
-  const safeName = createHash("sha256").update(project).digest("hex").slice(0, 16);
-  const jsonOutput = join(outputDir, `${safeName}.json`);
-  const result = await processRunner(
-    process.execPath,
-    [executable, project, "--base-ref", baseSha, "--json-output", jsonOutput, "--fail-on-breaking"],
-    { cwd: checkout, timeoutMs: 10 * 60_000 },
+  const phaseResults = [];
+  for (const phase of ["A", "B"] as const) {
+    phaseResults.push(
+      await runTypeSpecPhase(
+        executable,
+        checkout,
+        baseSha,
+        project,
+        outputDir,
+        phase,
+        processRunner,
+      ),
+    );
+  }
+  const phaseExecutions = Object.fromEntries(
+    phaseResults.map(({ execution }) => [execution.phase, execution]),
+  ) as Record<Phase, TypeSpecPhaseExecution>;
+  const errors = phaseResults
+    .map(({ execution }) => execution.error)
+    .filter((error): error is string => Boolean(error));
+  const findings = phaseResults.flatMap((result) => result.findings);
+  const versionComparisons = phaseResults.flatMap(
+    ({ execution }) => execution.versionComparisons ?? [],
   );
-  if (result.code !== 0 && result.code !== 1) {
-    return processFailure(project, result);
-  }
-  try {
-    const content = await readFile(jsonOutput, "utf8");
-    const parsed = typeSpecJsonReportSchema.parse(JSON.parse(content));
-    if ((result.code === 1) !== parsed.requiresAction) {
-      throw new Error(
-        `exit ${result.code} disagrees with requiresAction=${String(parsed.requiresAction)}`,
-      );
-    }
-    return {
-      project,
-      status: "complete",
-      exitCode: result.code,
-      reportDigest: createHash("sha256").update(content).digest("hex"),
-      comparisonsPerformed: parsed.summary.comparisonsPerformed,
-      versionComparisons: parsed.summary.versionComparisons,
-      noComparisonReason: parsed.summary.noComparisonReason,
-      findings: mapFindings(project, parsed),
-    };
-  } catch (error) {
-    return {
-      project,
-      status: "error",
-      exitCode: result.code,
-      findings: [],
-      error: `Missing, malformed, or schema-invalid TypeSpec report: ${String(error)}`,
-    };
-  }
+  const reportDigests = phaseResults
+    .map(({ execution }) => execution.jsonDigest)
+    .filter((digest): digest is string => Boolean(digest));
+  return {
+    project,
+    status: errors.length ? "error" : "complete",
+    exitCode: errors.length
+      ? phaseResults.find(({ execution }) => execution.status === "error")?.execution.exitCode
+      : phaseResults.some(({ execution }) => execution.exitCode === 1)
+        ? 1
+        : 0,
+    phaseExecutions,
+    reportDigest:
+      reportDigests.length === phaseResults.length
+        ? createHash("sha256").update(reportDigests.join(":")).digest("hex")
+        : undefined,
+    comparisonsPerformed: versionComparisons.length,
+    versionComparisons,
+    findings,
+    error: errors.length ? errors.join("; ") : undefined,
+  };
 }
 
 export async function runTypeSpecProjects(

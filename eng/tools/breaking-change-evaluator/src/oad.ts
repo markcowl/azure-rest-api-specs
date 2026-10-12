@@ -7,6 +7,19 @@ export interface ParsedOadRun {
   comparisons: SwaggerComparison[];
   digest: string;
   zeroResultWithoutOutput: boolean;
+  detectorDurationMs?: number;
+}
+
+export function parseOadDetectorDuration(text: string): number | undefined {
+  const matches = [
+    ...text.matchAll(
+      /(?:OAD|openapi[- ]diff)(?: detector| analysis)? (?:duration|elapsed time):\s*(\d+(?:\.\d+)?)\s*(ms|s)\b/gi,
+    ),
+  ];
+  const match = matches.at(-1);
+  if (!match) return undefined;
+  const value = Number(match[1]);
+  return match[2].toLowerCase() === "s" ? value * 1000 : value;
 }
 
 export class OadEvidenceIncompleteError extends Error {
@@ -143,6 +156,7 @@ export function parseOadLog(text: string, phase: Phase): ParsedOadRun {
     comparisons,
     digest: createHash("sha256").update(text).digest("hex"),
     zeroResultWithoutOutput,
+    detectorDurationMs: parseOadDetectorDuration(text),
   };
 }
 

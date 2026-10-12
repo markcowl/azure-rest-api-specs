@@ -101,8 +101,8 @@ describe("report aggregation", () => {
 
     const markdown = renderMarkdown(value);
     expect(markdown).toContain("## TypeSpec phase execution");
-    expect(markdown).toContain("| `same-version` | `v1` → `v1` | 1 | 0 |");
-    expect(markdown).toContain("| `cross-version` | `v1` → `v2` | 1 | 0 |");
+    expect(markdown).toContain("| Phase A (`same-version`) | `v1` → `v1` | 1 | 0 |");
+    expect(markdown).toContain("| Phase B (`cross-version`) | `v1` → `v2` | 1 | 0 |");
   });
 
   it("accounts for every category and unconsumed TypeSpec occurrence", () => {
@@ -187,6 +187,28 @@ describe("report aggregation", () => {
           exactRecall: 0.25,
           probableInclusiveRecall: 0.5,
           outcome: "compared",
+        },
+      },
+      errorEquivalence: {
+        A: {
+          oadErrors: 0,
+          typeSpecErrors: 0,
+          matchedErrorOad: 0,
+          matchedErrorTypeSpec: 0,
+          oadErrorMatchedToTypeSpecNonError: 0,
+          typeSpecErrorMatchedToOadNonError: 0,
+          oadErrorsWithoutEquivalent: 0,
+          typeSpecErrorsWithoutEquivalent: 0,
+        },
+        B: {
+          oadErrors: 6,
+          typeSpecErrors: 2,
+          matchedErrorOad: 2,
+          matchedErrorTypeSpec: 1,
+          oadErrorMatchedToTypeSpecNonError: 0,
+          typeSpecErrorMatchedToOadNonError: 0,
+          oadErrorsWithoutEquivalent: 4,
+          typeSpecErrorsWithoutEquivalent: 1,
         },
       },
     });
@@ -415,6 +437,108 @@ describe("report aggregation", () => {
     expect(markdown).toContain("Intentional Swagger-only coverage gaps");
     expect(markdown).toContain("Findings missing from the Swagger detector");
     expect(markdown).toContain("GET /widgets");
+  });
+
+  it("keeps semantic matches while prominently reporting error-status mismatch", () => {
+    const value = report();
+    const oad: OadFinding = {
+      occurrenceId: "oad-error",
+      phase: "A",
+      id: "1",
+      rule: "AddedPath",
+      severity: "Error",
+      message: "path added",
+      evidence: "{}",
+      detectorEvidence: { label: "OAD run", url: "https://example.test/oad" },
+      sources: [{ revision: "head", unavailableReason: "fixture" }],
+    };
+    const typeSpec: TypeSpecFinding = {
+      occurrenceId: "tsp-warning",
+      project: "specification/foo/Foo",
+      kind: "OperationAdded",
+      rule: "phase-a-any-change",
+      phase: "same-version",
+      severity: "warning",
+      suppressed: false,
+      message: "operation added",
+      operation: { method: "GET", path: "/widgets" },
+      versionPair: { baseVersion: "v1", headVersion: "v1" },
+      detectorEvidence: {
+        label: "TypeSpec Phase A analyzer report",
+        url: "report-artifacts/typespec/phase-a.md",
+        digest: "a".repeat(64),
+      },
+      source: { revision: "head", unavailableReason: "fixture" },
+    };
+    value.oadFindings = [oad];
+    value.typeSpecProjects = [
+      {
+        project: typeSpec.project,
+        status: "complete",
+        phaseExecutions: {
+          A: {
+            phase: "A",
+            analyzerPhase: "same-version",
+            status: "complete",
+            exitCode: 0,
+            jsonReport: "report-artifacts/typespec/phase-a.json",
+            markdownReport: "report-artifacts/typespec/phase-a.md",
+            timing: {
+              compileBaseMs: 1,
+              compileHeadMs: 1,
+              versionMutatorsMs: 1,
+              canonicalizeMs: 1,
+              identityMatchingMs: 1,
+              diffEngineMs: 1,
+              classifyMs: 1,
+              suppressMs: 1,
+              reportMs: 1,
+              totalMs: 9,
+            },
+          },
+        },
+        findings: [typeSpec],
+      },
+    ];
+    value.matches = [
+      {
+        oadOccurrenceId: oad.occurrenceId,
+        target: { phase: "A", method: "GET", route: "/widgets", evidence: [] },
+        targets: [{ phase: "A", method: "GET", route: "/widgets", evidence: [] }],
+        candidates: [
+          {
+            typeSpecOccurrenceId: typeSpec.occurrenceId,
+            target: { phase: "A", method: "GET", route: "/widgets", evidence: [] },
+            score: 12,
+            exactIdentity: ["method", "route"],
+            scoreEvidence: ["version pair"],
+            rejectionReasons: [],
+          },
+        ],
+        selectedTypeSpecOccurrenceIds: [typeSpec.occurrenceId],
+        category: "exact",
+        reviewRequired: false,
+      },
+    ];
+    value.rollup = computeRollup(value.oadFindings, [typeSpec], value.matches);
+    value.findingGroups = computeFindingGroups(value.oadFindings, [typeSpec], value.matches);
+
+    const markdown = renderMarkdown(value);
+    expect(value.rollup.errorEquivalence.A).toMatchObject({
+      oadErrors: 1,
+      typeSpecErrors: 0,
+      oadErrorMatchedToTypeSpecNonError: 1,
+    });
+    expect(markdown.indexOf("## Error equivalence by phase")).toBeLessThan(
+      markdown.indexOf("## Non-error finding equivalence by phase"),
+    );
+    expect(markdown).toContain("**Error status mismatch:**");
+    expect(markdown).toContain("Phase A (`same-version`)");
+    expect(markdown).toContain(
+      "[TypeSpec Phase A analyzer report](report-artifacts/typespec/phase-a.md)",
+    );
+    expect(markdown).toContain("Exact semantic match in Phase A");
+    expect(markdown).not.toContain("**Decision trace:**");
   });
 
   it("groups matches by correlation pair and unmatched findings by detector type", () => {
