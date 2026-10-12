@@ -114,7 +114,7 @@ describe("TypeSpec project execution", () => {
     const processRunner = vi.fn(async (_command, args: string[]) => {
       const output = args[args.indexOf("--json-output") + 1];
       const markdown = args[args.indexOf("--markdown-output") + 1];
-      const phase = args[args.indexOf("--phase") + 1] as "same-version" | "cross-version";
+      const phase = args.includes("--phase") ? "same-version" : "cross-version";
       await writeFile(output, JSON.stringify(validReport(testCase.requiresAction, phase)));
       await writeFile(markdown, `# ${phase}`);
       return result({ code: testCase.code });
@@ -195,7 +195,7 @@ describe("TypeSpec project execution", () => {
     const processRunner = vi.fn(async (_command, args: string[]) => {
       invocation++;
       if (invocation <= 2) {
-        const phase = args[args.indexOf("--phase") + 1] as "same-version" | "cross-version";
+        const phase = args.includes("--phase") ? "same-version" : "cross-version";
         await writeFile(
           args[args.indexOf("--json-output") + 1],
           JSON.stringify(validReport(true, phase)),

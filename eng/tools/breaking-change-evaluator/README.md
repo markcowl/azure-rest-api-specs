@@ -42,10 +42,12 @@ TypeSpec-only findings are grouped by TypeSpec finding kind. “Missing from Swa
 Swagger checks did not report an equivalent finding, not that a Swagger defect has been confirmed.
 Each TypeSpec project also records every executed same-version and cross-version comparison,
 including zero-finding comparisons, so phase execution does not have to be inferred from findings.
-The prepared analyzer runs independently for each phase and emits durable JSON and Markdown
-artifacts next to the evaluator report. TypeSpec findings link to the exact generated Markdown
-artifact rather than using the analyzer source commit as detector evidence; the source commit
-remains provenance.
+The prepared analyzer emits durable JSON and Markdown artifacts next to the evaluator report.
+Phase A uses an independently filtered `same-version` invocation. The pinned prototype discovers
+Phase B candidates from Phase A changes, so authoritative Phase B evidence uses the generated
+combined Phase A+B analyzer report; filtering directly to `cross-version` would incorrectly omit
+those candidates. TypeSpec findings link to the exact generated Markdown artifact rather than
+using the analyzer source commit as detector evidence; the source commit remains provenance.
 OAD `NoVersionChange` records are retained as informational comparison context but excluded from
 comparable-finding totals and detector coverage rates.
 Rollups are reported overall and separately by phase: Phase A compares the PR's Swagger Breaking
@@ -58,7 +60,9 @@ plain language and reserve the full candidate trace for JSON.
 
 Detector performance is reported independently by phase using timing emitted by the detector
 itself. The evaluator never substitutes GitHub Actions workflow duration for missing OAD detector
-timing. Incomplete reports suppress rollups and coverage rates.
+timing. Because the pinned TypeSpec prototype does not expose independent Phase B timing, reports
+show its combined Phase A+B duration and mark independent Phase B timing unavailable. Incomplete
+reports suppress rollups and coverage rates.
 
 Each complete dossier includes commands to reproduce both the full evaluator run and each direct
 TypeSpec analyzer project run. The commands pin the evaluator commit, analyzer source SHA and

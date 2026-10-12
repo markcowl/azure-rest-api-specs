@@ -230,7 +230,7 @@ function createReproduction(
     directAnalyzerCommands: projects.map((project) => ({
       label: `Run the TypeSpec analyzer for ${project}`,
       project,
-      command: `Push-Location target\nnode $prepared.executable ${quotePowerShell(project)} --base-ref ${pr.baseSha} --phase same-version --json-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-a.json`)} --markdown-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-a.md`)} --fail-on-breaking\nnode $prepared.executable ${quotePowerShell(project)} --base-ref ${pr.baseSha} --phase cross-version --json-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-b.json`)} --markdown-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-b.md`)} --fail-on-breaking\nPop-Location`,
+      command: `Push-Location target\nnode $prepared.executable ${quotePowerShell(project)} --base-ref ${pr.baseSha} --phase same-version --json-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-a.json`)} --markdown-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-a.md`)} --fail-on-breaking\nnode $prepared.executable ${quotePowerShell(project)} --base-ref ${pr.baseSha} --json-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-b-evidence.json`)} --markdown-output ${quotePowerShell(`../${project.replaceAll("/", "-")}-phase-b-evidence.md`)} --fail-on-breaking\nPop-Location`,
     })),
   };
 }
@@ -335,7 +335,10 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
             const phaseExecution = project.phaseExecutions?.[phase];
             return phaseExecution?.markdownDigest
               ? {
-                  label: `TypeSpec Phase ${phase} analyzer report`,
+                  label:
+                    phase === "A"
+                      ? "TypeSpec Phase A analyzer report"
+                      : "TypeSpec combined analyzer report containing Phase B",
                   url: relative(dirname(markdownPath), phaseExecution.markdownReport).replaceAll(
                     "\\",
                     "/",

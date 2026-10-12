@@ -623,6 +623,12 @@ export function renderMarkdown(report: EvaluationReport): string {
           .map((execution) => execution?.timing?.totalMs)
           .filter((duration): duration is number => duration !== undefined);
         const typeSpecDuration =
+          typeSpecExecutions.length > 0 &&
+          typeSpecTimes.length === typeSpecExecutions.length &&
+          typeSpecExecutions.every((execution) => execution?.timingScope === "phase")
+            ? typeSpecTimes.reduce((total, duration) => total + duration, 0)
+            : undefined;
+        const combinedTypeSpecDuration =
           typeSpecExecutions.length > 0 && typeSpecTimes.length === typeSpecExecutions.length
             ? typeSpecTimes.reduce((total, duration) => total + duration, 0)
             : undefined;
@@ -632,14 +638,22 @@ export function renderMarkdown(report: EvaluationReport): string {
             : "Not comparable: one or both detector timings are unavailable";
         const reports = typeSpecExecutions
           .map((execution) =>
-            execution ? `[TypeSpec Phase ${phase} report](${execution.markdownReport})` : undefined,
+            execution
+              ? execution.timingScope === "phase"
+                ? `[TypeSpec Phase ${phase} report](${execution.markdownReport})`
+                : `[TypeSpec combined report containing Phase ${phase}](${execution.markdownReport})`
+              : undefined,
           )
           .filter(Boolean)
           .join("; ");
         const oadEvidence = run
           ? `[OAD workflow](${run.htmlUrl})${run.detectorDurationMs === undefined ? " (no detector timing emitted)" : ""}`
           : "OAD workflow unavailable";
-        return `| ${phase} | ${formatDuration(run?.detectorDurationMs)} | ${formatDuration(typeSpecDuration)} | ${ratio} | ${oadEvidence}${reports ? `; ${reports}` : ""} |`;
+        const typeSpecDisplay =
+          typeSpecDuration === undefined && combinedTypeSpecDuration !== undefined
+            ? `Unavailable independently (combined A+B: ${formatDuration(combinedTypeSpecDuration)})`
+            : formatDuration(typeSpecDuration);
+        return `| ${phase} | ${formatDuration(run?.detectorDurationMs)} | ${typeSpecDisplay} | ${ratio} | ${oadEvidence}${reports ? `; ${reports}` : ""} |`;
       }),
       "",
     );
@@ -657,7 +671,7 @@ export function renderMarkdown(report: EvaluationReport): string {
         for (const phase of ["A", "B"] as const) {
           const execution = project.phaseExecutions?.[phase];
           lines.push(
-            `| \`${project.project}\` | Phase ${phase} (\`${phase === "A" ? "same-version" : "cross-version"}\`) | ${execution?.noComparisonReason ?? execution?.error ?? "No comparison details reported"} | 0 | 0 | ${execution ? `[generated Markdown](${execution.markdownReport})` : "unavailable"} |`,
+            `| \`${project.project}\` | Phase ${phase} (\`${phase === "A" ? "same-version" : "cross-version"}\`) | ${execution?.noComparisonReason ?? execution?.error ?? "No comparison details reported"} | 0 | 0 | ${execution ? `[generated ${execution.timingScope === "combined" ? "combined " : ""}Markdown](${execution.markdownReport})` : "unavailable"} |`,
           );
         }
         continue;
@@ -666,7 +680,7 @@ export function renderMarkdown(report: EvaluationReport): string {
         const phase = comparison.phase === "same-version" ? "A" : "B";
         const execution = project.phaseExecutions?.[phase];
         lines.push(
-          `| \`${project.project}\` | Phase ${phase} (\`${comparison.phase}\`) | \`${comparison.baseVersion}\` → \`${comparison.headVersion}\` | 1 | ${comparison.findingCount} | ${execution ? `[generated Markdown](${execution.markdownReport})` : "unavailable"} |`,
+          `| \`${project.project}\` | Phase ${phase} (\`${comparison.phase}\`) | \`${comparison.baseVersion}\` → \`${comparison.headVersion}\` | 1 | ${comparison.findingCount} | ${execution ? `[generated ${execution.timingScope === "combined" ? "combined " : ""}Markdown](${execution.markdownReport})` : "unavailable"} |`,
         );
       }
     }

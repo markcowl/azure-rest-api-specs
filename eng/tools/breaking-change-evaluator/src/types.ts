@@ -242,7 +242,8 @@ export interface TimingInfo {
 
 export interface TypeSpecPhaseExecution {
   phase: Phase;
-  analyzerPhase: "same-version" | "cross-version";
+  analyzerPhase: "same-version" | "all-phases";
+  timingScope: "phase" | "combined";
   status: "complete" | "error";
   exitCode?: number;
   jsonReport: string;

@@ -84,7 +84,8 @@ function processFailure(
 ): TypeSpecPhaseExecution {
   return {
     phase,
-    analyzerPhase: phase === "A" ? "same-version" : "cross-version",
+    analyzerPhase: phase === "A" ? "same-version" : "all-phases",
+    timingScope: phase === "A" ? "phase" : "combined",
     status: "error",
     exitCode: result.code ?? undefined,
     jsonReport,
@@ -110,7 +111,8 @@ async function runTypeSpecPhase(
   const suffix = phase.toLowerCase();
   const jsonOutput = join(outputDir, `${safeName}-phase-${suffix}.json`);
   const markdownOutput = join(outputDir, `${safeName}-phase-${suffix}.md`);
-  const analyzerPhase = phase === "A" ? "same-version" : "cross-version";
+  const analyzerPhase = phase === "A" ? "same-version" : "all-phases";
+  const phaseArguments = phase === "A" ? ["--phase", "same-version"] : [];
   const result = await processRunner(
     process.execPath,
     [
@@ -118,8 +120,7 @@ async function runTypeSpecPhase(
       project,
       "--base-ref",
       baseSha,
-      "--phase",
-      analyzerPhase,
+      ...phaseArguments,
       "--json-output",
       jsonOutput,
       "--markdown-output",
@@ -145,10 +146,18 @@ async function runTypeSpecPhase(
         `exit ${result.code} disagrees with requiresAction=${String(parsed.requiresAction)}`,
       );
     }
+    const expectedFindingPhase = phase === "A" ? "same-version" : "cross-version";
+    const findings = mapFindings(project, parsed).filter(
+      (finding) => finding.phase === expectedFindingPhase,
+    );
+    const versionComparisons = parsed.summary.versionComparisons.filter(
+      (comparison) => comparison.phase === expectedFindingPhase,
+    );
     return {
       execution: {
         phase,
         analyzerPhase,
+        timingScope: phase === "A" ? "phase" : "combined",
         status: "complete",
         exitCode: result.code,
         jsonReport: jsonOutput,
@@ -156,17 +165,22 @@ async function runTypeSpecPhase(
         jsonDigest: createHash("sha256").update(jsonContent).digest("hex"),
         markdownDigest: createHash("sha256").update(markdownContent).digest("hex"),
         timing: parsed.timing,
-        comparisonsPerformed: parsed.summary.comparisonsPerformed,
-        versionComparisons: parsed.summary.versionComparisons,
-        noComparisonReason: parsed.summary.noComparisonReason,
+        comparisonsPerformed: versionComparisons.length,
+        versionComparisons,
+        noComparisonReason:
+          versionComparisons.length === 0
+            ? (parsed.summary.noComparisonReason ??
+              `Combined analyzer report contained no ${expectedFindingPhase} comparisons`)
+            : undefined,
       },
-      findings: mapFindings(project, parsed),
+      findings,
     };
   } catch (error) {
     return {
       execution: {
         phase,
         analyzerPhase,
+        timingScope: phase === "A" ? "phase" : "combined",
         status: "error",
         exitCode: result.code,
         jsonReport: jsonOutput,

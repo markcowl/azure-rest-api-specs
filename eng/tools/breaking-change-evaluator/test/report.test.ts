@@ -479,6 +479,7 @@ describe("report aggregation", () => {
           A: {
             phase: "A",
             analyzerPhase: "same-version",
+            timingScope: "phase",
             status: "complete",
             exitCode: 0,
             jsonReport: "report-artifacts/typespec/phase-a.json",
