@@ -133,6 +133,10 @@ export function parsePrReference(value: string): PrReference {
   return { owner: match[1], repo: match[2], number: Number(match[3]) };
 }
 
+export function isTypeSpecInputFile(filename: string): boolean {
+  return filename.endsWith(".tsp") || /(?:^|\/)tspconfig\.yaml$/i.test(filename);
+}
+
 export function githubToken(): string | undefined {
   if (process.env.GITHUB_TOKEN || process.env.GH_TOKEN) {
     return process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
@@ -228,7 +232,7 @@ export async function qualifyPullRequest(
   }
   const files = await changedFiles(octokit, reference);
   const tspFiles = files
-    .filter((file) => file.filename.endsWith(".tsp"))
+    .filter((file) => isTypeSpecInputFile(file.filename))
     .map((file) => file.filename);
   evidence.changedTypeSpecFiles = tspFiles;
   details.changedTypeSpecFiles = tspFiles;

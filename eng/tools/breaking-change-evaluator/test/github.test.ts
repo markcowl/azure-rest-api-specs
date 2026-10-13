@@ -1,11 +1,20 @@
 import { describe, expect, it } from "vitest";
 import {
+  isTypeSpecInputFile,
   logsProveRunAssociation,
   parsePrReference,
   selectLatestCompletedRun,
 } from "../src/github.ts";
 
 describe("GitHub qualification helpers", () => {
+  it("recognizes TypeSpec sources and project configuration", () => {
+    expect(isTypeSpecInputFile("specification/foo/main.tsp")).toBe(true);
+    expect(isTypeSpecInputFile("specification/foo/tspconfig.yaml")).toBe(true);
+    expect(isTypeSpecInputFile("tspconfig.yaml")).toBe(true);
+    expect(isTypeSpecInputFile("specification/foo/tspconfig.yml")).toBe(false);
+    expect(isTypeSpecInputFile("specification/foo/readme.md")).toBe(false);
+  });
+
   it("accepts only supported PR reference shapes", () => {
     expect(parsePrReference("Azure/azure-rest-api-specs#123")).toEqual({
       owner: "Azure",
