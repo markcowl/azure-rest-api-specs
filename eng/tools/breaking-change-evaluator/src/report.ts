@@ -270,12 +270,28 @@ export function validateRollup(report: EvaluationReport): void {
     throw new Error("Reproduction commands must not contain temporary checkout paths");
   }
   const typeSpecIds = new Set(typeSpecFindings.map((finding) => finding.occurrenceId));
+  if (typeSpecIds.size !== typeSpecFindings.length) {
+    throw new Error("TypeSpec occurrence IDs must be unique across phases");
+  }
   if (
     report.matches.some((match) =>
       match.selectedTypeSpecOccurrenceIds.some((occurrenceId) => !typeSpecIds.has(occurrenceId)),
     )
   ) {
     throw new Error("Selected TypeSpec occurrence is missing from project findings");
+  }
+  const oadById = new Map(report.oadFindings.map((finding) => [finding.occurrenceId, finding]));
+  const typeSpecById = new Map(typeSpecFindings.map((finding) => [finding.occurrenceId, finding]));
+  for (const match of report.matches) {
+    const expectedPhase =
+      oadById.get(match.oadOccurrenceId)?.phase === "A" ? "same-version" : "cross-version";
+    if (
+      match.selectedTypeSpecOccurrenceIds.some(
+        (occurrenceId) => typeSpecById.get(occurrenceId)?.phase !== expectedPhase,
+      )
+    ) {
+      throw new Error("Selected TypeSpec occurrence phase does not match its OAD phase");
+    }
   }
   const expected = computeRollup(report.oadFindings, typeSpecFindings, report.matches);
   if (JSON.stringify(report.rollup) !== JSON.stringify(expected)) {

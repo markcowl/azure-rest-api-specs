@@ -134,6 +134,14 @@ describe("TypeSpec project execution", () => {
       exitCode: testCase.code,
     });
     expect(project.findings).toHaveLength(testCase.findings);
+    expect(new Set(project.findings.map((finding) => finding.occurrenceId)).size).toBe(
+      project.findings.length,
+    );
+    expect(project.findings.map((finding) => finding.occurrenceId)).toEqual(
+      testCase.requiresAction
+        ? ["specification/foo/Foo:tsp-A-0", "specification/foo/Foo:tsp-B-0"]
+        : [],
+    );
     expect(project.reportDigest).toMatch(/^[0-9a-f]{64}$/);
     expect(project.phaseExecutions?.A?.markdownDigest).toMatch(/^[0-9a-f]{64}$/);
     expect(project.phaseExecutions?.B?.timing?.totalMs).toBe(45);

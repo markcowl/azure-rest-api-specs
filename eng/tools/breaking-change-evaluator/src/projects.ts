@@ -59,7 +59,7 @@ export async function resolveProjectRoots(
 
 function mapFindings(project: string, report: TypeSpecJsonReport): TypeSpecFinding[] {
   return report.findings.map((finding, index) => ({
-    occurrenceId: `${project}:tsp-${index}`,
+    occurrenceId: `${project}:tsp-${finding.phase === "same-version" ? "A" : "B"}-${index}`,
     project,
     kind: finding.kind,
     rule: finding.rule,
