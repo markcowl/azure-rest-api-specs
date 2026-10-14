@@ -1,7 +1,7 @@
 import "@azure-tools/typespec-azure-resource-manager";
 import "@typespec/rest";
 import "./models.tsp";
-import "./arm-resource-internal.tsp";
+import "./generic-resource-internal.tsp";
 
 using TypeSpec.Http;
 using Azure.ResourceManager;
@@ -11,6 +11,7 @@ namespace Microsoft.Network;
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model ResourceInstance<
   Properties extends {},
@@ -26,6 +27,7 @@ model ResourceInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model ChildResourceInstance<
   Properties extends {},
@@ -44,6 +46,7 @@ model ChildResourceInstance<
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/no-empty-model" "The legacy base resource intentionally has no properties model."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-no-key" "The resource key is declared by the instantiated resource."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model ChildResourceWithoutPropertiesInstance<Placeholder extends {}>
   extends ChildResource {}
@@ -51,6 +54,7 @@ model ChildResourceWithoutPropertiesInstance<Placeholder extends {}>
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model SubResourceInstance<
   Properties extends {},
@@ -66,6 +70,7 @@ model SubResourceInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model TrackedResourceWithOptionalLocationInstance<
   Properties extends {},
@@ -81,6 +86,7 @@ model TrackedResourceWithOptionalLocationInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model CommonTrackedResourceInstance<
   Properties extends {},
@@ -96,6 +102,7 @@ model CommonTrackedResourceInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model SecurityPerimeterTrackedResourceInstance<
   Properties extends {},
@@ -111,6 +118,7 @@ model SecurityPerimeterTrackedResourceInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model SecurityPerimeterProxyResourceInstance<
   Properties extends {},
@@ -126,6 +134,7 @@ model SecurityPerimeterProxyResourceInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model TrackedResourceWithSettableIdOptionalLocationInstance<
   Properties extends {},
@@ -141,6 +150,7 @@ model TrackedResourceWithSettableIdOptionalLocationInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model CommonProxyResourceInstance<
   Properties extends {},
@@ -156,6 +166,7 @@ model CommonProxyResourceInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model ReadOnlySubResourceModelInstance<
   Properties extends {},
@@ -171,6 +182,7 @@ model ReadOnlySubResourceModelInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model WritableResourceInstance<
   Properties extends {},
@@ -186,6 +198,7 @@ model WritableResourceInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model ProxyResourceInstance<
   Properties extends {},
@@ -201,6 +214,7 @@ model ProxyResourceInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model ProxyResourceWithReadOnlyIDInstance<
   Properties extends {},
@@ -216,6 +230,7 @@ model ProxyResourceWithReadOnlyIDInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model ProxyResourceWithSettableIdInstance<
   Properties extends {},
@@ -231,6 +246,7 @@ model ProxyResourceWithSettableIdInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model TrackedResourceWithEtagInstance<
   Properties extends {},
@@ -246,6 +262,7 @@ model TrackedResourceWithEtagInstance<
 #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-resource-manager/arm-custom-resource-usage-discourage" "Required for backward compatibility with converted specs."
 #suppress "@azure-tools/typespec-azure-core/composition-over-inheritance" "Required for backward compatibility with converted specs."
+@Azure.ResourceManager.Private.genericResourceInternal
 @Http.Private.includeInapplicableMetadataInPayload(false)
 model TrackedResourceWithSettableNameInstance<
   Properties extends {},

@@ -5,7 +5,7 @@ using TypeSpec.Http;
 
 namespace Azure.ResourceManager.BaseTypes.MicrosoftNetwork {
   #suppress "@azure-tools/typespec-azure-core/no-private-usage" "Required to register standard proxy resource instances while preserving the converted payload shape."
-  @Azure.ResourceManager.Private.armResourceInternal(Properties)
+  @Azure.ResourceManager.Private.genericResourceInternal
   @Http.Private.includeInapplicableMetadataInPayload(false)
   model ArmProxyResourceInstance<
     Properties extends {},
