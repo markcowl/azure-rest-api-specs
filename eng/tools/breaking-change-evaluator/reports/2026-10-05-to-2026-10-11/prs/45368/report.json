@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T00:44:38.983Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45368,
+    "title": "Add DPS stable 2026-11-01 API version",
+    "author": "mollyiverson",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45368",
+    "baseBranch": "main",
+    "headBranch": "mollyiverson-microsoft-deviceprovisioningservices-Microsoft.Devices-2026-11-01",
+    "baseSha": "5279ce43417174d87cc78d17729f1c81644805da",
+    "headSha": "79ccd3d841bf5c15f0ee4844833584ae655ce279",
+    "mergedAt": "2026-10-07T20:12:37Z",
+    "changedTypeSpecFiles": [
+      "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/main.tsp",
+      "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45368",
+      "state": "closed",
+      "merged": true,
+      "headSha": "79ccd3d841bf5c15f0ee4844833584ae655ce279",
+      "baseSha": "5279ce43417174d87cc78d17729f1c81644805da",
+      "runs": {
+        "A": {
+          "id": 37675233137,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "79ccd3d841bf5c15f0ee4844833584ae655ce279",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37675233137",
+          "logDigest": "33417ab1f711a00cb44b9b75bcaa17d54bdd256a1a315fb9fe6eb35a8b6dd5c6",
+          "summaryDigest": "5ef6e894b92305955d8adc38e4c3cfc89348dc3381f5f3228f32c8bc581a2721"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/main.tsp",
+        "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/models.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary claims no findings but workflow logs contain OAD findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45368",
+      "headSha": "79ccd3d841bf5c15f0ee4844833584ae655ce279",
+      "baseSha": "5279ce43417174d87cc78d17729f1c81644805da"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

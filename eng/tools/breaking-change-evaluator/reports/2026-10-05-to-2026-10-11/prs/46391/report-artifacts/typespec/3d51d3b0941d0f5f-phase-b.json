@@ -1,0 +1,35 @@
+{
+  "specPaths": [
+    "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration"
+  ],
+  "headRevision": "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration",
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 0
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 0,
+    "versionComparisons": [],
+    "noComparisonReason": "No cross-version comparisons needed: all versions are preview (no stable baseline exists)."
+  },
+  "noComparisonReason": "No cross-version comparisons needed: all versions are preview (no stable baseline exists).",
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 0,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 0,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 5
+  }
+}

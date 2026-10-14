@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 2,
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-14T02:22:45.792Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46391,
+    "title": "Adding ObservabilityConfiguration API specs to ALDO EdgeOperator RP.",
+    "author": "kleyvaortega",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46391",
+    "baseBranch": "main",
+    "headBranch": "users/kleyvaortega/observabilityConfiguration",
+    "baseSha": "8d7b6b37fab6d5f417ee9008387defb631db1502",
+    "headSha": "936d3225f025701f4685737c2b082778a4bbc722",
+    "mergedAt": "2026-10-09T17:29:22Z",
+    "changedTypeSpecFiles": [
+      "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/main.tsp",
+      "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/observabilityConfiguration.tsp",
+      "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46391",
+      "state": "closed",
+      "merged": true,
+      "headSha": "936d3225f025701f4685737c2b082778a4bbc722",
+      "baseSha": "8d7b6b37fab6d5f417ee9008387defb631db1502",
+      "runs": {
+        "A": {
+          "id": 37036752007,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "936d3225f025701f4685737c2b082778a4bbc722",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37036752007",
+          "logDigest": "9681a4f693b76499f1ade80ad039c9544b2eed31c1a6e968ff5da6429f73a53e",
+          "summaryDigest": "034d70fce7a015cd02bca1191804df07a3faac5865ea0a44e090497b0b153f1e"
+        },
+        "B": {
+          "id": 37036751933,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "936d3225f025701f4685737c2b082778a4bbc722",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37036751933",
+          "logDigest": "c9b3fa3a9a369d73c83c395e003abdb8f1621aeae60db548e493034f02d89233",
+          "summaryDigest": "f0a519622527ec3990aab76cc2b69ef075c22079f0451df912c383698155cb7f"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/main.tsp",
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/observabilityConfiguration.tsp",
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46391",
+      "headSha": "936d3225f025701f4685737c2b082778a4bbc722",
+      "baseSha": "8d7b6b37fab6d5f417ee9008387defb631db1502"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/3d51d3b0941d0f5f-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/3d51d3b0941d0f5f-phase-a.md",
+          "jsonDigest": "708c25a12d48b7bdeac44259156c7e42301b34706815822ce754727744bdcc00",
+          "markdownDigest": "b34c444080c310be5236fab84fcae9e661b27e5783a2246d169729e43878cdb4",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Phase A (same-version) requires a base program for comparison. Use analyzeBaseAndHead() instead."
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/3d51d3b0941d0f5f-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/3d51d3b0941d0f5f-phase-b.md",
+          "jsonDigest": "bd49b4acfcc5789ca2530e0be9b98e5852d309396ccf059dcb78c951a3a6a97d",
+          "markdownDigest": "58576d76b82eec044755ee688fe2509e12dc6961ab904771af03e9e0301d4238",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 5
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "No cross-version comparisons needed: all versions are preview (no stable baseline exists)."
+        }
+      },
+      "reportDigest": "49f5871d2078336087cd8f2f15e9f40eee301c346ebf4023025485ebdf086e6d",
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "936d3225f025701f4685737c2b082778a4bbc722",
+    "prBaseSha": "8d7b6b37fab6d5f417ee9008387defb631db1502",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 8d7b6b37fab6d5f417ee9008387defb631db1502 936d3225f025701f4685737c2b082778a4bbc722\ngit -C target checkout --detach 936d3225f025701f4685737c2b082778a4bbc722\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46391' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration",
+        "project": "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration' --base-ref 8d7b6b37fab6d5f417ee9008387defb631db1502 --phase same-version --json-output '../specification-edgeoperator-resource-manager-Microsoft.EdgeOperator-ObservabilityConfiguration-phase-a.json' --markdown-output '../specification-edgeoperator-resource-manager-Microsoft.EdgeOperator-ObservabilityConfiguration-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration' --base-ref 8d7b6b37fab6d5f417ee9008387defb631db1502 --json-output '../specification-edgeoperator-resource-manager-Microsoft.EdgeOperator-ObservabilityConfiguration-phase-b-evidence.json' --markdown-output '../specification-edgeoperator-resource-manager-Microsoft.EdgeOperator-ObservabilityConfiguration-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

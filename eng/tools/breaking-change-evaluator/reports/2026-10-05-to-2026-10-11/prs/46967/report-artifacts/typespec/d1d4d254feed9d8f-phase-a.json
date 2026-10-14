@@ -1,0 +1,97 @@
+{
+  "specPaths": ["specification/containerservice/resource-manager/Microsoft.ContainerService/aks"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-bNvHZ3\\specification\\containerservice\\resource-manager\\Microsoft.ContainerService\\aks",
+  "headRevision": "specification/containerservice/resource-manager/Microsoft.ContainerService/aks",
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 9
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 9,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "ContainerService",
+        "baseVersion": "2025-10-01",
+        "headVersion": "2025-10-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "ContainerService",
+        "baseVersion": "2026-01-01",
+        "headVersion": "2026-01-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "ContainerService",
+        "baseVersion": "2026-02-01",
+        "headVersion": "2026-02-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "ContainerService",
+        "baseVersion": "2026-03-01",
+        "headVersion": "2026-03-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "ContainerService",
+        "baseVersion": "2026-04-01",
+        "headVersion": "2026-04-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "ContainerService",
+        "baseVersion": "2026-05-01",
+        "headVersion": "2026-05-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "ContainerService",
+        "baseVersion": "2026-06-01",
+        "headVersion": "2026-06-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "ContainerService",
+        "baseVersion": "2026-07-01",
+        "headVersion": "2026-07-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "ContainerService",
+        "baseVersion": "2026-07-02-preview",
+        "headVersion": "2026-07-02-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 18863,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 18358,
+    "classifyMs": 1,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 37236
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "specPaths": ["specification/keyvault/data-plane/Secrets"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-g3kKDO\\specification\\keyvault\\data-plane\\Secrets",
+  "headRevision": "specification/keyvault/data-plane/Secrets",
+  "requiresAction": true,
+  "counts": {
+    "errors": 2,
+    "suppressed": 0,
+    "ignored": 4,
+    "totalFindings": 6,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 17
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 17,
+    "versionComparisons": [
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.5",
+        "headVersion": "7.5",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6-preview.2",
+        "headVersion": "7.6-preview.2",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "7.6",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-01-01-preview",
+        "headVersion": "2026-01-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-03-01-preview",
+        "headVersion": "2026-03-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-05-01-preview",
+        "headVersion": "2026-05-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-07-01-preview",
+        "headVersion": "2026-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6-preview.2",
+        "headVersion": "7.6",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "2025-06-01-preview",
+        "phase": "cross-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "2025-07-01",
+        "phase": "cross-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-01-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-03-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error removed variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-g3kKDO/specification/keyvault/data-plane/Secrets/common/common.tsp",
+        "line": 17
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "PUT",
+        "path": "/secrets/{}"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/typespec-breaking-change-base-g3kKDO/specification/keyvault/data-plane/Secrets/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nmodel Error { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error added variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Secrets/common/common.tsp",
+        "line": 19
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/secrets/{}"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Secrets/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel Error { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'previousVersion' was added at body.properties.previousVersion.",
+      "element": "body.properties.previousVersion",
+      "versionPair": {
+        "baseVersion": "7.6",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Secrets/models.tsp",
+        "line": 183
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/secrets/{}"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "RequestQueryParameterAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request parameter 'outContentType' was added to query.",
+      "element": "query.outContentType",
+      "versionPair": {
+        "baseVersion": "7.6",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Secrets/routes.tsp",
+        "line": 124
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/secrets/{}/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'previousVersion' was added at body.properties.previousVersion.",
+      "element": "body.properties.previousVersion",
+      "versionPair": {
+        "baseVersion": "7.6",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Secrets/models.tsp",
+        "line": 183
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/secrets/{}"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "RequestQueryParameterAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request parameter 'outContentType' was added to query.",
+      "element": "query.outContentType",
+      "versionPair": {
+        "baseVersion": "7.6",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Secrets/routes.tsp",
+        "line": 124
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/secrets/{}/{}"
+      },
+      "component": "request"
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 3028,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 1129,
+    "classifyMs": 2,
+    "suppressMs": 3,
+    "reportMs": 0,
+    "totalMs": 4176
+  }
+}

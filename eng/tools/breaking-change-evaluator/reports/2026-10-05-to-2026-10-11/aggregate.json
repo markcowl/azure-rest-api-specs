@@ -1,0 +1,1416 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-14T03:46:51.335Z",
+  "repository": "Azure/azure-rest-api-specs",
+  "window": {
+    "start": "2026-10-05T00:00:00Z",
+    "end": "2026-10-11T23:59:59Z",
+    "baseBranch": "main",
+    "order": "mergedAt ascending, PR number ascending"
+  },
+  "selection": {
+    "cap": 40,
+    "candidateCount": 79,
+    "qualifyingCount": 35,
+    "selectedCount": 35,
+    "remainingCount": 0,
+    "nextCursor": null,
+    "pathScope": "specification/",
+    "filePatterns": [
+      "*.tsp",
+      "tspconfig.yaml"
+    ]
+  },
+  "analyzer": {
+    "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+  },
+  "status": {
+    "total": 35,
+    "evaluated": 12,
+    "notQualified": 17,
+    "partial": 6,
+    "failed": 0
+  },
+  "qualificationReasons": {
+    "evidence-incomplete": 2,
+    "invalid-oad-output": 3,
+    "run-association-unverified": 12
+  },
+  "effectiveness": {
+    "completeReportsOnly": true,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 5,
+        "typeSpecTotal": 28,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 28,
+        "ambiguous": 0,
+        "errors": 0
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 83,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 83,
+        "ambiguous": 0,
+        "errors": 0
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 28,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 28
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 36,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 36
+      }
+    }
+  },
+  "findingsByType": {
+    "oad": [
+      {
+        "phase": "A",
+        "rule": "NoVersionChange",
+        "severity": "info",
+        "count": 5
+      }
+    ],
+    "typeSpec": [
+      {
+        "phase": "A",
+        "kind": "RequestPropertyTypeNarrowed",
+        "severity": "error",
+        "actionableError": true,
+        "count": 2
+      },
+      {
+        "phase": "A",
+        "kind": "RequestPropertyTypeWidened",
+        "severity": "error",
+        "actionableError": true,
+        "count": 2
+      },
+      {
+        "phase": "A",
+        "kind": "ResourcePropertyTypeNarrowed",
+        "severity": "error",
+        "actionableError": true,
+        "count": 9
+      },
+      {
+        "phase": "A",
+        "kind": "ResourcePropertyTypeWidened",
+        "severity": "error",
+        "actionableError": true,
+        "count": 9
+      },
+      {
+        "phase": "A",
+        "kind": "ResponsePropertyTypeNarrowed",
+        "severity": "error",
+        "actionableError": true,
+        "count": 3
+      },
+      {
+        "phase": "A",
+        "kind": "ResponsePropertyTypeWidened",
+        "severity": "error",
+        "actionableError": true,
+        "count": 3
+      },
+      {
+        "phase": "B",
+        "kind": "EnumerationMemberAdded",
+        "severity": "ignore",
+        "actionableError": false,
+        "count": 2
+      },
+      {
+        "phase": "B",
+        "kind": "OperationAdded",
+        "severity": "ignore",
+        "actionableError": false,
+        "count": 28
+      },
+      {
+        "phase": "B",
+        "kind": "RequestPropertyTypeWidened",
+        "severity": "ignore",
+        "actionableError": false,
+        "count": 14
+      },
+      {
+        "phase": "B",
+        "kind": "RequestTypeKindChanged",
+        "severity": "error",
+        "actionableError": true,
+        "count": 1
+      },
+      {
+        "phase": "B",
+        "kind": "ResourcePropertyAdded",
+        "severity": "error",
+        "actionableError": true,
+        "count": 23
+      },
+      {
+        "phase": "B",
+        "kind": "ResourcePropertyTypeWidened",
+        "severity": "error",
+        "actionableError": true,
+        "count": 5
+      },
+      {
+        "phase": "B",
+        "kind": "ResponseHeaderAdded",
+        "severity": "ignore",
+        "actionableError": false,
+        "count": 1
+      },
+      {
+        "phase": "B",
+        "kind": "ResponsePropertyAdded",
+        "severity": "ignore",
+        "actionableError": false,
+        "count": 2
+      },
+      {
+        "phase": "B",
+        "kind": "ResponsePropertyTypeWidened",
+        "severity": "error",
+        "actionableError": true,
+        "count": 7
+      }
+    ]
+  },
+  "performance": {
+    "A": {
+      "oad": {
+        "available": 0
+      },
+      "typeSpec": {
+        "available": 12,
+        "minimumMs": 4,
+        "medianMs": 2720,
+        "maximumMs": 37236
+      },
+      "typeSpecTimingScope": "same-version phase"
+    },
+    "B": {
+      "oad": {
+        "available": 0
+      },
+      "typeSpec": {
+        "available": 12,
+        "minimumMs": 5,
+        "medianMs": 2574,
+        "maximumMs": 39960
+      },
+      "typeSpecTimingScope": "combined Phase A+B analyzer execution containing Phase B"
+    }
+  },
+  "records": [
+    {
+      "number": 45102,
+      "title": "[Event Grid] Add Control Plane API Version 2026-06-15-preview",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45102",
+      "mergedAt": "2026-10-09T11:45:32Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "evidence-incomplete"
+      ],
+      "report": "prs/45102/report.md",
+      "errors": []
+    },
+    {
+      "number": 45368,
+      "title": "Add DPS stable 2026-11-01 API version",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45368",
+      "mergedAt": "2026-10-07T20:12:37Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "invalid-oad-output"
+      ],
+      "report": "prs/45368/report.md",
+      "errors": []
+    },
+    {
+      "number": 45523,
+      "title": "Add MachineLearningServices stable API version 2026-09-01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45523",
+      "mergedAt": "2026-10-09T17:05:50Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/45523/report.md",
+      "errors": []
+    },
+    {
+      "number": 45556,
+      "title": "Add CognitiveServices preview API version 2026-09-15-preview",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45556",
+      "mergedAt": "2026-10-10T00:18:26Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/45556/report.md",
+      "errors": []
+    },
+    {
+      "number": 45799,
+      "title": "[Microsoft.ApiManagement] Add AI Gateway 2026-09-01-preview API",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45799",
+      "mergedAt": "2026-10-09T15:56:32Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/45799/report.md",
+      "errors": []
+    },
+    {
+      "number": 46044,
+      "title": "RecoveryServicesBackup: add 2026-10-01 API version with Instant Access snapshot policy props",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46044",
+      "mergedAt": "2026-10-08T05:49:45Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "evidence-incomplete"
+      ],
+      "report": "prs/46044/report.md",
+      "errors": []
+    },
+    {
+      "number": 46338,
+      "title": "Chipate/compute placement score",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46338",
+      "mergedAt": "2026-10-05T16:14:05Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "invalid-oad-output"
+      ],
+      "report": "prs/46338/report.md",
+      "errors": []
+    },
+    {
+      "number": 46377,
+      "title": "Dev/hbhansali/resiliencemgmt ga 2026 10 01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46377",
+      "mergedAt": "2026-10-05T05:51:23Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/46377/report.md",
+      "errors": []
+    },
+    {
+      "number": 46391,
+      "title": "Adding ObservabilityConfiguration API specs to ALDO EdgeOperator RP.",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46391",
+      "mergedAt": "2026-10-09T17:29:22Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/46391/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46546,
+      "title": "Refactor(storage): migrate to unified folder structure",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46546",
+      "mergedAt": "2026-10-09T05:57:56Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/46546/report.md",
+      "errors": []
+    },
+    {
+      "number": 46583,
+      "title": "[OperationalInsights] Rename data authorization property for C#",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46583",
+      "mergedAt": "2026-10-09T04:53:56Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/46583/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 29,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 29,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 24,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 24,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "typespec-only-divergence"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 5,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 5,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "typespec-only-divergence"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 24,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 24
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 4,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 4
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46585,
+      "title": "Enable Fabric provisioning emitter",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46585",
+      "mergedAt": "2026-10-08T08:51:15Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/46585/report.md",
+      "errors": []
+    },
+    {
+      "number": 46656,
+      "title": "[HybridConnectivity] Fix .NET client names for GCP connector 2027-01-01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46656",
+      "mergedAt": "2026-10-07T21:09:32Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/46656/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46674,
+      "title": "Preserve Front Door provisioning name constraints",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46674",
+      "mergedAt": "2026-10-09T05:59:12Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/46674/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 82,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 82,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 4,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 4,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "typespec-only-divergence"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 78,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 78,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "typespec-only-divergence"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 4,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 4
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 32,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 32
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46676,
+      "title": "Add AppNetwork provisioning emitter config",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46676",
+      "mergedAt": "2026-10-08T08:33:35Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/46676/report.md",
+      "errors": []
+    },
+    {
+      "number": 46715,
+      "title": "Add stable EdgeActions 2026-10-01 API",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46715",
+      "mergedAt": "2026-10-10T14:02:46Z",
+      "status": "partial",
+      "complete": false,
+      "reasonCodes": [],
+      "report": "prs/46715/report.md",
+      "errors": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get')"
+      ]
+    },
+    {
+      "number": 46751,
+      "title": "[Foundry] End of September Release train.",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46751",
+      "mergedAt": "2026-10-05T23:24:00Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/46751/report.md",
+      "errors": []
+    },
+    {
+      "number": 46832,
+      "title": "Add 2026-09-03-preview API version for Azure Monitor Workspaces",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46832",
+      "mergedAt": "2026-10-09T22:07:17Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/46832/report.md",
+      "errors": []
+    },
+    {
+      "number": 46855,
+      "title": "Update client.tsp for Private Traffic Manager",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46855",
+      "mergedAt": "2026-10-08T06:00:20Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/46855/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46860,
+      "title": "[Commvault] Add 2026-09-30 stable API",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46860",
+      "mergedAt": "2026-10-09T11:17:24Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/46860/report.md",
+      "errors": []
+    },
+    {
+      "number": 46924,
+      "title": "[Commvault] Align nine preview APIs with pinned private source",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46924",
+      "mergedAt": "2026-10-07T09:23:40Z",
+      "status": "partial",
+      "complete": false,
+      "reasonCodes": [],
+      "report": "prs/46924/report.md",
+      "errors": [
+        "specification/liftrcommvault/Commvault.ContentStore.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get')"
+      ]
+    },
+    {
+      "number": 46950,
+      "title": "[KeyVault] Keep SDK type name ManagedHsmSkuName for 2026-05-15 (client.tsp only)",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46950",
+      "mergedAt": "2026-10-06T15:00:29Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/46950/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46967,
+      "title": "ContainerService: remove stable api-version pins from tspconfig for 2026-07 preview SDK generation",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46967",
+      "mergedAt": "2026-10-08T08:35:43Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/46967/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 47005,
+      "title": "Revert(planetarycomputer): restore previous folder structure",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47005",
+      "mergedAt": "2026-10-06T00:27:06Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/47005/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 5,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 5,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 47015,
+      "title": "Release Network API Version 2026-03-01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47015",
+      "mergedAt": "2026-10-09T09:44:37Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/47015/report.md",
+      "errors": []
+    },
+    {
+      "number": 47019,
+      "title": "feat: add Private Traffic Manager affinity routing in 2026-10-01-preview",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47019",
+      "mergedAt": "2026-10-10T08:19:46Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "invalid-oad-output"
+      ],
+      "report": "prs/47019/report.md",
+      "errors": []
+    },
+    {
+      "number": 47033,
+      "title": "Microsoft.Authorization PrivilegedAccess 2026-06-01-preview (supersedes #45970)",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47033",
+      "mergedAt": "2026-10-07T21:28:15Z",
+      "status": "not-qualified",
+      "complete": false,
+      "reasonCodes": [
+        "run-association-unverified"
+      ],
+      "report": "prs/47033/report.md",
+      "errors": []
+    },
+    {
+      "number": 47047,
+      "title": "Try to fix NET SDK for PTM",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47047",
+      "mergedAt": "2026-10-06T15:31:57Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/47047/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 47118,
+      "title": "[Network] Fix Java VMSS public IP API version selection",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47118",
+      "mergedAt": "2026-10-08T05:43:48Z",
+      "status": "partial",
+      "complete": false,
+      "reasonCodes": [],
+      "report": "prs/47118/report.md",
+      "errors": [
+        "specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found: error file-not-found: File <temp>/typespec-breaking-change…"
+      ]
+    },
+    {
+      "number": 47123,
+      "title": "Enable Verified ID provisioning emitter",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47123",
+      "mergedAt": "2026-10-09T06:24:33Z",
+      "status": "partial",
+      "complete": false,
+      "reasonCodes": [],
+      "report": "prs/47123/report.md",
+      "errors": [
+        "specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get')"
+      ]
+    },
+    {
+      "number": 47139,
+      "title": "[SDK configuration] Pin all Resilience Management SDK API versions",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47139",
+      "mergedAt": "2026-10-09T09:33:41Z",
+      "status": "partial",
+      "complete": false,
+      "reasonCodes": [],
+      "report": "prs/47139/report.md",
+      "errors": [
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement: Analysis failed: Unable to distinguish language type of union variant \"Symbol(name)\" with available runtime checks. Ind…"
+      ]
+    },
+    {
+      "number": 47140,
+      "title": "Update TypeSpec libraries to latest release versions",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47140",
+      "mergedAt": "2026-10-09T00:26:42Z",
+      "status": "partial",
+      "complete": false,
+      "reasonCodes": [],
+      "report": "prs/47140/report.md",
+      "errors": [
+        "specification/ai-foundry/data-plane/Foundry: Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 68 error(s) found: <temp>/typespec-breaking-change-base-b5v5TD/specification/ai-foundry/data-plan…",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents: Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 1 error(s) found: error file-not-found: File <temp>/typespec-breakin…",
+        "specification/ai/data-plane/OpenAIAssistants: Analysis failed: Unable to distinguish language type of union variant \"vectorStoreIds\" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Avail…",
+        "specification/cognitiveservices/data-plane/OpenAIInference: Analysis failed: Unable to determine distinguishing runtime checks for language type of union variant \"Symbol(name)\". Indistinguishable from: [Symbol(name)]. Variant type category…",
+        "specification/keyvault/data-plane/Administration: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get')",
+        "specification/maps/data-plane/Weather: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get')"
+      ]
+    },
+    {
+      "number": 47160,
+      "title": "[IoTHub] Add C# client names for 2026-10-01-preview types",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47160",
+      "mergedAt": "2026-10-09T19:24:37Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/47160/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 47161,
+      "title": "Rename ContextCache/BlobAccessPoint .NET properties",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47161",
+      "mergedAt": "2026-10-09T18:55:38Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/47161/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 47170,
+      "title": "Avoid BillingBenefits C# validation model naming collision",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47170",
+      "mergedAt": "2026-10-10T07:59:51Z",
+      "status": "evaluated",
+      "complete": true,
+      "reasonCodes": [],
+      "report": "prs/47170/report.md",
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    }
+  ]
+}

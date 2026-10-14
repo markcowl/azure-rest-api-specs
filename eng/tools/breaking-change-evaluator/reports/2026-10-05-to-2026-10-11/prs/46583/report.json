@@ -1,0 +1,1417 @@
+{
+  "schemaVersion": 2,
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-14T01:29:01.368Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46583,
+    "title": "[OperationalInsights] Rename data authorization property for C#",
+    "author": "ArthurMa1978",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46583",
+    "baseBranch": "main",
+    "headBranch": "operationalinsights-data-authorization-mode",
+    "baseSha": "eea7c005f673b4c72a97f4edda1a18217cfbca58",
+    "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+    "mergedAt": "2026-10-09T04:53:56Z",
+    "changedTypeSpecFiles": [
+      "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46583",
+      "state": "closed",
+      "merged": true,
+      "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+      "baseSha": "eea7c005f673b4c72a97f4edda1a18217cfbca58",
+      "runs": {
+        "A": {
+          "id": 35696099557,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/35696099557",
+          "logDigest": "03d98fc87fab6d0281b8e82ca562f92c6a4cc54f415d0600a51e5c87ebb35cdc",
+          "summaryDigest": "b862ab29e44ddb7fe13f2b97f49caaa1cf6b44e4395eb0f4050c92c9ec89c1ec"
+        },
+        "B": {
+          "id": 35696099545,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/35696099545",
+          "logDigest": "7b9e6387c100d995fcf2074b458e88d2af3e705624549a0a108e3f605286690e",
+          "summaryDigest": "3360a6912e52aa01508fd72500ff1c4ab07e66b0135d8fc5de7344c6b6f0b0fe"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46583",
+      "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+      "baseSha": "eea7c005f673b4c72a97f4edda1a18217cfbca58"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [
+    {
+      "phase": "A",
+      "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+      "baseVersion": "2025-07-01",
+      "headVersion": "2025-07-01"
+    },
+    {
+      "phase": "A",
+      "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+      "baseVersion": "2026-03-01",
+      "headVersion": "2026-03-01"
+    },
+    {
+      "phase": "B",
+      "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+      "baseVersion": "2025-07-01",
+      "headVersion": "2026-03-01"
+    }
+  ],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+      "status": "complete",
+      "exitCode": 1,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+          "jsonDigest": "7cb0a312a1e54d4b73a13cc46da5fc243adc17102952c1cacaa64967fd4c2523",
+          "markdownDigest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 4476,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2670,
+            "classifyMs": 2,
+            "suppressMs": 2,
+            "reportMs": 0,
+            "totalMs": 7164
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "OperationalInsights",
+              "baseVersion": "2025-07-01",
+              "headVersion": "2025-07-01",
+              "phase": "same-version",
+              "findingCount": 170
+            },
+            {
+              "serviceName": "OperationalInsights",
+              "baseVersion": "2026-03-01",
+              "headVersion": "2026-03-01",
+              "phase": "same-version",
+              "findingCount": 190
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/75b0ebe30c6090b3-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/75b0ebe30c6090b3-phase-b.md",
+          "jsonDigest": "e64e0791f61d8567a295169b7c2502210aa0029cfca057e98e2e17038824fd0b",
+          "markdownDigest": "2d4f9b63e0f82a5165762f1fb12bb8d02af6a6a6d2161fa6a7023b0d62b44c7c",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 4336,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2947,
+            "classifyMs": 1,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 7295
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "OperationalInsights",
+              "baseVersion": "2025-07-01",
+              "headVersion": "2026-03-01",
+              "phase": "cross-version",
+              "findingCount": 9
+            }
+          ]
+        }
+      },
+      "reportDigest": "2e3f3fdbaec7e9e0338ecc8a339c57d9a5ce46f81cad28ee7016f8c16c9d8cc7",
+      "comparisonsPerformed": 3,
+      "versionComparisons": [
+        {
+          "serviceName": "OperationalInsights",
+          "baseVersion": "2025-07-01",
+          "headVersion": "2025-07-01",
+          "phase": "same-version",
+          "findingCount": 170
+        },
+        {
+          "serviceName": "OperationalInsights",
+          "baseVersion": "2026-03-01",
+          "headVersion": "2026-03-01",
+          "phase": "same-version",
+          "findingCount": 190
+        },
+        {
+          "serviceName": "OperationalInsights",
+          "baseVersion": "2025-07-01",
+          "headVersion": "2026-03-01",
+          "phase": "cross-version",
+          "findingCount": 9
+        }
+      ],
+      "findings": [
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-0",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeNarrowed",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.sku.properties.capacity removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/clusters/{}"
+          },
+          "element": "body.properties.sku.properties.capacity.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 1145
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 1145,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L1145"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-1",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.sku.properties.capacity added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/clusters/{}"
+          },
+          "element": "body.properties.sku.properties.capacity.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Cluster.tsp",
+            "line": 43
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Cluster.tsp",
+            "line": 43,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Cluster.tsp#L43"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-2",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeNarrowed",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.enableDataExport removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.enableDataExport.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2874
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2874,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2874"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-3",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.enableDataExport added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.enableDataExport.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L174"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-4",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeNarrowed",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.immediatePurgeDataOn30Days removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.immediatePurgeDataOn30Days.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2880
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2880,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2880"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-5",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.immediatePurgeDataOn30Days added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.immediatePurgeDataOn30Days.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L174"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-6",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeNarrowed",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.enableLogAccessUsingOnlyResourcePermissions removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.enableLogAccessUsingOnlyResourcePermissions.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2886
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2886,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2886"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-7",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.enableLogAccessUsingOnlyResourcePermissions added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.enableLogAccessUsingOnlyResourcePermissions.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L174"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-8",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeNarrowed",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.clusterResourceId removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.clusterResourceId.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2892
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2892,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2892"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-9",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.clusterResourceId added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.clusterResourceId.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L174"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-10",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeNarrowed",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.disableLocalAuth removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.disableLocalAuth.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2898
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2898,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2898"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-11",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.disableLocalAuth added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.disableLocalAuth.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L174"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-12",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeNarrowed",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.dataAuthorizationMode removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.dataAuthorizationMode.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2026-03-01",
+            "headVersion": "2026-03-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2918
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2918,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2918"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-13",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.features.properties.dataAuthorizationMode added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.dataAuthorizationMode.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2026-03-01",
+            "headVersion": "2026-03-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L174"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-14",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResponsePropertyTypeNarrowed",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.sku.properties.capacityReservationLevel removed variant intrinsic.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.sku.properties.capacityReservationLevel.variants.intrinsic",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2817
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2817,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2817"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-15",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.sku.properties.capacityReservationLevel added variant intrinsic.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.sku.properties.capacityReservationLevel.variants.intrinsic",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 166
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 166,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L166"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-16",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResponsePropertyTypeNarrowed",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.retentionInDays removed variant intrinsic.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.retentionInDays.variants.intrinsic",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2740
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2740,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2740"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-17",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.retentionInDays added variant intrinsic.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.retentionInDays.variants.intrinsic",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 166
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 166,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L166"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-18",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResponsePropertyTypeNarrowed",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.features.properties.unifiedSentinelBillingOnly removed variant intrinsic.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.unifiedSentinelBillingOnly.variants.intrinsic",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2905
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2905,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2905"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-19",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.features.properties.unifiedSentinelBillingOnly added variant intrinsic.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.unifiedSentinelBillingOnly.variants.intrinsic",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 166
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 166,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L166"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-20",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "RequestPropertyTypeNarrowed",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.sku.properties.capacityReservationLevel removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.sku.properties.capacityReservationLevel.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2817
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2817,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2817"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-21",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.sku.properties.capacityReservationLevel added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.sku.properties.capacityReservationLevel.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L174"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-22",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "RequestPropertyTypeNarrowed",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.retentionInDays removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.retentionInDays.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2740
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2740,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/eea7c005f673b4c72a97f4edda1a18217cfbca58/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2740"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-23",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.retentionInDays added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.retentionInDays.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2025-07-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+            "digest": "eb83835b8774911c799a16de034c8d79a1458f9c88cce0ecb8ea444690bf0060"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 174,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L174"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-14",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'dataAuthorizationMode' was added at body.properties.properties.features.properties.dataAuthorizationMode.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+          },
+          "element": "body.properties.properties.features.properties.dataAuthorizationMode",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2026-03-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2918
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-b.md",
+            "digest": "2d4f9b63e0f82a5165762f1fb12bb8d02af6a6a6d2161fa6a7023b0d62b44c7c"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2918,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2918"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-15",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.schema.properties.columns.properties.dataTypeHint added variant 'vector16'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}/tables/{}"
+          },
+          "element": "body.properties.properties.schema.properties.columns.properties.dataTypeHint.variants.vector16",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2026-03-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 574
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-b.md",
+            "digest": "2d4f9b63e0f82a5165762f1fb12bb8d02af6a6a6d2161fa6a7023b0d62b44c7c"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 574,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L574"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-16",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'protectionLevel' was added at body.properties.properties.protectionLevel.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}/tables/{}"
+          },
+          "element": "body.properties.properties.protectionLevel",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2026-03-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2297
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-b.md",
+            "digest": "2d4f9b63e0f82a5165762f1fb12bb8d02af6a6a6d2161fa6a7023b0d62b44c7c"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+            "line": 2297,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp#L2297"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-17",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'identity' was added at body.properties.identity.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}/summaryLogs/{}"
+          },
+          "element": "body.properties.identity",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2026-03-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/SummaryLogs.tsp",
+            "line": 32
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-b.md",
+            "digest": "2d4f9b63e0f82a5165762f1fb12bb8d02af6a6a6d2161fa6a7023b0d62b44c7c"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/SummaryLogs.tsp",
+            "line": 32,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/SummaryLogs.tsp#L32"
+          }
+        },
+        {
+          "occurrenceId": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-28",
+          "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}/purgeLakeData was added.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}/purgeLakeData"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-07-01",
+            "headVersion": "2026-03-01"
+          },
+          "location": {
+            "file": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 404
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/75b0ebe30c6090b3-phase-b.md",
+            "digest": "2d4f9b63e0f82a5165762f1fb12bb8d02af6a6a6d2161fa6a7023b0d62b44c7c"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+            "line": 404,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/8974e4a28af728a7858f2877e4ccc2cdf66f68bf/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp#L404"
+          }
+        }
+      ]
+    }
+  ],
+  "matches": [],
+  "findingGroups": [
+    {
+      "category": "typespec-only",
+      "key": "OperationAdded",
+      "typeSpecKind": "OperationAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-28"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "RequestPropertyTypeNarrowed",
+      "typeSpecKind": "RequestPropertyTypeNarrowed",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-20",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-22"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "RequestPropertyTypeWidened",
+      "typeSpecKind": "RequestPropertyTypeWidened",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-21",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-23"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResourcePropertyAdded",
+      "typeSpecKind": "ResourcePropertyAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-14",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-16",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-17"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResourcePropertyTypeNarrowed",
+      "typeSpecKind": "ResourcePropertyTypeNarrowed",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-0",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-10",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-12",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-2",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-4",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-6",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-8"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResourcePropertyTypeWidened",
+      "typeSpecKind": "ResourcePropertyTypeWidened",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-1",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-11",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-13",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-3",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-5",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-7",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-9",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-B-15"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResponsePropertyTypeNarrowed",
+      "typeSpecKind": "ResponsePropertyTypeNarrowed",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-14",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-16",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-18"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResponsePropertyTypeWidened",
+      "typeSpecKind": "ResponsePropertyTypeWidened",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-15",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-17",
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights:tsp-A-19"
+      ]
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+    "prBaseSha": "eea7c005f673b4c72a97f4edda1a18217cfbca58",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin eea7c005f673b4c72a97f4edda1a18217cfbca58 8974e4a28af728a7858f2877e4ccc2cdf66f68bf\ngit -C target checkout --detach 8974e4a28af728a7858f2877e4ccc2cdf66f68bf\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46583' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+        "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights' --base-ref eea7c005f673b4c72a97f4edda1a18217cfbca58 --phase same-version --json-output '../specification-operationalinsights-resource-manager-Microsoft.OperationalInsights-OperationalInsights-phase-a.json' --markdown-output '../specification-operationalinsights-resource-manager-Microsoft.OperationalInsights-OperationalInsights-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights' --base-ref eea7c005f673b4c72a97f4edda1a18217cfbca58 --json-output '../specification-operationalinsights-resource-manager-Microsoft.OperationalInsights-OperationalInsights-phase-b-evidence.json' --markdown-output '../specification-operationalinsights-resource-manager-Microsoft.OperationalInsights-OperationalInsights-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 29,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 29,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 24,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 24,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "typespec-only-divergence"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 5,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 5,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "typespec-only-divergence"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 24,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 24
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 4,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 4
+      }
+    }
+  }
+}

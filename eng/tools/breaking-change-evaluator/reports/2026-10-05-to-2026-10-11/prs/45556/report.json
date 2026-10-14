@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:34:53.329Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45556,
+    "title": "Add CognitiveServices preview API version 2026-09-15-preview",
+    "author": "fmabroukmsft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45556",
+    "baseBranch": "main",
+    "headBranch": "swagger-agent/CogSvc-2026-09-15-preview-typespec",
+    "baseSha": "b464a76895ea6f17747d4664b935d0dc55fa06c4",
+    "headSha": "91d8e4ca207bad8071976f84d66e78bbbd32d721",
+    "mergedAt": "2026-10-10T00:18:26Z",
+    "changedTypeSpecFiles": [
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AdapterDeployment.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ArcDeployment.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Compute.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ComputeOperation.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionName.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionPropertiesV2BasicResource.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeCapacity.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeDeployment.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeUsages.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Project.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiBinding.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiPolicy.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiRego.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Workbench.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/back-compatible.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/client.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/main.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45556",
+      "state": "closed",
+      "merged": true,
+      "headSha": "91d8e4ca207bad8071976f84d66e78bbbd32d721",
+      "baseSha": "b464a76895ea6f17747d4664b935d0dc55fa06c4",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AdapterDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ArcDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Compute.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ComputeOperation.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionName.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionPropertiesV2BasicResource.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeCapacity.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeUsages.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Project.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiBinding.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiPolicy.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiRego.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Workbench.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/back-compatible.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/client.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/main.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45556",
+      "headSha": "91d8e4ca207bad8071976f84d66e78bbbd32d721",
+      "baseSha": "b464a76895ea6f17747d4664b935d0dc55fa06c4"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-13T23:57:37.007Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46377,
+    "title": "Dev/hbhansali/resiliencemgmt ga 2026 10 01",
+    "author": "harshb-15",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46377",
+    "baseBranch": "main",
+    "headBranch": "dev/hbhansali/resiliencemgmt-ga-2026-10-01",
+    "baseSha": "6a1a4ddcb4281de3a1f7c966794f2516628cad52",
+    "headSha": "493f5b4a84894a9d47067f8fa46eb0d96faec2ad",
+    "mergedAt": "2026-10-05T05:51:23Z",
+    "changedTypeSpecFiles": [
+      "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/goal.tsp",
+      "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/main.tsp",
+      "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/drill/drillResource.models.tsp",
+      "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/drill/enums.tsp",
+      "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/goals/enum.tsp",
+      "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/goals/goalAssignment.tsp",
+      "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/goals/goalResource.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46377",
+      "state": "closed",
+      "merged": true,
+      "headSha": "493f5b4a84894a9d47067f8fa46eb0d96faec2ad",
+      "baseSha": "6a1a4ddcb4281de3a1f7c966794f2516628cad52",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/goal.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/main.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/drill/drillResource.models.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/drill/enums.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/goals/enum.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/goals/goalAssignment.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/goals/goalResource.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46377",
+      "headSha": "493f5b4a84894a9d47067f8fa46eb0d96faec2ad",
+      "baseSha": "6a1a4ddcb4281de3a1f7c966794f2516628cad52"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

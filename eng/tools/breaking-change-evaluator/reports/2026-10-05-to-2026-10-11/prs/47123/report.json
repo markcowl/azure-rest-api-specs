@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:04:39.491Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47123,
+    "title": "Enable Verified ID provisioning emitter",
+    "author": "cxznmhdcxz",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47123",
+    "baseBranch": "main",
+    "headBranch": "feature/provisioning-verifiedid",
+    "baseSha": "f84874f0fae6c9dc9fb8f46e8e15a53b81036633",
+    "headSha": "1b93bd4c166ba7d363c391a6bdfad53f76f24270",
+    "mergedAt": "2026-10-09T06:24:33Z",
+    "changedTypeSpecFiles": [
+      "specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47123",
+      "state": "closed",
+      "merged": true,
+      "headSha": "1b93bd4c166ba7d363c391a6bdfad53f76f24270",
+      "baseSha": "f84874f0fae6c9dc9fb8f46e8e15a53b81036633",
+      "runs": {
+        "A": {
+          "id": 37889994887,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "1b93bd4c166ba7d363c391a6bdfad53f76f24270",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37889994887",
+          "logDigest": "95ad66079d064d414a1a897575ad494da40ee52e97a8f28baa328fb4e4a52539",
+          "summaryDigest": "8b0430f9498141b9893b66e0ff44f9a3e08184225eedb8e73bc9f139a2b139fb"
+        },
+        "B": {
+          "id": 37889994884,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "1b93bd4c166ba7d363c391a6bdfad53f76f24270",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37889994884",
+          "logDigest": "0f111b8e96cb117d6321804a16049e7e7750dab5193e30697630db74acb9aad9",
+          "summaryDigest": "39d86c0c7e424665defc5459b90ab6c6384d15783d88a3c2e751903100c975a1"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47123",
+      "headSha": "1b93bd4c166ba7d363c391a6bdfad53f76f24270",
+      "baseSha": "f84874f0fae6c9dc9fb8f46e8e15a53b81036633"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/17f4c117ebe651de-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/17f4c117ebe651de-phase-a.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/17f4c117ebe651de-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/17f4c117ebe651de-phase-b.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "errors": [
+    "specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "1b93bd4c166ba7d363c391a6bdfad53f76f24270",
+    "prBaseSha": "f84874f0fae6c9dc9fb8f46e8e15a53b81036633",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin f84874f0fae6c9dc9fb8f46e8e15a53b81036633 1b93bd4c166ba7d363c391a6bdfad53f76f24270\ngit -C target checkout --detach 1b93bd4c166ba7d363c391a6bdfad53f76f24270\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47123' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId",
+        "project": "specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId' --base-ref f84874f0fae6c9dc9fb8f46e8e15a53b81036633 --phase same-version --json-output '../specification-verifiedid-resource-manager-Microsoft.VerifiedId-VerifiedId-phase-a.json' --markdown-output '../specification-verifiedid-resource-manager-Microsoft.VerifiedId-VerifiedId-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId' --base-ref f84874f0fae6c9dc9fb8f46e8e15a53b81036633 --json-output '../specification-verifiedid-resource-manager-Microsoft.VerifiedId-VerifiedId-phase-b-evidence.json' --markdown-output '../specification-verifiedid-resource-manager-Microsoft.VerifiedId-VerifiedId-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

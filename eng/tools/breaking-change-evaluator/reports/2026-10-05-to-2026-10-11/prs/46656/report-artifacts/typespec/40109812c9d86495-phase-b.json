@@ -1,0 +1,49 @@
+{
+  "specPaths": [
+    "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity"
+  ],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-T6tLsA\\specification\\hybridconnectivity\\resource-manager\\Microsoft.HybridConnectivity\\HybridConnectivity",
+  "headRevision": "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity",
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "versionComparisons": [
+      {
+        "serviceName": "HybridConnectivity",
+        "baseVersion": "2024-12-01",
+        "headVersion": "2024-12-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "HybridConnectivity",
+        "baseVersion": "2027-01-01",
+        "headVersion": "2027-01-01",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 3100,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 1276,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 4388
+  }
+}

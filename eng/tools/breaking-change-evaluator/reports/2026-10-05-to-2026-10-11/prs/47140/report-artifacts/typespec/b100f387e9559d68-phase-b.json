@@ -1,0 +1,47 @@
+{
+  "specPaths": ["specification/trafficmanager/resource-manager/Microsoft.Network/TrafficManager"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-Un7cAK\\specification\\trafficmanager\\resource-manager\\Microsoft.Network\\TrafficManager",
+  "headRevision": "specification/trafficmanager/resource-manager/Microsoft.Network/TrafficManager",
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "versionComparisons": [
+      {
+        "serviceName": "Network",
+        "baseVersion": "2022-04-01",
+        "headVersion": "2022-04-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Network",
+        "baseVersion": "2026-09-01",
+        "headVersion": "2026-09-01",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1381,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 539,
+    "classifyMs": 2,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 1929
+  }
+}

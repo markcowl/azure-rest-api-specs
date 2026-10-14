@@ -1,0 +1,2225 @@
+{
+  "specPaths": ["specification/cdn/resource-manager/Microsoft.Cdn/Cdn"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-tWxb3d\\specification\\cdn\\resource-manager\\Microsoft.Cdn\\Cdn",
+  "headRevision": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+  "requiresAction": true,
+  "counts": {
+    "errors": 36,
+    "suppressed": 0,
+    "ignored": 46,
+    "totalFindings": 82,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 11
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 11,
+    "versionComparisons": [
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01",
+        "phase": "same-version",
+        "findingCount": 32
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-09-01-preview",
+        "headVersion": "2025-09-01-preview",
+        "phase": "same-version",
+        "findingCount": 32
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-12-01",
+        "headVersion": "2025-12-01",
+        "phase": "same-version",
+        "findingCount": 32
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2026-04-01-preview",
+        "headVersion": "2026-04-01-preview",
+        "phase": "same-version",
+        "findingCount": 32
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2026-07-01",
+        "headVersion": "2026-07-01",
+        "phase": "same-version",
+        "findingCount": 32
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2026-08-01-preview",
+        "headVersion": "2026-08-01-preview",
+        "phase": "same-version",
+        "findingCount": 32
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview",
+        "phase": "cross-version",
+        "findingCount": 57
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-12-01",
+        "phase": "cross-version",
+        "findingCount": 5
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview",
+        "phase": "cross-version",
+        "findingCount": 18
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01",
+        "phase": "cross-version",
+        "findingCount": 28
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2026-07-01",
+        "headVersion": "2026-08-01-preview",
+        "phase": "cross-version",
+        "findingCount": 6
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions.variants.CacheExpiration.properties.parameters.properties.cacheDuration removed variant intrinsic.",
+      "element": "body.properties.properties.actions.variants.CacheExpiration.properties.parameters.properties.cacheDuration.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-tWxb3d/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 8323
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-tWxb3d/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\nop create(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions.variants.CacheExpiration.properties.parameters.properties.cacheDuration added variant intrinsic.",
+      "element": "body.properties.properties.actions.variants.CacheExpiration.properties.parameters.properties.cacheDuration.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 40
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\nop create(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions.variants.CacheKeyQueryString.properties.parameters.properties.queryParameters removed variant intrinsic.",
+      "element": "body.properties.properties.actions.variants.CacheKeyQueryString.properties.parameters.properties.queryParameters.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-tWxb3d/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 8356
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-tWxb3d/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\nop create(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions.variants.CacheKeyQueryString.properties.parameters.properties.queryParameters added variant intrinsic.",
+      "element": "body.properties.properties.actions.variants.CacheKeyQueryString.properties.parameters.properties.queryParameters.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 40
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\nop create(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'mtlsSettings' was added at body.properties.properties.mtlsSettings.",
+      "element": "body.properties.properties.mtlsSettings",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2783
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDDomainProperties.mtlsSettings",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDDomainProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  mtlsSettings: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.logScrubbing.properties.scrubbingRules.properties.matchVariable added variant 'RequestHeaderNames'.",
+      "element": "body.properties.properties.logScrubbing.properties.scrubbingRules.properties.matchVariable.variants.RequestHeaderNames",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 191
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Cdn.ScrubbingRuleEntryMatchVariable",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model Cdn {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  ScrubbingRuleEntryMatchVariable: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.logScrubbing.properties.scrubbingRules.properties.selectorMatchOperator added variant 'Equals'.",
+      "element": "body.properties.properties.logScrubbing.properties.scrubbingRules.properties.selectorMatchOperator.variants.Equals",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 220
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Cdn.ScrubbingRuleEntryMatchOperator",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model Cdn {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  ScrubbingRuleEntryMatchOperator: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.sku.properties.name added variant 'Classic_AzureFrontDoor'.",
+      "element": "body.properties.sku.properties.name.variants.Classic_AzureFrontDoor",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 108
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Cdn.SkuName",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model Cdn {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  SkuName: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'enforceMtls' was added at body.properties.properties.enforceMtls.",
+      "element": "body.properties.properties.enforceMtls",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2942
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDEndpointProperties.enforceMtls",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDEndpointProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  enforceMtls: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'originCapacityResource' was added at body.properties.properties.originCapacityResource.",
+      "element": "body.properties.properties.originCapacityResource",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3263
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}/origins/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDOriginProperties.originCapacityResource",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDOriginProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  originCapacityResource: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'grpcState' was added at body.properties.properties.grpcState.",
+      "element": "body.properties.properties.grpcState",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3445
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}/routes/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.RouteProperties.grpcState",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model RouteProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  grpcState: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.customRules.properties.rules.properties.action added variant 'AnomalyScoring'.",
+      "element": "body.properties.properties.customRules.properties.rules.properties.action.variants.AnomalyScoring",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 1316
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/cdnWebApplicationFirewallPolicies/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Cdn.ActionType",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model Cdn {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  ActionType: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'mtlsSettings' was added at body.properties.properties.mtlsSettings.",
+      "element": "body.properties.properties.mtlsSettings",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2783
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDDomainProperties.mtlsSettings",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDDomainProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  mtlsSettings: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'enforceMtls' was added at body.properties.properties.enforceMtls.",
+      "element": "body.properties.properties.enforceMtls",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2942
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDEndpointProperties.enforceMtls",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDEndpointProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  enforceMtls: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'tokenDestinationHeader' was added at body.properties.properties.authentication.properties.tokenDestinationHeader.",
+      "element": "body.properties.properties.authentication.properties.tokenDestinationHeader",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3173
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.OriginAuthenticationProperties.tokenDestinationHeader",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model OriginAuthenticationProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  tokenDestinationHeader: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'routes' was added at body.properties.properties.parameters.variants.WebApplicationFirewall.properties.associations.properties.routes.",
+      "element": "body.properties.properties.parameters.variants.WebApplicationFirewall.properties.associations.properties.routes",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 6786
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.SecurityPolicyWebApplicationFirewallAssociation.routes",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model SecurityPolicyWebApplicationFirewallAssociation {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  routes: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'isProfileLevel' was added at body.properties.properties.parameters.variants.WebApplicationFirewall.properties.isProfileLevel.",
+      "element": "body.properties.properties.parameters.variants.WebApplicationFirewall.properties.isProfileLevel",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 6809
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.SecurityPolicyWebApplicationFirewallParameters.isProfileLevel",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model SecurityPolicyWebApplicationFirewallParameters {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  isProfileLevel: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'serverTlsGroupPolicy' was added at body.properties.properties.tlsSettings.properties.serverTlsGroupPolicy.",
+      "element": "body.properties.properties.tlsSettings.properties.serverTlsGroupPolicy",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2825
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDDomainHttpsParameters.serverTlsGroupPolicy",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDDomainHttpsParameters {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  serverTlsGroupPolicy: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'serverTlsGroups' was added at body.properties.properties.tlsSettings.properties.serverTlsGroups.",
+      "element": "body.properties.properties.tlsSettings.properties.serverTlsGroups",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2831
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDDomainHttpsParameters.serverTlsGroups",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDDomainHttpsParameters {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  serverTlsGroups: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'mtlsSettings' was added at body.properties.properties.mtlsSettings.",
+      "element": "body.properties.properties.mtlsSettings",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2783
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDDomainProperties.mtlsSettings",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDDomainProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  mtlsSettings: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'enforceMtls' was added at body.properties.properties.enforceMtls.",
+      "element": "body.properties.properties.enforceMtls",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2942
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDEndpointProperties.enforceMtls",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDEndpointProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  enforceMtls: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'tokenDestinationHeader' was added at body.properties.properties.authentication.properties.tokenDestinationHeader.",
+      "element": "body.properties.properties.authentication.properties.tokenDestinationHeader",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3173
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.OriginAuthenticationProperties.tokenDestinationHeader",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model OriginAuthenticationProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  tokenDestinationHeader: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'certificateNameCheckValidationMode' was added at body.properties.properties.certificateNameCheckValidationMode.",
+      "element": "body.properties.properties.certificateNameCheckValidationMode",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3279
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}/origins/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDOriginProperties.certificateNameCheckValidationMode",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDOriginProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  certificateNameCheckValidationMode: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'customCertificateSubjects' was added at body.properties.properties.customCertificateSubjects.",
+      "element": "body.properties.properties.customCertificateSubjects",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3287
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}/origins/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.AFDOriginProperties.customCertificateSubjects",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model AFDOriginProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  customCertificateSubjects: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'routes' was added at body.properties.properties.parameters.variants.WebApplicationFirewall.properties.associations.properties.routes.",
+      "element": "body.properties.properties.parameters.variants.WebApplicationFirewall.properties.associations.properties.routes",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 6786
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.SecurityPolicyWebApplicationFirewallAssociation.routes",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model SecurityPolicyWebApplicationFirewallAssociation {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  routes: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'isProfileLevel' was added at body.properties.properties.parameters.variants.WebApplicationFirewall.properties.isProfileLevel.",
+      "element": "body.properties.properties.parameters.variants.WebApplicationFirewall.properties.isProfileLevel",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 6809
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.SecurityPolicyWebApplicationFirewallParameters.isProfileLevel",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model SecurityPolicyWebApplicationFirewallParameters {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  isProfileLevel: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'capacityDistributionSettings' was added at body.properties.properties.loadBalancingSettings.properties.capacityDistributionSettings.",
+      "element": "body.properties.properties.loadBalancingSettings.properties.capacityDistributionSettings",
+      "versionPair": {
+        "baseVersion": "2026-07-01",
+        "headVersion": "2026-08-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3084
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.LoadBalancingSettingsParameters.capacityDistributionSettings",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model LoadBalancingSettingsParameters {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  capacityDistributionSettings: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'grpcState' was added at body.properties.properties.grpcState.",
+      "element": "body.properties.properties.grpcState",
+      "versionPair": {
+        "baseVersion": "2026-07-01",
+        "headVersion": "2026-08-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3445
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}/routes/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.RouteProperties.grpcState",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "example": "model RouteProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  grpcState: ...;\n}"
+      }
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+        "line": 53
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+        "line": 60
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+        "line": 74
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation DELETE /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+        "line": 86
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "DELETE",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+        "line": 96
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+        "line": 39
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+        "line": 45
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+        "line": 53
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}/approve was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+        "line": 58
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}/approve"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}/compare was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+        "line": 68
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}/compare"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+        "line": 54
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+        "line": 61
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+        "line": 75
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation DELETE /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+        "line": 88
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "DELETE",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+        "line": 99
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+        "line": 51
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+        "line": 58
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+        "line": 72
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation DELETE /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+        "line": 86
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "DELETE",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+        "line": 97
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/providers/Microsoft.Cdn/webAgents was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+        "line": 105
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/providers/Microsoft.Cdn/webAgents"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+        "line": 54
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+        "line": 61
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+        "line": 75
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation DELETE /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+        "line": 88
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "DELETE",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+        "line": 99
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}/purge was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+        "line": 108
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}/purge"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.secretType added variant 'MtlsCertificateChain'.",
+      "element": "body.properties.secretType.variants.MtlsCertificateChain",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 65
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/validateSecret"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "EnumerationMemberAdded",
+      "severity": "ignore",
+      "rule": "service-level",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Enumeration member 'Grpc' was added at body.properties.properties.healthProbeSettings.properties.probeProtocol.",
+      "element": "body.properties.properties.healthProbeSettings.properties.probeProtocol.Grpc",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2346
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+      "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 32
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: DeliveryRuleActionUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel DeliveryRuleActionUnion { ... }"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+      "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 40
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+      "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 57
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.parameters added variant 'WebApplicationFirewallEmbedded'.",
+      "element": "body.properties.properties.parameters.variants.WebApplicationFirewallEmbedded",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp",
+        "line": 33
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: SecurityPolicyPropertiesParametersUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel SecurityPolicyPropertiesParametersUnion { ... }"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.parameters added variant 'WebApplicationFirewallEmbedded'.",
+      "element": "body.properties.properties.parameters.variants.WebApplicationFirewallEmbedded",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp",
+        "line": 41
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.parameters added variant 'WebApplicationFirewallEmbedded'.",
+      "element": "body.properties.properties.parameters.variants.WebApplicationFirewallEmbedded",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp",
+        "line": 58
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+      "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+        "line": 32
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: SecretParametersUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel SecretParametersUnion { ... }"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+      "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+        "line": 40
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'batchMode' was added at body.properties.properties.batchMode.",
+      "element": "body.properties.properties.batchMode",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-12-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3530
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'rules' was added at body.properties.properties.rules.",
+      "element": "body.properties.properties.rules",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-12-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 3537
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "RequestTypeKindChanged",
+      "severity": "error",
+      "rule": "type-kind-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request type kind changed at body from Intrinsic to Model.",
+      "element": "body",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-12-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/RuleSet.tsp",
+        "line": 19
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"RequestTypeKindChanged\" })",
+        "placement": "On the declaration: Microsoft.Cdn.RuleSetCreateOrUpdate",
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/RuleSet.tsp",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"RequestTypeKindChanged\" })\nmodel RuleSetCreateOrUpdate { ... }"
+      }
+    },
+    {
+      "kind": "ResponseHeaderAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response header 'Azure-AsyncOperation' was added.",
+      "element": "headers.Azure-AsyncOperation",
+      "versionPair": {
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-12-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/RuleSet.tsp",
+        "line": 56
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}"
+      },
+      "component": "response",
+      "statusCode": "201"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.secretType added variant 'MtlsCertificateChain'.",
+      "element": "body.properties.secretType.variants.MtlsCertificateChain",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 65
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/validateSecret"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+      "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 32
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: DeliveryRuleActionUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel DeliveryRuleActionUnion { ... }"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+      "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 40
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+      "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 57
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+      "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+        "line": 32
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: SecretParametersUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel SecretParametersUnion { ... }"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+      "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-04-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+        "line": 40
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.secretType added variant 'MtlsCertificateChain'.",
+      "element": "body.properties.secretType.variants.MtlsCertificateChain",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 65
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/validateSecret"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+      "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 32
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: DeliveryRuleActionUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel DeliveryRuleActionUnion { ... }"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+      "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 40
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+      "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+        "line": 57
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+      "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+        "line": 32
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: SecretParametersUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel SecretParametersUnion { ... }"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+      "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+      "versionPair": {
+        "baseVersion": "2025-12-01",
+        "headVersion": "2026-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+        "line": 40
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "EnumerationMemberAdded",
+      "severity": "ignore",
+      "rule": "service-level",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Enumeration member 'Grpc' was added at body.properties.properties.healthProbeSettings.properties.probeProtocol.",
+      "element": "body.properties.properties.healthProbeSettings.properties.probeProtocol.Grpc",
+      "versionPair": {
+        "baseVersion": "2026-07-01",
+        "headVersion": "2026-08-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-FnME72/repo/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "line": 2346
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+      },
+      "component": "response",
+      "statusCode": "200"
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 19781,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 16596,
+    "classifyMs": 4,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 36390
+  }
+}

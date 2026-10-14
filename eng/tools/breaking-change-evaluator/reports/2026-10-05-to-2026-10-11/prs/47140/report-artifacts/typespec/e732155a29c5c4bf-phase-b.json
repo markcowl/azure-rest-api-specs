@@ -1,0 +1,3798 @@
+{
+  "specPaths": ["specification/ai/data-plane/AIAgents"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-qGIrF5\\specification\\ai\\data-plane\\AIAgents",
+  "headRevision": "specification/ai/data-plane/AIAgents",
+  "requiresAction": true,
+  "counts": {
+    "errors": 122,
+    "suppressed": 0,
+    "ignored": 5,
+    "totalFindings": 127,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5,
+    "versionComparisons": [
+      {
+        "serviceName": "Agents",
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01",
+        "phase": "same-version",
+        "findingCount": 910
+      },
+      {
+        "serviceName": "Agents",
+        "baseVersion": "v1",
+        "headVersion": "v1",
+        "phase": "same-version",
+        "findingCount": 918
+      },
+      {
+        "serviceName": "Agents",
+        "baseVersion": "2025-05-15-preview",
+        "headVersion": "2025-05-15-preview",
+        "phase": "same-version",
+        "findingCount": 918
+      },
+      {
+        "serviceName": "Agents",
+        "baseVersion": "2025-05-01",
+        "headVersion": "v1",
+        "phase": "cross-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "Agents",
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview",
+        "phase": "cross-version",
+        "findingCount": 15
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'mcp' was added at body.properties.toolResources.variants.Azure.AI.Agents.ToolResourcesCreate.properties.mcp.",
+      "element": "body.properties.toolResources.variants.Azure.AI.Agents.ToolResourcesCreate.properties.mcp",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/tools/tool_resources.tsp",
+        "line": 36
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Azure.AI.Agents.ToolResources.mcp",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/tools/tool_resources.tsp",
+        "example": "model ToolResources {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  mcp: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.toolChoice.variants.Azure.AI.Agents.AgentsToolChoiceOption.variants.Azure.AI.Agents.AgentsNamedToolChoice.properties.type added variant 'microsoftFabric'.",
+      "element": "body.properties.toolChoice.variants.Azure.AI.Agents.AgentsToolChoiceOption.variants.Azure.AI.Agents.AgentsNamedToolChoice.properties.type.variants.microsoftFabric",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/tools/models.tsp",
+        "line": 1057
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Azure.AI.Agents.AgentsNamedToolChoiceType",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/tools/models.tsp",
+        "example": "model Agents {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  AgentsNamedToolChoiceType: ...;\n}"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.name removed variant intrinsic.",
+      "element": "body.properties.name.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 90
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.name added variant intrinsic.",
+      "element": "body.properties.name.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.description removed variant intrinsic.",
+      "element": "body.properties.description.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 94
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.description added variant intrinsic.",
+      "element": "body.properties.description.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.instructions removed variant intrinsic.",
+      "element": "body.properties.instructions.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 98
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.instructions added variant intrinsic.",
+      "element": "body.properties.instructions.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.toolResources removed variant intrinsic.",
+      "element": "body.properties.toolResources.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 110
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.toolResources added variant intrinsic.",
+      "element": "body.properties.toolResources.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.temperature removed variant intrinsic.",
+      "element": "body.properties.temperature.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 119
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.temperature added variant intrinsic.",
+      "element": "body.properties.temperature.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.topP removed variant intrinsic.",
+      "element": "body.properties.topP.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 131
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.topP added variant intrinsic.",
+      "element": "body.properties.topP.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.responseFormat removed variant intrinsic.",
+      "element": "body.properties.responseFormat.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 136
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.responseFormat added variant intrinsic.",
+      "element": "body.properties.responseFormat.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.metadata removed variant intrinsic.",
+      "element": "body.properties.metadata.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/common/models.tsp",
+        "line": 88
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/common/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.metadata added variant intrinsic.",
+      "element": "body.properties.metadata.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.name removed variant intrinsic.",
+      "element": "body.properties.name.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.name added variant intrinsic.",
+      "element": "body.properties.name.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.description removed variant intrinsic.",
+      "element": "body.properties.description.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 32
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.description added variant intrinsic.",
+      "element": "body.properties.description.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.instructions removed variant intrinsic.",
+      "element": "body.properties.instructions.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 39
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.instructions added variant intrinsic.",
+      "element": "body.properties.instructions.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.toolResources removed variant intrinsic.",
+      "element": "body.properties.toolResources.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 50
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.toolResources added variant intrinsic.",
+      "element": "body.properties.toolResources.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.temperature removed variant intrinsic.",
+      "element": "body.properties.temperature.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 59
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.temperature added variant intrinsic.",
+      "element": "body.properties.temperature.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.topP removed variant intrinsic.",
+      "element": "body.properties.topP.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 71
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.topP added variant intrinsic.",
+      "element": "body.properties.topP.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.responseFormat removed variant intrinsic.",
+      "element": "body.properties.responseFormat.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "line": 76
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.responseFormat added variant intrinsic.",
+      "element": "body.properties.responseFormat.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.metadata removed variant intrinsic.",
+      "element": "body.properties.metadata.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/common/models.tsp",
+        "line": 80
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/common/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.metadata added variant intrinsic.",
+      "element": "body.properties.metadata.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.message removed variant intrinsic.",
+      "element": "body.properties.error.properties.message.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/servicepatterns.tsp",
+        "line": 9
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/servicepatterns.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.message added variant intrinsic.",
+      "element": "body.properties.error.properties.message.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.type removed variant intrinsic.",
+      "element": "body.properties.error.properties.type.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/servicepatterns.tsp",
+        "line": 13
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/servicepatterns.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.type added variant intrinsic.",
+      "element": "body.properties.error.properties.type.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.param removed variant intrinsic.",
+      "element": "body.properties.error.properties.param.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/servicepatterns.tsp",
+        "line": 17
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/servicepatterns.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.param added variant intrinsic.",
+      "element": "body.properties.error.properties.param.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.code removed variant intrinsic.",
+      "element": "body.properties.error.properties.code.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/servicepatterns.tsp",
+        "line": 21
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/servicepatterns.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.code added variant intrinsic.",
+      "element": "body.properties.error.properties.code.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /assistants (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createAgent(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.thread.properties.messages.properties.attachments removed variant intrinsic.",
+      "element": "body.properties.thread.properties.messages.properties.attachments.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "line": 138
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.thread.properties.messages.properties.attachments added variant intrinsic.",
+      "element": "body.properties.thread.properties.messages.properties.attachments.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.thread.properties.toolResources removed variant intrinsic.",
+      "element": "body.properties.thread.properties.toolResources.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/threads/models.tsp",
+        "line": 52
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/threads/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.thread.properties.toolResources added variant intrinsic.",
+      "element": "body.properties.thread.properties.toolResources.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.model removed variant intrinsic.",
+      "element": "body.properties.model.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 402
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.model added variant intrinsic.",
+      "element": "body.properties.model.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.tools removed variant intrinsic.",
+      "element": "body.properties.tools.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 412
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.tools added variant intrinsic.",
+      "element": "body.properties.tools.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.maxPromptTokens removed variant intrinsic.",
+      "element": "body.properties.maxPromptTokens.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 456
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.maxPromptTokens added variant intrinsic.",
+      "element": "body.properties.maxPromptTokens.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.maxCompletionTokens removed variant intrinsic.",
+      "element": "body.properties.maxCompletionTokens.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 466
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.maxCompletionTokens added variant intrinsic.",
+      "element": "body.properties.maxCompletionTokens.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.truncationStrategy.variants.Azure.AI.Agents.TruncationObjectCreate.properties.lastMessages removed variant intrinsic.",
+      "element": "body.properties.truncationStrategy.variants.Azure.AI.Agents.TruncationObjectCreate.properties.lastMessages.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 509
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.truncationStrategy.variants.Azure.AI.Agents.TruncationObjectCreate.properties.lastMessages added variant intrinsic.",
+      "element": "body.properties.truncationStrategy.variants.Azure.AI.Agents.TruncationObjectCreate.properties.lastMessages.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.truncationStrategy removed variant intrinsic.",
+      "element": "body.properties.truncationStrategy.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 471
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.truncationStrategy added variant intrinsic.",
+      "element": "body.properties.truncationStrategy.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.toolChoice removed variant intrinsic.",
+      "element": "body.properties.toolChoice.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 476
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.toolChoice added variant intrinsic.",
+      "element": "body.properties.toolChoice.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.requiredAction removed variant intrinsic.",
+      "element": "body.properties.requiredAction.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 40
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.requiredAction added variant intrinsic.",
+      "element": "body.properties.requiredAction.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.lastError removed variant intrinsic.",
+      "element": "body.properties.lastError.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 45
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.lastError added variant intrinsic.",
+      "element": "body.properties.lastError.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.expiresAt removed variant intrinsic.",
+      "element": "body.properties.expiresAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 68
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.expiresAt added variant intrinsic.",
+      "element": "body.properties.expiresAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.startedAt removed variant intrinsic.",
+      "element": "body.properties.startedAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 74
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.startedAt added variant intrinsic.",
+      "element": "body.properties.startedAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.completedAt removed variant intrinsic.",
+      "element": "body.properties.completedAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 80
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.completedAt added variant intrinsic.",
+      "element": "body.properties.completedAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.cancelledAt removed variant intrinsic.",
+      "element": "body.properties.cancelledAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 86
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.cancelledAt added variant intrinsic.",
+      "element": "body.properties.cancelledAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.failedAt removed variant intrinsic.",
+      "element": "body.properties.failedAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 92
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.failedAt added variant intrinsic.",
+      "element": "body.properties.failedAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.incompleteDetails removed variant intrinsic.",
+      "element": "body.properties.incompleteDetails.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 97
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.incompleteDetails added variant intrinsic.",
+      "element": "body.properties.incompleteDetails.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.usage removed variant intrinsic.",
+      "element": "body.properties.usage.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 101
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.usage added variant intrinsic.",
+      "element": "body.properties.usage.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.maxPromptTokens removed variant intrinsic.",
+      "element": "body.properties.maxPromptTokens.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 116
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.maxPromptTokens added variant intrinsic.",
+      "element": "body.properties.maxPromptTokens.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.maxCompletionTokens removed variant intrinsic.",
+      "element": "body.properties.maxCompletionTokens.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 122
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.maxCompletionTokens added variant intrinsic.",
+      "element": "body.properties.maxCompletionTokens.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.truncationStrategy.variants.Azure.AI.Agents.TruncationObject.properties.lastMessages removed variant intrinsic.",
+      "element": "body.properties.truncationStrategy.variants.Azure.AI.Agents.TruncationObject.properties.lastMessages.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 509
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.truncationStrategy.variants.Azure.AI.Agents.TruncationObject.properties.lastMessages added variant intrinsic.",
+      "element": "body.properties.truncationStrategy.variants.Azure.AI.Agents.TruncationObject.properties.lastMessages.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.truncationStrategy removed variant intrinsic.",
+      "element": "body.properties.truncationStrategy.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 127
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.truncationStrategy added variant intrinsic.",
+      "element": "body.properties.truncationStrategy.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.toolChoice removed variant intrinsic.",
+      "element": "body.properties.toolChoice.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 132
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.toolChoice added variant intrinsic.",
+      "element": "body.properties.toolChoice.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createThreadAndRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.incompleteAt removed variant intrinsic.",
+      "element": "body.properties.incompleteAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "line": 179
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/messages"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/{}/messages (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createMessage(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.incompleteAt added variant intrinsic.",
+      "element": "body.properties.incompleteAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/messages/routes.tsp",
+        "line": 34
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/messages"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/{}/messages (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/messages/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createMessage(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.assistantId removed variant intrinsic.",
+      "element": "body.properties.assistantId.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "line": 190
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/messages"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/{}/messages (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createMessage(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.assistantId added variant intrinsic.",
+      "element": "body.properties.assistantId.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/messages/routes.tsp",
+        "line": 34
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/messages"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/{}/messages (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/messages/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createMessage(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.runId removed variant intrinsic.",
+      "element": "body.properties.runId.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "line": 195
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/messages"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/{}/messages (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createMessage(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.runId added variant intrinsic.",
+      "element": "body.properties.runId.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/messages/routes.tsp",
+        "line": 34
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/messages"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/{}/messages (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/messages/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createMessage(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.attachments removed variant intrinsic.",
+      "element": "body.properties.attachments.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "line": 199
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/messages"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/{}/messages (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop createMessage(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.attachments added variant intrinsic.",
+      "element": "body.properties.attachments.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/messages/routes.tsp",
+        "line": 34
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/messages"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/{}/messages (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/messages/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop createMessage(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.additionalInstructions removed variant intrinsic.",
+      "element": "body.properties.additionalInstructions.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 212
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/{}/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.additionalInstructions added variant intrinsic.",
+      "element": "body.properties.additionalInstructions.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 57
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/{}/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.additionalMessages removed variant intrinsic.",
+      "element": "body.properties.additionalMessages.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 217
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/{}/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.additionalMessages added variant intrinsic.",
+      "element": "body.properties.additionalMessages.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 57
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/{}/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.tool_resources removed variant intrinsic.",
+      "element": "body.properties.tool_resources.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 226
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/{}/runs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.tool_resources added variant intrinsic.",
+      "element": "body.properties.tool_resources.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 57
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/{}/runs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.stream removed variant intrinsic.",
+      "element": "body.properties.stream.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 193
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs/{}/submit_tool_outputs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /threads/{}/runs/{}/submit_tool_outputs (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop submitToolOutputsToRun(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.stream added variant intrinsic.",
+      "element": "body.properties.stream.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 171
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs/{}/submit_tool_outputs"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /threads/{}/runs/{}/submit_tool_outputs (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop submitToolOutputsToRun(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.expiredAt removed variant intrinsic.",
+      "element": "body.properties.expiredAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/run_steps/models.tsp",
+        "line": 54
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/threads/{}/runs/{}/steps/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /threads/{}/runs/{}/steps/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/run_steps/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop getRunStep(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.expiredAt added variant intrinsic.",
+      "element": "body.properties.expiredAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/run_steps/routes.tsp",
+        "line": 33
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/threads/{}/runs/{}/steps/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /threads/{}/runs/{}/steps/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/run_steps/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop getRunStep(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.data.properties.expiresAt removed variant intrinsic.",
+      "element": "body.properties.data.properties.expiresAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/vector_stores/models.tsp",
+        "line": 95
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/vector_stores"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /vector_stores (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/vector_stores/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop listVectorStores(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.data.properties.expiresAt added variant intrinsic.",
+      "element": "body.properties.data.properties.expiresAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/vector_stores/routes.tsp",
+        "line": 29
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/vector_stores"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /vector_stores (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/vector_stores/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop listVectorStores(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.data.properties.lastActiveAt removed variant intrinsic.",
+      "element": "body.properties.data.properties.lastActiveAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/vector_stores/models.tsp",
+        "line": 101
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/vector_stores"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /vector_stores (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/vector_stores/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop listVectorStores(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.data.properties.lastActiveAt added variant intrinsic.",
+      "element": "body.properties.data.properties.lastActiveAt.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/vector_stores/routes.tsp",
+        "line": 29
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/vector_stores"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /vector_stores (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/vector_stores/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop listVectorStores(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.expiresAfter removed variant intrinsic.",
+      "element": "body.properties.expiresAfter.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/vector_stores/models.tsp",
+        "line": 147
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/vector_stores/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /vector_stores/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/vector_stores/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop modifyVectorStore(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.expiresAfter added variant intrinsic.",
+      "element": "body.properties.expiresAfter.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/vector_stores/routes.tsp",
+        "line": 79
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/vector_stores/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: POST /vector_stores/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/vector_stores/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop modifyVectorStore(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.data.properties.lastError removed variant intrinsic.",
+      "element": "body.properties.data.properties.lastError.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/vector_stores/files/models.tsp",
+        "line": 95
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/vector_stores/{}/files"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /vector_stores/{}/files (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-qGIrF5/specification/ai/data-plane/AIAgents/vector_stores/files/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop listVectorStoreFiles(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.data.properties.lastError added variant intrinsic.",
+      "element": "body.properties.data.properties.lastError.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/vector_stores/files/routes.tsp",
+        "line": 30
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/vector_stores/{}/files"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /vector_stores/{}/files (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/vector_stores/files/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop listVectorStoreFiles(...): ...;"
+      }
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation DELETE /threads/{}/messages/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "v1"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/messages/routes.tsp",
+        "line": 136
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "DELETE",
+        "path": "/threads/{}/messages/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.stepDetails.variants.tool_calls.properties.toolCalls added variant 'azure_function'.",
+      "element": "body.properties.stepDetails.variants.tool_calls.properties.toolCalls.variants.azure_function",
+      "versionPair": {
+        "baseVersion": "2025-05-01",
+        "headVersion": "v1"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/run_steps/routes.tsp",
+        "line": 33
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/threads/{}/runs/{}/steps/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: RunStepToolCallUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel RunStepToolCallUnion { ... }"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.tools added variant 'fabric_dataagent'.",
+      "element": "body.properties.tools.variants.fabric_dataagent",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.tools added variant 'fabric_dataagent'.",
+      "element": "body.properties.tools.variants.fabric_dataagent",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/assistants"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: ToolDefinitionUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel ToolDefinitionUnion { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.status added variant 'incomplete'.",
+      "element": "body.properties.status.variants.incomplete",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "line": 338
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: Azure.AI.Agents.RunStatus",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/models.tsp",
+        "example": "model Agents {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\n  RunStatus: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.requiredAction.variants.RequiredActionUnion.variants.submit_tool_outputs.properties.submitToolOutputs.properties.toolCalls added variant 'mcp'.",
+      "element": "body.properties.requiredAction.variants.RequiredActionUnion.variants.submit_tool_outputs.properties.submitToolOutputs.properties.toolCalls.variants.mcp",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: RequiredToolCallUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel RequiredToolCallUnion { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.requiredAction.variants.RequiredActionUnion added variant 'submit_tool_approval'.",
+      "element": "body.properties.requiredAction.variants.RequiredActionUnion.variants.submit_tool_approval",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/runs"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: RequiredActionUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel RequiredActionUnion { ... }"
+      }
+    },
+    {
+      "kind": "RequestPropertyMadeOptional",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property at body.properties.toolOutputs was made optional.",
+      "element": "body.properties.toolOutputs",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 184
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs/{}/submit_tool_outputs"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.toolOutputs added variant 'computer_call_output'.",
+      "element": "body.properties.toolOutputs.variants.computer_call_output",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 171
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs/{}/submit_tool_outputs"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'toolApprovals' was added at body.properties.toolApprovals.",
+      "element": "body.properties.toolApprovals",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/runs/routes.tsp",
+        "line": 189
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/threads/{}/runs/{}/submit_tool_outputs"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.type added variant 'activities'.",
+      "element": "body.properties.type.variants.activities",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/run_steps/models.tsp",
+        "line": 110
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/threads/{}/runs/{}/steps/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: Azure.AI.Agents.RunStepType",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/run_steps/models.tsp",
+        "example": "model Agents {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\n  RunStepType: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.stepDetails.variants.tool_calls.properties.toolCalls added variant 'browser_automation'.",
+      "element": "body.properties.stepDetails.variants.tool_calls.properties.toolCalls.variants.browser_automation",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/run_steps/routes.tsp",
+        "line": 33
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/threads/{}/runs/{}/steps/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: RunStepToolCallUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel RunStepToolCallUnion { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "response-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.stepDetails added variant 'activities'.",
+      "element": "body.properties.stepDetails.variants.activities",
+      "versionPair": {
+        "baseVersion": "v1",
+        "headVersion": "2025-05-15-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/ai/data-plane/AIAgents/run_steps/routes.tsp",
+        "line": 33
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/threads/{}/runs/{}/steps/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: RunStepDetailsUnion",
+        "file": "<unknown location>",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel RunStepDetailsUnion { ... }"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 9811,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 6641,
+    "classifyMs": 10,
+    "suppressMs": 7,
+    "reportMs": 0,
+    "totalMs": 16495
+  }
+}

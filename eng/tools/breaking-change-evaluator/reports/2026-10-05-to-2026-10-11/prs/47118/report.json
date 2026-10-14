@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-14T00:44:58.623Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47118,
+    "title": "[Network] Fix Java VMSS public IP API version selection",
+    "author": "weidongxu-microsoft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47118",
+    "baseBranch": "main",
+    "headBranch": "fix/network-java-vmss-public-ip-api-version",
+    "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+    "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+    "mergedAt": "2026-10-08T05:43:48Z",
+    "changedTypeSpecFiles": [
+      "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47118",
+      "state": "closed",
+      "merged": true,
+      "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+      "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+      "runs": {
+        "A": {
+          "id": 37731634205,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37731634205",
+          "logDigest": "a124c286ae3b149ae98c0fd4ef40a8981e666325f03c32f06971e508754f517e",
+          "summaryDigest": "a3baad8a5838d7af91c4a63d97f437ec376332e6f4d6d4bd8937d7c70e0ea268"
+        },
+        "B": {
+          "id": 37731634253,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37731634253",
+          "logDigest": "dfb4e82039973bacbb90d2f406800d6b36cb77f27366fc94255e271cee406052",
+          "summaryDigest": "71747c812031d2cb7af3dc4b62cc3baa5208be0fa2a292688084b8c243b463e6"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47118",
+      "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+      "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/network/resource-manager/Microsoft.Network/Network",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/5c965f57f5360abe-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/5c965f57f5360abe-phase-a.md",
+          "error": "Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File <temp>/typespec-breaking-change-base-0GTtq6/specification/network/resource-manager/Microsoft.Network/Network/main.tsp not found.\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/5c965f57f5360abe-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/5c965f57f5360abe-phase-b.md",
+          "error": "Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File <temp>/typespec-breaking-change-base-ikzLzV/specification/network/resource-manager/Microsoft.Network/Network/main.tsp not found.\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File <temp>/typespec-breaking-change-base-0GTtq6/specification/network/resource-manager/Microsoft.Network/Network/main.tsp not found.\n; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File <temp>/typespec-breaking-change-base-ikzLzV/specification/network/resource-manager/Microsoft.Network/Network/main.tsp not found.\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "errors": [
+    "specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File <temp>/typespec-breaking-change-base-0GTtq6/specification/network/resource-manager/Microsoft.Network/Network/main.tsp not found.\n; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File <temp>/typespec-breaking-change-base-ikzLzV/specification/network/resource-manager/Microsoft.Network/Network/main.tsp not found.\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+    "prBaseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 9bf4c61c8f1c7107798415cea38dea61979e950d\ngit -C target checkout --detach 9bf4c61c8f1c7107798415cea38dea61979e950d\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47118' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/network/resource-manager/Microsoft.Network/Network",
+        "project": "specification/network/resource-manager/Microsoft.Network/Network",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network' --base-ref be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 --phase same-version --json-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-a.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network' --base-ref be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 --json-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-b-evidence.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

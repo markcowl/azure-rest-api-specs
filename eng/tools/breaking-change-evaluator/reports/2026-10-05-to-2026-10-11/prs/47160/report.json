@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 2,
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-14T03:32:46.068Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47160,
+    "title": "[IoTHub] Add C# client names for 2026-10-01-preview types",
+    "author": "davidemontanari",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47160",
+    "baseBranch": "main",
+    "headBranch": "davidemontanari/iothub-csharp-2026-10-01-preview-renames",
+    "baseSha": "bfd84ccde0ae294aa97e55d5d3ece70a2d4edb3f",
+    "headSha": "7213c8b8153df589cabe24aa5eb3043f4a203973",
+    "mergedAt": "2026-10-09T19:24:37Z",
+    "changedTypeSpecFiles": [
+      "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47160",
+      "state": "closed",
+      "merged": true,
+      "headSha": "7213c8b8153df589cabe24aa5eb3043f4a203973",
+      "baseSha": "bfd84ccde0ae294aa97e55d5d3ece70a2d4edb3f",
+      "runs": {
+        "A": {
+          "id": 37977458388,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "7213c8b8153df589cabe24aa5eb3043f4a203973",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37977458388",
+          "logDigest": "e8463822c52701801dc1c630e85e2e50836c8eabcf3ba0369e209349026ddffa",
+          "summaryDigest": "94bcc4cd565411ff70f6581c9cfceab71d00d50fd7e479674718edbabcd13628"
+        },
+        "B": {
+          "id": 37977458373,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "7213c8b8153df589cabe24aa5eb3043f4a203973",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37977458373",
+          "logDigest": "b418330295cdc525a4cfe4480b48888a2d73166c1a15a349ccb0db8709ead410",
+          "summaryDigest": "614e647bfe3053d3a93692a33537f29d58e7e334c876dc397d792012f56d0df8"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47160",
+      "headSha": "7213c8b8153df589cabe24aa5eb3043f4a203973",
+      "baseSha": "bfd84ccde0ae294aa97e55d5d3ece70a2d4edb3f"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/iothub/resource-manager/Microsoft.Devices/IoTHub",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/3f84ef68d0b4d637-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/3f84ef68d0b4d637-phase-a.md",
+          "jsonDigest": "7c0d2905a3fa646389f1a20d318c785841ae2c36d26786295906e1bc5685a02b",
+          "markdownDigest": "6a01ace2baa833df8ddb23d0c4fbe64df9611943cc66445b9c62106076340e0c",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1452,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 801,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 2257
+          },
+          "comparisonsPerformed": 3,
+          "versionComparisons": [
+            {
+              "serviceName": "Devices",
+              "baseVersion": "2026-03-01-preview",
+              "headVersion": "2026-03-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Devices",
+              "baseVersion": "2026-05-01-preview",
+              "headVersion": "2026-05-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Devices",
+              "baseVersion": "2026-10-01-preview",
+              "headVersion": "2026-10-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/3f84ef68d0b4d637-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/3f84ef68d0b4d637-phase-b.md",
+          "jsonDigest": "05e1842b786ecd3d9a93f2ff7774a2d0f925d19e298ec3552a43be8d4924c5bc",
+          "markdownDigest": "79a08ed164995c704c8c388346ae458d4df8080781be32d4540994794ccd8cc4",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1346,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 731,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 2083
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "dfa3b96269331dcb9a26e690b3b2ede86c9c2d8d6bbc1e23995974a29bf2b7bf",
+      "comparisonsPerformed": 3,
+      "versionComparisons": [
+        {
+          "serviceName": "Devices",
+          "baseVersion": "2026-03-01-preview",
+          "headVersion": "2026-03-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Devices",
+          "baseVersion": "2026-05-01-preview",
+          "headVersion": "2026-05-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Devices",
+          "baseVersion": "2026-10-01-preview",
+          "headVersion": "2026-10-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "7213c8b8153df589cabe24aa5eb3043f4a203973",
+    "prBaseSha": "bfd84ccde0ae294aa97e55d5d3ece70a2d4edb3f",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin bfd84ccde0ae294aa97e55d5d3ece70a2d4edb3f 7213c8b8153df589cabe24aa5eb3043f4a203973\ngit -C target checkout --detach 7213c8b8153df589cabe24aa5eb3043f4a203973\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47160' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/iothub/resource-manager/Microsoft.Devices/IoTHub",
+        "project": "specification/iothub/resource-manager/Microsoft.Devices/IoTHub",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/iothub/resource-manager/Microsoft.Devices/IoTHub' --base-ref bfd84ccde0ae294aa97e55d5d3ece70a2d4edb3f --phase same-version --json-output '../specification-iothub-resource-manager-Microsoft.Devices-IoTHub-phase-a.json' --markdown-output '../specification-iothub-resource-manager-Microsoft.Devices-IoTHub-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/iothub/resource-manager/Microsoft.Devices/IoTHub' --base-ref bfd84ccde0ae294aa97e55d5d3ece70a2d4edb3f --json-output '../specification-iothub-resource-manager-Microsoft.Devices-IoTHub-phase-b-evidence.json' --markdown-output '../specification-iothub-resource-manager-Microsoft.Devices-IoTHub-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

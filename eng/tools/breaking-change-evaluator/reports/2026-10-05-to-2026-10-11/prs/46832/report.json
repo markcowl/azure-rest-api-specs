@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:34:44.532Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46832,
+    "title": "Add 2026-09-03-preview API version for Azure Monitor Workspaces",
+    "author": "GokulPrasad-Work",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46832",
+    "baseBranch": "main",
+    "headBranch": "gokulpk/amw-2026-09-03-preview",
+    "baseSha": "0b9b413d97fceef4c1ee276e4156269fc5ea5d33",
+    "headSha": "cf9dfe57515ddfcc0e0d077c5a37663a8cbbe1f6",
+    "mergedAt": "2026-10-09T22:07:17Z",
+    "changedTypeSpecFiles": [
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/main.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricConfigurations/metricConfigurations.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricConfigurations/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricsContainers/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/service.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceAssociations/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceAssociations/traceAssociations.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceContainers/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceContainers/traceContainers.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46832",
+      "state": "closed",
+      "merged": true,
+      "headSha": "cf9dfe57515ddfcc0e0d077c5a37663a8cbbe1f6",
+      "baseSha": "0b9b413d97fceef4c1ee276e4156269fc5ea5d33",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/main.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricConfigurations/metricConfigurations.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricConfigurations/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricsContainers/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/service.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceAssociations/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceAssociations/traceAssociations.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceContainers/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceContainers/traceContainers.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46832",
+      "headSha": "cf9dfe57515ddfcc0e0d077c5a37663a8cbbe1f6",
+      "baseSha": "0b9b413d97fceef4c1ee276e4156269fc5ea5d33"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

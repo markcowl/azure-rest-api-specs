@@ -1,0 +1,199 @@
+{
+  "specPaths": ["specification/keyvault/data-plane/SecurityDomain"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-TH6SFv\\specification\\keyvault\\data-plane\\SecurityDomain",
+  "headRevision": "specification/keyvault/data-plane/SecurityDomain",
+  "requiresAction": true,
+  "counts": {
+    "errors": 2,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 2,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 15
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 15,
+    "versionComparisons": [
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.5",
+        "headVersion": "7.5",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "7.6",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-01-01-preview",
+        "headVersion": "2026-01-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-03-01-preview",
+        "headVersion": "2026-03-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-05-01-preview",
+        "headVersion": "2026-05-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-07-01-preview",
+        "headVersion": "2026-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.5",
+        "headVersion": "7.6",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "2025-06-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "2025-07-01",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-01-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-03-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error removed variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-TH6SFv/specification/keyvault/data-plane/SecurityDomain/common/common.tsp",
+        "line": 17
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "GET",
+        "path": "/securitydomain/download/pending"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/typespec-breaking-change-base-TH6SFv/specification/keyvault/data-plane/SecurityDomain/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nmodel Error { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error added variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/SecurityDomain/common/common.tsp",
+        "line": 19
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/securitydomain/download/pending"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/SecurityDomain/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel Error { ... }"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 3426,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 553,
+    "classifyMs": 1,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 3990
+  }
+}

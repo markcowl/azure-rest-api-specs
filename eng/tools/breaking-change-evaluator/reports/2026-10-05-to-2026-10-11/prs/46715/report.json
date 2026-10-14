@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 2,
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:39:59.582Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46715,
+    "title": "Add stable EdgeActions 2026-10-01 API",
+    "author": "kestry",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46715",
+    "baseBranch": "main",
+    "headBranch": "edgeactions-stable-2026-10-minimal",
+    "baseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c",
+    "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+    "mergedAt": "2026-10-10T14:02:46Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46715",
+      "state": "closed",
+      "merged": true,
+      "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+      "baseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c",
+      "runs": {
+        "A": {
+          "id": 37969208978,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37969208978",
+          "logDigest": "4fcd08a9f1dff6794a0397cbd665a310a7471e73294819ace61776a774c0abc1",
+          "summaryDigest": "83af85d04fca0c76a34eb4cb28afce3097ea7cbec6d54b743a6dd5eace479d51"
+        },
+        "B": {
+          "id": 37969208848,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37969208848",
+          "logDigest": "59b966a603959deef99d0293c3cf2988e2acd5474cb2650dd4cb2eb547e7366d",
+          "summaryDigest": "ee46706cdc652f759196897f93699c2ebcb62b367840ea15f524c0fc9c5fbab8"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46715",
+      "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+      "baseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/c5f763224c81830d-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/c5f763224c81830d-phase-a.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/c5f763224c81830d-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/c5f763224c81830d-phase-b.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "errors": [
+    "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+    "prBaseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3\ngit -C target checkout --detach fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46715' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions",
+        "project": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions' --base-ref 91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c --phase same-version --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-EdgeActions-phase-a.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-EdgeActions-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions' --base-ref 91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-EdgeActions-phase-b-evidence.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-EdgeActions-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

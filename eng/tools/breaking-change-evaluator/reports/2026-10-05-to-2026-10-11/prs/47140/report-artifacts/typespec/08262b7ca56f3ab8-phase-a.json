@@ -1,0 +1,587 @@
+{
+  "specPaths": ["specification/batch/resource-manager/Microsoft.Batch/Batch"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-AxkvOz\\specification\\batch\\resource-manager\\Microsoft.Batch\\Batch",
+  "headRevision": "specification/batch/resource-manager/Microsoft.Batch/Batch",
+  "requiresAction": true,
+  "counts": {
+    "errors": 18,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 18,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "Batch",
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01",
+        "phase": "same-version",
+        "findingCount": 86
+      },
+      {
+        "serviceName": "Batch",
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01",
+        "phase": "same-version",
+        "findingCount": 74
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.publicNetworkAccess removed variant intrinsic.",
+      "element": "body.properties.properties.publicNetworkAccess.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1252
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.publicNetworkAccess added variant intrinsic.",
+      "element": "body.properties.properties.publicNetworkAccess.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.networkProfile removed variant intrinsic.",
+      "element": "body.properties.properties.networkProfile.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1260
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.networkProfile added variant intrinsic.",
+      "element": "body.properties.properties.networkProfile.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.privateEndpointConnections removed variant intrinsic.",
+      "element": "body.properties.properties.privateEndpointConnections.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1267
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.privateEndpointConnections added variant intrinsic.",
+      "element": "body.properties.properties.privateEndpointConnections.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.dedicatedCoreQuota removed variant intrinsic.",
+      "element": "body.properties.properties.dedicatedCoreQuota.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1289
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.dedicatedCoreQuota added variant intrinsic.",
+      "element": "body.properties.properties.dedicatedCoreQuota.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.lowPriorityCoreQuota removed variant intrinsic.",
+      "element": "body.properties.properties.lowPriorityCoreQuota.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1297
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.lowPriorityCoreQuota added variant intrinsic.",
+      "element": "body.properties.properties.lowPriorityCoreQuota.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.dedicatedCoreQuotaPerVMFamily removed variant intrinsic.",
+      "element": "body.properties.properties.dedicatedCoreQuotaPerVMFamily.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1305
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.dedicatedCoreQuotaPerVMFamily added variant intrinsic.",
+      "element": "body.properties.properties.dedicatedCoreQuotaPerVMFamily.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.allowedAuthenticationModes removed variant intrinsic.",
+      "element": "body.properties.properties.allowedAuthenticationModes.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1334
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.allowedAuthenticationModes added variant intrinsic.",
+      "element": "body.properties.properties.allowedAuthenticationModes.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.allowedAuthenticationModes removed variant intrinsic.",
+      "element": "body.properties.properties.allowedAuthenticationModes.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1020
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop create(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.allowedAuthenticationModes added variant intrinsic.",
+      "element": "body.properties.properties.allowedAuthenticationModes.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 44
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop create(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.currentNodeCommunicationMode removed variant intrinsic.",
+      "element": "body.properties.properties.currentNodeCommunicationMode.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2236
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-AxkvOz/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.currentNodeCommunicationMode added variant intrinsic.",
+      "element": "body.properties.properties.currentNodeCommunicationMode.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Pool.tsp",
+        "line": 53
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Pool.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 2559,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 2198,
+    "classifyMs": 1,
+    "suppressMs": 2,
+    "reportMs": 0,
+    "totalMs": 4768
+  }
+}

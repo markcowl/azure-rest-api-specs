@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T00:44:51.945Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47033,
+    "title": "Microsoft.Authorization PrivilegedAccess 2026-06-01-preview (supersedes #45970)",
+    "author": "raghavpuri31",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47033",
+    "baseBranch": "main",
+    "headBranch": "puriraghav-pim-migration-replacement",
+    "baseSha": "1142128f76754601aac1da265c6fa5fd66380d9b",
+    "headSha": "c69a186259c4784138b121a68addb7204ad704f9",
+    "mergedAt": "2026-10-07T21:28:15Z",
+    "changedTypeSpecFiles": [
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/PrivilegedResourceFavorite.tsp",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/main.tsp",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/models.tsp",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/routes.tsp",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/tspconfig.yaml",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47033",
+      "state": "closed",
+      "merged": true,
+      "headSha": "c69a186259c4784138b121a68addb7204ad704f9",
+      "baseSha": "1142128f76754601aac1da265c6fa5fd66380d9b",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/PrivilegedResourceFavorite.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/main.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/models.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/routes.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/tspconfig.yaml",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47033",
+      "headSha": "c69a186259c4784138b121a68addb7204ad704f9",
+      "baseSha": "1142128f76754601aac1da265c6fa5fd66380d9b"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

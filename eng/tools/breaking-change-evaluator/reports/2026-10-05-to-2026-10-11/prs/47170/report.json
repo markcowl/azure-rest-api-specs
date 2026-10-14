@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-14T02:35:00.121Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47170,
+    "title": "Avoid BillingBenefits C# validation model naming collision",
+    "author": "live1206",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47170",
+    "baseBranch": "main",
+    "headBranch": "billingbenefits-csharp-validation-name-collision",
+    "baseSha": "e070ec9b11d1417d83170393ec90d7122e343e0f",
+    "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+    "mergedAt": "2026-10-10T07:59:51Z",
+    "changedTypeSpecFiles": [
+      "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47170",
+      "state": "closed",
+      "merged": true,
+      "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+      "baseSha": "e070ec9b11d1417d83170393ec90d7122e343e0f",
+      "runs": {
+        "A": {
+          "id": 38033934891,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38033934891",
+          "logDigest": "81c103fe7b151989a944e1b64780c8381fc9b2f265320007f03b48e9cf58eea9",
+          "summaryDigest": "e5339bd057d4b03535488c9f7e343c2428a3bcc4c0afe0de3388cd8e74dc151e"
+        },
+        "B": {
+          "id": 38033934811,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38033934811",
+          "logDigest": "a4f4aa224a75415caf4493072b29842a9264190e858253d7601688480c8278ed",
+          "summaryDigest": "1340dda9d488498e8c6989919baebc465fe53c532829d86a383a2e9cd220ed5a"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47170",
+      "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+      "baseSha": "e070ec9b11d1417d83170393ec90d7122e343e0f"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/8b3463b023252131-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/8b3463b023252131-phase-a.md",
+          "jsonDigest": "ca2725887c5b6ef61ce2cc8c334d9c4cc6b213b8f9401d14e7ac127357d30b8f",
+          "markdownDigest": "46d3efaab7947fa0aca7d6f84878bf013e7991510fd74ec7abe2f98222da7f2f",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1629,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1830,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3466
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "BillingBenefits",
+              "baseVersion": "2026-06-01",
+              "headVersion": "2026-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/8b3463b023252131-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/8b3463b023252131-phase-b.md",
+          "jsonDigest": "d8cef97dfc31caed66fdbd85d0e54aa1ebd1f912e2c0d135212b2ab7adabf433",
+          "markdownDigest": "a39492b17a00ce2e0edbea232b63fc95c216194e61605fd697b9f371343f42b7",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 998,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 917,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 1918
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "759bc07e0a5a69e86d97e9a3d719a303edc890e9e76582f3dc142688172a708c",
+      "comparisonsPerformed": 1,
+      "versionComparisons": [
+        {
+          "serviceName": "BillingBenefits",
+          "baseVersion": "2026-06-01",
+          "headVersion": "2026-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+    "prBaseSha": "e070ec9b11d1417d83170393ec90d7122e343e0f",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin e070ec9b11d1417d83170393ec90d7122e343e0f 1c3cbe5b915290ddd8209da9d20326979735dc01\ngit -C target checkout --detach 1c3cbe5b915290ddd8209da9d20326979735dc01\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47170' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits",
+        "project": "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits' --base-ref e070ec9b11d1417d83170393ec90d7122e343e0f --phase same-version --json-output '../specification-billingbenefits-resource-manager-Microsoft.BillingBenefits-BillingBenefits-phase-a.json' --markdown-output '../specification-billingbenefits-resource-manager-Microsoft.BillingBenefits-BillingBenefits-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits' --base-ref e070ec9b11d1417d83170393ec90d7122e343e0f --json-output '../specification-billingbenefits-resource-manager-Microsoft.BillingBenefits-BillingBenefits-phase-b-evidence.json' --markdown-output '../specification-billingbenefits-resource-manager-Microsoft.BillingBenefits-BillingBenefits-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

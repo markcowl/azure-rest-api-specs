@@ -1,0 +1,1336 @@
+{
+  "specPaths": ["specification/keyvault/data-plane/Keys"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-V6sNPa\\specification\\keyvault\\data-plane\\Keys",
+  "headRevision": "specification/keyvault/data-plane/Keys",
+  "requiresAction": true,
+  "counts": {
+    "errors": 12,
+    "suppressed": 0,
+    "ignored": 36,
+    "totalFindings": 48,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 17
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 17,
+    "versionComparisons": [
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.5",
+        "headVersion": "7.5",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6-preview.2",
+        "headVersion": "7.6-preview.2",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "7.6",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-01-01-preview",
+        "headVersion": "2026-01-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-03-01-preview",
+        "headVersion": "2026-03-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-05-01-preview",
+        "headVersion": "2026-05-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-07-01-preview",
+        "headVersion": "2026-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2",
+        "phase": "cross-version",
+        "findingCount": 4
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6-preview.2",
+        "headVersion": "7.6",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "2025-06-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "2025-07-01",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-01-01-preview",
+        "phase": "cross-version",
+        "findingCount": 5
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-03-01-preview",
+        "phase": "cross-version",
+        "findingCount": 5
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview",
+        "phase": "cross-version",
+        "findingCount": 21
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview",
+        "phase": "cross-version",
+        "findingCount": 21
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'externalKey' was added at body.properties.keyAttributes.properties.externalKey.",
+      "element": "body.properties.keyAttributes.properties.externalKey",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-01-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 507
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.KeyAttributes.externalKey",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model KeyAttributes {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  externalKey: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'externalKey' was added at body.properties.keyAttributes.properties.externalKey.",
+      "element": "body.properties.keyAttributes.properties.externalKey",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-03-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 507
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.KeyAttributes.externalKey",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model KeyAttributes {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  externalKey: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.kty added variant 'AKP'.",
+      "element": "body.properties.kty.variants.AKP",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 23
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: KeyVault.JsonWebKeyType",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model KeyVault {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  JsonWebKeyType: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'externalKey' was added at body.properties.keyAttributes.properties.externalKey.",
+      "element": "body.properties.keyAttributes.properties.externalKey",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 507
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.KeyAttributes.externalKey",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model KeyAttributes {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  externalKey: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'alg' was added at body.properties.key.properties.alg.",
+      "element": "body.properties.key.properties.alg",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 782
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/keys/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.JsonWebKey.alg",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model JsonWebKey {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  alg: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'pub' was added at body.properties.key.properties.pub.",
+      "element": "body.properties.key.properties.pub",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 789
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/keys/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.JsonWebKey.pub",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model JsonWebKey {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  pub: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.kty added variant 'AKP'.",
+      "element": "body.properties.kty.variants.AKP",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 23
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: KeyVault.JsonWebKeyType",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model KeyVault {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  JsonWebKeyType: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'externalKey' was added at body.properties.keyAttributes.properties.externalKey.",
+      "element": "body.properties.keyAttributes.properties.externalKey",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 507
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.KeyAttributes.externalKey",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model KeyAttributes {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  externalKey: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'alg' was added at body.properties.key.properties.alg.",
+      "element": "body.properties.key.properties.alg",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 782
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/keys/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.JsonWebKey.alg",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model JsonWebKey {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  alg: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'pub' was added at body.properties.key.properties.pub.",
+      "element": "body.properties.key.properties.pub",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 789
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/keys/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.JsonWebKey.pub",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "example": "model JsonWebKey {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  pub: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error removed variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-V6sNPa/specification/keyvault/data-plane/Keys/common/common.tsp",
+        "line": 17
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/typespec-breaking-change-base-V6sNPa/specification/keyvault/data-plane/Keys/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nmodel Error { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error added variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/common/common.tsp",
+        "line": 19
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel Error { ... }"
+      }
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /keys/{}/{}/attestation was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/routes.tsp",
+        "line": 749
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/keys/{}/{}/attestation"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'attestation' was added at body.properties.attributes.properties.attestation.",
+      "element": "body.properties.attributes.properties.attestation",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 500
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.algorithm added variant 'CKM_AES_KEY_WRAP'.",
+      "element": "body.properties.algorithm.variants.CKM_AES_KEY_WRAP",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 256
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/encrypt"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.algorithm added variant 'HS256'.",
+      "element": "body.properties.algorithm.variants.HS256",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 326
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/sign"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /keys/{}/{}/securewrapkey was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-01-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/routes.tsp",
+        "line": 457
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/securewrapkey"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /keys/{}/{}/secureunwrapkey was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-01-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/routes.tsp",
+        "line": 496
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/secureunwrapkey"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'keySize' was added at body.properties.attributes.properties.keySize.",
+      "element": "body.properties.attributes.properties.keySize",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-01-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 515
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /keys/{}/{}/securewrapkey was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-03-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/routes.tsp",
+        "line": 457
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/securewrapkey"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /keys/{}/{}/secureunwrapkey was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-03-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/routes.tsp",
+        "line": 496
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/secureunwrapkey"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'keySize' was added at body.properties.attributes.properties.keySize.",
+      "element": "body.properties.attributes.properties.keySize",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-03-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 515
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /keys/{}/{}/securewrapkey was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/routes.tsp",
+        "line": 457
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/securewrapkey"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /keys/{}/{}/secureunwrapkey was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/routes.tsp",
+        "line": 496
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/secureunwrapkey"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.keyOps added variant 'secureWrapKey'.",
+      "element": "body.properties.keyOps.variants.secureWrapKey",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 88
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'alg' was added at body.properties.alg.",
+      "element": "body.properties.alg",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 452
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'keySize' was added at body.properties.attributes.properties.keySize.",
+      "element": "body.properties.attributes.properties.keySize",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 515
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "RequestPropertyMadeOptional",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property at body.properties.algorithm was made optional.",
+      "element": "body.properties.algorithm",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1057
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/sign"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyMadeOptional",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property at body.properties.value was made optional.",
+      "element": "body.properties.value",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1064
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/sign"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'externalMu' was added at body.properties.externalMu.",
+      "element": "body.properties.externalMu",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1073
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/sign"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'context' was added at body.properties.context.",
+      "element": "body.properties.context",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1081
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/sign"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyMadeOptional",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property at body.properties.algorithm was made optional.",
+      "element": "body.properties.algorithm",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1093
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/verify"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyMadeOptional",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property at body.properties.digest was made optional.",
+      "element": "body.properties.digest",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1100
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/verify"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'externalMu' was added at body.properties.externalMu.",
+      "element": "body.properties.externalMu",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1116
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/verify"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'context' was added at body.properties.context.",
+      "element": "body.properties.context",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1124
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/verify"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /keys/{}/{}/securewrapkey was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/routes.tsp",
+        "line": 457
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/securewrapkey"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /keys/{}/{}/secureunwrapkey was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/routes.tsp",
+        "line": 496
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/secureunwrapkey"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.keyOps added variant 'secureWrapKey'.",
+      "element": "body.properties.keyOps.variants.secureWrapKey",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 88
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'alg' was added at body.properties.alg.",
+      "element": "body.properties.alg",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 452
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'keySize' was added at body.properties.attributes.properties.keySize.",
+      "element": "body.properties.attributes.properties.keySize",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 515
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "RequestPropertyMadeOptional",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property at body.properties.algorithm was made optional.",
+      "element": "body.properties.algorithm",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1057
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/sign"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyMadeOptional",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property at body.properties.value was made optional.",
+      "element": "body.properties.value",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1064
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/sign"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'externalMu' was added at body.properties.externalMu.",
+      "element": "body.properties.externalMu",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1073
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/sign"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'context' was added at body.properties.context.",
+      "element": "body.properties.context",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1081
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/sign"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyMadeOptional",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property at body.properties.algorithm was made optional.",
+      "element": "body.properties.algorithm",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1093
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/verify"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyMadeOptional",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property at body.properties.digest was made optional.",
+      "element": "body.properties.digest",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1100
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/verify"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'externalMu' was added at body.properties.externalMu.",
+      "element": "body.properties.externalMu",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1116
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/verify"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'context' was added at body.properties.context.",
+      "element": "body.properties.context",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/models.tsp",
+        "line": 1124
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/{}/verify"
+      },
+      "component": "request"
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 3561,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 2815,
+    "classifyMs": 2,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 6393
+  }
+}

@@ -1,0 +1,341 @@
+{
+  "specPaths": ["specification/inferenceservice/data-plane/InferenceService"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-xUcrqG\\specification\\inferenceservice\\data-plane\\InferenceService",
+  "headRevision": "specification/inferenceservice/data-plane/InferenceService",
+  "requiresAction": true,
+  "counts": {
+    "errors": 10,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 10,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1,
+    "versionComparisons": [
+      {
+        "serviceName": "AI",
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview",
+        "phase": "same-version",
+        "findingCount": 20
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.type removed variant intrinsic.",
+      "element": "body.properties.error.properties.type.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "line": 165
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop semanticRerank(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.type added variant intrinsic.",
+      "element": "body.properties.error.properties.type.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "line": 15
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop semanticRerank(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.title removed variant intrinsic.",
+      "element": "body.properties.error.properties.title.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "line": 169
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop semanticRerank(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.title added variant intrinsic.",
+      "element": "body.properties.error.properties.title.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "line": 15
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop semanticRerank(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.status removed variant intrinsic.",
+      "element": "body.properties.error.properties.status.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "line": 173
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop semanticRerank(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.status added variant intrinsic.",
+      "element": "body.properties.error.properties.status.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "line": 15
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop semanticRerank(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.detail removed variant intrinsic.",
+      "element": "body.properties.error.properties.detail.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "line": 177
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop semanticRerank(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.detail added variant intrinsic.",
+      "element": "body.properties.error.properties.detail.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "line": 15
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop semanticRerank(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.instance removed variant intrinsic.",
+      "element": "body.properties.error.properties.instance.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "line": 181
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-xUcrqG/specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop semanticRerank(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error.properties.instance added variant intrinsic.",
+      "element": "body.properties.error.properties.instance.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-09-01-preview",
+        "headVersion": "2026-09-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "line": 15
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/inference/semanticReranking"
+      },
+      "component": "response",
+      "statusCode": "429",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: POST /inference/semanticReranking (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/inferenceservice/data-plane/InferenceService/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop semanticRerank(...): ...;"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 353,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 121,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 480
+  }
+}

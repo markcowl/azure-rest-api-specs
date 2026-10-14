@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:22:27.784Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45102,
+    "title": "[Event Grid] Add Control Plane API Version 2026-06-15-preview",
+    "author": "priyanshuvats",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45102",
+    "baseBranch": "main",
+    "headBranch": "users/pvats/eg-cp-swagger-2026-06-15-preview",
+    "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+    "headSha": "7d7571383e4c36cf95e5bef3f87fc1fd72bf8177",
+    "mergedAt": "2026-10-09T11:45:32Z",
+    "changedTypeSpecFiles": [
+      "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/client.tsp",
+      "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/main.tsp",
+      "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45102",
+      "state": "closed",
+      "merged": true,
+      "headSha": "7d7571383e4c36cf95e5bef3f87fc1fd72bf8177",
+      "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+      "runs": {
+        "A": {
+          "id": 37901819582,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "7d7571383e4c36cf95e5bef3f87fc1fd72bf8177",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37901819582",
+          "logDigest": "2b5332619e601539d08337ba8bd81c6e5363a72302831c0568ac91d12b9d1c4b",
+          "summaryDigest": "f9b9fa267e8edc8b1638a90a231c664d728f4000ffde193f1008d79020251285"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/client.tsp",
+        "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/main.tsp",
+        "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/models.tsp"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45102",
+      "headSha": "7d7571383e4c36cf95e5bef3f87fc1fd72bf8177",
+      "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json",
+        "newPath": "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json",
+        "oldVersion": "2025-11-15-preview",
+        "newVersion": "2025-11-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37901819582",
+        "digest": "2b5332619e601539d08337ba8bd81c6e5363a72302831c0568ac91d12b9d1c4b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/663934c93853cb58f6477c2e8e0f48d5eca2d770/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/7d7571383e4c36cf95e5bef3f87fc1fd72bf8177/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json#L1"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

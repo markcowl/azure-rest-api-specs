@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 2,
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:07:23.331Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47139,
+    "title": "[SDK configuration] Pin all Resilience Management SDK API versions",
+    "author": "krtcodee",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47139",
+    "baseBranch": "main",
+    "headBranch": "fix/arm-dotnet-api-version-2026-10-01",
+    "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+    "headSha": "b3410fed5de57480338f207c03de9d7b506abf55",
+    "mergedAt": "2026-10-09T09:33:41Z",
+    "changedTypeSpecFiles": [
+      "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47139",
+      "state": "closed",
+      "merged": true,
+      "headSha": "b3410fed5de57480338f207c03de9d7b506abf55",
+      "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+      "runs": {
+        "A": {
+          "id": 37909418401,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "b3410fed5de57480338f207c03de9d7b506abf55",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37909418401",
+          "logDigest": "765dadc056e735f08418c1d3f803b92ed8960750960a2da12206c6635d55343c",
+          "summaryDigest": "ee373eda2fe5e69053369366120a7174630f5c9d6597b3f03e5011cfab5a252e"
+        },
+        "B": {
+          "id": 37909418292,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "b3410fed5de57480338f207c03de9d7b506abf55",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37909418292",
+          "logDigest": "d3d44093dbf9b045862e7bfded900e3ecd5437488e4361b966db7fb1f866ff45",
+          "summaryDigest": "ce7173e46bc959cddf2cb47b79581bdb58cb8657fbcc6a1493194075e8c379ae"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47139",
+      "headSha": "b3410fed5de57480338f207c03de9d7b506abf55",
+      "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/c555a2fdda0dddc0-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/c555a2fdda0dddc0-phase-a.md",
+          "error": "Analysis failed: Unable to distinguish language type of union variant \"Symbol(name)\" with available runtime checks. Indistinguishable from: [Symbol(name), Symbol(name)]. Variant type category: string. Available tests: [type()].\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/c555a2fdda0dddc0-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/c555a2fdda0dddc0-phase-b.md",
+          "error": "Analysis failed: Unable to distinguish language type of union variant \"Symbol(name)\" with available runtime checks. Indistinguishable from: [Symbol(name), Symbol(name)]. Variant type category: string. Available tests: [type()].\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Unable to distinguish language type of union variant \"Symbol(name)\" with available runtime checks. Indistinguishable from: [Symbol(name), Symbol(name)]. Variant type category: string. Available tests: [type()].\n; Analysis failed: Unable to distinguish language type of union variant \"Symbol(name)\" with available runtime checks. Indistinguishable from: [Symbol(name), Symbol(name)]. Variant type category: string. Available tests: [type()].\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "errors": [
+    "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement: Analysis failed: Unable to distinguish language type of union variant \"Symbol(name)\" with available runtime checks. Indistinguishable from: [Symbol(name), Symbol(name)]. Variant type category: string. Available tests: [type()].\n; Analysis failed: Unable to distinguish language type of union variant \"Symbol(name)\" with available runtime checks. Indistinguishable from: [Symbol(name), Symbol(name)]. Variant type category: string. Available tests: [type()].\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "b3410fed5de57480338f207c03de9d7b506abf55",
+    "prBaseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 663934c93853cb58f6477c2e8e0f48d5eca2d770 b3410fed5de57480338f207c03de9d7b506abf55\ngit -C target checkout --detach b3410fed5de57480338f207c03de9d7b506abf55\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47139' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement",
+        "project": "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement' --base-ref 663934c93853cb58f6477c2e8e0f48d5eca2d770 --phase same-version --json-output '../specification-azureresiliencemanagement-resource-manager-Microsoft.AzureResilienceManagement-AzureResilienceManagement-phase-a.json' --markdown-output '../specification-azureresiliencemanagement-resource-manager-Microsoft.AzureResilienceManagement-AzureResilienceManagement-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement' --base-ref 663934c93853cb58f6477c2e8e0f48d5eca2d770 --json-output '../specification-azureresiliencemanagement-resource-manager-Microsoft.AzureResilienceManagement-AzureResilienceManagement-phase-b-evidence.json' --markdown-output '../specification-azureresiliencemanagement-resource-manager-Microsoft.AzureResilienceManagement-AzureResilienceManagement-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

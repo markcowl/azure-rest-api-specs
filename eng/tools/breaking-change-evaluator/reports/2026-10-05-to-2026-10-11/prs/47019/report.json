@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:39:52.901Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47019,
+    "title": "feat: add Private Traffic Manager affinity routing in 2026-10-01-preview",
+    "author": "imsiddhartha",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47019",
+    "baseBranch": "main",
+    "headBranch": "dev/ssaklecha/versioningfaf67448",
+    "baseSha": "88e2199d770d74f3061a162824185fd6894cb7d7",
+    "headSha": "d65c5b6b236eb70c0a05474b8e7d9de501316637",
+    "mergedAt": "2026-10-10T08:19:46Z",
+    "changedTypeSpecFiles": [
+      "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/main.tsp",
+      "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/models/EndpointModels.tsp",
+      "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/models/ProfileModels.tsp",
+      "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/models/SiteModels.tsp",
+      "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47019",
+      "state": "closed",
+      "merged": true,
+      "headSha": "d65c5b6b236eb70c0a05474b8e7d9de501316637",
+      "baseSha": "88e2199d770d74f3061a162824185fd6894cb7d7",
+      "runs": {
+        "A": {
+          "id": 37926605721,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "d65c5b6b236eb70c0a05474b8e7d9de501316637",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37926605721",
+          "logDigest": "35981cee6162862887199416cf4dd3279b5b8d9b60b4206297b7f36fe498b836",
+          "summaryDigest": "df1232fabe4a88c276102dabbaccb0c06a0519222fdc3a3c96ba5399886eb8bc"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/main.tsp",
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/models/EndpointModels.tsp",
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/models/ProfileModels.tsp",
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/models/SiteModels.tsp",
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/tspconfig.yaml"
+      ],
+      "evidenceErrors": [
+        "Job summary claims no findings but workflow logs contain OAD findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47019",
+      "headSha": "d65c5b6b236eb70c0a05474b8e7d9de501316637",
+      "baseSha": "88e2199d770d74f3061a162824185fd6894cb7d7"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json",
+        "newPath": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json",
+        "oldVersion": "2026-02-09-preview",
+        "newVersion": "2026-02-09-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37926605721",
+        "digest": "35981cee6162862887199416cf4dd3279b5b8d9b60b4206297b7f36fe498b836"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/88e2199d770d74f3061a162824185fd6894cb7d7/specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/d65c5b6b236eb70c0a05474b8e7d9de501316637/specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/preview/2026-02-09-preview/privateTrafficManager.json#L1"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

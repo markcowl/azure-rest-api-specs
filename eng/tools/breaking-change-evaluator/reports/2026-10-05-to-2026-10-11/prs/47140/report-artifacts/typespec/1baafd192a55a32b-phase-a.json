@@ -1,0 +1,158 @@
+{
+  "specPaths": ["specification/keyvault/data-plane/Keys"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-TzONsz\\specification\\keyvault\\data-plane\\Keys",
+  "headRevision": "specification/keyvault/data-plane/Keys",
+  "requiresAction": true,
+  "counts": {
+    "errors": 2,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 2,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 9
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 9,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.5",
+        "headVersion": "7.5",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6-preview.2",
+        "headVersion": "7.6-preview.2",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "7.6",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-01-01-preview",
+        "headVersion": "2026-01-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-03-01-preview",
+        "headVersion": "2026-03-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-05-01-preview",
+        "headVersion": "2026-05-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-07-01-preview",
+        "headVersion": "2026-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error removed variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-TzONsz/specification/keyvault/data-plane/Keys/common/common.tsp",
+        "line": 17
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/typespec-breaking-change-base-TzONsz/specification/keyvault/data-plane/Keys/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nmodel Error { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error added variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/common/common.tsp",
+        "line": 19
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/keys/{}/create"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Keys/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel Error { ... }"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 2949,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 2052,
+    "classifyMs": 1,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 5012
+  }
+}

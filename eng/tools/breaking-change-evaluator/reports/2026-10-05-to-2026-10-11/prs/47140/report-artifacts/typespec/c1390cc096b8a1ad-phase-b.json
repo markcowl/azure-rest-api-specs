@@ -1,0 +1,510 @@
+{
+  "specPaths": ["specification/keyvault/data-plane/Certificates"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-tB2t1y\\specification\\keyvault\\data-plane\\Certificates",
+  "headRevision": "specification/keyvault/data-plane/Certificates",
+  "requiresAction": true,
+  "counts": {
+    "errors": 9,
+    "suppressed": 0,
+    "ignored": 4,
+    "totalFindings": 13,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 17
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 17,
+    "versionComparisons": [
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.5",
+        "headVersion": "7.5",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6-preview.2",
+        "headVersion": "7.6-preview.2",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "7.6",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-01-01-preview",
+        "headVersion": "2026-01-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-03-01-preview",
+        "headVersion": "2026-03-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-05-01-preview",
+        "headVersion": "2026-05-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2026-07-01-preview",
+        "headVersion": "2026-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2",
+        "phase": "cross-version",
+        "findingCount": 4
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6-preview.2",
+        "headVersion": "7.6",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "2025-06-01-preview",
+        "phase": "cross-version",
+        "findingCount": 4
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "7.6",
+        "headVersion": "2025-07-01",
+        "phase": "cross-version",
+        "findingCount": 4
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-01-01-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-03-01-preview",
+        "phase": "cross-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview",
+        "phase": "cross-version",
+        "findingCount": 2
+      },
+      {
+        "serviceName": "KeyVault",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview",
+        "phase": "cross-version",
+        "findingCount": 2
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'uris' was added at body.properties.certificatePolicy.properties.X509CertificateProperties.properties.subjectAlternativeNames.properties.uris.",
+      "element": "body.properties.certificatePolicy.properties.X509CertificateProperties.properties.subjectAlternativeNames.properties.uris",
+      "versionPair": {
+        "baseVersion": "7.6",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 515
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.SubjectAlternativeNames.uris",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "example": "model SubjectAlternativeNames {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  uris: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'ipAddresses' was added at body.properties.certificatePolicy.properties.X509CertificateProperties.properties.subjectAlternativeNames.properties.ipAddresses.",
+      "element": "body.properties.certificatePolicy.properties.X509CertificateProperties.properties.subjectAlternativeNames.properties.ipAddresses",
+      "versionPair": {
+        "baseVersion": "7.6",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 522
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.SubjectAlternativeNames.ipAddresses",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "example": "model SubjectAlternativeNames {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  ipAddresses: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'uris' was added at body.properties.certificatePolicy.properties.X509CertificateProperties.properties.subjectAlternativeNames.properties.uris.",
+      "element": "body.properties.certificatePolicy.properties.X509CertificateProperties.properties.subjectAlternativeNames.properties.uris",
+      "versionPair": {
+        "baseVersion": "7.6",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 515
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.SubjectAlternativeNames.uris",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "example": "model SubjectAlternativeNames {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  uris: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'ipAddresses' was added at body.properties.certificatePolicy.properties.X509CertificateProperties.properties.subjectAlternativeNames.properties.ipAddresses.",
+      "element": "body.properties.certificatePolicy.properties.X509CertificateProperties.properties.subjectAlternativeNames.properties.ipAddresses",
+      "versionPair": {
+        "baseVersion": "7.6",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 522
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.SubjectAlternativeNames.ipAddresses",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "example": "model SubjectAlternativeNames {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  ipAddresses: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'platformManaged' was added at body.properties.certificatePolicy.properties.platformManaged.",
+      "element": "body.properties.certificatePolicy.properties.platformManaged",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-03-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 391
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.CertificatePolicy.platformManaged",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "example": "model CertificatePolicy {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  platformManaged: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'platformManaged' was added at body.properties.certificatePolicy.properties.platformManaged.",
+      "element": "body.properties.certificatePolicy.properties.platformManaged",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-05-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 391
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.CertificatePolicy.platformManaged",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "example": "model CertificatePolicy {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  platformManaged: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'platformManaged' was added at body.properties.certificatePolicy.properties.platformManaged.",
+      "element": "body.properties.certificatePolicy.properties.platformManaged",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2026-07-01-preview"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 391
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/create"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: KeyVault.CertificatePolicy.platformManaged",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "example": "model CertificatePolicy {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  platformManaged: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error removed variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-tB2t1y/specification/keyvault/data-plane/Certificates/common/common.tsp",
+        "line": 17
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "GET",
+        "path": "/certificates"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/typespec-breaking-change-base-tB2t1y/specification/keyvault/data-plane/Certificates/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nmodel Error { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.error added variant intrinsic.",
+      "element": "body.properties.error.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.5"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/common/common.tsp",
+        "line": 19
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/certificates"
+      },
+      "component": "response",
+      "statusCode": "*",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the declaration: Error",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/common/common.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nmodel Error { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'preserveCertOrder' was added at body.properties.preserveCertOrder.",
+      "element": "body.properties.preserveCertOrder",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 337
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "DELETE",
+        "path": "/certificates/{}"
+      },
+      "component": "response",
+      "statusCode": "200"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'preserveCertOrder' was added at body.properties.preserveCertOrder.",
+      "element": "body.properties.preserveCertOrder",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 864
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/create"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "ignore",
+      "rule": "response-narrowing",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'preserveCertOrder' was added at body.properties.preserveCertOrder.",
+      "element": "body.properties.preserveCertOrder",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 920
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/create"
+      },
+      "component": "response",
+      "statusCode": "202"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'preserveCertOrder' was added at body.properties.preserveCertOrder.",
+      "element": "body.properties.preserveCertOrder",
+      "versionPair": {
+        "baseVersion": "7.5",
+        "headVersion": "7.6-preview.2"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/keyvault/data-plane/Certificates/models.tsp",
+        "line": 966
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/certificates/{}/import"
+      },
+      "component": "request"
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 7472,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 6748,
+    "classifyMs": 1,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 14238
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T01:25:18.374Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46585,
+    "title": "Enable Fabric provisioning emitter",
+    "author": "HarveyLink",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46585",
+    "baseBranch": "main",
+    "headBranch": "provisioning-fabric-onboarding",
+    "baseSha": "8b60913ae846f5209258162f983c8c2c425e5371",
+    "headSha": "3bd68bf03eaa849fd755b81ec631a36f069c6733",
+    "mergedAt": "2026-10-08T08:51:15Z",
+    "changedTypeSpecFiles": [
+      "specification/fabric/resource-manager/Microsoft.Fabric/Fabric/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46585",
+      "state": "closed",
+      "merged": true,
+      "headSha": "3bd68bf03eaa849fd755b81ec631a36f069c6733",
+      "baseSha": "8b60913ae846f5209258162f983c8c2c425e5371",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/fabric/resource-manager/Microsoft.Fabric/Fabric/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46585",
+      "headSha": "3bd68bf03eaa849fd755b81ec631a36f069c6733",
+      "baseSha": "8b60913ae846f5209258162f983c8c2c425e5371"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T01:23:21.937Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46676,
+    "title": "Add AppNetwork provisioning emitter config",
+    "author": "HarveyLink",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46676",
+    "baseBranch": "main",
+    "headBranch": "provisioning-appnetwork-emitter",
+    "baseSha": "6a1a4ddcb4281de3a1f7c966794f2516628cad52",
+    "headSha": "f3bc00ac861e4b9f15b968285c8de52fb62c05ef",
+    "mergedAt": "2026-10-08T08:33:35Z",
+    "changedTypeSpecFiles": [
+      "specification/applink/AppLink.Management/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46676",
+      "state": "closed",
+      "merged": true,
+      "headSha": "f3bc00ac861e4b9f15b968285c8de52fb62c05ef",
+      "baseSha": "6a1a4ddcb4281de3a1f7c966794f2516628cad52",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/applink/AppLink.Management/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46676",
+      "headSha": "f3bc00ac861e4b9f15b968285c8de52fb62c05ef",
+      "baseSha": "6a1a4ddcb4281de3a1f7c966794f2516628cad52"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:22:15.057Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47015,
+    "title": "Release Network API Version 2026-03-01",
+    "author": "santoshgh317",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47015",
+    "baseBranch": "main",
+    "headBranch": "release-microsoft-network-2026-03-01",
+    "baseSha": "abfe7853f1382c8124b23be81984196102fd9343",
+    "headSha": "773177d408a37dd4a9757e85372b570eb0885190",
+    "mergedAt": "2026-10-09T09:44:37Z",
+    "changedTypeSpecFiles": [
+      "specification/network/resource-manager/Microsoft.Network/Network/Common/main.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/Network/ExpressRouteLagAuthorization.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/Network/VirtualNetworkApplianceCapability.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/Network/back-compatible.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/Network/main.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/Network/models.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/Vmss/main.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47015",
+      "state": "closed",
+      "merged": true,
+      "headSha": "773177d408a37dd4a9757e85372b570eb0885190",
+      "baseSha": "abfe7853f1382c8124b23be81984196102fd9343",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/network/resource-manager/Microsoft.Network/Network/Common/main.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/ExpressRouteLagAuthorization.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/VirtualNetworkApplianceCapability.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/back-compatible.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/main.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/models.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Vmss/main.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47015",
+      "headSha": "773177d408a37dd4a9757e85372b570eb0885190",
+      "baseSha": "abfe7853f1382c8124b23be81984196102fd9343"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

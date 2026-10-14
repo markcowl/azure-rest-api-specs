@@ -1,0 +1,3477 @@
+{
+  "schemaVersion": 2,
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-14T01:51:55.559Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46674,
+    "title": "Preserve Front Door provisioning name constraints",
+    "author": "ArcturusZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46674",
+    "baseBranch": "main",
+    "headBranch": "arcturuszhang-add-cdn-name-constraints",
+    "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+    "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+    "mergedAt": "2026-10-09T05:59:12Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46674",
+      "state": "closed",
+      "merged": true,
+      "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+      "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+      "runs": {
+        "A": {
+          "id": 37721339691,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37721339691",
+          "logDigest": "e5f4301231b62b5b6b1e4f2dd9546a6e27d2fbf9cf8d47ee7f1e0793e790da71",
+          "summaryDigest": "a34d543b060ba538d669f92eddf215192d4292f5182e4a3cad53c11eb09358b1"
+        },
+        "B": {
+          "id": 37721339640,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37721339640",
+          "logDigest": "b038f28ec1af209b07a0298dcc002766964a18632f3e5445d9293130d9caf551",
+          "summaryDigest": "0003c506dc6e5e5740230435c9d7aa84d67a69db39cd983f579274037ecb5073"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46674",
+      "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+      "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [
+    {
+      "phase": "A",
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+      "baseVersion": "2025-06-01",
+      "headVersion": "2025-06-01"
+    },
+    {
+      "phase": "B",
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+      "baseVersion": "2025-06-01",
+      "headVersion": "2025-09-01-preview"
+    },
+    {
+      "phase": "B",
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+      "baseVersion": "2025-12-01",
+      "headVersion": "2026-04-01-preview"
+    },
+    {
+      "phase": "B",
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+      "baseVersion": "2025-12-01",
+      "headVersion": "2026-07-01"
+    },
+    {
+      "phase": "B",
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+      "baseVersion": "2026-07-01",
+      "headVersion": "2026-08-01-preview"
+    },
+    {
+      "phase": "B",
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+      "baseVersion": "2025-06-01",
+      "headVersion": "2025-12-01"
+    }
+  ],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+      "status": "complete",
+      "exitCode": 1,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/495bf9259924f532-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/495bf9259924f532-phase-a.md",
+          "jsonDigest": "6a89e40cfc596a45bab33578caedc87fdf2aa246d6776f53b3a88b83b0d09ac3",
+          "markdownDigest": "6f3c0aae5b014068ca3c72869d69686563eb3348a5285b6037a7b12f5bdc0209",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 18311,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 13259,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 31588
+          },
+          "comparisonsPerformed": 6,
+          "versionComparisons": [
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-06-01",
+              "headVersion": "2025-06-01",
+              "phase": "same-version",
+              "findingCount": 32
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-09-01-preview",
+              "headVersion": "2025-09-01-preview",
+              "phase": "same-version",
+              "findingCount": 32
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-12-01",
+              "headVersion": "2025-12-01",
+              "phase": "same-version",
+              "findingCount": 32
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2026-04-01-preview",
+              "headVersion": "2026-04-01-preview",
+              "phase": "same-version",
+              "findingCount": 32
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2026-07-01",
+              "headVersion": "2026-07-01",
+              "phase": "same-version",
+              "findingCount": 32
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2026-08-01-preview",
+              "headVersion": "2026-08-01-preview",
+              "phase": "same-version",
+              "findingCount": 32
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/495bf9259924f532-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+          "jsonDigest": "850f5fcb7639e90d4c54275230566e9714c944feb889fe4c511c010fb703be92",
+          "markdownDigest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 19781,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 16596,
+            "classifyMs": 4,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 36390
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-06-01",
+              "headVersion": "2025-09-01-preview",
+              "phase": "cross-version",
+              "findingCount": 57
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-06-01",
+              "headVersion": "2025-12-01",
+              "phase": "cross-version",
+              "findingCount": 5
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-12-01",
+              "headVersion": "2026-04-01-preview",
+              "phase": "cross-version",
+              "findingCount": 18
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-12-01",
+              "headVersion": "2026-07-01",
+              "phase": "cross-version",
+              "findingCount": 28
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2026-07-01",
+              "headVersion": "2026-08-01-preview",
+              "phase": "cross-version",
+              "findingCount": 6
+            }
+          ]
+        }
+      },
+      "reportDigest": "e553712996919a6be8866991319b2b81d963b478f102ac67333a4ead9118c703",
+      "comparisonsPerformed": 11,
+      "versionComparisons": [
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-06-01",
+          "headVersion": "2025-06-01",
+          "phase": "same-version",
+          "findingCount": 32
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-09-01-preview",
+          "headVersion": "2025-09-01-preview",
+          "phase": "same-version",
+          "findingCount": 32
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-12-01",
+          "headVersion": "2025-12-01",
+          "phase": "same-version",
+          "findingCount": 32
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2026-04-01-preview",
+          "headVersion": "2026-04-01-preview",
+          "phase": "same-version",
+          "findingCount": 32
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2026-07-01",
+          "headVersion": "2026-07-01",
+          "phase": "same-version",
+          "findingCount": 32
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2026-08-01-preview",
+          "headVersion": "2026-08-01-preview",
+          "phase": "same-version",
+          "findingCount": 32
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-06-01",
+          "headVersion": "2025-09-01-preview",
+          "phase": "cross-version",
+          "findingCount": 57
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-06-01",
+          "headVersion": "2025-12-01",
+          "phase": "cross-version",
+          "findingCount": 5
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-12-01",
+          "headVersion": "2026-04-01-preview",
+          "phase": "cross-version",
+          "findingCount": 18
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-12-01",
+          "headVersion": "2026-07-01",
+          "phase": "cross-version",
+          "findingCount": 28
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2026-07-01",
+          "headVersion": "2026-08-01-preview",
+          "phase": "cross-version",
+          "findingCount": 6
+        }
+      ],
+      "findings": [
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-A-0",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyTypeNarrowed",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions.variants.CacheExpiration.properties.parameters.properties.cacheDuration removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.CacheExpiration.properties.parameters.properties.cacheDuration.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-06-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 8323
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-a.md",
+            "digest": "6f3c0aae5b014068ca3c72869d69686563eb3348a5285b6037a7b12f5bdc0209"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 8323,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/be97609d55160e8d06e2fcbba9ddefbf2ee89bf8/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L8323"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-A-1",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions.variants.CacheExpiration.properties.parameters.properties.cacheDuration added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.CacheExpiration.properties.parameters.properties.cacheDuration.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-06-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-a.md",
+            "digest": "6f3c0aae5b014068ca3c72869d69686563eb3348a5285b6037a7b12f5bdc0209"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L40"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-A-2",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyTypeNarrowed",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions.variants.CacheKeyQueryString.properties.parameters.properties.queryParameters removed variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.CacheKeyQueryString.properties.parameters.properties.queryParameters.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-06-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 8356
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-a.md",
+            "digest": "6f3c0aae5b014068ca3c72869d69686563eb3348a5285b6037a7b12f5bdc0209"
+          },
+          "source": {
+            "revision": "base",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 8356,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/be97609d55160e8d06e2fcbba9ddefbf2ee89bf8/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L8356"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-A-3",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions.variants.CacheKeyQueryString.properties.parameters.properties.queryParameters added variant intrinsic.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.CacheKeyQueryString.properties.parameters.properties.queryParameters.variants.intrinsic",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-06-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-a.md",
+            "digest": "6f3c0aae5b014068ca3c72869d69686563eb3348a5285b6037a7b12f5bdc0209"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L40"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-4",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'mtlsSettings' was added at body.properties.properties.mtlsSettings.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+          },
+          "element": "body.properties.properties.mtlsSettings",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2783
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2783,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2783"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-5",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.logScrubbing.properties.scrubbingRules.properties.matchVariable added variant 'RequestHeaderNames'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}"
+          },
+          "element": "body.properties.properties.logScrubbing.properties.scrubbingRules.properties.matchVariable.variants.RequestHeaderNames",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 191
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 191,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L191"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-6",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.logScrubbing.properties.scrubbingRules.properties.selectorMatchOperator added variant 'Equals'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}"
+          },
+          "element": "body.properties.properties.logScrubbing.properties.scrubbingRules.properties.selectorMatchOperator.variants.Equals",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 220
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 220,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L220"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-7",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.sku.properties.name added variant 'Classic_AzureFrontDoor'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}"
+          },
+          "element": "body.properties.sku.properties.name.variants.Classic_AzureFrontDoor",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 108
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 108,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L108"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-8",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'enforceMtls' was added at body.properties.properties.enforceMtls.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}"
+          },
+          "element": "body.properties.properties.enforceMtls",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2942
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2942,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2942"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-9",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'originCapacityResource' was added at body.properties.properties.originCapacityResource.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}/origins/{}"
+          },
+          "element": "body.properties.properties.originCapacityResource",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3263
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3263,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3263"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-10",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'grpcState' was added at body.properties.properties.grpcState.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}/routes/{}"
+          },
+          "element": "body.properties.properties.grpcState",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3445
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3445,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3445"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-11",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyTypeWidened",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.customRules.properties.rules.properties.action added variant 'AnomalyScoring'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/cdnWebApplicationFirewallPolicies/{}"
+          },
+          "element": "body.properties.properties.customRules.properties.rules.properties.action.variants.AnomalyScoring",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 1316
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 1316,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L1316"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-12",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'mtlsSettings' was added at body.properties.properties.mtlsSettings.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+          },
+          "element": "body.properties.properties.mtlsSettings",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2783
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2783,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2783"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-13",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'enforceMtls' was added at body.properties.properties.enforceMtls.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}"
+          },
+          "element": "body.properties.properties.enforceMtls",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2942
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2942,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2942"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-14",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'tokenDestinationHeader' was added at body.properties.properties.authentication.properties.tokenDestinationHeader.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+          },
+          "element": "body.properties.properties.authentication.properties.tokenDestinationHeader",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3173
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3173,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3173"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-15",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'routes' was added at body.properties.properties.parameters.variants.WebApplicationFirewall.properties.associations.properties.routes.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.WebApplicationFirewall.properties.associations.properties.routes",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 6786
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 6786,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L6786"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-16",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'isProfileLevel' was added at body.properties.properties.parameters.variants.WebApplicationFirewall.properties.isProfileLevel.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.WebApplicationFirewall.properties.isProfileLevel",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 6809
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 6809,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L6809"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-17",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'serverTlsGroupPolicy' was added at body.properties.properties.tlsSettings.properties.serverTlsGroupPolicy.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+          },
+          "element": "body.properties.properties.tlsSettings.properties.serverTlsGroupPolicy",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2825
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2825,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2825"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-18",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'serverTlsGroups' was added at body.properties.properties.tlsSettings.properties.serverTlsGroups.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+          },
+          "element": "body.properties.properties.tlsSettings.properties.serverTlsGroups",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2831
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2831,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2831"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-19",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'mtlsSettings' was added at body.properties.properties.mtlsSettings.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/customDomains/{}"
+          },
+          "element": "body.properties.properties.mtlsSettings",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2783
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2783,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2783"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-20",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'enforceMtls' was added at body.properties.properties.enforceMtls.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}"
+          },
+          "element": "body.properties.properties.enforceMtls",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2942
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2942,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2942"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-21",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'tokenDestinationHeader' was added at body.properties.properties.authentication.properties.tokenDestinationHeader.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+          },
+          "element": "body.properties.properties.authentication.properties.tokenDestinationHeader",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3173
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3173,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3173"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-22",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'certificateNameCheckValidationMode' was added at body.properties.properties.certificateNameCheckValidationMode.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}/origins/{}"
+          },
+          "element": "body.properties.properties.certificateNameCheckValidationMode",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3279
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3279,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3279"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-23",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'customCertificateSubjects' was added at body.properties.properties.customCertificateSubjects.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}/origins/{}"
+          },
+          "element": "body.properties.properties.customCertificateSubjects",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3287
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3287,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3287"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-24",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'routes' was added at body.properties.properties.parameters.variants.WebApplicationFirewall.properties.associations.properties.routes.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.WebApplicationFirewall.properties.associations.properties.routes",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 6786
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 6786,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L6786"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-25",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'isProfileLevel' was added at body.properties.properties.parameters.variants.WebApplicationFirewall.properties.isProfileLevel.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.WebApplicationFirewall.properties.isProfileLevel",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 6809
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 6809,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L6809"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-26",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'capacityDistributionSettings' was added at body.properties.properties.loadBalancingSettings.properties.capacityDistributionSettings.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+          },
+          "element": "body.properties.properties.loadBalancingSettings.properties.capacityDistributionSettings",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2026-07-01",
+            "headVersion": "2026-08-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3084
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3084,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3084"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-27",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'grpcState' was added at body.properties.properties.grpcState.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/afdEndpoints/{}/routes/{}"
+          },
+          "element": "body.properties.properties.grpcState",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2026-07-01",
+            "headVersion": "2026-08-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3445
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3445,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3445"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-28",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{} was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 53
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 53,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp#L53"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-29",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{} was added.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 60
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 60,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp#L60"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-30",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{} was added.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 74
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 74,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp#L74"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-31",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation DELETE /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{} was added.",
+          "operation": {
+            "method": "DELETE",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 86
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 86,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp#L86"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-32",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/keyGroups"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 96
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp",
+            "line": 96,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KeyGroup.tsp#L96"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-33",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{} was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 39
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 39,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp#L39"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-34",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{} was added.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 45
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 45,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp#L45"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-35",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 53
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 53,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp#L53"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-36",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}/approve was added.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}/approve"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 58
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 58,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp#L58"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-37",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}/compare was added.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/deploymentVersions/{}/compare"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 68
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp",
+            "line": 68,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/DeploymentVersion.tsp#L68"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-38",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{} was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 54
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 54,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp#L54"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-39",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{} was added.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 61
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 61,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp#L61"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-40",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{} was added.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 75
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 75,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp#L75"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-41",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation DELETE /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{} was added.",
+          "operation": {
+            "method": "DELETE",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 88
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 88,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp#L88"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-42",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/agents"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 99
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp",
+            "line": 99,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ProfileAgent.tsp#L99"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-43",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{} was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 51
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 51,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp#L51"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-44",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{} was added.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 58
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 58,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp#L58"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-45",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{} was added.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 72
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 72,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp#L72"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-46",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation DELETE /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{} was added.",
+          "operation": {
+            "method": "DELETE",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 86
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 86,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp#L86"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-47",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 97
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 97,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp#L97"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-48",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/providers/Microsoft.Cdn/webAgents was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/providers/Microsoft.Cdn/webAgents"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 105
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp",
+            "line": 105,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/WebAgent.tsp#L105"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-49",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{} was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 54
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 54,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp#L54"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-50",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{} was added.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 61
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 61,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp#L61"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-51",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{} was added.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 75
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 75,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp#L75"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-52",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation DELETE /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{} was added.",
+          "operation": {
+            "method": "DELETE",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 88
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 88,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp#L88"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-53",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 99
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 99,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp#L99"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-54",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}/purge was added.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/webAgents/{}/knowledgeSources/{}/purge"
+          },
+          "element": "",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 108
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp",
+            "line": 108,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/KnowledgeSource.tsp#L108"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-55",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.secretType added variant 'MtlsCertificateChain'.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/validateSecret"
+          },
+          "element": "body.properties.secretType.variants.MtlsCertificateChain",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 65
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 65,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L65"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-56",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "EnumerationMemberAdded",
+          "rule": "service-level",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Enumeration member 'Grpc' was added at body.properties.properties.healthProbeSettings.properties.probeProtocol.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+          },
+          "element": "body.properties.properties.healthProbeSettings.properties.probeProtocol.Grpc",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2346
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2346,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2346"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-57",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "response-widening",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 32
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 32,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L32"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-58",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L40"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-59",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 57
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 57,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L57"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-60",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "response-widening",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.parameters added variant 'WebApplicationFirewallEmbedded'.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.WebApplicationFirewallEmbedded",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp",
+            "line": 33
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp",
+            "line": 33,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp#L33"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-61",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.parameters added variant 'WebApplicationFirewallEmbedded'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.WebApplicationFirewallEmbedded",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp",
+            "line": 41
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp",
+            "line": 41,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp#L41"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-62",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.parameters added variant 'WebApplicationFirewallEmbedded'.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/securityPolicies/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.WebApplicationFirewallEmbedded",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp",
+            "line": 58
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp",
+            "line": 58,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/SecurityPolicy.tsp#L58"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-63",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "response-widening",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 32
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 32,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp#L32"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-64",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-09-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 40
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 40,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp#L40"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-65",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponsePropertyAdded",
+          "rule": "response-narrowing",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Response property 'batchMode' was added at body.properties.properties.batchMode.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}"
+          },
+          "element": "body.properties.properties.batchMode",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-12-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3530
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3530,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3530"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-66",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponsePropertyAdded",
+          "rule": "response-narrowing",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Response property 'rules' was added at body.properties.properties.rules.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}"
+          },
+          "element": "body.properties.properties.rules",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-12-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3537
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 3537,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L3537"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-67",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestTypeKindChanged",
+          "rule": "type-kind-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request type kind changed at body from Intrinsic to Model.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}"
+          },
+          "element": "body",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-12-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/RuleSet.tsp",
+            "line": 19
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/RuleSet.tsp",
+            "line": 19,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/RuleSet.tsp#L19"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-68",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponseHeaderAdded",
+          "rule": "response-narrowing",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Response header 'Azure-AsyncOperation' was added.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}"
+          },
+          "element": "headers.Azure-AsyncOperation",
+          "component": "response",
+          "statusCode": "201",
+          "versionPair": {
+            "baseVersion": "2025-06-01",
+            "headVersion": "2025-12-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/RuleSet.tsp",
+            "line": 56
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/RuleSet.tsp",
+            "line": 56,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/RuleSet.tsp#L56"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-69",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.secretType added variant 'MtlsCertificateChain'.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/validateSecret"
+          },
+          "element": "body.properties.secretType.variants.MtlsCertificateChain",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 65
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 65,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L65"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-70",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "response-widening",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 32
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 32,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L32"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-71",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L40"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-72",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 57
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 57,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L57"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-73",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "response-widening",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 32
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 32,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp#L32"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-74",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-04-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 40
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 40,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp#L40"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-75",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.secretType added variant 'MtlsCertificateChain'.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/validateSecret"
+          },
+          "element": "body.properties.secretType.variants.MtlsCertificateChain",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 65
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 65,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L65"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-76",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "response-widening",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 32
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 32,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L32"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-77",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 40,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L40"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-78",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.actions added variant 'AfdUrlSigning'.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/ruleSets/{}/rules/{}"
+          },
+          "element": "body.properties.properties.actions.variants.AfdUrlSigning",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 57
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp",
+            "line": 57,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Rule.tsp#L57"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-79",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "ResponsePropertyTypeWidened",
+          "rule": "response-widening",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Response union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 32
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 32,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp#L32"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-80",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request union at body.properties.properties.parameters added variant 'MtlsCertificateChain'.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/secrets/{}"
+          },
+          "element": "body.properties.properties.parameters.variants.MtlsCertificateChain",
+          "component": "request",
+          "versionPair": {
+            "baseVersion": "2025-12-01",
+            "headVersion": "2026-07-01"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 40
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp",
+            "line": 40,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/Secret.tsp#L40"
+          }
+        },
+        {
+          "occurrenceId": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-81",
+          "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+          "kind": "EnumerationMemberAdded",
+          "rule": "service-level",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Enumeration member 'Grpc' was added at body.properties.properties.healthProbeSettings.properties.probeProtocol.",
+          "operation": {
+            "method": "GET",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/profiles/{}/originGroups/{}"
+          },
+          "element": "body.properties.properties.healthProbeSettings.properties.probeProtocol.Grpc",
+          "component": "response",
+          "statusCode": "200",
+          "versionPair": {
+            "baseVersion": "2026-07-01",
+            "headVersion": "2026-08-01-preview"
+          },
+          "location": {
+            "file": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2346
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+            "digest": "08ed48f02774186ec44e1f8a876b3fbd666736384248dfdca0e405fd0810b9f8"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+            "line": 2346,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/6249fb38aaf0f6f919f9b958c57cf40f8d1419e2/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp#L2346"
+          }
+        }
+      ]
+    }
+  ],
+  "matches": [],
+  "findingGroups": [
+    {
+      "category": "typespec-only",
+      "key": "EnumerationMemberAdded",
+      "typeSpecKind": "EnumerationMemberAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-56",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-81"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "OperationAdded",
+      "typeSpecKind": "OperationAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-28",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-29",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-30",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-31",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-32",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-33",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-34",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-35",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-36",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-37",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-38",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-39",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-40",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-41",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-42",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-43",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-44",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-45",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-46",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-47",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-48",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-49",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-50",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-51",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-52",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-53",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-54"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "RequestPropertyTypeWidened",
+      "typeSpecKind": "RequestPropertyTypeWidened",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-55",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-58",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-59",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-61",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-62",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-64",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-69",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-71",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-72",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-74",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-75",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-77",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-78",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-80"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "RequestTypeKindChanged",
+      "typeSpecKind": "RequestTypeKindChanged",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-67"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResourcePropertyAdded",
+      "typeSpecKind": "ResourcePropertyAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-10",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-12",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-13",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-14",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-15",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-16",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-17",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-18",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-19",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-20",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-21",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-22",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-23",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-24",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-25",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-26",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-27",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-4",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-8",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-9"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResourcePropertyTypeNarrowed",
+      "typeSpecKind": "ResourcePropertyTypeNarrowed",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-A-0",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-A-2"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResourcePropertyTypeWidened",
+      "typeSpecKind": "ResourcePropertyTypeWidened",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-A-1",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-A-3",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-11",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-5",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-6",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-7"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResponseHeaderAdded",
+      "typeSpecKind": "ResponseHeaderAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-68"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResponsePropertyAdded",
+      "typeSpecKind": "ResponsePropertyAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-65",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-66"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResponsePropertyTypeWidened",
+      "typeSpecKind": "ResponsePropertyTypeWidened",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-57",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-60",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-63",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-70",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-73",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-76",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn:tsp-B-79"
+      ]
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+    "prBaseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 6249fb38aaf0f6f919f9b958c57cf40f8d1419e2\ngit -C target checkout --detach 6249fb38aaf0f6f919f9b958c57cf40f8d1419e2\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46674' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+        "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/Cdn' --base-ref be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 --phase same-version --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-a.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/Cdn' --base-ref be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-b-evidence.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 82,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 82,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 4,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 4,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "typespec-only-divergence"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 78,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 78,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "typespec-only-divergence"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 4,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 4
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 32,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 32
+      }
+    }
+  }
+}

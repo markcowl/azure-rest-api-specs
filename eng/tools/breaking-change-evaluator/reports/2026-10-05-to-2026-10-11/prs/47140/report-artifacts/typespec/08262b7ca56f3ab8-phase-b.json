@@ -1,0 +1,1203 @@
+{
+  "specPaths": ["specification/batch/resource-manager/Microsoft.Batch/Batch"],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-A1NUp5\\specification\\batch\\resource-manager\\Microsoft.Batch\\Batch",
+  "headRevision": "specification/batch/resource-manager/Microsoft.Batch/Batch",
+  "requiresAction": true,
+  "counts": {
+    "errors": 39,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 39,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3,
+    "versionComparisons": [
+      {
+        "serviceName": "Batch",
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01",
+        "phase": "same-version",
+        "findingCount": 86
+      },
+      {
+        "serviceName": "Batch",
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01",
+        "phase": "same-version",
+        "findingCount": 74
+      },
+      {
+        "serviceName": "Batch",
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01",
+        "phase": "cross-version",
+        "findingCount": 35
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyRemoved",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'storageAccountType' was removed at body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.dataDisks.properties.storageAccountType.",
+      "element": "body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.dataDisks.properties.storageAccountType",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2446
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.DataDisk.storageAccountType",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model DataDisk {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })\n  storageAccountType: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'managedDisk' was added at body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.dataDisks.properties.managedDisk.",
+      "element": "body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.dataDisks.properties.managedDisk",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2453
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Batch.DataDisk.managedDisk",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model DataDisk {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  managedDisk: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'customerManagedKey' was added at body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.diskEncryptionConfiguration.properties.customerManagedKey.",
+      "element": "body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.diskEncryptionConfiguration.properties.customerManagedKey",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2527
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Batch.DiskEncryptionConfiguration.customerManagedKey",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model DiskEncryptionConfiguration {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  customerManagedKey: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.osDisk.properties.managedDisk.properties.securityProfile.properties.securityEncryptionType added variant 'DiskWithVMGuestState'.",
+      "element": "body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.osDisk.properties.managedDisk.properties.securityProfile.properties.securityEncryptionType.variants.DiskWithVMGuestState",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 53
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Batch.SecurityEncryptionTypes",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model Batch {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  SecurityEncryptionTypes: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'diskEncryptionSet' was added at body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.osDisk.properties.managedDisk.properties.securityProfile.properties.diskEncryptionSet.",
+      "element": "body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.osDisk.properties.managedDisk.properties.securityProfile.properties.diskEncryptionSet",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2735
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Batch.VMDiskSecurityProfile.diskEncryptionSet",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model VMDiskSecurityProfile {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  diskEncryptionSet: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'diskEncryptionSet' was added at body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.osDisk.properties.managedDisk.properties.diskEncryptionSet.",
+      "element": "body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.osDisk.properties.managedDisk.properties.diskEncryptionSet",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2705
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Batch.ManagedDisk.diskEncryptionSet",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model ManagedDisk {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  diskEncryptionSet: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'proxyAgentSettings' was added at body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.securityProfile.properties.proxyAgentSettings.",
+      "element": "body.properties.properties.deploymentConfiguration.properties.virtualMachineConfiguration.properties.securityProfile.properties.proxyAgentSettings",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2763
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Batch.SecurityProfile.proxyAgentSettings",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model SecurityProfile {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  proxyAgentSettings: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'ipFamilies' was added at body.properties.properties.networkConfiguration.properties.publicIPAddressConfiguration.properties.ipFamilies.",
+      "element": "body.properties.properties.networkConfiguration.properties.publicIPAddressConfiguration.properties.ipFamilies",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 3103
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Batch.PublicIPAddressConfiguration.ipFamilies",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model PublicIPAddressConfiguration {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  ipFamilies: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'ipTags' was added at body.properties.properties.networkConfiguration.properties.publicIPAddressConfiguration.properties.ipTags.",
+      "element": "body.properties.properties.networkConfiguration.properties.publicIPAddressConfiguration.properties.ipTags",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 3111
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Batch.PublicIPAddressConfiguration.ipTags",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model PublicIPAddressConfiguration {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  ipTags: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'jobDefaultOrder' was added at body.properties.properties.taskSchedulingPolicy.properties.jobDefaultOrder.",
+      "element": "body.properties.properties.taskSchedulingPolicy.properties.jobDefaultOrder",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 3143
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Batch.TaskSchedulingPolicy.jobDefaultOrder",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model TaskSchedulingPolicy {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  jobDefaultOrder: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyRemoved",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'certificates' was removed at body.properties.properties.certificates.",
+      "element": "body.properties.properties.certificates",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2192
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.PoolProperties.certificates",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model PoolProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })\n  certificates: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyRemoved",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'applicationLicenses' was removed at body.properties.properties.applicationLicenses.",
+      "element": "body.properties.properties.applicationLicenses",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2205
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.PoolProperties.applicationLicenses",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model PoolProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })\n  applicationLicenses: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyRemoved",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'targetNodeCommunicationMode' was removed at body.properties.properties.targetNodeCommunicationMode.",
+      "element": "body.properties.properties.targetNodeCommunicationMode",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2226
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.PoolProperties.targetNodeCommunicationMode",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model PoolProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })\n  targetNodeCommunicationMode: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyRemoved",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'resourceTags' was removed at body.properties.properties.resourceTags.",
+      "element": "body.properties.properties.resourceTags",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2250
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.PoolProperties.resourceTags",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model PoolProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyRemoved\" })\n  resourceTags: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.publicNetworkAccess removed variant intrinsic.",
+      "element": "body.properties.properties.publicNetworkAccess.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1252
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.publicNetworkAccess added variant intrinsic.",
+      "element": "body.properties.properties.publicNetworkAccess.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.networkProfile removed variant intrinsic.",
+      "element": "body.properties.properties.networkProfile.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1260
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.networkProfile added variant intrinsic.",
+      "element": "body.properties.properties.networkProfile.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.privateEndpointConnections removed variant intrinsic.",
+      "element": "body.properties.properties.privateEndpointConnections.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1267
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.privateEndpointConnections added variant intrinsic.",
+      "element": "body.properties.properties.privateEndpointConnections.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.dedicatedCoreQuota removed variant intrinsic.",
+      "element": "body.properties.properties.dedicatedCoreQuota.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1289
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.dedicatedCoreQuota added variant intrinsic.",
+      "element": "body.properties.properties.dedicatedCoreQuota.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.lowPriorityCoreQuota removed variant intrinsic.",
+      "element": "body.properties.properties.lowPriorityCoreQuota.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1297
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.lowPriorityCoreQuota added variant intrinsic.",
+      "element": "body.properties.properties.lowPriorityCoreQuota.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.dedicatedCoreQuotaPerVMFamily removed variant intrinsic.",
+      "element": "body.properties.properties.dedicatedCoreQuotaPerVMFamily.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1305
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.dedicatedCoreQuotaPerVMFamily added variant intrinsic.",
+      "element": "body.properties.properties.dedicatedCoreQuotaPerVMFamily.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.allowedAuthenticationModes removed variant intrinsic.",
+      "element": "body.properties.properties.allowedAuthenticationModes.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1334
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.allowedAuthenticationModes added variant intrinsic.",
+      "element": "body.properties.properties.allowedAuthenticationModes.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 38
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.allowedAuthenticationModes removed variant intrinsic.",
+      "element": "body.properties.properties.allowedAuthenticationModes.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 1020
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop create(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.allowedAuthenticationModes added variant intrinsic.",
+      "element": "body.properties.properties.allowedAuthenticationModes.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "line": 44
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/BatchAccount.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop create(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.currentNodeCommunicationMode removed variant intrinsic.",
+      "element": "body.properties.properties.currentNodeCommunicationMode.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2236
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-A1NUp5/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.currentNodeCommunicationMode added variant intrinsic.",
+      "element": "body.properties.properties.currentNodeCommunicationMode.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Pool.tsp",
+        "line": 53
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Pool.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "OperationRemoved",
+      "severity": "error",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{} was removed.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "line": 51
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.Certificates.get",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })\nmodel get { ... }"
+      }
+    },
+    {
+      "kind": "OperationRemoved",
+      "severity": "error",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{} was removed.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "line": 69
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.Certificates.create",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })\nmodel create { ... }"
+      }
+    },
+    {
+      "kind": "OperationRemoved",
+      "severity": "error",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{} was removed.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "line": 103
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.Certificates.update",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })\nmodel update { ... }"
+      }
+    },
+    {
+      "kind": "OperationRemoved",
+      "severity": "error",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation DELETE /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{} was removed.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "line": 130
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "DELETE",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.Certificates.delete",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })\nmodel delete { ... }"
+      }
+    },
+    {
+      "kind": "OperationRemoved",
+      "severity": "error",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates was removed.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "line": 144
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.Certificates.listByBatchAccount",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })\nmodel listByBatchAccount { ... }"
+      }
+    },
+    {
+      "kind": "OperationRemoved",
+      "severity": "error",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{}/cancelDelete was removed.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "line": 177
+      },
+      "sourceTraceLevel": "origin",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/certificates/{}/cancelDelete"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.Certificates.cancelDeletion",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/Certificate.tsp",
+        "example": "@approvedBreakingChange(\"your reason here\", #{ kind: \"OperationRemoved\" })\nmodel cancelDeletion { ... }"
+      }
+    },
+    {
+      "kind": "ResponsePropertyRemoved",
+      "severity": "error",
+      "rule": "response-contract-weakened",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Response property 'currentNodeCommunicationMode' was removed at body.properties.properties.currentNodeCommunicationMode.",
+      "element": "body.properties.properties.currentNodeCommunicationMode",
+      "versionPair": {
+        "baseVersion": "2024-07-01",
+        "headVersion": "2025-06-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "line": 2236
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Batch/batchAccounts/{}/pools/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Batch.PoolProperties.currentNodeCommunicationMode",
+        "file": "<temp>/breaking-change-evaluation-DRwHhJ/repo/specification/batch/resource-manager/Microsoft.Batch/Batch/models.tsp",
+        "example": "model PoolProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })\n  currentNodeCommunicationMode: ...;\n}"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 3879,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 2867,
+    "classifyMs": 1,
+    "suppressMs": 2,
+    "reportMs": 0,
+    "totalMs": 6758
+  }
+}

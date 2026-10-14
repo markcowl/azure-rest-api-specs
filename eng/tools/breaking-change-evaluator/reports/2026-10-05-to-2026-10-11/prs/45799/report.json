@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:22:32.632Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45799,
+    "title": "[Microsoft.ApiManagement] Add AI Gateway 2026-09-01-preview API",
+    "author": "azaslonov",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45799",
+    "baseBranch": "main",
+    "headBranch": "alzaslon/aigateway-2026-09-preview",
+    "baseSha": "2f3878f62a5f5c28fe60d7cb27b35d1cb06a23df",
+    "headSha": "4062f751b3e70f900ca2ad8f87b284abd70777ab",
+    "mergedAt": "2026-10-09T15:56:32Z",
+    "changedTypeSpecFiles": [
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGateway.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayCommon.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayOperations.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResource.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/main.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45799",
+      "state": "closed",
+      "merged": true,
+      "headSha": "4062f751b3e70f900ca2ad8f87b284abd70777ab",
+      "baseSha": "2f3878f62a5f5c28fe60d7cb27b35d1cb06a23df",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGateway.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayCommon.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayOperations.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResource.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/main.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45799",
+      "headSha": "4062f751b3e70f900ca2ad8f87b284abd70777ab",
+      "baseSha": "2f3878f62a5f5c28fe60d7cb27b35d1cb06a23df"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

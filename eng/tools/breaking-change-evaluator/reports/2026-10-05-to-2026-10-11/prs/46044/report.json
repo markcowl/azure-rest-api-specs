@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T01:18:29.495Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46044,
+    "title": "RecoveryServicesBackup: add 2026-10-01 API version with Instant Access snapshot policy props",
+    "author": "Neelav-0211",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46044",
+    "baseBranch": "main",
+    "headBranch": "users/nebhatiya/rsvbackup-2026-10-01-ia-snapshot",
+    "baseSha": "abfe7853f1382c8124b23be81984196102fd9343",
+    "headSha": "25542e10a7e4bd038295609d57895a28115b46aa",
+    "mergedAt": "2026-10-08T05:49:45Z",
+    "changedTypeSpecFiles": [
+      "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/CrossTenantVaultMappingResource.tsp",
+      "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/RecoveryPointResource.tsp",
+      "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/back-compatible.tsp",
+      "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/client.tsp",
+      "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/main.tsp",
+      "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/models.tsp",
+      "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/routes.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46044",
+      "state": "closed",
+      "merged": true,
+      "headSha": "25542e10a7e4bd038295609d57895a28115b46aa",
+      "baseSha": "abfe7853f1382c8124b23be81984196102fd9343",
+      "runs": {
+        "A": {
+          "id": 37283211866,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "25542e10a7e4bd038295609d57895a28115b46aa",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37283211866",
+          "logDigest": "42862756c9217606e9b48151b7912f5fc293b85e73474d1a82223c29c68039a8",
+          "summaryDigest": "4abdfdab294e10a168bfba902eba1db0fd0a54cdf63fd2e99394ff44b5fdc862"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/CrossTenantVaultMappingResource.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/RecoveryPointResource.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/back-compatible.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/client.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/main.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/models.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/routes.tsp"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46044",
+      "headSha": "25542e10a7e4bd038295609d57895a28115b46aa",
+      "baseSha": "abfe7853f1382c8124b23be81984196102fd9343"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

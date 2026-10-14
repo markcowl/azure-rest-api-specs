@@ -1,0 +1,753 @@
+{
+  "specPaths": [
+    "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights"
+  ],
+  "baseRevision": "C:\\Users\\markcowl\\AppData\\Local\\Temp\\typespec-breaking-change-base-Bq7n7Y\\specification\\operationalinsights\\resource-manager\\Microsoft.OperationalInsights\\OperationalInsights",
+  "headRevision": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+  "requiresAction": true,
+  "counts": {
+    "errors": 24,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 24,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "OperationalInsights",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01",
+        "phase": "same-version",
+        "findingCount": 170
+      },
+      {
+        "serviceName": "OperationalInsights",
+        "baseVersion": "2026-03-01",
+        "headVersion": "2026-03-01",
+        "phase": "same-version",
+        "findingCount": 190
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.sku.properties.capacity removed variant intrinsic.",
+      "element": "body.properties.sku.properties.capacity.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 1145
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/clusters/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/clusters/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.sku.properties.capacity added variant intrinsic.",
+      "element": "body.properties.sku.properties.capacity.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Cluster.tsp",
+        "line": 43
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/clusters/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/clusters/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Cluster.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.enableDataExport removed variant intrinsic.",
+      "element": "body.properties.properties.features.properties.enableDataExport.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2874
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.enableDataExport added variant intrinsic.",
+      "element": "body.properties.properties.features.properties.enableDataExport.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 174
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.immediatePurgeDataOn30Days removed variant intrinsic.",
+      "element": "body.properties.properties.features.properties.immediatePurgeDataOn30Days.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2880
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.immediatePurgeDataOn30Days added variant intrinsic.",
+      "element": "body.properties.properties.features.properties.immediatePurgeDataOn30Days.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 174
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.enableLogAccessUsingOnlyResourcePermissions removed variant intrinsic.",
+      "element": "body.properties.properties.features.properties.enableLogAccessUsingOnlyResourcePermissions.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2886
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.enableLogAccessUsingOnlyResourcePermissions added variant intrinsic.",
+      "element": "body.properties.properties.features.properties.enableLogAccessUsingOnlyResourcePermissions.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 174
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.clusterResourceId removed variant intrinsic.",
+      "element": "body.properties.properties.features.properties.clusterResourceId.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2892
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.clusterResourceId added variant intrinsic.",
+      "element": "body.properties.properties.features.properties.clusterResourceId.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 174
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.disableLocalAuth removed variant intrinsic.",
+      "element": "body.properties.properties.features.properties.disableLocalAuth.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2898
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.disableLocalAuth added variant intrinsic.",
+      "element": "body.properties.properties.features.properties.disableLocalAuth.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 174
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.dataAuthorizationMode removed variant intrinsic.",
+      "element": "body.properties.properties.features.properties.dataAuthorizationMode.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-03-01",
+        "headVersion": "2026-03-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2918
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.features.properties.dataAuthorizationMode added variant intrinsic.",
+      "element": "body.properties.properties.features.properties.dataAuthorizationMode.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2026-03-01",
+        "headVersion": "2026-03-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 174
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.sku.properties.capacityReservationLevel removed variant intrinsic.",
+      "element": "body.properties.properties.sku.properties.capacityReservationLevel.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2817
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.sku.properties.capacityReservationLevel added variant intrinsic.",
+      "element": "body.properties.properties.sku.properties.capacityReservationLevel.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 166
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.retentionInDays removed variant intrinsic.",
+      "element": "body.properties.properties.retentionInDays.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2740
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.retentionInDays added variant intrinsic.",
+      "element": "body.properties.properties.retentionInDays.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 166
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.features.properties.unifiedSentinelBillingOnly removed variant intrinsic.",
+      "element": "body.properties.properties.features.properties.unifiedSentinelBillingOnly.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2905
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.features.properties.unifiedSentinelBillingOnly added variant intrinsic.",
+      "element": "body.properties.properties.features.properties.unifiedSentinelBillingOnly.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 166
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.sku.properties.capacityReservationLevel removed variant intrinsic.",
+      "element": "body.properties.properties.sku.properties.capacityReservationLevel.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2817
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.sku.properties.capacityReservationLevel added variant intrinsic.",
+      "element": "body.properties.properties.sku.properties.capacityReservationLevel.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 174
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.retentionInDays removed variant intrinsic.",
+      "element": "body.properties.properties.retentionInDays.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "line": 2740
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/typespec-breaking-change-base-Bq7n7Y/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.retentionInDays added variant intrinsic.",
+      "element": "body.properties.properties.retentionInDays.variants.intrinsic",
+      "versionPair": {
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01"
+      },
+      "location": {
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "line": 174
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.OperationalInsights/workspaces/{} (or on the affected model/property)",
+        "file": "<temp>/breaking-change-evaluation-PCO96G/repo/specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/Workspace.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\nop createOrUpdate(...): ...;"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 4476,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 2670,
+    "classifyMs": 2,
+    "suppressMs": 2,
+    "reportMs": 0,
+    "totalMs": 7164
+  }
+}

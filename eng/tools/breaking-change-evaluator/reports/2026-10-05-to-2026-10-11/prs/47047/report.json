@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-13T23:57:43.511Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47047,
+    "title": "Try to fix NET SDK for PTM",
+    "author": "imsiddhartha",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47047",
+    "baseBranch": "main",
+    "headBranch": "dev/ssaklecha/net-sdk-fix",
+    "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+    "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+    "mergedAt": "2026-10-06T15:31:57Z",
+    "changedTypeSpecFiles": [
+      "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47047",
+      "state": "closed",
+      "merged": true,
+      "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+      "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+      "runs": {
+        "A": {
+          "id": 37443065657,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37443065657",
+          "logDigest": "75e88b631c39b55d3055e72a923442f0be2ee8d49f931d746780dea1961d953e",
+          "summaryDigest": "0c2c944c47bd60396fefaad8f95ce41e5c22e25da2b25e6b1c56369194c83421"
+        },
+        "B": {
+          "id": 37443065531,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37443065531",
+          "logDigest": "79072c3ffbe5eba0a291ceac82f3814b5e4e96f4db5bfa9dc9ebe9a9f30fb68f",
+          "summaryDigest": "fa21f3731fd4f8e723866c2ab2c69cde9dc81a11811699adc27ded4a2738fb93"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47047",
+      "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+      "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/3b4e7b467cf721f9-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/3b4e7b467cf721f9-phase-a.md",
+          "jsonDigest": "1fd3bda13ccff2a429a909b5d6157ee8ba5ae5feeb1dae3abeebe3e4390da497",
+          "markdownDigest": "222c406de8f792054ad573e1f7855bb6c3f9e3b05ba66101f3e82d7184670dc6",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1730,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 469,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 2213
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "Network",
+              "baseVersion": "2026-02-09-preview",
+              "headVersion": "2026-02-09-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/3b4e7b467cf721f9-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/3b4e7b467cf721f9-phase-b.md",
+          "jsonDigest": "e1ce61aa05867f9a75efcdae2e8b463bd796703caab7e4049cd1be7fdee166f7",
+          "markdownDigest": "73985f25b9bab4ea9a07bc7dd606994e3ba71baa2a62722117d94bf3ead54ab5",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1802,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 763,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 2574
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "192a113ebdce97c92723614bc44525d92f3ac4aea98c75275fc848fb71ff3ea6",
+      "comparisonsPerformed": 1,
+      "versionComparisons": [
+        {
+          "serviceName": "Network",
+          "baseVersion": "2026-02-09-preview",
+          "headVersion": "2026-02-09-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+    "prBaseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b a67527e20e8d8105db5ef946120297986c8b9706\ngit -C target checkout --detach a67527e20e8d8105db5ef946120297986c8b9706\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47047' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager",
+        "project": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager' --base-ref 0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b --phase same-version --json-output '../specification-privatetrafficmanager-resource-manager-Microsoft.Network-PrivateTrafficManager-phase-a.json' --markdown-output '../specification-privatetrafficmanager-resource-manager-Microsoft.Network-PrivateTrafficManager-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager' --base-ref 0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b --json-output '../specification-privatetrafficmanager-resource-manager-Microsoft.Network-PrivateTrafficManager-phase-b-evidence.json' --markdown-output '../specification-privatetrafficmanager-resource-manager-Microsoft.Network-PrivateTrafficManager-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

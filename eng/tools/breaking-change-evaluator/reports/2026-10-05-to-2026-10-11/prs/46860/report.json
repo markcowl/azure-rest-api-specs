@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-14T02:22:19.346Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46860,
+    "title": "[Commvault] Add 2026-09-30 stable API",
+    "author": "saurabh-jaiswal-333",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46860",
+    "baseBranch": "main",
+    "headBranch": "saurabh-jaiswal-333-commvault-public-ga",
+    "baseSha": "2f3878f62a5f5c28fe60d7cb27b35d1cb06a23df",
+    "headSha": "42d8c9725fe1545ba97794189f220444df86d645",
+    "mergedAt": "2026-10-09T11:17:24Z",
+    "changedTypeSpecFiles": [
+      "specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46860",
+      "state": "closed",
+      "merged": true,
+      "headSha": "42d8c9725fe1545ba97794189f220444df86d645",
+      "baseSha": "2f3878f62a5f5c28fe60d7cb27b35d1cb06a23df",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46860",
+      "headSha": "42d8c9725fe1545ba97794189f220444df86d645",
+      "baseSha": "2f3878f62a5f5c28fe60d7cb27b35d1cb06a23df"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "errors": []
+}

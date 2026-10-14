@@ -1,0 +1,767 @@
+{
+  "schemaVersion": 2,
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-13T23:57:39.805Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47005,
+    "title": "Revert(planetarycomputer): restore previous folder structure",
+    "author": "thisisdevanshu",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47005",
+    "baseBranch": "main",
+    "headBranch": "revert-46586-planetarycomputer-folder-migration",
+    "baseSha": "0799fda68aab1e2c6f5f0d06f028f451b14bf0a8",
+    "headSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
+    "mergedAt": "2026-10-06T00:27:06Z",
+    "changedTypeSpecFiles": [
+      "specification/orbital/Microsoft.PlanetaryComputer/client.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/inma.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/main.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.common.colormaps.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.common.geojson.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.common.images.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.common.versions.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.stac.config.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.stac.spec.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.common.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.image-exports.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.items.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.map-legends.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.mosaics.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.tile-matrix-sets.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/overrides.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.common.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.stac.config.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.stac.spec.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.image-exports.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.items.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.map-legends.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.mosaic.collections.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.mosaic.items.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.mosaic.searches.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.mosaics.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.tile-matrix-sets.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/sas.tsp",
+      "specification/orbital/Microsoft.PlanetaryComputer/tspconfig.yaml",
+      "specification/orbitalplanetarycomputer/Orbital.Management/client.tsp",
+      "specification/orbitalplanetarycomputer/Orbital.Management/main.tsp",
+      "specification/orbitalplanetarycomputer/Orbital.Management/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47005",
+      "state": "closed",
+      "merged": true,
+      "headSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
+      "baseSha": "0799fda68aab1e2c6f5f0d06f028f451b14bf0a8",
+      "runs": {
+        "A": {
+          "id": 37078379040,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
+          "logDigest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859",
+          "summaryDigest": "e7690f366dfc5ac017f98ebb2dc7568b239bac8292d33fecf8d1c4829cfc2f4f"
+        },
+        "B": {
+          "id": 37078378960,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078378960",
+          "logDigest": "eba7e0043461cee19c3b3a88b7a7bbb5bf48a03cbcf80c56ffa3463b928d87f4",
+          "summaryDigest": "6febaa06cc4f04ee18cbc7a3cc9b7e3e9dbffa69a3a6bf889de7a227b36f6b79"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/orbital/Microsoft.PlanetaryComputer/client.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/inma.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/main.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.common.colormaps.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.common.geojson.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.common.images.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.common.versions.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.stac.config.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.stac.spec.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.common.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.image-exports.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.items.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.map-legends.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.mosaics.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.tile-matrix-sets.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/overrides.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.common.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.stac.config.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.stac.spec.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.image-exports.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.items.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.map-legends.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.mosaic.collections.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.mosaic.items.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.mosaic.searches.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.mosaics.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.tile-matrix-sets.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/routes.tiler.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/sas.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/tspconfig.yaml",
+        "specification/orbitalplanetarycomputer/Orbital.Management/client.tsp",
+        "specification/orbitalplanetarycomputer/Orbital.Management/main.tsp",
+        "specification/orbitalplanetarycomputer/Orbital.Management/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47005",
+      "headSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
+      "baseSha": "0799fda68aab1e2c6f5f0d06f028f451b14bf0a8"
+    },
+    "evaluator": {
+      "commit": "0d458e940caf56cd5069ec16389524d2186c786f"
+    },
+    "tool": {
+      "sourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+      "artifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json",
+        "newPath": "specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json",
+        "oldVersion": "2025-04-30-preview",
+        "newVersion": "2025-04-30-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
+        "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json",
+        "newPath": "specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json",
+        "oldVersion": "2026-04-15",
+        "newVersion": "2026-04-15"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
+        "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json",
+        "newPath": "specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json",
+        "oldVersion": "2024-01-31-preview",
+        "newVersion": "2024-01-31-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
+        "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json",
+        "newPath": "specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json",
+        "oldVersion": "2025-02-11-preview",
+        "newVersion": "2025-02-11-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
+        "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json",
+        "newPath": "specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json",
+        "oldVersion": "2026-04-15",
+        "newVersion": "2026-04-15"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
+        "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json#L1"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [
+    {
+      "project": "specification/orbital/Microsoft.PlanetaryComputer",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/0e1497e46c99294c-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/0e1497e46c99294c-phase-a.md",
+          "jsonDigest": "2a517de106287e43d4139c29e1ffaf86b10802b454873d1faa58e2c05b64fc00",
+          "markdownDigest": "5c9584b9eb8c46a5df906a0363d400b2690ef8b2b9e69481136b01fb9e821fb4",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Phase A (same-version) requires a base program for comparison. Use analyzeBaseAndHead() instead."
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/0e1497e46c99294c-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/0e1497e46c99294c-phase-b.md",
+          "jsonDigest": "bfd828a526484a8f81c5efef485ec21f6f81a7601da208dd9803b3930cf8002c",
+          "markdownDigest": "230ad9e39f59614c99fcb5085405ca963cd26f74988ece3bac72a704fa8d25c0",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 1,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 6
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "No cross-version comparisons needed: no comparisons to stable versions needed."
+        }
+      },
+      "reportDigest": "f7a88b24bd722a02d1a7e81435af81eb57de7eafd76fca9fdce769371f95bbf2",
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": []
+    },
+    {
+      "project": "specification/orbitalplanetarycomputer/Orbital.Management",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/dfc4b09bffcba0ba-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/dfc4b09bffcba0ba-phase-a.md",
+          "jsonDigest": "c34b13d47c1df431451d4e605c345da046b28ec50cd684301fba254a2210fc26",
+          "markdownDigest": "05b61f35b8674abed73040fe844c6e1d237bea4b33d3a81177b7b2f7186a6068",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Phase A (same-version) requires a base program for comparison. Use analyzeBaseAndHead() instead."
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/dfc4b09bffcba0ba-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/dfc4b09bffcba0ba-phase-b.md",
+          "jsonDigest": "cf6ac695e3288e54aae45e3af4ac5a19babb1c96ad86d6e2c7319209d7963b24",
+          "markdownDigest": "f45f4b5b463c3ccde59793be3c0ab1f32f19f7ff1e44401e53e4474cc90e24e1",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 5
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "No cross-version comparisons needed: no comparisons to stable versions needed."
+        }
+      },
+      "reportDigest": "78f532ea52e1227f9c00dea1c2670ec7c3316be2916e885fa9ef806f48466044",
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": []
+    }
+  ],
+  "matches": [
+    {
+      "oadOccurrenceId": "A-oad-0",
+      "target": {
+        "spec": "specification\\orbital\\data-plane\\Microsoft.PlanetaryComputer\\preview\\2025-04-30-preview\\openapi.json",
+        "project": "specification/orbital/data-plane",
+        "phase": "A",
+        "baseVersion": "2025-04-30-preview",
+        "headVersion": "2025-04-30-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document openapi.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\orbital\\data-plane\\Microsoft.PlanetaryComputer\\preview\\2025-04-30-preview\\openapi.json",
+          "project": "specification/orbital/data-plane",
+          "phase": "A",
+          "baseVersion": "2025-04-30-preview",
+          "headVersion": "2025-04-30-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document openapi.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-1",
+      "target": {
+        "spec": "specification\\orbital\\data-plane\\Microsoft.PlanetaryComputer\\stable\\2026-04-15\\openapi.json",
+        "project": "specification/orbital/data-plane",
+        "phase": "A",
+        "baseVersion": "2026-04-15",
+        "headVersion": "2026-04-15",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document openapi.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\orbital\\data-plane\\Microsoft.PlanetaryComputer\\stable\\2026-04-15\\openapi.json",
+          "project": "specification/orbital/data-plane",
+          "phase": "A",
+          "baseVersion": "2026-04-15",
+          "headVersion": "2026-04-15",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document openapi.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-2",
+      "target": {
+        "spec": "specification\\orbitalplanetarycomputer\\resource-manager\\Microsoft.Orbital\\preview\\2024-01-31-preview\\planetarycomputer.json",
+        "project": "specification/orbitalplanetarycomputer/resource-manager",
+        "phase": "A",
+        "baseVersion": "2024-01-31-preview",
+        "headVersion": "2024-01-31-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document planetarycomputer.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\orbitalplanetarycomputer\\resource-manager\\Microsoft.Orbital\\preview\\2024-01-31-preview\\planetarycomputer.json",
+          "project": "specification/orbitalplanetarycomputer/resource-manager",
+          "phase": "A",
+          "baseVersion": "2024-01-31-preview",
+          "headVersion": "2024-01-31-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document planetarycomputer.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-3",
+      "target": {
+        "spec": "specification\\orbitalplanetarycomputer\\resource-manager\\Microsoft.Orbital\\preview\\2025-02-11-preview\\planetarycomputer.json",
+        "project": "specification/orbitalplanetarycomputer/resource-manager",
+        "phase": "A",
+        "baseVersion": "2025-02-11-preview",
+        "headVersion": "2025-02-11-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document planetarycomputer.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\orbitalplanetarycomputer\\resource-manager\\Microsoft.Orbital\\preview\\2025-02-11-preview\\planetarycomputer.json",
+          "project": "specification/orbitalplanetarycomputer/resource-manager",
+          "phase": "A",
+          "baseVersion": "2025-02-11-preview",
+          "headVersion": "2025-02-11-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document planetarycomputer.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-4",
+      "target": {
+        "spec": "specification\\orbitalplanetarycomputer\\resource-manager\\Microsoft.Orbital\\stable\\2026-04-15\\planetarycomputer.json",
+        "project": "specification/orbitalplanetarycomputer/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-04-15",
+        "headVersion": "2026-04-15",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document planetarycomputer.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\orbitalplanetarycomputer\\resource-manager\\Microsoft.Orbital\\stable\\2026-04-15\\planetarycomputer.json",
+          "project": "specification/orbitalplanetarycomputer/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-15",
+          "headVersion": "2026-04-15",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document planetarycomputer.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    }
+  ],
+  "findingGroups": [
+    {
+      "category": "informational-oad",
+      "key": "NoVersionChange",
+      "swaggerRule": "NoVersionChange",
+      "oadOccurrenceIds": [
+        "A-oad-0",
+        "A-oad-1",
+        "A-oad-2",
+        "A-oad-3",
+        "A-oad-4"
+      ],
+      "typeSpecOccurrenceIds": []
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "0d458e940caf56cd5069ec16389524d2186c786f",
+    "analyzerSourceSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "analyzerArtifactDigest": "0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2",
+    "prHeadSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
+    "prBaseSha": "0799fda68aab1e2c6f5f0d06f028f451b14bf0a8",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '0d458e940caf56cd5069ec16389524d2186c786f'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '0ae9893ccdc9016ab4e0916f3f34f57959f0ce0eb4e445cfe91a04597eaa93d2') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 0799fda68aab1e2c6f5f0d06f028f451b14bf0a8 5adc647c5d61132bb68909a2d02ccf507aeb9feb\ngit -C target checkout --detach 5adc647c5d61132bb68909a2d02ccf507aeb9feb\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47005' --tool-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/orbital/Microsoft.PlanetaryComputer",
+        "project": "specification/orbital/Microsoft.PlanetaryComputer",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/orbital/Microsoft.PlanetaryComputer' --base-ref 0799fda68aab1e2c6f5f0d06f028f451b14bf0a8 --phase same-version --json-output '../specification-orbital-Microsoft.PlanetaryComputer-phase-a.json' --markdown-output '../specification-orbital-Microsoft.PlanetaryComputer-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/orbital/Microsoft.PlanetaryComputer' --base-ref 0799fda68aab1e2c6f5f0d06f028f451b14bf0a8 --json-output '../specification-orbital-Microsoft.PlanetaryComputer-phase-b-evidence.json' --markdown-output '../specification-orbital-Microsoft.PlanetaryComputer-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/orbitalplanetarycomputer/Orbital.Management",
+        "project": "specification/orbitalplanetarycomputer/Orbital.Management",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/orbitalplanetarycomputer/Orbital.Management' --base-ref 0799fda68aab1e2c6f5f0d06f028f451b14bf0a8 --phase same-version --json-output '../specification-orbitalplanetarycomputer-Orbital.Management-phase-a.json' --markdown-output '../specification-orbitalplanetarycomputer-Orbital.Management-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/orbitalplanetarycomputer/Orbital.Management' --base-ref 0799fda68aab1e2c6f5f0d06f028f451b14bf0a8 --json-output '../specification-orbitalplanetarycomputer-Orbital.Management-phase-b-evidence.json' --markdown-output '../specification-orbitalplanetarycomputer-Orbital.Management-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 5,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 5,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}
