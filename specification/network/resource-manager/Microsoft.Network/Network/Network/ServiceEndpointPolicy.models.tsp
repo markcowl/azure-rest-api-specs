@@ -15,6 +15,7 @@ namespace Microsoft.Network;
 @featureFile(Features.expressRoute)
 model ServiceEndpointPolicy
   is ResourceInstance<ServiceEndpointPolicyPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("serviceEndpointPolicyName")

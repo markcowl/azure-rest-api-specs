@@ -20,6 +20,7 @@ namespace Microsoft.Network;
 @parentResource(ExpressRouteCircuit)
 model ExpressRouteCircuitAuthorization
   is SubResourceInstance<AuthorizationPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("authorizationName")

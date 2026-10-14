@@ -18,6 +18,7 @@ namespace Microsoft.Network;
 @featureFile(Features.networkManager)
 model NetworkManagerConnection
   is ChildResourceInstance<NetworkManagerConnectionProperties> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("networkManagerConnectionName")

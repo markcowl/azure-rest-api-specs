@@ -19,6 +19,7 @@ namespace Microsoft.Network;
 @summary("ExpressRoutePorts Peering Location")
 model ExpressRoutePortsLocation
   is ResourceInstance<ExpressRoutePortsLocationPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("locationName")

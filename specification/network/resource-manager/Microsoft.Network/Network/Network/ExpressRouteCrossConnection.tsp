@@ -19,6 +19,7 @@ namespace Microsoft.Network;
 @featureFile(Features.expressRoute)
 model ExpressRouteCrossConnection
   is ResourceInstance<ExpressRouteCrossConnectionProperties> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("crossConnectionName")

@@ -19,6 +19,7 @@ namespace Microsoft.Network;
 @summary("Available NetworkVirtualApplianceSkus")
 model NetworkVirtualApplianceSku
   is ResourceInstance<NetworkVirtualApplianceSkuPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("skuName")

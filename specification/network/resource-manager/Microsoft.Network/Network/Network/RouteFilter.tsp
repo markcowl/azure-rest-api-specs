@@ -17,6 +17,7 @@ namespace Microsoft.Network;
 @featureFile(Features.expressRoute)
 model RouteFilter
   is TrackedResourceWithSettableIdOptionalLocationInstance<RouteFilterPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("routeFilterName")

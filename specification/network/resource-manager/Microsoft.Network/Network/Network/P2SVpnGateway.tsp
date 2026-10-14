@@ -18,6 +18,7 @@ namespace Microsoft.Network;
 @featureFile(Features.virtualWAN)
 model P2SVpnGateway
   is TrackedResourceWithSettableIdOptionalLocationInstance<P2SVpnGatewayProperties> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("gatewayName")

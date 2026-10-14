@@ -22,6 +22,7 @@ model ConnectionMonitorResult
   /**
    * The name of the resource.
    */
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("connectionMonitorName")

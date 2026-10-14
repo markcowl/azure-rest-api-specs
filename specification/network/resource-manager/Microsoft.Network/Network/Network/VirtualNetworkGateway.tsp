@@ -20,6 +20,7 @@ model VirtualNetworkGateway is ResourceInstance<
   VirtualNetworkGatewayPropertiesFormat,
   false
 > {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("virtualNetworkGatewayName")
@@ -329,7 +330,7 @@ interface VirtualNetworkGateways {
   /**
    * The Get VpnclientIpsecParameters operation retrieves information about the vpnclient ipsec policy for P2S client of virtual network gateway in the specified resource group through Network resource provider.
    */
-  #suppress "@azure-tools/typespec-azure-resource-manager/arm-post-operation-response-codes" "FIXME: Update justification, follow aka.ms/tsp/conversion-fix for details"
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-post-operation-response-codes" "Matching legacy API"
   @tag("VirtualNetworkGateways")
   @action("getvpnclientipsecparameters")
   getVpnclientIpsecParameters is ArmResourceActionAsyncBase<

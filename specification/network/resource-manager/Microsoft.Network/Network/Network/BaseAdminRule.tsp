@@ -21,6 +21,7 @@ namespace Microsoft.Network;
 @parentResource(AdminRuleCollection)
 @discriminator("kind")
 model BaseAdminRule is ChildResourceWithoutPropertiesInstance<{}> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("ruleName")

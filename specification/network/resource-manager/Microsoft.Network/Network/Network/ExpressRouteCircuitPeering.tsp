@@ -19,6 +19,7 @@ namespace Microsoft.Network;
 @parentResource(ExpressRouteCircuit)
 model ExpressRouteCircuitPeering
   is SubResourceInstance<ExpressRouteCircuitPeeringPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("peeringName")

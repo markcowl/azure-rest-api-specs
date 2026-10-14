@@ -62,9 +62,45 @@ Generic registration activates ARM resource validation for the converted legacy 
 | `arm-resource-name-pattern` | 99 | Existing resource name contracts must remain unchanged. |
 | `arm-post-operation-response-codes` | 6 | Existing long-running POST response contracts must remain unchanged. |
 
-Template-level suppressions cannot cover these diagnostics because the linter reports them against copied concrete models and operations. Adding resource-local suppressions would reintroduce hundreds of suppressions that the template refactor was intended to remove.
+Template-level suppressions cannot currently cover the envelope diagnostics because the linter reports them against copied concrete properties rather than the properties from which those copies originated.
 
-The project therefore disables exactly these three rules in `tspconfig.yaml`, with explicit legacy-contract justifications. No other rules are disabled.
+The branch uses the following policy:
+
+- `arm-resource-invalid-envelope-property` is the only project-level disabled rule.
+- All 99 `arm-resource-name-pattern` findings have inline suppressions with the justification `"Matching legacy API"`.
+- All six newly activated `arm-post-operation-response-codes` findings have inline suppressions with the justification `"Matching legacy API"`.
+- The one pre-existing `arm-post-operation-response-codes` suppression was updated to the same justification.
+
+No other rules are disabled.
+
+## Feasibility of inherited envelope suppressions
+
+Updating `arm-resource-invalid-envelope-property` to honor a suppression on the source/base property is feasible and narrowly scoped.
+
+The rule already calls `getSourceModel(property)`, which follows the `ModelProperty.sourceProperty` chain back to the property from which a copied template property originated. However, it reports the diagnostic with `target: property`, where `property` is the copied concrete property. TypeSpec's normal suppression handling therefore checks the copied property's syntax node and cannot see a directive on the source property.
+
+The recommended rule change is:
+
+1. Import the existing `getSourceProperty` helper from `rules/utils.ts`.
+2. Resolve `const sourceProperty = getSourceProperty(property)`.
+3. Report the diagnostic against `sourceProperty` instead of the copied `property`.
+4. Add a rule test where an invalid envelope property is declared and suppressed on a base/template model, then inherited by a registered resource.
+5. Retain an unsuppressed inheritance test to verify that the diagnostic points to the base declaration.
+
+This approach uses the compiler's normal suppression mechanism instead of duplicating directive parsing in the ARM rule. It also preserves behavior for properties without a source chain because `getSourceProperty` returns the original property.
+
+The 568 envelope diagnostics in this project map to 93 unique source locations across 30 files. Of those source locations:
+
+| Shared source | Unique properties | Current projected findings |
+| --- | ---: | ---: |
+| `models.tsp` | 41 | 152 |
+| `customizations.tsp` | 16 | 128 |
+| `shared-models.tsp` | 6 | 258 |
+| Other resource files | 30 | 30 |
+
+After the linter change, adding 63 suppressions to the three shared/common source files would cover 538 of the 568 current findings. The remaining 30 properties are declared directly in individual resource files and would require suppressions at those declarations if the project-level disable were removed completely.
+
+The implementation risk is low: the rule has no code fix, and changing the diagnostic target affects only diagnostic location and suppression lookup. The main compatibility consideration is that unsuppressed diagnostics inherited by many resources would converge on the same source location; tests should confirm whether duplicate diagnostics should remain or be de-duplicated by source property.
 
 ## OpenAPI comparison
 

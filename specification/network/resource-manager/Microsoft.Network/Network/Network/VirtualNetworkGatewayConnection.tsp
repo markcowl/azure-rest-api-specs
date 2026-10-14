@@ -19,6 +19,7 @@ model VirtualNetworkGatewayConnection is ResourceInstance<
   VirtualNetworkGatewayConnectionPropertiesFormat,
   false
 > {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("virtualNetworkGatewayConnectionName")

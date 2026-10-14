@@ -17,6 +17,7 @@ namespace Microsoft.Network;
 @summary("ExpressRoute Port")
 @featureFile(Features.expressRoute)
 model ExpressRoutePort is ResourceInstance<ExpressRoutePortPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("expressRoutePortName")

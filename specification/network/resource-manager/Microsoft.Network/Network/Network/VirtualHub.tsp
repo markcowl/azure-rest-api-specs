@@ -17,6 +17,7 @@ namespace Microsoft.Network;
 @featureFile(Features.virtualWAN)
 model VirtualHub
   is TrackedResourceWithSettableIdOptionalLocationInstance<VirtualHubProperties> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("virtualHubName")

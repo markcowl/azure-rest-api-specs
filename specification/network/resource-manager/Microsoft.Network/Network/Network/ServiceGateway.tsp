@@ -119,6 +119,7 @@ interface ServiceGateways {
    *
    * For address-level partial updates, if no services are provided, the existing services will be considered for deletion.
    */
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-post-operation-response-codes" "Matching legacy API"
   @removed(Versions.v2025_09_01)
   @action("updateAddressLocations")
   @sharedRoute
@@ -160,6 +161,7 @@ interface ServiceGateways {
    * Full update replaces all existing services with the new list provided in the request.
    * Partial update modifies only the specified services.
    */
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-post-operation-response-codes" "Matching legacy API"
   @removed(Versions.v2025_09_01)
   @action("updateServices")
   @sharedRoute

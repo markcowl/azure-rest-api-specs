@@ -14,6 +14,7 @@ namespace Microsoft.Network;
  */
 @featureFile(Features.virtualNetwork)
 model PrivateEndpoint is ResourceInstance<PrivateEndpointProperties> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("privateEndpointName")

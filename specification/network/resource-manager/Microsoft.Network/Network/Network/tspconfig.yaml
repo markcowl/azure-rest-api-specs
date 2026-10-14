@@ -15,6 +15,4 @@ linter:
   extends:
     - "@azure-tools/typespec-azure-rulesets/resource-manager"
   disable:
-    "@azure-tools/typespec-azure-resource-manager/arm-post-operation-response-codes": "Preserve converted Network long-running POST response contracts while registering generic resources."
     "@azure-tools/typespec-azure-resource-manager/arm-resource-invalid-envelope-property": "Preserve converted Network resource envelopes while registering generic resources."
-    "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern": "Preserve converted Network resource name contracts while registering generic resources."

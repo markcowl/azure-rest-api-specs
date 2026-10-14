@@ -19,6 +19,7 @@ namespace Microsoft.Network;
 @parentResource(ApplicationGateway)
 model ApplicationGatewayPrivateEndpointConnection
   is SubResourceInstance<ApplicationGatewayPrivateEndpointConnectionProperties> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("connectionName")

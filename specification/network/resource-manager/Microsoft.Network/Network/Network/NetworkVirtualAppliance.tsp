@@ -18,6 +18,7 @@ namespace Microsoft.Network;
 @featureFile(Features.virtualNetwork)
 model NetworkVirtualAppliance
   is ResourceInstance<NetworkVirtualAppliancePropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("networkVirtualApplianceName")
@@ -227,6 +228,7 @@ interface NetworkVirtualAppliances {
   /**
    * Prepares the migration of the specified Network Virtual Appliance. This is the first step of a migration workflow, such as migrating to a new OS version or to the new internal load balancer architecture.
    */
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-post-operation-response-codes" "Matching legacy API"
   @added(Versions.v2025_09_01)
   prepareMigration is ArmResourceActionAsyncBase<
     NetworkVirtualAppliance,
@@ -241,6 +243,7 @@ interface NetworkVirtualAppliances {
   /**
    * Executes the migration of the specified Network Virtual Appliance. This step performs the migration workflow that was previously prepared.
    */
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-post-operation-response-codes" "Matching legacy API"
   @added(Versions.v2025_09_01)
   executeMigration is ArmResourceActionAsyncBase<
     NetworkVirtualAppliance,
@@ -255,6 +258,7 @@ interface NetworkVirtualAppliances {
   /**
    * Commits the migration of the specified Network Virtual Appliance. This finalizes a previously executed migration workflow.
    */
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-post-operation-response-codes" "Matching legacy API"
   @added(Versions.v2025_09_01)
   commitMigration is ArmResourceActionAsyncBase<
     NetworkVirtualAppliance,
@@ -269,6 +273,7 @@ interface NetworkVirtualAppliances {
   /**
    * Aborts an in-progress migration of the specified Network Virtual Appliance and rolls back to the previous state.
    */
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-post-operation-response-codes" "Matching legacy API"
   @added(Versions.v2025_09_01)
   abortMigration is ArmResourceActionAsyncBase<
     NetworkVirtualAppliance,

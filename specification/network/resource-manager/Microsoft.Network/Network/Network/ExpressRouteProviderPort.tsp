@@ -18,6 +18,7 @@ namespace Microsoft.Network;
 @featureFile(Features.expressRoute)
 model ExpressRouteProviderPort
   is TrackedResourceWithOptionalLocationInstance<ExpressRouteProviderPortProperties> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("providerport")

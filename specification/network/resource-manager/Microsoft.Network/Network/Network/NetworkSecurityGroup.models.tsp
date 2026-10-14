@@ -15,6 +15,7 @@ namespace Microsoft.Network;
 @featureFile(Features.virtualNetwork)
 model NetworkSecurityGroup
   is ResourceInstance<NetworkSecurityGroupPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("networkSecurityGroupName")

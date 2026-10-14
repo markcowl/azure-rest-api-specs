@@ -18,6 +18,7 @@ namespace Microsoft.Network;
 @parentResource(NetworkManager)
 @featureFile(Features.networkManager)
 model NetworkGroup is ChildResourceInstance<NetworkGroupProperties> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("networkGroupName")

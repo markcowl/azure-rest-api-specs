@@ -19,6 +19,7 @@ namespace Microsoft.Network;
 @featureFile(Features.networkManager)
 model ConnectivityConfiguration
   is ChildResourceInstance<ConnectivityConfigurationProperties> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("configurationName")

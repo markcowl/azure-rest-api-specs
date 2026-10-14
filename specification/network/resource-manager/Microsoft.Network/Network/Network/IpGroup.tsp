@@ -17,6 +17,7 @@ namespace Microsoft.Network;
 @featureFile(Features.virtualNetwork)
 model IpGroup is ResourceInstance<IpGroupPropertiesFormat> {
   #suppress "@azure-tools/typespec-client-generator-core/csharp-use-standard-acronyms" "Name kept for backward compatibility"
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("ipGroupsName")

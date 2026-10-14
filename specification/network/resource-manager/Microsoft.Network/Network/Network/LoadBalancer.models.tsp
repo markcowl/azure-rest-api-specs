@@ -15,6 +15,7 @@ namespace Microsoft.Network;
  */
 @featureFile(Features.loadBalancer)
 model LoadBalancer is ResourceInstance<LoadBalancerPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("loadBalancerName")

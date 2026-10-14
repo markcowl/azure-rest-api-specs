@@ -17,6 +17,7 @@ namespace Microsoft.Network;
 @featureFile(Features.applicationGateway)
 model WebApplicationFirewallPolicy
   is ResourceInstance<WebApplicationFirewallPolicyPropertiesFormat> {
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("policyName")

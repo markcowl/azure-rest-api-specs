@@ -49,6 +49,7 @@ model InterconnectGroup is ResourceInstance<InterconnectGroupPropertiesFormat> {
 @parentResource(InterconnectGroup)
 model Subgroup is SubResourceInstance<SubgroupProperties> {
   /** The name of the subgroup. */
+  #suppress "@azure-tools/typespec-azure-resource-manager/arm-resource-name-pattern" "Matching legacy API"
   @visibility(Lifecycle.Read)
   @path
   @key("subgroupName")
