@@ -134,7 +134,7 @@ async function checkoutPullRequest(pr: QualifiedPr, target: string): Promise<voi
       "--no-tags",
       "origin",
       `${pr.baseSha}:refs/evaluator/base`,
-      `refs/pull/${pr.reference.number}/head:refs/evaluator/head`,
+      `${pr.headSha}:refs/evaluator/head`,
     ],
     { cwd: target },
   );

@@ -2,6 +2,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { evaluate } from "../src/evaluate.ts";
+import { parsePrReference, qualifyPullRequest } from "../src/github.ts";
 
 function option(name, fallback) {
   const index = process.argv.indexOf(name);
@@ -45,6 +46,23 @@ async function runRecord(record) {
       changedTypeSpecFiles: source.pullRequest.changedTypeSpecFiles,
       oadFindings: source.oadFindings,
     };
+  } else {
+    qualifiedPr = await qualifyPullRequest(
+      parsePrReference(`${selection.repository}#${record.number}`),
+    );
+    const qualifiedFiles = qualifiedPr.changedTypeSpecFiles.filter((path) =>
+      path.startsWith("specification/"),
+    );
+    if (
+      qualifiedPr.headSha !== record.headSha ||
+      qualifiedPr.baseSha !== record.baseSha ||
+      JSON.stringify([...qualifiedFiles].sort()) !==
+        JSON.stringify([...record.matchingFiles].sort())
+    ) {
+      throw new Error(
+        `PR #${record.number} changed after the persisted query snapshot; refusing a mutable evaluation`,
+      );
+    }
   }
   const exitCode = await evaluate({
     pr: `${selection.repository}#${record.number}`,
