@@ -839,11 +839,26 @@ export async function writeReportFiles(
   jsonOutput: string,
   markdownOutput: string,
 ): Promise<void> {
-  validateRollup(report);
+  const sanitize = (value: unknown): unknown => {
+    if (typeof value === "string") {
+      return value
+        .replace(/[A-Za-z]:[\\/][^'"\r\n;]*/g, "<local-path>")
+        .replace(/\/(?:Users|home)\/[^'"\r\n;]*/g, "<local-path>");
+    }
+    if (Array.isArray(value)) return value.map(sanitize);
+    if (value && typeof value === "object") {
+      return Object.fromEntries(
+        Object.entries(value).map(([key, child]) => [key, sanitize(child)]),
+      );
+    }
+    return value;
+  };
+  const sanitized = sanitize(report) as EvaluationReport;
+  validateRollup(sanitized);
   const jsonPath = resolve(jsonOutput);
   const markdownPath = resolve(markdownOutput);
   await mkdir(dirname(jsonPath), { recursive: true });
   await mkdir(dirname(markdownPath), { recursive: true });
-  await writeFile(jsonPath, `${JSON.stringify(report, null, 2)}\n`);
-  await writeFile(markdownPath, renderMarkdown(report));
+  await writeFile(jsonPath, `${JSON.stringify(sanitized, null, 2)}\n`);
+  await writeFile(markdownPath, renderMarkdown(sanitized));
 }

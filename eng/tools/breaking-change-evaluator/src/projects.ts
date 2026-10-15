@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { existsSync } from "node:fs";
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { runProcess } from "./process.ts";
 import { typeSpecJsonReportSchema, type TypeSpecJsonReport } from "./schema.ts";
@@ -76,6 +76,20 @@ function mapFindings(project: string, report: TypeSpecJsonReport): TypeSpecFindi
   }));
 }
 
+function normalizeArtifactPaths(value: unknown): void {
+  if (!value || typeof value !== "object") return;
+  for (const [key, child] of Object.entries(value)) {
+    if (key === "file" && typeof child === "string") {
+      const file = child.replaceAll("\\", "/");
+      const specification = file.indexOf("specification/");
+      (value as Record<string, unknown>)[key] =
+        specification >= 0 ? file.slice(specification) : "<local-path>";
+    } else {
+      normalizeArtifactPaths(child);
+    }
+  }
+}
+
 function processFailure(
   phase: Phase,
   jsonReport: string,
@@ -136,11 +150,24 @@ async function runTypeSpecPhase(
     };
   }
   try {
-    const [jsonContent, markdownContent] = await Promise.all([
+    const [rawJsonContent, rawMarkdownContent] = await Promise.all([
       readFile(jsonOutput, "utf8"),
       readFile(markdownOutput, "utf8"),
     ]);
-    const parsed = typeSpecJsonReportSchema.parse(JSON.parse(jsonContent));
+    const analyzerReport = JSON.parse(rawJsonContent) as unknown as Record<string, unknown>;
+    analyzerReport.specPaths = [project];
+    delete analyzerReport.baseRevision;
+    delete analyzerReport.headRevision;
+    normalizeArtifactPaths(analyzerReport);
+    const jsonContent = `${JSON.stringify(analyzerReport, null, 2)}\n`;
+    const markdownContent = rawMarkdownContent
+      .replace(/[A-Za-z]:[\\/][^'"\r\n;]*/g, project)
+      .replace(/\/(?:Users|home)\/[^'"\r\n;]*/g, project);
+    await Promise.all([
+      writeFile(jsonOutput, jsonContent),
+      writeFile(markdownOutput, markdownContent),
+    ]);
+    const parsed = typeSpecJsonReportSchema.parse(analyzerReport);
     if ((result.code === 1) !== parsed.requiresAction) {
       throw new Error(
         `exit ${result.code} disagrees with requiresAction=${String(parsed.requiresAction)}`,

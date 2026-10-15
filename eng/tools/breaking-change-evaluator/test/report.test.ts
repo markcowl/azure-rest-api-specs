@@ -650,9 +650,14 @@ describe("report aggregation", () => {
     try {
       const first = join(directory, "first.json");
       const second = join(directory, "second.json");
-      await writeReportFiles(report(), first, join(directory, "first.md"));
-      await writeReportFiles(report(), second, join(directory, "second.md"));
+      const value = report();
+      value.errors.push(
+        "Analyzer failed in C:\\Users\\example\\checkout, C:/Users/example/checkout, and /home/example/checkout",
+      );
+      await writeReportFiles(value, first, join(directory, "first.md"));
+      await writeReportFiles(value, second, join(directory, "second.md"));
       await expect(readFile(first, "utf8")).resolves.toBe(await readFile(second, "utf8"));
+      await expect(readFile(first, "utf8")).resolves.not.toMatch(/C:[\\/]Users|\/home\//);
     } finally {
       await rm(directory, { recursive: true, force: true });
     }
