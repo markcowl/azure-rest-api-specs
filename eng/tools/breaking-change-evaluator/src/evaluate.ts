@@ -126,7 +126,7 @@ async function checkoutPullRequest(
   const clone = await runProcess("git", [
     "clone",
     ...(targetRepository ? ["--shared"] : ["--filter=blob:none"]),
-    "--sparse",
+    ...(targetRepository ? [] : ["--sparse"]),
     "--no-checkout",
     targetRepository ?? pr.cloneUrl,
     target,
@@ -147,13 +147,15 @@ async function checkoutPullRequest(
         .map((path) => path.split("/").slice(0, 2).join("/")),
     ),
   ].sort();
-  const sparseCheckout = await runProcess(
-    "git",
-    ["sparse-checkout", "set", "--cone", "eng", ...serviceRoots],
-    { cwd: target },
-  );
-  const sparseCheckoutError = processError("Unable to configure sparse checkout", sparseCheckout);
-  if (sparseCheckoutError) throw sparseCheckoutError;
+  if (!targetRepository) {
+    const sparseCheckout = await runProcess(
+      "git",
+      ["sparse-checkout", "set", "--cone", "eng", ...serviceRoots],
+      { cwd: target },
+    );
+    const sparseCheckoutError = processError("Unable to configure sparse checkout", sparseCheckout);
+    if (sparseCheckoutError) throw sparseCheckoutError;
+  }
   const fetch = await runProcess(
     "git",
     [
@@ -179,17 +181,17 @@ async function checkoutPullRequest(
   });
   const installError = processError("Unable to install target revision dependencies", install);
   if (installError) throw installError;
-  const analyzerSparseCheckout = await runProcess(
-    "git",
-    ["sparse-checkout", "set", "--cone", ...serviceRoots],
-    { cwd: target },
-  );
-  const analyzerSparseCheckoutError = processError(
-    "Unable to narrow analyzer sparse checkout",
-    analyzerSparseCheckout,
-  );
-  if (analyzerSparseCheckoutError) throw analyzerSparseCheckoutError;
   if (!targetRepository) {
+    const analyzerSparseCheckout = await runProcess(
+      "git",
+      ["sparse-checkout", "set", "--cone", ...serviceRoots],
+      { cwd: target },
+    );
+    const analyzerSparseCheckoutError = processError(
+      "Unable to narrow analyzer sparse checkout",
+      analyzerSparseCheckout,
+    );
+    if (analyzerSparseCheckoutError) throw analyzerSparseCheckoutError;
     const baseArchive = join(target, ".git", "evaluator-base-materialized.zip");
     const materializeBase = await runProcess(
       "git",

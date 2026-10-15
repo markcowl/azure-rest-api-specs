@@ -176,6 +176,7 @@ async function runTypeSpecPhase(
       findings,
     };
   } catch (error) {
+    const processOutput = [result.stderr, result.stdout].filter(Boolean).join("\n").trim();
     return {
       execution: {
         phase,
@@ -185,7 +186,9 @@ async function runTypeSpecPhase(
         exitCode: result.code,
         jsonReport: jsonOutput,
         markdownReport: markdownOutput,
-        error: `Missing, malformed, or schema-invalid TypeSpec report: ${String(error)}`,
+        error: `Missing, malformed, or schema-invalid TypeSpec report: ${String(error)}${
+          processOutput ? `; analyzer output: ${processOutput}` : ""
+        }`,
       },
       findings: [],
     };
