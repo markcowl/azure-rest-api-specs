@@ -121,12 +121,27 @@ async function checkoutPullRequest(pr: QualifiedPr, target: string): Promise<voi
   const clone = await runProcess("git", [
     "clone",
     "--filter=blob:none",
+    "--sparse",
     "--no-checkout",
     pr.cloneUrl,
     target,
   ]);
   const cloneError = processError("Unable to clone target repository", clone);
   if (cloneError) throw cloneError;
+  const serviceRoots = [
+    ...new Set(
+      pr.changedTypeSpecFiles
+        .filter((path) => path.startsWith("specification/"))
+        .map((path) => path.split("/").slice(0, 2).join("/")),
+    ),
+  ].sort();
+  const sparseCheckout = await runProcess(
+    "git",
+    ["sparse-checkout", "set", "--cone", "eng", ...serviceRoots],
+    { cwd: target },
+  );
+  const sparseCheckoutError = processError("Unable to configure sparse checkout", sparseCheckout);
+  if (sparseCheckoutError) throw sparseCheckoutError;
   const fetch = await runProcess(
     "git",
     [
