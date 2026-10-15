@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45096 — Add connection pooling properties to AzurePostgreSql linked service](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45096 — Add connection pooling properties to AzurePostgreSql linked service](https://github.com/Azure/azure-rest-api-specs/pull/45096)
 - **Author:** Mohithkk
 - **State:** open
 - **Base:** `main` at `636e1c0e0ae772f0cfaab4f3d457d27798ee9cda`
@@ -37,8 +37,8 @@
 
 | Phase | Independent OAD execution | TypeSpec mode | Outcome | Comparable OAD | Informational OAD | TypeSpec findings | Exact | Probable | Intentional gap | Missed equivalent | TypeSpec-only | Exact OAD coverage | Review-inclusive OAD coverage |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A | [Swagger Breaking Change run 36602137820](http<local-path>) | `same-version` | compared | 5 | 1 | 5 | 0 | 0 | 0 | 5 | 5 | 0 / 5 (0.0%) | 0 / 5 (0.0%) |
-| B | [Breaking Change (Cross-Version) run 36602138142](http<local-path>) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
+| A | [Swagger Breaking Change run 36602137820](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820) | `same-version` | compared | 5 | 1 | 5 | 0 | 0 | 0 | 5 | 5 | 0 / 5 (0.0%) | 0 / 5 (0.0%) |
+| B | [Breaking Change (Cross-Version) run 36602138142](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602138142) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
 
 ## Error equivalence by phase
 
@@ -55,8 +55,8 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 | Phase | OAD detector time | TypeSpec detector time | Comparison | Evidence |
 | --- | ---: | ---: | --- | --- |
-| A | Unavailable | 3172 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/98079a721448fdcf-phase-a.md) |
-| B | Unavailable | Unavailable independently (combined A+B: 3037 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/98079a721448fdcf-phase-b.md) |
+| A | Unavailable | 3172 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/98079a721448fdcf-phase-a.md) |
+| B | Unavailable | Unavailable independently (combined A+B: 3037 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602138142) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/98079a721448fdcf-phase-b.md) |
 
 ## TypeSpec phase execution
 
@@ -255,36 +255,36 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 
 - **Swagger finding:** `A-oad-1` — `AddedOptionalProperty` — The new version has a new optional property 'pooling' that was not found in the old version.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
-- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
+- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
 - **Resolved targets:** OAD rule AddedOptionalProperty; JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties; No terminal reference; Document openapi.json
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
 - **Swagger finding:** `A-oad-2` — `AddedOptionalProperty` — The new version has a new optional property 'maxPoolSize' that was not found in the old version.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
-- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
+- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
 - **Resolved targets:** OAD rule AddedOptionalProperty; JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties; No terminal reference; Document openapi.json
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
 - **Swagger finding:** `A-oad-3` — `AddedOptionalProperty` — The new version has a new optional property 'minPoolSize' that was not found in the old version.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
-- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
+- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
 - **Resolved targets:** OAD rule AddedOptionalProperty; JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties; No terminal reference; Document openapi.json
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
 - **Swagger finding:** `A-oad-4` — `AddedOptionalProperty` — The new version has a new optional property 'connectionIdleLifetime' that was not found in the old version.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
-- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
+- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
 - **Resolved targets:** OAD rule AddedOptionalProperty; JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties; No terminal reference; Document openapi.json
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
 - **Swagger finding:** `A-oad-5` — `AddedOptionalProperty` — The new version has a new optional property 'connectionPruningInterval' that was not found in the old version.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
-- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](http<local-path>) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
+- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`; [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 10032](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032) — JSONPath `definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties`
 - **Resolved targets:** OAD rule AddedOptionalProperty; JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties; No terminal reference; Document openapi.json
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
@@ -296,31 +296,31 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Comparison:** Phase A (`same-version`); severity `error`; suppressed **no**; actionable error **yes**
 - **TypeSpec target:** POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession; project `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory`; versions `2018-06-01` → `2018-06-01`
 - **Detector evidence:** [TypeSpec Phase A analyzer report](report-artifacts/typespec/98079a721448fdcf-phase-a.md) (digest `ca1120d7211aa23ffaf34fbf86dbba5e525d67a1b2ddeab1f9f020e494d4e5df`)
-- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15903](http<local-path>)
+- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15903](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15903)
 
 - **TypeSpec finding:** `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-1` — `ResourcePropertyAdded` — Request property 'maxPoolSize' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.maxPoolSize.
 - **Comparison:** Phase A (`same-version`); severity `error`; suppressed **no**; actionable error **yes**
 - **TypeSpec target:** POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession; project `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory`; versions `2018-06-01` → `2018-06-01`
 - **Detector evidence:** [TypeSpec Phase A analyzer report](report-artifacts/typespec/98079a721448fdcf-phase-a.md) (digest `ca1120d7211aa23ffaf34fbf86dbba5e525d67a1b2ddeab1f9f020e494d4e5df`)
-- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15908](http<local-path>)
+- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15908](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15908)
 
 - **TypeSpec finding:** `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-2` — `ResourcePropertyAdded` — Request property 'minPoolSize' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.minPoolSize.
 - **Comparison:** Phase A (`same-version`); severity `error`; suppressed **no**; actionable error **yes**
 - **TypeSpec target:** POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession; project `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory`; versions `2018-06-01` → `2018-06-01`
 - **Detector evidence:** [TypeSpec Phase A analyzer report](report-artifacts/typespec/98079a721448fdcf-phase-a.md) (digest `ca1120d7211aa23ffaf34fbf86dbba5e525d67a1b2ddeab1f9f020e494d4e5df`)
-- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15913](http<local-path>)
+- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15913](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15913)
 
 - **TypeSpec finding:** `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-3` — `ResourcePropertyAdded` — Request property 'connectionIdleLifetime' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionIdleLifetime.
 - **Comparison:** Phase A (`same-version`); severity `error`; suppressed **no**; actionable error **yes**
 - **TypeSpec target:** POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession; project `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory`; versions `2018-06-01` → `2018-06-01`
 - **Detector evidence:** [TypeSpec Phase A analyzer report](report-artifacts/typespec/98079a721448fdcf-phase-a.md) (digest `ca1120d7211aa23ffaf34fbf86dbba5e525d67a1b2ddeab1f9f020e494d4e5df`)
-- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15918](http<local-path>)
+- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15918](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15918)
 
 - **TypeSpec finding:** `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-4` — `ResourcePropertyAdded` — Request property 'connectionPruningInterval' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionPruningInterval.
 - **Comparison:** Phase A (`same-version`); severity `error`; suppressed **no**; actionable error **yes**
 - **TypeSpec target:** POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession; project `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory`; versions `2018-06-01` → `2018-06-01`
 - **Detector evidence:** [TypeSpec Phase A analyzer report](report-artifacts/typespec/98079a721448fdcf-phase-a.md) (digest `ca1120d7211aa23ffaf34fbf86dbba5e525d67a1b2ddeab1f9f020e494d4e5df`)
-- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15923](http<local-path>)
+- **TypeSpec source:** [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp, line 15923](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15923)
 
 ## Non-error finding equivalence by phase
 
@@ -332,8 +332,8 @@ This section follows error equivalence and contains findings that neither detect
 
 - **Swagger finding:** `A-oad-0` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
-- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 1](http<local-path>); [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820) (digest `92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28`)
+- **Swagger source:** [base: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L1); [head: specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document openapi.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
@@ -345,7 +345,7 @@ This section follows error equivalence and contains findings that neither detect
 ### Check out the evaluator
 
 ```powershell
-git clone 'http<local-path>' evaluator
+git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator
 git -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'
 corepack pnpm --dir evaluator install --frozen-lockfile
 ```
@@ -360,7 +360,7 @@ if ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b32
 ### Check out the evaluated target
 
 ```powershell
-git clone --filter=blob:none --no-checkout 'http<local-path>' target
+git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target
 git -C target fetch --no-tags origin 636e1c0e0ae772f0cfaab4f3d457d27798ee9cda a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e
 git -C target checkout --detach a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e
 corepack pnpm --dir target install --frozen-lockfile
@@ -369,7 +369,7 @@ corepack pnpm --dir target install --frozen-lockfile
 ### Rerun the complete evaluator
 
 ```powershell
-node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
+node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/45096' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
 ```
 
 ### Run the TypeSpec analyzer for specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory

@@ -652,12 +652,15 @@ describe("report aggregation", () => {
       const second = join(directory, "second.json");
       const value = report();
       value.errors.push(
-        "Analyzer failed in C:\\Users\\example\\checkout, C:/Users/example/checkout, and /home/example/checkout",
+        "Analyzer failed in C:\\Users\\example\\checkout, C:/Users/example/checkout, /home/example/checkout, and file:///home/example/checkout",
       );
       await writeReportFiles(value, first, join(directory, "first.md"));
       await writeReportFiles(value, second, join(directory, "second.md"));
       await expect(readFile(first, "utf8")).resolves.toBe(await readFile(second, "utf8"));
       await expect(readFile(first, "utf8")).resolves.not.toMatch(/C:[\\/]Users|\/home\//);
+      await expect(readFile(first, "utf8")).resolves.toContain(
+        "https://github.com/Azure/azure-rest-api-specs/pull/1",
+      );
     } finally {
       await rm(directory, { recursive: true, force: true });
     }

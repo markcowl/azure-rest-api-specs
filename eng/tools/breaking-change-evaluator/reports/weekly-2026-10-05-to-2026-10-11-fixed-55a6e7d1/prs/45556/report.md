@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45556 — Add CognitiveServices preview API version 2026-09-15-preview](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45556 — Add CognitiveServices preview API version 2026-09-15-preview](https://github.com/Azure/azure-rest-api-specs/pull/45556)
 - **Author:** fmabroukmsft
 - **State:** closed (merged) at 2026-10-10T00:18:26Z
 - **Base:** `main` at `b464a76895ea6f17747d4664b935d0dc55fa06c4`

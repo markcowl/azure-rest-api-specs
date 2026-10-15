@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46097 — [NetAppFiles] Release microsoft.net app 2026 07 01](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46097 — [NetAppFiles] Release microsoft.net app 2026 07 01](https://github.com/Azure/azure-rest-api-specs/pull/46097)
 - **Author:** audunn
 - **State:** open
 - **Base:** `main` at `ab48134ae8938d86e634d0a6a3eb5c660a6c4603`

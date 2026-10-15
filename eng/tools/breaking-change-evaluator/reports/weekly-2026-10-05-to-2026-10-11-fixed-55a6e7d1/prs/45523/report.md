@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45523 — Add MachineLearningServices stable API version 2026-09-01](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45523 — Add MachineLearningServices stable API version 2026-09-01](https://github.com/Azure/azure-rest-api-specs/pull/45523)
 - **Author:** fmabroukmsft
 - **State:** closed (merged) at 2026-10-09T17:05:50Z
 - **Base:** `main` at `b464a76895ea6f17747d4664b935d0dc55fa06c4`

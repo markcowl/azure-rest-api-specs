@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46643 — [Compute] Add private IP prefix length to 2026-04-01](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46643 — [Compute] Add private IP prefix length to 2026-04-01](https://github.com/Azure/azure-rest-api-specs/pull/46643)
 - **Author:** rishiraja76
 - **State:** closed (merged) at 2026-10-14T18:08:32Z
 - **Base:** `main` at `efb0884620a801846ba9af4f622e004e08522583`
@@ -22,8 +22,8 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 | Phase | OAD detector time | TypeSpec detector time | Comparison | Evidence |
 | --- | ---: | ---: | --- | --- |
-| A | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted) |
-| B | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted) |
+| A | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) (no detector timing emitted) |
+| B | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387243) (no detector timing emitted) |
 
 ## TypeSpec phase execution
 
@@ -102,15 +102,15 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 
 - **Swagger finding:** `A-oad-1` — `AddedPropertyInResponse` — The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
-- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 23084](http<local-path>) — JSONPath `definitions.VirtualMachineScaleSetIPConfigurationProperties.properties`; [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 23091](http<local-path>) — JSONPath `definitions.VirtualMachineScaleSetIPConfigurationProperties.properties`
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
+- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 23084](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23084) — JSONPath `definitions.VirtualMachineScaleSetIPConfigurationProperties.properties`; [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 23091](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23091) — JSONPath `definitions.VirtualMachineScaleSetIPConfigurationProperties.properties`
 - **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 202 | GET /subscriptions/{}/providers/microsoft.compute/locations/{}/virtualmachinescalesets response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets response 200 | GET /subscriptions/{}/providers/microsoft.compute/virtualmachinescalesets response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines response 200
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
 - **Swagger finding:** `A-oad-2` — `AddedPropertyInResponse` — The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
-- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 22255](http<local-path>) — JSONPath `definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties`; [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 22255](http<local-path>) — JSONPath `definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties`
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
+- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 22255](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255) — JSONPath `definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties`; [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 22255](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255) — JSONPath `definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties`
 - **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 202 | PATCH /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} request | GET /subscriptions/{}/providers/microsoft.compute/locations/{}/virtualmachines response 200 | GET /subscriptions/{}/providers/microsoft.compute/virtualmachines response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines response 200
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
@@ -124,8 +124,8 @@ This section follows error equivalence and contains findings that neither detect
 
 - **Swagger finding:** `A-oad-0` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
-- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 1](http<local-path>); [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
+- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L1); [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document ComputeRP.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
@@ -137,7 +137,7 @@ This section follows error equivalence and contains findings that neither detect
 ### Check out the evaluator
 
 ```powershell
-git clone 'http<local-path>' evaluator
+git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator
 git -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'
 corepack pnpm --dir evaluator install --frozen-lockfile
 ```
@@ -152,7 +152,7 @@ if ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b32
 ### Check out the evaluated target
 
 ```powershell
-git clone --filter=blob:none --no-checkout 'http<local-path>' target
+git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target
 git -C target fetch --no-tags origin efb0884620a801846ba9af4f622e004e08522583 e302d1a57587219ec3b6c9f58260c48cc08e11a1
 git -C target checkout --detach e302d1a57587219ec3b6c9f58260c48cc08e11a1
 corepack pnpm --dir target install --frozen-lockfile
@@ -161,7 +161,7 @@ corepack pnpm --dir target install --frozen-lockfile
 ### Rerun the complete evaluator
 
 ```powershell
-node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
+node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46643' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
 ```
 
 ### Run the TypeSpec analyzer for specification/compute/resource-manager/Microsoft.Compute/Compute/Compute

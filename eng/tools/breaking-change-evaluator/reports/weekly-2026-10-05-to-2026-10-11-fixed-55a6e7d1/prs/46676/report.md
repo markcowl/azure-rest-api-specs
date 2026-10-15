@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46676 — Add AppNetwork provisioning emitter config](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46676 — Add AppNetwork provisioning emitter config](https://github.com/Azure/azure-rest-api-specs/pull/46676)
 - **Author:** HarveyLink
 - **State:** closed (merged) at 2026-10-08T08:33:35Z
 - **Base:** `main` at `6a1a4ddcb4281de3a1f7c966794f2516628cad52`

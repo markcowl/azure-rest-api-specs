@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45799 — [Microsoft.ApiManagement] Add AI Gateway 2026-09-01-preview API](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45799 — [Microsoft.ApiManagement] Add AI Gateway 2026-09-01-preview API](https://github.com/Azure/azure-rest-api-specs/pull/45799)
 - **Author:** azaslonov
 - **State:** closed (merged) at 2026-10-09T15:56:32Z
 - **Base:** `main` at `2f3878f62a5f5c28fe60d7cb27b35d1cb06a23df`

@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47031 — Azure Local november preview api](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47031 — Azure Local november preview api](https://github.com/Azure/azure-rest-api-specs/pull/47031)
 - **Author:** abaranwal-ms
 - **State:** open
 - **Base:** `main` at `7507c3df4b8bf6c5887d8571f929b6e393479f2f`

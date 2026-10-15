@@ -21,7 +21,7 @@
     "author": "thisisdevanshu",
     "state": "closed",
     "merged": true,
-    "url": "http<local-path>",
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47005",
     "baseBranch": "main",
     "headBranch": "revert-46586-planetarycomputer-folder-migration",
     "baseSha": "0799fda68aab1e2c6f5f0d06f028f451b14bf0a8",
@@ -67,7 +67,7 @@
     "qualified": true,
     "reasonCodes": [],
     "evidence": {
-      "prUrl": "http<local-path>",
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47005",
       "state": "closed",
       "merged": true,
       "headSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
@@ -79,7 +79,7 @@
           "headSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
           "logDigest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859",
           "summaryDigest": "e7690f366dfc5ac017f98ebb2dc7568b239bac8292d33fecf8d1c4829cfc2f4f"
         },
@@ -89,7 +89,7 @@
           "headSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078378960",
           "logDigest": "eba7e0043461cee19c3b3a88b7a7bbb5bf48a03cbcf80c56ffa3463b928d87f4",
           "summaryDigest": "6febaa06cc4f04ee18cbc7a3cc9b7e3e9dbffa69a3a6bf889de7a227b36f6b79"
         }
@@ -133,7 +133,7 @@
   },
   "provenance": {
     "pr": {
-      "url": "http<local-path>",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47005",
       "headSha": "5adc647c5d61132bb68909a2d02ccf507aeb9feb",
       "baseSha": "0799fda68aab1e2c6f5f0d06f028f451b14bf0a8"
     },
@@ -154,8 +154,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -165,10 +165,10 @@
         "oldVersion": "2025-04-30-preview",
         "newVersion": "2025-04-30-preview"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
         "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
       },
       "sources": [
@@ -177,14 +177,14 @@
           "path": "specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json#L1"
         }
       ]
     },
@@ -195,8 +195,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -206,10 +206,10 @@
         "oldVersion": "2026-04-15",
         "newVersion": "2026-04-15"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
         "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
       },
       "sources": [
@@ -218,14 +218,14 @@
           "path": "specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json#L1"
         }
       ]
     },
@@ -236,8 +236,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -247,10 +247,10 @@
         "oldVersion": "2024-01-31-preview",
         "newVersion": "2024-01-31-preview"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
         "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
       },
       "sources": [
@@ -259,14 +259,14 @@
           "path": "specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json#L1"
         }
       ]
     },
@@ -277,8 +277,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -288,10 +288,10 @@
         "oldVersion": "2025-02-11-preview",
         "newVersion": "2025-02-11-preview"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
         "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
       },
       "sources": [
@@ -300,14 +300,14 @@
           "path": "specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json#L1"
         }
       ]
     },
@@ -318,8 +318,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -329,10 +329,10 @@
         "oldVersion": "2026-04-15",
         "newVersion": "2026-04-15"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040",
         "digest": "11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859"
       },
       "sources": [
@@ -341,14 +341,14 @@
           "path": "specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json#L1"
         }
       ]
     }
@@ -734,7 +734,7 @@
     "setupCommands": [
       {
         "label": "Check out the evaluator",
-        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
       },
       {
         "label": "Prepare the immutable analyzer",
@@ -742,12 +742,12 @@
       },
       {
         "label": "Check out the evaluated target",
-        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 0799fda68aab1e2c6f5f0d06f028f451b14bf0a8 5adc647c5d61132bb68909a2d02ccf507aeb9feb\ngit -C target checkout --detach 5adc647c5d61132bb68909a2d02ccf507aeb9feb\ncorepack pnpm --dir target install --frozen-lockfile"
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 0799fda68aab1e2c6f5f0d06f028f451b14bf0a8 5adc647c5d61132bb68909a2d02ccf507aeb9feb\ngit -C target checkout --detach 5adc647c5d61132bb68909a2d02ccf507aeb9feb\ncorepack pnpm --dir target install --frozen-lockfile"
       }
     ],
     "evaluatorCommand": {
       "label": "Rerun the complete evaluator",
-      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47005' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
     },
     "directAnalyzerCommands": [
       {

@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47048 — Fix Defender for Storage TypeSpec migration issues and suppression justifications](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47048 — Fix Defender for Storage TypeSpec migration issues and suppression justifications](https://github.com/Azure/azure-rest-api-specs/pull/47048)
 - **Author:** fhaddad21
 - **State:** open
 - **Base:** `main` at `0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b`

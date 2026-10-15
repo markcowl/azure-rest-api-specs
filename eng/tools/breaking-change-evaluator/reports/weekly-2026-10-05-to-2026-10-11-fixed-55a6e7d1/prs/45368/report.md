@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45368 — Add DPS stable 2026-11-01 API version](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45368 — Add DPS stable 2026-11-01 API version](https://github.com/Azure/azure-rest-api-specs/pull/45368)
 - **Author:** mollyiverson
 - **State:** closed (merged) at 2026-10-07T20:12:37Z
 - **Base:** `main` at `5279ce43417174d87cc78d17729f1c81644805da`

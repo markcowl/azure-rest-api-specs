@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45102 — [Event Grid] Add Control Plane API Version 2026-06-15-preview](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45102 — [Event Grid] Add Control Plane API Version 2026-06-15-preview](https://github.com/Azure/azure-rest-api-specs/pull/45102)
 - **Author:** priyanshuvats
 - **State:** closed (merged) at 2026-10-09T11:45:32Z
 - **Base:** `main` at `663934c93853cb58f6477c2e8e0f48d5eca2d770`

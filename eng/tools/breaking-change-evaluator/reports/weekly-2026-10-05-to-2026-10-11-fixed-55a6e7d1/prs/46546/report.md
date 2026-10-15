@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46546 — Refactor(storage): migrate to unified folder structure](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46546 — Refactor(storage): migrate to unified folder structure](https://github.com/Azure/azure-rest-api-specs/pull/46546)
 - **Author:** v-jiaodi
 - **State:** closed (merged) at 2026-10-09T05:57:56Z
 - **Base:** `main` at `be97609d55160e8d06e2fcbba9ddefbf2ee89bf8`

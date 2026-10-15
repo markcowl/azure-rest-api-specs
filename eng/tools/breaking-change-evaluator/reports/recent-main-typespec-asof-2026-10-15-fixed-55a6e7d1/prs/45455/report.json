@@ -21,7 +21,7 @@
     "author": "juliagao3",
     "state": "open",
     "merged": false,
-    "url": "http<local-path>",
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45455",
     "baseBranch": "main",
     "headBranch": "juliagao-microsoft-chaos-2026-11-ga-promotion",
     "baseSha": "a4c2a18ee4d0b1885d66a001145e56744acd9baf",
@@ -45,7 +45,7 @@
       "evidence-incomplete"
     ],
     "evidence": {
-      "prUrl": "http<local-path>",
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45455",
       "state": "open",
       "merged": false,
       "headSha": "ec0ff8a801d7ac3edb2378013b1dededfdae9546",
@@ -57,7 +57,7 @@
           "headSha": "ec0ff8a801d7ac3edb2378013b1dededfdae9546",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38647092551",
           "logDigest": "31f00c15427067af5e00b15117cc4743f05643b657e8303ee037e9ac8383e6f0",
           "summaryDigest": "af84e92456c19b52e4f9f71ace12744aca97005dd62ad175a0dbb94556aa5a71"
         }
@@ -81,7 +81,7 @@
   },
   "provenance": {
     "pr": {
-      "url": "http<local-path>",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45455",
       "headSha": "ec0ff8a801d7ac3edb2378013b1dededfdae9546",
       "baseSha": "a4c2a18ee4d0b1885d66a001145e56744acd9baf"
     },
@@ -98,8 +98,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -109,10 +109,10 @@
         "oldVersion": "2026-05-01-preview",
         "newVersion": "2026-05-01-preview"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38647092551",
         "digest": "31f00c15427067af5e00b15117cc4743f05643b657e8303ee037e9ac8383e6f0"
       },
       "sources": [
@@ -121,14 +121,14 @@
           "path": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-05-01-preview/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a4c2a18ee4d0b1885d66a001145e56744acd9baf/specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-05-01-preview/openapi.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-05-01-preview/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ec0ff8a801d7ac3edb2378013b1dededfdae9546/specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-05-01-preview/openapi.json#L1"
         }
       ]
     },
@@ -139,8 +139,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -150,10 +150,10 @@
         "oldVersion": "2026-08-01-preview",
         "newVersion": "2026-08-01-preview"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38647092551",
         "digest": "31f00c15427067af5e00b15117cc4743f05643b657e8303ee037e9ac8383e6f0"
       },
       "sources": [
@@ -162,14 +162,14 @@
           "path": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-08-01-preview/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a4c2a18ee4d0b1885d66a001145e56744acd9baf/specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-08-01-preview/openapi.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-08-01-preview/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ec0ff8a801d7ac3edb2378013b1dededfdae9546/specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-08-01-preview/openapi.json#L1"
         }
       ]
     }

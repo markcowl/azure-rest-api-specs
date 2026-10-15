@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47283 — Adding API Version 2026-11-01 for Microsoft.RecoveryServices (Site Recovery, Backup, Vault)](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47283 — Adding API Version 2026-11-01 for Microsoft.RecoveryServices (Site Recovery, Backup, Vault)](https://github.com/Azure/azure-rest-api-specs/pull/47283)
 - **Author:** sisunkar
 - **State:** open
 - **Base:** `main` at `dc7218d2648d05079de45c616d940deded784a7d`

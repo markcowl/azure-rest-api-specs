@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47234 — Enable AgriculturePlatform provisioning emitter](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47234 — Enable AgriculturePlatform provisioning emitter](https://github.com/Azure/azure-rest-api-specs/pull/47234)
 - **Author:** cxznmhdcxz
 - **State:** open
 - **Base:** `main` at `8ec074d8a9d4929f9db8c1e0c464507722f0f105`

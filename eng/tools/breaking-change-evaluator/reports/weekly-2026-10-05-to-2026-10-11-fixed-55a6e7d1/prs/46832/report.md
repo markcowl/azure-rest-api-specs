@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46832 — Add 2026-09-03-preview API version for Azure Monitor Workspaces](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46832 — Add 2026-09-03-preview API version for Azure Monitor Workspaces](https://github.com/Azure/azure-rest-api-specs/pull/46832)
 - **Author:** GokulPrasad-Work
 - **State:** closed (merged) at 2026-10-09T22:07:17Z
 - **Base:** `main` at `0b9b413d97fceef4c1ee276e4156269fc5ea5d33`

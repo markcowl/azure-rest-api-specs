@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45406 — [Microsoft.Web] Introduce api version 2026-09-01 and VirtualConnections Entity](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45406 — [Microsoft.Web] Introduce api version 2026-09-01 and VirtualConnections Entity](https://github.com/Azure/azure-rest-api-specs/pull/45406)
 - **Author:** cmriachi
 - **State:** open
 - **Base:** `main` at `e35ce3d9e784cc6c298ae85608b9f79e7c833d28`

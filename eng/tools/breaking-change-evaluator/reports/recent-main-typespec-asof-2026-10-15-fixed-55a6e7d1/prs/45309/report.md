@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45309 — FileShares: add 2026-09-01 API version](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45309 — FileShares: add 2026-09-01 API version](https://github.com/Azure/azure-rest-api-specs/pull/45309)
 - **Author:** jlindamood
 - **State:** open
 - **Base:** `main` at `e070ec9b11d1417d83170393ec90d7122e343e0f`

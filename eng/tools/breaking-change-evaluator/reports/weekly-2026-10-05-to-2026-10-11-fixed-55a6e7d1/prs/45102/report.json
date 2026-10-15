@@ -21,7 +21,7 @@
     "author": "priyanshuvats",
     "state": "closed",
     "merged": true,
-    "url": "http<local-path>",
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45102",
     "baseBranch": "main",
     "headBranch": "users/pvats/eg-cp-swagger-2026-06-15-preview",
     "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
@@ -39,7 +39,7 @@
       "evidence-incomplete"
     ],
     "evidence": {
-      "prUrl": "http<local-path>",
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45102",
       "state": "closed",
       "merged": true,
       "headSha": "7d7571383e4c36cf95e5bef3f87fc1fd72bf8177",
@@ -51,7 +51,7 @@
           "headSha": "7d7571383e4c36cf95e5bef3f87fc1fd72bf8177",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37901819582",
           "logDigest": "2b5332619e601539d08337ba8bd81c6e5363a72302831c0568ac91d12b9d1c4b",
           "summaryDigest": "f9b9fa267e8edc8b1638a90a231c664d728f4000ffde193f1008d79020251285"
         }
@@ -68,7 +68,7 @@
   },
   "provenance": {
     "pr": {
-      "url": "http<local-path>",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45102",
       "headSha": "7d7571383e4c36cf95e5bef3f87fc1fd72bf8177",
       "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770"
     },
@@ -85,8 +85,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -96,10 +96,10 @@
         "oldVersion": "2025-11-15-preview",
         "newVersion": "2025-11-15-preview"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37901819582",
         "digest": "2b5332619e601539d08337ba8bd81c6e5363a72302831c0568ac91d12b9d1c4b"
       },
       "sources": [
@@ -108,14 +108,14 @@
           "path": "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/663934c93853cb58f6477c2e8e0f48d5eca2d770/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/7d7571383e4c36cf95e5bef3f87fc1fd72bf8177/specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/preview/2025-11-15-preview/EventGrid.json#L1"
         }
       ]
     }

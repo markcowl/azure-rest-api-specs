@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46967 — ContainerService: remove stable api-version pins from tspconfig for 2026-07 preview SDK generation](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46967 — ContainerService: remove stable api-version pins from tspconfig for 2026-07 preview SDK generation](https://github.com/Azure/azure-rest-api-specs/pull/46967)
 - **Author:** elvazhu521
 - **State:** closed (merged) at 2026-10-08T08:35:43Z
 - **Base:** `main` at `33cc5cb4363a72ebc01187aa0c100e6e7c77eeb3`
@@ -37,8 +37,8 @@
 
 | Phase | Independent OAD execution | TypeSpec mode | Outcome | Comparable OAD | Informational OAD | TypeSpec findings | Exact | Probable | Intentional gap | Missed equivalent | TypeSpec-only | Exact OAD coverage | Review-inclusive OAD coverage |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A | [Swagger Breaking Change run 36967900283](http<local-path>) | `same-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
-| B | [Breaking Change (Cross-Version) run 36967900296](http<local-path>) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
+| A | [Swagger Breaking Change run 36967900283](https://github.com/Azure/azure-rest-api-specs/actions/runs/36967900283) | `same-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
+| B | [Breaking Change (Cross-Version) run 36967900296](https://github.com/Azure/azure-rest-api-specs/actions/runs/36967900296) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
 
 ## Error equivalence by phase
 
@@ -55,8 +55,8 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 | Phase | OAD detector time | TypeSpec detector time | Comparison | Evidence |
 | --- | ---: | ---: | --- | --- |
-| A | Unavailable | 20445 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/d1d4d254feed9d8f-phase-a.md) |
-| B | Unavailable | Unavailable independently (combined A+B: 22648 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/d1d4d254feed9d8f-phase-b.md) |
+| A | Unavailable | 20445 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36967900283) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/d1d4d254feed9d8f-phase-a.md) |
+| B | Unavailable | Unavailable independently (combined A+B: 22648 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36967900296) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/d1d4d254feed9d8f-phase-b.md) |
 
 ## TypeSpec phase execution
 
@@ -128,7 +128,7 @@ Both detectors reported zero non-error findings.
 ### Check out the evaluator
 
 ```powershell
-git clone 'http<local-path>' evaluator
+git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator
 git -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'
 corepack pnpm --dir evaluator install --frozen-lockfile
 ```
@@ -143,7 +143,7 @@ if ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b32
 ### Check out the evaluated target
 
 ```powershell
-git clone --filter=blob:none --no-checkout 'http<local-path>' target
+git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target
 git -C target fetch --no-tags origin 33cc5cb4363a72ebc01187aa0c100e6e7c77eeb3 cf9d8c203c5df72a38b6511a076d8df9ef4aec5b
 git -C target checkout --detach cf9d8c203c5df72a38b6511a076d8df9ef4aec5b
 corepack pnpm --dir target install --frozen-lockfile
@@ -152,7 +152,7 @@ corepack pnpm --dir target install --frozen-lockfile
 ### Rerun the complete evaluator
 
 ```powershell
-node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
+node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46967' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
 ```
 
 ### Run the TypeSpec analyzer for specification/containerservice/resource-manager/Microsoft.ContainerService/aks

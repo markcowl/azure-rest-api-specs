@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46044 — RecoveryServicesBackup: add 2026-10-01 API version with Instant Access snapshot policy props](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46044 — RecoveryServicesBackup: add 2026-10-01 API version with Instant Access snapshot policy props](https://github.com/Azure/azure-rest-api-specs/pull/46044)
 - **Author:** Neelav-0211
 - **State:** closed (merged) at 2026-10-08T05:49:45Z
 - **Base:** `main` at `abfe7853f1382c8124b23be81984196102fd9343`

@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47204 — Release app Microsoft.App SreAgent stable/2026-07-01](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47204 — Release app Microsoft.App SreAgent stable/2026-07-01](https://github.com/Azure/azure-rest-api-specs/pull/47204)
 - **Author:** RobiladK
 - **State:** open
 - **Base:** `main` at `56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f`

@@ -21,7 +21,7 @@
     "author": "osaghaso",
     "state": "open",
     "merged": false,
-    "url": "http<local-path>",
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47255",
     "baseBranch": "main",
     "headBranch": "user/osaghaso/Update_incomingCall_events",
     "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264",
@@ -35,7 +35,7 @@
     "qualified": true,
     "reasonCodes": [],
     "evidence": {
-      "prUrl": "http<local-path>",
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47255",
       "state": "open",
       "merged": false,
       "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
@@ -47,7 +47,7 @@
           "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969032",
           "logDigest": "1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b",
           "summaryDigest": "8dd1753738cef5d88ec6bc906636fd29b198393acedd0f6875c1d2c4e92a6fa1"
         },
@@ -57,7 +57,7 @@
           "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969209",
           "logDigest": "a3d03e238c572f2fc989db1191d6cd40d616951c58fec31f17fd895289e61a2d",
           "summaryDigest": "334e99259b5a31a01381f63c4bdd8372226ef11985f878f72e92002e06e61bc6"
         }
@@ -70,7 +70,7 @@
   },
   "provenance": {
     "pr": {
-      "url": "http<local-path>",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47255",
       "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
       "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264"
     },
@@ -91,8 +91,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -102,10 +102,10 @@
         "oldVersion": "2018-01-01",
         "newVersion": "2018-01-01"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969032",
         "digest": "1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b"
       },
       "sources": [
@@ -114,14 +114,14 @@
           "path": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/b8e052ca3659235e2051aa629cfb058f7fb53264/specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/4459681a24578d2f211e4a05bbd64cb8c02f491d/specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json#L1"
         }
       ]
     },
@@ -132,8 +132,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -143,10 +143,10 @@
         "oldVersion": "2024-01-01",
         "newVersion": "2024-01-01"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969032",
         "digest": "1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b"
       },
       "sources": [
@@ -155,14 +155,14 @@
           "path": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/b8e052ca3659235e2051aa629cfb058f7fb53264/specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/4459681a24578d2f211e4a05bbd64cb8c02f491d/specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json#L1"
         }
       ]
     }
@@ -406,7 +406,7 @@
     "setupCommands": [
       {
         "label": "Check out the evaluator",
-        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
       },
       {
         "label": "Prepare the immutable analyzer",
@@ -414,12 +414,12 @@
       },
       {
         "label": "Check out the evaluated target",
-        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin b8e052ca3659235e2051aa629cfb058f7fb53264 4459681a24578d2f211e4a05bbd64cb8c02f491d\ngit -C target checkout --detach 4459681a24578d2f211e4a05bbd64cb8c02f491d\ncorepack pnpm --dir target install --frozen-lockfile"
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin b8e052ca3659235e2051aa629cfb058f7fb53264 4459681a24578d2f211e4a05bbd64cb8c02f491d\ngit -C target checkout --detach 4459681a24578d2f211e4a05bbd64cb8c02f491d\ncorepack pnpm --dir target install --frozen-lockfile"
       }
     ],
     "evaluatorCommand": {
       "label": "Rerun the complete evaluator",
-      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47255' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
     },
     "directAnalyzerCommands": [
       {

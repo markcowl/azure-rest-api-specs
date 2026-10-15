@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47156 — [Microsoft.ApiManagement] AI Gateway 2026-10-01-preview: child resources](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47156 — [Microsoft.ApiManagement] AI Gateway 2026-10-01-preview: child resources](https://github.com/Azure/azure-rest-api-specs/pull/47156)
 - **Author:** azaslonov
 - **State:** open
 - **Base:** `main` at `e88935d7e9fe779914a02ef295f22af5565422da`

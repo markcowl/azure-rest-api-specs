@@ -21,7 +21,7 @@
     "author": "rishiraja76",
     "state": "closed",
     "merged": true,
-    "url": "http<local-path>",
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46643",
     "baseBranch": "main",
     "headBranch": "rsureshraja-microsoft-pon-20260401",
     "baseSha": "efb0884620a801846ba9af4f622e004e08522583",
@@ -35,7 +35,7 @@
     "qualified": true,
     "reasonCodes": [],
     "evidence": {
-      "prUrl": "http<local-path>",
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46643",
       "state": "closed",
       "merged": true,
       "headSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
@@ -47,7 +47,7 @@
           "headSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
           "status": "completed",
           "conclusion": "failure",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469",
           "logDigest": "498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406",
           "summaryDigest": "97401855f8583565e2d1ab0d8189305ef8245a40855b10ab200fe8769d999f8e"
         },
@@ -57,7 +57,7 @@
           "headSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387243",
           "logDigest": "cc7e8ce2b026f298da9768170caefe2e1925a6d084c58a445cd79c26f70389e3",
           "summaryDigest": "83521e0df87fb3fcd6b9882e9fbda9d195ca899c560b52c1cd0be0b215d8a81f"
         }
@@ -69,7 +69,7 @@
   },
   "provenance": {
     "pr": {
-      "url": "http<local-path>",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46643",
       "headSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
       "baseSha": "efb0884620a801846ba9af4f622e004e08522583"
     },
@@ -90,8 +90,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -101,10 +101,10 @@
         "oldVersion": "2026-04-01",
         "newVersion": "2026-04-01"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469",
         "digest": "498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406"
       },
       "sources": [
@@ -113,14 +113,14 @@
           "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L1"
         }
       ]
     },
@@ -131,8 +131,8 @@
       "rule": "AddedPropertyInResponse",
       "severity": "Error",
       "message": "The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
       "newJsonPath": "definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
       "comparison": {
@@ -142,10 +142,10 @@
         "oldVersion": "2026-04-01",
         "newVersion": "2026-04-01"
       },
-      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.VirtualMachineScaleSetIPConfigurationProperties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.VirtualMachineScaleSetIPConfigurationProperties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Addition\"}",
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.VirtualMachineScaleSetIPConfigurationProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.VirtualMachineScaleSetIPConfigurationProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469",
         "digest": "498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406"
       },
       "sources": [
@@ -154,14 +154,14 @@
           "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
           "line": 23084,
           "jsonPath": "definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23084"
         },
         {
           "revision": "head",
           "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
           "line": 23091,
           "jsonPath": "definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23091"
         }
       ]
     },
@@ -172,8 +172,8 @@
       "rule": "AddedPropertyInResponse",
       "severity": "Error",
       "message": "The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
       "newJsonPath": "definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
       "comparison": {
@@ -183,10 +183,10 @@
         "oldVersion": "2026-04-01",
         "newVersion": "2026-04-01"
       },
-      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Addition\"}",
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469",
         "digest": "498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406"
       },
       "sources": [
@@ -195,14 +195,14 @@
           "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
           "line": 22255,
           "jsonPath": "definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255"
         },
         {
           "revision": "head",
           "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
           "line": 22255,
           "jsonPath": "definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255"
         }
       ]
     }
@@ -1075,7 +1075,7 @@
     "setupCommands": [
       {
         "label": "Check out the evaluator",
-        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
       },
       {
         "label": "Prepare the immutable analyzer",
@@ -1083,12 +1083,12 @@
       },
       {
         "label": "Check out the evaluated target",
-        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin efb0884620a801846ba9af4f622e004e08522583 e302d1a57587219ec3b6c9f58260c48cc08e11a1\ngit -C target checkout --detach e302d1a57587219ec3b6c9f58260c48cc08e11a1\ncorepack pnpm --dir target install --frozen-lockfile"
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin efb0884620a801846ba9af4f622e004e08522583 e302d1a57587219ec3b6c9f58260c48cc08e11a1\ngit -C target checkout --detach e302d1a57587219ec3b6c9f58260c48cc08e11a1\ncorepack pnpm --dir target install --frozen-lockfile"
       }
     ],
     "evaluatorCommand": {
       "label": "Rerun the complete evaluator",
-      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46643' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
     },
     "directAnalyzerCommands": [
       {

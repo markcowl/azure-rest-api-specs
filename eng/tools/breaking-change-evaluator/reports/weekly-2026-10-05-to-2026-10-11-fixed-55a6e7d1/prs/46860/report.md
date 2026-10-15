@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46860 — [Commvault] Add 2026-09-30 stable API](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46860 — [Commvault] Add 2026-09-30 stable API](https://github.com/Azure/azure-rest-api-specs/pull/46860)
 - **Author:** saurabh-jaiswal-333
 - **State:** closed (merged) at 2026-10-09T11:17:24Z
 - **Base:** `main` at `2f3878f62a5f5c28fe60d7cb27b35d1cb06a23df`

@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46659 — Add Azure Maps 2026-12-01 stable control plane api version.](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46659 — Add Azure Maps 2026-12-01 stable control plane api version.](https://github.com/Azure/azure-rest-api-specs/pull/46659)
 - **Author:** rishikaparashar
 - **State:** open
 - **Base:** `main` at `8f99c33c108147fcc716e71a764010084fe5d034`

@@ -21,7 +21,7 @@
     "author": "sergius0301",
     "state": "open",
     "merged": false,
-    "url": "http<local-path>",
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46863",
     "baseBranch": "main",
     "headBranch": "users/sgrabovschi/digitalassets-public-preview",
     "baseSha": "1cda2b81fd9edf14d456494cc782dbe906facfeb",
@@ -39,7 +39,7 @@
     "qualified": true,
     "reasonCodes": [],
     "evidence": {
-      "prUrl": "http<local-path>",
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46863",
       "state": "open",
       "merged": false,
       "headSha": "61b45d456a35f01c38a884701a4c5f18f3e68cc4",
@@ -51,7 +51,7 @@
           "headSha": "61b45d456a35f01c38a884701a4c5f18f3e68cc4",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38561932629",
           "logDigest": "2cf549fe7e936a57f5cca5437e5e78f74a2690fd90543e78c820037637433511",
           "summaryDigest": "b30f560a422e0232747a787abfa080f4c3792acbda265dcff6387c9aed18d0b8"
         },
@@ -61,7 +61,7 @@
           "headSha": "61b45d456a35f01c38a884701a4c5f18f3e68cc4",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38561932347",
           "logDigest": "6bc2bcd18198e18136c7173fa6402380fae424994cd6c22de24f8d3ecb916076",
           "summaryDigest": "bb0ca79f3f9c5ac499f317306f8bfe50891e700949002e2d80886f12989a9ba3"
         }
@@ -78,7 +78,7 @@
   },
   "provenance": {
     "pr": {
-      "url": "http<local-path>",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46863",
       "headSha": "61b45d456a35f01c38a884701a4c5f18f3e68cc4",
       "baseSha": "1cda2b81fd9edf14d456494cc782dbe906facfeb"
     },
@@ -172,7 +172,7 @@
     "setupCommands": [
       {
         "label": "Check out the evaluator",
-        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
       },
       {
         "label": "Prepare the immutable analyzer",
@@ -180,12 +180,12 @@
       },
       {
         "label": "Check out the evaluated target",
-        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 1cda2b81fd9edf14d456494cc782dbe906facfeb 61b45d456a35f01c38a884701a4c5f18f3e68cc4\ngit -C target checkout --detach 61b45d456a35f01c38a884701a4c5f18f3e68cc4\ncorepack pnpm --dir target install --frozen-lockfile"
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 1cda2b81fd9edf14d456494cc782dbe906facfeb 61b45d456a35f01c38a884701a4c5f18f3e68cc4\ngit -C target checkout --detach 61b45d456a35f01c38a884701a4c5f18f3e68cc4\ncorepack pnpm --dir target install --frozen-lockfile"
       }
     ],
     "evaluatorCommand": {
       "label": "Rerun the complete evaluator",
-      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46863' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
     },
     "directAnalyzerCommands": [
       {

@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47109 — Enhance comments for soft-delete resource management](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47109 — Enhance comments for soft-delete resource management](https://github.com/Azure/azure-rest-api-specs/pull/47109)
 - **Author:** sandeepraichura
 - **State:** open
 - **Base:** `main` at `7a181711c3d59c11fc2d1028ec9c2285c08994f9`
@@ -22,8 +22,8 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 | Phase | OAD detector time | TypeSpec detector time | Comparison | Evidence |
 | --- | ---: | ---: | --- | --- |
-| A | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted) |
-| B | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted) |
+| A | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38428697680) (no detector timing emitted) |
+| B | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38428698079) (no detector timing emitted) |
 
 ## TypeSpec phase execution
 
@@ -214,8 +214,8 @@ This section follows error equivalence and contains findings that neither detect
 
 - **Swagger finding:** `A-oad-0` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `9fd1c5f59e66b75dba3497efd98df138720d50d49a4d99bcc1a03e145df0ecb9`)
-- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json, line 1](http<local-path>); [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38428697680) (digest `9fd1c5f59e66b75dba3497efd98df138720d50d49a4d99bcc1a03e145df0ecb9`)
+- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/7a181711c3d59c11fc2d1028ec9c2285c08994f9/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json#L1); [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/04350064c8ef657597b0abdc4c212356ef373066/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document GalleryRP.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
@@ -227,7 +227,7 @@ This section follows error equivalence and contains findings that neither detect
 ### Check out the evaluator
 
 ```powershell
-git clone 'http<local-path>' evaluator
+git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator
 git -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'
 corepack pnpm --dir evaluator install --frozen-lockfile
 ```
@@ -242,7 +242,7 @@ if ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b32
 ### Check out the evaluated target
 
 ```powershell
-git clone --filter=blob:none --no-checkout 'http<local-path>' target
+git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target
 git -C target fetch --no-tags origin 7a181711c3d59c11fc2d1028ec9c2285c08994f9 04350064c8ef657597b0abdc4c212356ef373066
 git -C target checkout --detach 04350064c8ef657597b0abdc4c212356ef373066
 corepack pnpm --dir target install --frozen-lockfile
@@ -251,7 +251,7 @@ corepack pnpm --dir target install --frozen-lockfile
 ### Rerun the complete evaluator
 
 ```powershell
-node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
+node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47109' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
 ```
 
 ### Run the TypeSpec analyzer for specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery

@@ -842,7 +842,8 @@ export async function writeReportFiles(
   const sanitize = (value: unknown): unknown => {
     if (typeof value === "string") {
       return value
-        .replace(/[A-Za-z]:[\\/][^'"\r\n;]*/g, "<local-path>")
+        .replace(/file:\/\/\/(?:[A-Za-z]:[\\/]|\/?(?:Users|home)\/)[^'"\r\n;]*/g, "<local-path>")
+        .replace(/(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/][^'"\r\n;]*/g, "<local-path>")
         .replace(/\/(?:Users|home)\/[^'"\r\n;]*/g, "<local-path>");
     }
     if (Array.isArray(value)) return value.map(sanitize);

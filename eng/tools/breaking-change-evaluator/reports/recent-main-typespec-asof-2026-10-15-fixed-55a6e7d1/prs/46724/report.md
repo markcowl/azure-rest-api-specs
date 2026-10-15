@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46724 — Merge `feature/foundry-release` branch to `main`](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46724 — Merge `feature/foundry-release` branch to `main`](https://github.com/Azure/azure-rest-api-specs/pull/46724)
 - **Author:** dargilco
 - **State:** open
 - **Base:** `main` at `8f99c33c108147fcc716e71a764010084fe5d034`

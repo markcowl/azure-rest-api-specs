@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46338 — Chipate/compute placement score](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46338 — Chipate/compute placement score](https://github.com/Azure/azure-rest-api-specs/pull/46338)
 - **Author:** chintanrp
 - **State:** closed (merged) at 2026-10-05T16:14:05Z
 - **Base:** `main` at `c415ef063cd4c1833ecceff7f856295115d80c0d`

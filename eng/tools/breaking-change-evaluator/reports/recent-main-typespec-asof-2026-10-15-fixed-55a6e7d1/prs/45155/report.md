@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45155 — Adding Microsoft.Carbon 2026-05-01-preview API](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45155 — Adding Microsoft.Carbon 2026-05-01-preview API](https://github.com/Azure/azure-rest-api-specs/pull/45155)
 - **Author:** itiinani-msft
 - **State:** closed (merged) at 2026-10-14T17:37:42Z
 - **Base:** `main` at `e88935d7e9fe779914a02ef295f22af5565422da`

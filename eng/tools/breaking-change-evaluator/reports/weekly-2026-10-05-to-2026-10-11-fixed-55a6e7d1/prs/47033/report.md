@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47033 — Microsoft.Authorization PrivilegedAccess 2026-06-01-preview (supersedes #45970)](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47033 — Microsoft.Authorization PrivilegedAccess 2026-06-01-preview (supersedes #45970)](https://github.com/Azure/azure-rest-api-specs/pull/47033)
 - **Author:** raghavpuri31
 - **State:** closed (merged) at 2026-10-07T21:28:15Z
 - **Base:** `main` at `1142128f76754601aac1da265c6fa5fd66380d9b`

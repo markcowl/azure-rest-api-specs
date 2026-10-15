@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#45455 — Add Chaos 2026-11-01 stable API version](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#45455 — Add Chaos 2026-11-01 stable API version](https://github.com/Azure/azure-rest-api-specs/pull/45455)
 - **Author:** juliagao3
 - **State:** open
 - **Base:** `main` at `a4c2a18ee4d0b1885d66a001145e56744acd9baf`

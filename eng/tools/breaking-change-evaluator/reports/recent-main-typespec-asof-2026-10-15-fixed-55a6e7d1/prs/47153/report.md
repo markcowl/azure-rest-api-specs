@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47153 — setting the LRO response's FinalResult  and using clientName to fix naming issues](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47153 — setting the LRO response's FinalResult  and using clientName to fix naming issues](https://github.com/Azure/azure-rest-api-specs/pull/47153)
 - **Author:** iwrinshow
 - **State:** closed (merged) at 2026-10-14T17:45:38Z
 - **Base:** `main` at `88e2199d770d74f3061a162824185fd6894cb7d7`

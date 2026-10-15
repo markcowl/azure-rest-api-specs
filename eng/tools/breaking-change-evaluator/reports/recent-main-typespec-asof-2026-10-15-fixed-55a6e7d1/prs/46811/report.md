@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46811 — Review request for Microsoft.ContainerService/aks to add version stable/2026-08-01 and preview/2026-08-02-preview](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46811 — Review request for Microsoft.ContainerService/aks to add version stable/2026-08-01 and preview/2026-08-02-preview](https://github.com/Azure/azure-rest-api-specs/pull/46811)
 - **Author:** FumingZhang
 - **State:** open
 - **Base:** `main` at `fd7acf72fc1d90922ef0536a06863c414328824f`

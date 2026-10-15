@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46585 — Enable Fabric provisioning emitter](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46585 — Enable Fabric provisioning emitter](https://github.com/Azure/azure-rest-api-specs/pull/46585)
 - **Author:** HarveyLink
 - **State:** closed (merged) at 2026-10-08T08:51:15Z
 - **Base:** `main` at `8b60913ae846f5209258162f983c8c2c425e5371`

@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47005 — Revert(planetarycomputer): restore previous folder structure](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47005 — Revert(planetarycomputer): restore previous folder structure](https://github.com/Azure/azure-rest-api-specs/pull/47005)
 - **Author:** thisisdevanshu
 - **State:** closed (merged) at 2026-10-06T00:27:06Z
 - **Base:** `main` at `0799fda68aab1e2c6f5f0d06f028f451b14bf0a8`
@@ -37,8 +37,8 @@
 
 | Phase | Independent OAD execution | TypeSpec mode | Outcome | Comparable OAD | Informational OAD | TypeSpec findings | Exact | Probable | Intentional gap | Missed equivalent | TypeSpec-only | Exact OAD coverage | Review-inclusive OAD coverage |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A | [Swagger Breaking Change run 37078379040](http<local-path>) | `same-version` | concordant-zero | 0 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
-| B | [Breaking Change (Cross-Version) run 37078378960](http<local-path>) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
+| A | [Swagger Breaking Change run 37078379040](https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040) | `same-version` | concordant-zero | 0 | 5 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
+| B | [Breaking Change (Cross-Version) run 37078378960](https://github.com/Azure/azure-rest-api-specs/actions/runs/37078378960) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
 
 ## Error equivalence by phase
 
@@ -55,8 +55,8 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 | Phase | OAD detector time | TypeSpec detector time | Comparison | Evidence |
 | --- | ---: | ---: | --- | --- |
-| A | Unavailable | 12 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/0e1497e46c99294c-phase-a.md); [TypeSpec Phase A report](report-artifacts/typespec/dfc4b09bffcba0ba-phase-a.md) |
-| B | Unavailable | Unavailable independently (combined A+B: 11 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/0e1497e46c99294c-phase-b.md); [TypeSpec combined report containing Phase B](report-artifacts/typespec/dfc4b09bffcba0ba-phase-b.md) |
+| A | Unavailable | 12 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/0e1497e46c99294c-phase-a.md); [TypeSpec Phase A report](report-artifacts/typespec/dfc4b09bffcba0ba-phase-a.md) |
+| B | Unavailable | Unavailable independently (combined A+B: 11 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37078378960) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/0e1497e46c99294c-phase-b.md); [TypeSpec combined report containing Phase B](report-artifacts/typespec/dfc4b09bffcba0ba-phase-b.md) |
 
 ## TypeSpec phase execution
 
@@ -120,40 +120,40 @@ This section follows error equivalence and contains findings that neither detect
 
 - **Swagger finding:** `A-oad-0` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
-- **Swagger source:** [base: specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json, line 1](http<local-path>); [head: specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
+- **Swagger source:** [base: specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/data-plane/PlanetaryComputer/preview/2025-04-30-preview/openapi.json#L1); [head: specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbital/data-plane/Microsoft.PlanetaryComputer/preview/2025-04-30-preview/openapi.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document openapi.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
 
 - **Swagger finding:** `A-oad-1` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
-- **Swagger source:** [base: specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json, line 1](http<local-path>); [head: specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
+- **Swagger source:** [base: specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/data-plane/PlanetaryComputer/stable/2026-04-15/openapi.json#L1); [head: specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbital/data-plane/Microsoft.PlanetaryComputer/stable/2026-04-15/openapi.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document openapi.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
 
 - **Swagger finding:** `A-oad-2` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
-- **Swagger source:** [base: specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json, line 1](http<local-path>); [head: specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
+- **Swagger source:** [base: specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2024-01-31-preview/planetarycomputer.json#L1); [head: specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2024-01-31-preview/planetarycomputer.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document planetarycomputer.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
 
 - **Swagger finding:** `A-oad-3` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
-- **Swagger source:** [base: specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json, line 1](http<local-path>); [head: specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
+- **Swagger source:** [base: specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/preview/2025-02-11-preview/planetarycomputer.json#L1); [head: specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/preview/2025-02-11-preview/planetarycomputer.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document planetarycomputer.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
 
 - **Swagger finding:** `A-oad-4` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
-- **Swagger source:** [base: specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json, line 1](http<local-path>); [head: specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37078379040) (digest `11536a1c587ca927bc67d873484cf93ba52519b7ee6c542ffe14fe0deada0859`)
+- **Swagger source:** [base: specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/0799fda68aab1e2c6f5f0d06f028f451b14bf0a8/specification/planetarycomputer/resource-manager/Microsoft.PlanetaryComputer/PlanetaryComputer/stable/2026-04-15/planetarycomputer.json#L1); [head: specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/5adc647c5d61132bb68909a2d02ccf507aeb9feb/specification/orbitalplanetarycomputer/resource-manager/Microsoft.Orbital/stable/2026-04-15/planetarycomputer.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document planetarycomputer.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
@@ -165,7 +165,7 @@ This section follows error equivalence and contains findings that neither detect
 ### Check out the evaluator
 
 ```powershell
-git clone 'http<local-path>' evaluator
+git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator
 git -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'
 corepack pnpm --dir evaluator install --frozen-lockfile
 ```
@@ -180,7 +180,7 @@ if ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b32
 ### Check out the evaluated target
 
 ```powershell
-git clone --filter=blob:none --no-checkout 'http<local-path>' target
+git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target
 git -C target fetch --no-tags origin 0799fda68aab1e2c6f5f0d06f028f451b14bf0a8 5adc647c5d61132bb68909a2d02ccf507aeb9feb
 git -C target checkout --detach 5adc647c5d61132bb68909a2d02ccf507aeb9feb
 corepack pnpm --dir target install --frozen-lockfile
@@ -189,7 +189,7 @@ corepack pnpm --dir target install --frozen-lockfile
 ### Rerun the complete evaluator
 
 ```powershell
-node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
+node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47005' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
 ```
 
 ### Run the TypeSpec analyzer for specification/orbital/Microsoft.PlanetaryComputer

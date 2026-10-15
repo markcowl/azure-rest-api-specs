@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47255 — Add ACS incoming call event properties](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47255 — Add ACS incoming call event properties](https://github.com/Azure/azure-rest-api-specs/pull/47255)
 - **Author:** osaghaso
 - **State:** open
 - **Base:** `main` at `b8e052ca3659235e2051aa629cfb058f7fb53264`
@@ -37,8 +37,8 @@
 
 | Phase | Independent OAD execution | TypeSpec mode | Outcome | Comparable OAD | Informational OAD | TypeSpec findings | Exact | Probable | Intentional gap | Missed equivalent | TypeSpec-only | Exact OAD coverage | Review-inclusive OAD coverage |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A | [Swagger Breaking Change run 38468969032](http<local-path>) | `same-version` | concordant-zero | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
-| B | [Breaking Change (Cross-Version) run 38468969209](http<local-path>) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
+| A | [Swagger Breaking Change run 38468969032](https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969032) | `same-version` | concordant-zero | 0 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
+| B | [Breaking Change (Cross-Version) run 38468969209](https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969209) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
 
 ## Error equivalence by phase
 
@@ -55,8 +55,8 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 | Phase | OAD detector time | TypeSpec detector time | Comparison | Evidence |
 | --- | ---: | ---: | --- | --- |
-| A | Unavailable | 904 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/e6189f230e3e5995-phase-a.md) |
-| B | Unavailable | Unavailable independently (combined A+B: 315 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/e6189f230e3e5995-phase-b.md) |
+| A | Unavailable | 904 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969032) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/e6189f230e3e5995-phase-a.md) |
+| B | Unavailable | Unavailable independently (combined A+B: 315 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969209) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/e6189f230e3e5995-phase-b.md) |
 
 ## TypeSpec phase execution
 
@@ -118,16 +118,16 @@ This section follows error equivalence and contains findings that neither detect
 
 - **Swagger finding:** `A-oad-0` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b`)
-- **Swagger source:** [base: specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json, line 1](http<local-path>); [head: specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969032) (digest `1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b`)
+- **Swagger source:** [base: specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/b8e052ca3659235e2051aa629cfb058f7fb53264/specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json#L1); [head: specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/4459681a24578d2f211e4a05bbd64cb8c02f491d/specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document GeneratedSystemEvents.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
 
 - **Swagger finding:** `A-oad-1` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](http<local-path>) (digest `1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b`)
-- **Swagger source:** [base: specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json, line 1](http<local-path>); [head: specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json, line 1](http<local-path>)
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38468969032) (digest `1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b`)
+- **Swagger source:** [base: specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/b8e052ca3659235e2051aa629cfb058f7fb53264/specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json#L1); [head: specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/4459681a24578d2f211e4a05bbd64cb8c02f491d/specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json#L1)
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document GeneratedSystemEvents.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
@@ -139,7 +139,7 @@ This section follows error equivalence and contains findings that neither detect
 ### Check out the evaluator
 
 ```powershell
-git clone 'http<local-path>' evaluator
+git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator
 git -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'
 corepack pnpm --dir evaluator install --frozen-lockfile
 ```
@@ -154,7 +154,7 @@ if ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b32
 ### Check out the evaluated target
 
 ```powershell
-git clone --filter=blob:none --no-checkout 'http<local-path>' target
+git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target
 git -C target fetch --no-tags origin b8e052ca3659235e2051aa629cfb058f7fb53264 4459681a24578d2f211e4a05bbd64cb8c02f491d
 git -C target checkout --detach 4459681a24578d2f211e4a05bbd64cb8c02f491d
 corepack pnpm --dir target install --frozen-lockfile
@@ -163,7 +163,7 @@ corepack pnpm --dir target install --frozen-lockfile
 ### Rerun the complete evaluator
 
 ```powershell
-node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
+node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47255' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
 ```
 
 ### Run the TypeSpec analyzer for specification/eventgrid/data-plane/EventGridSystemEvents

@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46359 — add 2026-09-01 API version](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46359 — add 2026-09-01 API version](https://github.com/Azure/azure-rest-api-specs/pull/46359)
 - **Author:** vedkale
 - **State:** closed (merged) at 2026-10-14T23:00:11Z
 - **Base:** `main` at `ae7a5a8af9070bb0ad8270448d314e5de2c82218`

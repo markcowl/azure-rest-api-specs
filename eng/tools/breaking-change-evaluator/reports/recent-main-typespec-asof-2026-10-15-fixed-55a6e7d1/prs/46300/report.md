@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46300 — Add Microsoft.Cdn 2026-09-01-preview API version](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46300 — Add Microsoft.Cdn 2026-09-01-preview API version](https://github.com/Azure/azure-rest-api-specs/pull/46300)
 - **Author:** HandsomeJay
 - **State:** open
 - **Base:** `main` at `fcc20ab8473a30946221a1b876c89aa9f61447b9`

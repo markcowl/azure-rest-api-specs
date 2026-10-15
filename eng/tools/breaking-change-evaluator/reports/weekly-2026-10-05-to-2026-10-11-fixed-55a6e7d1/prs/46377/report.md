@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46377 — Dev/hbhansali/resiliencemgmt ga 2026 10 01](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46377 — Dev/hbhansali/resiliencemgmt ga 2026 10 01](https://github.com/Azure/azure-rest-api-specs/pull/46377)
 - **Author:** harshb-15
 - **State:** closed (merged) at 2026-10-05T05:51:23Z
 - **Base:** `main` at `6a1a4ddcb4281de3a1f7c966794f2516628cad52`

@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46357 — Add 2026-09-15-preview enhanced transcription options](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46357 — Add 2026-09-15-preview enhanced transcription options](https://github.com/Azure/azure-rest-api-specs/pull/46357)
 - **Author:** amber-yujueWang
 - **State:** open
 - **Base:** `main` at `b464a76895ea6f17747d4664b935d0dc55fa06c4`
@@ -37,8 +37,8 @@
 
 | Phase | Independent OAD execution | TypeSpec mode | Outcome | Comparable OAD | Informational OAD | TypeSpec findings | Exact | Probable | Intentional gap | Missed equivalent | TypeSpec-only | Exact OAD coverage | Review-inclusive OAD coverage |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A | [Swagger Breaking Change run 36699592817](http<local-path>) | `same-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
-| B | [Breaking Change (Cross-Version) run 36699592863](http<local-path>) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
+| A | [Swagger Breaking Change run 36699592817](https://github.com/Azure/azure-rest-api-specs/actions/runs/36699592817) | `same-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
+| B | [Breaking Change (Cross-Version) run 36699592863](https://github.com/Azure/azure-rest-api-specs/actions/runs/36699592863) | `cross-version` | concordant-zero | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | N/A | N/A |
 
 ## Error equivalence by phase
 
@@ -55,8 +55,8 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 | Phase | OAD detector time | TypeSpec detector time | Comparison | Evidence |
 | --- | ---: | ---: | --- | --- |
-| A | Unavailable | 156 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/12cddeb6aac969f3-phase-a.md) |
-| B | Unavailable | Unavailable independently (combined A+B: 392 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/12cddeb6aac969f3-phase-b.md) |
+| A | Unavailable | 156 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36699592817) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/12cddeb6aac969f3-phase-a.md) |
+| B | Unavailable | Unavailable independently (combined A+B: 392 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36699592863) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/12cddeb6aac969f3-phase-b.md) |
 
 ## TypeSpec phase execution
 
@@ -121,7 +121,7 @@ Both detectors reported zero non-error findings.
 ### Check out the evaluator
 
 ```powershell
-git clone 'http<local-path>' evaluator
+git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator
 git -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'
 corepack pnpm --dir evaluator install --frozen-lockfile
 ```
@@ -136,7 +136,7 @@ if ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b32
 ### Check out the evaluated target
 
 ```powershell
-git clone --filter=blob:none --no-checkout 'http<local-path>' target
+git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target
 git -C target fetch --no-tags origin b464a76895ea6f17747d4664b935d0dc55fa06c4 7ec8524eb677d62b7870befbac30972818a40461
 git -C target checkout --detach 7ec8524eb677d62b7870befbac30972818a40461
 corepack pnpm --dir target install --frozen-lockfile
@@ -145,7 +145,7 @@ corepack pnpm --dir target install --frozen-lockfile
 ### Rerun the complete evaluator
 
 ```powershell
-node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
+node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46357' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
 ```
 
 ### Run the TypeSpec analyzer for specification/cognitiveservices/data-plane/SpeechTranscription

@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46060 — [App Configuration] Add `2026-09-01-preview` API version](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46060 — [App Configuration] Add `2026-09-01-preview` API version](https://github.com/Azure/azure-rest-api-specs/pull/46060)
 - **Author:** austintolani
 - **State:** open
 - **Base:** `main` at `1142128f76754601aac1da265c6fa5fd66380d9b`

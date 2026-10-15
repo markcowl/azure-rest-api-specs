@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46751 — [Foundry] End of September Release train.](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46751 — [Foundry] End of September Release train.](https://github.com/Azure/azure-rest-api-specs/pull/46751)
 - **Author:** glecaros
 - **State:** closed (merged) at 2026-10-05T23:24:00Z
 - **Base:** `main` at `7e7a9372bd1e8b88a00db8f100c0ba84a05b6e1c`

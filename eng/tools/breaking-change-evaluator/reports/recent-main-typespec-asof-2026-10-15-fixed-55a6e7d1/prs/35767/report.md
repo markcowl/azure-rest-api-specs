@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#35767 — Add sdk emmiter for python js java](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#35767 — Add sdk emmiter for python js java](https://github.com/Azure/azure-rest-api-specs/pull/35767)
 - **Author:** amber-Chen-86
 - **State:** open
 - **Base:** `main` at `b464a76895ea6f17747d4664b935d0dc55fa06c4`

@@ -21,7 +21,7 @@
     "author": "Mohithkk",
     "state": "open",
     "merged": false,
-    "url": "http<local-path>",
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45096",
     "baseBranch": "main",
     "headBranch": "users/mkanuru/azurepostgresql-pooling-properties",
     "baseSha": "636e1c0e0ae772f0cfaab4f3d457d27798ee9cda",
@@ -34,7 +34,7 @@
     "qualified": true,
     "reasonCodes": [],
     "evidence": {
-      "prUrl": "http<local-path>",
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45096",
       "state": "open",
       "merged": false,
       "headSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
@@ -46,7 +46,7 @@
           "headSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
           "status": "completed",
           "conclusion": "failure",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
           "logDigest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28",
           "summaryDigest": "074e3961e5508652d1def255aaf851a9a45ac6af7c7384788b906ecd34703bb7"
         },
@@ -56,7 +56,7 @@
           "headSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
           "status": "completed",
           "conclusion": "success",
-          "htmlUrl": "http<local-path>",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602138142",
           "logDigest": "8ee9232438d6d575802d7fa8cff317e33403af661016f47fc29f7d72160cbcab",
           "summaryDigest": "06a8fb528c2d7031027f781ed54107de84e58f005523e66607af3a5501169d01"
         }
@@ -68,7 +68,7 @@
   },
   "provenance": {
     "pr": {
-      "url": "http<local-path>",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45096",
       "headSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
       "baseSha": "636e1c0e0ae772f0cfaab4f3d457d27798ee9cda"
     },
@@ -96,8 +96,8 @@
       "rule": "NoVersionChange",
       "severity": "Info",
       "message": "The versions have not changed.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "",
       "newJsonPath": "",
       "comparison": {
@@ -107,10 +107,10 @@
         "oldVersion": "2018-06-01",
         "newVersion": "2018-06-01"
       },
-      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
         "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
       },
       "sources": [
@@ -119,14 +119,14 @@
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L1"
         },
         {
           "revision": "head",
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 1,
           "jsonPath": "",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L1"
         }
       ]
     },
@@ -137,8 +137,8 @@
       "rule": "AddedOptionalProperty",
       "severity": "Error",
       "message": "The new version has a new optional property 'pooling' that was not found in the old version.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "comparison": {
@@ -148,10 +148,10 @@
         "oldVersion": "2018-06-01",
         "newVersion": "2018-06-01"
       },
-      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'pooling' that was not found in the old version.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Addition\"}",
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'pooling' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
         "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
       },
       "sources": [
@@ -160,14 +160,14 @@
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         },
         {
           "revision": "head",
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         }
       ]
     },
@@ -178,8 +178,8 @@
       "rule": "AddedOptionalProperty",
       "severity": "Error",
       "message": "The new version has a new optional property 'maxPoolSize' that was not found in the old version.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "comparison": {
@@ -189,10 +189,10 @@
         "oldVersion": "2018-06-01",
         "newVersion": "2018-06-01"
       },
-      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'maxPoolSize' that was not found in the old version.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Addition\"}",
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'maxPoolSize' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
         "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
       },
       "sources": [
@@ -201,14 +201,14 @@
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         },
         {
           "revision": "head",
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         }
       ]
     },
@@ -219,8 +219,8 @@
       "rule": "AddedOptionalProperty",
       "severity": "Error",
       "message": "The new version has a new optional property 'minPoolSize' that was not found in the old version.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "comparison": {
@@ -230,10 +230,10 @@
         "oldVersion": "2018-06-01",
         "newVersion": "2018-06-01"
       },
-      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'minPoolSize' that was not found in the old version.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Addition\"}",
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'minPoolSize' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
         "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
       },
       "sources": [
@@ -242,14 +242,14 @@
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         },
         {
           "revision": "head",
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         }
       ]
     },
@@ -260,8 +260,8 @@
       "rule": "AddedOptionalProperty",
       "severity": "Error",
       "message": "The new version has a new optional property 'connectionIdleLifetime' that was not found in the old version.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "comparison": {
@@ -271,10 +271,10 @@
         "oldVersion": "2018-06-01",
         "newVersion": "2018-06-01"
       },
-      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'connectionIdleLifetime' that was not found in the old version.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Addition\"}",
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'connectionIdleLifetime' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
         "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
       },
       "sources": [
@@ -283,14 +283,14 @@
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         },
         {
           "revision": "head",
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         }
       ]
     },
@@ -301,8 +301,8 @@
       "rule": "AddedOptionalProperty",
       "severity": "Error",
       "message": "The new version has a new optional property 'connectionPruningInterval' that was not found in the old version.",
-      "oldPath": "fil<local-path>",
-      "newPath": "fil<local-path>",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
       "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
       "comparison": {
@@ -312,10 +312,10 @@
         "oldVersion": "2018-06-01",
         "newVersion": "2018-06-01"
       },
-      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'connectionPruningInterval' that was not found in the old version.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Addition\"}",
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'connectionPruningInterval' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
       "detectorEvidence": {
         "label": "Swagger breaking-change phase A workflow",
-        "url": "http<local-path>",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
         "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
       },
       "sources": [
@@ -324,14 +324,14 @@
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         },
         {
           "revision": "head",
           "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
           "line": 10032,
           "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
-          "url": "http<local-path>"
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
         }
       ]
     }
@@ -446,7 +446,7 @@
             "revision": "head",
             "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
             "line": 15903,
-            "url": "http<local-path>"
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15903"
           }
         },
         {
@@ -481,7 +481,7 @@
             "revision": "head",
             "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
             "line": 15908,
-            "url": "http<local-path>"
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15908"
           }
         },
         {
@@ -516,7 +516,7 @@
             "revision": "head",
             "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
             "line": 15913,
-            "url": "http<local-path>"
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15913"
           }
         },
         {
@@ -551,7 +551,7 @@
             "revision": "head",
             "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
             "line": 15918,
-            "url": "http<local-path>"
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15918"
           }
         },
         {
@@ -586,7 +586,7 @@
             "revision": "head",
             "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
             "line": 15923,
-            "url": "http<local-path>"
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15923"
           }
         }
       ]
@@ -1873,7 +1873,7 @@
     "setupCommands": [
       {
         "label": "Check out the evaluator",
-        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
       },
       {
         "label": "Prepare the immutable analyzer",
@@ -1881,12 +1881,12 @@
       },
       {
         "label": "Check out the evaluated target",
-        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 636e1c0e0ae772f0cfaab4f3d457d27798ee9cda a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e\ngit -C target checkout --detach a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e\ncorepack pnpm --dir target install --frozen-lockfile"
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 636e1c0e0ae772f0cfaab4f3d457d27798ee9cda a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e\ngit -C target checkout --detach a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e\ncorepack pnpm --dir target install --frozen-lockfile"
       }
     ],
     "evaluatorCommand": {
       "label": "Rerun the complete evaluator",
-      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/45096' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
     },
     "directAnalyzerCommands": [
       {

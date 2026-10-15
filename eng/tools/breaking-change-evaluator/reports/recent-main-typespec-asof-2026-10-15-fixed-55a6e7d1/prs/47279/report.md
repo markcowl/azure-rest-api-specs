@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47279 — [Kore.AgentPlatform] Add 2026-07-01-preview TypeSpec](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47279 — [Kore.AgentPlatform] Add 2026-07-01-preview TypeSpec](https://github.com/Azure/azure-rest-api-specs/pull/47279)
 - **Author:** poshett
 - **State:** open
 - **Base:** `main` at `6950632094cd34977a7aba0f3d842ccb97d57b02`

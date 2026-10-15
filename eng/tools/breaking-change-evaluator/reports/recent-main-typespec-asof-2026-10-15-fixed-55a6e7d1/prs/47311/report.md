@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47311 — Add Python lifecycle request models for Web PubSub Chat](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47311 — Add Python lifecycle request models for Web PubSub Chat](https://github.com/Azure/azure-rest-api-specs/pull/47311)
 - **Author:** Y-Sindo
 - **State:** open
 - **Base:** `main` at `fcc20ab8473a30946221a1b876c89aa9f61447b9`

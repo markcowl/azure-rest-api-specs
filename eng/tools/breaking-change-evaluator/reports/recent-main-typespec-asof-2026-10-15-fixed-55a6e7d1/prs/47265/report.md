@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47265 — Microsoft.HorizonDB API version 2026-10-01-preview- #46525](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47265 — Microsoft.HorizonDB API version 2026-10-01-preview- #46525](https://github.com/Azure/azure-rest-api-specs/pull/47265)
 - **Author:** nasc17
 - **State:** open
 - **Base:** `main` at `d0ceb0c4ef92615139f3e9c1c77c509c5e17d122`

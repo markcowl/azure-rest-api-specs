@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47015 — Release Network API Version 2026-03-01](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47015 — Release Network API Version 2026-03-01](https://github.com/Azure/azure-rest-api-specs/pull/47015)
 - **Author:** santoshgh317
 - **State:** closed (merged) at 2026-10-09T09:44:37Z
 - **Base:** `main` at `abfe7853f1382c8124b23be81984196102fd9343`

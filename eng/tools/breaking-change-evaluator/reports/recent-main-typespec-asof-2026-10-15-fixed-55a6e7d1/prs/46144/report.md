@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46144 — Adding API Version 2026-11-01 for Site Recovery](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46144 — Adding API Version 2026-11-01 for Site Recovery](https://github.com/Azure/azure-rest-api-specs/pull/46144)
 - **Author:** sisunkar
 - **State:** open
 - **Base:** `main` at `2335fe5db98171e7a78d08e712920b1869c536ce`

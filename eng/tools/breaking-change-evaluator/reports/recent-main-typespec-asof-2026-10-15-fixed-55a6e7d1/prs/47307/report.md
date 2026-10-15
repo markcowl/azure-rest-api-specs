@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#47307 — Add CognitiveServices stable API version 2026-11-01](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#47307 — Add CognitiveServices stable API version 2026-11-01](https://github.com/Azure/azure-rest-api-specs/pull/47307)
 - **Author:** fmabroukmsft
 - **State:** open
 - **Base:** `main` at `a4c2a18ee4d0b1885d66a001145e56744acd9baf`

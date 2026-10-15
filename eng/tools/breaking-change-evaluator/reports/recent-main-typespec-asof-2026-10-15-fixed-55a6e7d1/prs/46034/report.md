@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46034 — [Microsoft.ProviderHub] Add 2026-09-01-preview API version](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46034 — [Microsoft.ProviderHub] Add 2026-09-01-preview API version](https://github.com/Azure/azure-rest-api-specs/pull/46034)
 - **Author:** gerardoglzb
 - **State:** open
 - **Base:** `main` at `a058c0286266319c95c58d04a37b8b96f324461e`

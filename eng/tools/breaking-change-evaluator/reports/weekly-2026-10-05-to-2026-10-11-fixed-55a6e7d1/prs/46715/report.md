@@ -9,7 +9,7 @@
 
 ## Pull request
 
-- **PR:** [Azure/azure-rest-api-specs#46715 — Add stable EdgeActions 2026-10-01 API](http<local-path>)
+- **PR:** [Azure/azure-rest-api-specs#46715 — Add stable EdgeActions 2026-10-01 API](https://github.com/Azure/azure-rest-api-specs/pull/46715)
 - **Author:** kestry
 - **State:** closed (merged) at 2026-10-10T14:02:46Z
 - **Base:** `main` at `91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c`
@@ -22,8 +22,8 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 | Phase | OAD detector time | TypeSpec detector time | Comparison | Evidence |
 | --- | ---: | ---: | --- | --- |
-| A | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted) |
-| B | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](http<local-path>) (no detector timing emitted) |
+| A | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37969208978) (no detector timing emitted) |
+| B | Unavailable | Unavailable | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37969208848) (no detector timing emitted) |
 
 ## TypeSpec phase execution
 
@@ -79,7 +79,7 @@ Both detectors reported zero non-error findings.
 ### Check out the evaluator
 
 ```powershell
-git clone 'http<local-path>' evaluator
+git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator
 git -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'
 corepack pnpm --dir evaluator install --frozen-lockfile
 ```
@@ -94,7 +94,7 @@ if ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b32
 ### Check out the evaluated target
 
 ```powershell
-git clone --filter=blob:none --no-checkout 'http<local-path>' target
+git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target
 git -C target fetch --no-tags origin 91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3
 git -C target checkout --detach fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3
 corepack pnpm --dir target install --frozen-lockfile
@@ -103,7 +103,7 @@ corepack pnpm --dir target install --frozen-lockfile
 ### Rerun the complete evaluator
 
 ```powershell
-node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
+node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46715' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md
 ```
 
 ### Run the TypeSpec analyzer for specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions
