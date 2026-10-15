@@ -33,6 +33,17 @@ export interface QualifiedPr {
   oadFindings: OadFinding[];
 }
 
+export interface QualificationSnapshot {
+  title?: string;
+  url: string;
+  state: "open" | "closed";
+  mergedAt?: string;
+  baseBranch: string;
+  headSha: string;
+  baseSha: string;
+  changedTypeSpecFiles: string[];
+}
+
 interface WorkflowRunLike {
   id: number;
   name?: string | null;
@@ -178,6 +189,7 @@ function notQualified(
 export async function qualifyPullRequest(
   reference: PrReference,
   octokit = new Octokit({ auth: githubToken() }),
+  snapshot?: QualificationSnapshot,
 ): Promise<QualifiedPr> {
   const fullName = `${reference.owner}/${reference.repo}`;
   if (!supportedRepositories.has(fullName)) {
@@ -196,44 +208,49 @@ export async function qualifyPullRequest(
     repo: reference.repo,
     pull_number: reference.number,
   });
+  const headSha = snapshot?.headSha ?? pr.head.sha;
+  const baseSha = snapshot?.baseSha ?? pr.base.sha;
+  const state = snapshot?.state ?? pr.state;
+  const mergedAt = snapshot?.mergedAt ?? pr.merged_at ?? undefined;
   const evidence: Qualification["evidence"] = {
-    prUrl: pr.html_url,
-    state: pr.state,
-    merged: Boolean(pr.merged_at),
-    headSha: pr.head.sha,
-    baseSha: pr.base.sha,
+    prUrl: snapshot?.url ?? pr.html_url,
+    state,
+    merged: Boolean(mergedAt),
+    headSha,
+    baseSha,
     runs: {},
   };
   const details: PullRequestDetails = {
     ...reference,
-    title: pr.title,
+    title: snapshot?.title ?? pr.title,
     author: pr.user?.login,
-    state: pr.state,
-    merged: Boolean(pr.merged_at),
-    url: pr.html_url,
-    baseBranch: pr.base.ref,
+    state,
+    merged: Boolean(mergedAt),
+    url: snapshot?.url ?? pr.html_url,
+    baseBranch: snapshot?.baseBranch ?? pr.base.ref,
     headBranch: pr.head.ref,
-    baseSha: pr.base.sha,
-    headSha: pr.head.sha,
-    mergedAt: pr.merged_at ?? undefined,
+    baseSha,
+    headSha,
+    mergedAt,
     changedTypeSpecFiles: [],
   };
-  if (pr.state !== "open" && !pr.merged_at) {
+  if (state !== "open" && !mergedAt) {
     return {
       reference,
       details,
       qualification: notQualified(["pull-request-not-open-or-merged"], evidence),
-      headSha: pr.head.sha,
-      baseSha: pr.base.sha,
+      headSha,
+      baseSha,
       cloneUrl: pr.base.repo.clone_url,
       changedTypeSpecFiles: [],
       oadFindings: [],
     };
   }
-  const files = await changedFiles(octokit, reference);
-  const tspFiles = files
-    .filter((file) => isTypeSpecInputFile(file.filename))
-    .map((file) => file.filename);
+  const tspFiles =
+    snapshot?.changedTypeSpecFiles ??
+    (await changedFiles(octokit, reference))
+      .filter((file) => isTypeSpecInputFile(file.filename))
+      .map((file) => file.filename);
   evidence.changedTypeSpecFiles = tspFiles;
   details.changedTypeSpecFiles = tspFiles;
   if (tspFiles.length === 0) {
@@ -241,8 +258,8 @@ export async function qualifyPullRequest(
       reference,
       details,
       qualification: notQualified(["no-typespec-changes"], evidence),
-      headSha: pr.head.sha,
-      baseSha: pr.base.sha,
+      headSha,
+      baseSha,
       cloneUrl: pr.base.repo.clone_url,
       changedTypeSpecFiles: [],
       oadFindings: [],
@@ -253,20 +270,14 @@ export async function qualifyPullRequest(
     owner: reference.owner,
     repo: reference.repo,
     event: "pull_request",
-    head_sha: pr.head.sha,
+    head_sha: headSha,
     per_page: 100,
   });
   const reasons: ReasonCode[] = [];
   const oadFindings: OadFinding[] = [];
   for (const phase of ["A", "B"] as const) {
     const { run, hasExactHeadRun, hasAssociatedRun, requiresLogAssociation } =
-      selectLatestCompletedRun(
-        runs,
-        workflowNames[phase],
-        pr.head.sha,
-        reference.number,
-        pr.base.sha,
-      );
+      selectLatestCompletedRun(runs, workflowNames[phase], headSha, reference.number, baseSha);
     if (!run) {
       reasons.push(
         hasExactHeadRun && !hasAssociatedRun
@@ -297,10 +308,7 @@ export async function qualifyPullRequest(
       reasons.push("missing-run-logs");
       continue;
     }
-    if (
-      requiresLogAssociation &&
-      !logsProveRunAssociation(logs, reference, pr.head.sha, pr.base.sha)
-    ) {
+    if (requiresLogAssociation && !logsProveRunAssociation(logs, reference, headSha, baseSha)) {
       reasons.push("run-association-unverified");
       continue;
     }
@@ -366,8 +374,8 @@ export async function qualifyPullRequest(
       reasonCodes: [...new Set(reasons)],
       evidence,
     },
-    headSha: pr.head.sha,
-    baseSha: pr.base.sha,
+    headSha,
+    baseSha,
     cloneUrl: pr.base.repo.clone_url,
     changedTypeSpecFiles: tspFiles,
     oadFindings,

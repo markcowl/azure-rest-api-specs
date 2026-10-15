@@ -22,18 +22,18 @@ async function worker() {
     const record = records[index];
     const qualified = await qualifyPullRequest(
       parsePrReference(`${selection.repository}#${record.number}`),
+      undefined,
+      {
+        title: record.title,
+        url: record.url,
+        state: record.stateSource === "open" ? "open" : "closed",
+        mergedAt: record.mergedAt,
+        baseBranch: "main",
+        headSha: record.headSha,
+        baseSha: record.baseSha,
+        changedTypeSpecFiles: record.matchingFiles,
+      },
     );
-    const qualifiedFiles = qualified.changedTypeSpecFiles.filter((path) =>
-      path.startsWith("specification/"),
-    );
-    if (
-      qualified.headSha !== record.headSha ||
-      qualified.baseSha !== record.baseSha ||
-      JSON.stringify([...qualifiedFiles].sort()) !==
-        JSON.stringify([...record.matchingFiles].sort())
-    ) {
-      throw new Error(`PR #${record.number} changed after the persisted query snapshot`);
-    }
     await writeFile(
       join(output, `${record.number}.json`),
       `${JSON.stringify(qualified, null, 2)}\n`,
