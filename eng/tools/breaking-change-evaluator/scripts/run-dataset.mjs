@@ -15,6 +15,7 @@ const cacheDir = resolve(option("--cache-dir"));
 const sourceReports = option("--source-reports");
 const qualificationSnapshots = option("--qualification-snapshots");
 const concurrency = Number(option("--concurrency", "3"));
+const resume = process.argv.includes("--resume");
 const selection = JSON.parse(await readFile(selectionPath, "utf8"));
 const records = selection.records.filter((record) => record.selected);
 
@@ -25,6 +26,23 @@ const results = [];
 async function runRecord(record) {
   const output = join(outputRoot, "prs", String(record.number));
   await mkdir(output, { recursive: true });
+  if (resume) {
+    try {
+      const existing = JSON.parse(await readFile(join(output, "report.json"), "utf8"));
+      if (existing.status === "evaluated" || existing.status === "not-qualified") {
+        const result = {
+          pr: record.number,
+          exitCode: existing.complete ? 0 : 3,
+          status: existing.status,
+          complete: existing.complete,
+          resumed: true,
+        };
+        results.push(result);
+        console.log(JSON.stringify(result));
+        return;
+      }
+    } catch {}
+  }
   let qualifiedPr;
   if (sourceReports) {
     const source = JSON.parse(

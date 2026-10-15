@@ -1,4 +1,4 @@
-import { mkdir, readFile, rm } from "node:fs/promises";
+import { mkdir, readFile, rm, unlink } from "node:fs/promises";
 import { basename, dirname, extname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { enrichOadFindingEvidence, normalizeTypeSpecFindingEvidence } from "./evidence.ts";
@@ -155,6 +155,29 @@ async function checkoutPullRequest(pr: QualifiedPr, target: string): Promise<voi
   );
   const fetchError = processError("Unable to fetch pull request revisions", fetch);
   if (fetchError) throw fetchError;
+  const baseArchive = join(target, ".git", "evaluator-base-materialized.zip");
+  const materializeBase = await runProcess(
+    "git",
+    [
+      "archive",
+      "--format=zip",
+      `--output=${baseArchive}`,
+      "refs/evaluator/base",
+      "--",
+      "eng",
+      ...serviceRoots,
+      "package.json",
+      "pnpm-lock.yaml",
+      "pnpm-workspace.yaml",
+    ],
+    { cwd: target, timeoutMs: 10 * 60_000 },
+  );
+  const materializeBaseError = processError(
+    "Unable to materialize sparse base revision",
+    materializeBase,
+  );
+  await unlink(baseArchive).catch(() => undefined);
+  if (materializeBaseError) throw materializeBaseError;
   const checkout = await runProcess("git", ["checkout", "--detach", "refs/evaluator/head"], {
     cwd: target,
   });
