@@ -30,7 +30,7 @@
 | A | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
 | B | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-The preserved historical run reported **111** TypeSpec-only findings. This fixed-analyzer run reports **0**, a change of **-111**. The historical evidence remains unchanged at [original October 5–11 run](../2026-10-05-to-2026-10-11/README.md).
+The preserved historical run reported **111** TypeSpec-only findings. Among complete reports, this fixed-analyzer run reports **0**, a change of **-111**. The **11** partial reports are excluded from effectiveness totals, so this is not a full like-for-like reconciliation. The historical evidence remains unchanged at [original October 5–11 run](../2026-10-05-to-2026-10-11/README.md).
 
 ## Tentative issue analyses
 
