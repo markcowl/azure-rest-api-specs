@@ -3,6 +3,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { evaluate } from "../src/evaluate.ts";
 import { parsePrReference, qualifyPullRequest } from "../src/github.ts";
+import { findPreparedTool } from "../src/prepare.ts";
 
 function option(name, fallback) {
   const index = process.argv.indexOf(name);
@@ -19,6 +20,8 @@ const concurrency = Number(option("--concurrency", "3"));
 const resume = process.argv.includes("--resume");
 const selection = JSON.parse(await readFile(selectionPath, "utf8"));
 const records = selection.records.filter((record) => record.selected);
+const preparedTool = await findPreparedTool(selection.analyzer.sourceSha, cacheDir);
+if (!preparedTool) throw new Error(`Analyzer ${selection.analyzer.sourceSha} is not ready`);
 
 await mkdir(join(outputRoot, "prs"), { recursive: true });
 let cursor = 0;
@@ -101,6 +104,7 @@ async function runRecord(record) {
     generatedAt: selection.run.generatedAt,
     workDir: join(cacheDir, "evaluation-work", selection.run.id, String(record.number)),
     targetRepository,
+    preparedTool,
   });
   const report = JSON.parse(await readFile(join(output, "report.json"), "utf8"));
   const result = { pr: record.number, exitCode, status: report.status, complete: report.complete };

@@ -5,7 +5,7 @@ import { enrichOadFindingEvidence, normalizeTypeSpecFindingEvidence } from "./ev
 import { parsePrReference, qualifyPullRequest, type QualifiedPr } from "./github.ts";
 import { matchFindings } from "./matcher.ts";
 import { applyIssueAnalysisOverlays, generateIssueAnalyses } from "./issues.ts";
-import { defaultCacheDir, findPreparedTool } from "./prepare.ts";
+import { defaultCacheDir, findPreparedTool, type PreparedTool } from "./prepare.ts";
 import { runProcess, type ProcessResult } from "./process.ts";
 import { resolveProjectRoots, runTypeSpecProjects } from "./projects.ts";
 import { computeFindingGroups, computeRollup, writeReportFiles } from "./report.ts";
@@ -42,6 +42,7 @@ export interface EvaluateOptions {
   issueOverlays?: string;
   workDir?: string;
   targetRepository?: string;
+  preparedTool?: PreparedTool;
 }
 
 function baseReport(qualifiedPr: QualifiedPr, options: EvaluateOptions): EvaluationReport {
@@ -378,7 +379,9 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
     await writeReportFiles(report, options.jsonOutput, options.markdownOutput);
     return EXIT_FAILED;
   }
-  const prepared = await findPreparedTool(sourceSha, options.cacheDir ?? defaultCacheDir());
+  const prepared =
+    options.preparedTool ??
+    (await findPreparedTool(sourceSha, options.cacheDir ?? defaultCacheDir()));
   if (!prepared) {
     report.errors.push(
       `Tool revision ${sourceSha} is not prepared. Run the prepare command explicitly.`,
