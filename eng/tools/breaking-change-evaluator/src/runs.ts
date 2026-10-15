@@ -44,7 +44,13 @@ export interface RunManifest {
     selectedCount: number;
     sourceCount: number;
     excludedCount: number;
-    continuationCursor: string | null;
+    continuationCursor:
+      | string
+      | {
+          updatedAt: string;
+          number: number;
+        }
+      | null;
   };
   analyzer: {
     sourceSha: string;
@@ -56,6 +62,19 @@ export interface RunManifest {
   };
   records: { pr: number; report: string; status: EvaluationReport["status"] }[];
   status: RunCatalogEntry["status"];
+}
+
+function validateContinuationCursor(cursor: RunManifest["selection"]["continuationCursor"]): void {
+  if (cursor === null || typeof cursor === "string") {
+    return;
+  }
+  if (
+    typeof cursor !== "object" ||
+    typeof cursor.updatedAt !== "string" ||
+    !Number.isInteger(cursor.number)
+  ) {
+    throw new Error("selection.continuationCursor has an invalid shape");
+  }
 }
 
 function sha256(content: string): string {
@@ -138,6 +157,7 @@ export async function validateRunDirectory(runDirectory: string): Promise<RunMan
     throw new Error(`${manifest.id ?? root} has an unsupported run contract`);
   }
   assertRelativeLink(manifest.selection.file, "selection.file");
+  validateContinuationCursor(manifest.selection.continuationCursor);
   const selectionContent = await readFile(join(root, manifest.selection.file), "utf8");
   if (sha256(selectionContent) !== manifest.selection.digest) {
     throw new Error(`${manifest.id} selection digest does not match`);

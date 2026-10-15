@@ -15,7 +15,7 @@
 - Excluded candidates: **249**
 - Qualifying candidates: **204**
 - Selected: **40**
-- Continuation cursor: **[object Object]**
+- Continuation cursor: **2026-10-14T11:47:52Z, PR #47031**
 - Selection digest: `2cc343514c0b27a25a73268302b14dad41c929ed89fe0f1ad505485f227308ad`
 - Weekly-selection intersection: **0**
 
@@ -40,6 +40,8 @@
 | `evidence-gap` | 26 |
 | `oad-only` | 7 |
 | `typespec-only` | 5 |
+
+Effectiveness totals include complete reports only. Issue-analysis counts cover every selected report, including not-qualified and partial executions, so their counts may exceed the findings shown in the Outcomes table.
 
 ## PR reports
 

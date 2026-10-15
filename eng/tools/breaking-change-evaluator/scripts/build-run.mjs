@@ -40,6 +40,19 @@ function statusCounts() {
   };
 }
 
+function formatContinuationCursor(cursor) {
+  if (cursor === null || cursor === undefined) return "none";
+  if (typeof cursor === "string") return cursor;
+  if (
+    typeof cursor === "object" &&
+    typeof cursor.updatedAt === "string" &&
+    typeof cursor.number === "number"
+  ) {
+    return `${cursor.updatedAt}, PR #${cursor.number}`;
+  }
+  return JSON.stringify(cursor);
+}
+
 const phases = ["A", "B"];
 const metricNames = [
   "oadTotal",
@@ -139,7 +152,7 @@ const lines = [
   `- Excluded candidates: **${selection.selection.excludedCount}**`,
   `- Qualifying candidates: **${selection.selection.qualifyingCount}**`,
   `- Selected: **${selection.selection.selectedCount}**`,
-  `- Continuation cursor: **${selection.selection.continuationCursor ?? "none"}**`,
+  `- Continuation cursor: **${formatContinuationCursor(selection.selection.continuationCursor)}**`,
   `- Selection digest: \`${createHash("sha256").update(selectionContent).digest("hex")}\``,
   ...(selection.assertions?.weeklyIntersection !== undefined
     ? [`- Weekly-selection intersection: **${selection.assertions.weeklyIntersection}**`]
@@ -171,6 +184,8 @@ const lines = [
   "| --- | ---: |",
   ...Object.entries(issueCounts).map(([category, count]) => `| \`${category}\` | ${count} |`),
   ...(Object.keys(issueCounts).length ? [] : ["| — | 0 |"]),
+  "",
+  "Effectiveness totals include complete reports only. Issue-analysis counts cover every selected report, including not-qualified and partial executions, so their counts may exceed the findings shown in the Outcomes table.",
   "",
   "## PR reports",
   "",

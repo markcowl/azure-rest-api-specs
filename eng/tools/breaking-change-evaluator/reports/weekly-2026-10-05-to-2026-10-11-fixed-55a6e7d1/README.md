@@ -41,6 +41,8 @@ The preserved historical run reported **111** TypeSpec-only findings. Among comp
 | `evidence-gap` | 17 |
 | `oad-only` | 85 |
 
+Effectiveness totals include complete reports only. Issue-analysis counts cover every selected report, including not-qualified and partial executions, so their counts may exceed the findings shown in the Outcomes table.
+
 ## PR reports
 
 | PR | Updated | Status | Phase A | Phase B | Issues |
