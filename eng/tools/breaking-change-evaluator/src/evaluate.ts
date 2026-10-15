@@ -155,6 +155,28 @@ async function checkoutPullRequest(pr: QualifiedPr, target: string): Promise<voi
   );
   const fetchError = processError("Unable to fetch pull request revisions", fetch);
   if (fetchError) throw fetchError;
+  const checkout = await runProcess("git", ["checkout", "--detach", "refs/evaluator/head"], {
+    cwd: target,
+  });
+  const checkoutError = processError("Unable to check out pull request head", checkout);
+  if (checkoutError) throw checkoutError;
+  const install = await runProcess("corepack", ["pnpm", "install", "--frozen-lockfile"], {
+    cwd: target,
+    timeoutMs: 10 * 60_000,
+    env: { ...process.env, CI: "true" },
+  });
+  const installError = processError("Unable to install target revision dependencies", install);
+  if (installError) throw installError;
+  const analyzerSparseCheckout = await runProcess(
+    "git",
+    ["sparse-checkout", "set", "--cone", ...serviceRoots],
+    { cwd: target },
+  );
+  const analyzerSparseCheckoutError = processError(
+    "Unable to narrow analyzer sparse checkout",
+    analyzerSparseCheckout,
+  );
+  if (analyzerSparseCheckoutError) throw analyzerSparseCheckoutError;
   const baseArchive = join(target, ".git", "evaluator-base-materialized.zip");
   const materializeBase = await runProcess(
     "git",
@@ -164,7 +186,6 @@ async function checkoutPullRequest(pr: QualifiedPr, target: string): Promise<voi
       `--output=${baseArchive}`,
       "refs/evaluator/base",
       "--",
-      "eng",
       ...serviceRoots,
       "package.json",
       "pnpm-lock.yaml",
@@ -178,18 +199,6 @@ async function checkoutPullRequest(pr: QualifiedPr, target: string): Promise<voi
   );
   await unlink(baseArchive).catch(() => undefined);
   if (materializeBaseError) throw materializeBaseError;
-  const checkout = await runProcess("git", ["checkout", "--detach", "refs/evaluator/head"], {
-    cwd: target,
-  });
-  const checkoutError = processError("Unable to check out pull request head", checkout);
-  if (checkoutError) throw checkoutError;
-  const install = await runProcess("corepack", ["pnpm", "install", "--frozen-lockfile"], {
-    cwd: target,
-    timeoutMs: 10 * 60_000,
-    env: { ...process.env, CI: "true" },
-  });
-  const installError = processError("Unable to install target revision dependencies", install);
-  if (installError) throw installError;
 }
 
 async function resolveEvaluatorCommit(): Promise<string> {
