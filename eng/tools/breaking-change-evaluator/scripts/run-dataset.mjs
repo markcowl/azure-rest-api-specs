@@ -13,6 +13,7 @@ const selectionPath = resolve(option("--selection"));
 const outputRoot = resolve(option("--output"));
 const cacheDir = resolve(option("--cache-dir"));
 const sourceReports = option("--source-reports");
+const qualificationSnapshots = option("--qualification-snapshots");
 const concurrency = Number(option("--concurrency", "3"));
 const selection = JSON.parse(await readFile(selectionPath, "utf8"));
 const records = selection.records.filter((record) => record.selected);
@@ -46,6 +47,10 @@ async function runRecord(record) {
       changedTypeSpecFiles: source.pullRequest.changedTypeSpecFiles,
       oadFindings: source.oadFindings,
     };
+  } else if (qualificationSnapshots) {
+    qualifiedPr = JSON.parse(
+      await readFile(join(resolve(qualificationSnapshots), `${record.number}.json`), "utf8"),
+    );
   } else {
     qualifiedPr = await qualifyPullRequest(
       parsePrReference(`${selection.repository}#${record.number}`),
