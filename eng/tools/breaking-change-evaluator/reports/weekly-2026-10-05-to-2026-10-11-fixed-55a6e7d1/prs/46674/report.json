@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-46674:6249fb38aaf0f6f919f9b958c57cf40f8d1419e2"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46674,
+    "title": "Preserve Front Door provisioning name constraints",
+    "author": "ArcturusZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "arcturuszhang-add-cdn-name-constraints",
+    "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+    "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+    "mergedAt": "2026-10-09T05:59:12Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+      "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+      "runs": {
+        "A": {
+          "id": 37721339691,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "e5f4301231b62b5b6b1e4f2dd9546a6e27d2fbf9cf8d47ee7f1e0793e790da71",
+          "summaryDigest": "a34d543b060ba538d669f92eddf215192d4292f5182e4a3cad53c11eb09358b1"
+        },
+        "B": {
+          "id": 37721339640,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "b038f28ec1af209b07a0298dcc002766964a18632f3e5445d9293130d9caf551",
+          "summaryDigest": "0003c506dc6e5e5740230435c9d7aa84d67a69db39cd983f579274037ecb5073"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+      "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/495bf9259924f532-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/495bf9259924f532-phase-a.md",
+          "jsonDigest": "d40cb5310aef7658644fb8ff3b6e8718fbfeae9d544fe834f241cb63bfa58363",
+          "markdownDigest": "42ed72d9d8525ddbc7d8b5048355368c5fed54680cdc6cebc434c5e52b5114ce",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 10849,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 10001,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 20857
+          },
+          "comparisonsPerformed": 6,
+          "versionComparisons": [
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-06-01",
+              "headVersion": "2025-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-09-01-preview",
+              "headVersion": "2025-09-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-12-01",
+              "headVersion": "2025-12-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2026-04-01-preview",
+              "headVersion": "2026-04-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2026-07-01",
+              "headVersion": "2026-07-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2026-08-01-preview",
+              "headVersion": "2026-08-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/495bf9259924f532-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+          "jsonDigest": "0c5c4391f29d8f3d4d840176d4daea738d329f9075ccc6581eb8da3ed0c3b697",
+          "markdownDigest": "4bca0f220ee97d3ccf8adfe8de86f6e70ac944ff8549201e1fe198a5db7e4d0e",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 10519,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 9938,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 20464
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "719621dae58887d2d86a0f9d3932c1b4b6f55e28730a6be5ed3b8384756b0b89",
+      "comparisonsPerformed": 6,
+      "versionComparisons": [
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-06-01",
+          "headVersion": "2025-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-09-01-preview",
+          "headVersion": "2025-09-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-12-01",
+          "headVersion": "2025-12-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2026-04-01-preview",
+          "headVersion": "2026-04-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2026-07-01",
+          "headVersion": "2026-07-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2026-08-01-preview",
+          "headVersion": "2026-08-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-69341f7a7999562e",
+      "affectedPrs": [
+        46674
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-9a351084b4eba57c",
+      "affectedPrs": [
+        46674
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "6249fb38aaf0f6f919f9b958c57cf40f8d1419e2",
+    "prBaseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 6249fb38aaf0f6f919f9b958c57cf40f8d1419e2\ngit -C target checkout --detach 6249fb38aaf0f6f919f9b958c57cf40f8d1419e2\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+        "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/Cdn' --base-ref be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 --phase same-version --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-a.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/Cdn' --base-ref be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-b-evidence.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

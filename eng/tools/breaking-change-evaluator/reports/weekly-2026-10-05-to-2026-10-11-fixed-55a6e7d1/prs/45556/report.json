@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-45556:91d8e4ca207bad8071976f84d66e78bbbd32d721"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45556,
+    "title": "Add CognitiveServices preview API version 2026-09-15-preview",
+    "author": "fmabroukmsft",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "swagger-agent/CogSvc-2026-09-15-preview-typespec",
+    "baseSha": "b464a76895ea6f17747d4664b935d0dc55fa06c4",
+    "headSha": "91d8e4ca207bad8071976f84d66e78bbbd32d721",
+    "mergedAt": "2026-10-10T00:18:26Z",
+    "changedTypeSpecFiles": [
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AdapterDeployment.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ArcDeployment.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Compute.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ComputeOperation.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionName.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionPropertiesV2BasicResource.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeCapacity.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeDeployment.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeUsages.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Project.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiBinding.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiPolicy.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiRego.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Workbench.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/back-compatible.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/client.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/main.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "91d8e4ca207bad8071976f84d66e78bbbd32d721",
+      "baseSha": "b464a76895ea6f17747d4664b935d0dc55fa06c4",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AdapterDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ArcDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Compute.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ComputeOperation.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionName.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionPropertiesV2BasicResource.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeCapacity.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeUsages.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Project.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiBinding.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiPolicy.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiRego.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Workbench.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/back-compatible.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/client.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/main.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "91d8e4ca207bad8071976f84d66e78bbbd32d721",
+      "baseSha": "b464a76895ea6f17747d4664b935d0dc55fa06c4"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-87ed0649b17b783f",
+      "affectedPrs": [
+        45556
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

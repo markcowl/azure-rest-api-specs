@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-46715:fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46715,
+    "title": "Add stable EdgeActions 2026-10-01 API",
+    "author": "kestry",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "edgeactions-stable-2026-10-minimal",
+    "baseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c",
+    "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+    "mergedAt": "2026-10-10T14:02:46Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+      "baseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c",
+      "runs": {
+        "A": {
+          "id": 37969208978,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "4fcd08a9f1dff6794a0397cbd665a310a7471e73294819ace61776a774c0abc1",
+          "summaryDigest": "83af85d04fca0c76a34eb4cb28afce3097ea7cbec6d54b743a6dd5eace479d51"
+        },
+        "B": {
+          "id": 37969208848,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "59b966a603959deef99d0293c3cf2988e2acd5474cb2650dd4cb2eb547e7366d",
+          "summaryDigest": "ee46706cdc652f759196897f93699c2ebcb62b367840ea15f524c0fc9c5fbab8"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+      "baseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/c5f763224c81830d-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/c5f763224c81830d-phase-a.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/c5f763224c81830d-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/c5f763224c81830d-phase-b.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-21423794d8210a17",
+      "affectedPrs": [
+        46715
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3",
+    "prBaseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3\ngit -C target checkout --detach fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions",
+        "project": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions' --base-ref 91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c --phase same-version --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-EdgeActions-phase-a.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-EdgeActions-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions' --base-ref 91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-EdgeActions-phase-b-evidence.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-EdgeActions-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

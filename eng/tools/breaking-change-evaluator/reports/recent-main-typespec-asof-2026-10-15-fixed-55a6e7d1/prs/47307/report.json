@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-47307:ec4adf4c47f1937e8c30db755b7dcf14c1f44ad8"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47307,
+    "title": "Add CognitiveServices stable API version 2026-11-01",
+    "author": "fmabroukmsft",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "swagger-agent/CogSvc-2026-11-01-typespec",
+    "baseSha": "a4c2a18ee4d0b1885d66a001145e56744acd9baf",
+    "headSha": "ec4adf4c47f1937e8c30db755b7dcf14c1f44ad8",
+    "changedTypeSpecFiles": [
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AdapterDeployment.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ArcDeployment.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Compute.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ComputeOperation.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionPropertiesV2BasicResource.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeCapacity.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeDeployment.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeUsages.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiBinding.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiRego.tsp",
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Workbench.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "ec4adf4c47f1937e8c30db755b7dcf14c1f44ad8",
+      "baseSha": "a4c2a18ee4d0b1885d66a001145e56744acd9baf",
+      "runs": {
+        "A": {
+          "id": 38655122267,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "ec4adf4c47f1937e8c30db755b7dcf14c1f44ad8",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "d26e75d1fe1ff576b6b2ef1f933e3a8dd8683f530b613bc37898cff9a0fd3568",
+          "summaryDigest": "7d6b5cee8d1ff0c3e4ce7649e6ba0ad019dc1779cae3344552f87492ed28d61c"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AdapterDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ArcDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Compute.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ComputeOperation.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionPropertiesV2BasicResource.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeCapacity.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeUsages.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiBinding.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiRego.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Workbench.tsp"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "ec4adf4c47f1937e8c30db755b7dcf14c1f44ad8",
+      "baseSha": "a4c2a18ee4d0b1885d66a001145e56744acd9baf"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-9f302a93a706e734",
+      "affectedPrs": [
+        47307
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

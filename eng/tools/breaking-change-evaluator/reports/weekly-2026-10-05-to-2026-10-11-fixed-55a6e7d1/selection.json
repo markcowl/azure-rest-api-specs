@@ -1,0 +1,1072 @@
+{
+  "schemaVersion": 2,
+  "schemaCompatibility": ">=2 <3",
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "generatedAt": "2026-10-15T03:00:00Z"
+  },
+  "repository": "Azure/azure-rest-api-specs",
+  "query": {
+    "kind": "merged-window",
+    "baseBranch": "main",
+    "start": "2026-10-05T00:00:00Z",
+    "end": "2026-10-11T23:59:59Z",
+    "order": "mergedAt ascending, PR number ascending",
+    "source": "preserved exact original weekly selection"
+  },
+  "selection": {
+    "cap": 40,
+    "sourceCount": 79,
+    "excludedCount": 44,
+    "qualifyingCount": 35,
+    "selectedCount": 35,
+    "remainingCount": 0,
+    "continuationCursor": null,
+    "pathScope": "specification/",
+    "filePatterns": [
+      "*.tsp",
+      "tspconfig.yaml"
+    ]
+  },
+  "analyzer": {
+    "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+  },
+  "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+  "records": [
+    {
+      "number": 46377,
+      "title": "Dev/hbhansali/resiliencemgmt ga 2026 10 01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46377",
+      "mergedAt": "2026-10-05T05:51:23Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/goal.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/main.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/drill/drillResource.models.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/drill/enums.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/goals/enum.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/goals/goalAssignment.tsp",
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/models/goals/goalResource.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47014,
+      "title": "Bump simple-git from 3.36.0 to 4.0.2",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47014",
+      "mergedAt": "2026-10-05T12:14:06Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46974,
+      "title": "Upload impact summaries as raw JSON",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46974",
+      "mergedAt": "2026-10-05T12:15:10Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46995,
+      "title": "Skip unnecessary PR check jobs",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46995",
+      "mergedAt": "2026-10-05T12:17:22Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46338,
+      "title": "Chipate/compute placement score",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46338",
+      "mergedAt": "2026-10-05T16:14:05Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/ComputeDiagnosticBase.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/PlacementScoresBase.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/back-compatible.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/client.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/main.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/models.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47021,
+      "title": "Revert checkout composite action and $/ reference due to performance issue",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47021",
+      "mergedAt": "2026-10-05T16:19:35Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47008,
+      "title": "Add AIInfraOptimization service group to Microsoft.AIInfraOptimization ARM lease",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47008",
+      "mergedAt": "2026-10-05T16:50:36Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47024,
+      "title": "Fix pnpm bootstrap in library publishing builds",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47024",
+      "mergedAt": "2026-10-05T16:57:37Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46975,
+      "title": "Require TypeSpec for new API versions in migrated services",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46975",
+      "mergedAt": "2026-10-05T17:53:28Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46929,
+      "title": "Guide engineering reviews with system context and API call costs",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46929",
+      "mergedAt": "2026-10-05T18:02:10Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47025,
+      "title": "Publish library development versions automatically",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47025",
+      "mergedAt": "2026-10-05T18:21:19Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 44918,
+      "title": "Auto-generated baselines by 1ES Pipeline Templates",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/44918",
+      "mergedAt": "2026-10-05T19:34:00Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46751,
+      "title": "[Foundry] End of September Release train.",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46751",
+      "mergedAt": "2026-10-05T23:24:00Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/candidates.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/inputs.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/jobs.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/routes.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/common/servicepatterns.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/connections/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/data_generation_jobs/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/data_generation_jobs/routes.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/evaluators/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/evaluators/routes.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/chat/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/common.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/routes.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/user_conversation_simulation.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/error.default.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-agents.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-datasets.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-evaluators.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-projects.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects-agents/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents/tspconfig.yaml",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-projects/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-projects/tspconfig.yaml",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-python-js-azure-ai-projects/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/toolboxes/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/tools/models.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47005,
+      "title": "Revert(planetarycomputer): restore previous folder structure",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47005",
+      "mergedAt": "2026-10-06T00:27:06Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/orbital/Microsoft.PlanetaryComputer/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47043,
+      "title": "Bump oxfmt from 0.70.0 to 0.71.0",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47043",
+      "mergedAt": "2026-10-06T01:13:05Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47039,
+      "title": "Sync eng/common directory with azure-sdk-tools for PR 17077",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47039",
+      "mergedAt": "2026-10-06T08:34:12Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47050,
+      "title": "Explain required contributor access and its PR impact",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47050",
+      "mergedAt": "2026-10-06T13:24:35Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47052,
+      "title": "Restore authentication for stale branch cleanup",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47052",
+      "mergedAt": "2026-10-06T13:46:32Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47023,
+      "title": "Add common types to foundry-core TypeSpec library",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47023",
+      "mergedAt": "2026-10-06T14:10:10Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "libs/foundry-core/lib/errors.tsp",
+        "libs/foundry-core/lib/foundations.tsp",
+        "libs/foundry-core/lib/jobs.tsp",
+        "libs/foundry-core/lib/main.tsp",
+        "libs/foundry-core/lib/pagination.tsp",
+        "libs/foundry-core/lib/scalars.tsp",
+        "libs/foundry-core/samples/error-handling.tsp",
+        "libs/foundry-core/samples/jobs.tsp",
+        "libs/foundry-core/samples/pagination.tsp"
+      ],
+      "qualifies": false,
+      "selected": false,
+      "exclusionReason": "TypeSpec files are outside specification/"
+    },
+    {
+      "number": 47028,
+      "title": "Preserve historical Swagger suppressions during folder migrations",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47028",
+      "mergedAt": "2026-10-06T14:22:56Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47054,
+      "title": "Clean up stale development and publication branches",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47054",
+      "mergedAt": "2026-10-06T14:58:30Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46950,
+      "title": "[KeyVault] Keep SDK type name ManagedHsmSkuName for 2026-05-15 (client.tsp only)",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46950",
+      "mergedAt": "2026-10-06T15:00:29Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47047,
+      "title": "Try to fix NET SDK for PTM",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47047",
+      "mergedAt": "2026-10-06T15:31:57Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46689,
+      "title": "Pass spec commits through release-plan automation",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46689",
+      "mergedAt": "2026-10-06T16:29:07Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47003,
+      "title": "Preserve unchanged TypeSpec suppression approvals",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47003",
+      "mergedAt": "2026-10-06T18:39:22Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47072,
+      "title": "Upgrade deps",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47072",
+      "mergedAt": "2026-10-06T20:47:32Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47030,
+      "title": "Add Udi service group to Microsoft.Udi ARM lease",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47030",
+      "mergedAt": "2026-10-06T21:14:45Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47065,
+      "title": "Add DataScan service group to Microsoft.Privacy ARM lease",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47065",
+      "mergedAt": "2026-10-06T23:35:23Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47064,
+      "title": "Add AIGateway service group to Microsoft.ApiManagement ARM lease",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47064",
+      "mergedAt": "2026-10-06T23:36:35Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47066,
+      "title": "Add internal service group to Microsoft.HealthcareInterop ARM lease",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47066",
+      "mergedAt": "2026-10-06T23:37:29Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47067,
+      "title": "Add RecoveryServicesBackupCrr service group to Microsoft.RecoveryServices ARM lease",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47067",
+      "mergedAt": "2026-10-06T23:38:50Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46924,
+      "title": "[Commvault] Align nine preview APIs with pinned private source",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46924",
+      "mergedAt": "2026-10-07T09:23:40Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/liftrcommvault/Commvault.ContentStore.Management/back-compatible.tsp",
+        "specification/liftrcommvault/Commvault.ContentStore.Management/client.tsp",
+        "specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47086,
+      "title": "Use yaml consistently in repository tooling",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47086",
+      "mergedAt": "2026-10-07T12:08:46Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47087,
+      "title": "Fix artifact action version comments for zizmor",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47087",
+      "mergedAt": "2026-10-07T12:22:34Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47034,
+      "title": "Update CODEOWNERS maintainers",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47034",
+      "mergedAt": "2026-10-07T12:55:26Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47088,
+      "title": "Unassign issue authors after author-feedback responses",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47088",
+      "mergedAt": "2026-10-07T13:33:35Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47070,
+      "title": "[CODEOWNERS] Define maintainer defaults and unowned specification fallback",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47070",
+      "mergedAt": "2026-10-07T14:05:57Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47091,
+      "title": "Group undetermined commit-identity findings in contributor readiness by email",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47091",
+      "mergedAt": "2026-10-07T14:25:42Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47090,
+      "title": "Use pathe exclusively throughout TypeSpec validation",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47090",
+      "mergedAt": "2026-10-07T15:32:50Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47022,
+      "title": "[ProtectedFiles] Let CODEOWNERS gate repository maintenance",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47022",
+      "mergedAt": "2026-10-07T16:22:39Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47105,
+      "title": "Touch policies files to force refresh",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47105",
+      "mergedAt": "2026-10-07T19:05:31Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 45368,
+      "title": "Add DPS stable 2026-11-01 API version",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45368",
+      "mergedAt": "2026-10-07T20:12:37Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/main.tsp",
+        "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/models.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47106,
+      "title": "Retire the Mgmt-EngSys label",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47106",
+      "mergedAt": "2026-10-07T20:18:20Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46656,
+      "title": "[HybridConnectivity] Fix .NET client names for GCP connector 2027-01-01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46656",
+      "mergedAt": "2026-10-07T21:09:32Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47033,
+      "title": "Microsoft.Authorization PrivilegedAccess 2026-06-01-preview (supersedes #45970)",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47033",
+      "mergedAt": "2026-10-07T21:28:15Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/PrivilegedResourceFavorite.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/main.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/models.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/routes.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/tspconfig.yaml",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 45358,
+      "title": "Sync .github/skills directory with azure-sdk-tools for PR 16634",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45358",
+      "mergedAt": "2026-10-08T05:34:01Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        ".github/skills/azsdk-common-sdk-breaking-change/fixtures/detect-sdk-breaking-changes-for-service-001/models.tsp"
+      ],
+      "qualifies": false,
+      "selected": false,
+      "exclusionReason": "TypeSpec files are outside specification/"
+    },
+    {
+      "number": 47118,
+      "title": "[Network] Fix Java VMSS public IP API version selection",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47118",
+      "mergedAt": "2026-10-08T05:43:48Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46044,
+      "title": "RecoveryServicesBackup: add 2026-10-01 API version with Instant Access snapshot policy props",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46044",
+      "mergedAt": "2026-10-08T05:49:45Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/CrossTenantVaultMappingResource.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/RecoveryPointResource.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/back-compatible.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46855,
+      "title": "Update client.tsp for Private Traffic Manager",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46855",
+      "mergedAt": "2026-10-08T06:00:20Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46676,
+      "title": "Add AppNetwork provisioning emitter config",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46676",
+      "mergedAt": "2026-10-08T08:33:35Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/applink/AppLink.Management/tspconfig.yaml"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46967,
+      "title": "ContainerService: remove stable api-version pins from tspconfig for 2026-07 preview SDK generation",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46967",
+      "mergedAt": "2026-10-08T08:35:43Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/tspconfig.yaml"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46585,
+      "title": "Enable Fabric provisioning emitter",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46585",
+      "mergedAt": "2026-10-08T08:51:15Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/fabric/resource-manager/Microsoft.Fabric/Fabric/tspconfig.yaml"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47100,
+      "title": "Triage new issues with EngSys and service routing",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47100",
+      "mergedAt": "2026-10-08T12:31:32Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47127,
+      "title": "Use exact release versions for action pin comments",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47127",
+      "mergedAt": "2026-10-08T12:47:33Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47075,
+      "title": "Share validation diagnostics and service manifest parsing",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47075",
+      "mergedAt": "2026-10-08T13:07:57Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47128,
+      "title": "Run GitHub Actions linting independently in Eng",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47128",
+      "mergedAt": "2026-10-08T13:19:57Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 46938,
+      "title": "[TypeSpec Validation] Ensure compile output folder matches allowed pattern",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46938",
+      "mergedAt": "2026-10-08T13:38:07Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47121,
+      "title": "Update SDK breaking-change and release-plan automation approver lists",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47121",
+      "mergedAt": "2026-10-08T14:28:27Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47140,
+      "title": "Update TypeSpec libraries to latest release versions",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47140",
+      "mergedAt": "2026-10-09T00:26:42Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/user_conversation_simulation.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/responses/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/tools/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/voice-agents/agents.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/voice-agents/protocol.tsp",
+        "specification/ai/data-plane/AIAgents/common/models.tsp",
+        "specification/ai/data-plane/AIAgents/messages/models.tsp",
+        "specification/ai/data-plane/AIAgents/tools/models.tsp",
+        "specification/ai/data-plane/AIAgents/tools/tool_resources.tsp",
+        "specification/ai/data-plane/OpenAIAssistants/common/models.tsp",
+        "specification/ai/data-plane/OpenAIAssistants/messages/models.tsp",
+        "specification/ai/data-plane/OpenAIAssistants/tools/models.tsp",
+        "specification/ai/data-plane/OpenAIAssistants/tools/tool_resources.tsp",
+        "specification/ai/data-plane/VoiceLive/custom.tsp",
+        "specification/ai/data-plane/VoiceLive/tools.tsp",
+        "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PreviewAlertRule/models.tsp",
+        "specification/app/data-plane/ContainerApps/models/volumes.tsp",
+        "specification/batch/resource-manager/Microsoft.Batch/Batch/client.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp",
+        "specification/cognitiveservices/data-plane/OpenAIInference/models/completions/chat_messages.tsp",
+        "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry/client.tsp",
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "specification/edge/resource-manager/Microsoft.Edge/configurationmanager/Job.tsp",
+        "specification/inferenceservice/data-plane/InferenceService/models.tsp",
+        "specification/keyvault/data-plane/Administration/common/common.tsp",
+        "specification/keyvault/data-plane/Certificates/common/common.tsp",
+        "specification/keyvault/data-plane/Keys/common/common.tsp",
+        "specification/keyvault/data-plane/Secrets/common/common.tsp",
+        "specification/keyvault/data-plane/SecurityDomain/common/common.tsp",
+        "specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/models/NetworkTapRule.tsp",
+        "specification/maps/data-plane/Weather/models.tsp",
+        "specification/monitor/resource-manager/Microsoft.Insights/Insights/ScheduledQueryRuleApi/models.tsp",
+        "specification/orbital/Microsoft.PlanetaryComputer/models.tiler.items.tsp",
+        "specification/postgresqlhsc/resource-manager/Microsoft.DBforPostgreSQL/PostgresqlHsc/client.tsp",
+        "specification/search/data-plane/Search/models-knowledgebase.tsp",
+        "specification/sql/resource-manager/Microsoft.Sql/SQL/client.tsp",
+        "specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp",
+        "specification/storagemover/resource-manager/Microsoft.StorageMover/StorageMover/models.tsp",
+        "specification/trafficmanager/resource-manager/Microsoft.Network/TrafficManager/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46583,
+      "title": "[OperationalInsights] Rename data authorization property for C#",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46583",
+      "mergedAt": "2026-10-09T04:53:56Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46546,
+      "title": "Refactor(storage): migrate to unified folder structure",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46546",
+      "mergedAt": "2026-10-09T05:57:56Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/storage/data-plane/QueueStorage/tspconfig.yaml",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/AdvancedPlatformMetrics.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/BlobAccessPointConfiguration.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/BlobContainer.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/BlobInventoryPolicy.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/BlobServiceProperties.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/DeletedAccount.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/EncryptionScope.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/FileServiceProperties.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/FileServiceUsage.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/FileShare.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/LocalUser.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/ManagementPolicy.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/NetworkSecurityPerimeterConfiguration.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/ObjectReplicationPolicy.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/PrivateEndpointConnection.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/QueueServiceProperties.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/StorageAccount.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/StorageAccountMigration.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/StorageConnector.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/StorageContextCache.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/StorageContextCacheContainer.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/StorageDataShare.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/StorageQueue.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/StorageTaskAssignment.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46674,
+      "title": "Preserve Front Door provisioning name constraints",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46674",
+      "mergedAt": "2026-10-09T05:59:12Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47123,
+      "title": "Enable Verified ID provisioning emitter",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47123",
+      "mergedAt": "2026-10-09T06:24:33Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId/tspconfig.yaml"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47139,
+      "title": "[SDK configuration] Pin all Resilience Management SDK API versions",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47139",
+      "mergedAt": "2026-10-09T09:33:41Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/tspconfig.yaml"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47015,
+      "title": "Release Network API Version 2026-03-01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47015",
+      "mergedAt": "2026-10-09T09:44:37Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/network/resource-manager/Microsoft.Network/Network/Common/main.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/ExpressRouteLagAuthorization.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/VirtualNetworkApplianceCapability.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/back-compatible.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46860,
+      "title": "[Commvault] Add 2026-09-30 stable API",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46860",
+      "mergedAt": "2026-10-09T11:17:24Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 45102,
+      "title": "[Event Grid] Add Control Plane API Version 2026-06-15-preview",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45102",
+      "mergedAt": "2026-10-09T11:45:32Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 45799,
+      "title": "[Microsoft.ApiManagement] Add AI Gateway 2026-09-01-preview API",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45799",
+      "mergedAt": "2026-10-09T15:56:32Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGateway.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayCommon.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayOperations.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResource.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/main.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/tspconfig.yaml"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 45523,
+      "title": "Add MachineLearningServices stable API version 2026-09-01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45523",
+      "mergedAt": "2026-10-09T17:05:50Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ComputeResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/EndpointDeploymentResourcePropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/EndpointResourcePropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferenceEndpoint.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferenceGroup.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferencePool.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ManagedNetworkSettingsPropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/OutboundRuleBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiBlocklistItemPropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiBlocklistPropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiPolicyPropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/Workspace.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/WorkspaceConnectionPropertiesV2BasicResource.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46391,
+      "title": "Adding ObservabilityConfiguration API specs to ALDO EdgeOperator RP.",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46391",
+      "mergedAt": "2026-10-09T17:29:22Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/main.tsp",
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/observabilityConfiguration.tsp",
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/tspconfig.yaml"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47161,
+      "title": "Rename ContextCache/BlobAccessPoint .NET properties",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47161",
+      "mergedAt": "2026-10-09T18:55:38Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47160,
+      "title": "[IoTHub] Add C# client names for 2026-10-01-preview types",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47160",
+      "mergedAt": "2026-10-09T19:24:37Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46832,
+      "title": "Add 2026-09-03-preview API version for Azure Monitor Workspaces",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46832",
+      "mergedAt": "2026-10-09T22:07:17Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/main.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46666,
+      "title": "Update Search resource manager codeowners",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46666",
+      "mergedAt": "2026-10-09T23:11:24Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 45556,
+      "title": "Add CognitiveServices preview API version 2026-09-15-preview",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45556",
+      "mergedAt": "2026-10-10T00:18:26Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AdapterDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ArcDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Compute.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ComputeOperation.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionName.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ConnectionPropertiesV2BasicResource.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeCapacity.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeDeployment.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedComputeUsages.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Project.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiBinding.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiPolicy.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/RaiRego.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Workbench.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/back-compatible.tsp",
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47149,
+      "title": "Update suppressions",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47149",
+      "mergedAt": "2026-10-10T02:01:48Z",
+      "baseBranch": "main",
+      "matchingFiles": [],
+      "qualifies": false,
+      "selected": false
+    },
+    {
+      "number": 47170,
+      "title": "Avoid BillingBenefits C# validation model naming collision",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47170",
+      "mergedAt": "2026-10-10T07:59:51Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits/client.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 47019,
+      "title": "feat: add Private Traffic Manager affinity routing in 2026-10-01-preview",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47019",
+      "mergedAt": "2026-10-10T08:19:46Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/main.tsp",
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/models/EndpointModels.tsp",
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/models/ProfileModels.tsp",
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/models/SiteModels.tsp",
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/tspconfig.yaml"
+      ],
+      "qualifies": true,
+      "selected": true
+    },
+    {
+      "number": 46715,
+      "title": "Add stable EdgeActions 2026-10-01 API",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46715",
+      "mergedAt": "2026-10-10T14:02:46Z",
+      "baseBranch": "main",
+      "matchingFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp"
+      ],
+      "qualifies": true,
+      "selected": true
+    }
+  ]
+}

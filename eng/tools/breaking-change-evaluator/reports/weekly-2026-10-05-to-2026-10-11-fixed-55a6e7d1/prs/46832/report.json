@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-46832:cf9dfe57515ddfcc0e0d077c5a37663a8cbbe1f6"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46832,
+    "title": "Add 2026-09-03-preview API version for Azure Monitor Workspaces",
+    "author": "GokulPrasad-Work",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "gokulpk/amw-2026-09-03-preview",
+    "baseSha": "0b9b413d97fceef4c1ee276e4156269fc5ea5d33",
+    "headSha": "cf9dfe57515ddfcc0e0d077c5a37663a8cbbe1f6",
+    "mergedAt": "2026-10-09T22:07:17Z",
+    "changedTypeSpecFiles": [
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/main.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricConfigurations/metricConfigurations.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricConfigurations/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricsContainers/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/service.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceAssociations/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceAssociations/traceAssociations.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceContainers/models.tsp",
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceContainers/traceContainers.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "cf9dfe57515ddfcc0e0d077c5a37663a8cbbe1f6",
+      "baseSha": "0b9b413d97fceef4c1ee276e4156269fc5ea5d33",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/main.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricConfigurations/metricConfigurations.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricConfigurations/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/metricsContainers/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/service.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceAssociations/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceAssociations/traceAssociations.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceContainers/models.tsp",
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/typespec/traceContainers/traceContainers.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "cf9dfe57515ddfcc0e0d077c5a37663a8cbbe1f6",
+      "baseSha": "0b9b413d97fceef4c1ee276e4156269fc5ea5d33"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-bd676b26c94c34a7",
+      "affectedPrs": [
+        46832
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

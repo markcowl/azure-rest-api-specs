@@ -1,0 +1,494 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-47255:4459681a24578d2f211e4a05bbd64cb8c02f491d"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47255,
+    "title": "Add ACS incoming call event properties",
+    "author": "osaghaso",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "user/osaghaso/Update_incomingCall_events",
+    "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264",
+    "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+    "changedTypeSpecFiles": [
+      "specification/eventgrid/data-plane/EventGridSystemEvents/Microsoft.Communication/AzureCommunicationServices.tsp",
+      "specification/eventgrid/data-plane/EventGridSystemEvents/propertyNameOverrideCsharp.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+      "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264",
+      "runs": {
+        "A": {
+          "id": 38468969032,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b",
+          "summaryDigest": "8dd1753738cef5d88ec6bc906636fd29b198393acedd0f6875c1d2c4e92a6fa1"
+        },
+        "B": {
+          "id": 38468969209,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "a3d03e238c572f2fc989db1191d6cd40d616951c58fec31f17fd895289e61a2d",
+          "summaryDigest": "334e99259b5a31a01381f63c4bdd8372226ef11985f878f72e92002e06e61bc6"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/eventgrid/data-plane/EventGridSystemEvents/Microsoft.Communication/AzureCommunicationServices.tsp",
+        "specification/eventgrid/data-plane/EventGridSystemEvents/propertyNameOverrideCsharp.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+      "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json",
+        "oldVersion": "2018-01-01",
+        "newVersion": "2018-01-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2018-01-01/GeneratedSystemEvents.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json",
+        "oldVersion": "2024-01-01",
+        "newVersion": "2024-01-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "1dd504298c634205583459632cbecef49538318a58dbe577c1a28a2d2ca7992b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/eventgrid/data-plane/EventGridSystemEvents/stable/2024-01-01/GeneratedSystemEvents.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [
+    {
+      "project": "specification/eventgrid/data-plane/EventGridSystemEvents",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/e6189f230e3e5995-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/e6189f230e3e5995-phase-a.md",
+          "jsonDigest": "8b9eb48e1b821719090c6cfcfea5b58c2dcabeb407929e7cdfc7be071f63fcb5",
+          "markdownDigest": "ccc849b9f25a2705dbaf58ccd725100e90e5e3be8480092d65e0f473ca938f5a",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 894,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 3,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 904
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "SystemEvents",
+              "baseVersion": "2018-01-01",
+              "headVersion": "2018-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "SystemEvents",
+              "baseVersion": "2024-01-01",
+              "headVersion": "2024-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/e6189f230e3e5995-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/e6189f230e3e5995-phase-b.md",
+          "jsonDigest": "cfd33e857db16344af3029b9aba1b20e5d2f4ce0b9678dc7ca20dbcc73dcc73f",
+          "markdownDigest": "acd7f1d31a337dcab44b4c49a0940212f157e6bb2cb127ff66c25d6ee694d2df",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 310,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 315
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "71ccbac4e0094ed2131fc6d2114d3c98853ea4358b487d9a6d6bd6ed14ccf57f",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "SystemEvents",
+          "baseVersion": "2018-01-01",
+          "headVersion": "2018-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "SystemEvents",
+          "baseVersion": "2024-01-01",
+          "headVersion": "2024-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [
+    {
+      "oadOccurrenceId": "A-oad-0",
+      "target": {
+        "spec": "specification\\eventgrid\\data-plane\\EventGridSystemEvents\\stable\\2018-01-01\\GeneratedSystemEvents.json",
+        "project": "specification/eventgrid/data-plane",
+        "phase": "A",
+        "baseVersion": "2018-01-01",
+        "headVersion": "2018-01-01",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document GeneratedSystemEvents.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\eventgrid\\data-plane\\EventGridSystemEvents\\stable\\2018-01-01\\GeneratedSystemEvents.json",
+          "project": "specification/eventgrid/data-plane",
+          "phase": "A",
+          "baseVersion": "2018-01-01",
+          "headVersion": "2018-01-01",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document GeneratedSystemEvents.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-1",
+      "target": {
+        "spec": "specification\\eventgrid\\data-plane\\EventGridSystemEvents\\stable\\2024-01-01\\GeneratedSystemEvents.json",
+        "project": "specification/eventgrid/data-plane",
+        "phase": "A",
+        "baseVersion": "2024-01-01",
+        "headVersion": "2024-01-01",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document GeneratedSystemEvents.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\eventgrid\\data-plane\\EventGridSystemEvents\\stable\\2024-01-01\\GeneratedSystemEvents.json",
+          "project": "specification/eventgrid/data-plane",
+          "phase": "A",
+          "baseVersion": "2024-01-01",
+          "headVersion": "2024-01-01",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document GeneratedSystemEvents.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    }
+  ],
+  "findingGroups": [
+    {
+      "category": "informational-oad",
+      "key": "NoVersionChange",
+      "swaggerRule": "NoVersionChange",
+      "oadOccurrenceIds": [
+        "A-oad-0",
+        "A-oad-1"
+      ],
+      "typeSpecOccurrenceIds": []
+    }
+  ],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-3dc8110a3fabf8cb",
+      "affectedPrs": [
+        47255
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-4474532999546b7f",
+      "affectedPrs": [
+        47255
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+    "prBaseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin b8e052ca3659235e2051aa629cfb058f7fb53264 4459681a24578d2f211e4a05bbd64cb8c02f491d\ngit -C target checkout --detach 4459681a24578d2f211e4a05bbd64cb8c02f491d\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/eventgrid/data-plane/EventGridSystemEvents",
+        "project": "specification/eventgrid/data-plane/EventGridSystemEvents",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/eventgrid/data-plane/EventGridSystemEvents' --base-ref b8e052ca3659235e2051aa629cfb058f7fb53264 --phase same-version --json-output '../specification-eventgrid-data-plane-EventGridSystemEvents-phase-a.json' --markdown-output '../specification-eventgrid-data-plane-EventGridSystemEvents-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/eventgrid/data-plane/EventGridSystemEvents' --base-ref b8e052ca3659235e2051aa629cfb058f7fb53264 --json-output '../specification-eventgrid-data-plane-EventGridSystemEvents-phase-b-evidence.json' --markdown-output '../specification-eventgrid-data-plane-EventGridSystemEvents-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 2,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 2,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

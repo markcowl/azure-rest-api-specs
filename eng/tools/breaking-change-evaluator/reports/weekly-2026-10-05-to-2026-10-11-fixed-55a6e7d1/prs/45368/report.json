@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-45368:79ccd3d841bf5c15f0ee4844833584ae655ce279"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45368,
+    "title": "Add DPS stable 2026-11-01 API version",
+    "author": "mollyiverson",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "mollyiverson-microsoft-deviceprovisioningservices-Microsoft.Devices-2026-11-01",
+    "baseSha": "5279ce43417174d87cc78d17729f1c81644805da",
+    "headSha": "79ccd3d841bf5c15f0ee4844833584ae655ce279",
+    "mergedAt": "2026-10-07T20:12:37Z",
+    "changedTypeSpecFiles": [
+      "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/main.tsp",
+      "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "79ccd3d841bf5c15f0ee4844833584ae655ce279",
+      "baseSha": "5279ce43417174d87cc78d17729f1c81644805da",
+      "runs": {
+        "A": {
+          "id": 37675233137,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "79ccd3d841bf5c15f0ee4844833584ae655ce279",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "33417ab1f711a00cb44b9b75bcaa17d54bdd256a1a315fb9fe6eb35a8b6dd5c6",
+          "summaryDigest": "5ef6e894b92305955d8adc38e4c3cfc89348dc3381f5f3228f32c8bc581a2721"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/main.tsp",
+        "specification/deviceprovisioningservices/resource-manager/Microsoft.Devices/DeviceProvisioningServices/models.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary claims no findings but workflow logs contain OAD findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "79ccd3d841bf5c15f0ee4844833584ae655ce279",
+      "baseSha": "5279ce43417174d87cc78d17729f1c81644805da"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-b46a4248996d3b0e",
+      "affectedPrs": [
+        45368
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "invalid-oad-output",
+          "detail": "invalid-oad-output"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "Job summary claims no findings but workflow logs contain OAD findings"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

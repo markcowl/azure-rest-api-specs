@@ -1,0 +1,47 @@
+{
+  "specPaths": [
+    "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "versionComparisons": [
+      {
+        "serviceName": "OperationalInsights",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "OperationalInsights",
+        "baseVersion": "2026-03-01",
+        "headVersion": "2026-03-01",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1259,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 916,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 2179
+  }
+}

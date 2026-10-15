@@ -1,0 +1,54 @@
+{
+  "specPaths": [
+    "specification/ai/data-plane/AIAgents"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3,
+    "versionComparisons": [
+      {
+        "serviceName": "Agents",
+        "baseVersion": "2025-05-01",
+        "headVersion": "2025-05-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Agents",
+        "baseVersion": "v1",
+        "headVersion": "v1",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Agents",
+        "baseVersion": "2025-05-15-preview",
+        "headVersion": "2025-05-15-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1354,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 1005,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 2363
+  }
+}

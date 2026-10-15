@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-47283:cd3b8a040626466bd9333b0d9793ce68c326a736"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47283,
+    "title": "Adding API Version 2026-11-01 for Microsoft.RecoveryServices (Site Recovery, Backup, Vault)",
+    "author": "sisunkar",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "users/sisunkar/siterecovery-2026-11-01-nosecret",
+    "baseSha": "dc7218d2648d05079de45c616d940deded784a7d",
+    "headSha": "cd3b8a040626466bd9333b0d9793ce68c326a736",
+    "changedTypeSpecFiles": [
+      "specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/RecoveryServices/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "cd3b8a040626466bd9333b0d9793ce68c326a736",
+      "baseSha": "dc7218d2648d05079de45c616d940deded784a7d",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/RecoveryServices/main.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "cd3b8a040626466bd9333b0d9793ce68c326a736",
+      "baseSha": "dc7218d2648d05079de45c616d940deded784a7d"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-d2904505e57609bd",
+      "affectedPrs": [
+        47283
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

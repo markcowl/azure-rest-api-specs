@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-47048:29b4a77e76c92674e13040c3139ce553ef126a74"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47048,
+    "title": "Fix Defender for Storage TypeSpec migration issues and suppression justifications",
+    "author": "fhaddad21",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "defender-for-storage-fixes",
+    "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+    "headSha": "29b4a77e76c92674e13040c3139ce553ef126a74",
+    "changedTypeSpecFiles": [
+      "specification/security/resource-manager/Microsoft.Security/Security/Common/main.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/DefenderForStorageSetting.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/back-compatible.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/main.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "29b4a77e76c92674e13040c3139ce553ef126a74",
+      "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/security/resource-manager/Microsoft.Security/Security/Common/main.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/DefenderForStorageSetting.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/back-compatible.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/main.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "29b4a77e76c92674e13040c3139ce553ef126a74",
+      "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-f035909447abcd0c",
+      "affectedPrs": [
+        47048
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

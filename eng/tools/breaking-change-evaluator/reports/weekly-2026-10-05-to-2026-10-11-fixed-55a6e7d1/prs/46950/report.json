@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-46950:55d46a9583452592329b89f67be3240eef787012"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46950,
+    "title": "[KeyVault] Keep SDK type name ManagedHsmSkuName for 2026-05-15 (client.tsp only)",
+    "author": "neerjagangwar",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "ngangwar/keyvault-mhsm-skuname-clientname",
+    "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+    "headSha": "55d46a9583452592329b89f67be3240eef787012",
+    "mergedAt": "2026-10-06T15:00:29Z",
+    "changedTypeSpecFiles": [
+      "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "55d46a9583452592329b89f67be3240eef787012",
+      "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+      "runs": {
+        "A": {
+          "id": 37454732277,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "55d46a9583452592329b89f67be3240eef787012",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "ce913b9f1b4857a8487e71b9aaadf6b6487eda6017be867116f4bf3ca8a40217",
+          "summaryDigest": "f571a918b12acb67758dc66d451b80ffacaa26c088df03fb607c58dbd8052c8e"
+        },
+        "B": {
+          "id": 37454732221,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "55d46a9583452592329b89f67be3240eef787012",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "11415dfcae9c02b4ad51005aae9b48611f64b3d59b796ec13ae78659010fd395",
+          "summaryDigest": "2df14daa6addbfd28751a035249e1ef24de16431758117b75de8fcbb5706e587"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "55d46a9583452592329b89f67be3240eef787012",
+      "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/354fbe91275270f9-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/354fbe91275270f9-phase-a.md",
+          "jsonDigest": "a57b71fa7c991488e9d67df2b804fc9bf803a82268290bcbfc20fc2e7da70f8f",
+          "markdownDigest": "002ee3b0df3a53cdf58a0aa929f0d2d2d39872df87fdf6832549ab4608e9a4ec",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 4989,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 3085,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 8083
+          },
+          "comparisonsPerformed": 4,
+          "versionComparisons": [
+            {
+              "serviceName": "KeyVault",
+              "baseVersion": "2025-05-01",
+              "headVersion": "2025-05-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "KeyVault",
+              "baseVersion": "2026-02-01",
+              "headVersion": "2026-02-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "KeyVault",
+              "baseVersion": "2026-05-15",
+              "headVersion": "2026-05-15",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "KeyVault",
+              "baseVersion": "2026-06-01-preview",
+              "headVersion": "2026-06-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/354fbe91275270f9-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/354fbe91275270f9-phase-b.md",
+          "jsonDigest": "e9c5452716aae3cb5ededeb7f54d0cb8a446e3a596048f83b09aa72ebd1ceef4",
+          "markdownDigest": "ead754255da38c663975eb64fd574148132f8058053d3357ba44497a41c7d9b0",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3976,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2565,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 6551
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "c5612a47c0e67e64c2c6679b6dc67a1dd3f71f4df1562f96acb7b1bdd5143f3f",
+      "comparisonsPerformed": 4,
+      "versionComparisons": [
+        {
+          "serviceName": "KeyVault",
+          "baseVersion": "2025-05-01",
+          "headVersion": "2025-05-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "KeyVault",
+          "baseVersion": "2026-02-01",
+          "headVersion": "2026-02-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "KeyVault",
+          "baseVersion": "2026-05-15",
+          "headVersion": "2026-05-15",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "KeyVault",
+          "baseVersion": "2026-06-01-preview",
+          "headVersion": "2026-06-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-834c65d5eefbbb6c",
+      "affectedPrs": [
+        46950
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-d6e9363dc67024f2",
+      "affectedPrs": [
+        46950
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "55d46a9583452592329b89f67be3240eef787012",
+    "prBaseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b 55d46a9583452592329b89f67be3240eef787012\ngit -C target checkout --detach 55d46a9583452592329b89f67be3240eef787012\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault",
+        "project": "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault' --base-ref 0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b --phase same-version --json-output '../specification-keyvault-resource-manager-Microsoft.KeyVault-KeyVault-phase-a.json' --markdown-output '../specification-keyvault-resource-manager-Microsoft.KeyVault-KeyVault-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault' --base-ref 0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b --json-output '../specification-keyvault-resource-manager-Microsoft.KeyVault-KeyVault-phase-b-evidence.json' --markdown-output '../specification-keyvault-resource-manager-Microsoft.KeyVault-KeyVault-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

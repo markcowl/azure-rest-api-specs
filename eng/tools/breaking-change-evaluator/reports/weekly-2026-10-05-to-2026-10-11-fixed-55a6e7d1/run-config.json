@@ -1,0 +1,29 @@
+{
+  "title": "Breaking-change evaluation: October 5–11, 2026 (fixed analyzer)",
+  "analyzer": {
+    "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prototypeParentSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "cacheFormatVersion": 3,
+    "environment": {
+      "os": "Windows NT 10.0.26300.0",
+      "architecture": "x64",
+      "node": "24.16.0",
+      "pnpm": "11.10.0"
+    },
+    "readiness": {
+      "verified": true,
+      "intrinsicFixVerified": true,
+      "details": "Exact commit built and cached once; the complete dist artifact digest and executable readiness were verified; PR #46583 produced zero Phase A findings and no Phase B comparisons."
+    }
+  },
+  "zeroExpected": [
+    46583,
+    46674
+  ],
+  "historicalComparison": {
+    "label": "original October 5–11 run",
+    "summary": "../2026-10-05-to-2026-10-11/README.md",
+    "previousTypeSpecOnly": 111
+  }
+}

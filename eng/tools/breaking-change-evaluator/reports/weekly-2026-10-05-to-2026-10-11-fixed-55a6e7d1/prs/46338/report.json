@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-46338:42d95f77f74271dcb8fea6fdf50390c510e91dd3"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46338,
+    "title": "Chipate/compute placement score",
+    "author": "chintanrp",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "chipate/ComputePlacementScore",
+    "baseSha": "c415ef063cd4c1833ecceff7f856295115d80c0d",
+    "headSha": "42d95f77f74271dcb8fea6fdf50390c510e91dd3",
+    "mergedAt": "2026-10-05T16:14:05Z",
+    "changedTypeSpecFiles": [
+      "specification/compute/resource-manager/Microsoft.Compute/Recommender/ComputeDiagnosticBase.tsp",
+      "specification/compute/resource-manager/Microsoft.Compute/Recommender/PlacementScoresBase.tsp",
+      "specification/compute/resource-manager/Microsoft.Compute/Recommender/back-compatible.tsp",
+      "specification/compute/resource-manager/Microsoft.Compute/Recommender/client.tsp",
+      "specification/compute/resource-manager/Microsoft.Compute/Recommender/main.tsp",
+      "specification/compute/resource-manager/Microsoft.Compute/Recommender/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "42d95f77f74271dcb8fea6fdf50390c510e91dd3",
+      "baseSha": "c415ef063cd4c1833ecceff7f856295115d80c0d",
+      "runs": {
+        "A": {
+          "id": 37155812117,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "42d95f77f74271dcb8fea6fdf50390c510e91dd3",
+          "status": "completed",
+          "conclusion": "failure",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b",
+          "summaryDigest": "8be157aff309b7d6d4d7238127e92c0c55aa3eb8c196186c195fedb5de45d46f"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/ComputeDiagnosticBase.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/PlacementScoresBase.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/back-compatible.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/client.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/main.tsp",
+        "specification/compute/resource-manager/Microsoft.Compute/Recommender/models.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary occurrence counts are lower than the complete OAD log findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "42d95f77f74271dcb8fea6fdf50390c510e91dd3",
+      "baseSha": "c415ef063cd4c1833ecceff7f856295115d80c0d"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-05-05-preview/RecommenderRP.json",
+        "oldVersion": "2026-05-05-preview",
+        "newVersion": "2026-05-05-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-05-05-preview/RecommenderRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-05-05-preview/RecommenderRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1017",
+      "rule": "ReferenceRedirection",
+      "severity": "Error",
+      "message": "The '$ref' property points to different models in the old and new versions.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+      "newJsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-05-05-preview/RecommenderRP.json",
+        "oldVersion": "2026-05-05-preview",
+        "newVersion": "2026-05-05-preview"
+      },
+      "evidence": "{\"id\":\"1017\",\"code\":\"ReferenceRedirection\",\"message\":\"The '$ref' property points to different models in the old and new versions.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-05-05-preview/RecommenderRP.json",
+          "line": 113,
+          "jsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-05-05-preview/RecommenderRP.json",
+          "line": 113,
+          "jsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1017",
+      "rule": "ReferenceRedirection",
+      "severity": "Error",
+      "message": "The '$ref' property points to different models in the old and new versions.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "definitions.ComputeDiagnosticBase.properties.properties",
+      "newJsonPath": "definitions.SpotPlacementScoresBase.properties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-05-05-preview/RecommenderRP.json",
+        "oldVersion": "2026-05-05-preview",
+        "newVersion": "2026-05-05-preview"
+      },
+      "evidence": "{\"id\":\"1017\",\"code\":\"ReferenceRedirection\",\"message\":\"The '$ref' property points to different models in the old and new versions.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.ComputeDiagnosticBase.properties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.SpotPlacementScoresBase.properties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-05-05-preview/RecommenderRP.json",
+          "line": 272,
+          "jsonPath": "definitions.ComputeDiagnosticBase.properties.properties",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-05-05-preview/RecommenderRP.json",
+          "line": 760,
+          "jsonPath": "definitions.SpotPlacementScoresBase.properties.properties",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-09-05-preview/RecommenderRP.json",
+        "oldVersion": "2026-09-05-preview",
+        "newVersion": "2026-09-05-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-09-05-preview/RecommenderRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-09-05-preview/RecommenderRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1017",
+      "rule": "ReferenceRedirection",
+      "severity": "Error",
+      "message": "The '$ref' property points to different models in the old and new versions.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+      "newJsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-09-05-preview/RecommenderRP.json",
+        "oldVersion": "2026-09-05-preview",
+        "newVersion": "2026-09-05-preview"
+      },
+      "evidence": "{\"id\":\"1017\",\"code\":\"ReferenceRedirection\",\"message\":\"The '$ref' property points to different models in the old and new versions.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-09-05-preview/RecommenderRP.json",
+          "line": 113,
+          "jsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-09-05-preview/RecommenderRP.json",
+          "line": 113,
+          "jsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-5",
+      "phase": "A",
+      "id": "1017",
+      "rule": "ReferenceRedirection",
+      "severity": "Error",
+      "message": "The '$ref' property points to different models in the old and new versions.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "definitions.ComputeDiagnosticBase.properties.properties",
+      "newJsonPath": "definitions.SpotPlacementScoresBase.properties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-09-05-preview/RecommenderRP.json",
+        "oldVersion": "2026-09-05-preview",
+        "newVersion": "2026-09-05-preview"
+      },
+      "evidence": "{\"id\":\"1017\",\"code\":\"ReferenceRedirection\",\"message\":\"The '$ref' property points to different models in the old and new versions.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.ComputeDiagnosticBase.properties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.SpotPlacementScoresBase.properties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-09-05-preview/RecommenderRP.json",
+          "line": 272,
+          "jsonPath": "definitions.ComputeDiagnosticBase.properties.properties",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/preview/2026-09-05-preview/RecommenderRP.json",
+          "line": 836,
+          "jsonPath": "definitions.SpotPlacementScoresBase.properties.properties",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-6",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Recommender/stable/2025-06-05/RecommenderRP.json",
+        "oldVersion": "2025-06-05",
+        "newVersion": "2025-06-05"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/stable/2025-06-05/RecommenderRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/stable/2025-06-05/RecommenderRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-7",
+      "phase": "A",
+      "id": "1017",
+      "rule": "ReferenceRedirection",
+      "severity": "Error",
+      "message": "The '$ref' property points to different models in the old and new versions.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+      "newJsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Recommender/stable/2025-06-05/RecommenderRP.json",
+        "oldVersion": "2025-06-05",
+        "newVersion": "2025-06-05"
+      },
+      "evidence": "{\"id\":\"1017\",\"code\":\"ReferenceRedirection\",\"message\":\"The '$ref' property points to different models in the old and new versions.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/stable/2025-06-05/RecommenderRP.json",
+          "line": 110,
+          "jsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/stable/2025-06-05/RecommenderRP.json",
+          "line": 110,
+          "jsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Compute/locations/{location}/placementScores/spot'].get.responses.200.schema",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-8",
+      "phase": "A",
+      "id": "1017",
+      "rule": "ReferenceRedirection",
+      "severity": "Error",
+      "message": "The '$ref' property points to different models in the old and new versions.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "definitions.ComputeDiagnosticBase.properties.properties",
+      "newJsonPath": "definitions.SpotPlacementScoresBase.properties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Recommender/stable/2025-06-05/RecommenderRP.json",
+        "oldVersion": "2025-06-05",
+        "newVersion": "2025-06-05"
+      },
+      "evidence": "{\"id\":\"1017\",\"code\":\"ReferenceRedirection\",\"message\":\"The '$ref' property points to different models in the old and new versions.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.ComputeDiagnosticBase.properties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.SpotPlacementScoresBase.properties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "78913f2bc6e897e1ac65a1dbdf05af517e86ae46010f9aef3a1b82ca77cea09b"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/stable/2025-06-05/RecommenderRP.json",
+          "line": 182,
+          "jsonPath": "definitions.ComputeDiagnosticBase.properties.properties",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Recommender/stable/2025-06-05/RecommenderRP.json",
+          "line": 231,
+          "jsonPath": "definitions.SpotPlacementScoresBase.properties.properties",
+          "url": "http<local-path>"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-f4ee08cfca5c1643",
+      "affectedPrs": [
+        46338
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "invalid-oad-output",
+          "detail": "invalid-oad-output"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "Job summary occurrence counts are lower than the complete OAD log findings"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-47311:7ee220e5e9f6e362989b326eb7c147633058a91a"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47311,
+    "title": "Add Python lifecycle request models for Web PubSub Chat",
+    "author": "Y-Sindo",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "chat-python-request-models",
+    "baseSha": "fcc20ab8473a30946221a1b876c89aa9f61447b9",
+    "headSha": "7ee220e5e9f6e362989b326eb7c147633058a91a",
+    "changedTypeSpecFiles": [
+      "specification/webpubsub/data-plane/WebPubSubChat/client.tsp",
+      "specification/webpubsub/data-plane/WebPubSubChat/main.tsp",
+      "specification/webpubsub/data-plane/WebPubSubChat/models.tsp",
+      "specification/webpubsub/data-plane/WebPubSubChat/routes.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "missing-phase-a-run",
+      "missing-phase-b-run"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "7ee220e5e9f6e362989b326eb7c147633058a91a",
+      "baseSha": "fcc20ab8473a30946221a1b876c89aa9f61447b9",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/webpubsub/data-plane/WebPubSubChat/client.tsp",
+        "specification/webpubsub/data-plane/WebPubSubChat/main.tsp",
+        "specification/webpubsub/data-plane/WebPubSubChat/models.tsp",
+        "specification/webpubsub/data-plane/WebPubSubChat/routes.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "7ee220e5e9f6e362989b326eb7c147633058a91a",
+      "baseSha": "fcc20ab8473a30946221a1b876c89aa9f61447b9"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-181c1fc4d6c8db0f",
+      "affectedPrs": [
+        47311
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "missing-phase-a-run",
+          "detail": "missing-phase-a-run"
+        },
+        {
+          "kind": "qualification",
+          "id": "missing-phase-b-run",
+          "detail": "missing-phase-b-run"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

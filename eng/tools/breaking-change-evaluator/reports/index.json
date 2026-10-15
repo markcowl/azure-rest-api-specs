@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "schemaCompatibility": ">=1 <2",
+  "branch": "breaking-change-comparison-data",
+  "runs": [
+    {
+      "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+      "datasetId": "recent-main-typespec-asof-2026-10-15",
+      "title": "Breaking-change evaluation: recent main TypeSpec PRs as of October 14, 2026",
+      "path": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+      "summary": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1/README.md",
+      "manifest": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1/run.json",
+      "selection": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1/selection.json",
+      "generatedAt": "2026-10-15T03:00:00Z",
+      "status": {
+        "total": 40,
+        "evaluated": 5,
+        "notQualified": 26,
+        "partial": 9,
+        "failed": 0
+      },
+      "reportSchema": {
+        "name": "azure-rest-api-specs/breaking-change-evaluator",
+        "version": 3,
+        "compatibility": ">=3 <4",
+        "legacy": false
+      }
+    },
+    {
+      "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+      "datasetId": "weekly-2026-10-05-to-2026-10-11",
+      "title": "Breaking-change evaluation: October 5–11, 2026 (fixed analyzer)",
+      "path": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+      "summary": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1/README.md",
+      "manifest": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1/run.json",
+      "selection": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1/selection.json",
+      "generatedAt": "2026-10-15T03:00:00Z",
+      "status": {
+        "total": 35,
+        "evaluated": 7,
+        "notQualified": 17,
+        "partial": 11,
+        "failed": 0
+      },
+      "reportSchema": {
+        "name": "azure-rest-api-specs/breaking-change-evaluator",
+        "version": 3,
+        "compatibility": ">=3 <4",
+        "legacy": false
+      }
+    },
+    {
+      "id": "weekly-2026-10-05-to-2026-10-11-original-d0ab464d",
+      "datasetId": "weekly-2026-10-05-to-2026-10-11",
+      "title": "Breaking-change evaluation: October 5–11, 2026 (original analyzer)",
+      "path": "2026-10-05-to-2026-10-11",
+      "summary": "2026-10-05-to-2026-10-11/README.md",
+      "manifest": "2026-10-05-to-2026-10-11/run.json",
+      "selection": "2026-10-05-to-2026-10-11/selection.json",
+      "generatedAt": "2026-10-14T03:46:51.335Z",
+      "status": {
+        "total": 35,
+        "evaluated": 12,
+        "notQualified": 17,
+        "partial": 6,
+        "failed": 0
+      },
+      "reportSchema": {
+        "name": "azure-rest-api-specs/breaking-change-evaluator",
+        "version": 2,
+        "compatibility": "legacy-v2",
+        "legacy": true
+      }
+    }
+  ]
+}

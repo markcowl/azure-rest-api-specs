@@ -1,0 +1,1098 @@
+{
+  "schemaVersion": 2,
+  "schemaCompatibility": ">=2 <3",
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "generatedAt": "2026-10-15T03:00:00Z"
+  },
+  "repository": "Azure/azure-rest-api-specs",
+  "query": {
+    "kind": "merged-window",
+    "baseBranch": "main",
+    "start": "2026-10-05T00:00:00Z",
+    "end": "2026-10-11T23:59:59Z",
+    "order": "mergedAt ascending, PR number ascending",
+    "source": "preserved exact original weekly selection"
+  },
+  "selection": {
+    "cap": 40,
+    "sourceCount": 79,
+    "excludedCount": 44,
+    "qualifyingCount": 35,
+    "selectedCount": 35,
+    "remainingCount": 0,
+    "continuationCursor": null,
+    "pathScope": "specification/",
+    "filePatterns": [
+      "*.tsp",
+      "tspconfig.yaml"
+    ]
+  },
+  "analyzer": {
+    "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+  },
+  "status": {
+    "total": 35,
+    "evaluated": 7,
+    "notQualified": 17,
+    "partial": 11,
+    "failed": 0
+  },
+  "effectiveness": {
+    "completeReportsOnly": true,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 5,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0
+      }
+    }
+  },
+  "issueCounts": {
+    "compile-runtime-failure": 11,
+    "concordant-zero": 14,
+    "evidence-gap": 17,
+    "oad-only": 85
+  },
+  "historicalComparison": {
+    "label": "original October 5–11 run",
+    "summary": "../2026-10-05-to-2026-10-11/README.md",
+    "previousTypeSpecOnly": 111
+  },
+  "records": [
+    {
+      "number": 46377,
+      "title": "Dev/hbhansali/resiliencemgmt ga 2026 10 01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46377",
+      "mergedAt": "2026-10-05T05:51:23Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/46377/report.md",
+      "issueIds": [
+        "issue-evidence-gap-9934cb8072ae9b6e"
+      ],
+      "errors": []
+    },
+    {
+      "number": 46338,
+      "title": "Chipate/compute placement score",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46338",
+      "mergedAt": "2026-10-05T16:14:05Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/46338/report.md",
+      "issueIds": [
+        "issue-evidence-gap-f4ee08cfca5c1643"
+      ],
+      "errors": []
+    },
+    {
+      "number": 46751,
+      "title": "[Foundry] End of September Release train.",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46751",
+      "mergedAt": "2026-10-05T23:24:00Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/46751/report.md",
+      "issueIds": [
+        "issue-evidence-gap-08b899af1740c3d6"
+      ],
+      "errors": []
+    },
+    {
+      "number": 47005,
+      "title": "Revert(planetarycomputer): restore previous folder structure",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47005",
+      "mergedAt": "2026-10-06T00:27:06Z",
+      "status": "evaluated",
+      "complete": true,
+      "report": "prs/47005/report.md",
+      "issueIds": [
+        "issue-concordant-zero-69b2fbd02e8975b8",
+        "issue-concordant-zero-ae941e6a9a4b5d87"
+      ],
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 5,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 5,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46950,
+      "title": "[KeyVault] Keep SDK type name ManagedHsmSkuName for 2026-05-15 (client.tsp only)",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46950",
+      "mergedAt": "2026-10-06T15:00:29Z",
+      "status": "evaluated",
+      "complete": true,
+      "report": "prs/46950/report.md",
+      "issueIds": [
+        "issue-concordant-zero-834c65d5eefbbb6c",
+        "issue-concordant-zero-d6e9363dc67024f2"
+      ],
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 47047,
+      "title": "Try to fix NET SDK for PTM",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47047",
+      "mergedAt": "2026-10-06T15:31:57Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/47047/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-a52232caa78ad1a2"
+      ],
+      "errors": [
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+      ]
+    },
+    {
+      "number": 46924,
+      "title": "[Commvault] Align nine preview APIs with pinned private source",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46924",
+      "mergedAt": "2026-10-07T09:23:40Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/46924/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-74db0212a8111558",
+        "issue-oad-only-046f2670f839bed4",
+        "issue-oad-only-070a171637b031fc",
+        "issue-oad-only-0d02b9957b7643a1",
+        "issue-oad-only-0e1053dee4dddb53",
+        "issue-oad-only-0f8ae22091bc1e61",
+        "issue-oad-only-12c492050fe815f8",
+        "issue-oad-only-1417eed357eee3f1",
+        "issue-oad-only-14b62a38b18ab1a1",
+        "issue-oad-only-1615da13fabe3e70",
+        "issue-oad-only-16f0183b8298f538",
+        "issue-oad-only-1ab646ee2bf2a197",
+        "issue-oad-only-1b63664de08718c2",
+        "issue-oad-only-2323cd05a043680b",
+        "issue-oad-only-2506a5bb5d63e057",
+        "issue-oad-only-25e681442ad66881",
+        "issue-oad-only-27e6834c70346218",
+        "issue-oad-only-2a56b7d65774a9bf",
+        "issue-oad-only-2b1c0454e7e1486d",
+        "issue-oad-only-2b2b691c583812b0",
+        "issue-oad-only-30ca385bedd7bdc6",
+        "issue-oad-only-33b72402fb7fe071",
+        "issue-oad-only-348adad87dd8d40a",
+        "issue-oad-only-3807fce77752ce08",
+        "issue-oad-only-419a98a0ac60b8d7",
+        "issue-oad-only-41f84e9381e713f4",
+        "issue-oad-only-4338467da5cec3d3",
+        "issue-oad-only-48f91836a0809b9c",
+        "issue-oad-only-4a183a1894d85436",
+        "issue-oad-only-4a3e96f40d903e04",
+        "issue-oad-only-4d40287bd5740987",
+        "issue-oad-only-4f05331276e8c06a",
+        "issue-oad-only-4f3eb61966ad3f44",
+        "issue-oad-only-54bf1df4ac503917",
+        "issue-oad-only-55545b425d2bbb63",
+        "issue-oad-only-601eabfc22d2975f",
+        "issue-oad-only-6060792912845a12",
+        "issue-oad-only-6210999bebf5ba80",
+        "issue-oad-only-66244fc023565cd8",
+        "issue-oad-only-67348298fe273e7c",
+        "issue-oad-only-725f98b1e805f856",
+        "issue-oad-only-760a8700ac26f479",
+        "issue-oad-only-78db01bdbab92be2",
+        "issue-oad-only-7c5424e108c5c6b1",
+        "issue-oad-only-8431d152e1b4f35b",
+        "issue-oad-only-85235f4098336910",
+        "issue-oad-only-8730f23bb27a10be",
+        "issue-oad-only-88eb911f7ca8c9d3",
+        "issue-oad-only-8a8969e65e0ea34b",
+        "issue-oad-only-8c54230bef7858c0",
+        "issue-oad-only-8f1358743174ab23",
+        "issue-oad-only-930ed575b8657006",
+        "issue-oad-only-958ed50e977702d4",
+        "issue-oad-only-9649d81d3bf45698",
+        "issue-oad-only-9addb6c33dadaf9a",
+        "issue-oad-only-a20b0a629d5bffa4",
+        "issue-oad-only-a318c821595b55ce",
+        "issue-oad-only-a6cf28709f4f63f4",
+        "issue-oad-only-aff3532a7629a8a1",
+        "issue-oad-only-b4dc2db8e0b25819",
+        "issue-oad-only-b9f9070972fa0acd",
+        "issue-oad-only-ba5de08fc60b4672",
+        "issue-oad-only-bdec573d5e7343fc",
+        "issue-oad-only-bebcdc123421a608",
+        "issue-oad-only-c21c2a08595847ba",
+        "issue-oad-only-c79dcac0eb3f74e2",
+        "issue-oad-only-cbebe0364354d5f4",
+        "issue-oad-only-ce6c391a5e6ea26f",
+        "issue-oad-only-cf1c1ca7a3b76312",
+        "issue-oad-only-d0001d125a3e9b33",
+        "issue-oad-only-d050e3536d40e0b4",
+        "issue-oad-only-d85cda6ffaba9481",
+        "issue-oad-only-da294e644072c1a7",
+        "issue-oad-only-dabf9b35b5a01cc7",
+        "issue-oad-only-df9dc34fdc24d206",
+        "issue-oad-only-e5b6853e6c559dab",
+        "issue-oad-only-e85b37766c666b20",
+        "issue-oad-only-e8bb534b37d9eccf",
+        "issue-oad-only-e977600cdf56b689",
+        "issue-oad-only-ef882bff314c3ade",
+        "issue-oad-only-f6596968c840c3e4",
+        "issue-oad-only-f76bc87d0806a8dc",
+        "issue-oad-only-f96a391da7c053ad",
+        "issue-oad-only-faa1428ac479e22c",
+        "issue-oad-only-fc9cfbe7c034f767",
+        "issue-oad-only-ffc4e7bb9ea4ecbd"
+      ],
+      "errors": [
+        "specification/liftrcommvault/Commvault.ContentStore.Management: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+      ]
+    },
+    {
+      "number": 45368,
+      "title": "Add DPS stable 2026-11-01 API version",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45368",
+      "mergedAt": "2026-10-07T20:12:37Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/45368/report.md",
+      "issueIds": [
+        "issue-evidence-gap-b46a4248996d3b0e"
+      ],
+      "errors": []
+    },
+    {
+      "number": 46656,
+      "title": "[HybridConnectivity] Fix .NET client names for GCP connector 2027-01-01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46656",
+      "mergedAt": "2026-10-07T21:09:32Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/46656/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-46a9f058282fcfd8"
+      ],
+      "errors": [
+        "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+      ]
+    },
+    {
+      "number": 47033,
+      "title": "Microsoft.Authorization PrivilegedAccess 2026-06-01-preview (supersedes #45970)",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47033",
+      "mergedAt": "2026-10-07T21:28:15Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/47033/report.md",
+      "issueIds": [
+        "issue-evidence-gap-020bbf1ea87727aa"
+      ],
+      "errors": []
+    },
+    {
+      "number": 47118,
+      "title": "[Network] Fix Java VMSS public IP API version selection",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47118",
+      "mergedAt": "2026-10-08T05:43:48Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/47118/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-8dcd82510a15a05c"
+      ],
+      "errors": [
+        "specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n"
+      ]
+    },
+    {
+      "number": 46044,
+      "title": "RecoveryServicesBackup: add 2026-10-01 API version with Instant Access snapshot policy props",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46044",
+      "mergedAt": "2026-10-08T05:49:45Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/46044/report.md",
+      "issueIds": [
+        "issue-evidence-gap-17e117e2012a9fe2"
+      ],
+      "errors": []
+    },
+    {
+      "number": 46855,
+      "title": "Update client.tsp for Private Traffic Manager",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46855",
+      "mergedAt": "2026-10-08T06:00:20Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/46855/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-d0259775a5930ac7"
+      ],
+      "errors": [
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+      ]
+    },
+    {
+      "number": 46676,
+      "title": "Add AppNetwork provisioning emitter config",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46676",
+      "mergedAt": "2026-10-08T08:33:35Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/46676/report.md",
+      "issueIds": [
+        "issue-evidence-gap-2b32a7951c1ecd8d"
+      ],
+      "errors": []
+    },
+    {
+      "number": 46967,
+      "title": "ContainerService: remove stable api-version pins from tspconfig for 2026-07 preview SDK generation",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46967",
+      "mergedAt": "2026-10-08T08:35:43Z",
+      "status": "evaluated",
+      "complete": true,
+      "report": "prs/46967/report.md",
+      "issueIds": [
+        "issue-concordant-zero-21db315374229d79",
+        "issue-concordant-zero-b9bf2b13b80c0eb4"
+      ],
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46585,
+      "title": "Enable Fabric provisioning emitter",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46585",
+      "mergedAt": "2026-10-08T08:51:15Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/46585/report.md",
+      "issueIds": [
+        "issue-evidence-gap-b3beb9adb3589356"
+      ],
+      "errors": []
+    },
+    {
+      "number": 47140,
+      "title": "Update TypeSpec libraries to latest release versions",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47140",
+      "mergedAt": "2026-10-09T00:26:42Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/47140/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-6fd203388bb3b6ad"
+      ],
+      "errors": [
+        "specification/ai-foundry/data-plane/Foundry: Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 68 error(s) found:\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>'t have member Experimental\n  C:<local-path>'t have member Experimental\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n; Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 68 error(s) found:\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>'t have member Experimental\n  C:<local-path>'t have member Experimental\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>'t have member Experimental\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n  C:<local-path>\n",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents: Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n; Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n",
+        "specification/ai/data-plane/OpenAIAssistants: Analysis failed: Unable to distinguish language type of union variant \"vectorStoreIds\" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()].\n; Analysis failed: Unable to distinguish language type of union variant \"vectorStoreIds\" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()].\n",
+        "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PreviewAlertRule: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0",
+        "specification/cognitiveservices/data-plane/OpenAIInference: Analysis failed: Unable to determine distinguishing runtime checks for language type of union variant \"Symbol(name)\". Indistinguishable from: [Symbol(name)]. Variant type category: unknown.\n; Analysis failed: Unable to determine distinguishing runtime checks for language type of union variant \"Symbol(name)\". Indistinguishable from: [Symbol(name)]. Variant type category: unknown.\n",
+        "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0",
+        "specification/keyvault/data-plane/Administration: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n",
+        "specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0",
+        "specification/maps/data-plane/Weather: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n",
+        "specification/monitor/resource-manager/Microsoft.Insights/Insights/ScheduledQueryRuleApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0",
+        "specification/postgresqlhsc/resource-manager/Microsoft.DBforPostgreSQL/PostgresqlHsc: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+      ]
+    },
+    {
+      "number": 46583,
+      "title": "[OperationalInsights] Rename data authorization property for C#",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46583",
+      "mergedAt": "2026-10-09T04:53:56Z",
+      "status": "evaluated",
+      "complete": true,
+      "report": "prs/46583/report.md",
+      "issueIds": [
+        "issue-concordant-zero-987a8292d6894878",
+        "issue-concordant-zero-f9f83c2316c0db1b"
+      ],
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46546,
+      "title": "Refactor(storage): migrate to unified folder structure",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46546",
+      "mergedAt": "2026-10-09T05:57:56Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/46546/report.md",
+      "issueIds": [
+        "issue-evidence-gap-76de4729ce4dc5d0"
+      ],
+      "errors": []
+    },
+    {
+      "number": 46674,
+      "title": "Preserve Front Door provisioning name constraints",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46674",
+      "mergedAt": "2026-10-09T05:59:12Z",
+      "status": "evaluated",
+      "complete": true,
+      "report": "prs/46674/report.md",
+      "issueIds": [
+        "issue-concordant-zero-69341f7a7999562e",
+        "issue-concordant-zero-9a351084b4eba57c"
+      ],
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 47123,
+      "title": "Enable Verified ID provisioning emitter",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47123",
+      "mergedAt": "2026-10-09T06:24:33Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/47123/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-0fc6c540b20e1219"
+      ],
+      "errors": [
+        "specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+      ]
+    },
+    {
+      "number": 47139,
+      "title": "[SDK configuration] Pin all Resilience Management SDK API versions",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47139",
+      "mergedAt": "2026-10-09T09:33:41Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/47139/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-7cb51166c99c2b48"
+      ],
+      "errors": [
+        "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+      ]
+    },
+    {
+      "number": 47015,
+      "title": "Release Network API Version 2026-03-01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47015",
+      "mergedAt": "2026-10-09T09:44:37Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/47015/report.md",
+      "issueIds": [
+        "issue-evidence-gap-776fa59e9170f10a"
+      ],
+      "errors": []
+    },
+    {
+      "number": 46860,
+      "title": "[Commvault] Add 2026-09-30 stable API",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46860",
+      "mergedAt": "2026-10-09T11:17:24Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/46860/report.md",
+      "issueIds": [
+        "issue-evidence-gap-572f72586e83f499"
+      ],
+      "errors": []
+    },
+    {
+      "number": 45102,
+      "title": "[Event Grid] Add Control Plane API Version 2026-06-15-preview",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45102",
+      "mergedAt": "2026-10-09T11:45:32Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/45102/report.md",
+      "issueIds": [
+        "issue-evidence-gap-c56489643b2e710b"
+      ],
+      "errors": []
+    },
+    {
+      "number": 45799,
+      "title": "[Microsoft.ApiManagement] Add AI Gateway 2026-09-01-preview API",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45799",
+      "mergedAt": "2026-10-09T15:56:32Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/45799/report.md",
+      "issueIds": [
+        "issue-evidence-gap-32bd4b82533ce5ff"
+      ],
+      "errors": []
+    },
+    {
+      "number": 45523,
+      "title": "Add MachineLearningServices stable API version 2026-09-01",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45523",
+      "mergedAt": "2026-10-09T17:05:50Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/45523/report.md",
+      "issueIds": [
+        "issue-evidence-gap-aa7cd8f173831d46"
+      ],
+      "errors": []
+    },
+    {
+      "number": 46391,
+      "title": "Adding ObservabilityConfiguration API specs to ALDO EdgeOperator RP.",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46391",
+      "mergedAt": "2026-10-09T17:29:22Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/46391/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-639a9d7bedb9c74e"
+      ],
+      "errors": [
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+      ]
+    },
+    {
+      "number": 47161,
+      "title": "Rename ContextCache/BlobAccessPoint .NET properties",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47161",
+      "mergedAt": "2026-10-09T18:55:38Z",
+      "status": "evaluated",
+      "complete": true,
+      "report": "prs/47161/report.md",
+      "issueIds": [
+        "issue-concordant-zero-9d0505bb38e2ef6a",
+        "issue-concordant-zero-cdb2b92cc041b532"
+      ],
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 47160,
+      "title": "[IoTHub] Add C# client names for 2026-10-01-preview types",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47160",
+      "mergedAt": "2026-10-09T19:24:37Z",
+      "status": "evaluated",
+      "complete": true,
+      "report": "prs/47160/report.md",
+      "issueIds": [
+        "issue-concordant-zero-501e3a9d5d9e5015",
+        "issue-concordant-zero-bf4824fb9650cbe1"
+      ],
+      "rollup": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "byPhase": {
+          "A": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          },
+          "B": {
+            "oadTotal": 0,
+            "oadInformational": 0,
+            "typeSpecTotal": 0,
+            "exact": 0,
+            "probableReview": 0,
+            "intentionalSwaggerOnly": 0,
+            "missedEquivalent": 0,
+            "typeSpecOnly": 0,
+            "ambiguous": 0,
+            "errors": 0,
+            "outcome": "concordant-zero"
+          }
+        },
+        "errorEquivalence": {
+          "A": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          },
+          "B": {
+            "oadErrors": 0,
+            "typeSpecErrors": 0,
+            "matchedErrorOad": 0,
+            "matchedErrorTypeSpec": 0,
+            "oadErrorMatchedToTypeSpecNonError": 0,
+            "typeSpecErrorMatchedToOadNonError": 0,
+            "oadErrorsWithoutEquivalent": 0,
+            "typeSpecErrorsWithoutEquivalent": 0
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "number": 46832,
+      "title": "Add 2026-09-03-preview API version for Azure Monitor Workspaces",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46832",
+      "mergedAt": "2026-10-09T22:07:17Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/46832/report.md",
+      "issueIds": [
+        "issue-evidence-gap-bd676b26c94c34a7"
+      ],
+      "errors": []
+    },
+    {
+      "number": 45556,
+      "title": "Add CognitiveServices preview API version 2026-09-15-preview",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45556",
+      "mergedAt": "2026-10-10T00:18:26Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/45556/report.md",
+      "issueIds": [
+        "issue-evidence-gap-87ed0649b17b783f"
+      ],
+      "errors": []
+    },
+    {
+      "number": 47170,
+      "title": "Avoid BillingBenefits C# validation model naming collision",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47170",
+      "mergedAt": "2026-10-10T07:59:51Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/47170/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-8cc1e31b9b6bd5e5"
+      ],
+      "errors": [
+        "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+      ]
+    },
+    {
+      "number": 47019,
+      "title": "feat: add Private Traffic Manager affinity routing in 2026-10-01-preview",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47019",
+      "mergedAt": "2026-10-10T08:19:46Z",
+      "status": "not-qualified",
+      "complete": false,
+      "report": "prs/47019/report.md",
+      "issueIds": [
+        "issue-evidence-gap-de0c841a43f448da"
+      ],
+      "errors": []
+    },
+    {
+      "number": 46715,
+      "title": "Add stable EdgeActions 2026-10-01 API",
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46715",
+      "mergedAt": "2026-10-10T14:02:46Z",
+      "status": "partial",
+      "complete": false,
+      "report": "prs/46715/report.md",
+      "issueIds": [
+        "issue-compile-runtime-failure-21423794d8210a17"
+      ],
+      "errors": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+      ]
+    }
+  ]
+}

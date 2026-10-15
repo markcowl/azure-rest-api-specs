@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-46967:cf9d8c203c5df72a38b6511a076d8df9ef4aec5b"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46967,
+    "title": "ContainerService: remove stable api-version pins from tspconfig for 2026-07 preview SDK generation",
+    "author": "elvazhu521",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "elva/remove-stable-pins-2026-07-preview",
+    "baseSha": "33cc5cb4363a72ebc01187aa0c100e6e7c77eeb3",
+    "headSha": "cf9d8c203c5df72a38b6511a076d8df9ef4aec5b",
+    "mergedAt": "2026-10-08T08:35:43Z",
+    "changedTypeSpecFiles": [
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "cf9d8c203c5df72a38b6511a076d8df9ef4aec5b",
+      "baseSha": "33cc5cb4363a72ebc01187aa0c100e6e7c77eeb3",
+      "runs": {
+        "A": {
+          "id": 36967900283,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "cf9d8c203c5df72a38b6511a076d8df9ef4aec5b",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "2a9a086b3bc9aef5881896df386cd526aeef73199e46102e47ff8ad736372900",
+          "summaryDigest": "1f77ac3ba7b391d7374189fa123d7a42bc3de25303800d7f5cbd69d11d5b57b3"
+        },
+        "B": {
+          "id": 36967900296,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "cf9d8c203c5df72a38b6511a076d8df9ef4aec5b",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "511dc42849d7ed00a4ed125f37a0f8aac5853f123d46033c0e82e2f9d7e73e89",
+          "summaryDigest": "e70fe706c3f76d4064f9cffbfa2e00e0a8e272e33b40c3aefc09473e914a2bac"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "cf9d8c203c5df72a38b6511a076d8df9ef4aec5b",
+      "baseSha": "33cc5cb4363a72ebc01187aa0c100e6e7c77eeb3"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/containerservice/resource-manager/Microsoft.ContainerService/aks",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/d1d4d254feed9d8f-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/d1d4d254feed9d8f-phase-a.md",
+          "jsonDigest": "ec903b7e6906e6c66e5b2404719cfd7b48812e887e055d5d684f1523636a027d",
+          "markdownDigest": "647f0d9e1d3b42493bade918c8b66b4711c69a8ebc9f4d3d40139e595364116b",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 11213,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 9226,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 20445
+          },
+          "comparisonsPerformed": 9,
+          "versionComparisons": [
+            {
+              "serviceName": "ContainerService",
+              "baseVersion": "2025-10-01",
+              "headVersion": "2025-10-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ContainerService",
+              "baseVersion": "2026-01-01",
+              "headVersion": "2026-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ContainerService",
+              "baseVersion": "2026-02-01",
+              "headVersion": "2026-02-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ContainerService",
+              "baseVersion": "2026-03-01",
+              "headVersion": "2026-03-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ContainerService",
+              "baseVersion": "2026-04-01",
+              "headVersion": "2026-04-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ContainerService",
+              "baseVersion": "2026-05-01",
+              "headVersion": "2026-05-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ContainerService",
+              "baseVersion": "2026-06-01",
+              "headVersion": "2026-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ContainerService",
+              "baseVersion": "2026-07-01",
+              "headVersion": "2026-07-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ContainerService",
+              "baseVersion": "2026-07-02-preview",
+              "headVersion": "2026-07-02-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/d1d4d254feed9d8f-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/d1d4d254feed9d8f-phase-b.md",
+          "jsonDigest": "42b72cebf321d3b7d2f5219d536603ac8556d6683902defe6545754be7503670",
+          "markdownDigest": "8a6a0c5fd8779e47b25add78be8addedb94efd98a5bdfb3fa901fa4daf9eb063",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 12559,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 10081,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 22648
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "8c1383622f841b632a155d308f2fc49b035e5b84d224cb5061037c6c52a0b53e",
+      "comparisonsPerformed": 9,
+      "versionComparisons": [
+        {
+          "serviceName": "ContainerService",
+          "baseVersion": "2025-10-01",
+          "headVersion": "2025-10-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ContainerService",
+          "baseVersion": "2026-01-01",
+          "headVersion": "2026-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ContainerService",
+          "baseVersion": "2026-02-01",
+          "headVersion": "2026-02-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ContainerService",
+          "baseVersion": "2026-03-01",
+          "headVersion": "2026-03-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ContainerService",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ContainerService",
+          "baseVersion": "2026-05-01",
+          "headVersion": "2026-05-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ContainerService",
+          "baseVersion": "2026-06-01",
+          "headVersion": "2026-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ContainerService",
+          "baseVersion": "2026-07-01",
+          "headVersion": "2026-07-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ContainerService",
+          "baseVersion": "2026-07-02-preview",
+          "headVersion": "2026-07-02-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-21db315374229d79",
+      "affectedPrs": [
+        46967
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-b9bf2b13b80c0eb4",
+      "affectedPrs": [
+        46967
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "cf9d8c203c5df72a38b6511a076d8df9ef4aec5b",
+    "prBaseSha": "33cc5cb4363a72ebc01187aa0c100e6e7c77eeb3",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 33cc5cb4363a72ebc01187aa0c100e6e7c77eeb3 cf9d8c203c5df72a38b6511a076d8df9ef4aec5b\ngit -C target checkout --detach cf9d8c203c5df72a38b6511a076d8df9ef4aec5b\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/containerservice/resource-manager/Microsoft.ContainerService/aks",
+        "project": "specification/containerservice/resource-manager/Microsoft.ContainerService/aks",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/containerservice/resource-manager/Microsoft.ContainerService/aks' --base-ref 33cc5cb4363a72ebc01187aa0c100e6e7c77eeb3 --phase same-version --json-output '../specification-containerservice-resource-manager-Microsoft.ContainerService-aks-phase-a.json' --markdown-output '../specification-containerservice-resource-manager-Microsoft.ContainerService-aks-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/containerservice/resource-manager/Microsoft.ContainerService/aks' --base-ref 33cc5cb4363a72ebc01187aa0c100e6e7c77eeb3 --json-output '../specification-containerservice-resource-manager-Microsoft.ContainerService-aks-phase-b-evidence.json' --markdown-output '../specification-containerservice-resource-manager-Microsoft.ContainerService-aks-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

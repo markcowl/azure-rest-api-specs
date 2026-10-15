@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-47118:9bf4c61c8f1c7107798415cea38dea61979e950d"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47118,
+    "title": "[Network] Fix Java VMSS public IP API version selection",
+    "author": "weidongxu-microsoft",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "fix/network-java-vmss-public-ip-api-version",
+    "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+    "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+    "mergedAt": "2026-10-08T05:43:48Z",
+    "changedTypeSpecFiles": [
+      "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+      "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+      "runs": {
+        "A": {
+          "id": 37731634205,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "a124c286ae3b149ae98c0fd4ef40a8981e666325f03c32f06971e508754f517e",
+          "summaryDigest": "a3baad8a5838d7af91c4a63d97f437ec376332e6f4d6d4bd8937d7c70e0ea268"
+        },
+        "B": {
+          "id": 37731634253,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "dfb4e82039973bacbb90d2f406800d6b36cb77f27366fc94255e271cee406052",
+          "summaryDigest": "71747c812031d2cb7af3dc4b62cc3baa5208be0fa2a292688084b8c243b463e6"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+      "baseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/network/resource-manager/Microsoft.Network/Network",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/5c965f57f5360abe-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/5c965f57f5360abe-phase-a.md",
+          "error": "Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/5c965f57f5360abe-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/5c965f57f5360abe-phase-b.md",
+          "error": "Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-8dcd82510a15a05c",
+      "affectedPrs": [
+        47118
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:\n  error file-not-found: File C:<local-path>\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "9bf4c61c8f1c7107798415cea38dea61979e950d",
+    "prBaseSha": "be97609d55160e8d06e2fcbba9ddefbf2ee89bf8",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 9bf4c61c8f1c7107798415cea38dea61979e950d\ngit -C target checkout --detach 9bf4c61c8f1c7107798415cea38dea61979e950d\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/network/resource-manager/Microsoft.Network/Network",
+        "project": "specification/network/resource-manager/Microsoft.Network/Network",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network' --base-ref be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 --phase same-version --json-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-a.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network' --base-ref be97609d55160e8d06e2fcbba9ddefbf2ee89bf8 --json-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-b-evidence.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

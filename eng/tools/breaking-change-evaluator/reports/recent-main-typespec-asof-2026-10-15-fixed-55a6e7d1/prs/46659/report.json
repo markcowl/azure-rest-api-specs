@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-46659:e5e23772804f3eae6153a59ebb01eb6a893bb45f"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46659,
+    "title": "Add Azure Maps 2026-12-01 stable control plane api version.",
+    "author": "rishikaparashar",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "maps-control-plane-stable-2026-12-01",
+    "baseSha": "8f99c33c108147fcc716e71a764010084fe5d034",
+    "headSha": "e5e23772804f3eae6153a59ebb01eb6a893bb45f",
+    "changedTypeSpecFiles": [
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/Creator.tsp",
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/MapsAccount.tsp",
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/PrivateEndpointConnection.tsp",
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/PrivateLinkResource.tsp",
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/back-compatible.tsp",
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/client.tsp",
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/main.tsp",
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/models.tsp",
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/routes.tsp",
+      "specification/maps/resource-manager/Microsoft.Maps/Maps/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "e5e23772804f3eae6153a59ebb01eb6a893bb45f",
+      "baseSha": "8f99c33c108147fcc716e71a764010084fe5d034",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/Creator.tsp",
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/MapsAccount.tsp",
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/PrivateEndpointConnection.tsp",
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/PrivateLinkResource.tsp",
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/back-compatible.tsp",
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/client.tsp",
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/main.tsp",
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/models.tsp",
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/routes.tsp",
+        "specification/maps/resource-manager/Microsoft.Maps/Maps/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "e5e23772804f3eae6153a59ebb01eb6a893bb45f",
+      "baseSha": "8f99c33c108147fcc716e71a764010084fe5d034"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-c07aa8d89f92ba05",
+      "affectedPrs": [
+        46659
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

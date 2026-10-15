@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-46585:3bd68bf03eaa849fd755b81ec631a36f069c6733"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46585,
+    "title": "Enable Fabric provisioning emitter",
+    "author": "HarveyLink",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "provisioning-fabric-onboarding",
+    "baseSha": "8b60913ae846f5209258162f983c8c2c425e5371",
+    "headSha": "3bd68bf03eaa849fd755b81ec631a36f069c6733",
+    "mergedAt": "2026-10-08T08:51:15Z",
+    "changedTypeSpecFiles": [
+      "specification/fabric/resource-manager/Microsoft.Fabric/Fabric/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "3bd68bf03eaa849fd755b81ec631a36f069c6733",
+      "baseSha": "8b60913ae846f5209258162f983c8c2c425e5371",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/fabric/resource-manager/Microsoft.Fabric/Fabric/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "3bd68bf03eaa849fd755b81ec631a36f069c6733",
+      "baseSha": "8b60913ae846f5209258162f983c8c2c425e5371"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-b3beb9adb3589356",
+      "affectedPrs": [
+        46585
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

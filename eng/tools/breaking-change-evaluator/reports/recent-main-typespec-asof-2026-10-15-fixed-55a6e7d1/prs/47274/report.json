@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-47274:1a4022c18b6c3cc564fb85b9febf8180649a6ebd"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47274,
+    "title": "[JS] update JS customizations",
+    "author": "kazrael2119",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "update-js-custom",
+    "baseSha": "7507c3df4b8bf6c5887d8571f929b6e393479f2f",
+    "headSha": "1a4022c18b6c3cc564fb85b9febf8180649a6ebd",
+    "mergedAt": "2026-10-15T01:39:38Z",
+    "changedTypeSpecFiles": [
+      "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise/back-compatible.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "1a4022c18b6c3cc564fb85b9febf8180649a6ebd",
+      "baseSha": "7507c3df4b8bf6c5887d8571f929b6e393479f2f",
+      "runs": {
+        "A": {
+          "id": 38502114259,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "1a4022c18b6c3cc564fb85b9febf8180649a6ebd",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "d846185bbeeac17a4849845078c6b94169ee9a8c2acbf1ba6f85488659cbe68e",
+          "summaryDigest": "7769083965bda6ec19efcb466d29ae9fb828147285f970531af3ae85bfe4b16a"
+        },
+        "B": {
+          "id": 38502114269,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "1a4022c18b6c3cc564fb85b9febf8180649a6ebd",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "f11a4b1173a05f4655c17752197ea1de8f33875c40459283a2b76393eda3c39d",
+          "summaryDigest": "d1c7eb8b382ae229d69b6f188573c9aa5c8dcebc2e0669b4f1874821fdba885b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise/back-compatible.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "1a4022c18b6c3cc564fb85b9febf8180649a6ebd",
+      "baseSha": "7507c3df4b8bf6c5887d8571f929b6e393479f2f"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/2612c7d708f37b4e-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/2612c7d708f37b4e-phase-a.md",
+          "error": "Analysis failed: spawn git ENOENT\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/2612c7d708f37b4e-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/2612c7d708f37b4e-phase-b.md",
+          "error": "Analysis failed: spawn git ENOENT\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: spawn git ENOENT\n; Analysis failed: spawn git ENOENT\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-df7a74dcc097c642",
+      "affectedPrs": [
+        47274
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise: Analysis failed: spawn git ENOENT\n; Analysis failed: spawn git ENOENT\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Analysis failed: spawn git ENOENT\n; Analysis failed: spawn git ENOENT\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise: Analysis failed: spawn git ENOENT\n; Analysis failed: spawn git ENOENT\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "1a4022c18b6c3cc564fb85b9febf8180649a6ebd",
+    "prBaseSha": "7507c3df4b8bf6c5887d8571f929b6e393479f2f",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 7507c3df4b8bf6c5887d8571f929b6e393479f2f 1a4022c18b6c3cc564fb85b9febf8180649a6ebd\ngit -C target checkout --detach 1a4022c18b6c3cc564fb85b9febf8180649a6ebd\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise",
+        "project": "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise' --base-ref 7507c3df4b8bf6c5887d8571f929b6e393479f2f --phase same-version --json-output '../specification-redisenterprise-resource-manager-Microsoft.Cache-RedisEnterprise-phase-a.json' --markdown-output '../specification-redisenterprise-resource-manager-Microsoft.Cache-RedisEnterprise-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise' --base-ref 7507c3df4b8bf6c5887d8571f929b6e393479f2f --json-output '../specification-redisenterprise-resource-manager-Microsoft.Cache-RedisEnterprise-phase-b-evidence.json' --markdown-output '../specification-redisenterprise-resource-manager-Microsoft.Cache-RedisEnterprise-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

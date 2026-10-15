@@ -1,0 +1,47 @@
+{
+  "specPaths": [
+    "specification/cognitiveservices/data-plane/SpeechTranscription"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "versionComparisons": [
+      {
+        "serviceName": "Transcription",
+        "baseVersion": "2025-10-15",
+        "headVersion": "2025-10-15",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Transcription",
+        "baseVersion": "2025-10-15",
+        "headVersion": "2026-09-15-preview",
+        "phase": "cross-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 324,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 63,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 392
+  }
+}

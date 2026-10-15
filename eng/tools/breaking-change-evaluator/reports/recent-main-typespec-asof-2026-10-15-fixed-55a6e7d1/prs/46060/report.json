@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-46060:0782d4b5a1aa74283d601309b8cad0e45ffac653"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46060,
+    "title": "[App Configuration] Add `2026-09-01-preview` API version",
+    "author": "austintolani",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "app-config-2026-09-01-preview",
+    "baseSha": "1142128f76754601aac1da265c6fa5fd66380d9b",
+    "headSha": "0782d4b5a1aa74283d601309b8cad0e45ffac653",
+    "changedTypeSpecFiles": [
+      "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/FeatureFlag.tsp",
+      "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/NetworkSecurityPerimeter.tsp",
+      "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/NetworkSecurityPerimeterConfigurations.tsp",
+      "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/client.tsp",
+      "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/main.tsp",
+      "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "0782d4b5a1aa74283d601309b8cad0e45ffac653",
+      "baseSha": "1142128f76754601aac1da265c6fa5fd66380d9b",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/FeatureFlag.tsp",
+        "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/NetworkSecurityPerimeter.tsp",
+        "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/NetworkSecurityPerimeterConfigurations.tsp",
+        "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/client.tsp",
+        "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/main.tsp",
+        "specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "0782d4b5a1aa74283d601309b8cad0e45ffac653",
+      "baseSha": "1142128f76754601aac1da265c6fa5fd66380d9b"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-5ec228bd91c05ab7",
+      "affectedPrs": [
+        46060
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

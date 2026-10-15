@@ -1,0 +1,187 @@
+{
+  "specPaths": [
+    "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 5,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 5,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "DataFactory",
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01",
+        "phase": "same-version",
+        "findingCount": 10
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request property 'pooling' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.pooling.",
+      "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.pooling",
+      "versionPair": {
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01"
+      },
+      "location": {
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "line": 15903
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.pooling",
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  pooling: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request property 'maxPoolSize' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.maxPoolSize.",
+      "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.maxPoolSize",
+      "versionPair": {
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01"
+      },
+      "location": {
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "line": 15908
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.maxPoolSize",
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  maxPoolSize: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request property 'minPoolSize' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.minPoolSize.",
+      "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.minPoolSize",
+      "versionPair": {
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01"
+      },
+      "location": {
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "line": 15913
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.minPoolSize",
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  minPoolSize: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request property 'connectionIdleLifetime' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionIdleLifetime.",
+      "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionIdleLifetime",
+      "versionPair": {
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01"
+      },
+      "location": {
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "line": 15918
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.connectionIdleLifetime",
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  connectionIdleLifetime: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request property 'connectionPruningInterval' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionPruningInterval.",
+      "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionPruningInterval",
+      "versionPair": {
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01"
+      },
+      "location": {
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "line": 15923
+      },
+      "sourceTraceLevel": "direct",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.connectionPruningInterval",
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  connectionPruningInterval: ...;\n}"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1037,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 2131,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 3172
+  }
+}

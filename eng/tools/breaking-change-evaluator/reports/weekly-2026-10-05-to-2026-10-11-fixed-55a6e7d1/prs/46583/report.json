@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-46583:8974e4a28af728a7858f2877e4ccc2cdf66f68bf"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46583,
+    "title": "[OperationalInsights] Rename data authorization property for C#",
+    "author": "ArthurMa1978",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "operationalinsights-data-authorization-mode",
+    "baseSha": "eea7c005f673b4c72a97f4edda1a18217cfbca58",
+    "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+    "mergedAt": "2026-10-09T04:53:56Z",
+    "changedTypeSpecFiles": [
+      "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+      "baseSha": "eea7c005f673b4c72a97f4edda1a18217cfbca58",
+      "runs": {
+        "A": {
+          "id": 35696099557,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "03d98fc87fab6d0281b8e82ca562f92c6a4cc54f415d0600a51e5c87ebb35cdc",
+          "summaryDigest": "b862ab29e44ddb7fe13f2b97f49caaa1cf6b44e4395eb0f4050c92c9ec89c1ec"
+        },
+        "B": {
+          "id": 35696099545,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "7b9e6387c100d995fcf2074b458e88d2af3e705624549a0a108e3f605286690e",
+          "summaryDigest": "3360a6912e52aa01508fd72500ff1c4ab07e66b0135d8fc5de7344c6b6f0b0fe"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+      "baseSha": "eea7c005f673b4c72a97f4edda1a18217cfbca58"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/75b0ebe30c6090b3-phase-a.md",
+          "jsonDigest": "fa63967a22cd4222d9f39b4890ff6e5df53d2a639be952c0ce357e1bd111b520",
+          "markdownDigest": "bca5dcac7988aa3140b6e8abc249366072a2d5b3ee701f19e597e8fa8d09da01",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 943,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 750,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 1696
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "OperationalInsights",
+              "baseVersion": "2025-07-01",
+              "headVersion": "2025-07-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "OperationalInsights",
+              "baseVersion": "2026-03-01",
+              "headVersion": "2026-03-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/75b0ebe30c6090b3-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/75b0ebe30c6090b3-phase-b.md",
+          "jsonDigest": "72b21844ff071986b6f437170734dd9d924cc3c1a534f4cf2b5f1a1680c8c2bb",
+          "markdownDigest": "a5b326cc7ba8a8c1828c4261176360f809d3557c66173516eb5b0be4bd9734c2",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1259,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 916,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 2179
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "OperationalInsights",
+          "baseVersion": "2025-07-01",
+          "headVersion": "2025-07-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "OperationalInsights",
+          "baseVersion": "2026-03-01",
+          "headVersion": "2026-03-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": [],
+      "reportDigest": "7909097862f0d1e5b132abc745ad9625708589eb1041074e862f488a0ed98e29"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-987a8292d6894878",
+      "affectedPrs": [
+        46583
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-f9f83c2316c0db1b",
+      "affectedPrs": [
+        46583
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "8974e4a28af728a7858f2877e4ccc2cdf66f68bf",
+    "prBaseSha": "eea7c005f673b4c72a97f4edda1a18217cfbca58",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin eea7c005f673b4c72a97f4edda1a18217cfbca58 8974e4a28af728a7858f2877e4ccc2cdf66f68bf\ngit -C target checkout --detach 8974e4a28af728a7858f2877e4ccc2cdf66f68bf\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+        "project": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights' --base-ref eea7c005f673b4c72a97f4edda1a18217cfbca58 --phase same-version --json-output '../specification-operationalinsights-resource-manager-Microsoft.OperationalInsights-OperationalInsights-phase-a.json' --markdown-output '../specification-operationalinsights-resource-manager-Microsoft.OperationalInsights-OperationalInsights-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights' --base-ref eea7c005f673b4c72a97f4edda1a18217cfbca58 --json-output '../specification-operationalinsights-resource-manager-Microsoft.OperationalInsights-OperationalInsights-phase-b-evidence.json' --markdown-output '../specification-operationalinsights-resource-manager-Microsoft.OperationalInsights-OperationalInsights-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-35767:cd1a17dc3f61db6c461fbe5f952f872d98556b39"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 35767,
+    "title": "Add sdk emmiter for python js java",
+    "author": "amber-Chen-86",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "amber-cc/add_sdk_emmiter_for_python_js_java",
+    "baseSha": "b464a76895ea6f17747d4664b935d0dc55fa06c4",
+    "headSha": "cd1a17dc3f61db6c461fbe5f952f872d98556b39",
+    "changedTypeSpecFiles": [
+      "specification/cognitiveservices/data-plane/LanguageAnalyzeConversationsAuthoring/tspconfig.yaml",
+      "specification/cognitiveservices/data-plane/LanguageAnalyzeTextAuthoring/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "missing-run-logs"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "cd1a17dc3f61db6c461fbe5f952f872d98556b39",
+      "baseSha": "b464a76895ea6f17747d4664b935d0dc55fa06c4",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/cognitiveservices/data-plane/LanguageAnalyzeConversationsAuthoring/tspconfig.yaml",
+        "specification/cognitiveservices/data-plane/LanguageAnalyzeTextAuthoring/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "cd1a17dc3f61db6c461fbe5f952f872d98556b39",
+      "baseSha": "b464a76895ea6f17747d4664b935d0dc55fa06c4"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-f08d0f403cf9751a",
+      "affectedPrs": [
+        35767
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "missing-run-logs",
+          "detail": "missing-run-logs"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

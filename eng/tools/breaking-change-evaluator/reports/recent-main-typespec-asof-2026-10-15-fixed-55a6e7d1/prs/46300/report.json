@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-46300:e5236cc01cd9f79493b2bef33f0df3ffb26501bd"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46300,
+    "title": "Add Microsoft.Cdn 2026-09-01-preview API version",
+    "author": "HandsomeJay",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "release-microsoft-cdn-2026-09-01-preview",
+    "baseSha": "fcc20ab8473a30946221a1b876c89aa9f61447b9",
+    "headSha": "e5236cc01cd9f79493b2bef33f0df3ffb26501bd",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ErrorPolicy.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/back-compatible.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "e5236cc01cd9f79493b2bef33f0df3ffb26501bd",
+      "baseSha": "fcc20ab8473a30946221a1b876c89aa9f61447b9",
+      "runs": {
+        "A": {
+          "id": 38655294175,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "e5236cc01cd9f79493b2bef33f0df3ffb26501bd",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "302143583f8017197801f711b499505a3dae05d0bb5aa7e7ecbe15b1cc567ff4",
+          "summaryDigest": "0716ef358ce57b2e0aec507b5e1e1679d39fb9062540dcb0e0f4e305fd863951"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/ErrorPolicy.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/back-compatible.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary occurrence counts are lower than the complete OAD log findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "e5236cc01cd9f79493b2bef33f0df3ffb26501bd",
+      "baseSha": "fcc20ab8473a30946221a1b876c89aa9f61447b9"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-e3c25446ee2adc0a",
+      "affectedPrs": [
+        46300
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "invalid-oad-output",
+          "detail": "invalid-oad-output"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "Job summary occurrence counts are lower than the complete OAD log findings"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

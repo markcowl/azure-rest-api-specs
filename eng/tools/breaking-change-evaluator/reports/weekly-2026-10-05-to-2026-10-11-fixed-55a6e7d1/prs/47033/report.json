@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-47033:c69a186259c4784138b121a68addb7204ad704f9"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47033,
+    "title": "Microsoft.Authorization PrivilegedAccess 2026-06-01-preview (supersedes #45970)",
+    "author": "raghavpuri31",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "puriraghav-pim-migration-replacement",
+    "baseSha": "1142128f76754601aac1da265c6fa5fd66380d9b",
+    "headSha": "c69a186259c4784138b121a68addb7204ad704f9",
+    "mergedAt": "2026-10-07T21:28:15Z",
+    "changedTypeSpecFiles": [
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/PrivilegedResourceFavorite.tsp",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/main.tsp",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/models.tsp",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/routes.tsp",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/tspconfig.yaml",
+      "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "c69a186259c4784138b121a68addb7204ad704f9",
+      "baseSha": "1142128f76754601aac1da265c6fa5fd66380d9b",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/PrivilegedResourceFavorite.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/main.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/models.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/routes.tsp",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/tspconfig.yaml",
+        "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "c69a186259c4784138b121a68addb7204ad704f9",
+      "baseSha": "1142128f76754601aac1da265c6fa5fd66380d9b"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-020bbf1ea87727aa",
+      "affectedPrs": [
+        47033
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

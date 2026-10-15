@@ -1,0 +1,68 @@
+{
+  "specPaths": [
+    "specification/storagemover/resource-manager/Microsoft.StorageMover/StorageMover"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5,
+    "versionComparisons": [
+      {
+        "serviceName": "StorageMover",
+        "baseVersion": "2024-07-01",
+        "headVersion": "2024-07-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "StorageMover",
+        "baseVersion": "2025-07-01",
+        "headVersion": "2025-07-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "StorageMover",
+        "baseVersion": "2025-08-01",
+        "headVersion": "2025-08-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "StorageMover",
+        "baseVersion": "2025-12-01",
+        "headVersion": "2025-12-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "StorageMover",
+        "baseVersion": "2026-05-01",
+        "headVersion": "2026-05-01",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1811,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 807,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 2620
+  }
+}

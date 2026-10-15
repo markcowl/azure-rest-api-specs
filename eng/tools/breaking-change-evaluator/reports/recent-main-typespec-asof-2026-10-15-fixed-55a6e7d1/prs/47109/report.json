@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-47109:04350064c8ef657597b0abdc4c212356ef373066"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47109,
+    "title": "Enhance comments for soft-delete resource management",
+    "author": "sandeepraichura",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "sandeepraichura-patch-1",
+    "baseSha": "7a181711c3d59c11fc2d1028ec9c2285c08994f9",
+    "headSha": "04350064c8ef657597b0abdc4c212356ef373066",
+    "changedTypeSpecFiles": [
+      "specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "04350064c8ef657597b0abdc4c212356ef373066",
+      "baseSha": "7a181711c3d59c11fc2d1028ec9c2285c08994f9",
+      "runs": {
+        "A": {
+          "id": 38428697680,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "04350064c8ef657597b0abdc4c212356ef373066",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "9fd1c5f59e66b75dba3497efd98df138720d50d49a4d99bcc1a03e145df0ecb9",
+          "summaryDigest": "1cd8e3b3eee27bcb15179b3dd8bc144a6b55cd6f047c229219fa217b08bbc683"
+        },
+        "B": {
+          "id": 38428698079,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "04350064c8ef657597b0abdc4c212356ef373066",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "67e680ffcce6aeb3e5d0587e7502fe19a74335164f4e06684623c4430f1b229a",
+          "summaryDigest": "beeebc73eb9817349dc56506fa323f733c8661f975bf1b540b445ec25e87ad89"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "04350064c8ef657597b0abdc4c212356ef373066",
+      "baseSha": "7a181711c3d59c11fc2d1028ec9c2285c08994f9"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json",
+        "oldVersion": "2026-03-03",
+        "newVersion": "2026-03-03"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "9fd1c5f59e66b75dba3497efd98df138720d50d49a4d99bcc1a03e145df0ecb9"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [
+    {
+      "project": "specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery",
+      "status": "error",
+      "exitCode": 1,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/acf270c88bb1ab08-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/acf270c88bb1ab08-phase-a.md",
+          "error": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/acf270c88bb1ab08-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/acf270c88bb1ab08-phase-b.md",
+          "error": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+    }
+  ],
+  "matches": [
+    {
+      "oadOccurrenceId": "A-oad-0",
+      "target": {
+        "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-03-03\\GalleryRP.json",
+        "project": "specification/compute/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-03-03",
+        "headVersion": "2026-03-03",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document GalleryRP.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-03-03\\GalleryRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-03-03",
+          "headVersion": "2026-03-03",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document GalleryRP.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    }
+  ],
+  "findingGroups": [
+    {
+      "category": "informational-oad",
+      "key": "NoVersionChange",
+      "swaggerRule": "NoVersionChange",
+      "oadOccurrenceIds": [
+        "A-oad-0"
+      ],
+      "typeSpecOccurrenceIds": []
+    }
+  ],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-fdfbe08636045207",
+      "affectedPrs": [
+        47109
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "04350064c8ef657597b0abdc4c212356ef373066",
+    "prBaseSha": "7a181711c3d59c11fc2d1028ec9c2285c08994f9",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 7a181711c3d59c11fc2d1028ec9c2285c08994f9 04350064c8ef657597b0abdc4c212356ef373066\ngit -C target checkout --detach 04350064c8ef657597b0abdc4c212356ef373066\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery",
+        "project": "specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery' --base-ref 7a181711c3d59c11fc2d1028ec9c2285c08994f9 --phase same-version --json-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-ComputeGallery-phase-a.json' --markdown-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-ComputeGallery-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery' --base-ref 7a181711c3d59c11fc2d1028ec9c2285c08994f9 --json-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-ComputeGallery-phase-b-evidence.json' --markdown-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-ComputeGallery-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

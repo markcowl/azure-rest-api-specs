@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "schemaCompatibility": ">=1 <2",
+  "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+  "datasetId": "recent-main-typespec-asof-2026-10-15",
+  "immutable": true,
+  "title": "Breaking-change evaluation: recent main TypeSpec PRs as of October 14, 2026",
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "repository": "Azure/azure-rest-api-specs",
+  "reportSchema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4",
+    "legacy": false
+  },
+  "selection": {
+    "file": "selection.json",
+    "digest": "2cc343514c0b27a25a73268302b14dad41c929ed89fe0f1ad505485f227308ad",
+    "selectedCount": 40,
+    "sourceCount": 289,
+    "excludedCount": 249,
+    "continuationCursor": {
+      "updatedAt": "2026-10-14T11:47:52Z",
+      "number": 47031
+    }
+  },
+  "analyzer": {
+    "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prototypeParentSha": "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
+    "cacheFormatVersion": 3,
+    "environment": {
+      "os": "Windows NT 10.0.26300.0",
+      "architecture": "x64",
+      "node": "24.16.0",
+      "pnpm": "11.10.0"
+    },
+    "readiness": {
+      "verified": true,
+      "intrinsicFixVerified": true,
+      "details": "Exact commit built and cached once; the complete dist artifact digest and executable readiness were verified; PR #46583 produced zero Phase A findings and no Phase B comparisons."
+    }
+  },
+  "records": [
+    {
+      "pr": 47315,
+      "report": "prs/47315/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46034,
+      "report": "prs/46034/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47234,
+      "report": "prs/47234/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46811,
+      "report": "prs/46811/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47312,
+      "report": "prs/47312/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47279,
+      "report": "prs/47279/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 45406,
+      "report": "prs/45406/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47048,
+      "report": "prs/47048/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46750,
+      "report": "prs/46750/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47274,
+      "report": "prs/47274/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47311,
+      "report": "prs/47311/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47156,
+      "report": "prs/47156/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47308,
+      "report": "prs/47308/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46300,
+      "report": "prs/46300/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47307,
+      "report": "prs/47307/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46359,
+      "report": "prs/46359/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47306,
+      "report": "prs/47306/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 45455,
+      "report": "prs/45455/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47255,
+      "report": "prs/47255/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46724,
+      "report": "prs/46724/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46659,
+      "report": "prs/46659/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46097,
+      "report": "prs/46097/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47265,
+      "report": "prs/47265/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47204,
+      "report": "prs/47204/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 45309,
+      "report": "prs/45309/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46643,
+      "report": "prs/46643/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47206,
+      "report": "prs/47206/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47153,
+      "report": "prs/47153/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 45155,
+      "report": "prs/45155/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46144,
+      "report": "prs/46144/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47283,
+      "report": "prs/47283/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47295,
+      "report": "prs/47295/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47109,
+      "report": "prs/47109/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 46060,
+      "report": "prs/46060/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 45096,
+      "report": "prs/45096/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 35767,
+      "report": "prs/35767/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46357,
+      "report": "prs/46357/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47290,
+      "report": "prs/47290/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 46863,
+      "report": "prs/46863/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47031,
+      "report": "prs/47031/report.json",
+      "status": "not-qualified"
+    }
+  ],
+  "status": {
+    "total": 40,
+    "evaluated": 5,
+    "notQualified": 26,
+    "partial": 9,
+    "failed": 0
+  }
+}

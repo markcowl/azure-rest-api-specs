@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-45455:ec0ff8a801d7ac3edb2378013b1dededfdae9546"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45455,
+    "title": "Add Chaos 2026-11-01 stable API version",
+    "author": "juliagao3",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "juliagao-microsoft-chaos-2026-11-ga-promotion",
+    "baseSha": "a4c2a18ee4d0b1885d66a001145e56744acd9baf",
+    "headSha": "ec0ff8a801d7ac3edb2378013b1dededfdae9546",
+    "changedTypeSpecFiles": [
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/client.tsp",
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/discoveredResource.models.tsp",
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/main.tsp",
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/privateAccess.tsp",
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/privateEndpointConnection.tsp",
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenario.models.tsp",
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenarioConfiguration.models.tsp",
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenarioRun.models.tsp",
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenarioTemplate.models.tsp",
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenarioTemplate.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "ec0ff8a801d7ac3edb2378013b1dededfdae9546",
+      "baseSha": "a4c2a18ee4d0b1885d66a001145e56744acd9baf",
+      "runs": {
+        "A": {
+          "id": 38647092551,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "ec0ff8a801d7ac3edb2378013b1dededfdae9546",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "31f00c15427067af5e00b15117cc4743f05643b657e8303ee037e9ac8383e6f0",
+          "summaryDigest": "af84e92456c19b52e4f9f71ace12744aca97005dd62ad175a0dbb94556aa5a71"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/client.tsp",
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/discoveredResource.models.tsp",
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/main.tsp",
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/privateAccess.tsp",
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/privateEndpointConnection.tsp",
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenario.models.tsp",
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenarioConfiguration.models.tsp",
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenarioRun.models.tsp",
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenarioTemplate.models.tsp",
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/scenarioTemplate.tsp"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "ec0ff8a801d7ac3edb2378013b1dededfdae9546",
+      "baseSha": "a4c2a18ee4d0b1885d66a001145e56744acd9baf"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-05-01-preview/openapi.json",
+        "oldVersion": "2026-05-01-preview",
+        "newVersion": "2026-05-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "31f00c15427067af5e00b15117cc4743f05643b657e8303ee037e9ac8383e6f0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-05-01-preview/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-05-01-preview/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-08-01-preview/openapi.json",
+        "oldVersion": "2026-08-01-preview",
+        "newVersion": "2026-08-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "31f00c15427067af5e00b15117cc4743f05643b657e8303ee037e9ac8383e6f0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-08-01-preview/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/preview/2026-08-01-preview/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-b89740a8cf340e64",
+      "affectedPrs": [
+        45455
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

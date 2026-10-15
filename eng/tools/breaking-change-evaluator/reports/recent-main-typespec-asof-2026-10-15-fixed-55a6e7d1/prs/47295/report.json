@@ -1,0 +1,696 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-47295:e043ede3a96716ea373090b007ae292f4629d9e6"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47295,
+    "title": "Correct MongoCluster network bypass documentation",
+    "author": "sandeepsnairms",
+    "state": "open",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "fix/mongocluster-network-bypass-description",
+    "baseSha": "505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0",
+    "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+    "mergedAt": "2026-10-15T03:55:52Z",
+    "changedTypeSpecFiles": [
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": true,
+      "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+      "baseSha": "505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0",
+      "runs": {
+        "A": {
+          "id": 38588566941,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "08ad256286230bfbef8cb7154ec064bdb6f79a30b0fc733dcf0226fb3f4f1892",
+          "summaryDigest": "4b512152793cca47c6f2bd9a94e633237c3bc3bfe08ebb5154360d87fb88be68"
+        },
+        "B": {
+          "id": 38588567465,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "72748f06331ace549bd40b567e88495a299984434d8c78670c194767350ff4cf",
+          "summaryDigest": "98089eff7b3cd00f3a1834bca0088925a5efeb406a246ecde6d94b8a07549045"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+      "baseSha": "505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json",
+        "oldVersion": "2026-02-01-preview",
+        "newVersion": "2026-02-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "08ad256286230bfbef8cb7154ec064bdb6f79a30b0fc733dcf0226fb3f4f1892"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json",
+        "oldVersion": "2026-06-15-preview",
+        "newVersion": "2026-06-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "08ad256286230bfbef8cb7154ec064bdb6f79a30b0fc733dcf0226fb3f4f1892"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json",
+        "oldVersion": "2026-06-01",
+        "newVersion": "2026-06-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "08ad256286230bfbef8cb7154ec064bdb6f79a30b0fc733dcf0226fb3f4f1892"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [
+    {
+      "project": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-a.md",
+          "jsonDigest": "5e3f9de841eaec3e88e8381894dc5941c585383fda57d3cb1586228e3e92c7b3",
+          "markdownDigest": "6a86a476b737d75e9bf7fb62b04d47289b24b0978fff901f055ead7597946346",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 7205,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2541,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 9754
+          },
+          "comparisonsPerformed": 11,
+          "versionComparisons": [
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2024-03-01-preview",
+              "headVersion": "2024-03-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2024-06-01-preview",
+              "headVersion": "2024-06-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2024-07-01",
+              "headVersion": "2024-07-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2024-10-01-preview",
+              "headVersion": "2024-10-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2025-04-01-preview",
+              "headVersion": "2025-04-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2025-07-01-preview",
+              "headVersion": "2025-07-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2025-08-01-preview",
+              "headVersion": "2025-08-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2025-09-01",
+              "headVersion": "2025-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2026-02-01-preview",
+              "headVersion": "2026-02-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2026-06-01",
+              "headVersion": "2026-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2026-06-15-preview",
+              "headVersion": "2026-06-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-b.md",
+          "jsonDigest": "c9230c4ea248d76701fe97e22f9b56062c444a9345465a914533e396541aa494",
+          "markdownDigest": "2f6d156f7d8991800163d77f19003cbdcd5cc07d8fbf6a73aac421f3e0d5a5be",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 4011,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1362,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 5377
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "1d7ec31e7fb6b45f9b474a3a191d3c17a61356bc471e172e38aac6ec8aaf2654",
+      "comparisonsPerformed": 11,
+      "versionComparisons": [
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2024-03-01-preview",
+          "headVersion": "2024-03-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2024-06-01-preview",
+          "headVersion": "2024-06-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2024-07-01",
+          "headVersion": "2024-07-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2024-10-01-preview",
+          "headVersion": "2024-10-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2025-04-01-preview",
+          "headVersion": "2025-04-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2025-07-01-preview",
+          "headVersion": "2025-07-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2025-08-01-preview",
+          "headVersion": "2025-08-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2025-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2026-02-01-preview",
+          "headVersion": "2026-02-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2026-06-01",
+          "headVersion": "2026-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2026-06-15-preview",
+          "headVersion": "2026-06-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [
+    {
+      "oadOccurrenceId": "A-oad-0",
+      "target": {
+        "spec": "specification\\mongocluster\\resource-manager\\Microsoft.DocumentDB\\MongoCluster\\preview\\2026-02-01-preview\\mongoCluster.json",
+        "project": "specification/mongocluster/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-02-01-preview",
+        "headVersion": "2026-02-01-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document mongoCluster.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\mongocluster\\resource-manager\\Microsoft.DocumentDB\\MongoCluster\\preview\\2026-02-01-preview\\mongoCluster.json",
+          "project": "specification/mongocluster/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-02-01-preview",
+          "headVersion": "2026-02-01-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document mongoCluster.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-1",
+      "target": {
+        "spec": "specification\\mongocluster\\resource-manager\\Microsoft.DocumentDB\\MongoCluster\\preview\\2026-06-15-preview\\mongoCluster.json",
+        "project": "specification/mongocluster/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-06-15-preview",
+        "headVersion": "2026-06-15-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document mongoCluster.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\mongocluster\\resource-manager\\Microsoft.DocumentDB\\MongoCluster\\preview\\2026-06-15-preview\\mongoCluster.json",
+          "project": "specification/mongocluster/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-06-15-preview",
+          "headVersion": "2026-06-15-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document mongoCluster.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-2",
+      "target": {
+        "spec": "specification\\mongocluster\\resource-manager\\Microsoft.DocumentDB\\MongoCluster\\stable\\2026-06-01\\mongoCluster.json",
+        "project": "specification/mongocluster/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-06-01",
+        "headVersion": "2026-06-01",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document mongoCluster.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\mongocluster\\resource-manager\\Microsoft.DocumentDB\\MongoCluster\\stable\\2026-06-01\\mongoCluster.json",
+          "project": "specification/mongocluster/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-06-01",
+          "headVersion": "2026-06-01",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document mongoCluster.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    }
+  ],
+  "findingGroups": [
+    {
+      "category": "informational-oad",
+      "key": "NoVersionChange",
+      "swaggerRule": "NoVersionChange",
+      "oadOccurrenceIds": [
+        "A-oad-0",
+        "A-oad-1",
+        "A-oad-2"
+      ],
+      "typeSpecOccurrenceIds": []
+    }
+  ],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-1a854500c8bd22e3",
+      "affectedPrs": [
+        47295
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-2b465b4e9447aad3",
+      "affectedPrs": [
+        47295
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+    "prBaseSha": "505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0 e043ede3a96716ea373090b007ae292f4629d9e6\ngit -C target checkout --detach e043ede3a96716ea373090b007ae292f4629d9e6\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster",
+        "project": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster' --base-ref 505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0 --phase same-version --json-output '../specification-mongocluster-resource-manager-Microsoft.DocumentDB-MongoCluster-phase-a.json' --markdown-output '../specification-mongocluster-resource-manager-Microsoft.DocumentDB-MongoCluster-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster' --base-ref 505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0 --json-output '../specification-mongocluster-resource-manager-Microsoft.DocumentDB-MongoCluster-phase-b-evidence.json' --markdown-output '../specification-mongocluster-resource-manager-Microsoft.DocumentDB-MongoCluster-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 3,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 3,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

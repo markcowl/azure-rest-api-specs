@@ -1,0 +1,596 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-46097:cb882de13f716ea7c784be5f7c9e4ec5f0dacd1d"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46097,
+    "title": "[NetAppFiles] Release microsoft.net app 2026 07 01",
+    "author": "audunn",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "release-Microsoft.NetApp-2026-07-01",
+    "baseSha": "ab48134ae8938d86e634d0a6a3eb5c660a6c4603",
+    "headSha": "cb882de13f716ea7c784be5f7c9e4ec5f0dacd1d",
+    "changedTypeSpecFiles": [
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ActiveDirectory.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Bucket.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Cache.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/CapacityPool.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticAccount.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackup.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupPolicy.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupVault.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticCapacityPool.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticRegionInfoResource.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshot.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshotPolicy.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticVolume.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/NetAppAccount.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Volume.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/VolumeQuotaRule.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "cb882de13f716ea7c784be5f7c9e4ec5f0dacd1d",
+      "baseSha": "ab48134ae8938d86e634d0a6a3eb5c660a6c4603",
+      "runs": {
+        "A": {
+          "id": 38601097584,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "cb882de13f716ea7c784be5f7c9e4ec5f0dacd1d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3",
+          "summaryDigest": "41faa2dbafcff20c974b190cc0095905f6f6fe67bd1dc3648b6608b06adb6c41"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ActiveDirectory.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Bucket.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Cache.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/CapacityPool.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticAccount.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackup.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupPolicy.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupVault.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticCapacityPool.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticRegionInfoResource.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshot.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshotPolicy.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticVolume.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/NetAppAccount.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Volume.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/VolumeQuotaRule.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "cb882de13f716ea7c784be5f7c9e4ec5f0dacd1d",
+      "baseSha": "ab48134ae8938d86e634d0a6a3eb5c660a6c4603"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json",
+        "oldVersion": "2025-12-15-preview",
+        "newVersion": "2025-12-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json",
+        "oldVersion": "2026-01-15-preview",
+        "newVersion": "2026-01-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json",
+        "oldVersion": "2026-03-15-preview",
+        "newVersion": "2026-03-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json",
+        "oldVersion": "2026-04-15-preview",
+        "newVersion": "2026-04-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json",
+        "oldVersion": "2026-05-15-preview",
+        "newVersion": "2026-05-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-5",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json",
+        "oldVersion": "2026-06-15-preview",
+        "newVersion": "2026-06-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-6",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json",
+        "oldVersion": "2026-01-01",
+        "newVersion": "2026-01-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-7",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json",
+        "oldVersion": "2026-03-01",
+        "newVersion": "2026-03-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-8",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json",
+        "oldVersion": "2026-04-01",
+        "newVersion": "2026-04-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-9",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json",
+        "oldVersion": "2026-05-01",
+        "newVersion": "2026-05-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-10",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json",
+        "oldVersion": "2026-06-01",
+        "newVersion": "2026-06-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "7b22a16f427f299c4bc94f5baa53ba65604729cee9c7cf0cd6477c9d3b2e03a3"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-3e50b8c9b539519e",
+      "affectedPrs": [
+        46097
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

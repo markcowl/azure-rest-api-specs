@@ -1,0 +1,1101 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-46643:e302d1a57587219ec3b6c9f58260c48cc08e11a1"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46643,
+    "title": "[Compute] Add private IP prefix length to 2026-04-01",
+    "author": "rishiraja76",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "rsureshraja-microsoft-pon-20260401",
+    "baseSha": "efb0884620a801846ba9af4f622e004e08522583",
+    "headSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
+    "mergedAt": "2026-10-14T18:08:32Z",
+    "changedTypeSpecFiles": [
+      "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
+      "baseSha": "efb0884620a801846ba9af4f622e004e08522583",
+      "runs": {
+        "A": {
+          "id": 37490387469,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
+          "status": "completed",
+          "conclusion": "failure",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406",
+          "summaryDigest": "97401855f8583565e2d1ab0d8189305ef8245a40855b10ab200fe8769d999f8e"
+        },
+        "B": {
+          "id": 37490387243,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "cc7e8ce2b026f298da9768170caefe2e1925a6d084c58a445cd79c26f70389e3",
+          "summaryDigest": "83521e0df87fb3fcd6b9882e9fbda9d195ca899c560b52c1cd0be0b215d8a81f"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
+      "baseSha": "efb0884620a801846ba9af4f622e004e08522583"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
+        "oldVersion": "2026-04-01",
+        "newVersion": "2026-04-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"\",\"location\":\"fil<local-path>\"},\"type\":\"Info\",\"docUrl\":\"http<local-path>\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Error",
+      "message": "The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+      "newJsonPath": "definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
+        "oldVersion": "2026-04-01",
+        "newVersion": "2026-04-01"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.VirtualMachineScaleSetIPConfigurationProperties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.VirtualMachineScaleSetIPConfigurationProperties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
+          "line": 23084,
+          "jsonPath": "definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
+          "line": 23091,
+          "jsonPath": "definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+          "url": "http<local-path>"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Error",
+      "message": "The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.",
+      "oldPath": "fil<local-path>",
+      "newPath": "fil<local-path>",
+      "oldJsonPath": "definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+      "newJsonPath": "definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
+        "oldVersion": "2026-04-01",
+        "newVersion": "2026-04-01"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.\",\"old\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties\",\"location\":\"fil<local-path>\"},\"new\":{\"ref\":\"fil<local-path>\",\"path\":\"definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties\",\"location\":\"fil<local-path>\"},\"type\":\"Error\",\"docUrl\":\"http<local-path>\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "http<local-path>",
+        "digest": "498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
+          "line": 22255,
+          "jsonPath": "definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+          "url": "http<local-path>"
+        },
+        {
+          "revision": "head",
+          "path": "specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json",
+          "line": 22255,
+          "jsonPath": "definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+          "url": "http<local-path>"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [
+    {
+      "project": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/a34772e539fc6c7c-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/a34772e539fc6c7c-phase-a.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/a34772e539fc6c7c-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/a34772e539fc6c7c-phase-b.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+    }
+  ],
+  "matches": [
+    {
+      "oadOccurrenceId": "A-oad-0",
+      "target": {
+        "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+        "project": "specification/compute/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-04-01",
+        "headVersion": "2026-04-01",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document ComputeRP.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document ComputeRP.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-1",
+      "target": {
+        "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+        "project": "specification/compute/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-04-01",
+        "headVersion": "2026-04-01",
+        "direction": "response",
+        "propertyPath": [
+          "privateIPAddressPrefixLength"
+        ],
+        "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+        "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+        "evidence": [
+          "OAD rule AddedPropertyInResponse",
+          "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+          "No terminal reference",
+          "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+        ],
+        "method": "GET",
+        "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}",
+        "operationId": "VirtualMachineScaleSets_Get",
+        "statusCode": "200"
+      },
+      "targets": [
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}",
+          "operationId": "VirtualMachineScaleSets_Get",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "request",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}",
+          "operationId": "VirtualMachineScaleSets_CreateOrUpdate"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}",
+          "operationId": "VirtualMachineScaleSets_CreateOrUpdate",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}",
+          "operationId": "VirtualMachineScaleSets_CreateOrUpdate",
+          "statusCode": "201"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "PATCH",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}",
+          "operationId": "VirtualMachineScaleSets_Update",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}",
+          "operationId": "VirtualMachineScaleSetVMs_Get",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "request",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}",
+          "operationId": "VirtualMachineScaleSetVMs_Update"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}",
+          "operationId": "VirtualMachineScaleSetVMs_Update",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}",
+          "operationId": "VirtualMachineScaleSetVMs_Update",
+          "statusCode": "202"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/providers/microsoft.compute/locations/{}/virtualmachinescalesets",
+          "operationId": "VirtualMachineScaleSets_ListByLocation",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets",
+          "operationId": "VirtualMachineScaleSets_List",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/providers/microsoft.compute/virtualmachinescalesets",
+          "operationId": "VirtualMachineScaleSets_ListAll",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineScaleSetIPConfigurationProperties",
+          "declaration": "VirtualMachineScaleSetIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineScaleSetIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineScaleSetIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines",
+          "operationId": "VirtualMachineScaleSetVMs_List",
+          "statusCode": "200"
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "missed-equivalent",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-2",
+      "target": {
+        "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+        "project": "specification/compute/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-04-01",
+        "headVersion": "2026-04-01",
+        "direction": "response",
+        "propertyPath": [
+          "privateIPAddressPrefixLength"
+        ],
+        "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+        "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+        "evidence": [
+          "OAD rule AddedPropertyInResponse",
+          "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+          "No terminal reference",
+          "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+        ],
+        "method": "GET",
+        "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}",
+        "operationId": "VirtualMachines_Get",
+        "statusCode": "200"
+      },
+      "targets": [
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}",
+          "operationId": "VirtualMachines_Get",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "request",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}",
+          "operationId": "VirtualMachines_CreateOrUpdate"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}",
+          "operationId": "VirtualMachines_CreateOrUpdate",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}",
+          "operationId": "VirtualMachines_CreateOrUpdate",
+          "statusCode": "201"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "PATCH",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}",
+          "operationId": "VirtualMachines_Update",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}",
+          "operationId": "VirtualMachineScaleSetVMs_Get",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "request",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}",
+          "operationId": "VirtualMachineScaleSetVMs_Update"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}",
+          "operationId": "VirtualMachineScaleSetVMs_Update",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "PUT",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}",
+          "operationId": "VirtualMachineScaleSetVMs_Update",
+          "statusCode": "202"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "request",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "PATCH",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}",
+          "operationId": "VirtualMachines_Update"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/providers/microsoft.compute/locations/{}/virtualmachines",
+          "operationId": "VirtualMachines_ListByLocation",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/providers/microsoft.compute/virtualmachines",
+          "operationId": "VirtualMachines_ListAll",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines",
+          "operationId": "VirtualMachines_List",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\compute\\resource-manager\\Microsoft.Compute\\Compute\\stable\\2026-04-01\\ComputeRP.json",
+          "project": "specification/compute/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "direction": "response",
+          "propertyPath": [
+            "privateIPAddressPrefixLength"
+          ],
+          "schema": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "declaration": "VirtualMachineNetworkInterfaceIPConfigurationProperties",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties",
+            "No terminal reference",
+            "Expanded shared schema VirtualMachineNetworkInterfaceIPConfigurationProperties to operation usage"
+          ],
+          "method": "GET",
+          "route": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines",
+          "operationId": "VirtualMachineScaleSetVMs_List",
+          "statusCode": "200"
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "missed-equivalent",
+      "reviewRequired": false
+    }
+  ],
+  "findingGroups": [
+    {
+      "category": "informational-oad",
+      "key": "NoVersionChange",
+      "swaggerRule": "NoVersionChange",
+      "oadOccurrenceIds": [
+        "A-oad-0"
+      ],
+      "typeSpecOccurrenceIds": []
+    },
+    {
+      "category": "missed-equivalent",
+      "key": "AddedPropertyInResponse",
+      "swaggerRule": "AddedPropertyInResponse",
+      "oadOccurrenceIds": [
+        "A-oad-1",
+        "A-oad-2"
+      ],
+      "typeSpecOccurrenceIds": []
+    }
+  ],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-64fc681fcde8bb4c",
+      "affectedPrs": [
+        46643
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-oad-only-3ce07e0f007d23a1",
+      "affectedPrs": [
+        46643
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [
+        "A-oad-2"
+      ],
+      "category": "oad-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "OAD finding has evaluator classification 'missed-equivalent' and no selected TypeSpec equivalent.",
+      "evidence": [
+        {
+          "kind": "oad-finding",
+          "id": "A-oad-2",
+          "detail": "AddedPropertyInResponse: The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to OAD-only or missed-equivalent totals.",
+      "suggestedFix": "Review detector coverage and the canonical target mapping.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-oad-only-bcb3eb0163c9c91f",
+      "affectedPrs": [
+        46643
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [
+        "A-oad-1"
+      ],
+      "category": "oad-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "OAD finding has evaluator classification 'missed-equivalent' and no selected TypeSpec equivalent.",
+      "evidence": [
+        {
+          "kind": "oad-finding",
+          "id": "A-oad-1",
+          "detail": "AddedPropertyInResponse: The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to OAD-only or missed-equivalent totals.",
+      "suggestedFix": "Review detector coverage and the canonical target mapping.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "e302d1a57587219ec3b6c9f58260c48cc08e11a1",
+    "prBaseSha": "efb0884620a801846ba9af4f622e004e08522583",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin efb0884620a801846ba9af4f622e004e08522583 e302d1a57587219ec3b6c9f58260c48cc08e11a1\ngit -C target checkout --detach e302d1a57587219ec3b6c9f58260c48cc08e11a1\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/compute/resource-manager/Microsoft.Compute/Compute/Compute",
+        "project": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/compute/resource-manager/Microsoft.Compute/Compute/Compute' --base-ref efb0884620a801846ba9af4f622e004e08522583 --phase same-version --json-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-Compute-phase-a.json' --markdown-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-Compute-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/compute/resource-manager/Microsoft.Compute/Compute/Compute' --base-ref efb0884620a801846ba9af4f622e004e08522583 --json-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-Compute-phase-b-evidence.json' --markdown-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-Compute-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-46751:bb6bac2000539483e10f265bd0ab0e02a7376a37"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46751,
+    "title": "[Foundry] End of September Release train.",
+    "author": "glecaros",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "foundry/snap-20260925",
+    "baseSha": "7e7a9372bd1e8b88a00db8f100c0ba84a05b6e1c",
+    "headSha": "bb6bac2000539483e10f265bd0ab0e02a7376a37",
+    "mergedAt": "2026-10-05T23:24:00Z",
+    "changedTypeSpecFiles": [
+      "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/candidates.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/inputs.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/jobs.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/models.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/routes.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/common/servicepatterns.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/connections/models.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/data_generation_jobs/models.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/data_generation_jobs/routes.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/evaluators/models.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/evaluators/routes.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/openai/chat/models.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/common.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/models.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/routes.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/user_conversation_simulation.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-common/error.default.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-agents.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-datasets.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-evaluators.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-projects.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects-agents/client.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects/client.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents/client.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents/tspconfig.yaml",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-projects/client.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-projects/tspconfig.yaml",
+      "specification/ai-foundry/data-plane/Foundry/src/sdk-python-js-azure-ai-projects/client.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/toolboxes/models.tsp",
+      "specification/ai-foundry/data-plane/Foundry/src/tools/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "bb6bac2000539483e10f265bd0ab0e02a7376a37",
+      "baseSha": "7e7a9372bd1e8b88a00db8f100c0ba84a05b6e1c",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/candidates.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/inputs.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/jobs.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/agents-optimization/routes.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/common/servicepatterns.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/connections/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/data_generation_jobs/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/data_generation_jobs/routes.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/evaluators/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/evaluators/routes.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/chat/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/common.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/routes.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/user_conversation_simulation.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/error.default.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-agents.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-datasets.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-evaluators.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-common/ops-relocation-projects.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects-agents/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents/tspconfig.yaml",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-projects/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-projects/tspconfig.yaml",
+        "specification/ai-foundry/data-plane/Foundry/src/sdk-python-js-azure-ai-projects/client.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/toolboxes/models.tsp",
+        "specification/ai-foundry/data-plane/Foundry/src/tools/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "bb6bac2000539483e10f265bd0ab0e02a7376a37",
+      "baseSha": "7e7a9372bd1e8b88a00db8f100c0ba84a05b6e1c"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-08b899af1740c3d6",
+      "affectedPrs": [
+        46751
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

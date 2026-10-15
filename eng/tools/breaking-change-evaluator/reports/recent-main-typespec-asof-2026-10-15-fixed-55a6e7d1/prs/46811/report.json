@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-46811:d63dfe25dad4d9123e95c8d5c2d7941cd2651b92"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46811,
+    "title": "Review request for Microsoft.ContainerService/aks to add version stable/2026-08-01 and preview/2026-08-02-preview",
+    "author": "FumingZhang",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "dev-containerservice-Microsoft.ContainerService-2026-08",
+    "baseSha": "fd7acf72fc1d90922ef0536a06863c414328824f",
+    "headSha": "d63dfe25dad4d9123e95c8d5c2d7941cd2651b92",
+    "changedTypeSpecFiles": [
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentFabricMembership.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPool.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPoolModels.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPoolUpgradeProfile.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AlertConfiguration.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/CommonModels.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/FlexNodeBootstrap.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/GuardrailsAvailableVersion.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/IdentityBinding.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/JWTAuthenticator.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/LoadBalancer.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/LocationRoutes.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/Machine.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MaintenanceConfiguration.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MaintenanceWindow.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedCluster.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedClusterSnapshot.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedClusterUpgradeProfile.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MeshMembership.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/SafeguardsAvailableVersion.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/UpgradeInsight.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/VmSkus.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "d63dfe25dad4d9123e95c8d5c2d7941cd2651b92",
+      "baseSha": "fd7acf72fc1d90922ef0536a06863c414328824f",
+      "runs": {
+        "A": {
+          "id": 38672000593,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "d63dfe25dad4d9123e95c8d5c2d7941cd2651b92",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "75e90bf2adb0a6795e7452ffb0793bd476e8592e8562811f1167d3aceab72656",
+          "summaryDigest": "dc2302a8efd8ae74d348f3d30f2087face76efc00d850078d5a860b2e52a7178"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentFabricMembership.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPool.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPoolModels.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPoolUpgradeProfile.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AlertConfiguration.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/CommonModels.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/FlexNodeBootstrap.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/GuardrailsAvailableVersion.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/IdentityBinding.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/JWTAuthenticator.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/LoadBalancer.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/LocationRoutes.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/Machine.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MaintenanceConfiguration.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MaintenanceWindow.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedCluster.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedClusterSnapshot.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedClusterUpgradeProfile.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MeshMembership.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/SafeguardsAvailableVersion.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/UpgradeInsight.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/VmSkus.tsp"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "d63dfe25dad4d9123e95c8d5c2d7941cd2651b92",
+      "baseSha": "fd7acf72fc1d90922ef0536a06863c414328824f"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-760ab21b056e6330",
+      "affectedPrs": [
+        46811
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

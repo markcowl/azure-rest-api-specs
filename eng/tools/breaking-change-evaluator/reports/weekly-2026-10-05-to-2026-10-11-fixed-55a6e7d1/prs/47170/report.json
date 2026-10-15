@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-47170:1c3cbe5b915290ddd8209da9d20326979735dc01"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47170,
+    "title": "Avoid BillingBenefits C# validation model naming collision",
+    "author": "live1206",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "billingbenefits-csharp-validation-name-collision",
+    "baseSha": "e070ec9b11d1417d83170393ec90d7122e343e0f",
+    "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+    "mergedAt": "2026-10-10T07:59:51Z",
+    "changedTypeSpecFiles": [
+      "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+      "baseSha": "e070ec9b11d1417d83170393ec90d7122e343e0f",
+      "runs": {
+        "A": {
+          "id": 38033934891,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "81c103fe7b151989a944e1b64780c8381fc9b2f265320007f03b48e9cf58eea9",
+          "summaryDigest": "e5339bd057d4b03535488c9f7e343c2428a3bcc4c0afe0de3388cd8e74dc151e"
+        },
+        "B": {
+          "id": 38033934811,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "a4f4aa224a75415caf4493072b29842a9264190e858253d7601688480c8278ed",
+          "summaryDigest": "1340dda9d488498e8c6989919baebc465fe53c532829d86a383a2e9cd220ed5a"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+      "baseSha": "e070ec9b11d1417d83170393ec90d7122e343e0f"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits",
+      "status": "error",
+      "exitCode": 1,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/8b3463b023252131-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/8b3463b023252131-phase-a.md",
+          "error": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/8b3463b023252131-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/8b3463b023252131-phase-b.md",
+          "error": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-8cc1e31b9b6bd5e5",
+      "affectedPrs": [
+        47170
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "1c3cbe5b915290ddd8209da9d20326979735dc01",
+    "prBaseSha": "e070ec9b11d1417d83170393ec90d7122e343e0f",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin e070ec9b11d1417d83170393ec90d7122e343e0f 1c3cbe5b915290ddd8209da9d20326979735dc01\ngit -C target checkout --detach 1c3cbe5b915290ddd8209da9d20326979735dc01\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits",
+        "project": "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits' --base-ref e070ec9b11d1417d83170393ec90d7122e343e0f --phase same-version --json-output '../specification-billingbenefits-resource-manager-Microsoft.BillingBenefits-BillingBenefits-phase-a.json' --markdown-output '../specification-billingbenefits-resource-manager-Microsoft.BillingBenefits-BillingBenefits-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits' --base-ref e070ec9b11d1417d83170393ec90d7122e343e0f --json-output '../specification-billingbenefits-resource-manager-Microsoft.BillingBenefits-BillingBenefits-phase-b-evidence.json' --markdown-output '../specification-billingbenefits-resource-manager-Microsoft.BillingBenefits-BillingBenefits-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

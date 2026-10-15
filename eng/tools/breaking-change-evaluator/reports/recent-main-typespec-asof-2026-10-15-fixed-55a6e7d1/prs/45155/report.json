@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-45155:053d823880689a191dbf86c3d30e5ccd1f562941"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45155,
+    "title": "Adding Microsoft.Carbon 2026-05-01-preview API",
+    "author": "itiinani-msft",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "carbon-pr-44903",
+    "baseSha": "e88935d7e9fe779914a02ef295f22af5565422da",
+    "headSha": "053d823880689a191dbf86c3d30e5ccd1f562941",
+    "mergedAt": "2026-10-14T17:37:42Z",
+    "changedTypeSpecFiles": [
+      "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "053d823880689a191dbf86c3d30e5ccd1f562941",
+      "baseSha": "e88935d7e9fe779914a02ef295f22af5565422da",
+      "runs": {
+        "A": {
+          "id": 37966551231,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "053d823880689a191dbf86c3d30e5ccd1f562941",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "b3a38b1478992f25d129fac96d84290135f808fb85a0ff567810c19af8383e28",
+          "summaryDigest": "aaa15924149ed04bde56d2459e144791aacb6d37285433721136a1fc6ab702bd"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary claims no findings but workflow logs contain OAD findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "053d823880689a191dbf86c3d30e5ccd1f562941",
+      "baseSha": "e88935d7e9fe779914a02ef295f22af5565422da"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-79b462a3e7bfb7ea",
+      "affectedPrs": [
+        45155
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "invalid-oad-output",
+          "detail": "invalid-oad-output"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "Job summary claims no findings but workflow logs contain OAD findings"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1",
+    "datasetId": "weekly-2026-10-05-to-2026-10-11",
+    "reportId": "weekly-2026-10-05-to-2026-10-11-fixed-55a6e7d1:pr-47047:a67527e20e8d8105db5ef946120297986c8b9706"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47047,
+    "title": "Try to fix NET SDK for PTM",
+    "author": "imsiddhartha",
+    "state": "closed",
+    "merged": true,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "dev/ssaklecha/net-sdk-fix",
+    "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+    "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+    "mergedAt": "2026-10-06T15:31:57Z",
+    "changedTypeSpecFiles": [
+      "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "closed",
+      "merged": true,
+      "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+      "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+      "runs": {
+        "A": {
+          "id": 37443065657,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "75e88b631c39b55d3055e72a923442f0be2ee8d49f931d746780dea1961d953e",
+          "summaryDigest": "0c2c944c47bd60396fefaad8f95ce41e5c22e25da2b25e6b1c56369194c83421"
+        },
+        "B": {
+          "id": 37443065531,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "79072c3ffbe5eba0a291ceac82f3814b5e4e96f4db5bfa9dc9ebe9a9f30fb68f",
+          "summaryDigest": "fa21f3731fd4f8e723866c2ab2c69cde9dc81a11811699adc27ded4a2738fb93"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+      "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    },
+    "tool": {
+      "sourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+      "artifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager",
+      "status": "error",
+      "exitCode": 1,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/3b4e7b467cf721f9-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/3b4e7b467cf721f9-phase-a.md",
+          "error": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/3b4e7b467cf721f9-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/3b4e7b467cf721f9-phase-b.md",
+          "error": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-a52232caa78ad1a2",
+      "affectedPrs": [
+        47047
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487\r\n      throw er; // Unhandled 'error' event\r\n      ^\r\n\r\nError: read ENOTCONN\r\n    at tryReadStart (node:net:775:20)\r\n    at Socket._read (node:net:790:5)\r\n    at Readable.read (node:internal/streams/readable:741:12)\r\n    at Socket.read (node:net:844:39)\r\n    at new Socket (node:net:500:12)\r\n    at Object.Socket (node:net:365:41)\r\n    at createSocket (node:internal/child_process:337:14)\r\n    at ChildProcess.spawn (node:internal/child_process:475:23)\r\n    at spawn (node:child_process:796:9)\r\n    at execFile (node:child_process:349:17)\r\nEmitted 'error' event on Socket instance at:\r\n    at emitErrorNT (node:internal/streams/destroy:170:8)\r\n    at emitErrorCloseNT (node:internal/streams/destroy:129:3)\r\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {\r\n  errno: -4053,\r\n  code: 'ENOTCONN',\r\n  syscall: 'read'\r\n}\r\n\r\nNode.js v24.16.0"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "42434df7da42a759156b2dac2beef5e3625ccf3b",
+    "analyzerSourceSha": "55a6e7d122e36ab4120958211c41499d3bd79177",
+    "analyzerArtifactDigest": "cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820",
+    "prHeadSha": "a67527e20e8d8105db5ef946120297986c8b9706",
+    "prBaseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'http<local-path>' evaluator\ngit -C evaluator checkout '42434df7da42a759156b2dac2beef5e3625ccf3b'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 55a6e7d122e36ab4120958211c41499d3bd79177 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'cdab5e43f1c9d9aed5d2a3ff9790964c07c202d40a6b320beb539fa1c5980820') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'http<local-path>' target\ngit -C target fetch --no-tags origin 0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b a67527e20e8d8105db5ef946120297986c8b9706\ngit -C target checkout --detach a67527e20e8d8105db5ef946120297986c8b9706\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'http<local-path>' --tool-revision 55a6e7d122e36ab4120958211c41499d3bd79177 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager",
+        "project": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager' --base-ref 0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b --phase same-version --json-output '../specification-privatetrafficmanager-resource-manager-Microsoft.Network-PrivateTrafficManager-phase-a.json' --markdown-output '../specification-privatetrafficmanager-resource-manager-Microsoft.Network-PrivateTrafficManager-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager' --base-ref 0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b --json-output '../specification-privatetrafficmanager-resource-manager-Microsoft.Network-PrivateTrafficManager-phase-b-evidence.json' --markdown-output '../specification-privatetrafficmanager-resource-manager-Microsoft.Network-PrivateTrafficManager-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

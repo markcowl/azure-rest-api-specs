@@ -1,0 +1,54 @@
+{
+  "specPaths": [
+    "specification/app/data-plane/DynamicSessions"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3,
+    "versionComparisons": [
+      {
+        "serviceName": "DynamicSessions",
+        "baseVersion": "2024-10-02-preview",
+        "headVersion": "2024-10-02-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "DynamicSessions",
+        "baseVersion": "2025-02-02-preview",
+        "headVersion": "2025-02-02-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "DynamicSessions",
+        "baseVersion": "2025-10-02-preview",
+        "headVersion": "2025-10-02-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 833,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 116,
+    "classifyMs": 1,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 951
+  }
+}

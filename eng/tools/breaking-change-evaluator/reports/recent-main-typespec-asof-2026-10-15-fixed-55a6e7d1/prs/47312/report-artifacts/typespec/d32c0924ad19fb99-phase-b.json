@@ -1,0 +1,40 @@
+{
+  "specPaths": [
+    "specification/ai/data-plane/ModelInference"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1,
+    "versionComparisons": [
+      {
+        "serviceName": "ModelInference",
+        "baseVersion": "2024-05-01-preview",
+        "headVersion": "2024-05-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 141,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 63,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 207
+  }
+}

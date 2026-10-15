@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
+    "datasetId": "recent-main-typespec-asof-2026-10-15",
+    "reportId": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1:pr-47204:057dd6a7e711b44ccb6c9bf44040e7f73ff6baff"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-15T03:00:00Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47204,
+    "title": "Release app Microsoft.App SreAgent stable/2026-07-01",
+    "author": "RobiladK",
+    "state": "open",
+    "merged": false,
+    "url": "http<local-path>",
+    "baseBranch": "main",
+    "headBranch": "release-app-Microsoft.App-SreAgent-stable/2026-07-01",
+    "baseSha": "56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f",
+    "headSha": "057dd6a7e711b44ccb6c9bf44040e7f73ff6baff",
+    "changedTypeSpecFiles": [
+      "specification/app/resource-manager/Microsoft.App/SreAgent/agent.models.tsp",
+      "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.models.tsp",
+      "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.tsp",
+      "specification/app/resource-manager/Microsoft.App/SreAgent/commontypes.tsp",
+      "specification/app/resource-manager/Microsoft.App/SreAgent/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "http<local-path>",
+      "state": "open",
+      "merged": false,
+      "headSha": "057dd6a7e711b44ccb6c9bf44040e7f73ff6baff",
+      "baseSha": "56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f",
+      "runs": {
+        "A": {
+          "id": 38617807816,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "057dd6a7e711b44ccb6c9bf44040e7f73ff6baff",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "http<local-path>",
+          "logDigest": "fc3b8718625707ca8e0cc43df58e091def57d7c3ed9d04c38aa37093dd8639d9",
+          "summaryDigest": "ec63e55f2197324628cebe7c9bf1df3cd0b3c9f29aa10c9836b1e783e2ac237e"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/app/resource-manager/Microsoft.App/SreAgent/agent.models.tsp",
+        "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.models.tsp",
+        "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.tsp",
+        "specification/app/resource-manager/Microsoft.App/SreAgent/commontypes.tsp",
+        "specification/app/resource-manager/Microsoft.App/SreAgent/main.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary claims no findings but workflow logs contain OAD findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "http<local-path>",
+      "headSha": "057dd6a7e711b44ccb6c9bf44040e7f73ff6baff",
+      "baseSha": "56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f"
+    },
+    "evaluator": {
+      "commit": "42434df7da42a759156b2dac2beef5e3625ccf3b"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-d60da887f16b75d1",
+      "affectedPrs": [
+        47204
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "invalid-oad-output",
+          "detail": "invalid-oad-output"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "Job summary claims no findings but workflow logs contain OAD findings"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}
