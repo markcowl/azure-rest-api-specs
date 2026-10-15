@@ -142,6 +142,23 @@ export async function validateRunDirectory(runDirectory: string): Promise<RunMan
   if (sha256(selectionContent) !== manifest.selection.digest) {
     throw new Error(`${manifest.id} selection digest does not match`);
   }
+  const selection = JSON.parse(selectionContent) as {
+    query?: { snapshot?: string; snapshotDigest?: string };
+    assertions?: { weeklyIntersection?: number };
+  };
+  if (selection.query?.snapshot) {
+    assertRelativeLink(selection.query.snapshot, "query.snapshot");
+    const snapshot = await readFile(join(root, selection.query.snapshot), "utf8");
+    if (sha256(snapshot) !== selection.query.snapshotDigest) {
+      throw new Error(`${manifest.id} query snapshot digest does not match`);
+    }
+  }
+  if (
+    selection.assertions?.weeklyIntersection !== undefined &&
+    selection.assertions.weeklyIntersection !== 0
+  ) {
+    throw new Error(`${manifest.id} intersects the excluded weekly selection`);
+  }
   if (manifest.records.length !== manifest.selection.selectedCount) {
     throw new Error(`${manifest.id} record count does not match selected count`);
   }

@@ -1,12 +1,12 @@
 import { createHash } from "node:crypto";
-import { mkdir, mkdtemp, readFile, rename, rm, stat, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, readdir, rename, rm, stat, writeFile } from "node:fs/promises";
 import { homedir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { runProcess } from "./process.ts";
 
 export const DEFAULT_TOOL_PR = 5450;
 export const TOOL_REPOSITORY = "https://github.com/Azure/typespec-azure.git";
-export const CACHE_FORMAT_VERSION = 2;
+export const CACHE_FORMAT_VERSION = 3;
 export const TYPESPEC_MAIN_PATH_COMPATIBILITY = "package-root-typespec-main-v1";
 const STAGING_CLEANUP_MAX_RETRIES = 5;
 const STAGING_CLEANUP_RETRY_DELAY_MS = 200;
@@ -22,6 +22,7 @@ type ToolManifest = {
   compatibility: string;
   sourceSha: string;
   artifactDigest: string;
+  artifactRoot: string;
   executable: string;
 };
 type FinalizePublishedTool = (finalPath: string, manifest: ToolManifest) => Promise<void>;
@@ -65,10 +66,35 @@ export async function resolveToolRevision(revision?: string): Promise<string> {
   return sha;
 }
 
-async function sha256File(path: string): Promise<string> {
-  return createHash("sha256")
-    .update(await readFile(path))
-    .digest("hex");
+async function sha256Directory(path: string): Promise<string> {
+  const hash = createHash("sha256");
+  async function add(directory: string, prefix: string): Promise<void> {
+    const entries = await readdir(directory, { withFileTypes: true });
+    entries.sort((left, right) => left.name.localeCompare(right.name));
+    for (const entry of entries) {
+      const relativePath = prefix ? `${prefix}/${entry.name}` : entry.name;
+      const fullPath = join(directory, entry.name);
+      if (entry.isDirectory()) {
+        await add(fullPath, relativePath);
+      } else if (entry.isFile()) {
+        hash.update(relativePath);
+        hash.update("\0");
+        hash.update(await readFile(fullPath));
+        hash.update("\0");
+      }
+    }
+  }
+  await add(path, "");
+  return hash.digest("hex");
+}
+
+async function sha256Artifact(path: string): Promise<string> {
+  const information = await stat(path);
+  return information.isDirectory()
+    ? sha256Directory(path)
+    : createHash("sha256")
+        .update(await readFile(path))
+        .digest("hex");
 }
 
 function compiledCompilePath(finalPath: string, manifest: ToolManifest): string {
@@ -176,12 +202,16 @@ async function isPreparedToolRunnable(cachePath: string, manifest: ToolManifest)
   if (
     manifest.cacheFormatVersion !== CACHE_FORMAT_VERSION ||
     manifest.compatibility !== TYPESPEC_MAIN_PATH_COMPATIBILITY ||
+    !manifest.artifactRoot ||
     !(await hasTypespecMainPathCompatibility(cachePath, manifest))
   ) {
     return false;
   }
   const executable = join(cachePath, manifest.executable);
-  if (manifest.artifactDigest !== (await sha256File(executable).catch(() => undefined))) {
+  if (
+    manifest.artifactDigest !==
+    (await sha256Artifact(join(cachePath, manifest.artifactRoot)).catch(() => undefined))
+  ) {
     return false;
   }
   const verification = await runProcess(process.execPath, [executable, "--help"], {
@@ -209,7 +239,7 @@ export async function finalizePublishedTool(
   );
   await applyTypespecMainPathCompatibility(finalPath, manifest);
   const executable = join(finalPath, manifest.executable);
-  const finalDigest = await sha256File(executable);
+  const finalDigest = await sha256Artifact(join(finalPath, manifest.artifactRoot));
   if (finalDigest !== manifest.artifactDigest) {
     throw new Error(
       `Published tool digest changed after relocation: expected ${manifest.artifactDigest}, got ${finalDigest}`,
@@ -323,13 +353,20 @@ export async function prepareTool(
         timeoutMs: 30_000,
       }),
     );
-    const artifactDigest = await sha256File(builtExecutable);
-    const manifest = {
+    const artifactRoot = join("repo", "packages", "typespec-breaking-change", "dist");
+    const provisionalManifest = {
       cacheFormatVersion: CACHE_FORMAT_VERSION,
       compatibility: TYPESPEC_MAIN_PATH_COMPATIBILITY,
       sourceSha,
-      artifactDigest,
+      artifactDigest: "",
+      artifactRoot,
       executable: relativeExecutable,
+    };
+    await applyTypespecMainPathCompatibility(staging, provisionalManifest);
+    const artifactDigest = await sha256Directory(join(staging, artifactRoot));
+    const manifest = {
+      ...provisionalManifest,
+      artifactDigest,
     };
     const finalPath = await publishPreparedTool(
       staging,

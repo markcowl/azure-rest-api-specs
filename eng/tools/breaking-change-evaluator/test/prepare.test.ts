@@ -27,6 +27,7 @@ function manifest(executable: string, artifactDigest = "digest") {
     compatibility: TYPESPEC_MAIN_PATH_COMPATIBILITY,
     sourceSha: "a".repeat(40),
     artifactDigest,
+    artifactRoot: executable,
     executable,
   };
 }
