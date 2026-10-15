@@ -1,10 +1,10 @@
-import { mkdir, mkdtemp, rm } from "node:fs/promises";
-import { tmpdir } from "node:os";
+import { mkdir, readFile, rm } from "node:fs/promises";
 import { basename, dirname, extname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { enrichOadFindingEvidence, normalizeTypeSpecFindingEvidence } from "./evidence.ts";
 import { parsePrReference, qualifyPullRequest, type QualifiedPr } from "./github.ts";
 import { matchFindings } from "./matcher.ts";
+import { applyIssueAnalysisOverlays, generateIssueAnalyses } from "./issues.ts";
 import { defaultCacheDir, findPreparedTool } from "./prepare.ts";
 import { runProcess, type ProcessResult } from "./process.ts";
 import { resolveProjectRoots, runTypeSpecProjects } from "./projects.ts";
@@ -13,9 +13,15 @@ import { resolveOadTargets } from "./swagger-target.ts";
 import type {
   CanonicalTarget,
   EvaluationReport,
+  IssueAnalysisOverlay,
   Phase,
   PullRequestDetails,
   Reproduction,
+} from "./types.ts";
+import {
+  EVALUATION_SCHEMA_COMPATIBILITY,
+  EVALUATION_SCHEMA_NAME,
+  EVALUATION_SCHEMA_VERSION,
 } from "./types.ts";
 
 export const DEFAULT_EVALUATION_TOOL_SHA = "d0ab464d60c47d6699bfea0292c901864b5d8ba0";
@@ -30,9 +36,14 @@ export interface EvaluateOptions {
   cacheDir?: string;
   qualifiedPr?: QualifiedPr;
   evaluatorCommit?: string;
+  runId?: string;
+  datasetId?: string;
+  generatedAt?: string;
+  issueOverlays?: string;
+  workDir?: string;
 }
 
-function baseReport(qualifiedPr: QualifiedPr): EvaluationReport {
+function baseReport(qualifiedPr: QualifiedPr, options: EvaluateOptions): EvaluationReport {
   const pullRequest: PullRequestDetails | undefined =
     qualifiedPr.details ??
     (qualifiedPr.headSha
@@ -59,10 +70,20 @@ function baseReport(qualifiedPr: QualifiedPr): EvaluationReport {
       : finding,
   );
   return {
-    schemaVersion: 2,
+    schemaVersion: EVALUATION_SCHEMA_VERSION,
+    schema: {
+      name: EVALUATION_SCHEMA_NAME,
+      version: EVALUATION_SCHEMA_VERSION,
+      compatibility: EVALUATION_SCHEMA_COMPATIBILITY,
+    },
+    run: {
+      id: options.runId ?? `adhoc-${qualifiedPr.headSha || "unresolved"}`,
+      datasetId: options.datasetId ?? options.runId ?? "adhoc",
+      reportId: `${options.runId ?? `adhoc-${qualifiedPr.headSha || "unresolved"}`}:pr-${qualifiedPr.reference.number}:${qualifiedPr.headSha || "unresolved"}`,
+    },
     status: qualifiedPr.qualification.qualified ? "failed" : "not-qualified",
     complete: false,
-    generatedAt: new Date().toISOString(),
+    generatedAt: options.generatedAt ?? new Date().toISOString(),
     pullRequest,
     qualification: qualifiedPr.qualification,
     provenance: qualifiedPr.headSha
@@ -81,6 +102,7 @@ function baseReport(qualifiedPr: QualifiedPr): EvaluationReport {
     typeSpecProjects: [],
     matches: [],
     findingGroups: [],
+    issueAnalyses: [],
     errors: [],
   };
 }
@@ -163,12 +185,23 @@ async function removeEvaluationDirectory(path: string): Promise<string | undefin
   }
 }
 
-function failedReport(error: unknown): EvaluationReport {
+function failedReport(error: unknown, options: EvaluateOptions): EvaluationReport {
+  const runId = options.runId ?? "adhoc-failed";
   return {
-    schemaVersion: 2,
+    schemaVersion: EVALUATION_SCHEMA_VERSION,
+    schema: {
+      name: EVALUATION_SCHEMA_NAME,
+      version: EVALUATION_SCHEMA_VERSION,
+      compatibility: EVALUATION_SCHEMA_COMPATIBILITY,
+    },
+    run: {
+      id: runId,
+      datasetId: options.datasetId ?? runId,
+      reportId: `${runId}:unresolved`,
+    },
     status: "failed",
     complete: false,
-    generatedAt: new Date().toISOString(),
+    generatedAt: options.generatedAt ?? new Date().toISOString(),
     qualification: { qualified: false, reasonCodes: [], evidence: {} },
     provenance: {},
     dimensions: [],
@@ -176,8 +209,16 @@ function failedReport(error: unknown): EvaluationReport {
     typeSpecProjects: [],
     matches: [],
     findingGroups: [],
+    issueAnalyses: [],
     errors: [error instanceof Error ? error.message : String(error)],
   };
+}
+
+async function loadIssueOverlays(path?: string): Promise<IssueAnalysisOverlay[]> {
+  if (!path) return [];
+  const value = JSON.parse(await readFile(resolve(path), "utf8")) as unknown;
+  if (!Array.isArray(value)) throw new Error("Issue analysis overlay must be a JSON array");
+  return value as IssueAnalysisOverlay[];
 }
 
 function quotePowerShell(value: string): string {
@@ -240,11 +281,15 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
   try {
     qualifiedPr = options.qualifiedPr ?? (await qualifyPullRequest(parsePrReference(options.pr)));
   } catch (error) {
-    await writeReportFiles(failedReport(error), options.jsonOutput, options.markdownOutput);
+    await writeReportFiles(
+      failedReport(error, options),
+      options.jsonOutput,
+      options.markdownOutput,
+    );
     return EXIT_FAILED;
   }
 
-  const report = baseReport(qualifiedPr);
+  const report = baseReport(qualifiedPr, options);
   try {
     report.provenance.evaluator = {
       commit: options.evaluatorCommit ?? (await resolveEvaluatorCommit()),
@@ -256,6 +301,10 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
     return EXIT_FAILED;
   }
   if (!qualifiedPr.qualification.qualified) {
+    report.issueAnalyses = applyIssueAnalysisOverlays(
+      generateIssueAnalyses(report),
+      await loadIssueOverlays(options.issueOverlays),
+    );
     await writeReportFiles(report, options.jsonOutput, options.markdownOutput);
     return EXIT_NOT_QUALIFIED;
   }
@@ -279,7 +328,17 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
     artifactDigest: prepared.artifactDigest,
   };
 
-  const temporary = await mkdtemp(join(tmpdir(), "breaking-change-evaluation-"));
+  const temporary = resolve(
+    options.workDir ??
+      join(
+        options.cacheDir ?? defaultCacheDir(),
+        "evaluations",
+        report.run.id,
+        report.pullRequest ? String(report.pullRequest.number) : "unresolved",
+      ),
+  );
+  await rm(temporary, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 });
+  await mkdir(temporary, { recursive: true });
   const checkout = join(temporary, "repo");
   const markdownPath = resolve(options.markdownOutput);
   const reportStem = basename(markdownPath, extname(markdownPath));
@@ -402,6 +461,10 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
     report.errors.push(error instanceof Error ? error.message : String(error));
   }
 
+  report.issueAnalyses = applyIssueAnalysisOverlays(
+    generateIssueAnalyses(report),
+    await loadIssueOverlays(options.issueOverlays),
+  );
   const cleanupError = await removeEvaluationDirectory(temporary);
   if (cleanupError) {
     report.status = report.typeSpecProjects.length > 0 ? "partial" : "failed";

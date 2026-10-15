@@ -5,6 +5,8 @@
   "type": "object",
   "required": [
     "schemaVersion",
+    "schema",
+    "run",
     "status",
     "complete",
     "generatedAt",
@@ -15,10 +17,31 @@
     "typeSpecProjects",
     "matches",
     "findingGroups",
+    "issueAnalyses",
     "errors"
   ],
   "properties": {
-    "schemaVersion": { "const": 2 },
+    "schemaVersion": { "const": 3 },
+    "schema": {
+      "type": "object",
+      "required": ["name", "version", "compatibility"],
+      "properties": {
+        "name": { "const": "azure-rest-api-specs/breaking-change-evaluator" },
+        "version": { "const": 3 },
+        "compatibility": { "const": ">=3 <4" }
+      },
+      "additionalProperties": false
+    },
+    "run": {
+      "type": "object",
+      "required": ["id", "datasetId", "reportId"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+        "datasetId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$" },
+        "reportId": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
     "status": {
       "enum": ["evaluated", "partial", "not-qualified", "failed"]
     },
@@ -118,6 +141,97 @@
               "ambiguous",
               "errors"
             ]
+          },
+          "issueAnalyses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "affectedPrs",
+                "phases",
+                "findingIds",
+                "category",
+                "conclusion",
+                "confidence",
+                "rationale",
+                "evidence",
+                "aggregateImpact",
+                "suggestedFix",
+                "status"
+              ],
+              "properties": {
+                "id": { "type": "string", "pattern": "^issue-[a-z0-9-]+-[0-9a-f]{16}$" },
+                "affectedPrs": {
+                  "type": "array",
+                  "items": { "type": "integer", "minimum": 1 },
+                  "uniqueItems": true
+                },
+                "phases": {
+                  "type": "array",
+                  "items": { "enum": ["A", "B"] },
+                  "uniqueItems": true
+                },
+                "findingIds": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "uniqueItems": true
+                },
+                "category": {
+                  "enum": [
+                    "reciprocal-narrowed-widened-pair",
+                    "false-phase-a-triggered-phase-b",
+                    "concordant-zero",
+                    "severity-mismatch",
+                    "oad-only",
+                    "typespec-only",
+                    "evidence-gap",
+                    "compile-runtime-failure"
+                  ]
+                },
+                "conclusion": {
+                  "enum": [
+                    "likely-detector-defect",
+                    "likely-expected-difference",
+                    "confirmed-agreement",
+                    "requires-review",
+                    "insufficient-evidence",
+                    "execution-failure"
+                  ]
+                },
+                "confidence": { "enum": ["low", "medium", "high"] },
+                "rationale": { "type": "string", "minLength": 1 },
+                "evidence": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["kind", "id", "detail"],
+                    "properties": {
+                      "kind": {
+                        "enum": [
+                          "oad-finding",
+                          "typespec-finding",
+                          "match",
+                          "execution",
+                          "qualification"
+                        ]
+                      },
+                      "id": { "type": "string" },
+                      "detail": { "type": "string" }
+                    },
+                    "additionalProperties": false
+                  }
+                },
+                "aggregateImpact": { "type": "string", "minLength": 1 },
+                "suggestedFix": { "type": "string", "minLength": 1 },
+                "status": {
+                  "enum": ["generated", "reviewed", "accepted", "rejected", "resolved"]
+                },
+                "reviewedBy": { "type": "string" },
+                "reviewNote": { "type": "string" }
+              },
+              "additionalProperties": false
+            }
           },
           "key": { "type": "string" },
           "swaggerRule": { "type": "string" },

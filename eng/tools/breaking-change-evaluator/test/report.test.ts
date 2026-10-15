@@ -13,7 +13,17 @@ import type { EvaluationReport, MatchTrace, OadFinding, TypeSpecFinding } from "
 
 function report(): EvaluationReport {
   return {
-    schemaVersion: 2,
+    schemaVersion: 3,
+    schema: {
+      name: "azure-rest-api-specs/breaking-change-evaluator",
+      version: 3,
+      compatibility: ">=3 <4",
+    },
+    run: {
+      id: "test-run",
+      datasetId: "test-dataset",
+      reportId: "test-run:pr-1:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    },
     status: "evaluated",
     complete: true,
     generatedAt: "2026-01-01T00:00:00.000Z",
@@ -37,6 +47,7 @@ function report(): EvaluationReport {
     typeSpecProjects: [],
     matches: [],
     findingGroups: [],
+    issueAnalyses: [],
     reproduction: {
       shell: "powershell",
       evaluatorCommit: "e".repeat(40),

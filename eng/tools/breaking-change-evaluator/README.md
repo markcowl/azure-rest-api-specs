@@ -7,12 +7,21 @@ The CLI reserves two commands:
 
 ```text
 breaking-change-evaluator prepare [--typespec-revision <sha>] [--cache-dir <path>]
-breaking-change-evaluator evaluate --pr <url|owner/repo#n> --json-output <file> --markdown-output <file> [--tool-revision <sha>] [--cache-dir <path>]
+breaking-change-evaluator evaluate --pr <url|owner/repo#n> --json-output <file> --markdown-output <file> [--tool-revision <sha>] [--cache-dir <path>] [--run-id <id>] [--dataset-id <id>] [--generated-at <iso>] [--issue-overlays <file>] [--work-dir <path>]
+breaking-change-evaluator validate-runs --reports-root <path>
 ```
 
 `prepare` is the only command that can clone, install, build, and cache the pinned TypeSpec
 prototype. `evaluate` requires a previously prepared immutable revision and never invokes the
 prototype clone/install/build path.
+
+Committed longitudinal datasets assign immutable run, dataset, and report IDs. Schema identity and
+reader compatibility are explicit in every report. The branch-level
+[`reports/index.json`](reports/index.json) is the machine ingestion entry point, while
+[`reports/README.md`](reports/README.md) is the human catalog. `validate-runs` verifies every
+cataloged run, selection digest, status total, report/run association, finding/phase mapping,
+timing provenance, relative link, deterministic Markdown, and privacy invariant. Historical runs
+remain cataloged under their original schema instead of being overwritten.
 
 ```bash
 node cmd/breaking-change-evaluator.js prepare \
@@ -57,6 +66,13 @@ Detailed reports compare actionable errors before non-error findings. A semantic
 match when detector severities disagree, but the error-status mismatch is reported explicitly.
 TypeSpec error state accounts for suppression. Decision summaries show the selected evidence in
 plain language and reserve the full candidate trace for JSON.
+
+Reports also contain structured tentative issue analyses with stable IDs, affected PRs, phases and
+finding IDs, category, conclusion, confidence and rationale, evidence, aggregate impact, suggested
+fix, and review status. Generated heuristics cover reciprocal narrowed/widened pairs, false Phase
+A-triggered Phase B work, concordant zero results, severity mismatches, OAD-only and TypeSpec-only
+findings, evidence gaps, and compile/runtime failures. A JSON overlay can record a reviewed
+conclusion or status without mutating detector evidence.
 
 Detector performance is reported independently by phase using timing emitted by the detector
 itself. The evaluator never substitutes GitHub Actions workflow duration for missing OAD detector

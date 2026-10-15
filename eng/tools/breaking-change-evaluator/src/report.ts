@@ -13,7 +13,13 @@ import type {
   Rollup,
   RollupMetrics,
   SourceReference,
+  TentativeIssueAnalysis,
   TypeSpecFinding,
+} from "./types.ts";
+import {
+  EVALUATION_SCHEMA_COMPATIBILITY,
+  EVALUATION_SCHEMA_NAME,
+  EVALUATION_SCHEMA_VERSION,
 } from "./types.ts";
 
 function isActionableOadError(finding: OadFinding): boolean {
@@ -222,6 +228,28 @@ export function computeFindingGroups(
 }
 
 export function validateRollup(report: EvaluationReport): void {
+  if (
+    report.schemaVersion !== EVALUATION_SCHEMA_VERSION ||
+    report.schema.name !== EVALUATION_SCHEMA_NAME ||
+    report.schema.version !== EVALUATION_SCHEMA_VERSION ||
+    report.schema.compatibility !== EVALUATION_SCHEMA_COMPATIBILITY
+  ) {
+    throw new Error("Report schema identity is unsupported");
+  }
+  if (
+    !report.run.id ||
+    !report.run.datasetId ||
+    !report.run.reportId ||
+    !report.run.reportId.startsWith(`${report.run.id}:`)
+  ) {
+    throw new Error("Report run identity is missing or inconsistent");
+  }
+  if (
+    new Set(report.issueAnalyses.map((analysis) => analysis.id)).size !==
+    report.issueAnalyses.length
+  ) {
+    throw new Error("Issue analysis IDs must be unique");
+  }
   if (!report.complete && report.rollup) {
     throw new Error("Incomplete reports must suppress rollups and rates");
   }
@@ -536,10 +564,47 @@ function formatDuration(durationMs?: number): string {
   return durationMs === undefined ? "Unavailable" : `${durationMs.toFixed(0)} ms`;
 }
 
+function renderIssueAnalyses(analyses: TentativeIssueAnalysis[]): string[] {
+  if (!analyses.length) return ["No tentative issues were generated.", ""];
+  return [
+    "| Issue | Phase | Category | Conclusion | Confidence | Status | Findings |",
+    "| --- | --- | --- | --- | --- | --- | ---: |",
+    ...analyses.map(
+      (analysis) =>
+        `| \`${analysis.id}\` | ${analysis.phases.join(", ")} | \`${analysis.category}\` | ${analysis.conclusion} | ${analysis.confidence} | ${analysis.status} | ${analysis.findingIds.length} |`,
+    ),
+    "",
+    ...analyses.flatMap((analysis) => [
+      `### ${analysis.id}`,
+      "",
+      `- **Affected PRs:** ${analysis.affectedPrs.map((pr) => `#${pr}`).join(", ") || "none"}`,
+      `- **Phases:** ${analysis.phases.join(", ")}`,
+      `- **Finding IDs:** ${analysis.findingIds.map((id) => `\`${id}\``).join(", ") || "none"}`,
+      `- **Category:** \`${analysis.category}\``,
+      `- **Conclusion:** ${analysis.conclusion}`,
+      `- **Confidence:** ${analysis.confidence}`,
+      `- **Rationale:** ${analysis.rationale}`,
+      `- **Aggregate impact:** ${analysis.aggregateImpact}`,
+      `- **Suggested fix:** ${analysis.suggestedFix}`,
+      `- **Status:** ${analysis.status}${analysis.reviewedBy ? `; reviewed by ${analysis.reviewedBy}` : ""}`,
+      ...(analysis.reviewNote ? [`- **Review note:** ${analysis.reviewNote}`] : []),
+      "- **Evidence:**",
+      ...analysis.evidence.map(
+        (evidence) => `  - \`${evidence.kind}:${evidence.id}\` — ${evidence.detail}`,
+      ),
+      "",
+    ]),
+  ];
+}
+
 export function renderMarkdown(report: EvaluationReport): string {
   const lines = [
     "# Breaking-change evaluator",
     "",
+    `**Run ID:** \`${report.run.id}\``,
+    `**Dataset ID:** \`${report.run.datasetId}\``,
+    `**Report ID:** \`${report.run.reportId}\``,
+    `**Schema:** \`${report.schema.name}@${report.schema.version}\` (${report.schema.compatibility})`,
     `**Status:** ${report.status}`,
     `**Complete:** ${report.complete ? "yes" : "no"}`,
     "",
@@ -715,6 +780,11 @@ export function renderMarkdown(report: EvaluationReport): string {
     (group) => !groupHasActionableError(group, oadById, typeSpecById),
   );
   lines.push(
+    "## Tentative issue analyses",
+    "",
+    "These analyses are derived from immutable detector evidence. Reviewed overlays may revise the conclusion, rationale, confidence, suggested fix, or status without changing raw findings.",
+    "",
+    ...renderIssueAnalyses(report.issueAnalyses),
     "## Error finding equivalence details",
     "",
     ...(errorGroups.length

@@ -2,6 +2,9 @@ import type { OadRuleCode } from "../../openapi-diff-runner/src/types/oad-types.
 
 export type Phase = "A" | "B";
 export type EvaluationStatus = "evaluated" | "partial" | "not-qualified" | "failed";
+export const EVALUATION_SCHEMA_NAME = "azure-rest-api-specs/breaking-change-evaluator";
+export const EVALUATION_SCHEMA_VERSION = 3;
+export const EVALUATION_SCHEMA_COMPATIBILITY = ">=3 <4";
 export type MatchCategory =
   | "exact"
   | "probable-review"
@@ -274,6 +277,73 @@ export interface FindingGroup {
   typeSpecOccurrenceIds: string[];
 }
 
+export type IssueCategory =
+  | "reciprocal-narrowed-widened-pair"
+  | "false-phase-a-triggered-phase-b"
+  | "concordant-zero"
+  | "severity-mismatch"
+  | "oad-only"
+  | "typespec-only"
+  | "evidence-gap"
+  | "compile-runtime-failure";
+
+export type IssueConclusion =
+  | "likely-detector-defect"
+  | "likely-expected-difference"
+  | "confirmed-agreement"
+  | "requires-review"
+  | "insufficient-evidence"
+  | "execution-failure";
+
+export type IssueStatus = "generated" | "reviewed" | "accepted" | "rejected" | "resolved";
+
+export interface IssueEvidence {
+  kind: "oad-finding" | "typespec-finding" | "match" | "execution" | "qualification";
+  id: string;
+  detail: string;
+}
+
+export interface TentativeIssueAnalysis {
+  id: string;
+  affectedPrs: number[];
+  phases: Phase[];
+  findingIds: string[];
+  category: IssueCategory;
+  conclusion: IssueConclusion;
+  confidence: "low" | "medium" | "high";
+  rationale: string;
+  evidence: IssueEvidence[];
+  aggregateImpact: string;
+  suggestedFix: string;
+  status: IssueStatus;
+  reviewedBy?: string;
+  reviewNote?: string;
+}
+
+export interface IssueAnalysisOverlay {
+  id: string;
+  conclusion?: IssueConclusion;
+  confidence?: "low" | "medium" | "high";
+  rationale?: string;
+  aggregateImpact?: string;
+  suggestedFix?: string;
+  status: Exclude<IssueStatus, "generated">;
+  reviewedBy?: string;
+  reviewNote?: string;
+}
+
+export interface ReportSchemaIdentity {
+  name: typeof EVALUATION_SCHEMA_NAME;
+  version: typeof EVALUATION_SCHEMA_VERSION;
+  compatibility: typeof EVALUATION_SCHEMA_COMPATIBILITY;
+}
+
+export interface EvaluationRunIdentity {
+  id: string;
+  datasetId: string;
+  reportId: string;
+}
+
 export interface ReproductionCommand {
   label: string;
   command: string;
@@ -293,7 +363,9 @@ export interface Reproduction {
 }
 
 export interface EvaluationReport {
-  schemaVersion: 2;
+  schemaVersion: 3;
+  schema: ReportSchemaIdentity;
+  run: EvaluationRunIdentity;
   status: EvaluationStatus;
   complete: boolean;
   generatedAt: string;
@@ -309,6 +381,7 @@ export interface EvaluationReport {
   typeSpecProjects: ProjectResult[];
   matches: MatchTrace[];
   findingGroups: FindingGroup[];
+  issueAnalyses: TentativeIssueAnalysis[];
   reproduction?: Reproduction;
   rollup?: Rollup;
   errors: string[];
