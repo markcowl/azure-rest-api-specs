@@ -14,6 +14,7 @@ const outputRoot = resolve(option("--output"));
 const cacheDir = resolve(option("--cache-dir"));
 const sourceReports = option("--source-reports");
 const qualificationSnapshots = option("--qualification-snapshots");
+const targetRepository = option("--target-repository");
 const concurrency = Number(option("--concurrency", "3"));
 const resume = process.argv.includes("--resume");
 const selection = JSON.parse(await readFile(selectionPath, "utf8"));
@@ -99,6 +100,7 @@ async function runRecord(record) {
     datasetId: selection.run.datasetId,
     generatedAt: selection.run.generatedAt,
     workDir: join(cacheDir, "evaluation-work", selection.run.id, String(record.number)),
+    targetRepository,
   });
   const report = JSON.parse(await readFile(join(output, "report.json"), "utf8"));
   const result = { pr: record.number, exitCode, status: report.status, complete: report.complete };

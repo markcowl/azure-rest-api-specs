@@ -41,6 +41,7 @@ export interface EvaluateOptions {
   generatedAt?: string;
   issueOverlays?: string;
   workDir?: string;
+  targetRepository?: string;
 }
 
 function baseReport(qualifiedPr: QualifiedPr, options: EvaluateOptions): EvaluationReport {
@@ -117,17 +118,28 @@ function processError(label: string, result: ProcessResult): Error | undefined {
   return new Error(`${label}: ${detail}`);
 }
 
-async function checkoutPullRequest(pr: QualifiedPr, target: string): Promise<void> {
+async function checkoutPullRequest(
+  pr: QualifiedPr,
+  target: string,
+  targetRepository?: string,
+): Promise<void> {
   const clone = await runProcess("git", [
     "clone",
-    "--filter=blob:none",
+    ...(targetRepository ? ["--shared"] : ["--filter=blob:none"]),
     "--sparse",
     "--no-checkout",
-    pr.cloneUrl,
+    targetRepository ?? pr.cloneUrl,
     target,
   ]);
   const cloneError = processError("Unable to clone target repository", clone);
   if (cloneError) throw cloneError;
+  if (targetRepository) {
+    const remote = await runProcess("git", ["remote", "set-url", "origin", pr.cloneUrl], {
+      cwd: target,
+    });
+    const remoteError = processError("Unable to configure target remote", remote);
+    if (remoteError) throw remoteError;
+  }
   const serviceRoots = [
     ...new Set(
       pr.changedTypeSpecFiles
@@ -177,28 +189,30 @@ async function checkoutPullRequest(pr: QualifiedPr, target: string): Promise<voi
     analyzerSparseCheckout,
   );
   if (analyzerSparseCheckoutError) throw analyzerSparseCheckoutError;
-  const baseArchive = join(target, ".git", "evaluator-base-materialized.zip");
-  const materializeBase = await runProcess(
-    "git",
-    [
-      "archive",
-      "--format=zip",
-      `--output=${baseArchive}`,
-      "refs/evaluator/base",
-      "--",
-      ...serviceRoots,
-      "package.json",
-      "pnpm-lock.yaml",
-      "pnpm-workspace.yaml",
-    ],
-    { cwd: target, timeoutMs: 10 * 60_000 },
-  );
-  const materializeBaseError = processError(
-    "Unable to materialize sparse base revision",
-    materializeBase,
-  );
-  await unlink(baseArchive).catch(() => undefined);
-  if (materializeBaseError) throw materializeBaseError;
+  if (!targetRepository) {
+    const baseArchive = join(target, ".git", "evaluator-base-materialized.zip");
+    const materializeBase = await runProcess(
+      "git",
+      [
+        "archive",
+        "--format=zip",
+        `--output=${baseArchive}`,
+        "refs/evaluator/base",
+        "--",
+        ...serviceRoots,
+        "package.json",
+        "pnpm-lock.yaml",
+        "pnpm-workspace.yaml",
+      ],
+      { cwd: target, timeoutMs: 30 * 60_000 },
+    );
+    const materializeBaseError = processError(
+      "Unable to materialize sparse base revision",
+      materializeBase,
+    );
+    await unlink(baseArchive).catch(() => undefined);
+    if (materializeBaseError) throw materializeBaseError;
+  }
 }
 
 async function resolveEvaluatorCommit(): Promise<string> {
@@ -391,7 +405,7 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
   const reportStem = basename(markdownPath, extname(markdownPath));
   const outputDir = join(dirname(markdownPath), `${reportStem}-artifacts`, "typespec");
   try {
-    await checkoutPullRequest(qualifiedPr, checkout);
+    await checkoutPullRequest(qualifiedPr, checkout, options.targetRepository);
     await mkdir(outputDir, { recursive: true });
     const projects = await resolveProjectRoots(
       checkout,

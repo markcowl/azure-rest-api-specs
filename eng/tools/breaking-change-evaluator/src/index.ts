@@ -43,6 +43,7 @@ export async function main(args: string[]): Promise<number> {
         generatedAt: option(args, "--generated-at"),
         issueOverlays: option(args, "--issue-overlays"),
         workDir: option(args, "--work-dir"),
+        targetRepository: option(args, "--target-repository"),
       });
     }
     if (args[0] === "validate-runs") {
