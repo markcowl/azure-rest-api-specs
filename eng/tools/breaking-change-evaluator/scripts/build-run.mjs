@@ -5,29 +5,20 @@ import { basename, resolve } from "node:path";
 
 function option(name) {
   const index = process.argv.indexOf(name);
-  if (index === -1 || !process.argv[index + 1])
-    throw new Error(`Missing ${name}`);
+  if (index === -1 || !process.argv[index + 1]) throw new Error(`Missing ${name}`);
   return process.argv[index + 1];
 }
 
 const root = resolve(option("--run"));
-const selectionContent = await readFile(
-  resolve(root, "selection.json"),
-  "utf8",
-);
+const selectionContent = await readFile(resolve(root, "selection.json"), "utf8");
 const selection = JSON.parse(selectionContent);
-const config = JSON.parse(
-  await readFile(resolve(root, "run-config.json"), "utf8"),
-);
+const config = JSON.parse(await readFile(resolve(root, "run-config.json"), "utf8"));
 const selected = selection.records.filter((record) => record.selected);
 const reports = await Promise.all(
   selected.map(async (record) => ({
     record,
     report: JSON.parse(
-      await readFile(
-        resolve(root, "prs", String(record.number), "report.json"),
-        "utf8",
-      ),
+      await readFile(resolve(root, "prs", String(record.number), "report.json"), "utf8"),
     ),
   })),
 );
@@ -42,11 +33,8 @@ function sumPhase(phase, name) {
 function statusCounts() {
   return {
     total: reports.length,
-    evaluated: reports.filter(({ report }) => report.status === "evaluated")
-      .length,
-    notQualified: reports.filter(
-      ({ report }) => report.status === "not-qualified",
-    ).length,
+    evaluated: reports.filter(({ report }) => report.status === "evaluated").length,
+    notQualified: reports.filter(({ report }) => report.status === "not-qualified").length,
     partial: reports.filter(({ report }) => report.status === "partial").length,
     failed: reports.filter(({ report }) => report.status === "failed").length,
   };
@@ -68,17 +56,13 @@ const metricNames = [
 const byPhase = Object.fromEntries(
   phases.map((phase) => [
     phase,
-    Object.fromEntries(
-      metricNames.map((name) => [name, sumPhase(phase, name)]),
-    ),
+    Object.fromEntries(metricNames.map((name) => [name, sumPhase(phase, name)])),
   ]),
 );
 const issueCounts = Object.fromEntries(
   [
     ...new Set(
-      reports.flatMap(({ report }) =>
-        report.issueAnalyses.map((analysis) => analysis.category),
-      ),
+      reports.flatMap(({ report }) => report.issueAnalyses.map((analysis) => analysis.category)),
     ),
   ]
     .sort()
@@ -86,10 +70,7 @@ const issueCounts = Object.fromEntries(
       category,
       reports.reduce(
         (sum, { report }) =>
-          sum +
-          report.issueAnalyses.filter(
-            (analysis) => analysis.category === category,
-          ).length,
+          sum + report.issueAnalyses.filter((analysis) => analysis.category === category).length,
         0,
       ),
     ]),
@@ -130,21 +111,15 @@ for (const pr of config.zeroExpected ?? []) {
     .filter((finding) => finding.phase === "same-version");
   const phaseBComparisons = report.typeSpecProjects.flatMap(
     (project) =>
-      project.versionComparisons?.filter(
-        (comparison) => comparison.phase === "cross-version",
-      ) ?? [],
+      project.versionComparisons?.filter((comparison) => comparison.phase === "cross-version") ??
+      [],
   );
   if (phaseAFindings.length || phaseBComparisons.length) {
-    throw new Error(
-      `#${pr} did not verify zero Phase A and no triggered Phase B`,
-    );
+    throw new Error(`#${pr} did not verify zero Phase A and no triggered Phase B`);
   }
 }
 
-await writeFile(
-  resolve(root, "aggregate.json"),
-  `${JSON.stringify(aggregate, null, 2)}\n`,
-);
+await writeFile(resolve(root, "aggregate.json"), `${JSON.stringify(aggregate, null, 2)}\n`);
 
 const lines = [
   `# ${config.title}`,
@@ -167,9 +142,7 @@ const lines = [
   `- Continuation cursor: **${selection.selection.continuationCursor ?? "none"}**`,
   `- Selection digest: \`${createHash("sha256").update(selectionContent).digest("hex")}\``,
   ...(selection.assertions?.weeklyIntersection !== undefined
-    ? [
-        `- Weekly-selection intersection: **${selection.assertions.weeklyIntersection}**`,
-      ]
+    ? [`- Weekly-selection intersection: **${selection.assertions.weeklyIntersection}**`]
     : []),
   "",
   "## Outcomes",
@@ -196,9 +169,7 @@ const lines = [
   "",
   "| Category | Count |",
   "| --- | ---: |",
-  ...Object.entries(issueCounts).map(
-    ([category, count]) => `| \`${category}\` | ${count} |`,
-  ),
+  ...Object.entries(issueCounts).map(([category, count]) => `| \`${category}\` | ${count} |`),
   ...(Object.keys(issueCounts).length ? [] : ["| — | 0 |"]),
   "",
   "## PR reports",
@@ -249,8 +220,5 @@ const manifest = {
   })),
   status,
 };
-await writeFile(
-  resolve(root, "run.json"),
-  `${JSON.stringify(manifest, null, 2)}\n`,
-);
+await writeFile(resolve(root, "run.json"), `${JSON.stringify(manifest, null, 2)}\n`);
 console.log(`Built ${basename(root)} with ${reports.length} reports.`);
