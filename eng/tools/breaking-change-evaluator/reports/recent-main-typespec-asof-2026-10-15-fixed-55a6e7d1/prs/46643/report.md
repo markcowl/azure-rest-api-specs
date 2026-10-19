@@ -16,6 +16,49 @@
 - **Head:** `rsureshraja-microsoft-pon-20260401` at `e302d1a57587219ec3b6c9f58260c48cc08e11a1`
 - **Changed TypeSpec files:** `specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/models.tsp`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+| Phase | Finding | Type / path | Source | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| A | `AddedPropertyInResponse` | VirtualMachineScaleSetIPConfigurationProperties — privateIPAddressPrefixLength — GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23084) · [head](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23091) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-bcb3eb0163c9c91f](#issue-oad-only-bcb3eb0163c9c91f). | [details](#finding-a-oad-1) |
+| A | `AddedPropertyInResponse` | VirtualMachineNetworkInterfaceIPConfigurationProperties — privateIPAddressPrefixLength — GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255) · [head](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-3ce07e0f007d23a1](#issue-oad-only-3ce07e0f007d23a1). | [details](#finding-a-oad-2) |
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/compute/resource-manager/Microsoft.Compute/Compute/Compute: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 37490387469](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) · [workflow 37490387243](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387243) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+| Phase | Finding | Type / path | Source | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-0) |
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -44,6 +87,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | `issue-oad-only-3ce07e0f007d23a1` | A | `oad-only` | requires-review | medium | generated | 1 |
 | `issue-oad-only-bcb3eb0163c9c91f` | A | `oad-only` | requires-review | medium | generated | 1 |
 
+<a id="issue-compile-runtime-failure-64fc681fcde8bb4c"></a>
 ### issue-compile-runtime-failure-64fc681fcde8bb4c
 
 - **Affected PRs:** #46643
@@ -64,6 +108,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 ; Analysis failed: Cannot read properties of undefined (reading 'get')
 
 
+<a id="issue-oad-only-3ce07e0f007d23a1"></a>
 ### issue-oad-only-3ce07e0f007d23a1
 
 - **Affected PRs:** #46643
@@ -79,6 +124,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-2` — AddedPropertyInResponse: The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
 
+<a id="issue-oad-only-bcb3eb0163c9c91f"></a>
 ### issue-oad-only-bcb3eb0163c9c91f
 
 - **Affected PRs:** #46643
@@ -94,41 +140,50 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-1` — AddedPropertyInResponse: The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
 
-## Error finding equivalence details
+## Finding details
 
-### Findings missing from the TypeSpec detector
-
-#### AddedPropertyInResponse
-
-- **Swagger finding:** `A-oad-1` — `AddedPropertyInResponse` — The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
-- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 23084](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23084) — JSONPath `definitions.VirtualMachineScaleSetIPConfigurationProperties.properties`; [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 23091](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23091) — JSONPath `definitions.VirtualMachineScaleSetIPConfigurationProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 202 | GET /subscriptions/{}/providers/microsoft.compute/locations/{}/virtualmachinescalesets response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets response 200 | GET /subscriptions/{}/providers/microsoft.compute/virtualmachinescalesets response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-2` — `AddedPropertyInResponse` — The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
-- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 22255](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255) — JSONPath `definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties`; [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 22255](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255) — JSONPath `definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 202 | PATCH /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} request | GET /subscriptions/{}/providers/microsoft.compute/locations/{}/virtualmachines response 200 | GET /subscriptions/{}/providers/microsoft.compute/virtualmachines response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-## Non-error finding equivalence by phase
-
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-### Informational OAD records
-
-#### NoVersionChange
+<a id="finding-a-oad-0"></a>
+### A-oad-0 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-0` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
 - **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L1); [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document ComputeRP.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-1"></a>
+### A-oad-1 — `AddedPropertyInResponse`
+
+- **Swagger finding:** `A-oad-1` — `AddedPropertyInResponse` — The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
+- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 23084](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23084) — JSONPath `definitions.VirtualMachineScaleSetIPConfigurationProperties.properties`; [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 23091](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L23091) — JSONPath `definitions.VirtualMachineScaleSetIPConfigurationProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{} response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 202 | GET /subscriptions/{}/providers/microsoft.compute/locations/{}/virtualmachinescalesets response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets response 200 | GET /subscriptions/{}/providers/microsoft.compute/virtualmachinescalesets response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines response 200
+- **Related analysis:** [issue-oad-only-bcb3eb0163c9c91f](#issue-oad-only-bcb3eb0163c9c91f)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-2"></a>
+### A-oad-2 — `AddedPropertyInResponse`
+
+- **Swagger finding:** `A-oad-2` — `AddedPropertyInResponse` — The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/37490387469) (digest `498a25ba7899a24caf7e2559c3d9a8e99d7405a4aed9ca94ced40b34b85ba406`)
+- **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 22255](https://github.com/Azure/azure-rest-api-specs/blob/efb0884620a801846ba9af4f622e004e08522583/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255) — JSONPath `definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties`; [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json, line 22255](https://github.com/Azure/azure-rest-api-specs/blob/e302d1a57587219ec3b6c9f58260c48cc08e11a1/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-04-01/ComputeRP.json#L22255) — JSONPath `definitions.VirtualMachineNetworkInterfaceIPConfigurationProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{} response 202 | PATCH /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{} request | GET /subscriptions/{}/providers/microsoft.compute/locations/{}/virtualmachines response 200 | GET /subscriptions/{}/providers/microsoft.compute/virtualmachines response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines response 200
+- **Related analysis:** [issue-oad-only-3ce07e0f007d23a1](#issue-oad-only-3ce07e0f007d23a1)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="evidence-error-1"></a>
+### Evidence error 1
+
+- specification/compute/resource-manager/Microsoft.Compute/Compute/Compute: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
 
 ## Reproduce
 

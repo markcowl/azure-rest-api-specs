@@ -16,6 +16,44 @@
 - **Head:** `fix/network-java-vmss-public-ip-api-version` at `9bf4c61c8f1c7107798415cea38dea61979e950d`
 - **Changed TypeSpec files:** `specification/network/resource-manager/Microsoft.Network/Network/client.tsp`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:   error file-not-found: File C:<local-path> ; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:   error file-not-found: File C:<local-path> | [workflow 37731634205](https://github.com/Azure/azure-rest-api-specs/actions/runs/37731634205) · [workflow 37731634253](https://github.com/Azure/azure-rest-api-specs/actions/runs/37731634253) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -44,6 +82,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-compile-runtime-failure-8dcd82510a15a05c` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
 
+<a id="issue-compile-runtime-failure-8dcd82510a15a05c"></a>
 ### issue-compile-runtime-failure-8dcd82510a15a05c
 
 - **Affected PRs:** #47118
@@ -68,15 +107,16 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
   error file-not-found: File C:<local-path>
 
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
+<a id="evidence-error-1"></a>
+### Evidence error 1
 
-## Non-error finding equivalence by phase
+- specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:
+  error file-not-found: File C:<local-path>
 
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-Both detectors reported zero non-error findings.
 
 ## Reproduce
 

@@ -21,6 +21,45 @@
 - `missing-phase-a-run`
 - `missing-phase-b-run`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Qualification | `missing-phase-a-run` |  | Required comparison evidence was unavailable or invalid; do not interpret this report as detector agreement. [issue-evidence-gap-a663a6e69bce6be5](#issue-evidence-gap-a663a6e69bce6be5). | [details](#qualification-error-1) |
+| — | Qualification | `missing-phase-b-run` |  | Required comparison evidence was unavailable or invalid; do not interpret this report as detector agreement. [issue-evidence-gap-a663a6e69bce6be5](#issue-evidence-gap-a663a6e69bce6be5). | [details](#qualification-error-2) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Tentative issue analyses
 
 These analyses are derived from immutable detector evidence. Reviewed overlays may revise the conclusion, rationale, confidence, suggested fix, or status without changing raw findings.
@@ -29,6 +68,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-evidence-gap-a663a6e69bce6be5` | A, B | `evidence-gap` | insufficient-evidence | high | generated | 0 |
 
+<a id="issue-evidence-gap-a663a6e69bce6be5"></a>
 ### issue-evidence-gap-a663a6e69bce6be5
 
 - **Affected PRs:** #46724
@@ -45,12 +85,18 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
   - `qualification:missing-phase-a-run` — missing-phase-a-run
   - `qualification:missing-phase-b-run` — missing-phase-b-run
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
+<a id="qualification-error-1"></a>
+### Qualification failure 1
 
-## Non-error finding equivalence by phase
+- **Reason:** `missing-phase-a-run`
+- **PR evidence:** [pull request](https://github.com/Azure/azure-rest-api-specs/pull/46724)
+- **Workflow evidence:** unavailable
 
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
+<a id="qualification-error-2"></a>
+### Qualification failure 2
 
-Both detectors reported zero non-error findings.
+- **Reason:** `missing-phase-b-run`
+- **PR evidence:** [pull request](https://github.com/Azure/azure-rest-api-specs/pull/46724)
+- **Workflow evidence:** unavailable

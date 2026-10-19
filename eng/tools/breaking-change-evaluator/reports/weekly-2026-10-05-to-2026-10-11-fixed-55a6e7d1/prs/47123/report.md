@@ -16,6 +16,44 @@
 - **Head:** `feature/provisioning-verifiedid` at `1b93bd4c166ba7d363c391a6bdfad53f76f24270`
 - **Changed TypeSpec files:** `specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId/tspconfig.yaml`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 37889994887](https://github.com/Azure/azure-rest-api-specs/actions/runs/37889994887) · [workflow 37889994884](https://github.com/Azure/azure-rest-api-specs/actions/runs/37889994884) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -42,6 +80,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-compile-runtime-failure-0fc6c540b20e1219` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
 
+<a id="issue-compile-runtime-failure-0fc6c540b20e1219"></a>
 ### issue-compile-runtime-failure-0fc6c540b20e1219
 
 - **Affected PRs:** #47123
@@ -62,15 +101,14 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 ; Analysis failed: Cannot read properties of undefined (reading 'get')
 
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
+<a id="evidence-error-1"></a>
+### Evidence error 1
 
-## Non-error finding equivalence by phase
+- specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
 
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-Both detectors reported zero non-error findings.
 
 ## Reproduce
 

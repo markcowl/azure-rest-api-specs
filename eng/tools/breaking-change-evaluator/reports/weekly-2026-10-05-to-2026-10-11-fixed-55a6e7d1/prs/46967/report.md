@@ -49,6 +49,42 @@ Phase A compares Swagger Breaking Change errors with TypeSpec `same-version` err
 | A | Swagger Breaking Change | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | B | Breaking Change (Cross-Version) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+None.
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -81,6 +117,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | `issue-concordant-zero-21db315374229d79` | A | `concordant-zero` | confirmed-agreement | high | generated | 0 |
 | `issue-concordant-zero-b9bf2b13b80c0eb4` | B | `concordant-zero` | confirmed-agreement | high | generated | 0 |
 
+<a id="issue-concordant-zero-21db315374229d79"></a>
 ### issue-concordant-zero-21db315374229d79
 
 - **Affected PRs:** #46967
@@ -96,6 +133,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `execution:phase-A` — Independent OAD evidence and TypeSpec execution both completed with zero findings.
 
+<a id="issue-concordant-zero-b9bf2b13b80c0eb4"></a>
 ### issue-concordant-zero-b9bf2b13b80c0eb4
 
 - **Affected PRs:** #46967
@@ -111,15 +149,9 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `execution:phase-B` — Independent OAD evidence and TypeSpec execution both completed with zero findings.
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
-
-## Non-error finding equivalence by phase
-
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-Both detectors reported zero non-error findings.
+No findings or evidence failures were reported.
 
 ## Reproduce
 

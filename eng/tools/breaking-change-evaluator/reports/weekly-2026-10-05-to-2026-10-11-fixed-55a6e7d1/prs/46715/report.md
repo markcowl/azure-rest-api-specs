@@ -16,6 +16,44 @@
 - **Head:** `edgeactions-stable-2026-10-minimal` at `fb9c258f0c1ae9055592cfaf5ee356ee3475e1a3`
 - **Changed TypeSpec files:** `specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp`, `specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 37969208978](https://github.com/Azure/azure-rest-api-specs/actions/runs/37969208978) · [workflow 37969208848](https://github.com/Azure/azure-rest-api-specs/actions/runs/37969208848) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -42,6 +80,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-compile-runtime-failure-21423794d8210a17` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
 
+<a id="issue-compile-runtime-failure-21423794d8210a17"></a>
 ### issue-compile-runtime-failure-21423794d8210a17
 
 - **Affected PRs:** #46715
@@ -62,15 +101,14 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 ; Analysis failed: Cannot read properties of undefined (reading 'get')
 
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
+<a id="evidence-error-1"></a>
+### Evidence error 1
 
-## Non-error finding equivalence by phase
+- specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
 
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-Both detectors reported zero non-error findings.
 
 ## Reproduce
 

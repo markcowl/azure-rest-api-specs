@@ -16,6 +16,44 @@
 - **Head:** `dev/ssaklecha/ptm-csharp-naming` at `feb4c0503151e1c69673a8c8ded0f6ac80222b1f`
 - **Changed TypeSpec files:** `specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38562377206](https://github.com/Azure/azure-rest-api-specs/actions/runs/38562377206) · [workflow 38562377355](https://github.com/Azure/azure-rest-api-specs/actions/runs/38562377355) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -88,6 +126,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-compile-runtime-failure-61b25acde65995a6` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
 
+<a id="issue-compile-runtime-failure-61b25acde65995a6"></a>
 ### issue-compile-runtime-failure-61b25acde65995a6
 
 - **Affected PRs:** #47290
@@ -200,15 +239,60 @@ Emitted 'error' event on Socket instance at:
 
 Node.js v24.16.0
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
+<a id="evidence-error-1"></a>
+### Evidence error 1
 
-## Non-error finding equivalence by phase
+- specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
 
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
 
-Both detectors reported zero non-error findings.
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
 
 ## Reproduce
 

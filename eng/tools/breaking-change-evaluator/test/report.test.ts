@@ -445,9 +445,11 @@ describe("report aggregation", () => {
     value.findingGroups = computeFindingGroups(value.oadFindings, [typeSpecFinding], value.matches);
 
     const markdown = renderMarkdown(value);
-    expect(markdown).toContain("Intentional Swagger-only coverage gaps");
-    expect(markdown).toContain("Findings missing from the Swagger detector");
+    expect(markdown).toContain("### Intentional Swagger-only gaps");
+    expect(markdown).toContain("### TypeSpec-only findings");
     expect(markdown).toContain("GET /widgets");
+    expect(markdown).toContain("[details](#finding-oad-gap)");
+    expect(markdown).toContain("[details](#finding-typespec-tsp-only)");
   });
 
   it("keeps semantic matches while prominently reporting error-status mismatch", () => {
@@ -461,7 +463,14 @@ describe("report aggregation", () => {
       message: "path added",
       evidence: "{}",
       detectorEvidence: { label: "OAD run", url: "https://example.test/oad" },
-      sources: [{ revision: "head", unavailableReason: "fixture" }],
+      sources: [
+        {
+          revision: "head",
+          path: "specification/foo/openapi.json",
+          line: 10,
+          url: "https://example.test/openapi.json#L10",
+        },
+      ],
     };
     const typeSpec: TypeSpecFinding = {
       occurrenceId: "tsp-warning",
@@ -479,7 +488,12 @@ describe("report aggregation", () => {
         url: "report-artifacts/typespec/phase-a.md",
         digest: "a".repeat(64),
       },
-      source: { revision: "head", unavailableReason: "fixture" },
+      source: {
+        revision: "head",
+        path: "specification/foo/main.tsp",
+        line: 20,
+        url: "https://example.test/main.tsp#L20",
+      },
     };
     value.oadFindings = [oad];
     value.typeSpecProjects = [
@@ -542,15 +556,116 @@ describe("report aggregation", () => {
       oadErrorMatchedToTypeSpecNonError: 1,
     });
     expect(markdown.indexOf("## Error equivalence by phase")).toBeLessThan(
-      markdown.indexOf("## Non-error finding equivalence by phase"),
+      markdown.indexOf("## Finding review"),
     );
-    expect(markdown).toContain("**Error status mismatch:**");
+    expect(markdown).toContain("Error status differs:");
     expect(markdown).toContain("Phase A (`same-version`)");
     expect(markdown).toContain(
       "[TypeSpec Phase A analyzer report](report-artifacts/typespec/phase-a.md)",
     );
-    expect(markdown).toContain("Exact semantic match in Phase A");
+    expect(markdown).toContain("Canonical identity agrees.");
+    expect(markdown).toContain("[head](https://example.test/openapi.json#L10)");
+    expect(markdown).toContain("[head](https://example.test/main.tsp#L20)");
+    expect(markdown).toContain("[details](#finding-oad-error)");
     expect(markdown).not.toContain("**Decision trace:**");
+  });
+
+  it("renders ambiguous candidates and qualification failures as primary review tables", () => {
+    const ambiguous = report();
+    const oad: OadFinding = {
+      occurrenceId: "oad-ambiguous",
+      phase: "B",
+      id: "1",
+      rule: "RemovedProperty",
+      severity: "Error",
+      message: "property removed",
+      evidence: "{}",
+      sources: [{ revision: "head", unavailableReason: "fixture source unavailable" }],
+    };
+    const candidates: TypeSpecFinding[] = [
+      {
+        occurrenceId: "candidate-one",
+        project: "specification/foo/Foo",
+        kind: "ResponsePropertyRemoved",
+        rule: "removed-response-property",
+        phase: "cross-version",
+        severity: "error",
+        message: "response property removed",
+        versionPair: { baseVersion: "v1", headVersion: "v2" },
+        source: { revision: "head", unavailableReason: "fixture source unavailable" },
+      },
+      {
+        occurrenceId: "candidate-two",
+        project: "specification/foo/Foo",
+        kind: "ResourcePropertyRemoved",
+        rule: "removed-resource-property",
+        phase: "cross-version",
+        severity: "error",
+        message: "resource property removed",
+        versionPair: { baseVersion: "v1", headVersion: "v2" },
+        source: { revision: "head", unavailableReason: "fixture source unavailable" },
+      },
+    ];
+    ambiguous.oadFindings = [oad];
+    ambiguous.typeSpecProjects = [
+      { project: "specification/foo/Foo", status: "complete", findings: candidates },
+    ];
+    ambiguous.matches = [
+      {
+        oadOccurrenceId: oad.occurrenceId,
+        target: { phase: "B", schema: "Widget", propertyPath: ["mode"], evidence: [] },
+        targets: [{ phase: "B", schema: "Widget", propertyPath: ["mode"], evidence: [] }],
+        candidates: candidates.map((candidate) => ({
+          typeSpecOccurrenceId: candidate.occurrenceId,
+          target: { phase: "B", schema: "Widget", propertyPath: ["mode"], evidence: [] },
+          score: 12,
+          exactIdentity: ["schema", "property path"],
+          scoreEvidence: [],
+          rejectionReasons: [],
+        })),
+        selectedTypeSpecOccurrenceIds: [],
+        category: "ambiguous",
+        reviewRequired: true,
+      },
+    ];
+    ambiguous.rollup = computeRollup(ambiguous.oadFindings, candidates, ambiguous.matches);
+    ambiguous.findingGroups = computeFindingGroups(
+      ambiguous.oadFindings,
+      candidates,
+      ambiguous.matches,
+    );
+    const ambiguousMarkdown = renderMarkdown(ambiguous);
+    expect(ambiguousMarkdown).toContain("### Ambiguous findings");
+    expect(ambiguousMarkdown).toContain("Competing TypeSpec candidates");
+    expect(ambiguousMarkdown).toContain("ResponsePropertyRemoved");
+    expect(ambiguousMarkdown).toContain("ResourcePropertyRemoved");
+
+    const notQualified = report();
+    notQualified.status = "not-qualified";
+    notQualified.complete = false;
+    delete notQualified.rollup;
+    notQualified.qualification = {
+      qualified: false,
+      reasonCodes: ["missing-phase-a-run"],
+      evidence: {
+        prUrl: "https://example.test/pull/1",
+        runs: {
+          B: {
+            id: 20,
+            name: "Cross-Version",
+            headSha: "a".repeat(40),
+            status: "completed",
+            conclusion: "success",
+            htmlUrl: "https://example.test/actions/20",
+          },
+        },
+      },
+    };
+    const qualificationMarkdown = renderMarkdown(notQualified);
+    expect(qualificationMarkdown).toContain("### Evidence and execution failures");
+    expect(qualificationMarkdown).toContain("`missing-phase-a-run`");
+    expect(qualificationMarkdown).toContain("[workflow 20](https://example.test/actions/20)");
+    expect(qualificationMarkdown).toContain("[details](#qualification-error-1)");
   });
 
   it("groups matches by correlation pair and unmatched findings by detector type", () => {

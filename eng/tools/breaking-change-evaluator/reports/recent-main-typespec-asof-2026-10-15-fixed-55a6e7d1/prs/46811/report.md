@@ -20,6 +20,44 @@
 
 - `evidence-incomplete`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Qualification | `evidence-incomplete` | [workflow 38672000593](https://github.com/Azure/azure-rest-api-specs/actions/runs/38672000593) | Required comparison evidence was unavailable or invalid; do not interpret this report as detector agreement. [issue-evidence-gap-760ab21b056e6330](#issue-evidence-gap-760ab21b056e6330). | [details](#qualification-error-1) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Tentative issue analyses
 
 These analyses are derived from immutable detector evidence. Reviewed overlays may revise the conclusion, rationale, confidence, suggested fix, or status without changing raw findings.
@@ -28,6 +66,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-evidence-gap-760ab21b056e6330` | A, B | `evidence-gap` | insufficient-evidence | high | generated | 0 |
 
+<a id="issue-evidence-gap-760ab21b056e6330"></a>
 ### issue-evidence-gap-760ab21b056e6330
 
 - **Affected PRs:** #46811
@@ -44,12 +83,11 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
   - `qualification:evidence-incomplete` — evidence-incomplete
   - `qualification:evidence-error-0` — oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
+<a id="qualification-error-1"></a>
+### Qualification failure 1
 
-## Non-error finding equivalence by phase
-
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-Both detectors reported zero non-error findings.
+- **Reason:** `evidence-incomplete`
+- **PR evidence:** [pull request](https://github.com/Azure/azure-rest-api-specs/pull/46811)
+- **Workflow evidence:** [Swagger BreakingChange - Analyze Code](https://github.com/Azure/azure-rest-api-specs/actions/runs/38672000593)

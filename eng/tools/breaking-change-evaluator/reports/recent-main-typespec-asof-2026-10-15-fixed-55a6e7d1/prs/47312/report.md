@@ -16,6 +16,107 @@
 - **Head:** `catalinaperalta/revert-specs-repo-linter-rulesets` at `3e6e64bb3ce0338733986ec368dd4c351c8ed92a`
 - **Changed TypeSpec files:** `specification/advisor/resource-manager/Microsoft.Advisor/Advisor/tspconfig.yaml`, `specification/agricultureplatform/AgriculturePlatform.Management/tspconfig.yaml`, `specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-agent-contracts/tspconfig.yaml`, `specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-extensions-openai/tspconfig.yaml`, `specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects-agents/tspconfig.yaml`, `specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects/tspconfig.yaml`, `specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents/tspconfig.yaml`, `specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-projects/tspconfig.yaml`, `specification/ai-foundry/data-plane/Foundry/src/sdk-python-js-azure-ai-projects/tspconfig.yaml`, `specification/ai-foundry/data-plane/Foundry/tspconfig.yaml`, `specification/ai/data-plane/AIAgents/tspconfig.yaml`, `specification/ai/data-plane/ContentUnderstanding/tspconfig.yaml`, `specification/ai/data-plane/DocumentIntelligence/tspconfig.yaml`, `specification/ai/data-plane/Face/tspconfig.yaml`, `specification/ai/data-plane/HealthInsights/RadiologyInsights/tspconfig.yaml`, `specification/ai/data-plane/HealthInsights/tspconfig.yaml`, `specification/ai/data-plane/ImageAnalysis/tspconfig.yaml`, `specification/ai/data-plane/ModelInference/tspconfig.yaml`, `specification/ai/data-plane/OpenAIAssistants/tspconfig.yaml`, `specification/ai/data-plane/VoiceLive/tspconfig.yaml`, `specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertProcessingRules/tspconfig.yaml`, `specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertRuleRecommendations/tspconfig.yaml`, `specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertsManagement/tspconfig.yaml`, `specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PreviewAlertRule/tspconfig.yaml`, `specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PrometheusRuleGroups/tspconfig.yaml`, `specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/TenantActivityLogAlerts/tspconfig.yaml`, `specification/anyscale/resource-manager/Anyscale.Platform/platform/tspconfig.yaml`, `specification/apicenter/data-plane/ApiCenter/tspconfig.yaml`, `specification/apicenter/resource-manager/Microsoft.ApiCenter/ApiCenter/tspconfig.yaml`, `specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/tspconfig.yaml`, `specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/tspconfig.yaml`, `specification/app/data-plane/ContainerApps/tspconfig.yaml`, `specification/app/data-plane/DynamicSessions/tspconfig.yaml`, `specification/app/resource-manager/Microsoft.App/ContainerApps/tspconfig.yaml`, `specification/app/resource-manager/Microsoft.App/SreAgent/tspconfig.yaml`, `specification/appcomplianceautomation/resource-manager/Microsoft.AppComplianceAutomation/AppComplianceAutomation/tspconfig.yaml`, `specification/appconfiguration/data-plane/AppConfiguration/tspconfig.yaml`, `specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration/tspconfig.yaml`, `specification/applicationinsights/data-plane/Exporters/tspconfig.yaml`, `specification/applicationinsights/data-plane/LiveMetrics/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/AnalyticsItems/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/ComponentAPIs/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/ComponentLinkedStorageAccountApi/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/Components/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/DeletedWorkbookApi/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/Favorites/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/LiveTokenApi/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WebTestLocation/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WebTestsApi/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkBookOperations/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbookTemplatesApi/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbooksApi/tspconfig.yaml`, `specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/tspconfig.yaml`, `specification/applink/AppLink.Management/tspconfig.yaml`, `specification/artifactsigning/data-plane/ArtifactSigning/tspconfig.yaml`, `specification/attestation/data-plane/Attestation/tspconfig.yaml`, `specification/attestation/resource-manager/Microsoft.Attestation/Attestation/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/AccessReview/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/AttributeNamespaces/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/Authorization/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/ClassicAdmin/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/ProviderOperations/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleDefinitions/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleManagementAlerts/tspconfig.yaml`, `specification/authorization/resource-manager/Microsoft.Authorization/Authorization/tspconfig.yaml`, `specification/automation/resource-manager/Microsoft.Automation/Automation/tspconfig.yaml`, `specification/awsconnector/AccessAnalyzerAnalyzer.Management/tspconfig.yaml`, `specification/awsconnector/AcmCertificateSummary.Management/tspconfig.yaml`, `specification/awsconnector/ApiGatewayRestApi.Management/tspconfig.yaml`, `specification/awsconnector/ApiGatewayStage.Management/tspconfig.yaml`, `specification/awsconnector/AppSyncGraphqlApi.Management/tspconfig.yaml`, `specification/awsconnector/AutoScalingAutoScalingGroup.Management/tspconfig.yaml`, `specification/awsconnector/Awsconnector.Management/tspconfig.yaml`, `specification/awsconnector/CloudFormationStack.Management/tspconfig.yaml`, `specification/awsconnector/CloudFormationStackSet.Management/tspconfig.yaml`, `specification/awsconnector/CloudFrontDistribution.Management/tspconfig.yaml`, `specification/awsconnector/CloudTrailTrail.Management/tspconfig.yaml`, `specification/awsconnector/CloudWatchAlarm.Management/tspconfig.yaml`, `specification/awsconnector/CodeBuildProject.Management/tspconfig.yaml`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/agricultureplatform/AgriculturePlatform.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 68 error(s) found:   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path> ; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 68 error(s) found:   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path> | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-2) |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-agent-contracts: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-3) |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-extensions-openai: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-4) |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:   error file-not-found: File C:<local-path> ; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:   error file-not-found: File C:<local-path> | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-5) |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects-agents: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-6) |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:   error file-not-found: File C:<local-path> ; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:   error file-not-found: File C:<local-path> | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-7) |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-projects: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:   error file-not-found: File C:<local-path> ; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:   error file-not-found: File C:<local-path> | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-8) |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry/src/sdk-python-js-azure-ai-projects: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-9) |
+| — | Report execution | specification/ai/data-plane/ContentUnderstanding: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-10) |
+| — | Report execution | specification/ai/data-plane/HealthInsights/RadiologyInsights: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:   error file-not-found: File C:<local-path> ; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:   error file-not-found: File C:<local-path> | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-11) |
+| — | Report execution | specification/ai/data-plane/OpenAIAssistants: Analysis failed: Unable to distinguish language type of union variant "vectorStoreIds" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()]. ; Analysis failed: Unable to distinguish language type of union variant "vectorStoreIds" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()]. | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-12) |
+| — | Report execution | specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertProcessingRules: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-13) |
+| — | Report execution | specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertRuleRecommendations: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-14) |
+| — | Report execution | specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertsManagement: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-15) |
+| — | Report execution | specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PreviewAlertRule: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-16) |
+| — | Report execution | specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PrometheusRuleGroups: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-17) |
+| — | Report execution | specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/TenantActivityLogAlerts: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-18) |
+| — | Report execution | specification/apicenter/data-plane/ApiCenter: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-19) |
+| — | Report execution | specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway: Analysis failed: spawn git ENOENT ; Analysis failed: spawn git ENOENT | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-20) |
+| — | Report execution | specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-21) |
+| — | Report execution | specification/appcomplianceautomation/resource-manager/Microsoft.AppComplianceAutomation/AppComplianceAutomation: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-22) |
+| — | Report execution | specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-23) |
+| — | Report execution | specification/applicationinsights/data-plane/Exporters: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-24) |
+| — | Report execution | specification/applicationinsights/data-plane/LiveMetrics: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-25) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-26) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/AnalyticsItems: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-27) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/ComponentAPIs: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-28) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/ComponentLinkedStorageAccountApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-29) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/Components: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-30) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/DeletedWorkbookApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-31) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/Favorites: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-32) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/LiveTokenApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-33) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WebTestLocation: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-34) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WebTestsApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-35) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkBookOperations: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-36) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbookTemplatesApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-37) |
+| — | Report execution | specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbooksApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-38) |
+| — | Report execution | specification/artifactsigning/data-plane/ArtifactSigning: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-39) |
+| — | Report execution | specification/attestation/data-plane/Attestation: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-40) |
+| — | Report execution | specification/attestation/resource-manager/Microsoft.Attestation/Attestation: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-41) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-42) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/AccessReview: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-43) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/AttributeNamespaces: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-44) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/Authorization: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-45) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/ClassicAdmin: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-46) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-47) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-48) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/ProviderOperations: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-49) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-50) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleDefinitions: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-51) |
+| — | Report execution | specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleManagementAlerts: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-52) |
+| — | Report execution | specification/awsconnector/AccessAnalyzerAnalyzer.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-53) |
+| — | Report execution | specification/awsconnector/AcmCertificateSummary.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-54) |
+| — | Report execution | specification/awsconnector/ApiGatewayRestApi.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-55) |
+| — | Report execution | specification/awsconnector/ApiGatewayStage.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-56) |
+| — | Report execution | specification/awsconnector/AppSyncGraphqlApi.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-57) |
+| — | Report execution | specification/awsconnector/AutoScalingAutoScalingGroup.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-58) |
+| — | Report execution | specification/awsconnector/CloudFormationStack.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-59) |
+| — | Report execution | specification/awsconnector/CloudFormationStackSet.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-60) |
+| — | Report execution | specification/awsconnector/CloudFrontDistribution.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-61) |
+| — | Report execution | specification/awsconnector/CloudTrailTrail.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-62) |
+| — | Report execution | specification/awsconnector/CloudWatchAlarm.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-63) |
+| — | Report execution | specification/awsconnector/CodeBuildProject.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 38664554638](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554638) · [workflow 38664554430](https://github.com/Azure/azure-rest-api-specs/actions/runs/38664554430) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-64) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -2183,6 +2284,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-compile-runtime-failure-bdd9d1cf208cc1c4` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
 
+<a id="issue-compile-runtime-failure-bdd9d1cf208cc1c4"></a>
 ### issue-compile-runtime-failure-bdd9d1cf208cc1c4
 
 - **Affected PRs:** #47312
@@ -6273,15 +6375,2301 @@ Node.js v24.16.0
 ; Analysis failed: Cannot read properties of undefined (reading 'get')
 
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
+<a id="evidence-error-1"></a>
+### Evidence error 1
 
-## Non-error finding equivalence by phase
+- specification/agricultureplatform/AgriculturePlatform.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
 
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
 
-Both detectors reported zero non-error findings.
+<a id="evidence-error-2"></a>
+### Evidence error 2
+
+- specification/ai-foundry/data-plane/Foundry: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 68 error(s) found:
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 68 error(s) found:
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+
+
+<a id="evidence-error-3"></a>
+### Evidence error 3
+
+- specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-agent-contracts: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-4"></a>
+### Evidence error 4
+
+- specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-extensions-openai: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-5"></a>
+### Evidence error 5
+
+- specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+
+
+<a id="evidence-error-6"></a>
+### Evidence error 6
+
+- specification/ai-foundry/data-plane/Foundry/src/sdk-csharp-azure-ai-projects-agents: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-7"></a>
+### Evidence error 7
+
+- specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+
+
+<a id="evidence-error-8"></a>
+### Evidence error 8
+
+- specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-projects: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+
+
+<a id="evidence-error-9"></a>
+### Evidence error 9
+
+- specification/ai-foundry/data-plane/Foundry/src/sdk-python-js-azure-ai-projects: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-10"></a>
+### Evidence error 10
+
+- specification/ai/data-plane/ContentUnderstanding: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-11"></a>
+### Evidence error 11
+
+- specification/ai/data-plane/HealthInsights/RadiologyInsights: Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+; Analysis failed: Failed to compile the base revision (fcc20ab8473a30946221a1b876c89aa9f61447b9): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+
+
+<a id="evidence-error-12"></a>
+### Evidence error 12
+
+- specification/ai/data-plane/OpenAIAssistants: Analysis failed: Unable to distinguish language type of union variant "vectorStoreIds" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()].
+; Analysis failed: Unable to distinguish language type of union variant "vectorStoreIds" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()].
+
+
+<a id="evidence-error-13"></a>
+### Evidence error 13
+
+- specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertProcessingRules: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-14"></a>
+### Evidence error 14
+
+- specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertRuleRecommendations: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-15"></a>
+### Evidence error 15
+
+- specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertsManagement: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-16"></a>
+### Evidence error 16
+
+- specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PreviewAlertRule: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-17"></a>
+### Evidence error 17
+
+- specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PrometheusRuleGroups: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-18"></a>
+### Evidence error 18
+
+- specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/TenantActivityLogAlerts: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-19"></a>
+### Evidence error 19
+
+- specification/apicenter/data-plane/ApiCenter: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-20"></a>
+### Evidence error 20
+
+- specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway: Analysis failed: spawn git ENOENT
+; Analysis failed: spawn git ENOENT
+
+
+<a id="evidence-error-21"></a>
+### Evidence error 21
+
+- specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-22"></a>
+### Evidence error 22
+
+- specification/appcomplianceautomation/resource-manager/Microsoft.AppComplianceAutomation/AppComplianceAutomation: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-23"></a>
+### Evidence error 23
+
+- specification/appconfiguration/resource-manager/Microsoft.AppConfiguration/AppConfiguration: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-24"></a>
+### Evidence error 24
+
+- specification/applicationinsights/data-plane/Exporters: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-25"></a>
+### Evidence error 25
+
+- specification/applicationinsights/data-plane/LiveMetrics: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-26"></a>
+### Evidence error 26
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-27"></a>
+### Evidence error 27
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/AnalyticsItems: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-28"></a>
+### Evidence error 28
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/ComponentAPIs: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-29"></a>
+### Evidence error 29
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/ComponentLinkedStorageAccountApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-30"></a>
+### Evidence error 30
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/Components: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-31"></a>
+### Evidence error 31
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/DeletedWorkbookApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-32"></a>
+### Evidence error 32
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/Favorites: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-33"></a>
+### Evidence error 33
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/LiveTokenApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-34"></a>
+### Evidence error 34
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WebTestLocation: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-35"></a>
+### Evidence error 35
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WebTestsApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-36"></a>
+### Evidence error 36
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkBookOperations: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-37"></a>
+### Evidence error 37
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbookTemplatesApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-38"></a>
+### Evidence error 38
+
+- specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbooksApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-39"></a>
+### Evidence error 39
+
+- specification/artifactsigning/data-plane/ArtifactSigning: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-40"></a>
+### Evidence error 40
+
+- specification/attestation/data-plane/Attestation: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-41"></a>
+### Evidence error 41
+
+- specification/attestation/resource-manager/Microsoft.Attestation/Attestation: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-42"></a>
+### Evidence error 42
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-43"></a>
+### Evidence error 43
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/AccessReview: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-44"></a>
+### Evidence error 44
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/AttributeNamespaces: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-45"></a>
+### Evidence error 45
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/Authorization: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-46"></a>
+### Evidence error 46
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/ClassicAdmin: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-47"></a>
+### Evidence error 47
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-48"></a>
+### Evidence error 48
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/PrivilegedAccess: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-49"></a>
+### Evidence error 49
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/ProviderOperations: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-50"></a>
+### Evidence error 50
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-51"></a>
+### Evidence error 51
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleDefinitions: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-52"></a>
+### Evidence error 52
+
+- specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleManagementAlerts: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-53"></a>
+### Evidence error 53
+
+- specification/awsconnector/AccessAnalyzerAnalyzer.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-54"></a>
+### Evidence error 54
+
+- specification/awsconnector/AcmCertificateSummary.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-55"></a>
+### Evidence error 55
+
+- specification/awsconnector/ApiGatewayRestApi.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-56"></a>
+### Evidence error 56
+
+- specification/awsconnector/ApiGatewayStage.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-57"></a>
+### Evidence error 57
+
+- specification/awsconnector/AppSyncGraphqlApi.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-58"></a>
+### Evidence error 58
+
+- specification/awsconnector/AutoScalingAutoScalingGroup.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-59"></a>
+### Evidence error 59
+
+- specification/awsconnector/CloudFormationStack.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-60"></a>
+### Evidence error 60
+
+- specification/awsconnector/CloudFormationStackSet.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-61"></a>
+### Evidence error 61
+
+- specification/awsconnector/CloudFrontDistribution.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-62"></a>
+### Evidence error 62
+
+- specification/awsconnector/CloudTrailTrail.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-63"></a>
+### Evidence error 63
+
+- specification/awsconnector/CloudWatchAlarm.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-64"></a>
+### Evidence error 64
+
+- specification/awsconnector/CodeBuildProject.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
 
 ## Reproduce
 

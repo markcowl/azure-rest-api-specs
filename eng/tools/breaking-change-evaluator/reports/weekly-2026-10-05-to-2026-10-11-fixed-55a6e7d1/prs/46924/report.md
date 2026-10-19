@@ -16,6 +16,141 @@
 - **Head:** `saurabh-jaiswal-333-commvault-preview-alignment` at `d7bddff73316c6472c4712ca7c16d84d90c5aa14`
 - **Changed TypeSpec files:** `specification/liftrcommvault/Commvault.ContentStore.Management/back-compatible.tsp`, `specification/liftrcommvault/Commvault.ContentStore.Management/client.tsp`, `specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+| Phase | Finding | Type / path | Source | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| A | `RequiredStatusChange` | ProtectionGroupProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2707) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2724) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-bebcdc123421a608](#issue-oad-only-bebcdc123421a608). | [details](#finding-a-oad-3) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — id — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-85235f4098336910](#issue-oad-only-85235f4098336910). | [details](#finding-a-oad-5) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — name — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-9649d81d3bf45698](#issue-oad-only-9649d81d3bf45698). | [details](#finding-a-oad-6) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — type — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-a20b0a629d5bffa4](#issue-oad-only-a20b0a629d5bffa4). | [details](#finding-a-oad-7) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — systemData — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-d0001d125a3e9b33](#issue-oad-only-d0001d125a3e9b33). | [details](#finding-a-oad-8) |
+| A | `RequiredStatusChange` | ProtectionGroupProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2769) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2786) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-4a183a1894d85436](#issue-oad-only-4a183a1894d85436). | [details](#finding-a-oad-13) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — id — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-bdec573d5e7343fc](#issue-oad-only-bdec573d5e7343fc). | [details](#finding-a-oad-15) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — name — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-8f1358743174ab23](#issue-oad-only-8f1358743174ab23). | [details](#finding-a-oad-16) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — type — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-ef882bff314c3ade](#issue-oad-only-ef882bff314c3ade). | [details](#finding-a-oad-17) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — systemData — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-54bf1df4ac503917](#issue-oad-only-54bf1df4ac503917). | [details](#finding-a-oad-18) |
+| A | `RequiredStatusChange` | ProtectionGroupProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2825) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2842) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-cf1c1ca7a3b76312](#issue-oad-only-cf1c1ca7a3b76312). | [details](#finding-a-oad-23) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — id — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-760a8700ac26f479](#issue-oad-only-760a8700ac26f479). | [details](#finding-a-oad-25) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — name — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-48f91836a0809b9c](#issue-oad-only-48f91836a0809b9c). | [details](#finding-a-oad-26) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — type — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-046f2670f839bed4](#issue-oad-only-046f2670f839bed4). | [details](#finding-a-oad-27) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — systemData — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-070a171637b031fc](#issue-oad-only-070a171637b031fc). | [details](#finding-a-oad-28) |
+| A | `RequiredStatusChange` | ProtectionGroupProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2893) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2910) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-348adad87dd8d40a](#issue-oad-only-348adad87dd8d40a). | [details](#finding-a-oad-33) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — id — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-725f98b1e805f856](#issue-oad-only-725f98b1e805f856). | [details](#finding-a-oad-35) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — name — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-0d02b9957b7643a1](#issue-oad-only-0d02b9957b7643a1). | [details](#finding-a-oad-36) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — type — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-958ed50e977702d4](#issue-oad-only-958ed50e977702d4). | [details](#finding-a-oad-37) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — systemData — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-aff3532a7629a8a1](#issue-oad-only-aff3532a7629a8a1). | [details](#finding-a-oad-38) |
+| A | `RequiredStatusChange` | ProtectionGroupProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2910) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2927) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-1615da13fabe3e70](#issue-oad-only-1615da13fabe3e70). | [details](#finding-a-oad-43) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — id — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-e85b37766c666b20](#issue-oad-only-e85b37766c666b20). | [details](#finding-a-oad-45) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — name — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-dabf9b35b5a01cc7](#issue-oad-only-dabf9b35b5a01cc7). | [details](#finding-a-oad-46) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — type — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-df9dc34fdc24d206](#issue-oad-only-df9dc34fdc24d206). | [details](#finding-a-oad-47) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — systemData — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-a6cf28709f4f63f4](#issue-oad-only-a6cf28709f4f63f4). | [details](#finding-a-oad-48) |
+| A | `RequiredStatusChange` | ProtectionGroupProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L3106) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L3123) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-c79dcac0eb3f74e2](#issue-oad-only-c79dcac0eb3f74e2). | [details](#finding-a-oad-53) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — id — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-d050e3536d40e0b4](#issue-oad-only-d050e3536d40e0b4). | [details](#finding-a-oad-55) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — name — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-e977600cdf56b689](#issue-oad-only-e977600cdf56b689). | [details](#finding-a-oad-56) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — type — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-4f3eb61966ad3f44](#issue-oad-only-4f3eb61966ad3f44). | [details](#finding-a-oad-57) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — systemData — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-f6596968c840c3e4](#issue-oad-only-f6596968c840c3e4). | [details](#finding-a-oad-58) |
+| A | `RequiredStatusChange` | ProtectionGroupProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L3191) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L3208) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-c21c2a08595847ba](#issue-oad-only-c21c2a08595847ba). | [details](#finding-a-oad-63) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — id — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-930ed575b8657006](#issue-oad-only-930ed575b8657006). | [details](#finding-a-oad-65) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — name — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-1ab646ee2bf2a197](#issue-oad-only-1ab646ee2bf2a197). | [details](#finding-a-oad-66) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — type — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-ce6c391a5e6ea26f](#issue-oad-only-ce6c391a5e6ea26f). | [details](#finding-a-oad-67) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — systemData — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-9addb6c33dadaf9a](#issue-oad-only-9addb6c33dadaf9a). | [details](#finding-a-oad-68) |
+| A | `RemovedProperty` | CloudAccountProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-88eb911f7ca8c9d3](#issue-oad-only-88eb911f7ca8c9d3). | [details](#finding-a-oad-71) |
+| A | `RemovedProperty` | CloudAccountProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-1b63664de08718c2](#issue-oad-only-1b63664de08718c2). | [details](#finding-a-oad-72) |
+| A | `AddedPropertyInResponse` | CloudAccountProperties — roleAssignmentsOnCcaCreate — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-e5b6853e6c559dab](#issue-oad-only-e5b6853e6c559dab). | [details](#finding-a-oad-73) |
+| A | `RequiredStatusChange` | ProtectionGroupProperties — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3472) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3695) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-1417eed357eee3f1](#issue-oad-only-1417eed357eee3f1). | [details](#finding-a-oad-76) |
+| A | `RequiredStatusChange` | RoleAssignment — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3800) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4026) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-2323cd05a043680b](#issue-oad-only-2323cd05a043680b). | [details](#finding-a-oad-77) |
+| A | `AddedRequiredProperty` | RoleAssignment — roles.items — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3858) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4089) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-fc9cfbe7c034f767](#issue-oad-only-fc9cfbe7c034f767). | [details](#finding-a-oad-78) |
+| A | `AddedReadOnlyPropertyInResponse` | StorageProperties — complianceLockStatus — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4240) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4471) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-2506a5bb5d63e057](#issue-oad-only-2506a5bb5d63e057). | [details](#finding-a-oad-79) |
+| A | `AddedPath` | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/disablecompliancelock | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2267) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-25e681442ad66881](#issue-oad-only-25e681442ad66881). | [details](#finding-a-oad-80) |
+| A | `AddedPath` | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/enablecompliancelock | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2326) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-30ca385bedd7bdc6](#issue-oad-only-30ca385bedd7bdc6). | [details](#finding-a-oad-81) |
+| A | `AddedPath` | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/refresh | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2385) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-14b62a38b18ab1a1](#issue-oad-only-14b62a38b18ab1a1). | [details](#finding-a-oad-82) |
+| A | `AddedOptionalProperty` | CloudAccountProperties — roleAssignmentsOnCcaCreate — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-8a8969e65e0ea34b](#issue-oad-only-8a8969e65e0ea34b). | [details](#finding-a-oad-83) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — id — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-16f0183b8298f538](#issue-oad-only-16f0183b8298f538). | [details](#finding-a-oad-85) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — name — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-2a56b7d65774a9bf](#issue-oad-only-2a56b7d65774a9bf). | [details](#finding-a-oad-86) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — type — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-f76bc87d0806a8dc](#issue-oad-only-f76bc87d0806a8dc). | [details](#finding-a-oad-87) |
+| A | `AddedOptionalProperty` | CloudAccountUpdate — systemData — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-33b72402fb7fe071](#issue-oad-only-33b72402fb7fe071). | [details](#finding-a-oad-88) |
+| A | `ConstraintChanged` | RoleAssignment — entities — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3805) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4031) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-601eabfc22d2975f](#issue-oad-only-601eabfc22d2975f). | [details](#finding-a-oad-90) |
+| A | `AddedRequiredProperty` | RoleAssignment — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3797) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4023) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-e8bb534b37d9eccf](#issue-oad-only-e8bb534b37d9eccf). | [details](#finding-a-oad-91) |
+| A | `AddedOptionalProperty` | StorageProperties — complianceLockStatus — GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} — response 200 | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4240) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4471) | An equivalent TypeSpec finding is expected by the correlation map but none was selected. Investigate analyzer coverage or target resolution. [issue-oad-only-6060792912845a12](#issue-oad-only-6060792912845a12). | [details](#finding-a-oad-92) |
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/liftrcommvault/Commvault.ContentStore.Management: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 36843705384](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) · [workflow 36843705513](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705513) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+
+### Intentional Swagger-only gaps
+
+| Phase | Finding | Type / path | Source | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| A | `DifferentAllOf` | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L343) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L343) | OpenAPI structural change [issue-oad-only-8730f23bb27a10be](#issue-oad-only-8730f23bb27a10be). | [details](#finding-a-oad-1) |
+| A | `ReferenceRedirection` | CloudAccountPropertiesUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1979) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2006) | OpenAPI reference structure is not wire-level [issue-oad-only-4f05331276e8c06a](#issue-oad-only-4f05331276e8c06a). | [details](#finding-a-oad-2) |
+| A | `DifferentAllOf` | CloudAccountUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1964) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2002) | OpenAPI structural change [issue-oad-only-a318c821595b55ce](#issue-oad-only-a318c821595b55ce). | [details](#finding-a-oad-4) |
+| A | `RemovedDefinition` | definitions | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1615) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1615) | Definition removal is covered through effective wire impacts [issue-oad-only-f96a391da7c053ad](#issue-oad-only-f96a391da7c053ad). | [details](#finding-a-oad-9) |
+| A | `DifferentAllOf` | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L337) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L337) | OpenAPI structural change [issue-oad-only-78db01bdbab92be2](#issue-oad-only-78db01bdbab92be2). | [details](#finding-a-oad-11) |
+| A | `ReferenceRedirection` | CloudAccountPropertiesUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2041) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2068) | OpenAPI reference structure is not wire-level [issue-oad-only-ba5de08fc60b4672](#issue-oad-only-ba5de08fc60b4672). | [details](#finding-a-oad-12) |
+| A | `DifferentAllOf` | CloudAccountUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2026) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2064) | OpenAPI structural change [issue-oad-only-faa1428ac479e22c](#issue-oad-only-faa1428ac479e22c). | [details](#finding-a-oad-14) |
+| A | `RemovedDefinition` | definitions | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1677) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1677) | Definition removal is covered through effective wire impacts [issue-oad-only-0e1053dee4dddb53](#issue-oad-only-0e1053dee4dddb53). | [details](#finding-a-oad-19) |
+| A | `DifferentAllOf` | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L337) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L337) | OpenAPI structural change [issue-oad-only-4d40287bd5740987](#issue-oad-only-4d40287bd5740987). | [details](#finding-a-oad-21) |
+| A | `ReferenceRedirection` | CloudAccountPropertiesUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2097) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2124) | OpenAPI reference structure is not wire-level [issue-oad-only-4338467da5cec3d3](#issue-oad-only-4338467da5cec3d3). | [details](#finding-a-oad-22) |
+| A | `DifferentAllOf` | CloudAccountUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2082) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2120) | OpenAPI structural change [issue-oad-only-55545b425d2bbb63](#issue-oad-only-55545b425d2bbb63). | [details](#finding-a-oad-24) |
+| A | `RemovedDefinition` | definitions | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1733) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1733) | Definition removal is covered through effective wire impacts [issue-oad-only-6210999bebf5ba80](#issue-oad-only-6210999bebf5ba80). | [details](#finding-a-oad-29) |
+| A | `DifferentAllOf` | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L337) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L337) | OpenAPI structural change [issue-oad-only-12c492050fe815f8](#issue-oad-only-12c492050fe815f8). | [details](#finding-a-oad-31) |
+| A | `ReferenceRedirection` | CloudAccountPropertiesUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2165) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2192) | OpenAPI reference structure is not wire-level [issue-oad-only-b4dc2db8e0b25819](#issue-oad-only-b4dc2db8e0b25819). | [details](#finding-a-oad-32) |
+| A | `DifferentAllOf` | CloudAccountUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2150) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2188) | OpenAPI structural change [issue-oad-only-67348298fe273e7c](#issue-oad-only-67348298fe273e7c). | [details](#finding-a-oad-34) |
+| A | `RemovedDefinition` | definitions | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1801) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1801) | Definition removal is covered through effective wire impacts [issue-oad-only-7c5424e108c5c6b1](#issue-oad-only-7c5424e108c5c6b1). | [details](#finding-a-oad-39) |
+| A | `DifferentAllOf` | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L343) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L343) | OpenAPI structural change [issue-oad-only-4a3e96f40d903e04](#issue-oad-only-4a3e96f40d903e04). | [details](#finding-a-oad-41) |
+| A | `ReferenceRedirection` | CloudAccountPropertiesUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2182) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2209) | OpenAPI reference structure is not wire-level [issue-oad-only-ffc4e7bb9ea4ecbd](#issue-oad-only-ffc4e7bb9ea4ecbd). | [details](#finding-a-oad-42) |
+| A | `DifferentAllOf` | CloudAccountUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2167) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2205) | OpenAPI structural change [issue-oad-only-419a98a0ac60b8d7](#issue-oad-only-419a98a0ac60b8d7). | [details](#finding-a-oad-44) |
+| A | `RemovedDefinition` | definitions | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1807) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1807) | Definition removal is covered through effective wire impacts [issue-oad-only-2b1c0454e7e1486d](#issue-oad-only-2b1c0454e7e1486d). | [details](#finding-a-oad-49) |
+| A | `DifferentAllOf` | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L406) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L406) | OpenAPI structural change [issue-oad-only-d85cda6ffaba9481](#issue-oad-only-d85cda6ffaba9481). | [details](#finding-a-oad-51) |
+| A | `ReferenceRedirection` | CloudAccountPropertiesUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2389) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2416) | OpenAPI reference structure is not wire-level [issue-oad-only-2b2b691c583812b0](#issue-oad-only-2b2b691c583812b0). | [details](#finding-a-oad-52) |
+| A | `DifferentAllOf` | CloudAccountUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2374) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2412) | OpenAPI structural change [issue-oad-only-da294e644072c1a7](#issue-oad-only-da294e644072c1a7). | [details](#finding-a-oad-54) |
+| A | `RemovedDefinition` | definitions | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2001) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2001) | Definition removal is covered through effective wire impacts [issue-oad-only-b9f9070972fa0acd](#issue-oad-only-b9f9070972fa0acd). | [details](#finding-a-oad-59) |
+| A | `DifferentAllOf` | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L448) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L448) | OpenAPI structural change [issue-oad-only-0f8ae22091bc1e61](#issue-oad-only-0f8ae22091bc1e61). | [details](#finding-a-oad-61) |
+| A | `ReferenceRedirection` | CloudAccountPropertiesUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2431) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2458) | OpenAPI reference structure is not wire-level [issue-oad-only-27e6834c70346218](#issue-oad-only-27e6834c70346218). | [details](#finding-a-oad-62) |
+| A | `DifferentAllOf` | CloudAccountUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2416) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2454) | OpenAPI structural change [issue-oad-only-cbebe0364354d5f4](#issue-oad-only-cbebe0364354d5f4). | [details](#finding-a-oad-64) |
+| A | `RemovedDefinition` | definitions | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2043) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2043) | Definition removal is covered through effective wire impacts [issue-oad-only-41f84e9381e713f4](#issue-oad-only-41f84e9381e713f4). | [details](#finding-a-oad-69) |
+| A | `DifferentAllOf` | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L454) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L454) | OpenAPI structural change [issue-oad-only-66244fc023565cd8](#issue-oad-only-66244fc023565cd8). | [details](#finding-a-oad-74) |
+| A | `ReferenceRedirection` | CloudAccountPropertiesUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2670) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2873) | OpenAPI reference structure is not wire-level [issue-oad-only-8431d152e1b4f35b](#issue-oad-only-8431d152e1b4f35b). | [details](#finding-a-oad-75) |
+| A | `DifferentAllOf` | CloudAccountUpdate — PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} — request | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2655) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2869) | OpenAPI structural change [issue-oad-only-8c54230bef7858c0](#issue-oad-only-8c54230bef7858c0). | [details](#finding-a-oad-84) |
+| A | `RemovedDefinition` | definitions | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2268) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2445) | Definition removal is covered through effective wire impacts [issue-oad-only-3807fce77752ce08](#issue-oad-only-3807fce77752ce08). | [details](#finding-a-oad-89) |
+
+### Informational OAD records
+
+| Phase | Finding | Type / path | Source | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-0) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-10) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-20) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-30) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-40) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-50) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-60) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-70) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-93) |
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -127,6 +262,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | `issue-oad-only-fc9cfbe7c034f767` | A | `oad-only` | requires-review | medium | generated | 1 |
 | `issue-oad-only-ffc4e7bb9ea4ecbd` | A | `oad-only` | likely-expected-difference | medium | generated | 1 |
 
+<a id="issue-compile-runtime-failure-74db0212a8111558"></a>
 ### issue-compile-runtime-failure-74db0212a8111558
 
 - **Affected PRs:** #46924
@@ -147,6 +283,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 ; Analysis failed: Cannot read properties of undefined (reading 'get')
 
 
+<a id="issue-oad-only-046f2670f839bed4"></a>
 ### issue-oad-only-046f2670f839bed4
 
 - **Affected PRs:** #46924
@@ -162,6 +299,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-27` — AddedOptionalProperty: The new version has a new optional property 'type' that was not found in the old version.
 
+<a id="issue-oad-only-070a171637b031fc"></a>
 ### issue-oad-only-070a171637b031fc
 
 - **Affected PRs:** #46924
@@ -177,6 +315,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-28` — AddedOptionalProperty: The new version has a new optional property 'systemData' that was not found in the old version.
 
+<a id="issue-oad-only-0d02b9957b7643a1"></a>
 ### issue-oad-only-0d02b9957b7643a1
 
 - **Affected PRs:** #46924
@@ -192,6 +331,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-36` — AddedOptionalProperty: The new version has a new optional property 'name' that was not found in the old version.
 
+<a id="issue-oad-only-0e1053dee4dddb53"></a>
 ### issue-oad-only-0e1053dee4dddb53
 
 - **Affected PRs:** #46924
@@ -207,6 +347,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-19` — RemovedDefinition: The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
 
+<a id="issue-oad-only-0f8ae22091bc1e61"></a>
 ### issue-oad-only-0f8ae22091bc1e61
 
 - **Affected PRs:** #46924
@@ -222,6 +363,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-61` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-12c492050fe815f8"></a>
 ### issue-oad-only-12c492050fe815f8
 
 - **Affected PRs:** #46924
@@ -237,6 +379,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-31` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-1417eed357eee3f1"></a>
 ### issue-oad-only-1417eed357eee3f1
 
 - **Affected PRs:** #46924
@@ -252,6 +395,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-76` — RequiredStatusChange: The 'required' status changed from the old version('False') to the new version('True').
 
+<a id="issue-oad-only-14b62a38b18ab1a1"></a>
 ### issue-oad-only-14b62a38b18ab1a1
 
 - **Affected PRs:** #46924
@@ -267,6 +411,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-82` — AddedPath: The new version is adding a path that was not found in the old version.
 
+<a id="issue-oad-only-1615da13fabe3e70"></a>
 ### issue-oad-only-1615da13fabe3e70
 
 - **Affected PRs:** #46924
@@ -282,6 +427,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-43` — RequiredStatusChange: The 'required' status changed from the old version('False') to the new version('True').
 
+<a id="issue-oad-only-16f0183b8298f538"></a>
 ### issue-oad-only-16f0183b8298f538
 
 - **Affected PRs:** #46924
@@ -297,6 +443,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-85` — AddedOptionalProperty: The new version has a new optional property 'id' that was not found in the old version.
 
+<a id="issue-oad-only-1ab646ee2bf2a197"></a>
 ### issue-oad-only-1ab646ee2bf2a197
 
 - **Affected PRs:** #46924
@@ -312,6 +459,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-66` — AddedOptionalProperty: The new version has a new optional property 'name' that was not found in the old version.
 
+<a id="issue-oad-only-1b63664de08718c2"></a>
 ### issue-oad-only-1b63664de08718c2
 
 - **Affected PRs:** #46924
@@ -327,6 +475,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-72` — RemovedProperty: The new version is missing a property found in the old version. Was 'multiPersonAuthorizationOnCcaCreate' renamed or removed?
 
+<a id="issue-oad-only-2323cd05a043680b"></a>
 ### issue-oad-only-2323cd05a043680b
 
 - **Affected PRs:** #46924
@@ -342,6 +491,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-77` — RequiredStatusChange: The 'required' status changed from the old version('False') to the new version('True').
 
+<a id="issue-oad-only-2506a5bb5d63e057"></a>
 ### issue-oad-only-2506a5bb5d63e057
 
 - **Affected PRs:** #46924
@@ -357,6 +507,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-79` — AddedReadOnlyPropertyInResponse: The new version has a new read-only property 'complianceLockStatus' in response that was not found in the old version.
 
+<a id="issue-oad-only-25e681442ad66881"></a>
 ### issue-oad-only-25e681442ad66881
 
 - **Affected PRs:** #46924
@@ -372,6 +523,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-80` — AddedPath: The new version is adding a path that was not found in the old version.
 
+<a id="issue-oad-only-27e6834c70346218"></a>
 ### issue-oad-only-27e6834c70346218
 
 - **Affected PRs:** #46924
@@ -387,6 +539,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-62` — ReferenceRedirection: The '$ref' property points to different models in the old and new versions.
 
+<a id="issue-oad-only-2a56b7d65774a9bf"></a>
 ### issue-oad-only-2a56b7d65774a9bf
 
 - **Affected PRs:** #46924
@@ -402,6 +555,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-86` — AddedOptionalProperty: The new version has a new optional property 'name' that was not found in the old version.
 
+<a id="issue-oad-only-2b1c0454e7e1486d"></a>
 ### issue-oad-only-2b1c0454e7e1486d
 
 - **Affected PRs:** #46924
@@ -417,6 +571,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-49` — RemovedDefinition: The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
 
+<a id="issue-oad-only-2b2b691c583812b0"></a>
 ### issue-oad-only-2b2b691c583812b0
 
 - **Affected PRs:** #46924
@@ -432,6 +587,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-52` — ReferenceRedirection: The '$ref' property points to different models in the old and new versions.
 
+<a id="issue-oad-only-30ca385bedd7bdc6"></a>
 ### issue-oad-only-30ca385bedd7bdc6
 
 - **Affected PRs:** #46924
@@ -447,6 +603,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-81` — AddedPath: The new version is adding a path that was not found in the old version.
 
+<a id="issue-oad-only-33b72402fb7fe071"></a>
 ### issue-oad-only-33b72402fb7fe071
 
 - **Affected PRs:** #46924
@@ -462,6 +619,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-88` — AddedOptionalProperty: The new version has a new optional property 'systemData' that was not found in the old version.
 
+<a id="issue-oad-only-348adad87dd8d40a"></a>
 ### issue-oad-only-348adad87dd8d40a
 
 - **Affected PRs:** #46924
@@ -477,6 +635,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-33` — RequiredStatusChange: The 'required' status changed from the old version('False') to the new version('True').
 
+<a id="issue-oad-only-3807fce77752ce08"></a>
 ### issue-oad-only-3807fce77752ce08
 
 - **Affected PRs:** #46924
@@ -492,6 +651,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-89` — RemovedDefinition: The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
 
+<a id="issue-oad-only-419a98a0ac60b8d7"></a>
 ### issue-oad-only-419a98a0ac60b8d7
 
 - **Affected PRs:** #46924
@@ -507,6 +667,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-44` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-41f84e9381e713f4"></a>
 ### issue-oad-only-41f84e9381e713f4
 
 - **Affected PRs:** #46924
@@ -522,6 +683,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-69` — RemovedDefinition: The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
 
+<a id="issue-oad-only-4338467da5cec3d3"></a>
 ### issue-oad-only-4338467da5cec3d3
 
 - **Affected PRs:** #46924
@@ -537,6 +699,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-22` — ReferenceRedirection: The '$ref' property points to different models in the old and new versions.
 
+<a id="issue-oad-only-48f91836a0809b9c"></a>
 ### issue-oad-only-48f91836a0809b9c
 
 - **Affected PRs:** #46924
@@ -552,6 +715,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-26` — AddedOptionalProperty: The new version has a new optional property 'name' that was not found in the old version.
 
+<a id="issue-oad-only-4a183a1894d85436"></a>
 ### issue-oad-only-4a183a1894d85436
 
 - **Affected PRs:** #46924
@@ -567,6 +731,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-13` — RequiredStatusChange: The 'required' status changed from the old version('False') to the new version('True').
 
+<a id="issue-oad-only-4a3e96f40d903e04"></a>
 ### issue-oad-only-4a3e96f40d903e04
 
 - **Affected PRs:** #46924
@@ -582,6 +747,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-41` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-4d40287bd5740987"></a>
 ### issue-oad-only-4d40287bd5740987
 
 - **Affected PRs:** #46924
@@ -597,6 +763,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-21` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-4f05331276e8c06a"></a>
 ### issue-oad-only-4f05331276e8c06a
 
 - **Affected PRs:** #46924
@@ -612,6 +779,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-2` — ReferenceRedirection: The '$ref' property points to different models in the old and new versions.
 
+<a id="issue-oad-only-4f3eb61966ad3f44"></a>
 ### issue-oad-only-4f3eb61966ad3f44
 
 - **Affected PRs:** #46924
@@ -627,6 +795,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-57` — AddedOptionalProperty: The new version has a new optional property 'type' that was not found in the old version.
 
+<a id="issue-oad-only-54bf1df4ac503917"></a>
 ### issue-oad-only-54bf1df4ac503917
 
 - **Affected PRs:** #46924
@@ -642,6 +811,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-18` — AddedOptionalProperty: The new version has a new optional property 'systemData' that was not found in the old version.
 
+<a id="issue-oad-only-55545b425d2bbb63"></a>
 ### issue-oad-only-55545b425d2bbb63
 
 - **Affected PRs:** #46924
@@ -657,6 +827,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-24` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-601eabfc22d2975f"></a>
 ### issue-oad-only-601eabfc22d2975f
 
 - **Affected PRs:** #46924
@@ -672,6 +843,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-90` — ConstraintChanged: The new version has a different 'minItems' value than the previous one.
 
+<a id="issue-oad-only-6060792912845a12"></a>
 ### issue-oad-only-6060792912845a12
 
 - **Affected PRs:** #46924
@@ -687,6 +859,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-92` — AddedOptionalProperty: The new version has a new optional property 'complianceLockStatus' that was not found in the old version.
 
+<a id="issue-oad-only-6210999bebf5ba80"></a>
 ### issue-oad-only-6210999bebf5ba80
 
 - **Affected PRs:** #46924
@@ -702,6 +875,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-29` — RemovedDefinition: The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
 
+<a id="issue-oad-only-66244fc023565cd8"></a>
 ### issue-oad-only-66244fc023565cd8
 
 - **Affected PRs:** #46924
@@ -717,6 +891,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-74` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-67348298fe273e7c"></a>
 ### issue-oad-only-67348298fe273e7c
 
 - **Affected PRs:** #46924
@@ -732,6 +907,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-34` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-725f98b1e805f856"></a>
 ### issue-oad-only-725f98b1e805f856
 
 - **Affected PRs:** #46924
@@ -747,6 +923,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-35` — AddedOptionalProperty: The new version has a new optional property 'id' that was not found in the old version.
 
+<a id="issue-oad-only-760a8700ac26f479"></a>
 ### issue-oad-only-760a8700ac26f479
 
 - **Affected PRs:** #46924
@@ -762,6 +939,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-25` — AddedOptionalProperty: The new version has a new optional property 'id' that was not found in the old version.
 
+<a id="issue-oad-only-78db01bdbab92be2"></a>
 ### issue-oad-only-78db01bdbab92be2
 
 - **Affected PRs:** #46924
@@ -777,6 +955,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-11` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-7c5424e108c5c6b1"></a>
 ### issue-oad-only-7c5424e108c5c6b1
 
 - **Affected PRs:** #46924
@@ -792,6 +971,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-39` — RemovedDefinition: The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
 
+<a id="issue-oad-only-8431d152e1b4f35b"></a>
 ### issue-oad-only-8431d152e1b4f35b
 
 - **Affected PRs:** #46924
@@ -807,6 +987,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-75` — ReferenceRedirection: The '$ref' property points to different models in the old and new versions.
 
+<a id="issue-oad-only-85235f4098336910"></a>
 ### issue-oad-only-85235f4098336910
 
 - **Affected PRs:** #46924
@@ -822,6 +1003,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-5` — AddedOptionalProperty: The new version has a new optional property 'id' that was not found in the old version.
 
+<a id="issue-oad-only-8730f23bb27a10be"></a>
 ### issue-oad-only-8730f23bb27a10be
 
 - **Affected PRs:** #46924
@@ -837,6 +1019,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-1` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-88eb911f7ca8c9d3"></a>
 ### issue-oad-only-88eb911f7ca8c9d3
 
 - **Affected PRs:** #46924
@@ -852,6 +1035,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-71` — RemovedProperty: The new version is missing a property found in the old version. Was 'backupAdminOnCcaCreate' renamed or removed?
 
+<a id="issue-oad-only-8a8969e65e0ea34b"></a>
 ### issue-oad-only-8a8969e65e0ea34b
 
 - **Affected PRs:** #46924
@@ -867,6 +1051,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-83` — AddedOptionalProperty: The new version has a new optional property 'roleAssignmentsOnCcaCreate' that was not found in the old version.
 
+<a id="issue-oad-only-8c54230bef7858c0"></a>
 ### issue-oad-only-8c54230bef7858c0
 
 - **Affected PRs:** #46924
@@ -882,6 +1067,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-84` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-8f1358743174ab23"></a>
 ### issue-oad-only-8f1358743174ab23
 
 - **Affected PRs:** #46924
@@ -897,6 +1083,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-16` — AddedOptionalProperty: The new version has a new optional property 'name' that was not found in the old version.
 
+<a id="issue-oad-only-930ed575b8657006"></a>
 ### issue-oad-only-930ed575b8657006
 
 - **Affected PRs:** #46924
@@ -912,6 +1099,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-65` — AddedOptionalProperty: The new version has a new optional property 'id' that was not found in the old version.
 
+<a id="issue-oad-only-958ed50e977702d4"></a>
 ### issue-oad-only-958ed50e977702d4
 
 - **Affected PRs:** #46924
@@ -927,6 +1115,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-37` — AddedOptionalProperty: The new version has a new optional property 'type' that was not found in the old version.
 
+<a id="issue-oad-only-9649d81d3bf45698"></a>
 ### issue-oad-only-9649d81d3bf45698
 
 - **Affected PRs:** #46924
@@ -942,6 +1131,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-6` — AddedOptionalProperty: The new version has a new optional property 'name' that was not found in the old version.
 
+<a id="issue-oad-only-9addb6c33dadaf9a"></a>
 ### issue-oad-only-9addb6c33dadaf9a
 
 - **Affected PRs:** #46924
@@ -957,6 +1147,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-68` — AddedOptionalProperty: The new version has a new optional property 'systemData' that was not found in the old version.
 
+<a id="issue-oad-only-a20b0a629d5bffa4"></a>
 ### issue-oad-only-a20b0a629d5bffa4
 
 - **Affected PRs:** #46924
@@ -972,6 +1163,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-7` — AddedOptionalProperty: The new version has a new optional property 'type' that was not found in the old version.
 
+<a id="issue-oad-only-a318c821595b55ce"></a>
 ### issue-oad-only-a318c821595b55ce
 
 - **Affected PRs:** #46924
@@ -987,6 +1179,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-4` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-a6cf28709f4f63f4"></a>
 ### issue-oad-only-a6cf28709f4f63f4
 
 - **Affected PRs:** #46924
@@ -1002,6 +1195,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-48` — AddedOptionalProperty: The new version has a new optional property 'systemData' that was not found in the old version.
 
+<a id="issue-oad-only-aff3532a7629a8a1"></a>
 ### issue-oad-only-aff3532a7629a8a1
 
 - **Affected PRs:** #46924
@@ -1017,6 +1211,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-38` — AddedOptionalProperty: The new version has a new optional property 'systemData' that was not found in the old version.
 
+<a id="issue-oad-only-b4dc2db8e0b25819"></a>
 ### issue-oad-only-b4dc2db8e0b25819
 
 - **Affected PRs:** #46924
@@ -1032,6 +1227,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-32` — ReferenceRedirection: The '$ref' property points to different models in the old and new versions.
 
+<a id="issue-oad-only-b9f9070972fa0acd"></a>
 ### issue-oad-only-b9f9070972fa0acd
 
 - **Affected PRs:** #46924
@@ -1047,6 +1243,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-59` — RemovedDefinition: The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
 
+<a id="issue-oad-only-ba5de08fc60b4672"></a>
 ### issue-oad-only-ba5de08fc60b4672
 
 - **Affected PRs:** #46924
@@ -1062,6 +1259,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-12` — ReferenceRedirection: The '$ref' property points to different models in the old and new versions.
 
+<a id="issue-oad-only-bdec573d5e7343fc"></a>
 ### issue-oad-only-bdec573d5e7343fc
 
 - **Affected PRs:** #46924
@@ -1077,6 +1275,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-15` — AddedOptionalProperty: The new version has a new optional property 'id' that was not found in the old version.
 
+<a id="issue-oad-only-bebcdc123421a608"></a>
 ### issue-oad-only-bebcdc123421a608
 
 - **Affected PRs:** #46924
@@ -1092,6 +1291,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-3` — RequiredStatusChange: The 'required' status changed from the old version('False') to the new version('True').
 
+<a id="issue-oad-only-c21c2a08595847ba"></a>
 ### issue-oad-only-c21c2a08595847ba
 
 - **Affected PRs:** #46924
@@ -1107,6 +1307,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-63` — RequiredStatusChange: The 'required' status changed from the old version('False') to the new version('True').
 
+<a id="issue-oad-only-c79dcac0eb3f74e2"></a>
 ### issue-oad-only-c79dcac0eb3f74e2
 
 - **Affected PRs:** #46924
@@ -1122,6 +1323,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-53` — RequiredStatusChange: The 'required' status changed from the old version('False') to the new version('True').
 
+<a id="issue-oad-only-cbebe0364354d5f4"></a>
 ### issue-oad-only-cbebe0364354d5f4
 
 - **Affected PRs:** #46924
@@ -1137,6 +1339,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-64` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-ce6c391a5e6ea26f"></a>
 ### issue-oad-only-ce6c391a5e6ea26f
 
 - **Affected PRs:** #46924
@@ -1152,6 +1355,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-67` — AddedOptionalProperty: The new version has a new optional property 'type' that was not found in the old version.
 
+<a id="issue-oad-only-cf1c1ca7a3b76312"></a>
 ### issue-oad-only-cf1c1ca7a3b76312
 
 - **Affected PRs:** #46924
@@ -1167,6 +1371,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-23` — RequiredStatusChange: The 'required' status changed from the old version('False') to the new version('True').
 
+<a id="issue-oad-only-d0001d125a3e9b33"></a>
 ### issue-oad-only-d0001d125a3e9b33
 
 - **Affected PRs:** #46924
@@ -1182,6 +1387,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-8` — AddedOptionalProperty: The new version has a new optional property 'systemData' that was not found in the old version.
 
+<a id="issue-oad-only-d050e3536d40e0b4"></a>
 ### issue-oad-only-d050e3536d40e0b4
 
 - **Affected PRs:** #46924
@@ -1197,6 +1403,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-55` — AddedOptionalProperty: The new version has a new optional property 'id' that was not found in the old version.
 
+<a id="issue-oad-only-d85cda6ffaba9481"></a>
 ### issue-oad-only-d85cda6ffaba9481
 
 - **Affected PRs:** #46924
@@ -1212,6 +1419,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-51` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-da294e644072c1a7"></a>
 ### issue-oad-only-da294e644072c1a7
 
 - **Affected PRs:** #46924
@@ -1227,6 +1435,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-54` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-dabf9b35b5a01cc7"></a>
 ### issue-oad-only-dabf9b35b5a01cc7
 
 - **Affected PRs:** #46924
@@ -1242,6 +1451,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-46` — AddedOptionalProperty: The new version has a new optional property 'name' that was not found in the old version.
 
+<a id="issue-oad-only-df9dc34fdc24d206"></a>
 ### issue-oad-only-df9dc34fdc24d206
 
 - **Affected PRs:** #46924
@@ -1257,6 +1467,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-47` — AddedOptionalProperty: The new version has a new optional property 'type' that was not found in the old version.
 
+<a id="issue-oad-only-e5b6853e6c559dab"></a>
 ### issue-oad-only-e5b6853e6c559dab
 
 - **Affected PRs:** #46924
@@ -1272,6 +1483,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-73` — AddedPropertyInResponse: The new version has a new property 'roleAssignmentsOnCcaCreate' in response that was not found in the old version.
 
+<a id="issue-oad-only-e85b37766c666b20"></a>
 ### issue-oad-only-e85b37766c666b20
 
 - **Affected PRs:** #46924
@@ -1287,6 +1499,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-45` — AddedOptionalProperty: The new version has a new optional property 'id' that was not found in the old version.
 
+<a id="issue-oad-only-e8bb534b37d9eccf"></a>
 ### issue-oad-only-e8bb534b37d9eccf
 
 - **Affected PRs:** #46924
@@ -1302,6 +1515,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-91` — AddedRequiredProperty: The new version lists new non-read-only properties as required: 'roleName, entities'. These properties were not listed as required in the old version.
 
+<a id="issue-oad-only-e977600cdf56b689"></a>
 ### issue-oad-only-e977600cdf56b689
 
 - **Affected PRs:** #46924
@@ -1317,6 +1531,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-56` — AddedOptionalProperty: The new version has a new optional property 'name' that was not found in the old version.
 
+<a id="issue-oad-only-ef882bff314c3ade"></a>
 ### issue-oad-only-ef882bff314c3ade
 
 - **Affected PRs:** #46924
@@ -1332,6 +1547,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-17` — AddedOptionalProperty: The new version has a new optional property 'type' that was not found in the old version.
 
+<a id="issue-oad-only-f6596968c840c3e4"></a>
 ### issue-oad-only-f6596968c840c3e4
 
 - **Affected PRs:** #46924
@@ -1347,6 +1563,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-58` — AddedOptionalProperty: The new version has a new optional property 'systemData' that was not found in the old version.
 
+<a id="issue-oad-only-f76bc87d0806a8dc"></a>
 ### issue-oad-only-f76bc87d0806a8dc
 
 - **Affected PRs:** #46924
@@ -1362,6 +1579,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-87` — AddedOptionalProperty: The new version has a new optional property 'type' that was not found in the old version.
 
+<a id="issue-oad-only-f96a391da7c053ad"></a>
 ### issue-oad-only-f96a391da7c053ad
 
 - **Affected PRs:** #46924
@@ -1377,6 +1595,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-9` — RemovedDefinition: The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
 
+<a id="issue-oad-only-faa1428ac479e22c"></a>
 ### issue-oad-only-faa1428ac479e22c
 
 - **Affected PRs:** #46924
@@ -1392,6 +1611,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-14` — DifferentAllOf: The new version has a different 'allOf' property than the previous one.
 
+<a id="issue-oad-only-fc9cfbe7c034f767"></a>
 ### issue-oad-only-fc9cfbe7c034f767
 
 - **Affected PRs:** #46924
@@ -1407,6 +1627,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-78` — AddedRequiredProperty: The new version lists new non-read-only properties as required: 'roleName, entities'. These properties were not listed as required in the old version.
 
+<a id="issue-oad-only-ffc4e7bb9ea4ecbd"></a>
 ### issue-oad-only-ffc4e7bb9ea4ecbd
 
 - **Affected PRs:** #46924
@@ -1422,742 +1643,1174 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `oad-finding:A-oad-42` — ReferenceRedirection: The '$ref' property points to different models in the old and new versions.
 
-## Error finding equivalence details
+## Finding details
 
-### Intentional Swagger-only coverage gaps
-
-#### DifferentAllOf
-
-- **Swagger finding:** `A-oad-1` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 343](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L343) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 343](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L343) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-11` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-14` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2026](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2026) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2064](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2064) — JSONPath `definitions.CloudAccountUpdate`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-21` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-24` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2082](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2082) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2120](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2120) — JSONPath `definitions.CloudAccountUpdate`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-31` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-34` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2150](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2150) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2188](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2188) — JSONPath `definitions.CloudAccountUpdate`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-4` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1964](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1964) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2002](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2002) — JSONPath `definitions.CloudAccountUpdate`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-41` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 343](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L343) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 343](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L343) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-44` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2167](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2167) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2205](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2205) — JSONPath `definitions.CloudAccountUpdate`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-51` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 406](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L406) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 406](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L406) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-54` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2374](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2374) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2412](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2412) — JSONPath `definitions.CloudAccountUpdate`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-61` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 448](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L448) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 448](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L448) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-64` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2416](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2416) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2454](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2454) — JSONPath `definitions.CloudAccountUpdate`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-74` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 454](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L454) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 454](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L454) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-84` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2655](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2655) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2869](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2869) — JSONPath `definitions.CloudAccountUpdate`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI structural change
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-#### ReferenceRedirection
-
-- **Swagger finding:** `A-oad-12` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2041](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2041) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2068](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2068) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI reference structure is not wire-level
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-2` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1979](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1979) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2006](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2006) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI reference structure is not wire-level
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-22` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2097](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2097) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2124](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2124) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI reference structure is not wire-level
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-32` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2165](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2165) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2192](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2192) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI reference structure is not wire-level
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-42` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2182](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2182) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2209](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2209) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI reference structure is not wire-level
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-52` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2389](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2389) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2416](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2416) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI reference structure is not wire-level
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-62` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2431](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2431) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2458](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2458) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI reference structure is not wire-level
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-75` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2670](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2670) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2873](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2873) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Intentional gap:** OpenAPI reference structure is not wire-level
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-#### RemovedDefinition
-
-- **Swagger finding:** `A-oad-19` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 1677](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1677) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 1677](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1677) — JSONPath `definitions`
-- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
-- **Intentional gap:** Definition removal is covered through effective wire impacts
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-29` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 1733](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1733) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 1733](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1733) — JSONPath `definitions`
-- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
-- **Intentional gap:** Definition removal is covered through effective wire impacts
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-39` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 1801](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1801) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 1801](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1801) — JSONPath `definitions`
-- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
-- **Intentional gap:** Definition removal is covered through effective wire impacts
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-49` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 1807](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1807) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 1807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1807) — JSONPath `definitions`
-- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
-- **Intentional gap:** Definition removal is covered through effective wire impacts
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-59` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2001](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2001) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2001](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2001) — JSONPath `definitions`
-- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
-- **Intentional gap:** Definition removal is covered through effective wire impacts
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-69` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2043](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2043) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2043](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2043) — JSONPath `definitions`
-- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
-- **Intentional gap:** Definition removal is covered through effective wire impacts
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-89` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2268](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2268) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2445](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2445) — JSONPath `definitions`
-- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
-- **Intentional gap:** Definition removal is covered through effective wire impacts
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-- **Swagger finding:** `A-oad-9` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1615](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1615) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1615](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1615) — JSONPath `definitions`
-- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
-- **Intentional gap:** Definition removal is covered through effective wire impacts
-- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
-
-### Findings missing from the TypeSpec detector
-
-#### AddedOptionalProperty
-
-- **Swagger finding:** `A-oad-15` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2029](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2067](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-16` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2029](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2067](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-17` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2029](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2067](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-18` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2029](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2067](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-25` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2085](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-26` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2085](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-27` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2085](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-28` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2085](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-35` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2153](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2191](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-36` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2153](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2191](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-37` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2153](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2191](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-38` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2153](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2191](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-45` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2170](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-46` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2170](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-47` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2170](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-48` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2170](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-5` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1967](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2005](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-55` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2377](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2415](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-56` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2377](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2415](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-57` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2377](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2415](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-58` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2377](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2415](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-6` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1967](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2005](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-65` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2419](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2457](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-66` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2419](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2457](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-67` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2419](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2457](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-68` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2419](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2457](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-7` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1967](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2005](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-8` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1967](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2005](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-83` — `AddedOptionalProperty` — The new version has a new optional property 'roleAssignmentsOnCcaCreate' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2611](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) — JSONPath `definitions.CloudAccountProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) — JSONPath `definitions.CloudAccountProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-85` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2658](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2872](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-86` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2658](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2872](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-87` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2658](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2872](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-88` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2658](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2872](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) — JSONPath `definitions.CloudAccountUpdate.properties`
-- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-92` — `AddedOptionalProperty` — The new version has a new optional property 'complianceLockStatus' that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4240](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4240) — JSONPath `definitions.StorageProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4471](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4471) — JSONPath `definitions.StorageProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} response 201 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/disablecompliancelock response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/enablecompliancelock response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/refresh response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-#### AddedPropertyInResponse
-
-- **Swagger finding:** `A-oad-73` — `AddedPropertyInResponse` — The new version has a new property 'roleAssignmentsOnCcaCreate' in response that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2611](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) — JSONPath `definitions.CloudAccountProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) — JSONPath `definitions.CloudAccountProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-#### AddedRequiredProperty
-
-- **Swagger finding:** `A-oad-78` — `AddedRequiredProperty` — The new version lists new non-read-only properties as required: 'roleName, entities'. These properties were not listed as required in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3858](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3858) — JSONPath `definitions.RoleMappingProperties.properties.roles.items`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4089](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4089) — JSONPath `definitions.RoleMappingProperties.properties.roles.items`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 201 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-91` — `AddedRequiredProperty` — The new version lists new non-read-only properties as required: 'roleName, entities'. These properties were not listed as required in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3797](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3797) — JSONPath `definitions.RoleAssignment`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4023](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4023) — JSONPath `definitions.RoleAssignment`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 201 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-#### ConstraintChanged
-
-- **Swagger finding:** `A-oad-90` — `ConstraintChanged` — The new version has a different 'minItems' value than the previous one.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3805](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3805) — JSONPath `definitions.RoleAssignment.properties.entities`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4031](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4031) — JSONPath `definitions.RoleAssignment.properties.entities`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 201 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-#### RemovedProperty
-
-- **Swagger finding:** `A-oad-71` — `RemovedProperty` — The new version is missing a property found in the old version. Was 'backupAdminOnCcaCreate' renamed or removed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2611](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) — JSONPath `definitions.CloudAccountProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) — JSONPath `definitions.CloudAccountProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-72` — `RemovedProperty` — The new version is missing a property found in the old version. Was 'multiPersonAuthorizationOnCcaCreate' renamed or removed?
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2611](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) — JSONPath `definitions.CloudAccountProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) — JSONPath `definitions.CloudAccountProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-#### RequiredStatusChange
-
-- **Swagger finding:** `A-oad-13` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2769](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2769) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2786](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2786) — JSONPath `definitions.ProtectionGroupProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-23` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2825](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2825) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2842](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2842) — JSONPath `definitions.ProtectionGroupProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-3` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2707](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2707) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2724](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2724) — JSONPath `definitions.ProtectionGroupProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-33` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2893](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2893) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2910](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2910) — JSONPath `definitions.ProtectionGroupProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-43` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2910](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2910) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2927](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2927) — JSONPath `definitions.ProtectionGroupProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-53` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 3106](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L3106) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 3123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L3123) — JSONPath `definitions.ProtectionGroupProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-63` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 3191](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L3191) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 3208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L3208) — JSONPath `definitions.ProtectionGroupProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-76` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3472](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3472) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3695](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3695) — JSONPath `definitions.ProtectionGroupProperties.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-- **Swagger finding:** `A-oad-77` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3800](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3800) — JSONPath `definitions.RoleAssignment.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4026](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4026) — JSONPath `definitions.RoleAssignment.properties`
-- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 201 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings response 200
-- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
-
-## Non-error finding equivalence by phase
-
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-### Informational OAD records
-
-#### NoVersionChange
+<a id="finding-a-oad-0"></a>
+### A-oad-0 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-0` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
 - **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-1"></a>
+### A-oad-1 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-1` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 343](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L343) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 343](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L343) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-8730f23bb27a10be](#issue-oad-only-8730f23bb27a10be)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-2"></a>
+### A-oad-2 — `ReferenceRedirection`
+
+- **Swagger finding:** `A-oad-2` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1979](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1979) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2006](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2006) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI reference structure is not wire-level
+- **Related analysis:** [issue-oad-only-4f05331276e8c06a](#issue-oad-only-4f05331276e8c06a)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-3"></a>
+### A-oad-3 — `RequiredStatusChange`
+
+- **Swagger finding:** `A-oad-3` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2707](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2707) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2724](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2724) — JSONPath `definitions.ProtectionGroupProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
+- **Related analysis:** [issue-oad-only-bebcdc123421a608](#issue-oad-only-bebcdc123421a608)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-4"></a>
+### A-oad-4 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-4` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1964](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1964) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2002](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2002) — JSONPath `definitions.CloudAccountUpdate`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-a318c821595b55ce](#issue-oad-only-a318c821595b55ce)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-5"></a>
+### A-oad-5 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-5` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1967](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2005](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-85235f4098336910](#issue-oad-only-85235f4098336910)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-6"></a>
+### A-oad-6 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-6` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1967](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2005](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-9649d81d3bf45698](#issue-oad-only-9649d81d3bf45698)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-7"></a>
+### A-oad-7 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-7` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1967](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2005](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-a20b0a629d5bffa4](#issue-oad-only-a20b0a629d5bffa4)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-8"></a>
+### A-oad-8 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-8` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1967](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1967) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 2005](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L2005) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-d0001d125a3e9b33](#issue-oad-only-d0001d125a3e9b33)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-9"></a>
+### A-oad-9 — `RemovedDefinition`
+
+- **Swagger finding:** `A-oad-9` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1615](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1615) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json, line 1615](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2024-10-01-preview/commvault.json#L1615) — JSONPath `definitions`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
+- **Intentional gap:** Definition removal is covered through effective wire impacts
+- **Related analysis:** [issue-oad-only-f96a391da7c053ad](#issue-oad-only-f96a391da7c053ad)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-10"></a>
+### A-oad-10 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-10` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
 - **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-11"></a>
+### A-oad-11 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-11` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-78db01bdbab92be2](#issue-oad-only-78db01bdbab92be2)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-12"></a>
+### A-oad-12 — `ReferenceRedirection`
+
+- **Swagger finding:** `A-oad-12` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2041](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2041) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2068](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2068) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI reference structure is not wire-level
+- **Related analysis:** [issue-oad-only-ba5de08fc60b4672](#issue-oad-only-ba5de08fc60b4672)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-13"></a>
+### A-oad-13 — `RequiredStatusChange`
+
+- **Swagger finding:** `A-oad-13` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2769](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2769) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2786](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2786) — JSONPath `definitions.ProtectionGroupProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
+- **Related analysis:** [issue-oad-only-4a183a1894d85436](#issue-oad-only-4a183a1894d85436)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-14"></a>
+### A-oad-14 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-14` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2026](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2026) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2064](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2064) — JSONPath `definitions.CloudAccountUpdate`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-faa1428ac479e22c](#issue-oad-only-faa1428ac479e22c)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-15"></a>
+### A-oad-15 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-15` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2029](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2067](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-bdec573d5e7343fc](#issue-oad-only-bdec573d5e7343fc)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-16"></a>
+### A-oad-16 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-16` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2029](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2067](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-8f1358743174ab23](#issue-oad-only-8f1358743174ab23)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-17"></a>
+### A-oad-17 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-17` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2029](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2067](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-ef882bff314c3ade](#issue-oad-only-ef882bff314c3ade)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-18"></a>
+### A-oad-18 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-18` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2029](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2029) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 2067](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L2067) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-54bf1df4ac503917](#issue-oad-only-54bf1df4ac503917)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-19"></a>
+### A-oad-19 — `RemovedDefinition`
+
+- **Swagger finding:** `A-oad-19` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 1677](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1677) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json, line 1677](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2025-01-01-preview/commvault.json#L1677) — JSONPath `definitions`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
+- **Intentional gap:** Definition removal is covered through effective wire impacts
+- **Related analysis:** [issue-oad-only-0e1053dee4dddb53](#issue-oad-only-0e1053dee4dddb53)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-20"></a>
+### A-oad-20 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-20` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
 - **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-21"></a>
+### A-oad-21 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-21` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-4d40287bd5740987](#issue-oad-only-4d40287bd5740987)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-22"></a>
+### A-oad-22 — `ReferenceRedirection`
+
+- **Swagger finding:** `A-oad-22` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2097](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2097) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2124](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2124) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI reference structure is not wire-level
+- **Related analysis:** [issue-oad-only-4338467da5cec3d3](#issue-oad-only-4338467da5cec3d3)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-23"></a>
+### A-oad-23 — `RequiredStatusChange`
+
+- **Swagger finding:** `A-oad-23` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2825](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2825) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2842](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2842) — JSONPath `definitions.ProtectionGroupProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
+- **Related analysis:** [issue-oad-only-cf1c1ca7a3b76312](#issue-oad-only-cf1c1ca7a3b76312)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-24"></a>
+### A-oad-24 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-24` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2082](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2082) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2120](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2120) — JSONPath `definitions.CloudAccountUpdate`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-55545b425d2bbb63](#issue-oad-only-55545b425d2bbb63)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-25"></a>
+### A-oad-25 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-25` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2085](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-760a8700ac26f479](#issue-oad-only-760a8700ac26f479)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-26"></a>
+### A-oad-26 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-26` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2085](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-48f91836a0809b9c](#issue-oad-only-48f91836a0809b9c)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-27"></a>
+### A-oad-27 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-27` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2085](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-046f2670f839bed4](#issue-oad-only-046f2670f839bed4)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-28"></a>
+### A-oad-28 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-28` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2085](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2085) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 2123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L2123) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-070a171637b031fc](#issue-oad-only-070a171637b031fc)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-29"></a>
+### A-oad-29 — `RemovedDefinition`
+
+- **Swagger finding:** `A-oad-29` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 1733](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1733) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json, line 1733](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-03-01-preview/commvault.json#L1733) — JSONPath `definitions`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
+- **Intentional gap:** Definition removal is covered through effective wire impacts
+- **Related analysis:** [issue-oad-only-6210999bebf5ba80](#issue-oad-only-6210999bebf5ba80)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-30"></a>
+### A-oad-30 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-30` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
 - **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-31"></a>
+### A-oad-31 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-31` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 337](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L337) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-12c492050fe815f8](#issue-oad-only-12c492050fe815f8)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-32"></a>
+### A-oad-32 — `ReferenceRedirection`
+
+- **Swagger finding:** `A-oad-32` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2165](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2165) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2192](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2192) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI reference structure is not wire-level
+- **Related analysis:** [issue-oad-only-b4dc2db8e0b25819](#issue-oad-only-b4dc2db8e0b25819)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-33"></a>
+### A-oad-33 — `RequiredStatusChange`
+
+- **Swagger finding:** `A-oad-33` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2893](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2893) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2910](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2910) — JSONPath `definitions.ProtectionGroupProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
+- **Related analysis:** [issue-oad-only-348adad87dd8d40a](#issue-oad-only-348adad87dd8d40a)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-34"></a>
+### A-oad-34 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-34` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2150](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2150) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2188](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2188) — JSONPath `definitions.CloudAccountUpdate`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-67348298fe273e7c](#issue-oad-only-67348298fe273e7c)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-35"></a>
+### A-oad-35 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-35` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2153](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2191](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-725f98b1e805f856](#issue-oad-only-725f98b1e805f856)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-36"></a>
+### A-oad-36 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-36` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2153](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2191](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-0d02b9957b7643a1](#issue-oad-only-0d02b9957b7643a1)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-37"></a>
+### A-oad-37 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-37` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2153](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2191](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-958ed50e977702d4](#issue-oad-only-958ed50e977702d4)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-38"></a>
+### A-oad-38 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-38` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2153](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2153) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 2191](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L2191) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-aff3532a7629a8a1](#issue-oad-only-aff3532a7629a8a1)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-39"></a>
+### A-oad-39 — `RemovedDefinition`
+
+- **Swagger finding:** `A-oad-39` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 1801](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1801) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json, line 1801](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-05-01-preview/commvault.json#L1801) — JSONPath `definitions`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
+- **Intentional gap:** Definition removal is covered through effective wire impacts
+- **Related analysis:** [issue-oad-only-7c5424e108c5c6b1](#issue-oad-only-7c5424e108c5c6b1)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-40"></a>
+### A-oad-40 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-40` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
 - **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-41"></a>
+### A-oad-41 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-41` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 343](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L343) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 343](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L343) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-4a3e96f40d903e04](#issue-oad-only-4a3e96f40d903e04)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-42"></a>
+### A-oad-42 — `ReferenceRedirection`
+
+- **Swagger finding:** `A-oad-42` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2182](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2182) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2209](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2209) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI reference structure is not wire-level
+- **Related analysis:** [issue-oad-only-ffc4e7bb9ea4ecbd](#issue-oad-only-ffc4e7bb9ea4ecbd)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-43"></a>
+### A-oad-43 — `RequiredStatusChange`
+
+- **Swagger finding:** `A-oad-43` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2910](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2910) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2927](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2927) — JSONPath `definitions.ProtectionGroupProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
+- **Related analysis:** [issue-oad-only-1615da13fabe3e70](#issue-oad-only-1615da13fabe3e70)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-44"></a>
+### A-oad-44 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-44` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2167](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2167) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2205](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2205) — JSONPath `definitions.CloudAccountUpdate`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-419a98a0ac60b8d7](#issue-oad-only-419a98a0ac60b8d7)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-45"></a>
+### A-oad-45 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-45` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2170](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-e85b37766c666b20](#issue-oad-only-e85b37766c666b20)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-46"></a>
+### A-oad-46 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-46` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2170](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-dabf9b35b5a01cc7](#issue-oad-only-dabf9b35b5a01cc7)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-47"></a>
+### A-oad-47 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-47` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2170](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-df9dc34fdc24d206](#issue-oad-only-df9dc34fdc24d206)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-48"></a>
+### A-oad-48 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-48` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2170](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2170) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 2208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L2208) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-a6cf28709f4f63f4](#issue-oad-only-a6cf28709f4f63f4)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-49"></a>
+### A-oad-49 — `RemovedDefinition`
+
+- **Swagger finding:** `A-oad-49` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 1807](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1807) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json, line 1807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-01-preview/commvault.json#L1807) — JSONPath `definitions`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
+- **Intentional gap:** Definition removal is covered through effective wire impacts
+- **Related analysis:** [issue-oad-only-2b1c0454e7e1486d](#issue-oad-only-2b1c0454e7e1486d)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-50"></a>
+### A-oad-50 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-50` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
 - **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-51"></a>
+### A-oad-51 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-51` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 406](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L406) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 406](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L406) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-d85cda6ffaba9481](#issue-oad-only-d85cda6ffaba9481)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-52"></a>
+### A-oad-52 — `ReferenceRedirection`
+
+- **Swagger finding:** `A-oad-52` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2389](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2389) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2416](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2416) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI reference structure is not wire-level
+- **Related analysis:** [issue-oad-only-2b2b691c583812b0](#issue-oad-only-2b2b691c583812b0)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-53"></a>
+### A-oad-53 — `RequiredStatusChange`
+
+- **Swagger finding:** `A-oad-53` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 3106](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L3106) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 3123](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L3123) — JSONPath `definitions.ProtectionGroupProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
+- **Related analysis:** [issue-oad-only-c79dcac0eb3f74e2](#issue-oad-only-c79dcac0eb3f74e2)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-54"></a>
+### A-oad-54 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-54` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2374](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2374) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2412](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2412) — JSONPath `definitions.CloudAccountUpdate`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-da294e644072c1a7](#issue-oad-only-da294e644072c1a7)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-55"></a>
+### A-oad-55 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-55` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2377](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2415](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-d050e3536d40e0b4](#issue-oad-only-d050e3536d40e0b4)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-56"></a>
+### A-oad-56 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-56` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2377](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2415](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-e977600cdf56b689](#issue-oad-only-e977600cdf56b689)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-57"></a>
+### A-oad-57 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-57` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2377](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2415](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-4f3eb61966ad3f44](#issue-oad-only-4f3eb61966ad3f44)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-58"></a>
+### A-oad-58 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-58` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2377](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2377) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2415](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2415) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-f6596968c840c3e4](#issue-oad-only-f6596968c840c3e4)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-59"></a>
+### A-oad-59 — `RemovedDefinition`
+
+- **Swagger finding:** `A-oad-59` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2001](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2001) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json, line 2001](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-06-02-preview/commvault.json#L2001) — JSONPath `definitions`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
+- **Intentional gap:** Definition removal is covered through effective wire impacts
+- **Related analysis:** [issue-oad-only-b9f9070972fa0acd](#issue-oad-only-b9f9070972fa0acd)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-60"></a>
+### A-oad-60 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-60` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
 - **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-61"></a>
+### A-oad-61 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-61` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 448](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L448) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 448](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L448) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-0f8ae22091bc1e61](#issue-oad-only-0f8ae22091bc1e61)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-62"></a>
+### A-oad-62 — `ReferenceRedirection`
+
+- **Swagger finding:** `A-oad-62` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2431](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2431) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2458](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2458) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI reference structure is not wire-level
+- **Related analysis:** [issue-oad-only-27e6834c70346218](#issue-oad-only-27e6834c70346218)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-63"></a>
+### A-oad-63 — `RequiredStatusChange`
+
+- **Swagger finding:** `A-oad-63` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 3191](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L3191) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 3208](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L3208) — JSONPath `definitions.ProtectionGroupProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
+- **Related analysis:** [issue-oad-only-c21c2a08595847ba](#issue-oad-only-c21c2a08595847ba)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-64"></a>
+### A-oad-64 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-64` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2416](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2416) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2454](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2454) — JSONPath `definitions.CloudAccountUpdate`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-cbebe0364354d5f4](#issue-oad-only-cbebe0364354d5f4)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-65"></a>
+### A-oad-65 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-65` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2419](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2457](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-930ed575b8657006](#issue-oad-only-930ed575b8657006)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-66"></a>
+### A-oad-66 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-66` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2419](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2457](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-1ab646ee2bf2a197](#issue-oad-only-1ab646ee2bf2a197)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-67"></a>
+### A-oad-67 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-67` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2419](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2457](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-ce6c391a5e6ea26f](#issue-oad-only-ce6c391a5e6ea26f)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-68"></a>
+### A-oad-68 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-68` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2419](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2419) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2457](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2457) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-9addb6c33dadaf9a](#issue-oad-only-9addb6c33dadaf9a)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-69"></a>
+### A-oad-69 — `RemovedDefinition`
+
+- **Swagger finding:** `A-oad-69` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2043](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2043) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json, line 2043](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-01-preview/commvault.json#L2043) — JSONPath `definitions`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
+- **Intentional gap:** Definition removal is covered through effective wire impacts
+- **Related analysis:** [issue-oad-only-41f84e9381e713f4](#issue-oad-only-41f84e9381e713f4)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-70"></a>
+### A-oad-70 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-70` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
 - **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
 
-- **Swagger finding:** `A-oad-93` — `NoVersionChange` — The versions have not changed.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
+<a id="finding-a-oad-71"></a>
+### A-oad-71 — `RemovedProperty`
+
+- **Swagger finding:** `A-oad-71` — `RemovedProperty` — The new version is missing a property found in the old version. Was 'backupAdminOnCcaCreate' renamed or removed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json#L1)
-- **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
-- **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
-- **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
-
-### Findings missing from the TypeSpec detector
-
-#### AddedPath
-
-- **Swagger finding:** `A-oad-80` — `AddedPath` — The new version is adding a path that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
-- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2267](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2267) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}/storages/{storageName}/disableComplianceLock']`
-- **Resolved targets:** POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/disablecompliancelock
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2611](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) — JSONPath `definitions.CloudAccountProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) — JSONPath `definitions.CloudAccountProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200
+- **Related analysis:** [issue-oad-only-88eb911f7ca8c9d3](#issue-oad-only-88eb911f7ca8c9d3)
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
-- **Swagger finding:** `A-oad-81` — `AddedPath` — The new version is adding a path that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
+<a id="finding-a-oad-72"></a>
+### A-oad-72 — `RemovedProperty`
+
+- **Swagger finding:** `A-oad-72` — `RemovedProperty` — The new version is missing a property found in the old version. Was 'multiPersonAuthorizationOnCcaCreate' renamed or removed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2326](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2326) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}/storages/{storageName}/enableComplianceLock']`
-- **Resolved targets:** POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/enablecompliancelock
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2611](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) — JSONPath `definitions.CloudAccountProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) — JSONPath `definitions.CloudAccountProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200
+- **Related analysis:** [issue-oad-only-1b63664de08718c2](#issue-oad-only-1b63664de08718c2)
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
-- **Swagger finding:** `A-oad-82` — `AddedPath` — The new version is adding a path that was not found in the old version.
-- **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
+<a id="finding-a-oad-73"></a>
+### A-oad-73 — `AddedPropertyInResponse`
+
+- **Swagger finding:** `A-oad-73` — `AddedPropertyInResponse` — The new version has a new property 'roleAssignmentsOnCcaCreate' in response that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
-- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2385](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2385) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}/storages/{storageName}/refresh']`
-- **Resolved targets:** POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/refresh
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2611](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) — JSONPath `definitions.CloudAccountProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) — JSONPath `definitions.CloudAccountProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200
+- **Related analysis:** [issue-oad-only-e5b6853e6c559dab](#issue-oad-only-e5b6853e6c559dab)
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
 
-#### AddedReadOnlyPropertyInResponse
+<a id="finding-a-oad-74"></a>
+### A-oad-74 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-74` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 454](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L454) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 454](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L454) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}'].patch.parameters[4].schema`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-66244fc023565cd8](#issue-oad-only-66244fc023565cd8)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-75"></a>
+### A-oad-75 — `ReferenceRedirection`
+
+- **Swagger finding:** `A-oad-75` — `ReferenceRedirection` — The '$ref' property points to different models in the old and new versions.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2670](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2670) — JSONPath `definitions.CloudAccountUpdate.properties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2873](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2873) — JSONPath `definitions.CloudAccountUpdate.properties.properties`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI reference structure is not wire-level
+- **Related analysis:** [issue-oad-only-8431d152e1b4f35b](#issue-oad-only-8431d152e1b4f35b)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-76"></a>
+### A-oad-76 — `RequiredStatusChange`
+
+- **Swagger finding:** `A-oad-76` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3472](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3472) — JSONPath `definitions.ProtectionGroupProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3695](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3695) — JSONPath `definitions.ProtectionGroupProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups/{} response 201 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/protectiongroups response 200
+- **Related analysis:** [issue-oad-only-1417eed357eee3f1](#issue-oad-only-1417eed357eee3f1)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-77"></a>
+### A-oad-77 — `RequiredStatusChange`
+
+- **Swagger finding:** `A-oad-77` — `RequiredStatusChange` — The 'required' status changed from the old version('False') to the new version('True').
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3800](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3800) — JSONPath `definitions.RoleAssignment.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4026](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4026) — JSONPath `definitions.RoleAssignment.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 201 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings response 200
+- **Related analysis:** [issue-oad-only-2323cd05a043680b](#issue-oad-only-2323cd05a043680b)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-78"></a>
+### A-oad-78 — `AddedRequiredProperty`
+
+- **Swagger finding:** `A-oad-78` — `AddedRequiredProperty` — The new version lists new non-read-only properties as required: 'roleName, entities'. These properties were not listed as required in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3858](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3858) — JSONPath `definitions.RoleMappingProperties.properties.roles.items`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4089](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4089) — JSONPath `definitions.RoleMappingProperties.properties.roles.items`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 201 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings response 200
+- **Related analysis:** [issue-oad-only-fc9cfbe7c034f767](#issue-oad-only-fc9cfbe7c034f767)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-79"></a>
+### A-oad-79 — `AddedReadOnlyPropertyInResponse`
 
 - **Swagger finding:** `A-oad-79` — `AddedReadOnlyPropertyInResponse` — The new version has a new read-only property 'complianceLockStatus' in response that was not found in the old version.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
 - **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4240](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4240) — JSONPath `definitions.StorageProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4471](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4471) — JSONPath `definitions.StorageProperties.properties`
+- **Classification:** `missed-equivalent`
 - **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} response 201 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/disablecompliancelock response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/enablecompliancelock response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/refresh response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages response 200
+- **Related analysis:** [issue-oad-only-2506a5bb5d63e057](#issue-oad-only-2506a5bb5d63e057)
 - **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-80"></a>
+### A-oad-80 — `AddedPath`
+
+- **Swagger finding:** `A-oad-80` — `AddedPath` — The new version is adding a path that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2267](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2267) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}/storages/{storageName}/disableComplianceLock']`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/disablecompliancelock
+- **Related analysis:** [issue-oad-only-25e681442ad66881](#issue-oad-only-25e681442ad66881)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-81"></a>
+### A-oad-81 — `AddedPath`
+
+- **Swagger finding:** `A-oad-81` — `AddedPath` — The new version is adding a path that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2326](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2326) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}/storages/{storageName}/enableComplianceLock']`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/enablecompliancelock
+- **Related analysis:** [issue-oad-only-30ca385bedd7bdc6](#issue-oad-only-30ca385bedd7bdc6)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-82"></a>
+### A-oad-82 — `AddedPath`
+
+- **Swagger finding:** `A-oad-82` — `AddedPath` — The new version is adding a path that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2385](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2385) — JSONPath `paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Commvault.ContentStore/cloudAccounts/{cloudAccountName}/storages/{storageName}/refresh']`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/refresh
+- **Related analysis:** [issue-oad-only-14b62a38b18ab1a1](#issue-oad-only-14b62a38b18ab1a1)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-83"></a>
+### A-oad-83 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-83` — `AddedOptionalProperty` — The new version has a new optional property 'roleAssignmentsOnCcaCreate' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2611](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2611) — JSONPath `definitions.CloudAccountProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2807](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2807) — JSONPath `definitions.CloudAccountProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200
+- **Related analysis:** [issue-oad-only-8a8969e65e0ea34b](#issue-oad-only-8a8969e65e0ea34b)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-84"></a>
+### A-oad-84 — `DifferentAllOf`
+
+- **Swagger finding:** `A-oad-84` — `DifferentAllOf` — The new version has a different 'allOf' property than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2655](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2655) — JSONPath `definitions.CloudAccountUpdate`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2869](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2869) — JSONPath `definitions.CloudAccountUpdate`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Intentional gap:** OpenAPI structural change
+- **Related analysis:** [issue-oad-only-8c54230bef7858c0](#issue-oad-only-8c54230bef7858c0)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-85"></a>
+### A-oad-85 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-85` — `AddedOptionalProperty` — The new version has a new optional property 'id' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2658](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2872](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-16f0183b8298f538](#issue-oad-only-16f0183b8298f538)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-86"></a>
+### A-oad-86 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-86` — `AddedOptionalProperty` — The new version has a new optional property 'name' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2658](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2872](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-2a56b7d65774a9bf](#issue-oad-only-2a56b7d65774a9bf)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-87"></a>
+### A-oad-87 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-87` — `AddedOptionalProperty` — The new version has a new optional property 'type' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2658](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2872](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-f76bc87d0806a8dc](#issue-oad-only-f76bc87d0806a8dc)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-88"></a>
+### A-oad-88 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-88` — `AddedOptionalProperty` — The new version has a new optional property 'systemData' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2658](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2658) — JSONPath `definitions.CloudAccountUpdate.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2872](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2872) — JSONPath `definitions.CloudAccountUpdate.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request
+- **Related analysis:** [issue-oad-only-33b72402fb7fe071](#issue-oad-only-33b72402fb7fe071)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-89"></a>
+### A-oad-89 — `RemovedDefinition`
+
+- **Swagger finding:** `A-oad-89` — `RemovedDefinition` — The new version is missing a definition that was found in the old version. Was 'CloudAccountUpdateProperties' removed or renamed?
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2268](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2268) — JSONPath `definitions`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 2445](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L2445) — JSONPath `definitions`
+- **Classification:** `intentional-swagger-only`
+- **Resolved targets:** OAD rule RemovedDefinition; JSON path definitions; No terminal reference; Document commvault.json
+- **Intentional gap:** Definition removal is covered through effective wire impacts
+- **Related analysis:** [issue-oad-only-3807fce77752ce08](#issue-oad-only-3807fce77752ce08)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `intentional-swagger-only`.
+
+<a id="finding-a-oad-90"></a>
+### A-oad-90 — `ConstraintChanged`
+
+- **Swagger finding:** `A-oad-90` — `ConstraintChanged` — The new version has a different 'minItems' value than the previous one.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3805](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3805) — JSONPath `definitions.RoleAssignment.properties.entities`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4031](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4031) — JSONPath `definitions.RoleAssignment.properties.entities`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 201 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings response 200
+- **Related analysis:** [issue-oad-only-601eabfc22d2975f](#issue-oad-only-601eabfc22d2975f)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-91"></a>
+### A-oad-91 — `AddedRequiredProperty`
+
+- **Swagger finding:** `A-oad-91` — `AddedRequiredProperty` — The new version lists new non-read-only properties as required: 'roleName, entities'. These properties were not listed as required in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 3797](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L3797) — JSONPath `definitions.RoleAssignment`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4023](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4023) — JSONPath `definitions.RoleAssignment`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 201 | PATCH /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{} response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/linksaas response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings/default response 201 | GET /subscriptions/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/rolemappings response 200
+- **Related analysis:** [issue-oad-only-e8bb534b37d9eccf](#issue-oad-only-e8bb534b37d9eccf)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-92"></a>
+### A-oad-92 — `AddedOptionalProperty`
+
+- **Swagger finding:** `A-oad-92` — `AddedOptionalProperty` — The new version has a new optional property 'complianceLockStatus' that was not found in the old version.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Error`; actionable error **yes**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4240](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4240) — JSONPath `definitions.StorageProperties.properties`; [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json, line 4471](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-07-03-preview/commvault.json#L4471) — JSONPath `definitions.StorageProperties.properties`
+- **Classification:** `missed-equivalent`
+- **Resolved targets:** GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} request | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} response 200 | PUT /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{} response 201 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/disablecompliancelock response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/enablecompliancelock response 200 | POST /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages/{}/refresh response 200 | GET /subscriptions/{}/resourcegroups/{}/providers/commvault.contentstore/cloudaccounts/{}/storages response 200
+- **Related analysis:** [issue-oad-only-6060792912845a12](#issue-oad-only-6060792912845a12)
+- **Decision:** No TypeSpec equivalent was selected. Classification: `missed-equivalent`.
+
+<a id="finding-a-oad-93"></a>
+### A-oad-93 — `NoVersionChange`
+
+- **Swagger finding:** `A-oad-93` — `NoVersionChange` — The versions have not changed.
+- **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
+- **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/36843705384) (digest `58a5cd1ec15212fd652b4ce93c748a68d65cccc27f3a1bfcceba074b64c1b97a`)
+- **Swagger source:** [base: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/bb83f364d8d79a7c64cc5d6ed9677cbe27c8e1cb/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json#L1); [head: specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/d7bddff73316c6472c4712ca7c16d84d90c5aa14/specification/liftrcommvault/resource-manager/Commvault.ContentStore/preview/2026-08-01-preview/commvault.json#L1)
+- **Classification:** `informational-oad`
+- **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document commvault.json
+- **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
+- **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="evidence-error-1"></a>
+### Evidence error 1
+
+- specification/liftrcommvault/Commvault.ContentStore.Management: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
 
 ## Reproduce
 

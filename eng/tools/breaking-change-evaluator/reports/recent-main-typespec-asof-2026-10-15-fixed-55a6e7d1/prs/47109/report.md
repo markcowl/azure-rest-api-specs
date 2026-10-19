@@ -16,6 +16,46 @@
 - **Head:** `sandeepraichura-patch-1` at `04350064c8ef657597b0abdc4c212356ef373066`
 - **Changed TypeSpec files:** `specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery/models.tsp`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 38428697680](https://github.com/Azure/azure-rest-api-specs/actions/runs/38428697680) · [workflow 38428698079](https://github.com/Azure/azure-rest-api-specs/actions/runs/38428698079) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+| Phase | Finding | Type / path | Source | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/7a181711c3d59c11fc2d1028ec9c2285c08994f9/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/04350064c8ef657597b0abdc4c212356ef373066/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-0) |
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -88,6 +128,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-compile-runtime-failure-fdfbe08636045207` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
 
+<a id="issue-compile-runtime-failure-fdfbe08636045207"></a>
 ### issue-compile-runtime-failure-fdfbe08636045207
 
 - **Affected PRs:** #47109
@@ -200,25 +241,72 @@ Emitted 'error' event on Socket instance at:
 
 Node.js v24.16.0
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
-
-## Non-error finding equivalence by phase
-
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-### Informational OAD records
-
-#### NoVersionChange
+<a id="finding-a-oad-0"></a>
+### A-oad-0 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-0` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38428697680) (digest `9fd1c5f59e66b75dba3497efd98df138720d50d49a4d99bcc1a03e145df0ecb9`)
 - **Swagger source:** [base: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/7a181711c3d59c11fc2d1028ec9c2285c08994f9/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json#L1); [head: specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/04350064c8ef657597b0abdc4c212356ef373066/specification/compute/resource-manager/Microsoft.Compute/Compute/stable/2026-03-03/GalleryRP.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document GalleryRP.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="evidence-error-1"></a>
+### Evidence error 1
+
+- specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeGallery: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
 
 ## Reproduce
 

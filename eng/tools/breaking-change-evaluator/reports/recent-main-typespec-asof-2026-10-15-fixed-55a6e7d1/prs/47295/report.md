@@ -49,6 +49,46 @@ Phase A compares Swagger Breaking Change errors with TypeSpec `same-version` err
 | A | Swagger Breaking Change | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | B | Breaking Change (Cross-Version) | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+None.
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+| Phase | Finding | Type / path | Source | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/e043ede3a96716ea373090b007ae292f4629d9e6/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-0) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/e043ede3a96716ea373090b007ae292f4629d9e6/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-1) |
+| A | `NoVersionChange` | NoVersionChange | [base](https://github.com/Azure/azure-rest-api-specs/blob/505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json#L1) · [head](https://github.com/Azure/azure-rest-api-specs/blob/e043ede3a96716ea373090b007ae292f4629d9e6/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json#L1) | OAD reports unchanged document versions as comparison context; this is not an API difference | [details](#finding-a-oad-2) |
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -83,6 +123,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | `issue-concordant-zero-1a854500c8bd22e3` | A | `concordant-zero` | confirmed-agreement | high | generated | 0 |
 | `issue-concordant-zero-2b465b4e9447aad3` | B | `concordant-zero` | confirmed-agreement | high | generated | 0 |
 
+<a id="issue-concordant-zero-1a854500c8bd22e3"></a>
 ### issue-concordant-zero-1a854500c8bd22e3
 
 - **Affected PRs:** #47295
@@ -98,6 +139,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `execution:phase-A` — Independent OAD evidence and TypeSpec execution both completed with zero findings.
 
+<a id="issue-concordant-zero-2b465b4e9447aad3"></a>
 ### issue-concordant-zero-2b465b4e9447aad3
 
 - **Affected PRs:** #47295
@@ -113,38 +155,40 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 - **Evidence:**
   - `execution:phase-B` — Independent OAD evidence and TypeSpec execution both completed with zero findings.
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
-
-## Non-error finding equivalence by phase
-
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-### Informational OAD records
-
-#### NoVersionChange
+<a id="finding-a-oad-0"></a>
+### A-oad-0 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-0` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38588566941) (digest `08ad256286230bfbef8cb7154ec064bdb6f79a30b0fc733dcf0226fb3f4f1892`)
 - **Swagger source:** [base: specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json#L1); [head: specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/e043ede3a96716ea373090b007ae292f4629d9e6/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document mongoCluster.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-1"></a>
+### A-oad-1 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-1` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38588566941) (digest `08ad256286230bfbef8cb7154ec064bdb6f79a30b0fc733dcf0226fb3f4f1892`)
 - **Swagger source:** [base: specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json#L1); [head: specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/e043ede3a96716ea373090b007ae292f4629d9e6/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document mongoCluster.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.
+
+<a id="finding-a-oad-2"></a>
+### A-oad-2 — `NoVersionChange`
 
 - **Swagger finding:** `A-oad-2` — `NoVersionChange` — The versions have not changed.
 - **Comparison:** Phase A — Swagger Breaking Change; severity `Info`; actionable error **no**
 - **Detector evidence:** [Swagger breaking-change phase A workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/38588566941) (digest `08ad256286230bfbef8cb7154ec064bdb6f79a30b0fc733dcf0226fb3f4f1892`)
 - **Swagger source:** [base: specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json#L1); [head: specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json, line 1](https://github.com/Azure/azure-rest-api-specs/blob/e043ede3a96716ea373090b007ae292f4629d9e6/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json#L1)
+- **Classification:** `informational-oad`
 - **Resolved targets:** OAD rule NoVersionChange; JSON path ; No terminal reference; Document mongoCluster.json
 - **Informational record:** OAD reports unchanged document versions as comparison context; this is not an API difference
 - **Decision:** No TypeSpec equivalent was selected. Classification: `informational-oad`.

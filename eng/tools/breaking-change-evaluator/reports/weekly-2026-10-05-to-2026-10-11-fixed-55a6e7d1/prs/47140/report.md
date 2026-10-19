@@ -16,6 +16,54 @@
 - **Head:** `update/typespec-release-20261008` at `2c38e623d7a77d6c9fcdd89e322e655fe23cbebd`
 - **Changed TypeSpec files:** `specification/ai-foundry/data-plane/Foundry/src/openai/evaluations/user_conversation_simulation.tsp`, `specification/ai-foundry/data-plane/Foundry/src/openai/responses/models.tsp`, `specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents/client.tsp`, `specification/ai-foundry/data-plane/Foundry/src/tools/models.tsp`, `specification/ai-foundry/data-plane/Foundry/src/voice-agents/agents.tsp`, `specification/ai-foundry/data-plane/Foundry/src/voice-agents/protocol.tsp`, `specification/ai/data-plane/AIAgents/common/models.tsp`, `specification/ai/data-plane/AIAgents/messages/models.tsp`, `specification/ai/data-plane/AIAgents/tools/models.tsp`, `specification/ai/data-plane/AIAgents/tools/tool_resources.tsp`, `specification/ai/data-plane/OpenAIAssistants/common/models.tsp`, `specification/ai/data-plane/OpenAIAssistants/messages/models.tsp`, `specification/ai/data-plane/OpenAIAssistants/tools/models.tsp`, `specification/ai/data-plane/OpenAIAssistants/tools/tool_resources.tsp`, `specification/ai/data-plane/VoiceLive/custom.tsp`, `specification/ai/data-plane/VoiceLive/tools.tsp`, `specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PreviewAlertRule/models.tsp`, `specification/app/data-plane/ContainerApps/models/volumes.tsp`, `specification/batch/resource-manager/Microsoft.Batch/Batch/client.tsp`, `specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp`, `specification/cognitiveservices/data-plane/OpenAIInference/models/completions/chat_messages.tsp`, `specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry/client.tsp`, `specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp`, `specification/edge/resource-manager/Microsoft.Edge/configurationmanager/Job.tsp`, `specification/inferenceservice/data-plane/InferenceService/models.tsp`, `specification/keyvault/data-plane/Administration/common/common.tsp`, `specification/keyvault/data-plane/Certificates/common/common.tsp`, `specification/keyvault/data-plane/Keys/common/common.tsp`, `specification/keyvault/data-plane/Secrets/common/common.tsp`, `specification/keyvault/data-plane/SecurityDomain/common/common.tsp`, `specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/models/NetworkTapRule.tsp`, `specification/maps/data-plane/Weather/models.tsp`, `specification/monitor/resource-manager/Microsoft.Insights/Insights/ScheduledQueryRuleApi/models.tsp`, `specification/orbital/Microsoft.PlanetaryComputer/models.tiler.items.tsp`, `specification/postgresqlhsc/resource-manager/Microsoft.DBforPostgreSQL/PostgresqlHsc/client.tsp`, `specification/search/data-plane/Search/models-knowledgebase.tsp`, `specification/sql/resource-manager/Microsoft.Sql/SQL/client.tsp`, `specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp`, `specification/storagemover/resource-manager/Microsoft.StorageMover/StorageMover/models.tsp`, `specification/trafficmanager/resource-manager/Microsoft.Network/TrafficManager/client.tsp`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry: Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 68 error(s) found:   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path> ; Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 68 error(s) found:   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path>'t have member Experimental   C:<local-path>   C:<local-path>   C:<local-path>   C:<local-path> | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+| — | Report execution | specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents: Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 1 error(s) found:   error file-not-found: File C:<local-path> ; Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 1 error(s) found:   error file-not-found: File C:<local-path> | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-2) |
+| — | Report execution | specification/ai/data-plane/OpenAIAssistants: Analysis failed: Unable to distinguish language type of union variant "vectorStoreIds" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()]. ; Analysis failed: Unable to distinguish language type of union variant "vectorStoreIds" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()]. | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-3) |
+| — | Report execution | specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PreviewAlertRule: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-4) |
+| — | Report execution | specification/cognitiveservices/data-plane/OpenAIInference: Analysis failed: Unable to determine distinguishing runtime checks for language type of union variant "Symbol(name)". Indistinguishable from: [Symbol(name)]. Variant type category: unknown. ; Analysis failed: Unable to determine distinguishing runtime checks for language type of union variant "Symbol(name)". Indistinguishable from: [Symbol(name)]. Variant type category: unknown. | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-5) |
+| — | Report execution | specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-6) |
+| — | Report execution | specification/keyvault/data-plane/Administration: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-7) |
+| — | Report execution | specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-8) |
+| — | Report execution | specification/maps/data-plane/Weather: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-9) |
+| — | Report execution | specification/monitor/resource-manager/Microsoft.Insights/Insights/ScheduledQueryRuleApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-10) |
+| — | Report execution | specification/postgresqlhsc/resource-manager/Microsoft.DBforPostgreSQL/PostgresqlHsc: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487       throw er; // Unhandled 'error' event       ^  Error: read ENOTCONN     at tryReadStart (node:net:775:20)     at Socket._read (node:net:790:5)     at Readable.read (node:internal/streams/readable:741:12)     at Socket.read (node:net:844:39)     at new Socket (node:net:500:12)     at Object.Socket (node:net:365:41)     at createSocket (node:internal/child_process:337:14)     at ChildProcess.spawn (node:internal/child_process:475:23)     at spawn (node:child_process:796:9)     at execFile (node:child_process:349:17) Emitted 'error' event on Socket instance at:     at emitErrorNT (node:internal/streams/destroy:170:8)     at emitErrorCloseNT (node:internal/streams/destroy:129:3)     at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {   errno: -4053,   code: 'ENOTCONN',   syscall: 'read' }  Node.js v24.16.0 | [workflow 37852941134](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941134) · [workflow 37852941207](https://github.com/Azure/azure-rest-api-specs/actions/runs/37852941207) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-11) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -526,6 +574,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-compile-runtime-failure-6fd203388bb3b6ad` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
 
+<a id="issue-compile-runtime-failure-6fd203388bb3b6ad"></a>
 ### issue-compile-runtime-failure-6fd203388bb3b6ad
 
 - **Affected PRs:** #47140
@@ -1342,15 +1391,452 @@ Emitted 'error' event on Socket instance at:
 
 Node.js v24.16.0
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
+<a id="evidence-error-1"></a>
+### Evidence error 1
 
-## Non-error finding equivalence by phase
+- specification/ai-foundry/data-plane/Foundry: Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 68 error(s) found:
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+; Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 68 error(s) found:
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>'t have member Experimental
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
+  C:<local-path>
 
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
 
-Both detectors reported zero non-error findings.
+<a id="evidence-error-2"></a>
+### Evidence error 2
+
+- specification/ai-foundry/data-plane/Foundry/src/sdk-java-azure-ai-agents: Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+; Analysis failed: Failed to compile the base revision (8f99c33c108147fcc716e71a764010084fe5d034): 1 error(s) found:
+  error file-not-found: File C:<local-path>
+
+
+<a id="evidence-error-3"></a>
+### Evidence error 3
+
+- specification/ai/data-plane/OpenAIAssistants: Analysis failed: Unable to distinguish language type of union variant "vectorStoreIds" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()].
+; Analysis failed: Unable to distinguish language type of union variant "vectorStoreIds" with available runtime checks. Indistinguishable from: [vectorStores]. Variant type category: array. Available tests: [type()].
+
+
+<a id="evidence-error-4"></a>
+### Evidence error 4
+
+- specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/PreviewAlertRule: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-5"></a>
+### Evidence error 5
+
+- specification/cognitiveservices/data-plane/OpenAIInference: Analysis failed: Unable to determine distinguishing runtime checks for language type of union variant "Symbol(name)". Indistinguishable from: [Symbol(name)]. Variant type category: unknown.
+; Analysis failed: Unable to determine distinguishing runtime checks for language type of union variant "Symbol(name)". Indistinguishable from: [Symbol(name)]. Variant type category: unknown.
+
+
+<a id="evidence-error-6"></a>
+### Evidence error 6
+
+- specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-7"></a>
+### Evidence error 7
+
+- specification/keyvault/data-plane/Administration: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-8"></a>
+### Evidence error 8
+
+- specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-9"></a>
+### Evidence error 9
+
+- specification/maps/data-plane/Weather: Analysis failed: Cannot read properties of undefined (reading 'get')
+; Analysis failed: Cannot read properties of undefined (reading 'get')
+
+
+<a id="evidence-error-10"></a>
+### Evidence error 10
+
+- specification/monitor/resource-manager/Microsoft.Insights/Insights/ScheduledQueryRuleApi: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
+
+<a id="evidence-error-11"></a>
+### Evidence error 11
+
+- specification/postgresqlhsc/resource-manager/Microsoft.DBforPostgreSQL/PostgresqlHsc: Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0; Missing, malformed, or schema-invalid TypeSpec report: Error: ENOENT: no such file or directory, open '<local-path>'; analyzer output: node:events:487
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: read ENOTCONN
+    at tryReadStart (node:net:775:20)
+    at Socket._read (node:net:790:5)
+    at Readable.read (node:internal/streams/readable:741:12)
+    at Socket.read (node:net:844:39)
+    at new Socket (node:net:500:12)
+    at Object.Socket (node:net:365:41)
+    at createSocket (node:internal/child_process:337:14)
+    at ChildProcess.spawn (node:internal/child_process:475:23)
+    at spawn (node:child_process:796:9)
+    at execFile (node:child_process:349:17)
+Emitted 'error' event on Socket instance at:
+    at emitErrorNT (node:internal/streams/destroy:170:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:129:3)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  errno: -4053,
+  code: 'ENOTCONN',
+  syscall: 'read'
+}
+
+Node.js v24.16.0
 
 ## Reproduce
 

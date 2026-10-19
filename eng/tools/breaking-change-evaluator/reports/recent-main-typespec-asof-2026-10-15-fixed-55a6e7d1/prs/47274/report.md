@@ -16,6 +16,44 @@
 - **Head:** `update-js-custom` at `1a4022c18b6c3cc564fb85b9febf8180649a6ebd`
 - **Changed TypeSpec files:** `specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise/back-compatible.tsp`
 
+## Finding review
+
+Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.
+
+### Correlations
+
+None.
+
+### Partial correlations
+
+None.
+
+### OAD-only findings
+
+None.
+
+### TypeSpec-only findings
+
+None.
+
+### Ambiguous findings
+
+None.
+
+### Evidence and execution failures
+
+| Phase | Scope | Failure | Available evidence | Analysis | Details |
+| --- | --- | --- | --- | --- | --- |
+| — | Report execution | specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise: Analysis failed: spawn git ENOENT ; Analysis failed: spawn git ENOENT | [workflow 38502114259](https://github.com/Azure/azure-rest-api-specs/actions/runs/38502114259) · [workflow 38502114269](https://github.com/Azure/azure-rest-api-specs/actions/runs/38502114269) | Comparison is incomplete; do not treat absent findings as detector agreement. | [details](#evidence-error-1) |
+
+### Intentional Swagger-only gaps
+
+None.
+
+### Informational OAD records
+
+None.
+
 ## Detector performance by phase
 
 Durations are detector-analysis time reported by each tool. GitHub Actions workflow duration and evaluator setup time are excluded.
@@ -42,6 +80,7 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 | --- | --- | --- | --- | --- | --- | ---: |
 | `issue-compile-runtime-failure-df7a74dcc097c642` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
 
+<a id="issue-compile-runtime-failure-df7a74dcc097c642"></a>
 ### issue-compile-runtime-failure-df7a74dcc097c642
 
 - **Affected PRs:** #47274
@@ -62,15 +101,14 @@ These analyses are derived from immutable detector evidence. Reviewed overlays m
 ; Analysis failed: spawn git ENOENT
 
 
-## Error finding equivalence details
+## Finding details
 
-Both detectors reported zero actionable errors.
+<a id="evidence-error-1"></a>
+### Evidence error 1
 
-## Non-error finding equivalence by phase
+- specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise: Analysis failed: spawn git ENOENT
+; Analysis failed: spawn git ENOENT
 
-This section follows error equivalence and contains findings that neither detector reports as an actionable error, including informational OAD records.
-
-Both detectors reported zero non-error findings.
 
 ## Reproduce
 
