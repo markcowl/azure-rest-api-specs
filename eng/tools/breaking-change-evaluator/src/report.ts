@@ -876,34 +876,19 @@ function formatDuration(durationMs?: number): string {
 function renderIssueAnalyses(analyses: TentativeIssueAnalysis[]): string[] {
   if (!analyses.length) return ["No tentative issues were generated.", ""];
   return [
-    "| Issue | Phase | Category | Conclusion | Confidence | Status | Findings |",
-    "| --- | --- | --- | --- | --- | --- | ---: |",
-    ...analyses.map(
-      (analysis) =>
-        `| \`${analysis.id}\` | ${analysis.phases.join(", ")} | \`${analysis.category}\` | ${analysis.conclusion} | ${analysis.confidence} | ${analysis.status} | ${analysis.findingIds.length} |`,
-    ),
+    "| Issue | Phase | Category | Conclusion | Analysis | Suggested fix | Confidence / status | Evidence |",
+    "| --- | --- | --- | --- | --- | --- | --- | --- |",
+    ...analyses.map((analysis) => {
+      const analysisText = `${analysis.rationale} ${analysis.aggregateImpact}${
+        analysis.reviewNote ? ` Review: ${analysis.reviewNote}` : ""
+      }`;
+      const evidence =
+        analysis.evidence
+          .map((entry) => `\`${entry.kind}:${entry.id}\` — ${entry.detail}`)
+          .join("<br>") || "None";
+      return `| <a id="${anchorSlug(analysis.id)}"></a>\`${analysis.id}\` | ${analysis.phases.join(", ")} | \`${analysis.category}\` | ${analysis.conclusion} | ${markdownCell(analysisText)} | ${markdownCell(analysis.suggestedFix)} | ${analysis.confidence}; ${analysis.status}${analysis.reviewedBy ? `; ${analysis.reviewedBy}` : ""} | ${markdownCell(evidence)} |`;
+    }),
     "",
-    ...analyses.flatMap((analysis) => [
-      `<a id="${anchorSlug(analysis.id)}"></a>`,
-      `### ${analysis.id}`,
-      "",
-      `- **Affected PRs:** ${analysis.affectedPrs.map((pr) => `#${pr}`).join(", ") || "none"}`,
-      `- **Phases:** ${analysis.phases.join(", ")}`,
-      `- **Finding IDs:** ${analysis.findingIds.map((id) => `\`${id}\``).join(", ") || "none"}`,
-      `- **Category:** \`${analysis.category}\``,
-      `- **Conclusion:** ${analysis.conclusion}`,
-      `- **Confidence:** ${analysis.confidence}`,
-      `- **Rationale:** ${analysis.rationale}`,
-      `- **Aggregate impact:** ${analysis.aggregateImpact}`,
-      `- **Suggested fix:** ${analysis.suggestedFix}`,
-      `- **Status:** ${analysis.status}${analysis.reviewedBy ? `; reviewed by ${analysis.reviewedBy}` : ""}`,
-      ...(analysis.reviewNote ? [`- **Review note:** ${analysis.reviewNote}`] : []),
-      "- **Evidence:**",
-      ...analysis.evidence.map(
-        (evidence) => `  - \`${evidence.kind}:${evidence.id}\` — ${evidence.detail}`,
-      ),
-      "",
-    ]),
   ];
 }
 

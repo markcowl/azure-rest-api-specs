@@ -105,42 +105,10 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 These analyses are derived from immutable detector evidence. Reviewed overlays may revise the conclusion, rationale, confidence, suggested fix, or status without changing raw findings.
 
-| Issue | Phase | Category | Conclusion | Confidence | Status | Findings |
-| --- | --- | --- | --- | --- | --- | ---: |
-| `issue-concordant-zero-987a8292d6894878` | B | `concordant-zero` | confirmed-agreement | high | generated | 0 |
-| `issue-concordant-zero-f9f83c2316c0db1b` | A | `concordant-zero` | confirmed-agreement | high | generated | 0 |
-
-<a id="issue-concordant-zero-987a8292d6894878"></a>
-### issue-concordant-zero-987a8292d6894878
-
-- **Affected PRs:** #46583
-- **Phases:** B
-- **Finding IDs:** none
-- **Category:** `concordant-zero`
-- **Conclusion:** confirmed-agreement
-- **Confidence:** high
-- **Rationale:** Both detectors reported zero findings for Phase B.
-- **Aggregate impact:** Adds one confirmed zero-result agreement to longitudinal metrics.
-- **Suggested fix:** No detector change suggested.
-- **Status:** generated
-- **Evidence:**
-  - `execution:phase-B` — Independent OAD evidence and TypeSpec execution both completed with zero findings.
-
-<a id="issue-concordant-zero-f9f83c2316c0db1b"></a>
-### issue-concordant-zero-f9f83c2316c0db1b
-
-- **Affected PRs:** #46583
-- **Phases:** A
-- **Finding IDs:** none
-- **Category:** `concordant-zero`
-- **Conclusion:** confirmed-agreement
-- **Confidence:** high
-- **Rationale:** Both detectors reported zero findings for Phase A.
-- **Aggregate impact:** Adds one confirmed zero-result agreement to longitudinal metrics.
-- **Suggested fix:** No detector change suggested.
-- **Status:** generated
-- **Evidence:**
-  - `execution:phase-A` — Independent OAD evidence and TypeSpec execution both completed with zero findings.
+| Issue | Phase | Category | Conclusion | Analysis | Suggested fix | Confidence / status | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| <a id="issue-concordant-zero-987a8292d6894878"></a>`issue-concordant-zero-987a8292d6894878` | B | `concordant-zero` | confirmed-agreement | Both detectors reported zero findings for Phase B. Adds one confirmed zero-result agreement to longitudinal metrics. | No detector change suggested. | high; generated | `execution:phase-B` — Independent OAD evidence and TypeSpec execution both completed with zero findings. |
+| <a id="issue-concordant-zero-f9f83c2316c0db1b"></a>`issue-concordant-zero-f9f83c2316c0db1b` | A | `concordant-zero` | confirmed-agreement | Both detectors reported zero findings for Phase A. Adds one confirmed zero-result agreement to longitudinal metrics. | No detector change suggested. | high; generated | `execution:phase-A` — Independent OAD evidence and TypeSpec execution both completed with zero findings. |
 
 ## Finding details
 

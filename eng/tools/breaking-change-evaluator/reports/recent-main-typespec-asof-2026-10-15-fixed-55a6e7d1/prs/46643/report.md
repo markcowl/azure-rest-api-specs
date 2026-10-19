@@ -81,64 +81,11 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 These analyses are derived from immutable detector evidence. Reviewed overlays may revise the conclusion, rationale, confidence, suggested fix, or status without changing raw findings.
 
-| Issue | Phase | Category | Conclusion | Confidence | Status | Findings |
-| --- | --- | --- | --- | --- | --- | ---: |
-| `issue-compile-runtime-failure-64fc681fcde8bb4c` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
-| `issue-oad-only-3ce07e0f007d23a1` | A | `oad-only` | requires-review | medium | generated | 1 |
-| `issue-oad-only-bcb3eb0163c9c91f` | A | `oad-only` | requires-review | medium | generated | 1 |
-
-<a id="issue-compile-runtime-failure-64fc681fcde8bb4c"></a>
-### issue-compile-runtime-failure-64fc681fcde8bb4c
-
-- **Affected PRs:** #46643
-- **Phases:** A, B
-- **Finding IDs:** none
-- **Category:** `compile-runtime-failure`
-- **Conclusion:** execution-failure
-- **Confidence:** high
-- **Rationale:** One or more evaluator, compile, or analyzer executions failed.
-- **Aggregate impact:** Preserves a partial or failed outcome instead of success-shaped metrics.
-- **Suggested fix:** Resolve the recorded execution error and rerun the same immutable input.
-- **Status:** generated
-- **Evidence:**
-  - `execution:execution-error-0` — specification/compute/resource-manager/Microsoft.Compute/Compute/Compute: Analysis failed: Cannot read properties of undefined (reading 'get')
-; Analysis failed: Cannot read properties of undefined (reading 'get')
-
-  - `execution:execution-error-1` — Analysis failed: Cannot read properties of undefined (reading 'get')
-; Analysis failed: Cannot read properties of undefined (reading 'get')
-
-
-<a id="issue-oad-only-3ce07e0f007d23a1"></a>
-### issue-oad-only-3ce07e0f007d23a1
-
-- **Affected PRs:** #46643
-- **Phases:** A
-- **Finding IDs:** `A-oad-2`
-- **Category:** `oad-only`
-- **Conclusion:** requires-review
-- **Confidence:** medium
-- **Rationale:** OAD finding has evaluator classification 'missed-equivalent' and no selected TypeSpec equivalent.
-- **Aggregate impact:** Contributes one finding to OAD-only or missed-equivalent totals.
-- **Suggested fix:** Review detector coverage and the canonical target mapping.
-- **Status:** generated
-- **Evidence:**
-  - `oad-finding:A-oad-2` — AddedPropertyInResponse: The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
-
-<a id="issue-oad-only-bcb3eb0163c9c91f"></a>
-### issue-oad-only-bcb3eb0163c9c91f
-
-- **Affected PRs:** #46643
-- **Phases:** A
-- **Finding IDs:** `A-oad-1`
-- **Category:** `oad-only`
-- **Conclusion:** requires-review
-- **Confidence:** medium
-- **Rationale:** OAD finding has evaluator classification 'missed-equivalent' and no selected TypeSpec equivalent.
-- **Aggregate impact:** Contributes one finding to OAD-only or missed-equivalent totals.
-- **Suggested fix:** Review detector coverage and the canonical target mapping.
-- **Status:** generated
-- **Evidence:**
-  - `oad-finding:A-oad-1` — AddedPropertyInResponse: The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version.
+| Issue | Phase | Category | Conclusion | Analysis | Suggested fix | Confidence / status | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| <a id="issue-compile-runtime-failure-64fc681fcde8bb4c"></a>`issue-compile-runtime-failure-64fc681fcde8bb4c` | A, B | `compile-runtime-failure` | execution-failure | One or more evaluator, compile, or analyzer executions failed. Preserves a partial or failed outcome instead of success-shaped metrics. | Resolve the recorded execution error and rerun the same immutable input. | high; generated | `execution:execution-error-0` — specification/compute/resource-manager/Microsoft.Compute/Compute/Compute: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') <br>`execution:execution-error-1` — Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') |
+| <a id="issue-oad-only-3ce07e0f007d23a1"></a>`issue-oad-only-3ce07e0f007d23a1` | A | `oad-only` | requires-review | OAD finding has evaluator classification 'missed-equivalent' and no selected TypeSpec equivalent. Contributes one finding to OAD-only or missed-equivalent totals. | Review detector coverage and the canonical target mapping. | medium; generated | `oad-finding:A-oad-2` — AddedPropertyInResponse: The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version. |
+| <a id="issue-oad-only-bcb3eb0163c9c91f"></a>`issue-oad-only-bcb3eb0163c9c91f` | A | `oad-only` | requires-review | OAD finding has evaluator classification 'missed-equivalent' and no selected TypeSpec equivalent. Contributes one finding to OAD-only or missed-equivalent totals. | Review detector coverage and the canonical target mapping. | medium; generated | `oad-finding:A-oad-1` — AddedPropertyInResponse: The new version has a new property 'privateIPAddressPrefixLength' in response that was not found in the old version. |
 
 ## Finding details
 

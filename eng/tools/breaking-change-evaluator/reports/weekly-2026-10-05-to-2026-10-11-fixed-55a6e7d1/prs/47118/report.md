@@ -78,34 +78,9 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 These analyses are derived from immutable detector evidence. Reviewed overlays may revise the conclusion, rationale, confidence, suggested fix, or status without changing raw findings.
 
-| Issue | Phase | Category | Conclusion | Confidence | Status | Findings |
-| --- | --- | --- | --- | --- | --- | ---: |
-| `issue-compile-runtime-failure-8dcd82510a15a05c` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
-
-<a id="issue-compile-runtime-failure-8dcd82510a15a05c"></a>
-### issue-compile-runtime-failure-8dcd82510a15a05c
-
-- **Affected PRs:** #47118
-- **Phases:** A, B
-- **Finding IDs:** none
-- **Category:** `compile-runtime-failure`
-- **Conclusion:** execution-failure
-- **Confidence:** high
-- **Rationale:** One or more evaluator, compile, or analyzer executions failed.
-- **Aggregate impact:** Preserves a partial or failed outcome instead of success-shaped metrics.
-- **Suggested fix:** Resolve the recorded execution error and rerun the same immutable input.
-- **Status:** generated
-- **Evidence:**
-  - `execution:execution-error-0` — specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:
-  error file-not-found: File C:<local-path>
-; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:
-  error file-not-found: File C:<local-path>
-
-  - `execution:execution-error-1` — Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:
-  error file-not-found: File C:<local-path>
-; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:
-  error file-not-found: File C:<local-path>
-
+| Issue | Phase | Category | Conclusion | Analysis | Suggested fix | Confidence / status | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| <a id="issue-compile-runtime-failure-8dcd82510a15a05c"></a>`issue-compile-runtime-failure-8dcd82510a15a05c` | A, B | `compile-runtime-failure` | execution-failure | One or more evaluator, compile, or analyzer executions failed. Preserves a partial or failed outcome instead of success-shaped metrics. | Resolve the recorded execution error and rerun the same immutable input. | high; generated | `execution:execution-error-0` — specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:   error file-not-found: File C:<local-path> ; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:   error file-not-found: File C:<local-path> <br>`execution:execution-error-1` — Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:   error file-not-found: File C:<local-path> ; Analysis failed: Failed to compile the base revision (be97609d55160e8d06e2fcbba9ddefbf2ee89bf8): 1 error(s) found:   error file-not-found: File C:<local-path> |
 
 ## Finding details
 

@@ -76,30 +76,9 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 These analyses are derived from immutable detector evidence. Reviewed overlays may revise the conclusion, rationale, confidence, suggested fix, or status without changing raw findings.
 
-| Issue | Phase | Category | Conclusion | Confidence | Status | Findings |
-| --- | --- | --- | --- | --- | --- | ---: |
-| `issue-compile-runtime-failure-0fc6c540b20e1219` | A, B | `compile-runtime-failure` | execution-failure | high | generated | 0 |
-
-<a id="issue-compile-runtime-failure-0fc6c540b20e1219"></a>
-### issue-compile-runtime-failure-0fc6c540b20e1219
-
-- **Affected PRs:** #47123
-- **Phases:** A, B
-- **Finding IDs:** none
-- **Category:** `compile-runtime-failure`
-- **Conclusion:** execution-failure
-- **Confidence:** high
-- **Rationale:** One or more evaluator, compile, or analyzer executions failed.
-- **Aggregate impact:** Preserves a partial or failed outcome instead of success-shaped metrics.
-- **Suggested fix:** Resolve the recorded execution error and rerun the same immutable input.
-- **Status:** generated
-- **Evidence:**
-  - `execution:execution-error-0` — specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId: Analysis failed: Cannot read properties of undefined (reading 'get')
-; Analysis failed: Cannot read properties of undefined (reading 'get')
-
-  - `execution:execution-error-1` — Analysis failed: Cannot read properties of undefined (reading 'get')
-; Analysis failed: Cannot read properties of undefined (reading 'get')
-
+| Issue | Phase | Category | Conclusion | Analysis | Suggested fix | Confidence / status | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| <a id="issue-compile-runtime-failure-0fc6c540b20e1219"></a>`issue-compile-runtime-failure-0fc6c540b20e1219` | A, B | `compile-runtime-failure` | execution-failure | One or more evaluator, compile, or analyzer executions failed. Preserves a partial or failed outcome instead of success-shaped metrics. | Resolve the recorded execution error and rerun the same immutable input. | high; generated | `execution:execution-error-0` — specification/verifiedid/resource-manager/Microsoft.VerifiedId/VerifiedId: Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') <br>`execution:execution-error-1` — Analysis failed: Cannot read properties of undefined (reading 'get') ; Analysis failed: Cannot read properties of undefined (reading 'get') |
 
 ## Finding details
 

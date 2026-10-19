@@ -62,25 +62,9 @@ None.
 
 These analyses are derived from immutable detector evidence. Reviewed overlays may revise the conclusion, rationale, confidence, suggested fix, or status without changing raw findings.
 
-| Issue | Phase | Category | Conclusion | Confidence | Status | Findings |
-| --- | --- | --- | --- | --- | --- | ---: |
-| `issue-evidence-gap-f08d0f403cf9751a` | A, B | `evidence-gap` | insufficient-evidence | high | generated | 0 |
-
-<a id="issue-evidence-gap-f08d0f403cf9751a"></a>
-### issue-evidence-gap-f08d0f403cf9751a
-
-- **Affected PRs:** #35767
-- **Phases:** A, B
-- **Finding IDs:** none
-- **Category:** `evidence-gap`
-- **Conclusion:** insufficient-evidence
-- **Confidence:** high
-- **Rationale:** Required independent OAD evidence is missing, incomplete, or invalid.
-- **Aggregate impact:** Excludes this report from complete-run effectiveness totals.
-- **Suggested fix:** Restore immutable workflow logs and job-summary evidence, then rerun.
-- **Status:** generated
-- **Evidence:**
-  - `qualification:missing-run-logs` — missing-run-logs
+| Issue | Phase | Category | Conclusion | Analysis | Suggested fix | Confidence / status | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| <a id="issue-evidence-gap-f08d0f403cf9751a"></a>`issue-evidence-gap-f08d0f403cf9751a` | A, B | `evidence-gap` | insufficient-evidence | Required independent OAD evidence is missing, incomplete, or invalid. Excludes this report from complete-run effectiveness totals. | Restore immutable workflow logs and job-summary evidence, then rerun. | high; generated | `qualification:missing-run-logs` — missing-run-logs |
 
 ## Finding details
 
