@@ -15,8 +15,22 @@ function propertyPath(value: string | string[] | undefined): string[] {
   return segments?.filter((segment) => !["body", "properties", "schema"].includes(segment)) ?? [];
 }
 
+function sourceDeclaration(path: string | undefined): {
+  declaration?: string;
+  propertyPath?: string[];
+} {
+  if (!path) return {};
+  const segments = path.split(".").filter(Boolean);
+  if (segments.length < 2) return { declaration: segments[0] };
+  return {
+    declaration: segments.at(-2),
+    propertyPath: [segments.at(-1)!],
+  };
+}
+
 function typeSpecTarget(finding: TypeSpecFinding): CanonicalTarget {
   const resourceFinding = finding.kind.startsWith("Resource");
+  const source = sourceDeclaration(finding.sourceElementPath);
   return {
     project: finding.project,
     phase: finding.phase === "same-version" ? "A" : "B",
@@ -33,12 +47,26 @@ function typeSpecTarget(finding: TypeSpecFinding): CanonicalTarget {
           ? "response"
           : undefined,
     statusCode: resourceFinding ? undefined : finding.statusCode,
-    declaration: finding.component,
-    schema: finding.component,
+    declaration: source.declaration ?? finding.component,
+    schema: source.declaration ?? finding.component,
+    sourceDeclarationPath: finding.sourceElementPath,
+    propertyPath: source.propertyPath,
     element: finding.element,
     source: finding.location,
     evidence: [`TypeSpec ${finding.kind}`, finding.message],
   };
+}
+
+function exactResourceDeclarationIdentity(
+  candidate: MatchCandidate,
+  finding: TypeSpecFinding,
+): boolean {
+  return (
+    finding.kind.startsWith("Resource") &&
+    candidate.rejectionReasons.length === 0 &&
+    candidate.exactIdentity.includes("property") &&
+    (candidate.exactIdentity.includes("schema") || candidate.exactIdentity.includes("declaration"))
+  );
 }
 
 function contradicts(oad: CanonicalTarget, tsp: CanonicalTarget): string[] {
@@ -53,6 +81,9 @@ function contradicts(oad: CanonicalTarget, tsp: CanonicalTarget): string[] {
   compare("response status differs", oad.statusCode, tsp.statusCode);
   compare("base version differs", oad.baseVersion, tsp.baseVersion);
   compare("head version differs", oad.headVersion, tsp.headVersion);
+  if (tsp.sourceDeclarationPath) {
+    compare("schema differs", oad.schema ?? oad.declaration, tsp.schema ?? tsp.declaration);
+  }
   return contradictions;
 }
 
@@ -70,7 +101,7 @@ function score(oad: CanonicalTarget, tsp: CanonicalTarget): MatchCandidate {
   const equal = (left?: string, right?: string) =>
     Boolean(left && right && left.toLowerCase() === right.toLowerCase());
   const oadPropertyPath = propertyPath(oad.propertyPath);
-  const typeSpecPropertyPath = propertyPath(tsp.element);
+  const typeSpecPropertyPath = propertyPath(tsp.propertyPath ?? tsp.element);
   const oadProperty = oadPropertyPath.join(".");
   const typeSpecProperty = typeSpecPropertyPath.join(".");
   for (const [name, left, right] of [
@@ -189,7 +220,10 @@ export function matchFindings(
       const exactIds = [
         ...new Set(
           targetCandidates
-            .filter(({ scored }) => exactWireIdentity(scored))
+            .filter(
+              ({ scored, candidate }) =>
+                exactWireIdentity(scored) || exactResourceDeclarationIdentity(scored, candidate),
+            )
             .map(({ candidate }) => candidate.occurrenceId),
         ),
       ];

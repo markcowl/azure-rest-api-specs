@@ -1,0 +1,1861 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "targeted-pr-45096-declaration-identity-2026-10-16",
+    "datasetId": "targeted-pr-45096-declaration-identity-2026-10-16",
+    "reportId": "targeted-pr-45096-declaration-identity-2026-10-16:pr-45096:a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-16T00:00:00.000Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45096,
+    "title": "Add connection pooling properties to AzurePostgreSql linked service",
+    "author": "Mohithkk",
+    "state": "open",
+    "merged": false,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45096",
+    "baseBranch": "main",
+    "headBranch": "users/mkanuru/azurepostgresql-pooling-properties",
+    "baseSha": "636e1c0e0ae772f0cfaab4f3d457d27798ee9cda",
+    "headSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
+    "changedTypeSpecFiles": [
+      "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45096",
+      "state": "open",
+      "merged": false,
+      "headSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
+      "baseSha": "636e1c0e0ae772f0cfaab4f3d457d27798ee9cda",
+      "runs": {
+        "A": {
+          "id": 36602137820,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
+          "status": "completed",
+          "conclusion": "failure",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
+          "logDigest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28",
+          "summaryDigest": "074e3961e5508652d1def255aaf851a9a45ac6af7c7384788b906ecd34703bb7"
+        },
+        "B": {
+          "id": 36602138142,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602138142",
+          "logDigest": "8ee9232438d6d575802d7fa8cff317e33403af661016f47fc29f7d72160cbcab",
+          "summaryDigest": "06a8fb528c2d7031027f781ed54107de84e58f005523e66607af3a5501169d01"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45096",
+      "headSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
+      "baseSha": "636e1c0e0ae772f0cfaab4f3d457d27798ee9cda"
+    },
+    "evaluator": {
+      "commit": "6bd647729a4d23c48fc2d38e083697252355beea"
+    },
+    "tool": {
+      "sourceSha": "70d7ec65b10b42df47836e74e6a0190900b9d2d9",
+      "artifactDigest": "53cf3a0f79886e7a7629ffabdb4a86465d174b3298dcffac16f0a06cdd8e48e9"
+    }
+  },
+  "dimensions": [
+    {
+      "phase": "A",
+      "project": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory",
+      "baseVersion": "2018-06-01",
+      "headVersion": "2018-06-01"
+    }
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+        "oldVersion": "2018-06-01",
+        "newVersion": "2018-06-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
+        "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Error",
+      "message": "The new version has a new optional property 'pooling' that was not found in the old version.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+        "oldVersion": "2018-06-01",
+        "newVersion": "2018-06-01"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'pooling' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
+        "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        },
+        {
+          "revision": "head",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Error",
+      "message": "The new version has a new optional property 'maxPoolSize' that was not found in the old version.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+        "oldVersion": "2018-06-01",
+        "newVersion": "2018-06-01"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'maxPoolSize' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
+        "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        },
+        {
+          "revision": "head",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Error",
+      "message": "The new version has a new optional property 'minPoolSize' that was not found in the old version.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+        "oldVersion": "2018-06-01",
+        "newVersion": "2018-06-01"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'minPoolSize' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
+        "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        },
+        {
+          "revision": "head",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Error",
+      "message": "The new version has a new optional property 'connectionIdleLifetime' that was not found in the old version.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+        "oldVersion": "2018-06-01",
+        "newVersion": "2018-06-01"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'connectionIdleLifetime' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
+        "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        },
+        {
+          "revision": "head",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-5",
+      "phase": "A",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Error",
+      "message": "The new version has a new optional property 'connectionPruningInterval' that was not found in the old version.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "newJsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+        "oldVersion": "2018-06-01",
+        "newVersion": "2018-06-01"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'connectionPruningInterval' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/36602137820",
+        "digest": "92eb956cdac73dc2288aba0a3f604a9c8154f091f61ba77e29dda6944754fc28"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/636e1c0e0ae772f0cfaab4f3d457d27798ee9cda/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        },
+        {
+          "revision": "head",
+          "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json",
+          "line": 10032,
+          "jsonPath": "definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/stable/2018-06-01/openapi.json#L10032"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [
+    {
+      "project": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory",
+      "status": "complete",
+      "exitCode": 1,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/98079a721448fdcf-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/98079a721448fdcf-phase-a.md",
+          "jsonDigest": "d17a719c2f952556bc8efa08ce30aa13142ea15705d3ac9fc65069e5d294a106",
+          "markdownDigest": "9e0b55f98e4e0c52d92bf7fcdd16076d3ae99649f728f9563136b71c7b199c46",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1185,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1870,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 3057
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "DataFactory",
+              "baseVersion": "2018-06-01",
+              "headVersion": "2018-06-01",
+              "phase": "same-version",
+              "findingCount": 5,
+              "rawFindingCount": 10
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/98079a721448fdcf-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/98079a721448fdcf-phase-b.md",
+          "jsonDigest": "9d3c3c2a00f9339147023fe6236f09f0708ef1ac7abb9c47a30bb7be23809388",
+          "markdownDigest": "0e2aff60ac4c713c102bbd7b172960b5db287c25db666700d55381971245b9f6",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 931,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1878,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 2812
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "7f0873b2997364b303cbe6a7a688ddad6dd314c20673a7e378b2ecb9a0993f95",
+      "comparisonsPerformed": 1,
+      "versionComparisons": [
+        {
+          "serviceName": "DataFactory",
+          "baseVersion": "2018-06-01",
+          "headVersion": "2018-06-01",
+          "phase": "same-version",
+          "findingCount": 5,
+          "rawFindingCount": 10
+        }
+      ],
+      "findings": [
+        {
+          "occurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-0",
+          "project": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'pooling' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.pooling.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+          },
+          "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.pooling",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.pooling",
+          "suppression": {
+            "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+            "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.pooling",
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  pooling: ...;\n}"
+          },
+          "versionPair": {
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01"
+          },
+          "location": {
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15903
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/98079a721448fdcf-phase-a.md",
+            "digest": "9e0b55f98e4e0c52d92bf7fcdd16076d3ae99649f728f9563136b71c7b199c46"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15903,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15903"
+          }
+        },
+        {
+          "occurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-1",
+          "project": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'maxPoolSize' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.maxPoolSize.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+          },
+          "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.maxPoolSize",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.maxPoolSize",
+          "suppression": {
+            "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+            "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.maxPoolSize",
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  maxPoolSize: ...;\n}"
+          },
+          "versionPair": {
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01"
+          },
+          "location": {
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15908
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/98079a721448fdcf-phase-a.md",
+            "digest": "9e0b55f98e4e0c52d92bf7fcdd16076d3ae99649f728f9563136b71c7b199c46"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15908,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15908"
+          }
+        },
+        {
+          "occurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-2",
+          "project": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'minPoolSize' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.minPoolSize.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+          },
+          "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.minPoolSize",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.minPoolSize",
+          "suppression": {
+            "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+            "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.minPoolSize",
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  minPoolSize: ...;\n}"
+          },
+          "versionPair": {
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01"
+          },
+          "location": {
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15913
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/98079a721448fdcf-phase-a.md",
+            "digest": "9e0b55f98e4e0c52d92bf7fcdd16076d3ae99649f728f9563136b71c7b199c46"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15913,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15913"
+          }
+        },
+        {
+          "occurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-3",
+          "project": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'connectionIdleLifetime' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionIdleLifetime.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+          },
+          "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionIdleLifetime",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.connectionIdleLifetime",
+          "suppression": {
+            "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+            "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.connectionIdleLifetime",
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  connectionIdleLifetime: ...;\n}"
+          },
+          "versionPair": {
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01"
+          },
+          "location": {
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15918
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/98079a721448fdcf-phase-a.md",
+            "digest": "9e0b55f98e4e0c52d92bf7fcdd16076d3ae99649f728f9563136b71c7b199c46"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15918,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15918"
+          }
+        },
+        {
+          "occurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-4",
+          "project": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'connectionPruningInterval' was added at body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionPruningInterval.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+          },
+          "element": "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.connectionPruningInterval",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.connectionPruningInterval",
+          "suppression": {
+            "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+            "placement": "On the declaration: Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.connectionPruningInterval",
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "example": "model AzurePostgreSqlLinkedServiceTypeProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  connectionPruningInterval: ...;\n}"
+          },
+          "versionPair": {
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01"
+          },
+          "location": {
+            "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15923
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/98079a721448fdcf-phase-a.md",
+            "digest": "9e0b55f98e4e0c52d92bf7fcdd16076d3ae99649f728f9563136b71c7b199c46"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+            "line": 15923,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e/specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp#L15923"
+          }
+        }
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "oadOccurrenceId": "A-oad-0",
+      "target": {
+        "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+        "project": "specification/datafactory/resource-manager",
+        "phase": "A",
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document openapi.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+          "project": "specification/datafactory/resource-manager",
+          "phase": "A",
+          "baseVersion": "2018-06-01",
+          "headVersion": "2018-06-01",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document openapi.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-1",
+      "target": {
+        "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+        "project": "specification/datafactory/resource-manager",
+        "phase": "A",
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01",
+        "propertyPath": [
+          "pooling"
+        ],
+        "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "evidence": [
+          "OAD rule AddedOptionalProperty",
+          "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "No terminal reference",
+          "Document openapi.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+          "project": "specification/datafactory/resource-manager",
+          "phase": "A",
+          "baseVersion": "2018-06-01",
+          "headVersion": "2018-06-01",
+          "propertyPath": [
+            "pooling"
+          ],
+          "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "evidence": [
+            "OAD rule AddedOptionalProperty",
+            "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+            "No terminal reference",
+            "Document openapi.json"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-0",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "pooling"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 13,
+          "exactIdentity": [
+            "schema",
+            "declaration",
+            "property"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration",
+            "full property path",
+            "leaf property"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-1",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "pooling"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-2",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "pooling"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-3",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "pooling"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-4",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "pooling"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "selectedTypeSpecOccurrenceIds": [
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-0"
+      ],
+      "category": "exact",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-2",
+      "target": {
+        "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+        "project": "specification/datafactory/resource-manager",
+        "phase": "A",
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01",
+        "propertyPath": [
+          "maxPoolSize"
+        ],
+        "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "evidence": [
+          "OAD rule AddedOptionalProperty",
+          "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "No terminal reference",
+          "Document openapi.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+          "project": "specification/datafactory/resource-manager",
+          "phase": "A",
+          "baseVersion": "2018-06-01",
+          "headVersion": "2018-06-01",
+          "propertyPath": [
+            "maxPoolSize"
+          ],
+          "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "evidence": [
+            "OAD rule AddedOptionalProperty",
+            "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+            "No terminal reference",
+            "Document openapi.json"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-0",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "maxPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-1",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "maxPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 13,
+          "exactIdentity": [
+            "schema",
+            "declaration",
+            "property"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration",
+            "full property path",
+            "leaf property"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-2",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "maxPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-3",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "maxPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-4",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "maxPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "selectedTypeSpecOccurrenceIds": [
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-1"
+      ],
+      "category": "exact",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-3",
+      "target": {
+        "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+        "project": "specification/datafactory/resource-manager",
+        "phase": "A",
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01",
+        "propertyPath": [
+          "minPoolSize"
+        ],
+        "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "evidence": [
+          "OAD rule AddedOptionalProperty",
+          "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "No terminal reference",
+          "Document openapi.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+          "project": "specification/datafactory/resource-manager",
+          "phase": "A",
+          "baseVersion": "2018-06-01",
+          "headVersion": "2018-06-01",
+          "propertyPath": [
+            "minPoolSize"
+          ],
+          "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "evidence": [
+            "OAD rule AddedOptionalProperty",
+            "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+            "No terminal reference",
+            "Document openapi.json"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-0",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "minPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-1",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "minPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-2",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "minPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 13,
+          "exactIdentity": [
+            "schema",
+            "declaration",
+            "property"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration",
+            "full property path",
+            "leaf property"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-3",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "minPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-4",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "minPoolSize"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "selectedTypeSpecOccurrenceIds": [
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-2"
+      ],
+      "category": "exact",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-4",
+      "target": {
+        "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+        "project": "specification/datafactory/resource-manager",
+        "phase": "A",
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01",
+        "propertyPath": [
+          "connectionIdleLifetime"
+        ],
+        "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "evidence": [
+          "OAD rule AddedOptionalProperty",
+          "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "No terminal reference",
+          "Document openapi.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+          "project": "specification/datafactory/resource-manager",
+          "phase": "A",
+          "baseVersion": "2018-06-01",
+          "headVersion": "2018-06-01",
+          "propertyPath": [
+            "connectionIdleLifetime"
+          ],
+          "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "evidence": [
+            "OAD rule AddedOptionalProperty",
+            "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+            "No terminal reference",
+            "Document openapi.json"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-0",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionIdleLifetime"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-1",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionIdleLifetime"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-2",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionIdleLifetime"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-3",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionIdleLifetime"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 13,
+          "exactIdentity": [
+            "schema",
+            "declaration",
+            "property"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration",
+            "full property path",
+            "leaf property"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-4",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionIdleLifetime"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "selectedTypeSpecOccurrenceIds": [
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-3"
+      ],
+      "category": "exact",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-5",
+      "target": {
+        "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+        "project": "specification/datafactory/resource-manager",
+        "phase": "A",
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01",
+        "propertyPath": [
+          "connectionPruningInterval"
+        ],
+        "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+        "evidence": [
+          "OAD rule AddedOptionalProperty",
+          "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+          "No terminal reference",
+          "Document openapi.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+          "project": "specification/datafactory/resource-manager",
+          "phase": "A",
+          "baseVersion": "2018-06-01",
+          "headVersion": "2018-06-01",
+          "propertyPath": [
+            "connectionPruningInterval"
+          ],
+          "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+          "evidence": [
+            "OAD rule AddedOptionalProperty",
+            "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+            "No terminal reference",
+            "Document openapi.json"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-0",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionPruningInterval"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-1",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionPruningInterval"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-2",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionPruningInterval"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-3",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionPruningInterval"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 7,
+          "exactIdentity": [
+            "schema",
+            "declaration"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-4",
+          "target": {
+            "spec": "specification\\datafactory\\resource-manager\\Microsoft.DataFactory\\DataFactory\\stable\\2018-06-01\\openapi.json",
+            "project": "specification/datafactory/resource-manager",
+            "phase": "A",
+            "baseVersion": "2018-06-01",
+            "headVersion": "2018-06-01",
+            "propertyPath": [
+              "connectionPruningInterval"
+            ],
+            "schema": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "declaration": "AzurePostgreSqlLinkedServiceTypeProperties",
+            "evidence": [
+              "OAD rule AddedOptionalProperty",
+              "JSON path definitions.AzurePostgreSqlLinkedServiceTypeProperties.properties",
+              "No terminal reference",
+              "Document openapi.json"
+            ]
+          },
+          "score": 13,
+          "exactIdentity": [
+            "schema",
+            "declaration",
+            "property"
+          ],
+          "scoreEvidence": [
+            "version pair",
+            "schema/declaration",
+            "full property path",
+            "leaf property"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "selectedTypeSpecOccurrenceIds": [
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-4"
+      ],
+      "category": "exact",
+      "reviewRequired": false
+    }
+  ],
+  "findingGroups": [
+    {
+      "category": "exact",
+      "key": "AddedOptionalProperty → ResourcePropertyAdded",
+      "swaggerRule": "AddedOptionalProperty",
+      "typeSpecKind": "ResourcePropertyAdded",
+      "oadOccurrenceIds": [
+        "A-oad-1",
+        "A-oad-2",
+        "A-oad-3",
+        "A-oad-4",
+        "A-oad-5"
+      ],
+      "typeSpecOccurrenceIds": [
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-0",
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-1",
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-2",
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-3",
+        "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory:tsp-A-4"
+      ]
+    },
+    {
+      "category": "informational-oad",
+      "key": "NoVersionChange",
+      "swaggerRule": "NoVersionChange",
+      "oadOccurrenceIds": [
+        "A-oad-0"
+      ],
+      "typeSpecOccurrenceIds": []
+    }
+  ],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-5a872e80284dd8e5",
+      "affectedPrs": [
+        45096
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "6bd647729a4d23c48fc2d38e083697252355beea",
+    "analyzerSourceSha": "70d7ec65b10b42df47836e74e6a0190900b9d2d9",
+    "analyzerArtifactDigest": "53cf3a0f79886e7a7629ffabdb4a86465d174b3298dcffac16f0a06cdd8e48e9",
+    "prHeadSha": "a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e",
+    "prBaseSha": "636e1c0e0ae772f0cfaab4f3d457d27798ee9cda",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout '6bd647729a4d23c48fc2d38e083697252355beea'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 70d7ec65b10b42df47836e74e6a0190900b9d2d9 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '53cf3a0f79886e7a7629ffabdb4a86465d174b3298dcffac16f0a06cdd8e48e9') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 636e1c0e0ae772f0cfaab4f3d457d27798ee9cda a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e\ngit -C target checkout --detach a5e9cd12f4e9b106d8f0e4c384ed17191ac18c2e\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/45096' --tool-revision 70d7ec65b10b42df47836e74e6a0190900b9d2d9 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory",
+        "project": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory' --base-ref 636e1c0e0ae772f0cfaab4f3d457d27798ee9cda --phase same-version --json-output '../specification-datafactory-resource-manager-Microsoft.DataFactory-DataFactory-phase-a.json' --markdown-output '../specification-datafactory-resource-manager-Microsoft.DataFactory-DataFactory-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory' --base-ref 636e1c0e0ae772f0cfaab4f3d457d27798ee9cda --json-output '../specification-datafactory-resource-manager-Microsoft.DataFactory-DataFactory-phase-b-evidence.json' --markdown-output '../specification-datafactory-resource-manager-Microsoft.DataFactory-DataFactory-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 5,
+    "oadInformational": 1,
+    "typeSpecTotal": 5,
+    "exact": 5,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "exactRecall": 1,
+    "probableInclusiveRecall": 1,
+    "byPhase": {
+      "A": {
+        "oadTotal": 5,
+        "oadInformational": 1,
+        "typeSpecTotal": 5,
+        "exact": 5,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "exactRecall": 1,
+        "probableInclusiveRecall": 1,
+        "outcome": "compared"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 5,
+        "typeSpecErrors": 5,
+        "matchedErrorOad": 5,
+        "matchedErrorTypeSpec": 5,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

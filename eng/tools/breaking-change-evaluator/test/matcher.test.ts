@@ -254,6 +254,80 @@ describe("finding matching", () => {
     ).toBe(true);
   });
 
+  it("exact-matches a merged resource finding by source declaration and property", () => {
+    const addedOptional: OadFinding = {
+      ...oad,
+      occurrenceId: "oad-resource-property",
+      phase: "A",
+      rule: "AddedOptionalProperty",
+    };
+    const resourceFinding: TypeSpecFinding = {
+      ...requestTsp("resource-property", "/unrelated"),
+      kind: "ResourcePropertyAdded",
+      phase: "same-version",
+      element:
+        "body.properties.linkedServices.properties.properties.variants.AzurePostgreSql.properties.typeProperties.properties.pooling",
+      component: "request",
+      sourceElementPath: "Microsoft.DataFactory.AzurePostgreSqlLinkedServiceTypeProperties.pooling",
+      versionPair: { baseVersion: "2018-06-01", headVersion: "2018-06-01" },
+    };
+    const resourceTarget: CanonicalTarget = {
+      phase: "A",
+      schema: "AzurePostgreSqlLinkedServiceTypeProperties",
+      declaration: "AzurePostgreSqlLinkedServiceTypeProperties",
+      propertyPath: ["pooling"],
+      baseVersion: "2018-06-01",
+      headVersion: "2018-06-01",
+      evidence: [],
+    };
+
+    const [match] = matchFindings(
+      [addedOptional],
+      new Map([[addedOptional.occurrenceId, [resourceTarget]]]),
+      [resourceFinding],
+    );
+
+    expect(match.category).toBe("exact");
+    expect(match.selectedTypeSpecOccurrenceIds).toEqual(["resource-property"]);
+    expect(match.candidates[0].exactIdentity).toEqual(
+      expect.arrayContaining(["schema", "declaration", "property"]),
+    );
+  });
+
+  it("does not declaration-match the same property under a different model", () => {
+    const addedOptional: OadFinding = {
+      ...oad,
+      occurrenceId: "oad-resource-property",
+      phase: "A",
+      rule: "AddedOptionalProperty",
+    };
+    const resourceFinding: TypeSpecFinding = {
+      ...requestTsp("resource-property", "/unrelated"),
+      kind: "ResourcePropertyAdded",
+      phase: "same-version",
+      element: "body.properties.pooling",
+      sourceElementPath: "Microsoft.DataFactory.OtherTypeProperties.pooling",
+      versionPair: { baseVersion: "2018-06-01", headVersion: "2018-06-01" },
+    };
+    const resourceTarget: CanonicalTarget = {
+      phase: "A",
+      schema: "AzurePostgreSqlLinkedServiceTypeProperties",
+      propertyPath: ["pooling"],
+      baseVersion: "2018-06-01",
+      headVersion: "2018-06-01",
+      evidence: [],
+    };
+
+    const [match] = matchFindings(
+      [addedOptional],
+      new Map([[addedOptional.occurrenceId, [resourceTarget]]]),
+      [resourceFinding],
+    );
+
+    expect(match.category).toBe("missed-equivalent");
+    expect(match.selectedTypeSpecOccurrenceIds).toEqual([]);
+  });
+
   it("supports directional one-to-many exact matches", () => {
     const matches = matchFindings(
       [oad],

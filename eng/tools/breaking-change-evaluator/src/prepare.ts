@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { mkdir, mkdtemp, readFile, readdir, rename, rm, stat, writeFile } from "node:fs/promises";
-import { homedir } from "node:os";
+import { homedir, tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { runProcess } from "./process.ts";
 
@@ -8,6 +8,12 @@ export const DEFAULT_TOOL_PR = 5450;
 export const TOOL_REPOSITORY = "https://github.com/Azure/typespec-azure.git";
 export const CACHE_FORMAT_VERSION = 3;
 export const TYPESPEC_MAIN_PATH_COMPATIBILITY = "package-root-typespec-main-v1";
+export const TOOL_BUILD_ARGS = [
+  "pnpm",
+  "--filter",
+  "@azure-tools/typespec-breaking-change...",
+  "build",
+] as const;
 const STAGING_CLEANUP_MAX_RETRIES = 5;
 const STAGING_CLEANUP_RETRY_DELAY_MS = 200;
 const ORIGINAL_TYPESPEC_MAIN_PATH =
@@ -292,7 +298,7 @@ export async function prepareTool(
 
   const sourceRoot = join(resolve(cacheDir), "tools", sourceSha);
   await mkdir(sourceRoot, { recursive: true });
-  const staging = await mkdtemp(join(sourceRoot, ".staging-"));
+  const staging = await mkdtemp(preparationStagingPrefix(sourceRoot));
   const checkout = join(staging, "repo");
   return await withStagingCleanup(staging, async () => {
     requireSuccess(
@@ -329,11 +335,7 @@ export async function prepareTool(
     );
     requireSuccess(
       "Building pinned tool",
-      await runProcess(
-        "corepack",
-        ["pnpm", "--filter", "@azure-tools/typespec-breaking-change...", "build"],
-        pnpmProcessOptions(checkout, 10 * 60_000),
-      ),
+      await runProcess("corepack", [...TOOL_BUILD_ARGS], pnpmProcessOptions(checkout, 10 * 60_000)),
     );
     const relativeExecutable = join(
       "repo",
@@ -381,4 +383,10 @@ export async function prepareTool(
       cachePath: finalPath,
     };
   });
+}
+
+export function preparationStagingPrefix(sourceRoot: string): string {
+  return process.platform === "win32"
+    ? join(tmpdir(), "breaking-change-tool-")
+    : join(sourceRoot, ".staging-");
 }

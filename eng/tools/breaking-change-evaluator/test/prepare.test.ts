@@ -9,8 +9,10 @@ import {
   findPreparedTool,
   finalizePublishedTool,
   publishPreparedTool,
+  preparationStagingPrefix,
   removeStagingDirectory,
   resolveToolRevision,
+  TOOL_BUILD_ARGS,
   TYPESPEC_MAIN_PATH_COMPATIBILITY,
   withStagingCleanup,
 } from "../src/prepare.ts";
@@ -41,6 +43,23 @@ afterEach(async () => {
 });
 
 describe("tool preparation", () => {
+  it("builds the analyzer dependency closure and keeps Windows staging paths short", () => {
+    expect(TOOL_BUILD_ARGS).toEqual([
+      "pnpm",
+      "--filter",
+      "@azure-tools/typespec-breaking-change...",
+      "build",
+    ]);
+    const sourceRoot = join("C:\\", "very", "long", "cache", "path");
+    const prefix = preparationStagingPrefix(sourceRoot);
+    if (process.platform === "win32") {
+      expect(prefix).not.toContain(sourceRoot);
+      expect(prefix).toContain("breaking-change-tool-");
+    } else {
+      expect(prefix).toBe(join(sourceRoot, ".staging-"));
+    }
+  });
+
   it("accepts an explicit full SHA without remote resolution", async () => {
     const sha = "D0AB464D60C47D6699BFEA0292C901864B5D8BA0";
     await expect(resolveToolRevision(sha)).resolves.toBe(sha.toLowerCase());

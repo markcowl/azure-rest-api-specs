@@ -564,10 +564,47 @@ describe("report aggregation", () => {
       "[TypeSpec Phase A analyzer report](report-artifacts/typespec/phase-a.md)",
     );
     expect(markdown).toContain("Canonical identity agrees.");
+    expect(markdown).toContain("Suggested fix / review");
+    expect(markdown).toContain("No detector or evaluator change suggested.");
     expect(markdown).toContain("[head](https://example.test/openapi.json#L10)");
     expect(markdown).toContain("[head](https://example.test/main.tsp#L20)");
     expect(markdown).toContain("[details](#finding-oad-error)");
+    expect(markdown).toContain('<a id="finding-review"></a>');
+    expect(markdown).toContain("[1](#finding-review-correlations)");
+    expect(markdown).toContain("[1](#finding-review-partial)");
     expect(markdown).not.toContain("**Decision trace:**");
+  });
+
+  it("clusters repeated issue analyses while preserving every issue anchor", () => {
+    const value = report();
+    value.issueAnalyses = ["one", "two"].map((suffix, index) => ({
+      id: `issue-${suffix}`,
+      affectedPrs: [1],
+      phases: ["A"],
+      findingIds: [`finding-${index}`],
+      category: "oad-only",
+      conclusion: "requires-review",
+      confidence: "high",
+      rationale: "Declaration identity was not retained.",
+      evidence: [
+        {
+          kind: "oad-finding",
+          id: `finding-${index}`,
+          detail: `Finding ${index}`,
+        },
+      ],
+      aggregateImpact: "The findings share one matching defect.",
+      suggestedFix: "Persist declaration identity and rematch.",
+      status: "generated",
+    }));
+
+    const markdown = renderMarkdown(value);
+    expect(markdown).toContain("Issue cluster");
+    expect(markdown).toContain("`issue-one` (+1 related)");
+    expect(markdown).toContain('<a id="issue-one"></a>');
+    expect(markdown).toContain('<a id="issue-two"></a>');
+    expect(markdown).toContain("| 2 | A | `oad-only` |");
+    expect(markdown.match(/Declaration identity was not retained\./g)).toHaveLength(1);
   });
 
   it("renders ambiguous candidates and qualification failures as primary review tables", () => {

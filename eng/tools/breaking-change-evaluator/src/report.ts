@@ -16,6 +16,7 @@ import type {
   TentativeIssueAnalysis,
   TypeSpecFinding,
 } from "./types.ts";
+import { sanitizeLocalPaths } from "./sanitize.ts";
 import {
   EVALUATION_SCHEMA_COMPATIBILITY,
   EVALUATION_SCHEMA_NAME,
@@ -341,6 +342,10 @@ function coverage(matches: number, comparableOad: number): string {
     : `${matches} / ${comparableOad} (${percent(matches / comparableOad)})`;
 }
 
+function linkedCount(count: number, anchor: string): string {
+  return count === 0 ? "0" : `[${count}](#${anchor})`;
+}
+
 function renderSource(source: SourceReference): string {
   const location = [source.path, source.line ? `line ${source.line}` : undefined]
     .filter(Boolean)
@@ -382,6 +387,8 @@ function renderTypeSpecFinding(finding: TypeSpecFinding): string[] {
     `- **TypeSpec finding:** \`${finding.occurrenceId}\` — \`${finding.kind}\` — ${finding.message}`,
     `- **Comparison:** Phase ${finding.phase === "same-version" ? "A" : "B"} (\`${finding.phase}\`); severity \`${finding.severity}\`; suppressed **${finding.suppressed ? "yes" : "no"}**; actionable error **${isActionableTypeSpecError(finding) ? "yes" : "no"}**`,
     `- **TypeSpec target:** ${target}; project \`${finding.project}\`; versions \`${finding.versionPair.baseVersion}\` → \`${finding.versionPair.headVersion}\``,
+    `- **Source declaration identity:** ${finding.sourceElementPath ? `\`${finding.sourceElementPath}\`` : "unavailable; use the operation-relative wire identity"}`,
+    `- **Wire identity:** ${finding.element ? `\`${finding.element}\`` : "unavailable"}`,
     `- **Detector evidence:** ${
       finding.detectorEvidence
         ? `[${finding.detectorEvidence.label}](${finding.detectorEvidence.url})${
@@ -439,6 +446,7 @@ function canonicalTargetLabel(match: MatchTrace, finding: OadFinding): string {
 }
 
 function typeSpecTargetLabel(finding: TypeSpecFinding): string {
+  if (finding.sourceElementPath) return finding.sourceElementPath;
   if (finding.element) return finding.element;
   if (finding.component) return finding.component;
   if (finding.operation) {
@@ -451,6 +459,13 @@ function typeSpecTargetLabel(finding: TypeSpecFinding): string {
 function issueLink(findingId: string, analyses: TentativeIssueAnalysis[]): string | undefined {
   const issue = analyses.find((analysis) => analysis.findingIds.includes(findingId));
   return issue ? `[${issue.id}](#${anchorSlug(issue.id)})` : undefined;
+}
+
+function issueAnalysis(
+  findingId: string,
+  analyses: TentativeIssueAnalysis[],
+): TentativeIssueAnalysis | undefined {
+  return analyses.find((analysis) => analysis.findingIds.includes(findingId));
 }
 
 function selectedFindings(
@@ -552,16 +567,28 @@ function renderFindingReview(
         const selected = selectedFindings(match, typeSpecById);
         const candidates = candidateFindings(match, typeSpecById);
         const related = selected.length ? selected : candidates;
-        const issue = issueLink(finding.occurrenceId, report.issueAnalyses);
+        const issueAnalysisEntry = issueAnalysis(finding.occurrenceId, report.issueAnalyses);
+        const issue = issueAnalysisEntry
+          ? `[${issueAnalysisEntry.id}](#${anchorSlug(issueAnalysisEntry.id)})`
+          : undefined;
         const analysis = `${compactAnalysis(finding, match, selected)}${issue ? ` ${issue}.` : ""}`;
+        const suggestedFix =
+          issueAnalysisEntry?.suggestedFix ??
+          (category === "exact"
+            ? "No detector or evaluator change suggested."
+            : category === "probable-review" || category === "ambiguous"
+              ? "Review the structured target evidence before changing either detector."
+              : category === "intentional-swagger-only" || category === "informational-oad"
+                ? "No change suggested; exclude this record from comparable coverage."
+                : "Review analyzer coverage and canonical target resolution.");
         const detail = `[details](#${oadAnchor(finding)})`;
         if (category === "exact" || category === "probable-review" || category === "ambiguous") {
           return [
-            `| ${finding.phase} | \`${finding.rule}\` | ${markdownCell(canonicalTargetLabel(match, finding))} | ${markdownCell(findingLinks(related))} | ${markdownCell(compactOadSources(finding))} | ${markdownCell(analysis)} | ${detail} |`,
+            `| ${finding.phase} | \`${finding.rule}\` | ${markdownCell(findingLinks(related))} | ${markdownCell(canonicalTargetLabel(match, finding))} | ${markdownCell(compactOadSources(finding))} | ${markdownCell(analysis)} | ${markdownCell(suggestedFix)} | ${detail} |`,
           ];
         }
         return [
-          `| ${finding.phase} | \`${finding.rule}\` | ${markdownCell(canonicalTargetLabel(match, finding))} | ${markdownCell(compactOadSources(finding))} | ${markdownCell(analysis)} | ${detail} |`,
+          `| ${finding.phase} | \`${finding.rule}\` | ${markdownCell(canonicalTargetLabel(match, finding))} | ${markdownCell(compactOadSources(finding))} | ${markdownCell(analysis)} | ${markdownCell(suggestedFix)} | ${detail} |`,
         ];
       });
 
@@ -571,9 +598,15 @@ function renderFindingReview(
   const typeSpecOnly = [...typeSpecById.values()]
     .filter((finding) => !selectedIds.has(finding.occurrenceId))
     .map((finding) => {
-      const issue = issueLink(finding.occurrenceId, report.issueAnalyses);
+      const issueAnalysisEntry = issueAnalysis(finding.occurrenceId, report.issueAnalyses);
+      const issue = issueAnalysisEntry
+        ? `[${issueAnalysisEntry.id}](#${anchorSlug(issueAnalysisEntry.id)})`
+        : undefined;
       const analysis = `No OAD finding was selected. Determine whether this is additional TypeSpec coverage, OAD collection loss, or a matching defect.${issue ? ` ${issue}.` : ""}`;
-      return `| ${finding.phase === "same-version" ? "A" : "B"} | \`${finding.kind}\` | ${markdownCell(typeSpecTargetLabel(finding))} | ${markdownCell(compactTypeSpecSource(finding))} | ${markdownCell(analysis)} | [details](#${typeSpecAnchor(finding)}) |`;
+      const suggestedFix =
+        issueAnalysisEntry?.suggestedFix ??
+        "Confirm PR attribution, then classify this as additional coverage, analyzer noise, or missing OAD evidence.";
+      return `| ${finding.phase === "same-version" ? "A" : "B"} | \`${finding.kind}\` | ${markdownCell(typeSpecTargetLabel(finding))} | ${markdownCell(compactTypeSpecSource(finding))} | ${markdownCell(analysis)} | ${markdownCell(suggestedFix)} | [details](#${typeSpecAnchor(finding)}) |`;
     });
 
   const workflowEvidence = report.qualification.evidence.runs
@@ -599,50 +632,58 @@ function renderFindingReview(
   ];
 
   return [
+    '<a id="finding-review"></a>',
     "## Finding review",
     "",
     "Phase A compares Swagger Breaking Change with TypeSpec `same-version`. Phase B compares Breaking Change (Cross-Version) with TypeSpec `cross-version`. Each row links directly to source and to complete evidence later in this report.",
     "",
+    '<a id="finding-review-correlations"></a>',
     "### Correlations",
     "",
     ...tableOrNone(
       [
         "Phase",
         "OAD finding",
-        "Type / path",
         "TypeSpec finding(s)",
-        "OAD source",
+        "Type / path",
+        "Sources",
         "Analysis",
+        "Suggested fix / review",
         "Details",
       ],
       rows("exact"),
     ),
+    '<a id="finding-review-partial"></a>',
     "### Partial correlations",
     "",
     ...tableOrNone(
       [
         "Phase",
         "OAD finding",
-        "Type / path",
         "Candidate TypeSpec finding(s)",
-        "OAD source",
+        "Type / path",
+        "Sources",
         "Mismatch analysis",
+        "Suggested fix / review",
         "Details",
       ],
       rows("probable-review"),
     ),
+    '<a id="finding-review-oad-only"></a>',
     "### OAD-only findings",
     "",
     ...tableOrNone(
-      ["Phase", "Finding", "Type / path", "Source", "Analysis", "Details"],
+      ["Phase", "Finding", "Type / path", "Source", "Analysis", "Suggested fix", "Details"],
       rows("missed-equivalent"),
     ),
+    '<a id="finding-review-typespec-only"></a>',
     "### TypeSpec-only findings",
     "",
     ...tableOrNone(
-      ["Phase", "Finding", "Type / path", "Source", "Analysis", "Details"],
+      ["Phase", "Finding", "Type / path", "Source", "Analysis", "Suggested review", "Details"],
       typeSpecOnly,
     ),
+    '<a id="finding-review-ambiguous"></a>',
     "### Ambiguous findings",
     "",
     ...tableOrNone(
@@ -651,28 +692,32 @@ function renderFindingReview(
         "OAD finding",
         "Type / path",
         "Competing TypeSpec candidates",
-        "OAD source",
+        "Sources",
         "Analysis",
+        "Suggested review",
         "Details",
       ],
       rows("ambiguous"),
     ),
+    '<a id="finding-review-errors"></a>',
     "### Evidence and execution failures",
     "",
     ...tableOrNone(
       ["Phase", "Scope", "Failure", "Available evidence", "Analysis", "Details"],
       evidenceFailures,
     ),
+    '<a id="finding-review-intentional"></a>',
     "### Intentional Swagger-only gaps",
     "",
     ...tableOrNone(
-      ["Phase", "Finding", "Type / path", "Source", "Analysis", "Details"],
+      ["Phase", "Finding", "Type / path", "Source", "Analysis", "Suggested action", "Details"],
       rows("intentional-swagger-only"),
     ),
+    '<a id="finding-review-informational"></a>',
     "### Informational OAD records",
     "",
     ...tableOrNone(
-      ["Phase", "Finding", "Type / path", "Source", "Analysis", "Details"],
+      ["Phase", "Finding", "Type / path", "Source", "Analysis", "Suggested action", "Details"],
       rows("informational-oad"),
     ),
   ];
@@ -875,18 +920,40 @@ function formatDuration(durationMs?: number): string {
 
 function renderIssueAnalyses(analyses: TentativeIssueAnalysis[]): string[] {
   if (!analyses.length) return ["No tentative issues were generated.", ""];
+  const clusters = new Map<string, TentativeIssueAnalysis[]>();
+  for (const analysis of analyses) {
+    const key = JSON.stringify({
+      phases: [...analysis.phases].sort(),
+      category: analysis.category,
+      conclusion: analysis.conclusion,
+      rationale: analysis.rationale,
+      aggregateImpact: analysis.aggregateImpact,
+      suggestedFix: analysis.suggestedFix,
+      confidence: analysis.confidence,
+      status: analysis.status,
+      reviewNote: analysis.reviewNote,
+      reviewedBy: analysis.reviewedBy,
+    });
+    const cluster = clusters.get(key) ?? [];
+    cluster.push(analysis);
+    clusters.set(key, cluster);
+  }
   return [
-    "| Issue | Phase | Category | Conclusion | Analysis | Suggested fix | Confidence / status | Evidence |",
-    "| --- | --- | --- | --- | --- | --- | --- | --- |",
-    ...analyses.map((analysis) => {
+    "| Issue cluster | Findings | Phase | Category | Conclusion | Root-cause analysis | Suggested fix | Confidence / status | Evidence |",
+    "| --- | ---: | --- | --- | --- | --- | --- | --- | --- |",
+    ...[...clusters.values()].map((cluster) => {
+      const analysis = cluster[0];
       const analysisText = `${analysis.rationale} ${analysis.aggregateImpact}${
         analysis.reviewNote ? ` Review: ${analysis.reviewNote}` : ""
       }`;
       const evidence =
-        analysis.evidence
+        cluster
+          .flatMap((entry) => entry.evidence)
           .map((entry) => `\`${entry.kind}:${entry.id}\` — ${entry.detail}`)
           .join("<br>") || "None";
-      return `| <a id="${anchorSlug(analysis.id)}"></a>\`${analysis.id}\` | ${analysis.phases.join(", ")} | \`${analysis.category}\` | ${analysis.conclusion} | ${markdownCell(analysisText)} | ${markdownCell(analysis.suggestedFix)} | ${analysis.confidence}; ${analysis.status}${analysis.reviewedBy ? `; ${analysis.reviewedBy}` : ""} | ${markdownCell(evidence)} |`;
+      const anchors = cluster.map((entry) => `<a id="${anchorSlug(entry.id)}"></a>`).join("");
+      const findingIds = [...new Set(cluster.flatMap((entry) => entry.findingIds))];
+      return `| ${anchors}\`${analysis.id}\`${cluster.length > 1 ? ` (+${cluster.length - 1} related)` : ""} | ${findingIds.length} | ${analysis.phases.join(", ")} | \`${analysis.category}\` | ${analysis.conclusion} | ${markdownCell(analysisText)} | ${markdownCell(analysis.suggestedFix)} | ${analysis.confidence}; ${analysis.status}${analysis.reviewedBy ? `; ${analysis.reviewedBy}` : ""} | ${markdownCell(evidence)} |`;
     }),
     "",
   ];
@@ -942,15 +1009,15 @@ export function renderMarkdown(report: EvaluationReport): string {
       "",
       "| Dimension | Count |",
       "| --- | ---: |",
-      `| Comparable OAD findings | ${report.rollup.oadTotal} |`,
-      `| Informational OAD records | ${report.rollup.oadInformational} |`,
-      `| TypeSpec findings | ${report.rollup.typeSpecTotal} |`,
-      `| Exact | ${report.rollup.exact} |`,
-      `| Probable (review required) | ${report.rollup.probableReview} |`,
-      `| Intentional Swagger-only | ${report.rollup.intentionalSwaggerOnly} |`,
-      `| Missed equivalent | ${report.rollup.missedEquivalent} |`,
-      `| TypeSpec-only | ${report.rollup.typeSpecOnly} |`,
-      `| Ambiguous | ${report.rollup.ambiguous} |`,
+      `| Comparable OAD findings | ${linkedCount(report.rollup.oadTotal, "finding-review")} |`,
+      `| Informational OAD records | ${linkedCount(report.rollup.oadInformational, "finding-review-informational")} |`,
+      `| TypeSpec findings | ${linkedCount(report.rollup.typeSpecTotal, "finding-review")} |`,
+      `| Exact | ${linkedCount(report.rollup.exact, "finding-review-correlations")} |`,
+      `| Probable (review required) | ${linkedCount(report.rollup.probableReview, "finding-review-partial")} |`,
+      `| Intentional Swagger-only | ${linkedCount(report.rollup.intentionalSwaggerOnly, "finding-review-intentional")} |`,
+      `| Missed equivalent | ${linkedCount(report.rollup.missedEquivalent, "finding-review-oad-only")} |`,
+      `| TypeSpec-only | ${linkedCount(report.rollup.typeSpecOnly, "finding-review-typespec-only")} |`,
+      `| Ambiguous | ${linkedCount(report.rollup.ambiguous, "finding-review-ambiguous")} |`,
       "",
       `**Exact OAD coverage:** ${coverage(report.rollup.exact, report.rollup.oadTotal)}`,
       `**Review-inclusive OAD coverage:** ${coverage(
@@ -969,7 +1036,7 @@ export function renderMarkdown(report: EvaluationReport): string {
         const run = report.qualification.evidence.runs?.[phase];
         const check = run ? `[${checkName} run ${run.id}](${run.htmlUrl})` : checkName;
         const typeSpecMode = phase === "A" ? "`same-version`" : "`cross-version`";
-        return `| ${phase} | ${check} | ${typeSpecMode} | ${phaseRollup.outcome} | ${phaseRollup.oadTotal} | ${phaseRollup.oadInformational} | ${phaseRollup.typeSpecTotal} | ${phaseRollup.exact} | ${phaseRollup.probableReview} | ${phaseRollup.intentionalSwaggerOnly} | ${phaseRollup.missedEquivalent} | ${phaseRollup.typeSpecOnly} | ${coverage(phaseRollup.exact, phaseRollup.oadTotal)} | ${coverage(phaseRollup.exact + phaseRollup.probableReview, phaseRollup.oadTotal)} |`;
+        return `| ${phase} | ${check} | ${typeSpecMode} | ${phaseRollup.outcome} | ${linkedCount(phaseRollup.oadTotal, "finding-review")} | ${linkedCount(phaseRollup.oadInformational, "finding-review-informational")} | ${linkedCount(phaseRollup.typeSpecTotal, "finding-review")} | ${linkedCount(phaseRollup.exact, "finding-review-correlations")} | ${linkedCount(phaseRollup.probableReview, "finding-review-partial")} | ${linkedCount(phaseRollup.intentionalSwaggerOnly, "finding-review-intentional")} | ${linkedCount(phaseRollup.missedEquivalent, "finding-review-oad-only")} | ${linkedCount(phaseRollup.typeSpecOnly, "finding-review-typespec-only")} | ${coverage(phaseRollup.exact, phaseRollup.oadTotal)} | ${coverage(phaseRollup.exact + phaseRollup.probableReview, phaseRollup.oadTotal)} |`;
       }),
       "",
     );
@@ -983,7 +1050,7 @@ export function renderMarkdown(report: EvaluationReport): string {
       ...(["A", "B"] as const).map((phase) => {
         const metrics = report.rollup!.errorEquivalence[phase];
         const check = phase === "A" ? "Swagger Breaking Change" : "Breaking Change (Cross-Version)";
-        return `| ${phase} | ${check} | ${metrics.oadErrors} | ${metrics.typeSpecErrors} | ${metrics.matchedErrorOad} | ${metrics.matchedErrorTypeSpec} | ${metrics.oadErrorMatchedToTypeSpecNonError} | ${metrics.typeSpecErrorMatchedToOadNonError} | ${metrics.oadErrorsWithoutEquivalent} | ${metrics.typeSpecErrorsWithoutEquivalent} |`;
+        return `| ${phase} | ${check} | ${linkedCount(metrics.oadErrors, "finding-review")} | ${linkedCount(metrics.typeSpecErrors, "finding-review")} | ${linkedCount(metrics.matchedErrorOad, "finding-review-correlations")} | ${linkedCount(metrics.matchedErrorTypeSpec, "finding-review-correlations")} | ${linkedCount(metrics.oadErrorMatchedToTypeSpecNonError, "finding-review-partial")} | ${linkedCount(metrics.typeSpecErrorMatchedToOadNonError, "finding-review-partial")} | ${linkedCount(metrics.oadErrorsWithoutEquivalent, "finding-review-oad-only")} | ${linkedCount(metrics.typeSpecErrorsWithoutEquivalent, "finding-review-typespec-only")} |`;
       }),
       "",
     );
@@ -1045,8 +1112,8 @@ export function renderMarkdown(report: EvaluationReport): string {
     lines.push(
       "## TypeSpec phase execution",
       "",
-      "| Project | Phase | Version pair | Comparisons | Findings | Analyzer report |",
-      "| --- | --- | --- | ---: | ---: | --- |",
+      "| Project | Phase | Version pair | Comparisons | Unique findings | Raw occurrences | Analyzer report |",
+      "| --- | --- | --- | ---: | ---: | ---: | --- |",
     );
     for (const project of report.typeSpecProjects) {
       const comparisons = project.versionComparisons ?? [];
@@ -1054,7 +1121,7 @@ export function renderMarkdown(report: EvaluationReport): string {
         for (const phase of ["A", "B"] as const) {
           const execution = project.phaseExecutions?.[phase];
           lines.push(
-            `| \`${project.project}\` | Phase ${phase} (\`${phase === "A" ? "same-version" : "cross-version"}\`) | ${execution?.noComparisonReason ?? execution?.error ?? "No comparison details reported"} | 0 | 0 | ${execution ? `[generated ${execution.timingScope === "combined" ? "combined " : ""}Markdown](${execution.markdownReport})` : "unavailable"} |`,
+            `| \`${project.project}\` | Phase ${phase} (\`${phase === "A" ? "same-version" : "cross-version"}\`) | ${execution?.noComparisonReason ?? execution?.error ?? "No comparison details reported"} | 0 | 0 | 0 | ${execution ? `[generated ${execution.timingScope === "combined" ? "combined " : ""}Markdown](${execution.markdownReport})` : "unavailable"} |`,
           );
         }
         continue;
@@ -1063,7 +1130,7 @@ export function renderMarkdown(report: EvaluationReport): string {
         const phase = comparison.phase === "same-version" ? "A" : "B";
         const execution = project.phaseExecutions?.[phase];
         lines.push(
-          `| \`${project.project}\` | Phase ${phase} (\`${comparison.phase}\`) | \`${comparison.baseVersion}\` → \`${comparison.headVersion}\` | 1 | ${comparison.findingCount} | ${execution ? `[generated ${execution.timingScope === "combined" ? "combined " : ""}Markdown](${execution.markdownReport})` : "unavailable"} |`,
+          `| \`${project.project}\` | Phase ${phase} (\`${comparison.phase}\`) | \`${comparison.baseVersion}\` → \`${comparison.headVersion}\` | 1 | ${comparison.findingCount} | ${comparison.rawFindingCount ?? comparison.findingCount} | ${execution ? `[generated ${execution.timingScope === "combined" ? "combined " : ""}Markdown](${execution.markdownReport})` : "unavailable"} |`,
         );
       }
     }
@@ -1118,22 +1185,7 @@ export async function writeReportFiles(
   jsonOutput: string,
   markdownOutput: string,
 ): Promise<void> {
-  const sanitize = (value: unknown): unknown => {
-    if (typeof value === "string") {
-      return value
-        .replace(/file:\/\/\/(?:[A-Za-z]:[\\/]|\/?(?:Users|home)\/)[^'"\r\n;]*/g, "<local-path>")
-        .replace(/(?<![A-Za-z0-9+.-])[A-Za-z]:[\\/][^'"\r\n;]*/g, "<local-path>")
-        .replace(/\/(?:Users|home)\/[^'"\r\n;]*/g, "<local-path>");
-    }
-    if (Array.isArray(value)) return value.map(sanitize);
-    if (value && typeof value === "object") {
-      return Object.fromEntries(
-        Object.entries(value).map(([key, child]) => [key, sanitize(child)]),
-      );
-    }
-    return value;
-  };
-  const sanitized = sanitize(report) as EvaluationReport;
+  const sanitized = sanitizeLocalPaths(report) as EvaluationReport;
   validateRollup(sanitized);
   const jsonPath = resolve(jsonOutput);
   const markdownPath = resolve(markdownOutput);

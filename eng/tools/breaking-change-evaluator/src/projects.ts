@@ -5,6 +5,7 @@ import { dirname, join, relative, resolve, sep } from "node:path";
 import { runProcess } from "./process.ts";
 import { typeSpecJsonReportSchema, type TypeSpecJsonReport } from "./schema.ts";
 import type { Phase, ProjectResult, TypeSpecFinding, TypeSpecPhaseExecution } from "./types.ts";
+import { sanitizeLocalPathsInString } from "./sanitize.ts";
 
 type ProcessRunner = typeof runProcess;
 
@@ -71,6 +72,9 @@ function mapFindings(project: string, report: TypeSpecJsonReport): TypeSpecFindi
     element: finding.element,
     component: finding.component,
     statusCode: finding.statusCode,
+    sourceTraceLevel: finding.sourceTraceLevel,
+    sourceElementPath: finding.sourceElementPath,
+    suppression: finding.suppression,
     versionPair: finding.versionPair,
     location: finding.location,
   }));
@@ -160,9 +164,7 @@ async function runTypeSpecPhase(
     delete analyzerReport.headRevision;
     normalizeArtifactPaths(analyzerReport);
     const jsonContent = `${JSON.stringify(analyzerReport, null, 2)}\n`;
-    const markdownContent = rawMarkdownContent
-      .replace(/[A-Za-z]:[\\/][^'"\r\n;]*/g, project)
-      .replace(/\/(?:Users|home)\/[^'"\r\n;]*/g, project);
+    const markdownContent = sanitizeLocalPathsInString(rawMarkdownContent, project);
     await Promise.all([
       writeFile(jsonOutput, jsonContent),
       writeFile(markdownOutput, markdownContent),

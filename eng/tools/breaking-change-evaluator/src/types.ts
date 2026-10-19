@@ -133,6 +133,14 @@ export interface TypeSpecFinding {
   element?: string;
   component?: string;
   statusCode?: string;
+  sourceTraceLevel?: string;
+  sourceElementPath?: string;
+  suppression?: {
+    decorator: string;
+    placement: string;
+    file?: string;
+    example: string;
+  };
   versionPair: { baseVersion: string; headVersion: string };
   location?: { file: string; line: number };
   detectorEvidence?: EvidenceLink;
@@ -156,6 +164,7 @@ export interface CanonicalTarget {
   propertyPath?: string[];
   schema?: string;
   declaration?: string;
+  sourceDeclarationPath?: string;
   element?: string;
   source?: { file: string; line?: number };
   evidence: string[];
@@ -266,6 +275,7 @@ export interface VersionComparisonExecution {
   headVersion: string;
   phase: "same-version" | "cross-version";
   findingCount: number;
+  rawFindingCount?: number;
 }
 
 export interface FindingGroup {

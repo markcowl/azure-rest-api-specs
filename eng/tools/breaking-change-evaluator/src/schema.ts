@@ -24,6 +24,16 @@ export const typeSpecJsonReportSchema = z
         element: z.string().optional(),
         component: z.string().optional(),
         statusCode: z.string().optional(),
+        sourceTraceLevel: z.string().optional(),
+        sourceElementPath: z.string().optional(),
+        suppression: z
+          .object({
+            decorator: z.string(),
+            placement: z.string(),
+            file: z.string().optional(),
+            example: z.string(),
+          })
+          .optional(),
         versionPair: z.object({ baseVersion: z.string(), headVersion: z.string() }),
         location: z.object({ file: z.string(), line: z.number().int().positive() }).optional(),
       }),
@@ -38,6 +48,7 @@ export const typeSpecJsonReportSchema = z
           headVersion: z.string(),
           phase: z.enum(["same-version", "cross-version"]),
           findingCount: z.number().int().nonnegative(),
+          rawFindingCount: z.number().int().nonnegative().optional(),
         }),
       ),
       noComparisonReason: z.string().optional(),

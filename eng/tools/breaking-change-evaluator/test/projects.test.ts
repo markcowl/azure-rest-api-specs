@@ -1,4 +1,4 @@
-import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
@@ -146,6 +146,36 @@ describe("TypeSpec project execution", () => {
     expect(project.phaseExecutions?.A?.markdownDigest).toMatch(/^[0-9a-f]{64}$/);
     expect(project.phaseExecutions?.B?.timing?.totalMs).toBe(45);
     expect(project.versionComparisons).toHaveLength(2);
+  });
+
+  it("preserves https links while sanitizing local artifact paths", async () => {
+    const outputDir = await mkdtemp(join(tmpdir(), "project-output-"));
+    temporaryDirectories.push(outputDir);
+    const processRunner = vi.fn(async (_command, args: string[]) => {
+      const output = args[args.indexOf("--json-output") + 1];
+      const markdown = args[args.indexOf("--markdown-output") + 1];
+      const phase = args.includes("--phase") ? "same-version" : "cross-version";
+      await writeFile(output, JSON.stringify(validReport(false, phase)));
+      await writeFile(
+        markdown,
+        '| Identity | Suppression |\n| [source](https://github.com/Azure/repo/blob/sha/spec.tsp#L1) | `@approvedBreakingChange("reason", #{ kind: "X" })` |\nLocal: C:\\Users\\person\\repo\\spec.tsp',
+      );
+      return result();
+    });
+
+    const project = await runTypeSpecProject(
+      "tool.js",
+      "checkout",
+      "a".repeat(40),
+      "specification/foo/Foo",
+      outputDir,
+      processRunner,
+    );
+    const markdown = await readFile(project.phaseExecutions!.A!.markdownReport, "utf8");
+
+    expect(markdown).toContain("https://github.com/Azure/repo/blob/sha/spec.tsp#L1");
+    expect(markdown).toContain('@approvedBreakingChange("reason"');
+    expect(markdown).not.toContain("C:\\Users\\person");
   });
 
   it.each([
