@@ -25,10 +25,10 @@
 - Partial: **11**
 - Failed: **0**
 
-| Phase | OAD | Informational OAD | TypeSpec | Exact | Probable | OAD-only | TypeSpec-only |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
-| B | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Phase | OAD | Informational OAD | TypeSpec | Exact | Probable | Missed equivalent | Intentional gap | TypeSpec-only | Ambiguous |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| A | 0 | [5](#phase-a-oad-informational-evidence) | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| B | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 The preserved historical run reported **111** TypeSpec-only findings. Among complete reports, this fixed-analyzer run reports **0**, a change of **-111**. The **11** partial reports are excluded from effectiveness totals, so this is not a full like-for-like reconciliation. The historical evidence remains unchanged at [original October 5–11 run](../2026-10-05-to-2026-10-11/README.md).
 
@@ -82,6 +82,15 @@ Effectiveness totals include complete reports only. Issue-analysis counts cover 
 | [#47170](prs/47170/report.md) | 2026-10-10T07:59:51Z | partial | — | — | 1 |
 | [#47019](prs/47019/report.md) | 2026-10-10T08:19:46Z | not-qualified | — | — | 1 |
 | [#46715](prs/46715/report.md) | 2026-10-10T14:02:46Z | partial | — | — | 1 |
+
+## Contributing evidence
+
+<a id="phase-a-oad-informational-evidence"></a>
+### Phase A — Informational OAD
+
+| PR | Count | Evidence |
+| --- | ---: | --- |
+| #47005 | 5 | [review findings](prs/47005/report.md#finding-review-informational) |
 
 Phase A is Swagger BreakingChange versus TypeSpec same-version. Phase B is Cross-Version versus TypeSpec cross-version retained from the combined analyzer execution. OAD workflow duration is not treated as detector time.
 

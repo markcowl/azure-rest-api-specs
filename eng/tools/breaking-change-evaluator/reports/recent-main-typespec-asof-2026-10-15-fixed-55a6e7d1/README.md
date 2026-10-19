@@ -26,10 +26,10 @@
 - Partial: **9**
 - Failed: **0**
 
-| Phase | OAD | Informational OAD | TypeSpec | Exact | Probable | OAD-only | TypeSpec-only |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| A | 5 | 6 | 5 | 0 | 0 | 5 | 5 |
-| B | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Phase | OAD | Informational OAD | TypeSpec | Exact | Probable | Missed equivalent | Intentional gap | TypeSpec-only | Ambiguous |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| A | [5](#phase-a-oad-total-evidence) | [6](#phase-a-oad-informational-evidence) | [5](#phase-a-type-spec-total-evidence) | 0 | 0 | [5](#phase-a-missed-equivalent-evidence) | 0 | [5](#phase-a-type-spec-only-evidence) | 0 |
+| B | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
 ## Tentative issue analyses
 
@@ -87,6 +87,45 @@ Effectiveness totals include complete reports only. Issue-analysis counts cover 
 | [#47290](prs/47290/report.md) | 2026-10-14T12:34:53Z | partial | — | — | 1 |
 | [#46863](prs/46863/report.md) | 2026-10-14T12:28:09Z | partial | — | — | 1 |
 | [#47031](prs/47031/report.md) | 2026-10-14T11:47:52Z | not-qualified | — | — | 1 |
+
+## Contributing evidence
+
+<a id="phase-a-oad-total-evidence"></a>
+### Phase A — Comparable OAD
+
+| PR | Count | Evidence |
+| --- | ---: | --- |
+| #45096 | 5 | [review findings](prs/45096/report.md#finding-review) |
+
+<a id="phase-a-oad-informational-evidence"></a>
+### Phase A — Informational OAD
+
+| PR | Count | Evidence |
+| --- | ---: | --- |
+| #47255 | 2 | [review findings](prs/47255/report.md#finding-review-informational) |
+| #47295 | 3 | [review findings](prs/47295/report.md#finding-review-informational) |
+| #45096 | 1 | [review findings](prs/45096/report.md#finding-review-informational) |
+
+<a id="phase-a-type-spec-total-evidence"></a>
+### Phase A — TypeSpec
+
+| PR | Count | Evidence |
+| --- | ---: | --- |
+| #45096 | 5 | [review findings](prs/45096/report.md#finding-review) |
+
+<a id="phase-a-missed-equivalent-evidence"></a>
+### Phase A — Missed equivalent
+
+| PR | Count | Evidence |
+| --- | ---: | --- |
+| #45096 | 5 | [review findings](prs/45096/report.md#finding-review-oad-only) |
+
+<a id="phase-a-type-spec-only-evidence"></a>
+### Phase A — TypeSpec-only
+
+| PR | Count | Evidence |
+| --- | ---: | --- |
+| #45096 | 5 | [review findings](prs/45096/report.md#finding-review-typespec-only) |
 
 Phase A is Swagger BreakingChange versus TypeSpec same-version. Phase B is Cross-Version versus TypeSpec cross-version retained from the combined analyzer execution. OAD workflow duration is not treated as detector time.
 

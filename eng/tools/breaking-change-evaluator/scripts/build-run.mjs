@@ -2,6 +2,7 @@
 import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { basename, resolve } from "node:path";
+import { renderAggregateCount, renderAggregateEvidence } from "./aggregate-markdown.mjs";
 
 function option(name) {
   const index = process.argv.indexOf(name);
@@ -165,11 +166,11 @@ const lines = [
   `- Partial: **${status.partial}**`,
   `- Failed: **${status.failed}**`,
   "",
-  "| Phase | OAD | Informational OAD | TypeSpec | Exact | Probable | OAD-only | TypeSpec-only |",
-  "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
+  "| Phase | OAD | Informational OAD | TypeSpec | Exact | Probable | Missed equivalent | Intentional gap | TypeSpec-only | Ambiguous |",
+  "| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |",
   ...phases.map(
     (phase) =>
-      `| ${phase} | ${byPhase[phase].oadTotal} | ${byPhase[phase].oadInformational} | ${byPhase[phase].typeSpecTotal} | ${byPhase[phase].exact} | ${byPhase[phase].probableReview} | ${byPhase[phase].missedEquivalent + byPhase[phase].intentionalSwaggerOnly} | ${byPhase[phase].typeSpecOnly} |`,
+      `| ${phase} | ${renderAggregateCount(byPhase[phase].oadTotal, phase, "oadTotal")} | ${renderAggregateCount(byPhase[phase].oadInformational, phase, "oadInformational")} | ${renderAggregateCount(byPhase[phase].typeSpecTotal, phase, "typeSpecTotal")} | ${renderAggregateCount(byPhase[phase].exact, phase, "exact")} | ${renderAggregateCount(byPhase[phase].probableReview, phase, "probableReview")} | ${renderAggregateCount(byPhase[phase].missedEquivalent, phase, "missedEquivalent")} | ${renderAggregateCount(byPhase[phase].intentionalSwaggerOnly, phase, "intentionalSwaggerOnly")} | ${renderAggregateCount(byPhase[phase].typeSpecOnly, phase, "typeSpecOnly")} | ${renderAggregateCount(byPhase[phase].ambiguous, phase, "ambiguous")} |`,
   ),
   "",
   ...(config.historicalComparison
@@ -199,6 +200,7 @@ const lines = [
     return `| [#${record.number}](${record.report}) | ${record.updatedAt ?? record.mergedAt ?? "—"} | ${record.status} | ${phase(record.rollup?.byPhase?.A)} | ${phase(record.rollup?.byPhase?.B)} | ${record.issueIds.length} |`;
   }),
   "",
+  ...renderAggregateEvidence(aggregate.records),
   "Phase A is Swagger BreakingChange versus TypeSpec same-version. Phase B is Cross-Version versus TypeSpec cross-version retained from the combined analyzer execution. OAD workflow duration is not treated as detector time.",
   "",
 ];
