@@ -1,0 +1,27 @@
+{
+  "service": "notificationhubs",
+  "projectRoot": "specification/notificationhubs/resource-manager/Microsoft.NotificationHubs/NotificationHubs",
+  "entrypoint": "specification/notificationhubs/resource-manager/Microsoft.NotificationHubs/NotificationHubs/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "4c02604eb71977b9260a5e86f5199b42cf2dda39be10f9eb28cf550ffa03eb44",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 33,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "8d9ff168b029c7ecfa12e025ae7f35e47566d69cee8d4d7f3f417a50435701ff",
+    "operationsCsv": "bdf4ced71bc88cb81f01d9fb9bf3166f7b337ad447b0662a5db8b6d46901fb98",
+    "statusJson": "a784855c6d76637ed3352a75e078ce03aec62ffcce6cbb1b470fe05f766f627c"
+  }
+}

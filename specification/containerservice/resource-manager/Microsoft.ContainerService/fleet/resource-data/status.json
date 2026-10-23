@@ -1,0 +1,27 @@
+{
+  "service": "containerservice",
+  "projectRoot": "specification/containerservice/resource-manager/Microsoft.ContainerService/fleet",
+  "entrypoint": "specification/containerservice/resource-manager/Microsoft.ContainerService/fleet/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "7830e0adb34da133e7f8ea39fa7430b0a3eb54dc32739021ef42f5a69e36907f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 44,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "64dbf186f28bf5a8cb8eedd700749b582e8ce3fd6178148562306f88e7e897b8",
+    "operationsCsv": "8d157fa0930f87a81eda665ef5b488b18c9bb926410aa9b0db7d3f9aac742a29",
+    "statusJson": "c4a88c9b3114ea8411c3a1caf08f69333714a3248a713b59f2f35f085dda7eeb"
+  }
+}

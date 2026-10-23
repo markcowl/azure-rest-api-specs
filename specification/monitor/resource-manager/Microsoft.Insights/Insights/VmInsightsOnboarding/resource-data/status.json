@@ -1,0 +1,27 @@
+{
+  "service": "monitor",
+  "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/VmInsightsOnboarding",
+  "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/VmInsightsOnboarding/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "99520ad7466105e30feda1999a3619cacd0fecf854147d1ccc2fdfe425564f2b",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 1,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1c0fbf1556d5f6d15888665442312b803400ffc6092a8e4f160154720e99ba8a",
+    "operationsCsv": "77ab487da2abaabcc485e359704a1c53571f805dad4252659e06791f7a5d2e87",
+    "statusJson": "760766384dd4087b7b23ffd4a33f9864fcbc8fad601c00a803d42d925d513fae"
+  }
+}

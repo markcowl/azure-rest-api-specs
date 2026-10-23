@@ -1,0 +1,27 @@
+{
+  "service": "iothub",
+  "projectRoot": "specification/iothub/resource-manager/Microsoft.Devices/IoTHub",
+  "entrypoint": "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "466159e3cbc765c3bc61557de91df0506eebd1562350e0e9b34f4afa7416a797",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 32,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "59e5eb9c5dc6e3931dd6c0ca485bcc8be4fe08da3bb8a85f008ceaacd7865919",
+    "operationsCsv": "068fc88813b0d0ca2b13b856f605bdca032d5676ffdf7ae767fa091692d652c9",
+    "statusJson": "d4140841b39a39b4d62091f570a33cb01fe37888cf4a0a8292336c43afec76c0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "migrate",
+  "projectRoot": "specification/migrate/resource-manager/Microsoft.Migrate/Collectors",
+  "entrypoint": "specification/migrate/resource-manager/Microsoft.Migrate/Collectors/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "af36170a673bb8566d3c79dddd853c53de748e995575803b21a3bebf69325f09",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 28,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c9c4cb276bb0bfaffd61f177571c9cdcb2b6d51226b6bf79bf9a78f5efa145db",
+    "operationsCsv": "887d0f1a037d94588d3408bce4acc926873333e3b292c978d261590a73a33d8f",
+    "statusJson": "f96d528c46a55b6b3be0322fb6e0a29f9e76e5b444d61ab66fe3f56306f9d7c4"
+  }
+}

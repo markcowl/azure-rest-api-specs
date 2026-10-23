@@ -1,0 +1,27 @@
+{
+  "service": "monitor",
+  "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/MetricAlertApi",
+  "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/MetricAlertApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "54ae0dca408af8a5f3306c210e7116aee9dcb88ce5af526970ef1f75751c4b19",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "78c35136667db67bbe2d9b156848c5dcab9fd4848a4682688d32ae50851fc5d3",
+    "operationsCsv": "a7127f4c58323c0b22be25dcadd4b453e51ef41f6278bd772fdd593cdf01036c",
+    "statusJson": "98985fbc054512616cf87873f3e1ccccb19154b43fda9d93adadeeaf6d344fe5"
+  }
+}

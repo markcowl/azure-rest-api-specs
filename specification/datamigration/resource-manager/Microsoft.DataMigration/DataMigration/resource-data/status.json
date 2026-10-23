@@ -1,0 +1,27 @@
+{
+  "service": "datamigration",
+  "projectRoot": "specification/datamigration/resource-manager/Microsoft.DataMigration/DataMigration",
+  "entrypoint": "specification/datamigration/resource-manager/Microsoft.DataMigration/DataMigration/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "ee58b1f980acd851053ea0fb81e17329c65e854cb23923c2212b826ab017310a",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 17,
+  "operationCount": 77,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1f392282370f0ef14437166c9ae34b54bb2dcdaf47e8dd136f8503b89e15c01e",
+    "operationsCsv": "ac0b958284081864a784f2aa098bb71bae0585ca7b9535e09f51e22655dd38ec",
+    "statusJson": "b0087eb17a60f47f63f377abbd6384c35efd2fb264a9c319e72b2e2177018676"
+  }
+}

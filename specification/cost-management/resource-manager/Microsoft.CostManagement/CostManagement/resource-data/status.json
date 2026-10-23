@@ -1,0 +1,27 @@
+{
+  "service": "cost-management",
+  "projectRoot": "specification/cost-management/resource-manager/Microsoft.CostManagement/CostManagement",
+  "entrypoint": "specification/cost-management/resource-manager/Microsoft.CostManagement/CostManagement/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "dce899d9809752afc74f8a95aca31dc5f286b950f6c0136eb93c94291d5319b4",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 15,
+  "operationCount": 45,
+  "caseOnlyClashCount": 2,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "fc4ee60147b791adb8957fc1450258524f0a163ce77ee9b45de0713576fdfd9d",
+    "operationsCsv": "8f98eef7f232b392b4ccdbed8ff6fef4cdc0a5e7fe2602cb122bebea679339a3",
+    "statusJson": "984c4f2f8a43bf600dfe9a34a72d8a01e24a8cb9e6dbe4d5f7acd5ab5b0eac7b"
+  }
+}

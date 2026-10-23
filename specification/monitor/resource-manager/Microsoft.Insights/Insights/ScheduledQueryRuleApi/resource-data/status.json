@@ -1,0 +1,27 @@
+{
+  "service": "monitor",
+  "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ScheduledQueryRuleApi",
+  "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ScheduledQueryRuleApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "1ac89f735bb8347618191b1ebb4df0290b670aa8f69def76327df9bdbbd6a14a",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4aaf46ffe4445861b681192c439e5fe9a4a92cd92c9612407ec7b30072eab9c0",
+    "operationsCsv": "ef73bb4d1ee4982e859256a86aa2267d63345d2eaa5a55acc43025953066db58",
+    "statusJson": "b30619e520408a61222745c373a9260d5520b7827314b1488a98c291279611b0"
+  }
+}

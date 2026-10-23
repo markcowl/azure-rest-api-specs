@@ -1,0 +1,27 @@
+{
+  "service": "anyscale",
+  "projectRoot": "specification/anyscale/resource-manager/Anyscale.Platform/platform",
+  "entrypoint": "specification/anyscale/resource-manager/Anyscale.Platform/platform/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "650d35f2d17ca2b72b6eb5a3bd77ae9e55ce67cc083a0e3f812957f63e8fa147",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 9,
+  "operationCount": 44,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c631724ed43f61490f30f2dad022ddf8c0b2acb75fa8f2026c5fa260dbd1151a",
+    "operationsCsv": "44c87680f813d4d7fab7ebf9c1bb076be5093fb8cb968560bf0c62dffb28f865",
+    "statusJson": "af63850b0d936270502ccf685d593f70a989f9d1fca2d267a89f97df886c3afe"
+  }
+}

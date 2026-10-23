@@ -1,0 +1,27 @@
+{
+  "service": "azurestackhci",
+  "projectRoot": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI",
+  "entrypoint": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "5658f255e209779383bd5adf70eb44e83456493786a3b9fe1fb28be98503a9f6",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 37,
+  "operationCount": 157,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "cb3f629eea126a21c96cbe5cd7d7f982ffac441fcb0c7775ce390c72008b78c4",
+    "operationsCsv": "0a8fcbf77f160ad850d22bab87f921535346ccaaca379000a139961153d51ce3",
+    "statusJson": "b2ad5ba6ea77c1aa9d7a9202be23b26299e7b4ae1514a135e8cbcfd4239bf098"
+  }
+}

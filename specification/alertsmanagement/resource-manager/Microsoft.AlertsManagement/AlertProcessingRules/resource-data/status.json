@@ -1,0 +1,27 @@
+{
+  "service": "alertsmanagement",
+  "projectRoot": "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertProcessingRules",
+  "entrypoint": "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertProcessingRules/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "cb4c1522ae5cc0cb2c92627a2bbcf06444cbbcf5084d1a9858390b07cf27189e",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "90376d4d218f63ca5511ee4e1074785953c21855508becef91bc06ff97ae2dd9",
+    "operationsCsv": "7841012d7cea9a433209bec473d8d5818c8d76e40c9a6c861c3ef73f379e41a8",
+    "statusJson": "76d41d55ce1a1c10379f4c7c51faa78adf13ccb7930e5de0d28a2bae2f21c9be"
+  }
+}

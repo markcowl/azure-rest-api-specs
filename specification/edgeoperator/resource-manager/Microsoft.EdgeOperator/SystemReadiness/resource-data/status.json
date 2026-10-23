@@ -1,0 +1,27 @@
+{
+  "service": "edgeoperator",
+  "projectRoot": "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemReadiness",
+  "entrypoint": "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemReadiness/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "59373955b9f1c823ac98382c3082573b82b6031149e98dfab653092457a3f0b8",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 1,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "7ebac78f6eac52afbd172fc24b345d43d8f92e902965f316b437b7034b8296ad",
+    "operationsCsv": "1d9c41ee901535c17d606e8e44b1a43da05bd79a4b7c816b9621124c0c6de2c2",
+    "statusJson": "5bbfe3ac87e8853635765350a72a122b871f69caaa6b1fc4aa6949a1a195a725"
+  }
+}

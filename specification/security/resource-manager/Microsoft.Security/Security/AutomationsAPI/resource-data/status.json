@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/AutomationsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/AutomationsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "3e51b97817b5b9de2073d67381841a714095cfd9b9e4b9b8e2fdc7cf80b283db",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 11,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4eb6aa4b13a60a7a71c452c4a5e503d8c3c17b4331bbbbd18ceda106672c017a",
+    "operationsCsv": "dbebec0e7742210762658c8ad7d44cd5e37d423ee84ef414790474e808f3963e",
+    "statusJson": "6d2e1a2c927f3ecf4b3b83ae5d9424ad8855d680e96ead6906aa11aae36897d6"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "resourcegraph",
+  "projectRoot": "specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/ResourceGraph/GraphQueryApi",
+  "entrypoint": "specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/ResourceGraph/GraphQueryApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "67cdc5dfc6fa6dd2133434e12f7a2a30fe71b84af22ae997ab8f280710282ee0",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "dd76ae369edd1cd6f6635096bea7ecd7de6fe2af90fe6446448d61b4c74c2628",
+    "operationsCsv": "8f072f9405c59062229c1750cc30324e4ec7a6c20a52d9b8d90cf600b7b7f18e",
+    "statusJson": "79a6e26e5fedbcc3480da5681201f2b361facea200139dfd96581318a9a92f1c"
+  }
+}

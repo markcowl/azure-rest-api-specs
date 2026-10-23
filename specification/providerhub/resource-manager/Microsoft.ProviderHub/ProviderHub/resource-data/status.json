@@ -1,0 +1,27 @@
+{
+  "service": "providerhub",
+  "projectRoot": "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub",
+  "entrypoint": "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "a57dd055d4e61e3e400f455ebac8fa399713519909b2302cb6aa7b00ff7a3f28",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 20,
+  "operationCount": 76,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "41d6873ebe4490dcaa3274d1eb003ad1b81fb00f2198d43a270456f4b7b7457f",
+    "operationsCsv": "84f60f313fae0bd1690841e5f3280a6c6017643e40cfce46536fa05c6ca010c1",
+    "statusJson": "16da33d20506744cb89a5a88623cb92b46038f07d3caf1490e9a14121ac25dd0"
+  }
+}

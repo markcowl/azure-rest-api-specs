@@ -1,0 +1,27 @@
+{
+  "service": "kubernetesconfiguration",
+  "projectRoot": "specification/kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/extensionTypes",
+  "entrypoint": "specification/kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/extensionTypes/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "891655d84e01e07b49513abc9764b74392b8e943e382b25dcc6191c160626e8c",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 8,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "29c60a02709df6c686257a6a85b1dcaf06273fe1bed39c62ad578fe776ab580d",
+    "operationsCsv": "b822fa002c0dc88955aa194ef6dc85637e354fa68d1efa4f55acae46da93a61f",
+    "statusJson": "82ab0de53e084a58c68ce61c0703e1dddc808de4f707c721ee5392563ce26261"
+  }
+}

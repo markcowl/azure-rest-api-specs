@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/StandardsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/StandardsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "c3f72c73d6511ec40fabc1765d3067a4b68513b8eaff6593b4c46759c81b6f24",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 10,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "abfc6aa42d25e71f67b4d8dffa9d9ae9d6fa76ba1d11d10abf8e96310ca7fd70",
+    "operationsCsv": "3d7915398f80f4c9e373b911e8479ec21957e53db3d1015ddf3dadc3a80d84bc",
+    "statusJson": "98cb3a57e8116c2ac9633545302f8cc5d605fc4fee5ed7730d48c616e85f9e32"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "programenrollment",
+  "projectRoot": "specification/programenrollment/resource-manager/Microsoft.ProgramEnrollment/ProgramEnrollment",
+  "entrypoint": "specification/programenrollment/resource-manager/Microsoft.ProgramEnrollment/ProgramEnrollment/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "f79145c2e03635d4c3555970ccbb6792fb2252ecea780f58855abb3fcf6d0b20",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "035e9beaf4dd0a37c91cf7c1a25d5596d439b3bc872f65b4134820b643c95f45",
+    "operationsCsv": "1c60fba07b6e79b25ab90e1765f1682155554f8c4f06e4609ddf95eafb958171",
+    "statusJson": "50b9a3fabe7df3c104cff53473765f3cd7d7d411875d4816994bdb4966c94a2a"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "billingtrust",
+  "projectRoot": "specification/billingtrust/resource-manager/Microsoft.BillingTrust/BillingTrust",
+  "entrypoint": "specification/billingtrust/resource-manager/Microsoft.BillingTrust/BillingTrust/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "95ee9b36f6be4f8bd576e4b408b389b5c67648593e556656944745bfd8852197",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "92f560a03f36bd6cd93b433b16777772298ef4ee156efb90a6355a5c48a905a8",
+    "operationsCsv": "c0a7869d659e20d73994808d99ce431e0ac9cde663affef97c694d1f699c5260",
+    "statusJson": "58710334af7fd4c42d2c6ac8d1665eeb8e4a2a7102c7ccb9051a037fa389b3c8"
+  }
+}

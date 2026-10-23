@@ -1,0 +1,27 @@
+{
+  "service": "gcpconnector",
+  "projectRoot": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/SQLAdminInstances",
+  "entrypoint": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/SQLAdminInstances/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "34c4ccdafa7de0eec5555764f2716b6b04510ecf0fddb67e46c59e42b2478095",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "18cdcbfeb7840828ac9e97829b420fef37d853fd5e208715faa4f104bf590aa8",
+    "operationsCsv": "f3cbfaab27120d2bdcd185a41a06076c5b176c14c15ced190f4fa4b033fcfd7f",
+    "statusJson": "c771be07d0f3e78fcb131bf70060bcbb7ac13886deb74052acf4209faa965549"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "kubernetesconfiguration",
+  "projectRoot": "specification/kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/fluxConfigurations",
+  "entrypoint": "specification/kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/fluxConfigurations/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "4551c0de26846f8ebaf10da99656ccd8ddf80eaf076986860ef6d71267146034",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2e85f588a3c337355c5248996774863af17aa1b55d69b68dc6036f35b30479e1",
+    "operationsCsv": "3e4f4d31d02245a7261587999dd9a526a22a7c247b8f11db87b2956c6ddf7deb",
+    "statusJson": "9237aa43da74174310c1a7181c94338657230e6755bb1d863314da4c88c98681"
+  }
+}

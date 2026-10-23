@@ -1,0 +1,27 @@
+{
+  "service": "purview",
+  "projectRoot": "specification/purview/resource-manager/Microsoft.Purview/Purview",
+  "entrypoint": "specification/purview/resource-manager/Microsoft.Purview/Purview/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "4eb9bb7cd4568a82571817c6c52c2f4f6367d88537623a7e66f4703bff831c4f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 21,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "62948e527bf5a51d4bafc30fb4758fe3ee1a8737f1ba3b8952f9e158897e2c61",
+    "operationsCsv": "e0ed18ef5d927b33f3627110e5fc81ea54e56adf575dd8cc24c07347ded66ba7",
+    "statusJson": "040825ef45ba313ec2d5b443a1a1a307ec219032d54a5109477561e685087543"
+  }
+}

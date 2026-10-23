@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/ServiceEntitlementSettingsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/ServiceEntitlementSettingsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "cbaa6fac07375d818498c87dac7b99e7fbcff2dd5556d1ba8bf2d535aca51417",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "baac4c91b524bd025e8d0dfef53b6ce8e556b9821a648b2713985e77d32aef55",
+    "operationsCsv": "d642930d6bdfd9d7d24fc6f2add320058faae8790d99eb18a91c5d1fcbb846eb",
+    "statusJson": "8d4fc11e59ab4159357314b97b5c233785bdaae24e52de296819ba6e8a33719c"
+  }
+}

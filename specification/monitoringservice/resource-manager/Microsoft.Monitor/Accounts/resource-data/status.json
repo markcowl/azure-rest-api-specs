@@ -1,0 +1,27 @@
+{
+  "service": "monitoringservice",
+  "projectRoot": "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts",
+  "entrypoint": "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "75915d6c5e76842260a79730f80d708853ac3c2ec7b3848375a3dcc3401a71f5",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 15,
+  "operationCount": 70,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "54e281f4c9fe15c804eeca53218004124dfe30141bc6d7c68e20a450d04697e3",
+    "operationsCsv": "3b264f073b1822eb56a38e4c801e9dc2ec8300759665e8124a0815133b70b18e",
+    "statusJson": "d472c5de517c725a2ce722a020ef85946143b7ff70ca37403be443252a1b36a8"
+  }
+}

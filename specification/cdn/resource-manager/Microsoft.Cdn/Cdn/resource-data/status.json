@@ -1,0 +1,27 @@
+{
+  "service": "cdn",
+  "projectRoot": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+  "entrypoint": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "f885e35374129c261db02aa2e0b11a8ab08207d31f2999b1c38279da592ba2aa",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 20,
+  "operationCount": 133,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d09ae4a83379f542b812a3278115b497bdfe1628a2db2fb1499317f44c32c0f6",
+    "operationsCsv": "0f07ee929961a14a49b37bbf9101f315ab461f2292fe4a5c0a33039305a16506",
+    "statusJson": "43a4c4bdfbe5fb4ae26dc53230443459b91a092d70cd282a51e69dfc6011a467"
+  }
+}

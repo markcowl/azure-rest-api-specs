@@ -1,0 +1,27 @@
+{
+  "service": "management",
+  "projectRoot": "specification/management/resource-manager/Microsoft.Management/ManagementGroups",
+  "entrypoint": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "005f65c456b6b2a4aa58fb613043e723baa00538d32a27fec37e363f26650d7c",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 14,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c1722a9807deedc3375c6f44e4c07e18c8f440a8e69d8ce28f8b78fcd4f4e37d",
+    "operationsCsv": "1a5bdac779b00ce5ba725710e52e7c0c53f45986dcff9b1ee64c039dbea6c815",
+    "statusJson": "6735ba0ec607e1844b1e867e01721cc71266e01e1d05eb3493fa9bf1e83e01bc"
+  }
+}

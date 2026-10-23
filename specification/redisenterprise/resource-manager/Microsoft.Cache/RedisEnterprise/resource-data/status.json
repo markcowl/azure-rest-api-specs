@@ -1,0 +1,27 @@
+{
+  "service": "redisenterprise",
+  "projectRoot": "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise",
+  "entrypoint": "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "147a3d314943f575cdcf707f62036ac4153f28016a384326aa3617ae1c965092",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 36,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b69054aeac7c655141f46f1ada2c2b220d62c83cc7adb30dd2e486406d220808",
+    "operationsCsv": "c9776adcf507468d448334ddc26f5d6917f27cc6dc60a56cb1ee06d6729ad58d",
+    "statusJson": "6431cf6b7a7af59b297833d530802b9daf4e53b1eb373effd9f439b30fb98827"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "elasticsan",
+  "projectRoot": "specification/elasticsan/resource-manager/Microsoft.ElasticSan/ElasticSan",
+  "entrypoint": "specification/elasticsan/resource-manager/Microsoft.ElasticSan/ElasticSan/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "6c32b81065c911be3c04917c9525b6c12fc16ae57aec258494986d7eeb50c0a4",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 27,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "748e9374df40fbde21241fb0450dda3ad48871e2d00211ee6c3c9403095ab3d4",
+    "operationsCsv": "70658925c501c178c66236ba9020712100a266d0aa85474520cb4f73c1c5d984",
+    "statusJson": "e89b0f0b2455cc8b77438e14df3c391cbb418edc8dafc9228fd705f082daf602"
+  }
+}

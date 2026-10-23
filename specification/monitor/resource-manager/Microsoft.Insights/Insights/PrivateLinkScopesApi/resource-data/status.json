@@ -1,0 +1,27 @@
+{
+  "service": "monitor",
+  "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/PrivateLinkScopesApi",
+  "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/PrivateLinkScopesApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "cd52f1c7bb7fd104ef5b61a7627c2e180c3b74b4240f3464ec108745ad805e26",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 16,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b6fb364c1cdddfefb8aa761115c639de06eb1734e4d4640f877348886f7a00bc",
+    "operationsCsv": "2cbf9da7712d2e217321dbf01e1da64ca5c8b7fa1b72dd45b15438c15fe408ba",
+    "statusJson": "7c6aed6a726832d5ba9125d522f10c8ad9f7f718dc89b126db5762e9836527d2"
+  }
+}

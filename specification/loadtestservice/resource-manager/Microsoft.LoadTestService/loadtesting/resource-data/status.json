@@ -1,0 +1,27 @@
+{
+  "service": "loadtestservice",
+  "projectRoot": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/loadtesting",
+  "entrypoint": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/loadtesting/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "0f5020a807067b6dfc154b27fcbcd1bdb074d90889c46776b13bfc4bc0c3b047",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 22,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b1288cb883ae6e15d775a2433bb4e6f15640cc1af9a03842b881e84cfb773cb8",
+    "operationsCsv": "7013d2d6cad3c382859067b8444e92b9e823ac974c50da3cf9e1b865bcf0f2fb",
+    "statusJson": "fe8d8872340b98d08061b4203d22e86770d32921b60be340753723ef3c1adbdc"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "hybridaks",
+  "projectRoot": "specification/hybridaks/resource-manager/Microsoft.HybridContainerService/HybridContainerService",
+  "entrypoint": "specification/hybridaks/resource-manager/Microsoft.HybridContainerService/HybridContainerService/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "add1797286b817aaf2ed245b347dcb9fbf250350715a2b788e282c7dbb64544f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 30,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b35c7682601220c0a87370588a31c21fd66c3bd474f9e7f6ff4c1f02e15b8006",
+    "operationsCsv": "dac4d50b38727819a047f43f7c9558741a9cdc09b6f875fab0390dd60cdd7fab",
+    "statusJson": "6e14ba39a83b07ef5d0a834cded66d4882af01a3210531b690652ae9b3b8c4f5"
+  }
+}

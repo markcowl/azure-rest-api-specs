@@ -1,0 +1,27 @@
+{
+  "service": "postgresqlhsc",
+  "projectRoot": "specification/postgresqlhsc/resource-manager/Microsoft.DBforPostgreSQL/PostgresqlHsc",
+  "entrypoint": "specification/postgresqlhsc/resource-manager/Microsoft.DBforPostgreSQL/PostgresqlHsc/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "20d49b19dc54b3b94e9bbd3587f1cd0348f7c2943f9f9ab531a62957a6946950",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 9,
+  "operationCount": 33,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "cbd7dd07081f8216114c8c89cd17a3ddd5fa2c1ae2044e967d7d3534479e8a0f",
+    "operationsCsv": "e3401fb39a08aa9284e59772b1238f0bf2bb10dce86c659cd987e00c65f86616",
+    "statusJson": "62548b197bb1ee3015cd7eabba5438284d2678bfd33a81e6e5f523c45b2d42f2"
+  }
+}

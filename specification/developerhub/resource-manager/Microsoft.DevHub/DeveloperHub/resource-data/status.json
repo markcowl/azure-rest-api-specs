@@ -1,0 +1,27 @@
+{
+  "service": "developerhub",
+  "projectRoot": "specification/developerhub/resource-manager/Microsoft.DevHub/DeveloperHub",
+  "entrypoint": "specification/developerhub/resource-manager/Microsoft.DevHub/DeveloperHub/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "8ceef7df6cdba0ba967e50a7ed38fd5087e2598b6a7938b8347cf5f44b65476f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 26,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "de06dd4ad99be4c801e76d8a3244a5029a294166360adf90153259099e9ffa0b",
+    "operationsCsv": "f59fd3dc1187121ff7f301e2fe31c3ed0146819e796f607cdfdd700ff8b3fe4f",
+    "statusJson": "c0325a9dce91513c2d25bbbd60d2361b3535eefa3b721b2ce66e129650dfa0b5"
+  }
+}

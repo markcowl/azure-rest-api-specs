@@ -1,0 +1,27 @@
+{
+  "service": "reservations",
+  "projectRoot": "specification/reservations/resource-manager/Microsoft.Capacity/Reservations/Quota",
+  "entrypoint": "specification/reservations/resource-manager/Microsoft.Capacity/Reservations/Quota/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "cd7182261c451dfbfa1d6c85b9f11cbbb6a8dba7f74e91f721e5d25cb26304f5",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "8485377643ae87d04610fb0ae821cdbffb89ea9d141b296814321d5ff16d47ff",
+    "operationsCsv": "66c47006608db77462c91cb1797fcc9ba072e53765c2bb1b261a21b96c707d09",
+    "statusJson": "94086f982a81f6e2e4583c94fff2fa4c340ecbba49f5e8ff839a1838b025b403"
+  }
+}

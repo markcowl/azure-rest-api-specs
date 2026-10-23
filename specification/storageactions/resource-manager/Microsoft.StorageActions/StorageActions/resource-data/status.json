@@ -1,0 +1,27 @@
+{
+  "service": "storageactions",
+  "projectRoot": "specification/storageactions/resource-manager/Microsoft.StorageActions/StorageActions",
+  "entrypoint": "specification/storageactions/resource-manager/Microsoft.StorageActions/StorageActions/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "493439806e7d53fab0cd1382b6847388a3198e220f09c76942003578239f0aa3",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "027d7acde0eed12a97c3a7087ee1f71daa6c8244b62374e4cfc6d4e6fbac962c",
+    "operationsCsv": "aabbe4e48ea745e329fbf1513477bbe6d6232e3b09b7aa19f1ce4f2890f35daa",
+    "statusJson": "e00c7bc3f6402cbebd94dd5855692b89845c6eb8648f7d0567740dc3e99dfaa9"
+  }
+}

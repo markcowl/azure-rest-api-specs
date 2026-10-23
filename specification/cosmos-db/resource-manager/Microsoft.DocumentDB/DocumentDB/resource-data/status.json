@@ -1,0 +1,27 @@
+{
+  "service": "cosmos-db",
+  "projectRoot": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB",
+  "entrypoint": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "33c725a312d46652f0212be25f8668354216e53c1c867c067ecb812d78743a26",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 59,
+  "operationCount": 301,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 3,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c2c7a8918968f576f62aa1cd00b39094ffd0ff50528c2c171dec78e9e4c646bc",
+    "operationsCsv": "b1b6ad022e9a9cc8067d13cb575ad2d970bea642bdb6b379d0673a1992be8051",
+    "statusJson": "c46211fcf487f5212483f37d1aef9aedf4e18adfde34006a3c123f12ff978b07"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "education",
+  "projectRoot": "specification/education/resource-manager/Microsoft.Education/Education",
+  "entrypoint": "specification/education/resource-manager/Microsoft.Education/Education/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "50bdde81d5a68412a277f266ee12599668a24fcfae105b64d40574613df75955",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 19,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "21304dd6a1eb07a9ec4d1db87a33176524a809bdebeef58cba91e0bdeb70284a",
+    "operationsCsv": "36377b4d01f4ad11f182b660a8cc490a563d73c61120abd85e59cee023882e67",
+    "statusJson": "f2fe382498d8a4ffc29e2517848568216779809aa3774a7c69f55545964e6af5"
+  }
+}

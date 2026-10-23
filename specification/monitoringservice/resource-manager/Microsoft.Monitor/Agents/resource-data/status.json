@@ -1,0 +1,27 @@
+{
+  "service": "monitoringservice",
+  "projectRoot": "specification/monitoringservice/resource-manager/Microsoft.Monitor/Agents",
+  "entrypoint": "specification/monitoringservice/resource-manager/Microsoft.Monitor/Agents/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "6439278bc22d20381ad5c4e6a1e3027f05bc1dba83e60c212f56cee2eafe6dfd",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e76aadd7298cfce1e5bfccc862ceb9851a580e246435130179457bbc9274b077",
+    "operationsCsv": "bf9c1d3fe7048aeb45be39d207ee9807605864641f9ba59fb4375324baff328b",
+    "statusJson": "a7e7b49fe46c614ea6d48d6b8cb1f969945d31e7144965c3b05e2726f7118b19"
+  }
+}

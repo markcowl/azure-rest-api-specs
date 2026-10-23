@@ -1,0 +1,27 @@
+{
+  "service": "confidentialledger",
+  "projectRoot": "specification/confidentialledger/resource-manager/Microsoft.ConfidentialLedger/ConfidentialLedger",
+  "entrypoint": "specification/confidentialledger/resource-manager/Microsoft.ConfidentialLedger/ConfidentialLedger/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "50759d190124eaab033da94748b606f7213c40bf71f9d2db82f8986240078365",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 16,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2a11cae2377d021376b4f787b80fe176a1fac0079064821468b4045760b6931f",
+    "operationsCsv": "f0bc476146b19d039e639145c39c99f506e6f6cbafca417572c88d2b02fed44b",
+    "statusJson": "501c5db2a3190f6c5bccc8363f87dd7385c13d1ae22b8d55c8284780491c50b0"
+  }
+}

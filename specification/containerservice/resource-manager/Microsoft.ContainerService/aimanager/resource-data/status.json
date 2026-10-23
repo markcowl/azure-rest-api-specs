@@ -1,0 +1,27 @@
+{
+  "service": "containerservice",
+  "projectRoot": "specification/containerservice/resource-manager/Microsoft.ContainerService/aimanager",
+  "entrypoint": "specification/containerservice/resource-manager/Microsoft.ContainerService/aimanager/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "4d9ffca45fadcb0865038c668cee4af976b2559fda7ed08f4f999a3cd65ca715",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 30,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "027833cb1b27598ec1d59a0170dc8873b7351c04f59f5728e4d3b7fd6a746c33",
+    "operationsCsv": "5f5356c1b5e66c96635db7a2a5d3fc0817e250c3623935742f412cc73f5cebd1",
+    "statusJson": "c1756dd33df976e45e2ba8c58b0930ccae9636a31509b9e24226e3920906ba07"
+  }
+}

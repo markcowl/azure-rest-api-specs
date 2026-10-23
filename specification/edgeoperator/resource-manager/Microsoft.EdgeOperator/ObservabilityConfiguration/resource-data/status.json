@@ -1,0 +1,27 @@
+{
+  "service": "edgeoperator",
+  "projectRoot": "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration",
+  "entrypoint": "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/ObservabilityConfiguration/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "828e1b3905f4971eaf3611c13a1bf98e222379922a8985085507429d0cba9181",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 1,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "089c13c82b582ad45903a45895353db622c79c2055206c06674e166ea131c13f",
+    "operationsCsv": "6dc0fa6d597923fbf9c996f8b4f3bade35676cbcc44710e574cd881310c3f173",
+    "statusJson": "adffef583910254df3ac6978c3d6dfa983a96bc4cf56c0b197794f25068fd9ef"
+  }
+}

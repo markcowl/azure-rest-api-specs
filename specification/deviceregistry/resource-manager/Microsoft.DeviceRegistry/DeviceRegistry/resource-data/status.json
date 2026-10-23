@@ -1,0 +1,27 @@
+{
+  "service": "deviceregistry",
+  "projectRoot": "specification/deviceregistry/resource-manager/Microsoft.DeviceRegistry/DeviceRegistry",
+  "entrypoint": "specification/deviceregistry/resource-manager/Microsoft.DeviceRegistry/DeviceRegistry/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "96435f770e2ca418c86e896a2a78c32e7fb7c034312c3698790b07c84a8673ef",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 25,
+  "operationCount": 138,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f20a57324a9612eebb91555362a0e6a23bd0fe4ba360d46abc38ed65832e0618",
+    "operationsCsv": "0a095b72efb50d4d1d66b5f258ee438c0bcb41959cfdbd75427a6b8de1db6402",
+    "statusJson": "79273310855127cdeba3d08f361d8e4070434ee4f3c2b9ffb37a13e5be17dfcc"
+  }
+}

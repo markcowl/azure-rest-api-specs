@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/SensitivitySettingsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/SensitivitySettingsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "0be5414e5e641a759f1d8f2e293e88ec41e85b415ed7799e6636e34a63193caf",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 3,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "55ce4d935f397380bd5532482951b034c255c1b79f495379067941c39511bfff",
+    "operationsCsv": "9b632a063a0d72e86b06246deb3a1933a3eb56dcf99ce4eebefae913a7f36256",
+    "statusJson": "65be2b3a99e203c0d9f33307b5f664edb0ad12a8ced2db90d8ac2d027b52dced"
+  }
+}

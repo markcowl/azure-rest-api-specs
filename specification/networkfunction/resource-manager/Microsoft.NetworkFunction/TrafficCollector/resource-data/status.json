@@ -1,0 +1,27 @@
+{
+  "service": "networkfunction",
+  "projectRoot": "specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector",
+  "entrypoint": "specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "3016477797b7a86769b64ed13acc662c43dddfed75e643c6dc71fe0c7f5b87ef",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 11,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "191ac4dca55b391016ace0d92b4568bcbd7beefcb603f6cd4c0190d681f80cc9",
+    "operationsCsv": "ba7d30f75ca4a3c9f048c3c09b6a124f51fdafe62454b413fa0a59262c71c946",
+    "statusJson": "d4a13d9f63068f998466b8ee75aa7808c9272d847d47c3cf6326d8a9886a839b"
+  }
+}

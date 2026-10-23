@@ -1,0 +1,27 @@
+{
+  "service": "cdn",
+  "projectRoot": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions",
+  "entrypoint": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "52cb2c0e79b24e76cbada0b872f565d53f4730266a2aa0f7eed7693f83b895b8",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 33,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f2e3e90ff9041eee7663fe72a917dccc4561cefe9664726ecb3ee51a8e18d415",
+    "operationsCsv": "d2fc19c9c967c1b898b0f1a0153e335fc8377d55ef1c718de1d2e30007837e8d",
+    "statusJson": "56aafe59cfcb2d546b05a89ec78a142ec1a01311bddfd629a13353bd81ea0956"
+  }
+}

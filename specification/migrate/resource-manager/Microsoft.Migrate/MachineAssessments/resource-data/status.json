@@ -1,0 +1,27 @@
+{
+  "service": "migrate",
+  "projectRoot": "specification/migrate/resource-manager/Microsoft.Migrate/MachineAssessments",
+  "entrypoint": "specification/migrate/resource-manager/Microsoft.Migrate/MachineAssessments/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "d82dcc53d1ac73a87ef97ed5c798ce0559766cec19c12689dea84a031da17fe6",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 11,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "03eb94efb7526ec4dc09a2e324a580e021cb5d5e729f4ecf9687622b11045a35",
+    "operationsCsv": "dc24de327dc5d4659edd8f9c93a3f9ee3217118764330bcc485590788f860b6a",
+    "statusJson": "89653076663328f5c37602951dc4a32f3f051804459a5ff5e3b516087d65598b"
+  }
+}

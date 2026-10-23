@@ -1,0 +1,27 @@
+{
+  "service": "dell",
+  "projectRoot": "specification/dell/resource-manager/Dell.Storage/DellStorage",
+  "entrypoint": "specification/dell/resource-manager/Dell.Storage/DellStorage/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "164f4b7745c54ee62fd4ddca0cf64205ad3b2d4d32edf47c2e3292c96cd5a9e3",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f0ec7d1c3d48bae0c09958e9b5d856a507fa9082cefefcbe92e370b1c882a2a7",
+    "operationsCsv": "1463d3fc0e021d79b753ea85a549222bc7f0ca7badb880d416a9e30aeecea0b7",
+    "statusJson": "b0badff3cebe40040dd6652a0455b524ce5137aaa4c572d3d377d60cb9f52783"
+  }
+}

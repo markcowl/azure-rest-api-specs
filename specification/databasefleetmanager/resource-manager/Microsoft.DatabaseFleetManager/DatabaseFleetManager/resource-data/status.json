@@ -1,0 +1,27 @@
+{
+  "service": "databasefleetmanager",
+  "projectRoot": "specification/databasefleetmanager/resource-manager/Microsoft.DatabaseFleetManager/DatabaseFleetManager",
+  "entrypoint": "specification/databasefleetmanager/resource-manager/Microsoft.DatabaseFleetManager/DatabaseFleetManager/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "669843ac02d9a5f899d6d7adcc845401bb6a0230a6f64121a4fd794534486808",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 31,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4802adbe13730ccf9d94723fb35977068f6b010061ba2456e38adb20b2d46acd",
+    "operationsCsv": "9a82b14255eef916c114b1c36dc161d58d65a16a7fb9ad24f29518cef3ab3e17",
+    "statusJson": "245ee2ccad7dec49168635c21b12880fc9c90f8784d1873e1668cd474a42a38a"
+  }
+}

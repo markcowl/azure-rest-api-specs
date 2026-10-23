@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/AlertsSuppressionRulesAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/AlertsSuppressionRulesAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "3187dbe175d7ce575d8d9fb4a908b4f31f5d31ce00674a1177d83eb27d68f192",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d5a266439e7d1368be690516b2987e53344528b0cc95346955367ca2af59ffa1",
+    "operationsCsv": "4e34672660b488b2d4c87b86dd3e3145288c09197e9cf6113e4816eaf178c39c",
+    "statusJson": "5e97bf8831127b53bb715c55417e3ab9ed7651df4988cd2107ea5ac4806366f8"
+  }
+}

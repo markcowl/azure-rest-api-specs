@@ -1,0 +1,27 @@
+{
+  "service": "domainservices",
+  "projectRoot": "specification/domainservices/resource-manager/Microsoft.AAD/DomainServices",
+  "entrypoint": "specification/domainservices/resource-manager/Microsoft.AAD/DomainServices/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "64df3e77f8709b797e3034305b259d389f3f9787dbac1b859e47e64f847055ff",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "076b4a355f6ec13115419ef4fdf0c8874d684ae25b3cf6ebfee7fb4e37629c89",
+    "operationsCsv": "ea9b11994d193afbb011249a3f4af7743d3658bc11a2a204b76965ef04c0efe0",
+    "statusJson": "4af019957002e3065c66dad6f0744bf9a58f72a199fed7ceb75fff082a194c7c"
+  }
+}

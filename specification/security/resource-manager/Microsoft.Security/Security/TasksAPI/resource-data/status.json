@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/TasksAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/TasksAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "0e2aebd03484ec9c34d31905252e74a10f5941057b6d261f1551894230dd8e09",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e8c4e8373611792388f85730df6de162b34505c9b7cad46317d3944cee924443",
+    "operationsCsv": "1cd0a2c466a298c745daa2c6927a90b80abd7013e0fab738b1e2223f3dcd7134",
+    "statusJson": "f8655379e8df595bfdeeb148c382a3009f9c7b0413902981fce111e16d527fbd"
+  }
+}

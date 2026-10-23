@@ -1,0 +1,27 @@
+{
+  "service": "gcpconnector",
+  "projectRoot": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/ContainerClusters",
+  "entrypoint": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/ContainerClusters/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "60cb994a7cdc55b03efc447b8dc046f5a5fc75fd2d47c65e77653bff40926630",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f247d0b60cc213e4f773b4e050294b4ac6ed607893bf366e15b32d29a59eccc0",
+    "operationsCsv": "41950b4dbfdcc6814a020c06379dc2b54c37f660192e39a3cff2fcaee2bd4ec4",
+    "statusJson": "07d564b9645c56627a9d234bb74689d365e9ba80a3620a6d7e5882466a0d5dc3"
+  }
+}

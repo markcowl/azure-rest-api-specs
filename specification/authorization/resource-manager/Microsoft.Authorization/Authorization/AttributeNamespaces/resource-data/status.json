@@ -1,0 +1,27 @@
+{
+  "service": "authorization",
+  "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/AttributeNamespaces",
+  "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/AttributeNamespaces/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "efa17921f0fa6678baae088aa693ba20047f94687a1975ac23acb9f94193bf3f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 3,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "0d52444f1dc163ecae690eb021bc8819d062ede46960ebce6f824a1aba82bd4a",
+    "operationsCsv": "33ac5330a81083b682e510eddc3b40862484518cc5bb34e690a62fa10b485b4e",
+    "statusJson": "493db1b6c359b64169b7f294e6fcece5371c5b92de050c98f05c82f76cbbe5a4"
+  }
+}

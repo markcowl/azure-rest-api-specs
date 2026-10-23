@@ -1,0 +1,27 @@
+{
+  "service": "healthbot",
+  "projectRoot": "specification/healthbot/resource-manager/Microsoft.HealthBot/HealthBot",
+  "entrypoint": "specification/healthbot/resource-manager/Microsoft.HealthBot/HealthBot/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "9b6db6f65246b1b58574d6215356c42c608653b91bbaa90704a14ab8aa64ca1f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 8,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "43b5664db0d42143f16c5745c35958d96963f380c7870f27052bb7c795a6269e",
+    "operationsCsv": "c7e5b2ba6b4832cbeb933d41cbb4cc1810125d84b9c2e0cbd780ca2b636b1768",
+    "statusJson": "87b57bd5d2f74f48491e7ac4a6ab931dee4aefdf7fe3ba58ebe27e6d7d978796"
+  }
+}

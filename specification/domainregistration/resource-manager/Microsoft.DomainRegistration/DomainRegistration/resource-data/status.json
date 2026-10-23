@@ -1,0 +1,27 @@
+{
+  "service": "domainregistration",
+  "projectRoot": "specification/domainregistration/resource-manager/Microsoft.DomainRegistration/DomainRegistration",
+  "entrypoint": "specification/domainregistration/resource-manager/Microsoft.DomainRegistration/DomainRegistration/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "d3b4d6d8f1a839fd4f3773a9843d6755c9989f015e6c424791dacba547b831c9",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 16,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "175c4bf081660553005a6a1033b9c29df51b5e0f88f1c052b5127dc7e4246885",
+    "operationsCsv": "0b8e6487db93b0fd8e43a00c10bdd8038c31c700406b0d94602d630c2d54f269",
+    "statusJson": "e220c6b898a9c33fe308883cddfccc8880b8dac4ab3d3dd2df2be64c08f92baf"
+  }
+}

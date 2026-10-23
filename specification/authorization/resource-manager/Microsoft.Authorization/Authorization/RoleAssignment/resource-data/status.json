@@ -1,0 +1,27 @@
+{
+  "service": "authorization",
+  "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment",
+  "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "e1164c2438444f5de772891c6817701bf8158eb332653b67af3ba85db2e76b9b",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 10,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "28896eeed74e146abb62e1de34f3cf99d62b10fb104f822ae2345727bbb1aa30",
+    "operationsCsv": "9c94a49674cd7ce65e80b8dd139b051c7be109c70f006e4270760d46e9367639",
+    "statusJson": "2fa8e4d23c99d2fd91df6d0af734c20a657a055e2251e4272069e6cfd99828e4"
+  }
+}

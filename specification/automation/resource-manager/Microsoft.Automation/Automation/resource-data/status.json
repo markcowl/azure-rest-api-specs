@@ -1,0 +1,27 @@
+{
+  "service": "automation",
+  "projectRoot": "specification/automation/resource-manager/Microsoft.Automation/Automation",
+  "entrypoint": "specification/automation/resource-manager/Microsoft.Automation/Automation/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "e3de41309804868cd21d276b97f031a3418f599674f3b2c2523b89285a11dd88",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 33,
+  "operationCount": 169,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 11,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f58aa5079b7f9f066ce2a844762d60ccea2253007c020a4ae63eed4bef02fbf5",
+    "operationsCsv": "22e7289b329c9b2cd4b05dceb1d92dd812af3df927bb41c1a9023d03405280d9",
+    "statusJson": "0eff4802fa7fd4b45fb54e98247a4dc9e85801796d6c0eec9f3993a6c7c64b53"
+  }
+}

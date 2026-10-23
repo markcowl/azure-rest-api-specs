@@ -1,0 +1,27 @@
+{
+  "service": "onlineexperimentation",
+  "projectRoot": "specification/onlineexperimentation/resource-manager/Microsoft.OnlineExperimentation/OnlineExperimentation",
+  "entrypoint": "specification/onlineexperimentation/resource-manager/Microsoft.OnlineExperimentation/OnlineExperimentation/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "06c3f3bc5681260c3a740593e448ce5e5ddbc9de3ff219fa78e2174826a8df9a",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "405ac13005cfaab317f109395b4054aba0dbb869d5016d96befe2489c339c840",
+    "operationsCsv": "d0e42fea242ff926f997e3eaa0ddc07118cbc941ba172441a08b180d7fea3734",
+    "statusJson": "0e7cadd210ff8344ef812b9871246a5a1383f44235f68cbbeaae2841024a6671"
+  }
+}

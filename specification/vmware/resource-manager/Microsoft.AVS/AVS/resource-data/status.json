@@ -1,0 +1,27 @@
+{
+  "service": "vmware",
+  "projectRoot": "specification/vmware/resource-manager/Microsoft.AVS/AVS",
+  "entrypoint": "specification/vmware/resource-manager/Microsoft.AVS/AVS/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "cdce93674b966d0398c256fd27e3c72bad3fc5b22aee049222264d052587b422",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 29,
+  "operationCount": 120,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c7a7244e1eec3030d6839684bbadcca91ef9c1f395791b295500229ad84b5e86",
+    "operationsCsv": "b2683f609393b3ecbf18a3951ba1f9916ffc9d2ccf45555fd445c1a53286bd5a",
+    "statusJson": "8a41af11f1dc208e3e73b709f02938922d5630c1b74e30f66d6724677863ca02"
+  }
+}

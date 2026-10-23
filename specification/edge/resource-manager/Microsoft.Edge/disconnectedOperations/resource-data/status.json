@@ -1,0 +1,27 @@
+{
+  "service": "edge",
+  "projectRoot": "specification/edge/resource-manager/Microsoft.Edge/disconnectedOperations",
+  "entrypoint": "specification/edge/resource-manager/Microsoft.Edge/disconnectedOperations/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "73c93457c271b17005c8ba773e312713805915b040b224f64335f30da16fc7ed",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 17,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "31a101bc17a7916723ab78a7d544f9f8f68de77a09363c97e17a159fb0fe1932",
+    "operationsCsv": "9a2c2214ca3189f7fb99b7b3d2e2034bb22958ed9071db5a016d62570c123df0",
+    "statusJson": "9b47a21eb393c7dce508921b2010cad13f80a297cb3c076ba8dae691bdf85118"
+  }
+}

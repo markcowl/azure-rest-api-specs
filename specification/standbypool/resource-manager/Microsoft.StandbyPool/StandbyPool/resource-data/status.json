@@ -1,0 +1,27 @@
+{
+  "service": "standbypool",
+  "projectRoot": "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool",
+  "entrypoint": "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "7968419bb699f812cf9df5faac6d44799307b32d42102f65fb5e10cdbde496b5",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 18,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4c6496689d1568ea27ab3da915777835cd5917692f5d9350a52a0947beae68d4",
+    "operationsCsv": "d61713bc24e1c615f6ab11e5798342a5806b508a0af98d149075b9a1180e794e",
+    "statusJson": "74ebf5f0af88ffe3fbb02d4311ca237b48f978ab95b0903de4e0e93e2d132a22"
+  }
+}

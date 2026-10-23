@@ -1,0 +1,27 @@
+{
+  "service": "compute",
+  "projectRoot": "specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeDisk",
+  "entrypoint": "specification/compute/resource-manager/Microsoft.Compute/Compute/ComputeDisk/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "8bef1fc719ec5334f9eea5890ed92779114188ccf8424cddd35ddce2e886ef16",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 40,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f8777bde6dca42e43b2a5e67bcf2bf91324e1242cb7b5df0922be7e44861cfb2",
+    "operationsCsv": "7bfb99aa3dd6d6226e5413db8f0def464a285238e1ee631fc428d38b4b150b41",
+    "statusJson": "b3fdaa3810f5101201610b82fcc9a45ccc1a7c6c5face4f0623b610d4fa98366"
+  }
+}

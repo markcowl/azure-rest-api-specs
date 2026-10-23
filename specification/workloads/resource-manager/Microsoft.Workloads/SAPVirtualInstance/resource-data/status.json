@@ -1,0 +1,27 @@
+{
+  "service": "workloads",
+  "projectRoot": "specification/workloads/resource-manager/Microsoft.Workloads/SAPVirtualInstance",
+  "entrypoint": "specification/workloads/resource-manager/Microsoft.Workloads/SAPVirtualInstance/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "b1641966cf3f0ef2ccaa03d59b9c440d621c7e1d155c855c8db7c3235d10a970",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 29,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a7a1d2381fdad9252eb1cd5db5c4be641194454f60eb764f48202e75e8b57dfb",
+    "operationsCsv": "dd166768dc86203e00b5b51668d32d4bdf909362814c6d87f5984b274953482a",
+    "statusJson": "a86507ca326e422619ec1f7698ff8d6b45df16c0ac18b815d81f29547f3be911"
+  }
+}

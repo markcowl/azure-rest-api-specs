@@ -1,0 +1,27 @@
+{
+  "service": "horizondb",
+  "projectRoot": "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb",
+  "entrypoint": "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "6eaa86e784153e180dedfae36db6a8adc13d860c3d16e1d838e831bdd523a8f1",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 20,
+  "operationCount": 76,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "02cf37d37d0158e626e74b883e0dfdcd6f7f15b192c16fcbeef0ea8421c57312",
+    "operationsCsv": "4c9545ea9134af6113e99b0f2eefcb0de062bb5a8e3088ae3ad447e0e8403d31",
+    "statusJson": "be1c2f3010e66fca457dfe6330c5a7d72e8aebc791d7992d52ba773340d40da3"
+  }
+}

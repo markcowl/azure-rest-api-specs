@@ -1,0 +1,27 @@
+{
+  "service": "codesigning",
+  "projectRoot": "specification/codesigning/resource-manager/Microsoft.CodeSigning/CodeSigning",
+  "entrypoint": "specification/codesigning/resource-manager/Microsoft.CodeSigning/CodeSigning/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "b62d7a7f9880ce36dbf37f7873b0e2e65a158869eeea177c90d17e55f93d39d0",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "08a965b4c8526c489426f9fbfef9220446fa4d4b4d238db2de8263711d636b72",
+    "operationsCsv": "b5f6f1c7253f5147c3e03a21eb2f6d0e029cf5d26ae81913212fbb721717c245",
+    "statusJson": "37885596435c515c5348dc45644b7c8dbd861bfec3d3bde373379329c2c834d6"
+  }
+}

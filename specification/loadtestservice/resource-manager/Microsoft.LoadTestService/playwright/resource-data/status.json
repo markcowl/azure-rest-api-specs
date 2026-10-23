@@ -1,0 +1,27 @@
+{
+  "service": "loadtestservice",
+  "projectRoot": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright",
+  "entrypoint": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "50904a690b3024a004df66c76fcb0fca785a2dd38408bf441ee8a4ef6e15943d",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 10,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "fef8d902ae410c455e03cff5396e03efefb4d00cb6c53c718aef34da5086acc2",
+    "operationsCsv": "b41a5dde5458069c4007a6f93f185385f7bfeb6cd67938c799d760dcbaf80c9a",
+    "statusJson": "a07199328a54fbcd2ebca350777db6395d324b1fe710c9a56c93e44efc46aa41"
+  }
+}

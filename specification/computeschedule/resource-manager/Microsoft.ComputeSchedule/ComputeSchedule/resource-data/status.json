@@ -1,0 +1,27 @@
+{
+  "service": "computeschedule",
+  "projectRoot": "specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule",
+  "entrypoint": "specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "eff56cfff2d4acbaa2d2b4898c67b50decaa1ff4bca3b91b54251f718e120fac",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 18,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e38cc407576431155187dbb496a0da90741029913593957ddcefbcb3512d5c03",
+    "operationsCsv": "c13ecd48d2d856b31aab317ff4c627f1e7293def5ae515009dee62fac8b17eb0",
+    "statusJson": "f03db9df1953d114fdc078685f5207bf7155cfaebc36b7d20e2a614b2d071be7"
+  }
+}

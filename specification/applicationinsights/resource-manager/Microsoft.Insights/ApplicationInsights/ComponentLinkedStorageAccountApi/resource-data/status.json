@@ -1,0 +1,27 @@
+{
+  "service": "applicationinsights",
+  "projectRoot": "specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/ComponentLinkedStorageAccountApi",
+  "entrypoint": "specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/ComponentLinkedStorageAccountApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "1580f14dc2f2215f2feb814bef85bc38b0d24553fc3fb328cce2fe9209df643d",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "bddc2f38737af334a2e42d833d92b011ffedc859bc5e687c2316b88fd2447dec",
+    "operationsCsv": "707003de6735a53d00a15c589075727bb1df7bfe95edb47c26ffc715c1d77382",
+    "statusJson": "493e9b3610e0dbccea4d67a38a34056a8ddcd0e0aea7777ef2a64872ba9cad9d"
+  }
+}

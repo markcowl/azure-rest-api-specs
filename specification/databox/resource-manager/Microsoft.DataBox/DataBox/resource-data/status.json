@@ -1,0 +1,27 @@
+{
+  "service": "databox",
+  "projectRoot": "specification/databox/resource-manager/Microsoft.DataBox/DataBox",
+  "entrypoint": "specification/databox/resource-manager/Microsoft.DataBox/DataBox/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "0e59d75bbab470944f38deca41b50aaf91dac84d9fa94b03f08ef9b65194c983",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 10,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4cb247a7c8f186ef32a9e7d9139d3f2556b267c23ed8f0fbc743c1f9391e9cda",
+    "operationsCsv": "ea44184750812a7d4958789296be01bab69013456107d15ccf3ae1242ffc5bad",
+    "statusJson": "ab2ee8513b9529c68e482efff05194633c2d8971beff8a37634c416c52347ac2"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "computelimit",
+  "projectRoot": "specification/computelimit/resource-manager/Microsoft.ComputeLimit/ComputeLimit",
+  "entrypoint": "specification/computelimit/resource-manager/Microsoft.ComputeLimit/ComputeLimit/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "432da6f44b919ce51416538740e0bd32ef9f8431785d96fe25f02e1328955905",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 28,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d9242acbb168bc2cdc6a83456c82963e4f14f7c4328753053b20f3229091161a",
+    "operationsCsv": "9ab4aa8882562a8aa3269b02c6ef5a5f9ae2ef8e18337585dd3eed2031316755",
+    "statusJson": "9a93bfe5f5cdf45531683b9d912e0841d949a0cfe6bacce350539239b1bf92bf"
+  }
+}

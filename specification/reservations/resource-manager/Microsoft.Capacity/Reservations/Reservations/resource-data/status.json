@@ -1,0 +1,27 @@
+{
+  "service": "reservations",
+  "projectRoot": "specification/reservations/resource-manager/Microsoft.Capacity/Reservations/Reservations",
+  "entrypoint": "specification/reservations/resource-manager/Microsoft.Capacity/Reservations/Reservations/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "e868799ce9d741494b170c726655db5ab64c7a187372fa424cfd332607edd383",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 15,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "512bff411c10fd55a54ff8149b2869ea00249784c15714c785fe3020eb47f7b9",
+    "operationsCsv": "59b5442a28fd7e82befba96fcade4b72858be5856361c2fd8e4ccba41c758010",
+    "statusJson": "e92247e450a4ccf868844aac9f1a8769bb23ddb2020415bd957b822775cb9105"
+  }
+}

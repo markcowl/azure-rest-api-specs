@@ -1,0 +1,27 @@
+{
+  "service": "migrate",
+  "projectRoot": "specification/migrate/resource-manager/Microsoft.Migrate/WebAppCompoundAssessments",
+  "entrypoint": "specification/migrate/resource-manager/Microsoft.Migrate/WebAppCompoundAssessments/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "843f3ab80c98c90b00650a71a9ef9ffc0da7d14601dcc0970b8143c2ffb40d1d",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 7,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9bd12c9143e33a0465989628f741aaafe2fe7a5b9b51a8246cceaf623079b9c7",
+    "operationsCsv": "f27f86d17a83595c503aaada4ba28d8d8e7862db6e1edacb826e13dd9d153985",
+    "statusJson": "060dafff5b8daa55536e8a17200af48d3a8d1bd18bf87ed46e3bd66005444593"
+  }
+}

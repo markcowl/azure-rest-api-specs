@@ -1,0 +1,27 @@
+{
+  "service": "edge",
+  "projectRoot": "specification/edge/resource-manager/Microsoft.Edge/sites",
+  "entrypoint": "specification/edge/resource-manager/Microsoft.Edge/sites/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "9a1dad05748a9cdbf19ba85b1c992174811a833a6bb7f40212605ed809c10dee",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 15,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2b1356daaae4efa1c68f71b7d1f1cecb2c81973f46b088f8024b16aaa9a9b019",
+    "operationsCsv": "664274503040a452824e3f8ef05f497fd91d1e7c1718e84d435c5596babd713e",
+    "statusJson": "4053814bd78fcca240f79c3bb5f770a503dda6e6a69d645677d93540e20920f7"
+  }
+}

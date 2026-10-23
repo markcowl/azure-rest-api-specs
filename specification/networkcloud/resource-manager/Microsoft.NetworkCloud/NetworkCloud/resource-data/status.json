@@ -1,0 +1,27 @@
+{
+  "service": "networkcloud",
+  "projectRoot": "specification/networkcloud/resource-manager/Microsoft.NetworkCloud/NetworkCloud",
+  "entrypoint": "specification/networkcloud/resource-manager/Microsoft.NetworkCloud/NetworkCloud/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "752767da47b2a84fa42ea928bd793e6a73154875d4d91a4cf776f798e14a92ba",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 21,
+  "operationCount": 144,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "34432ccd0775891367f827b0de5df987b9a21ca50d8c385b313b2a3ad6a1cb66",
+    "operationsCsv": "a52317084646d6200e79015f54666490aaab992dc1e38b0e17dda144ac190476",
+    "statusJson": "de04b89ba9f2d855b95be026092c39138af9e618c3027fd8663619bd343e7a03"
+  }
+}

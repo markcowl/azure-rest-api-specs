@@ -1,0 +1,27 @@
+{
+  "service": "hybridkubernetes",
+  "projectRoot": "specification/hybridkubernetes/resource-manager/Microsoft.Kubernetes/HybridKubernetes",
+  "entrypoint": "specification/hybridkubernetes/resource-manager/Microsoft.Kubernetes/HybridKubernetes/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "f6083260374c871e2bdf2bba7ecfc5be16ccfa1b256631df4dc132e406272d94",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 8,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "27af12513ca9cfca3c26ee607cb6f129c08fca266c57969af802fbd124390264",
+    "operationsCsv": "57b1b599a2974fb66caba4c553cbfd9cdc238b727c6b621db4bb7f0b69600871",
+    "statusJson": "6e8b6c0d54826f6af1f85d8b466ce91e140c00e27e96de1e1deda6c53061a027"
+  }
+}

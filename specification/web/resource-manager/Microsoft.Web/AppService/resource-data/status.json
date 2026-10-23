@@ -1,0 +1,27 @@
+{
+  "service": "web",
+  "projectRoot": "specification/web/resource-manager/Microsoft.Web/AppService",
+  "entrypoint": "specification/web/resource-manager/Microsoft.Web/AppService/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "754c64a4df13818dc455929e905144ab97b6b7dad48a28912d868efaceecdc7f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 146,
+  "operationCount": 739,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 3,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4b61f14106de38a6d7c69fdd0d12de35869a9b3eed9bf400262a7bb7d9cd2119",
+    "operationsCsv": "26882142645e20ba076d7c51361b717e24a3ff962fe80d47f363b7eacb80f27d",
+    "statusJson": "c6405a74a55822c6bcb50dfb2b3cacfc5156527f565f49bff95b217ea6f4e356"
+  }
+}

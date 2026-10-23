@@ -1,0 +1,27 @@
+{
+  "service": "migrate",
+  "projectRoot": "specification/migrate/resource-manager/Microsoft.Migrate/AKSAssessments",
+  "entrypoint": "specification/migrate/resource-manager/Microsoft.Migrate/AKSAssessments/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "b3a3c154772bce6a3da5b7517af3c3c456e0a4445acd7b6eef6fe4bde6c17c1b",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 13,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f93ac2f1a887d67df76fa1ed1ef124e16e16ff17e79fac5d9b656da2f0b8429e",
+    "operationsCsv": "94fcbabfde6363b63818fe65cb172d656848e83f8c1d9b0a4d54c510cad33d28",
+    "statusJson": "6f306120ab147142fb5cac9ecbe06d20fe14dcba7a00144d6ce75a3308b975cf"
+  }
+}

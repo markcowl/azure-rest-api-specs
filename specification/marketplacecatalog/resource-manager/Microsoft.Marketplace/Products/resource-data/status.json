@@ -1,0 +1,27 @@
+{
+  "service": "marketplacecatalog",
+  "projectRoot": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products",
+  "entrypoint": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "93936fd7caa003ccaa0563b4739425de446bd6a5d5073dd6fa82d5a7b14a7643",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 4,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "706e1ff70d54c2622f21c72291a9dd7060460a8110fb041e0687384dcce0dfd2",
+    "operationsCsv": "765b33ea4a8ae4bca5e68832846cedc09a3424faa74abf9a00f7ca10eea9286d",
+    "statusJson": "dc8ebcf285864ef3e1b56ed38fb1376ef58d826540f1c99626d84d9a9d0ef455"
+  }
+}

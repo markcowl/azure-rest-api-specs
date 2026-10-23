@@ -1,0 +1,27 @@
+{
+  "service": "datadog",
+  "projectRoot": "specification/datadog/resource-manager/Microsoft.Datadog/Datadog",
+  "entrypoint": "specification/datadog/resource-manager/Microsoft.Datadog/Datadog/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "33630bf559014277cf49014538334ae2e4a9eca948d82b4c6249e5e4d6b92354",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 30,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "df72b1201f180c9502ad4ac7290d64175a3fad9914f5b3efc36fcf831246731b",
+    "operationsCsv": "03594dd6af09eacc43e886862fdfff9144810118bd4995cc797acd637017c897",
+    "statusJson": "e61b21dce2fd9e34f9c630f08640f3b8db723723d24324357981fa3c6ce9d05d"
+  }
+}

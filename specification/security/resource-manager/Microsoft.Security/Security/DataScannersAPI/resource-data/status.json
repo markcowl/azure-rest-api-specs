@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/DataScannersAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/DataScannersAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "b00e3fb0427bf4aaf81006b8376489f918b18f3cd4ed358b54a1aac41ce944e4",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "8e905cfb8c22ee611b9d8a2cc51bbcbba564eb580b7d80ef625cd5e54717ff3b",
+    "operationsCsv": "437314c5a4b4f092f986133e62a3c42f5ffadc0d80aba403f2c95948cc7b3b87",
+    "statusJson": "6097063773109fcf99754a3e8509f36bf0ba3302ccc6067929ec8a25711a59e8"
+  }
+}

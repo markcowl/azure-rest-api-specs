@@ -1,0 +1,27 @@
+{
+  "service": "monitor",
+  "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ActionGroupsApi",
+  "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ActionGroupsApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "435f4fa30c5b30c9a814acddf9fa9a25832b843e1e6591789af18e3e2cfeb932",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "57aee61c489d7c113c68e88e9dffec4b5c02aecf53efe3218669651d596d77de",
+    "operationsCsv": "d15dce08e436af2dc1e2a100671e3cc88a25be2ad877fc3123f54125490084cf",
+    "statusJson": "5a3722674eede5592e3f2722b2a81d24af436286b30d8172fb6a1b5a60fc19c7"
+  }
+}

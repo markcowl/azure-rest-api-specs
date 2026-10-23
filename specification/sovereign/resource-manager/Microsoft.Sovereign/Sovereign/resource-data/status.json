@@ -1,0 +1,27 @@
+{
+  "service": "sovereign",
+  "projectRoot": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign",
+  "entrypoint": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "99970802fa294df3c65a82007a988c407163f004a37654a12a1c193cd3a77857",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 19,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2fa4de3cd193d58cf2b310b63bed6096ddc486f6a2f2fc4a142310e5f1c2c7ed",
+    "operationsCsv": "b412f34c6aee2dea7875cf63adfa7acd8e93ea381719652ea2ba06b904055cf1",
+    "statusJson": "aba30b0910c0849c28097911483ea15f0771e8ab6c9c9be7844bdb08ba5777e0"
+  }
+}

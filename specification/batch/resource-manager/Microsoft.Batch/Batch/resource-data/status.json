@@ -1,0 +1,27 @@
+{
+  "service": "batch",
+  "projectRoot": "specification/batch/resource-manager/Microsoft.Batch/Batch",
+  "entrypoint": "specification/batch/resource-manager/Microsoft.Batch/Batch/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "69f6600332b183368ac5e23e33c5d969e2cfbc6a14489ad51c8587adf6aaf5b6",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 9,
+  "operationCount": 43,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "56dd8656f23bb0a2227318025c14c60666f444b8beeb5698cb56aaba545277c0",
+    "operationsCsv": "e715d53422321e6e91c5589bb8944dbebf060e55f0282e35cb5eed4256f0778e",
+    "statusJson": "be224c6b222079563d4a4f6212fc9990b35e8d49a5833a58320ba937e21593f4"
+  }
+}

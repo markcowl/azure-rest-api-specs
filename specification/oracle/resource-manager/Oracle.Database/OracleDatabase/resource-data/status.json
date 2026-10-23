@@ -1,0 +1,27 @@
+{
+  "service": "oracle",
+  "projectRoot": "specification/oracle/resource-manager/Oracle.Database/OracleDatabase",
+  "entrypoint": "specification/oracle/resource-manager/Oracle.Database/OracleDatabase/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "91652a789975e3f190993ceecaab099967b2485561609fe7b4f31f58e556d56a",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 33,
+  "operationCount": 141,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "775a3c9782ab0f36b7a5c6daf5b96a0043d72cb5e95b1f71fb6cdb82cf1a6083",
+    "operationsCsv": "4e256b6c23316a4ba6b7056533a84600fe9b12c742b2c2574b8adf8dff74b63b",
+    "statusJson": "4b26c117b7a992d933d6deec47611c55f9ae24d44fdeeede4beab735d5285d2a"
+  }
+}

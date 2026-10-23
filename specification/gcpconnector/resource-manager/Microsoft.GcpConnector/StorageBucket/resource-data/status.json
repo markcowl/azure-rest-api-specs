@@ -1,0 +1,27 @@
+{
+  "service": "gcpconnector",
+  "projectRoot": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/StorageBucket",
+  "entrypoint": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/StorageBucket/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "f9c4a635238b9442e436d4ad248211d0708ca139efff341fec41b4733d9d0cae",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2d0bea80eda7be0626aa70d272a3b3bfd1219fe8db2f4f5341fd92adbbfa37d0",
+    "operationsCsv": "186715515afc42b576f310ed5d56de377d2abb1c199f9440439c00b0900dce1b",
+    "statusJson": "2595e3102cb852fa0d57dd50d6b70383a8a582db6a42d971fef7d74ec6e7bf6f"
+  }
+}

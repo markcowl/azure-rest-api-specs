@@ -1,0 +1,27 @@
+{
+  "service": "peering",
+  "projectRoot": "specification/peering/resource-manager/Microsoft.Peering/Peering",
+  "entrypoint": "specification/peering/resource-manager/Microsoft.Peering/Peering/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "f3940c258fb577b13ed0b205c3a5b87e75a7f9766e49a9be4cae667d777f7023",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 35,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "095cde2cd776325ca63ea519486c2bedb3939d470e256f388b9364007082db3d",
+    "operationsCsv": "fa09be5bf87ed4d836d8ff308cd9dde3e7abcb2cb16cddbeec83566d218e8bd6",
+    "statusJson": "724a925bf138adaad3572e22c1ae4ca3c3c4af871bf9f494d0f88bd347b21508"
+  }
+}

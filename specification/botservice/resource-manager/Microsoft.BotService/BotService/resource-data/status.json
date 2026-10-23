@@ -1,0 +1,27 @@
+{
+  "service": "botservice",
+  "projectRoot": "specification/botservice/resource-manager/Microsoft.BotService/BotService",
+  "entrypoint": "specification/botservice/resource-manager/Microsoft.BotService/BotService/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "3c5e3cc60b07c6044f6f37118e30b85bcb81dce3b8a0ccf9ac870a3cbb5b0e91",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 30,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e88aa8f96914cf030fc0137e365d1489d1330f494dac40e13a663577ffd2d192",
+    "operationsCsv": "81128c388d182713fd8009e2a89bbf620a612bbc61befec8566cdd9c4f10c08b",
+    "statusJson": "32769c990569fd6d472001a2fadbf5d554ebc06a83f4d0b488811c4f43a5881b"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "azurestackhci",
+  "projectRoot": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM",
+  "entrypoint": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "72d3040722f79f669fc4fe6e5cceb8527b041b378db53a34afc23378194251b7",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 19,
+  "operationCount": 106,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9914e701c6defa0c1ba40d79872dc8f5a94550c37703bd84ecc5d2669a364807",
+    "operationsCsv": "09ab0ea9dd3e714207a1735db21b550dfe505b9251497ebc5b3f79b25c68ca88",
+    "statusJson": "c2b428441a003661de2bd72d7d21252ae1321b0f973700f067ad460c493de6b9"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "maps",
+  "projectRoot": "specification/maps/resource-manager/Microsoft.Maps/Maps",
+  "entrypoint": "specification/maps/resource-manager/Microsoft.Maps/Maps/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "2bd6aecb42ec10d0b028642e18b76dd5c4bc8c148fdd34469c4d3fc7b4ccf980",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 20,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a92eaee653c3b4877908969c89da59144fe40a7229d80721791f8db82eb10877",
+    "operationsCsv": "f84ea29eff8073c859ca51b3be5e5b8a0da7d99ff44f58b4ffa664415827443d",
+    "statusJson": "ed0c9e58f2cb41b4498ea519ff0248b98ff2762e52196be8d5935e79ff2d69b1"
+  }
+}

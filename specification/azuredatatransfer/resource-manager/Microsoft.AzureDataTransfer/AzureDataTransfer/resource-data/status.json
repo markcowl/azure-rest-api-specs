@@ -1,0 +1,27 @@
+{
+  "service": "azuredatatransfer",
+  "projectRoot": "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer",
+  "entrypoint": "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "2b376eb9933852bbdbeed22fe3609f5193470f14d2db2796d6cb93f5888175c1",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 42,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "8398f378c22e8ceba629703678a86398010cadce9874b782df91dc177f6fdf65",
+    "operationsCsv": "10ae166095823fcd10d064103036f86a33182fbd254ae5d3ec029869e33a0f51",
+    "statusJson": "acad682155f6e4f8e2858309073dc4edb66d5e9869ad4d28e599187633626384"
+  }
+}

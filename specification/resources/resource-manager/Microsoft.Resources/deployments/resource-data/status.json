@@ -1,0 +1,27 @@
+{
+  "service": "resources",
+  "projectRoot": "specification/resources/resource-manager/Microsoft.Resources/deployments",
+  "entrypoint": "specification/resources/resource-manager/Microsoft.Resources/deployments/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "3ca69e1c22b359464c0566c300a23f16de12b807ec35825e90a17d0dc315d1cb",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 52,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c5d53c4dc8992f817f8d83c2f6ae9c239022d5c6ad3a37c0389875db32174e79",
+    "operationsCsv": "0d73ff400e3d4af075760537bfdd7d27eb621054cdd7623e36b03a585348c73e",
+    "statusJson": "c96c6a63d29023c1bb387fe836255edaebbdb2c63fa0c1edc381bf47778a47c9"
+  }
+}

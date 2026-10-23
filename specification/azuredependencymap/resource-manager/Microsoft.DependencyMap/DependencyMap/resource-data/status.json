@@ -1,0 +1,27 @@
+{
+  "service": "azuredependencymap",
+  "projectRoot": "specification/azuredependencymap/resource-manager/Microsoft.DependencyMap/DependencyMap",
+  "entrypoint": "specification/azuredependencymap/resource-manager/Microsoft.DependencyMap/DependencyMap/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "484666cb9fa46a141c24f5e4f592f8208ad7c618651f0347bd4a4c44d29da397",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 16,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "812c055702f2b8e87fc3ccd5ae85ef2cc8a54313fd8c1afed331801488f2f4d3",
+    "operationsCsv": "8477f6391ac2cf75575eef8531aa0d850489453bbd0da4a0c5288b9cb6fba2a6",
+    "statusJson": "898b74884b4a369760627c6a6f9ce020c7799d8a49904072f568346c389d3a92"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "storagemover",
+  "projectRoot": "specification/storagemover/resource-manager/Microsoft.StorageMover/StorageMover",
+  "entrypoint": "specification/storagemover/resource-manager/Microsoft.StorageMover/StorageMover/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "8fd650efc1b187c562c87dac8097651eb7249b8345f7a5cae6ed8041bd3c7bb2",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 35,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "423407a5791cdca8686dbefcc0e07c28de0d44611fbf4b22b2da2308f98019da",
+    "operationsCsv": "2eb5e6257a18d32833f5fe9a76fde2182a0242e21a38b5c3fad5dbf2104891b9",
+    "statusJson": "43f2db5c629e6cb8f7e88bc0ccbb3dbbd08c00a01a4d46a642a909e8ee6c2931"
+  }
+}

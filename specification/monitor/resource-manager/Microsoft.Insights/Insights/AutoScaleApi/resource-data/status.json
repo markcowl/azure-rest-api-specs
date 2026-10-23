@@ -1,0 +1,27 @@
+{
+  "service": "monitor",
+  "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/AutoScaleApi",
+  "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/AutoScaleApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "a29278417c642bdf644458bf22e8110a75c61de1cf4f552665ef9efbc1bc8c81",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 7,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "fa908b29f7fed1d29fc7d8653c84cd805cfbc52462dfb78c7a8d9240925d4f96",
+    "operationsCsv": "53a4556805f9edcfe5c5f5628aca65e8bb02f3645365e3b506852181267bde84",
+    "statusJson": "5ef898e2256e93bd92128be68b1aaf04ea421ccd1b9137b67173c17526441df7"
+  }
+}

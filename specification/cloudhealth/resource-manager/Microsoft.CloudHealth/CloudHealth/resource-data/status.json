@@ -1,0 +1,27 @@
+{
+  "service": "cloudhealth",
+  "projectRoot": "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth",
+  "entrypoint": "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "4cd67f59815805f43c93aaa7074e39ffe5c2a5ba405e2a0baf7508f8de15d476",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 42,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "83db9d2efba5ca7a8f3aa7371e90eb3d9ede93222e7be0f7c43e71f69fe9ab19",
+    "operationsCsv": "376f58a7b80409dd3cecb7fd61c56a14b7c022012e5395da82c409636cb92db5",
+    "statusJson": "eb5cd7aa42742fdac700f3101d50e130044a213233493bccd8f7deee8c7604bd"
+  }
+}

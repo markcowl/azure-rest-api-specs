@@ -1,0 +1,27 @@
+{
+  "service": "advisor",
+  "projectRoot": "specification/advisor/resource-manager/Microsoft.Advisor/Advisor",
+  "entrypoint": "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "0ec7dec14e96f6a69dbade0a5fca227f6d95fdb0df541b50ead3048d13ebc030",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 9,
+  "operationCount": 28,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4d521b7a29e8bf3b821fb3c9323e9d2c89ba0e8af3ed5a00dce2bd37bce8c9a0",
+    "operationsCsv": "70bcdbb2de839c0e2a2034ccfec1d3c2217c3407662272029b9a0430c264af86",
+    "statusJson": "43884a79d276aa411c54008e56d9d9a044e1c8ef38f5cdb8d57e4388b05b34ed"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "compute",
+  "projectRoot": "specification/compute/resource-manager/Microsoft.Compute/WorkloadManager",
+  "entrypoint": "specification/compute/resource-manager/Microsoft.Compute/WorkloadManager/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "96365a506662d30a6dc89f3721563c621ada991d007b9ddc0540bad855a6d270",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 21,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "28c062903d20e97878230b0f885bca8407dda52abedb3e88793ef5b0e7118814",
+    "operationsCsv": "9e6fef6fa565b4fe18ee4a77b92c0da34c29c28897b288ff9a65d6b3c7a9af3b",
+    "statusJson": "bc2c4e5761fd546796810d316b4a44277f0ac8791c189d1591db5fdcf2b74745"
+  }
+}

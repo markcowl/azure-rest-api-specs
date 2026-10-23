@@ -1,0 +1,27 @@
+{
+  "service": "edgezones",
+  "projectRoot": "specification/edgezones/resource-manager/Microsoft.EdgeZones/EdgeZones",
+  "entrypoint": "specification/edgezones/resource-manager/Microsoft.EdgeZones/EdgeZones/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "c0647494fea2e493fe6db15c92dd378214816f29724e40d97db0306246fb15b5",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "ffd6245a2ba798152d60f864ba26df269c741aa638bf4b47f389b52f567e2398",
+    "operationsCsv": "7f90ae69d47090e7ad105fc2f513618ff4378f65766c4a0601ab7ca3393fcc3a",
+    "statusJson": "f20960c196e6c39794674ded09c1e78396c86c1ba50a4a7a5102b7b39b8f84e2"
+  }
+}

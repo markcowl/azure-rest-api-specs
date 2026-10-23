@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/PrivateLinksAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/PrivateLinksAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "43f388c9720e9af5c4f0308ad5b48a75f5651b304e3f3b24726298a76c8fd4b1",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 13,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9c55054931449da0c31c2c106a82f800ebbb7633dea313f48d2f732555053694",
+    "operationsCsv": "a3ab0fc2e0f3f665e42552bcd826f6bbff302c9df3269e97c23ed4c74651a0a0",
+    "statusJson": "a942a77083344c94c64cdebd3044afc35d9b8faa375311a66ed8bd6303a245f7"
+  }
+}

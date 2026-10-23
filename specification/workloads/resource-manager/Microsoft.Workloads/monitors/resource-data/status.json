@@ -1,0 +1,27 @@
+{
+  "service": "workloads",
+  "projectRoot": "specification/workloads/resource-manager/Microsoft.Workloads/monitors",
+  "entrypoint": "specification/workloads/resource-manager/Microsoft.Workloads/monitors/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "bbcf86544d9922f62f1b65d50d067e11f03b9d72f3a053c241b282455b54b4e7",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 21,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "216fc2ca3f063a843da1d860123fbb4af002b28abc60d1b5065b92c4a2504c8c",
+    "operationsCsv": "6f7208b5eca245267aea4677c559ba297a7a6df44c3542ee323b44f6493efe62",
+    "statusJson": "4b776d5c9ca4284bf1a2701a01f937cc0608c6cd7f47e2da80e93907f214b535"
+  }
+}

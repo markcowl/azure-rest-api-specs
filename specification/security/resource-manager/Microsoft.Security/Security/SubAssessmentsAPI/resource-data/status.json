@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/SubAssessmentsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/SubAssessmentsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "252651d0b25d8527ad0d7b93f7131a728d42a8abafff26414f6d4b8723f8c2b7",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 2,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4fb381cbc55dd63377716eb09a4630da4fe28609a63b16ec9fc1a332ab2031d6",
+    "operationsCsv": "96ac6225cb0d5153e8be421324cf1bd3f8ed31dc39d471380b7f1f51c5dbda67",
+    "statusJson": "804b996679d14a3c8efc589327930760ba413901cca27e54756da24717840b95"
+  }
+}

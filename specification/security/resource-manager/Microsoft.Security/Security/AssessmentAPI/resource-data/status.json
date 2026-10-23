@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/AssessmentAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/AssessmentAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "c9fcdda5e93c359a250aca3870465788bae5eeee6e52d072ed14292724440ab3",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 10,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "6ced47bc686c4dbef20348f57b50008b30ef91c868e9204d838129ab60b546ce",
+    "operationsCsv": "a4644d19fa5f14371c2419f9a9c9311e3e0be8b7a220308c9fb3e85337edea02",
+    "statusJson": "6dd75b07602bfab6f1809b8a69b477a9f3bb8400ab71503b090de7ec9ec0085e"
+  }
+}

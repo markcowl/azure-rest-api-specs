@@ -1,0 +1,27 @@
+{
+  "service": "imagebuilder",
+  "projectRoot": "specification/imagebuilder/resource-manager/Microsoft.VirtualMachineImages/ImageBuilder",
+  "entrypoint": "specification/imagebuilder/resource-manager/Microsoft.VirtualMachineImages/ImageBuilder/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "1bb8fd1b3b4dd71dffd0f2851994229ca34d07d8c5ef59eb4087591341a20ffc",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 14,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "5b27b02a01a0188a4b62b6b1c88bbf15b1b1c04f165c1af8bb0d592240375c46",
+    "operationsCsv": "69a4acd8fc45be4a9a6d5321e4b822a6690dc383a14b2bef14bfb2b30b9a61a7",
+    "statusJson": "a94d7a89c419c26fd80b5cd9ec65862458c90f273d09da670be771ea483ebd51"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/ATPSettingsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/ATPSettingsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "e559b5b6da6722665a363fe3826cabc9de3c9007071a286cc8e276663f0dc49a",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 2,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "645b03199e2ebf285a1973ba3b3888e222dfb72e4ff0644c95647a990f72acba",
+    "operationsCsv": "690898dc621752b2ddc2258f0396e015a62ab96ff86eb18d5e076ece76521e9b",
+    "statusJson": "462ff9f7bf4e52d962ffb0ab6e1f226e0b2b1310158257ef28fc3e0f19a0c4be"
+  }
+}

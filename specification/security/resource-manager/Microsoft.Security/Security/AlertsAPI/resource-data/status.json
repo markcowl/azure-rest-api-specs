@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "79f92d60096b11bec52e8802203a98ac7a55efb5e4be43305c94dfec9e862b93",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c1e5120076014214560fc296378c78ad31843d8914b028ab92697cc6e1465844",
+    "operationsCsv": "e37e89de99cbe711254fe781357ac9f61cd779f69ac8d76ed1062ef69233730c",
+    "statusJson": "0d3e3259e75f1555bebf47c028c0337f4bccb07fe37791243fa6540f2b4c174f"
+  }
+}

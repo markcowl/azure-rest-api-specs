@@ -1,0 +1,27 @@
+{
+  "service": "dashboard",
+  "projectRoot": "specification/dashboard/resource-manager/Microsoft.Dashboard/Dashboard",
+  "entrypoint": "specification/dashboard/resource-manager/Microsoft.Dashboard/Dashboard/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "5cdae5537984617510d1dae01011802be237187fb48f98296c9515717de8d8bc",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 35,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9770a4a3f2b17fb002d51b4c9ff4d7b6f6bb1f2d387f136832b16d8457dd982d",
+    "operationsCsv": "658643d1d9393347c03fcbc2b9d4de75953e71e9a27f71d5e4184ddca0c136a9",
+    "statusJson": "95d61b92a3bef0ca74876e9fe1bc9e54bdbcf57d0330d3f729262cc67fda2884"
+  }
+}

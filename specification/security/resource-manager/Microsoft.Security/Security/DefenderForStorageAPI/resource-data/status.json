@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "03889ca8241a3b7d00212113daa58894cdcec9198bcd3941f92ba876e3d42ba5",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f4674b529b4b6becdb442cded980da38a90554ff852b6fbfbc4f6e4f6add3d8f",
+    "operationsCsv": "58574283e5efc8ea808920f515a8c2a3b2c7b3e1d20c4d280f60ac1dba17cada",
+    "statusJson": "fd1d926d93e170013f4715f7be130be05b36a992142a4e62d616873b9112fe9f"
+  }
+}

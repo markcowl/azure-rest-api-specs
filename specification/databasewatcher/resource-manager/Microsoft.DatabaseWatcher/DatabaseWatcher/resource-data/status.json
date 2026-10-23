@@ -1,0 +1,27 @@
+{
+  "service": "databasewatcher",
+  "projectRoot": "specification/databasewatcher/resource-manager/Microsoft.DatabaseWatcher/DatabaseWatcher",
+  "entrypoint": "specification/databasewatcher/resource-manager/Microsoft.DatabaseWatcher/DatabaseWatcher/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "875d28a8b1c97d2e1d8c9eae490201e4ed87b5612b2fb3a5b9a08074b31c43a9",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 23,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "6d894df33ad53bb7991c4021a9186328a7bd719f05136d181b4dd3ed141155a9",
+    "operationsCsv": "a0aaea0c80c762f0098f3ea613e5017528e40ae80845423cb8090024ce875b1a",
+    "statusJson": "ef0f29c030864faa781ee1eeebf8fe270cfef7d32b681f77a15c3225bf736e45"
+  }
+}

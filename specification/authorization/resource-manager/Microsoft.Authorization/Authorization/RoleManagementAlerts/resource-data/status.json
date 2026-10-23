@@ -1,0 +1,27 @@
+{
+  "service": "authorization",
+  "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleManagementAlerts",
+  "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleManagementAlerts/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "8ac1d2f27db4c129d57e420e6a905dce18b1edb8b326f281565814d20c282d97",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "093b695a87f4d9466efe69604d3f5a29a33109599ceac0585a7bbaed19d03431",
+    "operationsCsv": "74b8004b11e52c34bf0acbd73226073b2d0b413dd3b56a63522f8d39efd133b9",
+    "statusJson": "f0c82690455a759021694947734c64fb6522c579388ea7ed16a4734a2f088e27"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "resources",
+  "projectRoot": "specification/resources/resource-manager/Microsoft.Authorization/policy",
+  "entrypoint": "specification/resources/resource-manager/Microsoft.Authorization/policy/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "e698e7c98938771637f865a0f64b5de5b1252398715d2072ed834dc4a0b3ce41",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 20,
+  "operationCount": 82,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1307054760bafcd9f303a160e74bf41cb64519af7fe6c833417ebdac68ba3f0b",
+    "operationsCsv": "02e2e0a3c5abc84fa4ee58d3ecb14d06b2acb3cff9fea9aaef45766ba1b9e99f",
+    "statusJson": "b770366ab8944af91ad65f42b9dc362dee584955dd0a28d3cdb95844d0be78ac"
+  }
+}

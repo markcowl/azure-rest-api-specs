@@ -1,0 +1,27 @@
+{
+  "service": "github-network",
+  "projectRoot": "specification/github-network/resource-manager/GitHub.Network/GitHubNetwork",
+  "entrypoint": "specification/github-network/resource-manager/GitHub.Network/GitHubNetwork/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "5c80406ca8d6571f3cf04aec65593c2b4ff61e1980f68486371dbcf86d40e377",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a2d7b98ed981a5f3e60f5b3dac0a9f547ded88d7e0d8ad40718e7357a72964db",
+    "operationsCsv": "d484670cdb93439495386e716ffaa6c62eef19767ca140cf4d4a0cb3ef231cfd",
+    "statusJson": "e9f4e06c78d73c35b6e659fbf9d801305ff0d89b9726d290b1e64b00c859d8d0"
+  }
+}

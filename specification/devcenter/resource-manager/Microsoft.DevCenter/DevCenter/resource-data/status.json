@@ -1,0 +1,27 @@
+{
+  "service": "devcenter",
+  "projectRoot": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter",
+  "entrypoint": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "f3ddc7ede45c0096b74569a478cdd05bb131b87cc195acef87a54d18193e5908",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 29,
+  "operationCount": 124,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 4,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1bb54c7c15907f05941f750fa1b983c43a8514f5a9b0c22aef7ae20eff01fed9",
+    "operationsCsv": "d91b858079427550e0e7da35272986367acdd5b99e4da39f29d90eb45612ac54",
+    "statusJson": "3c079c8b4f3de0b9ed94b323cbd8359532fb55b8758877d542b3fb3193a891cd"
+  }
+}

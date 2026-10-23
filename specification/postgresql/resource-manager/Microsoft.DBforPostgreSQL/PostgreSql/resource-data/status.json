@@ -1,0 +1,27 @@
+{
+  "service": "postgresql",
+  "projectRoot": "specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/PostgreSql",
+  "entrypoint": "specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/PostgreSql/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "58a05cd7511cf4774a2bde0d837cf5b20cf31299a4bea0822302ec7e099e7bc5",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 16,
+  "operationCount": 70,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "31453cca9d5fde31e683b6b4f5b94d1b06a387f26d2b0b42797dd7ba83f65b8c",
+    "operationsCsv": "f0ac6c9452d05e97c7d89c399837882ea3cc02d65b5f073514bd89068b065abb",
+    "statusJson": "a9d78f8fd78e2534b8c7c27fe8166b90ccba7616e1d8a56a71e48ec2b841caab"
+  }
+}

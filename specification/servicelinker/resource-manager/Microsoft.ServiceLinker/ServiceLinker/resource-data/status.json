@@ -1,0 +1,27 @@
+{
+  "service": "servicelinker",
+  "projectRoot": "specification/servicelinker/resource-manager/Microsoft.ServiceLinker/ServiceLinker",
+  "entrypoint": "specification/servicelinker/resource-manager/Microsoft.ServiceLinker/ServiceLinker/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "5402238fed1aad9a3821e2d649084e63cfb22307804049dc9c1a63e25ea11015",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 25,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "72188a50dec61d26c82e0616d370e61c4b225b1ffa31726e53e26e55dde57092",
+    "operationsCsv": "e091138457d7323dcf0d7b096c303934d00001ae3db76987f8d0f04e9bd09c95",
+    "statusJson": "cd0486e746086de96dbc20d87a806bd2c2fa6e7702cfa3cecb3e0fc139fa0a5d"
+  }
+}

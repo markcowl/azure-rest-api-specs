@@ -1,0 +1,27 @@
+{
+  "service": "platformvalidation",
+  "projectRoot": "specification/platformvalidation/resource-manager/Microsoft.PlatformValidation/PlatformValidation",
+  "entrypoint": "specification/platformvalidation/resource-manager/Microsoft.PlatformValidation/PlatformValidation/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "1e04130ec88fa4bb32a933fcdf8126ed1d3923bebfcd706b93ec55b51f107102",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 23,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e08168ea8c5ecc30d54c997d80ea2404c8e290506ead668e617215e7b5d88b3f",
+    "operationsCsv": "d2f817b8d069e738925e42d14ab623416973d5f0ab9f662a0a532c9256daa4fe",
+    "statusJson": "f7ccac9ad439ec813f48fd117a0fe356f0b12a7c749a0cd07cde36a6079c069c"
+  }
+}

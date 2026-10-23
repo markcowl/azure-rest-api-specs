@@ -1,0 +1,27 @@
+{
+  "service": "monitor",
+  "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/LogProfilesApi",
+  "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/LogProfilesApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "31e35c575c1532f69cb55ca313d4686753ee8d7f1b43366a7ec8519d22f612bc",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 5,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a2cbb05e160788f76e458d770ad580a24a185dbf692208b91b5414241babb4d0",
+    "operationsCsv": "c926be5fe5c09a2fc51d5cad15d95d52e3a0b8feb7e163da3a72afdd4b287c50",
+    "statusJson": "d678c7e8382c19b2a90fe7dc6400608a423f2ea4874058186fe4f1eaf0986299"
+  }
+}

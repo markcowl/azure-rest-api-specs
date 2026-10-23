@@ -1,0 +1,27 @@
+{
+  "service": "workloads",
+  "projectRoot": "specification/workloads/resource-manager/Microsoft.Workloads/SAPDiscoverySites",
+  "entrypoint": "specification/workloads/resource-manager/Microsoft.Workloads/SAPDiscoverySites/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "b12f8e0f07169d49bd85802f6d623dda8fa1b75afd502c1e7625c2dede920ef7",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 17,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "16acc42d9179bd2b4a0f2a2e52a47033cd7fc30e4cbcc1d6e6b25fa2363ffc40",
+    "operationsCsv": "2dbee7d5d5e5367116dc1915969b5b4d09ae4972cbec1ef9233452c9ab2d7dc5",
+    "statusJson": "52eb58857b24a4be11f866fdb2074fc8035f0e8fcb2ca9e809ccbfde9d3487b1"
+  }
+}

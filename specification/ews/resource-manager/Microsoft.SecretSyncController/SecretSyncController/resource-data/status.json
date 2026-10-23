@@ -1,0 +1,27 @@
+{
+  "service": "ews",
+  "projectRoot": "specification/ews/resource-manager/Microsoft.SecretSyncController/SecretSyncController",
+  "entrypoint": "specification/ews/resource-manager/Microsoft.SecretSyncController/SecretSyncController/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "3fffaf0f129feadac2ff6c36ba7abca79f5ce24485eb2c79870e29e8a3fdaf1d",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9d7b5745bf5b85c5de0b8d3dbbe89119b9635df5171f810f2f64dd97d93c10cf",
+    "operationsCsv": "5de856858b10539f7c259612ee2f2754490587686292671ab0109a353597bc92",
+    "statusJson": "5923007507e2c2407d6edea9716084ed5c2ff5f593c09a740cdb8c63a573d6cc"
+  }
+}

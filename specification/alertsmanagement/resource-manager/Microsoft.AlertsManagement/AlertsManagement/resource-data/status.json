@@ -1,0 +1,27 @@
+{
+  "service": "alertsmanagement",
+  "projectRoot": "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertsManagement",
+  "entrypoint": "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertsManagement/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "20fda3e413b9ad932e6aba6c72011c6cdfbdb2f0f67965b12a0b00bd7d32411a",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "89ce48bf0a828876f9316a46842b3a38c0f5228adef98855df8221e69e4010ea",
+    "operationsCsv": "384f637fc2c44515f850681f9bf0fdaf590999f483688e3defef0ed9b8dcaebb",
+    "statusJson": "a32f02874b52a400e7d564ee78d18854ddcd23b5e5b05401432d895c54e96657"
+  }
+}

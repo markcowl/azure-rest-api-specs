@@ -1,0 +1,27 @@
+{
+  "service": "resources",
+  "projectRoot": "specification/resources/resource-manager/Microsoft.Resources/databoundaries",
+  "entrypoint": "specification/resources/resource-manager/Microsoft.Resources/databoundaries/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "35fd2d22b8aae61764a8d461727477dff5c836797a87c1999712e4dc5dd420ee",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 3,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4343112395394b4d21e60b2efd59e5aaa279ff3567e5b907e236b94f172f2683",
+    "operationsCsv": "a638240e52ec8fb5a9fc27eab0cd0cefdaf505b32265e8707208f62c92a3143c",
+    "statusJson": "b885c40f6d18ff0c8dbd9d40219da9c147f062463a3df59ace990cf5ad93ba4f"
+  }
+}

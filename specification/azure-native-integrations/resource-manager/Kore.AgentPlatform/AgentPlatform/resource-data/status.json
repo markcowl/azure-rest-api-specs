@@ -1,0 +1,27 @@
+{
+  "service": "azure-native-integrations",
+  "projectRoot": "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform",
+  "entrypoint": "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "a598cbde9742ff76f34f827e925fb3143eb6532e6f053361c6adfc6864eb0f20",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 16,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "ea084d47f9b342ea923880abd290bbf58b6dfb3311fcee3d9e19ca663ab95ae2",
+    "operationsCsv": "89aee148156a142055a527c87a1dd243a613bdd657e13bb47f5f20e6f4e18258",
+    "statusJson": "6f4768f6713727ef19702342846c9a1b0e48347aadcb3fe6fb22c5cf5c100c67"
+  }
+}

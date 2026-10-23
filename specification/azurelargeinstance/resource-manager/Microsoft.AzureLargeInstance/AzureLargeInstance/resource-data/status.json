@@ -1,0 +1,27 @@
+{
+  "service": "azurelargeinstance",
+  "projectRoot": "specification/azurelargeinstance/resource-manager/Microsoft.AzureLargeInstance/AzureLargeInstance",
+  "entrypoint": "specification/azurelargeinstance/resource-manager/Microsoft.AzureLargeInstance/AzureLargeInstance/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "1463102db76ad44c1cd89f8e06dc7c073b69762db578e426cd45e258274b4dd7",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 15,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "63eaf6d28f0adfd7444fb2c4b28fff784c244505aebc5a00447c12714866a157",
+    "operationsCsv": "b9fcddaf5a35e924db8cb89ce8cb2af9321aec50f3d7bcb44004f63299f06606",
+    "statusJson": "ed7952856c36a5495cf6973905102d5222f365ff8f0c6407ee59cdfbee9aa9c7"
+  }
+}

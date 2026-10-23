@@ -1,0 +1,27 @@
+{
+  "service": "iotoperationsdataprocessor",
+  "projectRoot": "specification/iotoperationsdataprocessor/resource-manager/Microsoft.IoTOperationsDataProcessor/IoTOperationsDataProcessor",
+  "entrypoint": "specification/iotoperationsdataprocessor/resource-manager/Microsoft.IoTOperationsDataProcessor/IoTOperationsDataProcessor/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "85c892e2bd668c167a912cc9ac9baf74a433d0c0f5858c389397582d96ee351f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 16,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c37579948e10d585565498d4462f74651656ed41fc433ee99542451f03271b5f",
+    "operationsCsv": "a4d8a352a8169cf11b59e79bb6badd93caa9a59ba20aff8ab2b389dcdfd3cca8",
+    "statusJson": "de5e3d3ff436ea35d6b01815e79e22eeaffeebd2b131b0dec48b68dabdf24e0c"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "migrate",
+  "projectRoot": "specification/migrate/resource-manager/Microsoft.Migrate/SqlAssessments",
+  "entrypoint": "specification/migrate/resource-manager/Microsoft.Migrate/SqlAssessments/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "1b3127d55de2d640e0cecc100fcdc3d3f96bbaf11f5ab2e99f134ccd928aeccc",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 15,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "446caf78c394f7c60caef6f347ef30bab2a2ca5737718124937789b2f25ca59c",
+    "operationsCsv": "0cf455f27544e76b848f59e9995ac83e694b271b239ec7159d2a452ad6a0c26d",
+    "statusJson": "98aa5ad810a71884d2e1d4731e2b0e4d75355e41c85e0f972b9ade95acbc5405"
+  }
+}

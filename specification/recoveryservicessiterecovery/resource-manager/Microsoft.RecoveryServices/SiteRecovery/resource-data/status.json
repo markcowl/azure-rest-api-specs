@@ -1,0 +1,27 @@
+{
+  "service": "recoveryservicessiterecovery",
+  "projectRoot": "specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery",
+  "entrypoint": "specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "048fc33b4dd3928544ca94f650cbf4b563613dd077e06063f22e20c8f94cb2a0",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 27,
+  "operationCount": 134,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d50fe0ffc2086bb913c01aa5d5f35ab871a451c10173fdee7c3197c674dec321",
+    "operationsCsv": "76fb71dd31bd5667b099446633f009ae3d2db1426ede2e7b4d8171b1a8feb22b",
+    "statusJson": "27fac8db2d3f3b03da485191af627adc03be2fdfdcd8a0f80002122578bdfdc2"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "operationalinsights",
+  "projectRoot": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights",
+  "entrypoint": "specification/operationalinsights/resource-manager/Microsoft.OperationalInsights/OperationalInsights/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "8365c61680e23a413fc1774712feeb24d261e9cc5f1e124a7104cb283fbd25a9",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 13,
+  "operationCount": 73,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f9b216fc00f098eee0c7ad4f4651ed12d1806125aee51d4d474e56a0c5ef5558",
+    "operationsCsv": "547945e9e32e112bdf0e2bcf71beef9663c186e57fc3295160c0ad015ade22a6",
+    "statusJson": "45ae9dd072273d75f1247bedffffc61bedc61a6718b0ac091c91ced7c75497fa"
+  }
+}

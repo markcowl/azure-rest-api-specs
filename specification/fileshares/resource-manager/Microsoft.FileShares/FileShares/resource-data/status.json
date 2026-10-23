@@ -1,0 +1,27 @@
+{
+  "service": "fileshares",
+  "projectRoot": "specification/fileshares/resource-manager/Microsoft.FileShares/FileShares",
+  "entrypoint": "specification/fileshares/resource-manager/Microsoft.FileShares/FileShares/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "41d230aa1c3f23309047d2e68700b922526b7671fc169abb6026ec6a4959d317",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 17,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "5e25cf1aa10fa45807aa138c2015a6b47d8be59babb67ac60279f3a4166d000e",
+    "operationsCsv": "da1280497d9ebbafe8612a0e4d76a012b57b908587e99b84b13b90a24c0af96b",
+    "statusJson": "4f8e7caafbd051d78cd558a9e9c0e4c426c9aeb48105b67df4bfefbde48d2c93"
+  }
+}

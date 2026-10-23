@@ -1,0 +1,27 @@
+{
+  "service": "migrate",
+  "projectRoot": "specification/migrate/resource-manager/Microsoft.OffAzure/OffAzure",
+  "entrypoint": "specification/migrate/resource-manager/Microsoft.OffAzure/OffAzure/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "ff8ea2d41077b14f50592054305132f7edd6b21ac38aedcb06128277e442a8a4",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 42,
+  "operationCount": 195,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "21226108903dee93e397e5913ccb671d7f03251e1c1547e79219e148b21de4d7",
+    "operationsCsv": "7f16899b3c418199c41a65c81c918ee0216fdf99e7f2033d599a3df37984e3c7",
+    "statusJson": "e80c0b2a7e1070f48b02b0300b2638cb615f90a9a7fa8301272eca4b1004d4d0"
+  }
+}

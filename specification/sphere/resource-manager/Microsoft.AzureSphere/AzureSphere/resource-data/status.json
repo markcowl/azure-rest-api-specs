@@ -1,0 +1,27 @@
+{
+  "service": "sphere",
+  "projectRoot": "specification/sphere/resource-manager/Microsoft.AzureSphere/AzureSphere",
+  "entrypoint": "specification/sphere/resource-manager/Microsoft.AzureSphere/AzureSphere/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "89a221bc246224b92c8b81c7127744a8d8f4d55358d059bdcf58d440d52738d0",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 44,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e0c12fa3e6a44135374d070104844621e7b563916b4604a065defae23d5db6db",
+    "operationsCsv": "12ffd32e8a2d10b2c9936299562fdcf401bf0957234740f9c5e77b2728e7e409",
+    "statusJson": "d2fba52760fcea8aaa95e05a14c45dea086c7a1a3063ee73aae9be2a6fed69c0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "purestorage",
+  "projectRoot": "specification/purestorage/resource-manager/PureStorage.Block/PureStorageBlock",
+  "entrypoint": "specification/purestorage/resource-manager/PureStorage.Block/PureStorageBlock/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "07a5a3706e16702858ae5721fa9ec52dcef39032011353580f036795005baf9b",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 10,
+  "operationCount": 63,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1456a309627cc725dc5fcfd9f4df4915b2880da12876dbd04ec08861b0a3c60d",
+    "operationsCsv": "61f96d81b8ed448100f04bc6e76ea34f96b6909aa42366a6b83d7b5b17c7d171",
+    "statusJson": "bb342c480b3a06efd6984f50165f9cd3feb2cab94c891c0949e1bab5be060115"
+  }
+}

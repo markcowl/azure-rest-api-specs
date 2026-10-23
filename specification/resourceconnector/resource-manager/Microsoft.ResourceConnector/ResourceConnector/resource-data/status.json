@@ -1,0 +1,27 @@
+{
+  "service": "resourceconnector",
+  "projectRoot": "specification/resourceconnector/resource-manager/Microsoft.ResourceConnector/ResourceConnector",
+  "entrypoint": "specification/resourceconnector/resource-manager/Microsoft.ResourceConnector/ResourceConnector/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "975f3aeb9d5518af4eeb779861e2485b8225e9481904703f4e43a60dbd5581bf",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "ce807fd87e387b624773bcc20d84a24fd3af4a9cb29092855d9d28d710f66946",
+    "operationsCsv": "eb9ec5c6d8ba41d834ab52d930c0dadbab9125647b60474feffe80554c09e2b9",
+    "statusJson": "5737f17904f1c62103a87b3745d431477f2bc918bb627a32d933153519d598bf"
+  }
+}

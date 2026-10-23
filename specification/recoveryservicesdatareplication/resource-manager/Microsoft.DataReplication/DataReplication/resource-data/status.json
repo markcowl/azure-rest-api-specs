@@ -1,0 +1,27 @@
+{
+  "service": "recoveryservicesdatareplication",
+  "projectRoot": "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication",
+  "entrypoint": "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "4045cd1994d39492fcf87ee4bdf1aa50da686bc6887eed776abd037f07db786d",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 12,
+  "operationCount": 45,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "44ff258b006b64bd51fff4ae97bcf83295062a8b95e78209e332e63141cf8100",
+    "operationsCsv": "1502a593cb9135a83522bb8f65dc324e97d0d5bceb420a1da9f3ea3231782d21",
+    "statusJson": "0530d29eb78952ab81a89f0c6685cbf71e690c3c681eae9c5fbd047bb87c193a"
+  }
+}

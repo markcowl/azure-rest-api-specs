@@ -1,0 +1,27 @@
+{
+  "service": "authorization",
+  "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/Authorization",
+  "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/Authorization/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "61003a7f926bcbb768e76ee836d28be5700c07af16221c6237639cb6dcb24784",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 26,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "cce31c921076bfc8a74c8f605b2b8c84217b62e2edbaa50dea57835fdfd5ffd2",
+    "operationsCsv": "8f1302a69d957bba821bfb01256c47da26f4cf6fb106e866608438649575afb6",
+    "statusJson": "09971784093a85f6709205ebbb2c89dc8e701390595a11c3554ebf806d6a39c2"
+  }
+}

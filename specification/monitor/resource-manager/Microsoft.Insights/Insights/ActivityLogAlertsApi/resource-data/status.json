@@ -1,0 +1,27 @@
+{
+  "service": "monitor",
+  "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ActivityLogAlertsApi",
+  "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ActivityLogAlertsApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "ffa7ab81799126f8b07ad76dbf3a56f299c86c3560599596380c1c18574e4864",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d443285e253df160e810071626d785b5ecb1677523e10374c1c8a27ef712f51c",
+    "operationsCsv": "3af0026a5db6c2166b6bb4cd1f39a1e57cca052b7f7294d8023a0fec8c72b49c",
+    "statusJson": "9d3c3fffa4846358e560f8a1883df53366e1278f7ef7a4d593b167d13caa0a8d"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "durabletask",
+  "projectRoot": "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask",
+  "entrypoint": "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "130cc9fa3ba9d4a91ae92636212178503ce1f2ccd740a907c90a6f997647930f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 9,
+  "operationCount": 40,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "8ba32cfd8abe7590896c1f7dfdb78e0d957cda5d21d308a086fa9bb3de495683",
+    "operationsCsv": "5f63b60bf18bdf78cd7a17659a6547cddb6689edea15bacd8977b6595ed8bebe",
+    "statusJson": "305650e41b0e336c93f6f39c561a9c06f46ea417ee14e42e4d359588dd5e2a27"
+  }
+}

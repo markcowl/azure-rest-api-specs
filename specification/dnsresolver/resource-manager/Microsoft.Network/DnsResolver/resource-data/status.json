@@ -1,0 +1,27 @@
+{
+  "service": "dnsresolver",
+  "projectRoot": "specification/dnsresolver/resource-manager/Microsoft.Network/DnsResolver",
+  "entrypoint": "specification/dnsresolver/resource-manager/Microsoft.Network/DnsResolver/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "a498e372eecb4e0db788cb3fecc659178ab1a752a3dde45fcf6b2d8c598f5663",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 10,
+  "operationCount": 55,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e59c51d9e758db97090ca062af78bcc6b352f7931a1ba640dabf1618936d1005",
+    "operationsCsv": "47897586dadeeeeff32b82a8e04a9785ec3fc377e79315d6ab6074ec956a1679",
+    "statusJson": "3c3ec79a243606effa3b680cf44904e82be0a7bd733c6f9b48f9fc123177c43f"
+  }
+}

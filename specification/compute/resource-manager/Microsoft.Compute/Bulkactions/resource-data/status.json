@@ -1,0 +1,27 @@
+{
+  "service": "compute",
+  "projectRoot": "specification/compute/resource-manager/Microsoft.Compute/Bulkactions",
+  "entrypoint": "specification/compute/resource-manager/Microsoft.Compute/Bulkactions/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "83fbc3ba723746c730c3a4f401cbc82e6de35af8444522136c028fe34f1e48c0",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 37,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "67b3a1afdc0c74847340a4f6cfc5867f7f8ca78e97a67f0f680aba8f163c6fb8",
+    "operationsCsv": "1fc2d784e114e068315bbc413d092aa0215cc16c2a3a2a95e9aa7547f691da2e",
+    "statusJson": "6c520de2beac206a597333b21dafd7117e2c30026c5ab14ba7d0df13c9b065f9"
+  }
+}

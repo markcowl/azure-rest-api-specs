@@ -1,0 +1,27 @@
+{
+  "service": "sql",
+  "projectRoot": "specification/sql/resource-manager/Microsoft.Sql/SQL",
+  "entrypoint": "specification/sql/resource-manager/Microsoft.Sql/SQL/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "3da5b765d51521ebbd4f45da7b8270b52eb98cce2857974daa101d7dcd537089",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 135,
+  "operationCount": 532,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 4,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "775165da5bc9807823e13dbc78cfb849ab03eac70f3806eed616e925a830ed70",
+    "operationsCsv": "a6ae671dcd51ead96342adfe40ce26e2bb3f79ecddcc3c8ea434f12525baae54",
+    "statusJson": "06fa4f0a427e5acc631fd54730dd5febc302c3cdb3ce1cc3c1585d50cf77b05a"
+  }
+}

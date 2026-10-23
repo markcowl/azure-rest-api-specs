@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/SecureScoreAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/SecureScoreAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "5bc9d177675fb9084e77109143558dbff9f88b0c1f1f8601a28ca0d689a6893a",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 3,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a9317d132bc4a5ba9d65effbb9198b998e6103924d279351fc5df9c7dc470b8c",
+    "operationsCsv": "502809929faf367086cda60d1d624b6b79d5d1ec7c6ab6d2c75264a93cbd2ee5",
+    "statusJson": "f0158e91e5b07ebe96a7f094277e5dc873f94caf722375bc317a4b3dc4c11a87"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "resourcehealth",
+  "projectRoot": "specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth",
+  "entrypoint": "specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "324f761266ddd9cf7701fd19651dcfa80b6943a74b011f8c8f6e85766df5e9f2",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 17,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "0e92a158e4b90a9040276e7a9a517d625ba86c9db1036595adf1d2b4486d7a80",
+    "operationsCsv": "b039868544c2eb7375d9b60170ddf29061cdbc06030048a3a6cba571689a53bc",
+    "statusJson": "43a844017e8723d4b7cb00074b5d932ff50ed51c110f333da7cb9b4a406d9cbc"
+  }
+}

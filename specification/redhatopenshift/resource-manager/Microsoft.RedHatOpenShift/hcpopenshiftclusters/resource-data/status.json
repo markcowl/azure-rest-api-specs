@@ -1,0 +1,27 @@
+{
+  "service": "redhatopenshift",
+  "projectRoot": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters",
+  "entrypoint": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "9cfcd3bc2998decb7b50d067c74bae391c6b26555143116fe5dab69c7c29d02a",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 23,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b95e045f31f8947187077838c9ce2a1217b0579bb50a9d5eea51391d6c22cc59",
+    "operationsCsv": "30c7275926c21c9000b172d2d1863a995337fc14a8f1df4227f8050e2736c174",
+    "statusJson": "3e823e6db106c605b171bb64995230e23fc28e2e1300dd65fc5ac9a0edee8b4b"
+  }
+}

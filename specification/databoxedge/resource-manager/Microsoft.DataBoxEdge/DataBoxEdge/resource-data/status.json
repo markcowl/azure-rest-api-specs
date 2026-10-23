@@ -1,0 +1,27 @@
+{
+  "service": "databoxedge",
+  "projectRoot": "specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge",
+  "entrypoint": "specification/databoxedge/resource-manager/Microsoft.DataBoxEdge/DataBoxEdge/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "8ad3650ce7b2e1684e54427f4e2291fda2ef57358f28d467f05597182237cfe3",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 20,
+  "operationCount": 75,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b1569a0a789b78ac53666afb1bb7219fcd644d4143cf63469f7e19adca53aaac",
+    "operationsCsv": "948f8936e3438a5d0d3504c271233038378758b92d1c663e223994331c2ef33e",
+    "statusJson": "7feda9d094760d93ae0bf61562940bf661e09b6b5c5becf30bcb7df806ac0591"
+  }
+}

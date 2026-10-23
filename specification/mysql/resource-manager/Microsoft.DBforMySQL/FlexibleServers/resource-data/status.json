@@ -1,0 +1,27 @@
+{
+  "service": "mysql",
+  "projectRoot": "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers",
+  "entrypoint": "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "d00416e98d79c256173fdd428206c5f26f845b549eeec20cb66cba419cebb77d",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 15,
+  "operationCount": 60,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e3fa322bf2a0a6a63796097ba83d531b61f0ad06275ff2ededa33182185dd8ae",
+    "operationsCsv": "e273ce330f5d1bd01756b38d4d74ac7ce4c4515bc4f60d9a13c0359133d30067",
+    "statusJson": "22ba9892b13ebfe8d8a33c529b1a7cec1887ec934a6740c43a47bb999253e81b"
+  }
+}

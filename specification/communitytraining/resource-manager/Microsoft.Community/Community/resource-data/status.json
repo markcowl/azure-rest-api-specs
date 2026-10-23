@@ -1,0 +1,27 @@
+{
+  "service": "communitytraining",
+  "projectRoot": "specification/communitytraining/resource-manager/Microsoft.Community/Community",
+  "entrypoint": "specification/communitytraining/resource-manager/Microsoft.Community/Community/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "110433f438d99f390b71d021c394e9e743774685183282de96229a74abdd6bab",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a81b869acdf5274c62f6a5620da3734caf58b91580c5791b79289982c768900c",
+    "operationsCsv": "8d45a1e585c20406a2182edc9cf99b43fa7b4663853f5162830d892d77d2028f",
+    "statusJson": "7faadae0e44b248cf8e63d7995c4a9096acbda5ec4435f7a80481a7ea866e309"
+  }
+}

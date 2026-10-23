@@ -1,0 +1,27 @@
+{
+  "service": "liftrmongodb",
+  "projectRoot": "specification/liftrmongodb/resource-manager/MongoDB.Atlas/MongoDBAtlas",
+  "entrypoint": "specification/liftrmongodb/resource-manager/MongoDB.Atlas/MongoDBAtlas/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "5b1533acf9a4998e694e50081db3199b866046e4c2e4f10d5456740bdf3970a2",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 16,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "5f23a2682236ac3ffa42a8eee00df639232ca74c24d4200757b0b1d83fac8b42",
+    "operationsCsv": "bd9e8b263ac45e350ba5abd37d469c329c3303816ca796d6eeb552bd66e84001",
+    "statusJson": "fdf94b85aa27f959b7d149464827d7d9ebba4907afd761e29089f930ad8b9cd1"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "maintenance",
+  "projectRoot": "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance",
+  "entrypoint": "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "f00529a0142fade6c4efb3be8b788169f897fdd925eb5b0fc0c08aa6c4a90c2b",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 28,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "bea835606f4570141beaa0e334293142e12ea4b3303c3b50a7c5969f49c00781",
+    "operationsCsv": "778ccb76054540d444277cdaadcf1928bbfa85d3cc3de77dadaf64cf053c759f",
+    "statusJson": "e65b30bfe4e4e8d7a22fad998e7a39b0e77e33e44c05f53618ad44b124ad09d2"
+  }
+}

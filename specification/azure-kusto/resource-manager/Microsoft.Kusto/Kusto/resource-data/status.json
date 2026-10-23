@@ -1,0 +1,27 @@
+{
+  "service": "azure-kusto",
+  "projectRoot": "specification/azure-kusto/resource-manager/Microsoft.Kusto/Kusto",
+  "entrypoint": "specification/azure-kusto/resource-manager/Microsoft.Kusto/Kusto/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "10e6097710a1e152df478b74f267144cfe18eb82a9045f617ff7a894dc0e9094",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 10,
+  "operationCount": 59,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c4cdfd65837334b13362251e9b11211f48e647e2e166e5ba258332c6cdeac7fb",
+    "operationsCsv": "db7591f560c5bdf36064f55b19844cdfc0841fa53b4224cb4fc25f5239bd3298",
+    "statusJson": "a08b27fd4be21bbd6f24319ab8bcead45dc1a132e4d54d89e0d1f5f37478e3c0"
+  }
+}

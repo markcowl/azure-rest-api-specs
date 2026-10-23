@@ -1,0 +1,27 @@
+{
+  "service": "hdinsight",
+  "projectRoot": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight",
+  "entrypoint": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "c8f372da7c3000dfa46981c55ba30f72bb4f34dae8390ef70b438b470ded6e91",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 10,
+  "operationCount": 48,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 8,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2a9a6719acd0061d822e786e6d81884c50864d9c19bcdd3b1e321d72d21844ac",
+    "operationsCsv": "0d7302b8e65a983933cbfaf24ff735b6ddc3422759f24a96d235f0367a6ee5c6",
+    "statusJson": "cc1942b7af6921a600a8aa1a287cd36fc0160f6da05862e09fb25f5b54da3b54"
+  }
+}

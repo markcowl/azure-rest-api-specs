@@ -1,0 +1,27 @@
+{
+  "service": "subscription",
+  "projectRoot": "specification/subscription/resource-manager/Microsoft.Subscription/Subscription",
+  "entrypoint": "specification/subscription/resource-manager/Microsoft.Subscription/Subscription/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "33c71fc92b06099ee3f6971ab64c482ef88e6e80e80113f988f4b35d75c542dd",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "0a536c64ab3ecd4491e10d1231f93c71c6848d4bcdc6c8f366ccb55942a2c96f",
+    "operationsCsv": "71a2d1e91b3728eb25b2fb0e45b43a910552e64e56aa40baedd56d9e5492b76f",
+    "statusJson": "7b6a9b1f53bffa2e2b3c26bf5aaaa436d347a48cbcddc0b18fd62f93e4feb71e"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/ApiCollectionsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/ApiCollectionsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "5be40de97d11ce6d292a475799e0ec76727cb19659334db906da9ab3dc0ace81",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 5,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b57f4d2eff5b156999c8a4bb420f72313bf505143f7ec2adc62331bf7b90f0be",
+    "operationsCsv": "8144c30c764f7ede626c98d09702018ada0dd43676b72fe51c686ef3e1ffc288",
+    "statusJson": "5c45f2101b57233f291d4adcd0d2da1be40d7f0903300bd6aaac96dce55aecae"
+  }
+}

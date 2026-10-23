@@ -1,0 +1,27 @@
+{
+  "service": "keyvault",
+  "projectRoot": "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault",
+  "entrypoint": "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "f5bce61ee78fcc4a313837188b38183b38120339af8b8745c3390b4a4c975231",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 12,
+  "operationCount": 42,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "7affb26534a6c6ecd4ecc6aa5790ddf4a79dd4e0bca3028b193fdc831ad7fc87",
+    "operationsCsv": "a7af5c6c1ba8d12b8d4747d318f9ddb1d6f4defb9dcaa555395a92b952219262",
+    "statusJson": "affd5d5e9aff5b2edd2abb45e87a2030e7c245537571f7f18501225bf37160e6"
+  }
+}

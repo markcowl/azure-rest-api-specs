@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/MdeOnboardingAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/MdeOnboardingAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "e65e82865cae0b58700e2517c5398371f676c817c4f07147dba30c44cfffc429",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 2,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "81ebf5d613f9faabef8c4c500c6ce4ad453da4fbbfeaae3ac61f06ae871aa7cd",
+    "operationsCsv": "37636071be6e1a1255a28bd05f84f98097aa0628a5031c3a40c6a2edb8329df2",
+    "statusJson": "2801960790e929bb95dc9a05fffc40a62b0cc9a5ea291fd428077a30bc4414bf"
+  }
+}

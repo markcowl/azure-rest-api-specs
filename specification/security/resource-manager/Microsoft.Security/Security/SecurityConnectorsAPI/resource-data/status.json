@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/SecurityConnectorsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/SecurityConnectorsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "20504dee6ffa54620b06d60573efef3f7af553ec753daf6522554ef2391c8600",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "ba660e74c6f6486499172160dd5040a5f30680fe2835387c3504cb0ab0a87d13",
+    "operationsCsv": "df1b9882c878c9d66bb63bced927865f79bcefd53a8803097bf93fcc035a1471",
+    "statusJson": "6676022a523fbaad661e2519d11878780e2d6fb32cbd591a42c5dac0a7fde91e"
+  }
+}

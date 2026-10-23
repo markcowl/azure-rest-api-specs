@@ -1,0 +1,27 @@
+{
+  "service": "servicefabric",
+  "projectRoot": "specification/servicefabric/resource-manager/Microsoft.ServiceFabric/ServiceFabric",
+  "entrypoint": "specification/servicefabric/resource-manager/Microsoft.ServiceFabric/ServiceFabric/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "974fc004ed9e518ea67521c2e05fbf5b9df09d25cac2294d8b31c6bd0100acc2",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 27,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c0be6e69d4a70badc21c26e834c15ac64727bfd5f15679e0a4a2bc050b39d607",
+    "operationsCsv": "0de0fdd7630978a43256174371bee4388952f902fa80b4113aedafeb204774a5",
+    "statusJson": "6aa94bc7d07609a0237151b1fb029ad08f45e421247cffec5b74e63cb01cfd47"
+  }
+}

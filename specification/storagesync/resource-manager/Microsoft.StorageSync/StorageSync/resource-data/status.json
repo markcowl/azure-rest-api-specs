@@ -1,0 +1,27 @@
+{
+  "service": "storagesync",
+  "projectRoot": "specification/storagesync/resource-manager/Microsoft.StorageSync/StorageSync",
+  "entrypoint": "specification/storagesync/resource-manager/Microsoft.StorageSync/StorageSync/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "a7c52f1cfce9c3093db0178cb33d83c2e06a57efe49eb5b4a30146b6eebf4a26",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 42,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "36ecd58e01aa3cb97d212cad1915723ad81cee8b17b4f2817bdbb90d983e8480",
+    "operationsCsv": "9bb56c41f8ff92ee43abedef42c00a7ce25d1bb697064ad8c23d3dcae0abd784",
+    "statusJson": "472f41318d2942c062b456148e57562bb73b36d490e582f1a43a599742aa09cb"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "kubernetesconfiguration",
+  "projectRoot": "specification/kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/privateLinkScopes",
+  "entrypoint": "specification/kubernetesconfiguration/resource-manager/Microsoft.KubernetesConfiguration/privateLinkScopes/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "d0a1ab678718fd78a7582d467f895ff24e0273e078f8e649c98d3eade3b59097",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e1026ce23f576bc0eb1208b915dab4808af87ba78c613d3419ce87d4b7fb6435",
+    "operationsCsv": "623cf20fd05a562406b09778f66c6ea35f674d897d43ea2f2e0f1315b99235c3",
+    "statusJson": "c8f2a3f7a31eda45f56155dfc430b412edc84098f55c0eeab1c95fdaaed55b1c"
+  }
+}

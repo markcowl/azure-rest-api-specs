@@ -1,0 +1,27 @@
+{
+  "service": "fabric",
+  "projectRoot": "specification/fabric/resource-manager/Microsoft.Fabric/Fabric",
+  "entrypoint": "specification/fabric/resource-manager/Microsoft.Fabric/Fabric/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "99ae5037c6a50c4f7f43d7a35ad008551399d9e8c9ea623949c485e5672979b3",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "173b30858e986e945baade2c2eecac98f355499e3d82d065d48bd267886d724f",
+    "operationsCsv": "015ef044c5ab385ab5e7325e4d14bb7982c2c674309d1d8605461b69de41ff05",
+    "statusJson": "1b955d83f9469387372be92ab7e4497a2d1bc9806c6a52536343d30d7f9b69c4"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "msi",
+  "projectRoot": "specification/msi/resource-manager/Microsoft.ManagedIdentity/ManagedIdentity",
+  "entrypoint": "specification/msi/resource-manager/Microsoft.ManagedIdentity/ManagedIdentity/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "95bc1fe8b058cb2ade07298fa6b89d2a63af175bd35654ac88e5d25772e8c38b",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 11,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "811c25cd337a8b9fe348340a7724d128147d4fdc082c90b0917daf818676dd24",
+    "operationsCsv": "e981cba9652c6d81acc856224798b8c2cfd8ada649b0b9878f99620935105ee8",
+    "statusJson": "d032857c84dd69c2857cf2507e46e8a457e55d3cade9c3515c6b60a31eb26324"
+  }
+}

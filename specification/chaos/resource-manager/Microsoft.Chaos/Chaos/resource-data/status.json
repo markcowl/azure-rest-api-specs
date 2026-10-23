@@ -1,0 +1,27 @@
+{
+  "service": "chaos",
+  "projectRoot": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos",
+  "entrypoint": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "571bb0e21e85a166fab7881c1906f6291b309560ee5ded3b6767a4eec5ab381c",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 17,
+  "operationCount": 67,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "05e5963069aa5655a7250f50c57a910f3753214ee717b8ffad39fe9d6778d21d",
+    "operationsCsv": "3e411842e7ae0a6d13b9e93a4999b4724eb0f7a2eb4f60696c0fad92889be95f",
+    "statusJson": "6a6e3a43ab46051cf6a9f5f4485f6f8a1e0ffd5ba2f487cb5ee73d01dcfcc5f7"
+  }
+}

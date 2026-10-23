@@ -1,0 +1,27 @@
+{
+  "service": "certificateregistration",
+  "projectRoot": "specification/certificateregistration/resource-manager/Microsoft.CertificateRegistration/CertificateRegistration",
+  "entrypoint": "specification/certificateregistration/resource-manager/Microsoft.CertificateRegistration/CertificateRegistration/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "46e2c218f9244f21242b07e9857027b552c70089e0f59206adf00e16f534380b",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 21,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "8d06bfa896a910328ebef306d0d658126d49493656b1bd97f182f9040347563d",
+    "operationsCsv": "443317a6c27d74e7418e0561e3d67ae61eb253f3dd7d64833678758ad0458755",
+    "statusJson": "d96a440fa18ff915d58a5e03f3da89ca1f1e48612352912b6d9cb87e056001e0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/PricingsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/PricingsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "be52e56c5563648fd1f1c43e4cbae092228896b2c98dacda6b73c8639746fd96",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9d8712c3dc51f45bd1ed5d2a8d8ed71593f65ecd47eeaea023b8e1ff6438a69d",
+    "operationsCsv": "8ede60cb2f8b80d1e7cd617f0b35591c7e3f4140f5b9d06b3ea50611fb7e4142",
+    "statusJson": "45568bd52a3b75559d079ecec6d16cd3d86f347a27bb0fdeb5a2722cc29d5d18"
+  }
+}

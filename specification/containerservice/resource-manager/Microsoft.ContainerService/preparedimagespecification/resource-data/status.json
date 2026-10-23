@@ -1,0 +1,27 @@
+{
+  "service": "containerservice",
+  "projectRoot": "specification/containerservice/resource-manager/Microsoft.ContainerService/preparedimagespecification",
+  "entrypoint": "specification/containerservice/resource-manager/Microsoft.ContainerService/preparedimagespecification/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "5414cdea3c187b5bc21fbfff47bdb01e75295aadee93fa895bbf8b33304943bc",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "083f5cfee57459fb35ad3fb539a5402ca4279e5a5ed8fc8dbc08bb33a2de2f87",
+    "operationsCsv": "51d13f5042a5ec38f10990a0f3c8d8eba5a4d37c79aba1847c92f97d17c324f2",
+    "statusJson": "02e50f3e00c8dfa955560038ebcf981b43bbab46a7abdd02dc59c064e088021a"
+  }
+}

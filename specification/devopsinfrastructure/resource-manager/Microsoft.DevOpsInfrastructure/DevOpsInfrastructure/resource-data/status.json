@@ -1,0 +1,27 @@
+{
+  "service": "devopsinfrastructure",
+  "projectRoot": "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure",
+  "entrypoint": "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "b0c66f9e4c891aae39ba1d3ba489ae9d1cb0e3fdc75f89b1c992be1bfd56955d",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 7,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "33916363336f87f945c331fc7e8c774d934ac53578b538de10bd34ced5b5c467",
+    "operationsCsv": "958360ab8c79a3b67492771d5845307b43683c31196533bcb6f61623b6e991d9",
+    "statusJson": "14cb89bc6c43efca665748c8aeb60a902cd26b0dcc932cf2e193699f06720d31"
+  }
+}

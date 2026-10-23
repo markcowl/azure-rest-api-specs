@@ -1,0 +1,27 @@
+{
+  "service": "sqlvirtualmachine",
+  "projectRoot": "specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine",
+  "entrypoint": "specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "111b9c78e24c908d4c42491dd34294da76bbdecbd8155ad17a97b0aef34bbd6f",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 21,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "7bb4788c4c7316c28f0a1efcd9e336ce1d793c3d00fe7369273d5dfe3ab0b15e",
+    "operationsCsv": "026cb728709580c8f9663b823fd7d9dbb8b660d936b6d225d0211438492c71ee",
+    "statusJson": "449c97001571b0dba024852f6f0ba764949d20e178948e55fa3da00d08a9be7c"
+  }
+}

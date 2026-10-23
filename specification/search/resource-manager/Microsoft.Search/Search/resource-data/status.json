@@ -1,0 +1,27 @@
+{
+  "service": "search",
+  "projectRoot": "specification/search/resource-manager/Microsoft.Search/Search",
+  "entrypoint": "specification/search/resource-manager/Microsoft.Search/Search/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "877e200c585a9d4b86ed5d3670ea0876178ffaa9c348f7bbb79aa9c429b9f3ae",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 24,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d7398630b9561ef202cd45a446e1d6315c5659b7c907c1c083979c13d9ffee5a",
+    "operationsCsv": "11545d29766620c891b0c648190517254c3651a7623c719a5ab8e13d5f64a4bf",
+    "statusJson": "2a33c74bc5f0dd5905592583eef0f9fc7cf87f5104e50a366b623ffd35426cb7"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "billingbenefits",
+  "projectRoot": "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits",
+  "entrypoint": "specification/billingbenefits/resource-manager/Microsoft.BillingBenefits/BillingBenefits/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "773826149d6db4e76ca187e1c44e55a9f655329e0ea41f06b5ac96d956529b29",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 20,
+  "operationCount": 69,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "da71eadac6598b4365866b43f879b9a24f83734dd9179ddc7cd0651a012336e5",
+    "operationsCsv": "b386b40ba5dd94602253e9b9fc8fcbb107266e803bdb237b484fddee98f4fd27",
+    "statusJson": "cdb5aba8f137b33ecc80bc6688e28ccf51850622972ece9325eb8ccdf2c2ecab"
+  }
+}

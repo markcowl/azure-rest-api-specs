@@ -1,0 +1,27 @@
+{
+  "service": "marketplacecatalog",
+  "projectRoot": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus",
+  "entrypoint": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "4973e69a9f438853d47a89a88ed5ede0d0920431bab9e2dcbcae019bbae9ac3b",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "db06f487c7ee4bbaf8e483e93948a8c803d319a0b32a8924891515c4cb4387d6",
+    "operationsCsv": "9003ab2061f4e1462020aad7cdbc2300fdecf69513559407c33ecb8814828d25",
+    "statusJson": "4d29c7692ceef68c97d868f12fb6c618d502154cc1b30c8279b23916203fe594"
+  }
+}

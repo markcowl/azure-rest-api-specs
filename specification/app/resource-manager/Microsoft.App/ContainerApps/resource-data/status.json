@@ -1,0 +1,27 @@
+{
+  "service": "app",
+  "projectRoot": "specification/app/resource-manager/Microsoft.App/ContainerApps",
+  "entrypoint": "specification/app/resource-manager/Microsoft.App/ContainerApps/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "52d27975046aaa49d576e97888f575dae2921cbd182a0aabf64bddd1d0ae1d4b",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 48,
+  "operationCount": 201,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "c118b20443a4e8bca56119db84c81c2c3d6ff69c8353648ec1a196f1d1da6d39",
+    "operationsCsv": "f2f55d2218105c5a4885413d34ed8b53ecd74519f8be28562dc4a671108e263a",
+    "statusJson": "99a4428518c0b2598f4c3e00b8eab3010c6edaa9eede532f74deb930a533dbb5"
+  }
+}

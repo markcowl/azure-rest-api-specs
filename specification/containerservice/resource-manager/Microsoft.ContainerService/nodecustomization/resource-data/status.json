@@ -1,0 +1,27 @@
+{
+  "service": "containerservice",
+  "projectRoot": "specification/containerservice/resource-manager/Microsoft.ContainerService/nodecustomization",
+  "entrypoint": "specification/containerservice/resource-manager/Microsoft.ContainerService/nodecustomization/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "c2e3810e32fb9f7f76b79c492cc19e7ead776c12306a68e88f11e236c197d446",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a2f04430dd12864401ed62ecbbefc9640f97d53e20f6948939ee9943e2e1b039",
+    "operationsCsv": "98a05d0e7407e68fce9f1ed256a063f6b15d32ffb644af02b904040a15357dd3",
+    "statusJson": "5e7cecf9a35fbb5aaae4848f7e3350baa908376ebb2a67e844a6b32a88110e4e"
+  }
+}

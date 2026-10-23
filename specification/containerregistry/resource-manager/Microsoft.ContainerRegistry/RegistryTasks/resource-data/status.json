@@ -1,0 +1,27 @@
+{
+  "service": "containerregistry",
+  "projectRoot": "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/RegistryTasks",
+  "entrypoint": "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/RegistryTasks/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "4f23e7c93e5ebb3eee92c06218c27481963dd428f52faa2e8ca82f03d51c397d",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 23,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "22de626c9cc4e4dedc11d3d2404d1414801d1001c07c748963a081cabb1d94e8",
+    "operationsCsv": "ba3905c19b486d8ad669800e5836874be142fb50b69d48fcfb73b3e3f3eff534",
+    "statusJson": "938481e644d4cb83a10b9320d417f70ac1dad0dc87a34c4615b449f232d6a792"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "azureresiliencemanagement",
+  "projectRoot": "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement",
+  "entrypoint": "specification/azureresiliencemanagement/resource-manager/Microsoft.AzureResilienceManagement/AzureResilienceManagement/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "fecb408b116e1ca05a49e1808720c8d130883847d39ac755aa7f0179c1f9c3d2",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 19,
+  "operationCount": 171,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "019333baac258c160ec77af30cd3bf8d625ba42a7a73199003a546cc2c970c51",
+    "operationsCsv": "b23c809ddc2b025bba6a44258ac80f06f86e8a0c5fb0f8e5477d013c64ae349c",
+    "statusJson": "0f14da320fd6a55d184d2cb276237f9bb407245bb8d45310e4f83173be88b6f6"
+  }
+}

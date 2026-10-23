@@ -1,0 +1,27 @@
+{
+  "service": "extendedlocation",
+  "projectRoot": "specification/extendedlocation/resource-manager/Microsoft.ExtendedLocation/CustomLocations",
+  "entrypoint": "specification/extendedlocation/resource-manager/Microsoft.ExtendedLocation/CustomLocations/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "3e3a3a24dcd51fcf56d40bb899f45a36a2092761572d59af93cc537290ae11d7",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 13,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "db1550f60264ac3593901e7616ead139fd56e75f2747580cf77a129e731fbfd2",
+    "operationsCsv": "6a99384e8e8d71748451851618c36d30b8a9673c2a97b3e39c41b98d1f52bf15",
+    "statusJson": "c50cf68d56dfaaa08d374bcfcaed4ce43f68ceb3b077e231455839b49ad5a0ee"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "service": "nginx",
+  "projectRoot": "specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus",
+  "entrypoint": "specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "a2315f2def6360d2895e67d73bc1e2398bd2b19eeca115e9514c368870487a80",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 9,
+  "operationCount": 29,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "585187c6b55137e2d65c7c9749a9bf8d1fc82ec37416e8455786dec51f377413",
+    "operationsCsv": "ae3ba5cf1c2901fa4e8588e973e84248c77aa3aa8ea64b872e3988df9e351ed4",
+    "statusJson": "b390ca41a29b80f316b5386136d9946c2503fe61571a0bf98a2ebc8290be2b4d"
+  }
+}

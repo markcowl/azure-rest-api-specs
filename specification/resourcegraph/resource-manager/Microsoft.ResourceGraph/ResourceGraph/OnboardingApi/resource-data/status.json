@@ -1,0 +1,27 @@
+{
+  "service": "resourcegraph",
+  "projectRoot": "specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/ResourceGraph/OnboardingApi",
+  "entrypoint": "specification/resourcegraph/resource-manager/Microsoft.ResourceGraph/ResourceGraph/OnboardingApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "dependencyLockHash": "374a40c794ba3c043a21905de9dba68b91edec4cef295a3b48f87faa1e6ef6a8",
+  "projectInputHash": "281654470a159a726a06feadb5e48905903947bf9fe8b843da88d99a715dd673",
+  "toolVersion": "1.0.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "status": "succeeded",
+  "resourceCount": 10,
+  "operationCount": 25,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "81ac4d53f3266f5b3e147d1c23ea91a132cff341279936a264f7f5fe1f595490",
+    "operationsCsv": "36c1a6dbb66d61b777f944d72c69c66af4876161cedfe9100aa8de125f72db5b",
+    "statusJson": "dcdf4fc666e18ce300637ea34ec5753934c1aecdef4de2067d3dc4f4c24600a5"
+  }
+}
