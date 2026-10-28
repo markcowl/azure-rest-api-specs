@@ -16,7 +16,7 @@ suppressions:
         - "`ApplicationGatewayWafRuleSensitivityTypesNone` from enum `ApplicationGatewayWafRuleSensitivityTypes` has been removed"
         - "`SensitivityTypeNone` from enum `SensitivityType` has been removed"
   azure-sdk-for-js:
-    - package: '@azure/arm-network'
+    - package: "@azure/arm-network"
       breaking-changes:
         - Type of parameter rules of interface ManagedRuleSetRuleGroup is changed from string[] to number[]
         - Operation WebApplicationFirewallPoliciesOperations.createOrUpdate has a new signature
