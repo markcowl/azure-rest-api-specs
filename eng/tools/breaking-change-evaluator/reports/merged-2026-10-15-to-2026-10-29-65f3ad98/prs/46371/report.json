@@ -136,19 +136,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/c68bc84e08bab5ac-phase-a.json",
           "markdownReport": "report-artifacts/typespec/c68bc84e08bab5ac-phase-a.md",
-          "jsonDigest": "4099fa1b4a24beac151d40843b9b299682a1ca7fc00b65e01d222d84330a8400",
-          "markdownDigest": "41e4da86ea8b7bb30606d2b8f4141144112c6984c104964e0ada7a26e26806e2",
+          "jsonDigest": "59f76c267949368b7951f0dabe441ea99458a01c189fc9b19e72cb6ff409fade",
+          "markdownDigest": "5c8929d1ba0e8a376a93cf625b8c37b3e955ba8ca26a867d0726537da2e4629c",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 2932,
+            "versionMutatorsMs": 5770,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 986,
-            "classifyMs": 0,
-            "suppressMs": 1,
+            "diffEngineMs": 2221,
+            "classifyMs": 1,
+            "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 3925
+            "totalMs": 8001
           },
           "comparisonsPerformed": 7,
           "versionComparisons": [
@@ -211,26 +211,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/c68bc84e08bab5ac-phase-b.json",
           "markdownReport": "report-artifacts/typespec/c68bc84e08bab5ac-phase-b.md",
-          "jsonDigest": "fc75d1164c3c16ed27f8a78714cf1188ce67b93a8c5c3bfa80bd83f2344ecd21",
-          "markdownDigest": "17ce43a2da1df5b9c3f6d7c26ca5657eb18b4742c7da33513ade68f8ed5ea5d1",
+          "jsonDigest": "5a4245189e1d105ce16f17bef77b1e765147236d6bebfa9cabfc415ba44b1b26",
+          "markdownDigest": "29f384b2d2e5739410fad4d318b290be3075e985cd4dda7ed8158dc751d507e9",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 3616,
+            "versionMutatorsMs": 5389,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 1394,
+            "diffEngineMs": 2180,
             "classifyMs": 0,
-            "suppressMs": 0,
+            "suppressMs": 1,
             "reportMs": 0,
-            "totalMs": 5016
+            "totalMs": 7576
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "7acb161d8c61820d4a1cd56155c5393bd2222eff0b06514e9cbce1bd367ee96b",
+      "reportDigest": "a4c276be1a086e65a0e31858a22346d123e4e712007877eb0a1bdba480465f43",
       "comparisonsPerformed": 7,
       "versionComparisons": [
         {
@@ -298,19 +298,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/9dc15a9f8aded987-phase-a.json",
           "markdownReport": "report-artifacts/typespec/9dc15a9f8aded987-phase-a.md",
-          "jsonDigest": "275baa9be18d61de44e54fd5d6d1a843a31e21cb1ed445b671bdbacc4a79c23d",
-          "markdownDigest": "3ac172457c44e51a7f0b04c20476e34c9cc1995b9cf071429f6e104c558e4e3a",
+          "jsonDigest": "b1dcf0f615264910aec6b36d5876736d872700ccef43e392a391cb5f05aa5a76",
+          "markdownDigest": "7e8b473d33fde04400bd5160094cef31d7e720e284fafc70070b5dcf1ca3fd96",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 2578,
+            "versionMutatorsMs": 2561,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 1652,
+            "diffEngineMs": 1757,
             "classifyMs": 0,
-            "suppressMs": 0,
+            "suppressMs": 1,
             "reportMs": 0,
-            "totalMs": 4235
+            "totalMs": 4323
           },
           "comparisonsPerformed": 2,
           "versionComparisons": [
@@ -338,26 +338,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/9dc15a9f8aded987-phase-b.json",
           "markdownReport": "report-artifacts/typespec/9dc15a9f8aded987-phase-b.md",
-          "jsonDigest": "a56d517aa0f886db96ccced48afdf0e3ab4d34f5a0fdde3094064793b7e927d5",
-          "markdownDigest": "a1951f56f32627704a138db55ae2ddb429d5da94579d27cf810e0561fa02d403",
+          "jsonDigest": "d766badff01ebbfabde9707a8b5023c6f0565ab8c3ee7f05d8141a61398d5812",
+          "markdownDigest": "3245911ed6f5ee9d609fc2673525d858c5678d02e014b879d1e9ee138a772474",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 1206,
+            "versionMutatorsMs": 2543,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 806,
+            "diffEngineMs": 1711,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 2017
+            "totalMs": 4263
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "44cbe64436a08d975a016b4862bc8790789f36cda868b0d6764f05c11c4a0b73",
+      "reportDigest": "23a0f3ffb4afe612c6ee572e6580c1de4fe79f1afb97cb32e831bab9a2fa1b89",
       "comparisonsPerformed": 2,
       "versionComparisons": [
         {
@@ -390,19 +390,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/c1ecabb6f66ba4a7-phase-a.json",
           "markdownReport": "report-artifacts/typespec/c1ecabb6f66ba4a7-phase-a.md",
-          "jsonDigest": "e5bf549b62ff1ca77f8310bc4bb1ec1273c88b3664b975ad02a6adfe39ff36fe",
-          "markdownDigest": "a416787dcfecd8f4e5388a9ace45206e514fe0f78282ffb0101ba196c3448276",
+          "jsonDigest": "5760032745948560451252c3161a272cc7cfe32c625bbdb1451a55b17d977e05",
+          "markdownDigest": "6b74b0eb1ba8ac677b2a1c2ac471d8b272fd00d47c82164a009cf4a7a803a6c8",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 1751,
+            "versionMutatorsMs": 3397,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 548,
+            "diffEngineMs": 1160,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 2304
+            "totalMs": 4564
           },
           "comparisonsPerformed": 5,
           "versionComparisons": [
@@ -451,26 +451,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/c1ecabb6f66ba4a7-phase-b.json",
           "markdownReport": "report-artifacts/typespec/c1ecabb6f66ba4a7-phase-b.md",
-          "jsonDigest": "1a85097634bc5a4585f90f86d228086c604705a546383cef1583872de46e3f3f",
-          "markdownDigest": "5f7ca0929fd64553fca52667b820e05ce6be7123a0fda515f5ecd0f4d28a8f26",
+          "jsonDigest": "31355dee244cc438f2171d6e6b078f4fc46c053c2db440cadd6324144453825f",
+          "markdownDigest": "81041def7c596ff8cecd5b1d94082d8dbaf97449d8c61ceb720b45297d430957",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 1734,
+            "versionMutatorsMs": 3425,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 572,
+            "diffEngineMs": 1231,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 2309
+            "totalMs": 4661
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "6754bfb3ed6e0991c507a9b218fbf497e5978b5d048987e5de7accc8ab10932c",
+      "reportDigest": "ee48a275009ec711c756aad21359dbaf51324f63449f6f72c0466821e60a08ec",
       "comparisonsPerformed": 5,
       "versionComparisons": [
         {
@@ -524,19 +524,19 @@
           "exitCode": 1,
           "jsonReport": "report-artifacts/typespec/d00f78f5813386ac-phase-a.json",
           "markdownReport": "report-artifacts/typespec/d00f78f5813386ac-phase-a.md",
-          "jsonDigest": "4561066e8bdf0225c2e7e68557c58000398084c747965aeb4c18c18039ebb5d8",
-          "markdownDigest": "0537b80452e91bbdb192dfa17e291a595d98629c4e9480c8474886b33e0d3d4d",
+          "jsonDigest": "87a2fb7776ddf81b6af1802c47675bdec3d316922a5112b3adde12ba831ad692",
+          "markdownDigest": "2adcbb12a1321b5b2e9a46b43d0ccfbb254b35d148905599c3f26cb9408225e0",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 478,
+            "versionMutatorsMs": 1147,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 302,
+            "diffEngineMs": 618,
             "classifyMs": 0,
-            "suppressMs": 0,
+            "suppressMs": 1,
             "reportMs": 0,
-            "totalMs": 785
+            "totalMs": 1773
           },
           "comparisonsPerformed": 1,
           "versionComparisons": [
@@ -557,26 +557,26 @@
           "exitCode": 1,
           "jsonReport": "report-artifacts/typespec/d00f78f5813386ac-phase-b.json",
           "markdownReport": "report-artifacts/typespec/d00f78f5813386ac-phase-b.md",
-          "jsonDigest": "dfe6daee61c355492b8ab1af2fd32b5a026188b257cb3a435a96718af90d453e",
-          "markdownDigest": "418b50971296a8aa962bfe10421684e07da8d997376fcc6f8d86d68cf5e0ffc1",
+          "jsonDigest": "264eb34feacd85209ee8490f10c60233cbd8d654a3541bfd4bb3fe5c2f314a06",
+          "markdownDigest": "927664d6299c59f8529477c8bcbe2e8198b4745605941b39ac1b73588235c1e9",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 498,
+            "versionMutatorsMs": 1031,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 337,
+            "diffEngineMs": 673,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 838
+            "totalMs": 1710
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "472441897e56e2e8b6eab01ce18bebc19f05b74c9cc1f068beee637ae586755b",
+      "reportDigest": "1319fa017685f37fe39fbad7a99c74ba260331c87d3b2806f0a3aa20e443578b",
       "comparisonsPerformed": 1,
       "versionComparisons": [
         {
@@ -621,7 +621,7 @@
           "detectorEvidence": {
             "label": "TypeSpec Phase A analyzer report",
             "url": "report-artifacts/typespec/d00f78f5813386ac-phase-a.md",
-            "digest": "0537b80452e91bbdb192dfa17e291a595d98629c4e9480c8474886b33e0d3d4d"
+            "digest": "2adcbb12a1321b5b2e9a46b43d0ccfbb254b35d148905599c3f26cb9408225e0"
           },
           "source": {
             "revision": "head",
@@ -663,7 +663,7 @@
           "detectorEvidence": {
             "label": "TypeSpec Phase A analyzer report",
             "url": "report-artifacts/typespec/d00f78f5813386ac-phase-a.md",
-            "digest": "0537b80452e91bbdb192dfa17e291a595d98629c4e9480c8474886b33e0d3d4d"
+            "digest": "2adcbb12a1321b5b2e9a46b43d0ccfbb254b35d148905599c3f26cb9408225e0"
           },
           "source": {
             "revision": "head",
@@ -687,19 +687,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/246cc19a448a07ae-phase-a.json",
           "markdownReport": "report-artifacts/typespec/246cc19a448a07ae-phase-a.md",
-          "jsonDigest": "038a82ac07da76edd430f2a586e321a80832d160c152fcb8b9cb6d1fdae3ac7b",
-          "markdownDigest": "5193d0ebf3a870f1476bd64ee294ded34c395f12f2102fc29dd36d0a6cd528bd",
+          "jsonDigest": "bec4be2490ca89f750803ec9e03fcad6c82b9b67622f0e68a1cd17afb2165a5e",
+          "markdownDigest": "23c96812f1b88175dceec7f24ebef184f4bed2d7ef387610b24ad5c12961ffd8",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 393,
+            "versionMutatorsMs": 766,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 102,
+            "diffEngineMs": 217,
             "classifyMs": 0,
-            "suppressMs": 1,
+            "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 500
+            "totalMs": 989
           },
           "comparisonsPerformed": 1,
           "versionComparisons": [
@@ -720,26 +720,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/246cc19a448a07ae-phase-b.json",
           "markdownReport": "report-artifacts/typespec/246cc19a448a07ae-phase-b.md",
-          "jsonDigest": "146209f6ecee535dbfbe5f9b04970d34789fe6d29d210d00f76d688e0e3e57be",
-          "markdownDigest": "4c5f1ba8106df96020be1515c5a529d383768ee825601f65dde4a43f9c53a2e3",
+          "jsonDigest": "1d72803dbf1f47be6f9ece141ed6df49de5952b39b3d8c56419d56b198564d4d",
+          "markdownDigest": "b311a9145f362da15dc4c225263d8081df9e55a8af8ab331ad6135687102990b",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 391,
+            "versionMutatorsMs": 763,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 117,
+            "diffEngineMs": 214,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 511
+            "totalMs": 983
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "9f5299ea0bfbb647ff23d4338bdafdf95e85ef90bbd1e6d9ab344fb193e70ea3",
+      "reportDigest": "93e489d342e70d7bed1d9223d2cbd032a2b91fd24a434b3a9124027381f171c1",
       "comparisonsPerformed": 1,
       "versionComparisons": [
         {
@@ -796,19 +796,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-a.json",
           "markdownReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-a.md",
-          "jsonDigest": "2efc6194af2b1ca30fe882599cd33a3ec7eb98227f446754548b303bc6b64694",
-          "markdownDigest": "d1eb79e54533b5fd1d713a9e082b6f4dd0b0bde4b30057200b565bddf06a00db",
+          "jsonDigest": "c4d004a0d340d03707b61bc04276ceadd38b96b5248670678be1d7d0c8a32758",
+          "markdownDigest": "c3f8fcf3c71a5727294f1fada44beb9b2580dd2eaf9c43019798e62511f719ee",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 3844,
+            "versionMutatorsMs": 8189,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 1387,
-            "classifyMs": 0,
-            "suppressMs": 0,
+            "diffEngineMs": 2743,
+            "classifyMs": 1,
+            "suppressMs": 1,
             "reportMs": 0,
-            "totalMs": 5234
+            "totalMs": 10945
           },
           "comparisonsPerformed": 11,
           "versionComparisons": [
@@ -899,26 +899,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-b.json",
           "markdownReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-b.md",
-          "jsonDigest": "09630746f863296282b3c19d21dcad1335734e3f6c5624112c196cdd9753c1fe",
-          "markdownDigest": "bc804387213d6a1f88894e210f47277e7f41436d99ce5d1943df94b725688331",
+          "jsonDigest": "349a91bc2cf21e1cd5750986e8206de1c73f6f532fc3389139d1dc7142007b65",
+          "markdownDigest": "18cbf04a8cde67ab27a2d586d4536c224f745c9520593ea62497674a65f644b4",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 4306,
+            "versionMutatorsMs": 8512,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 1442,
+            "diffEngineMs": 2742,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 5753
+            "totalMs": 11265
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "568d3c10a1daa9f31f3f4f446bd6762d11c218f59017fd54db95678d778b93fb",
+      "reportDigest": "2f55553b01a0e7c3386385942f865595da135599b98e43f3aedb092a2f031333",
       "comparisonsPerformed": 11,
       "versionComparisons": [
         {
@@ -1045,19 +1045,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-a.json",
           "markdownReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-a.md",
-          "jsonDigest": "1926a4f2d315c6ba8fa42809a7d95623af09f90c5395384bfa0bb1d9a3bd85a5",
-          "markdownDigest": "6c071cd91f4973fef15208e123862f5a54a33dcb815c35125c0142e1ce55ff1a",
+          "jsonDigest": "e29a76757fe6f4371df6eeb290e72f030bc98f3f78a0c385c00694b56ce686fa",
+          "markdownDigest": "5eee22e311a58bb0d1385e65021f42b6565247e944de135b5e6d15c9dce9e531",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 15234,
+            "versionMutatorsMs": 28847,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 11288,
+            "diffEngineMs": 21650,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 26526
+            "totalMs": 50505
           },
           "comparisonsPerformed": 15,
           "versionComparisons": [
@@ -1176,26 +1176,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-b.json",
           "markdownReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-b.md",
-          "jsonDigest": "2d29225f2722ce1bd54b56b82cd76069bc13aa7e8a0392422fd0f2ba1a83c961",
-          "markdownDigest": "54910dd3bb556dd1cbe4649b0a1593c2b74ce4e6e80f2dfc805ff1b6e914916a",
+          "jsonDigest": "7cd684c8c2d5d2d6b94c2e2790de2e9330a1a8fc3098d0e059822cc312893d01",
+          "markdownDigest": "94e64fb5630f8afb6d7b4852bf172a02f7628e282131a7289f2d9f66f5a422b0",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 12765,
+            "versionMutatorsMs": 37448,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 10561,
+            "diffEngineMs": 28954,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 23333
+            "totalMs": 66417
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "30decc4d33cca6b17cd71c47c6da247212e474fc7f2bdb0c5f04403444d57fe3",
+      "reportDigest": "ad5c77ab6a9e23a6de98b2a893f206d4ff03c223edc2ec7e846ef6dc3492a013",
       "comparisonsPerformed": 15,
       "versionComparisons": [
         {
@@ -1319,19 +1319,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/d576ba5f97304776-phase-a.json",
           "markdownReport": "report-artifacts/typespec/d576ba5f97304776-phase-a.md",
-          "jsonDigest": "c153d8707b9662ae54ef818dcb788a08f3a1817fcafc66a96e1014dadd5b00df",
-          "markdownDigest": "425674734ab60ca94389ede63597d3ac635cb3523d64e8ac360abf707b3dd1a7",
+          "jsonDigest": "9d612508a44988e59287545f5f1c95454eaa7819b92148f8502d4c1aced186e7",
+          "markdownDigest": "f0ce103fcc55d0d78865372d4b3dedbc24857969b557c7a9e30e458517b48ac3",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 330,
+            "versionMutatorsMs": 742,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 81,
+            "diffEngineMs": 165,
             "classifyMs": 0,
-            "suppressMs": 1,
+            "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 414
+            "totalMs": 914
           },
           "comparisonsPerformed": 1,
           "versionComparisons": [
@@ -1352,26 +1352,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/d576ba5f97304776-phase-b.json",
           "markdownReport": "report-artifacts/typespec/d576ba5f97304776-phase-b.md",
-          "jsonDigest": "47eb29e9f621d682063561d1c1621da8a52c040f3d6c8fd9846ed2c2b3f04451",
-          "markdownDigest": "bbc46a3cc684701567ad489f306038a039a4ec72cf6b9b76fbb13c7500d547d2",
+          "jsonDigest": "8f0fcc5766dbe642e18edd6895443010210b9401b1f2556d2736dd7a090dd366",
+          "markdownDigest": "a34618bd36b392aabc958d88b8ffc831a3636965f84c317facfdf857263b79f3",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 362,
+            "versionMutatorsMs": 699,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 88,
+            "diffEngineMs": 157,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 453
+            "totalMs": 862
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "96311f2bff66449cceec57c262ebb6c7b381f0762230e23c4fcc86b260522c1e",
+      "reportDigest": "4af5293d6ceb39a0cbdc2df959ece4e28466d5ce0bb0c15116bb484d58a6fe8c",
       "comparisonsPerformed": 1,
       "versionComparisons": [
         {
@@ -1428,19 +1428,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/05203fab0aa52250-phase-a.json",
           "markdownReport": "report-artifacts/typespec/05203fab0aa52250-phase-a.md",
-          "jsonDigest": "2595d563ee31721c4213e24924307171b60bb5bf9ddfb02e05a475549e1f3ac3",
-          "markdownDigest": "29e65aae63a88a7e682f27931166b46b257e2d5f8b0383f7f213e8e8ddff0519",
+          "jsonDigest": "e964e2a8cf2e5ed6463fcdf7f2cb0f8e6911d14f14f8ec19b6952bdfc0cbcb3a",
+          "markdownDigest": "51c870a2e30aa006e0d721afd8461a1e85de460583f00bc65d9865588bc09664",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 8521,
+            "versionMutatorsMs": 19740,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 6676,
+            "diffEngineMs": 18329,
             "classifyMs": 0,
-            "suppressMs": 0,
+            "suppressMs": 1,
             "reportMs": 0,
-            "totalMs": 15201
+            "totalMs": 38078
           },
           "comparisonsPerformed": 12,
           "versionComparisons": [
@@ -1538,26 +1538,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/05203fab0aa52250-phase-b.json",
           "markdownReport": "report-artifacts/typespec/05203fab0aa52250-phase-b.md",
-          "jsonDigest": "c9cf1ce1f6318114f272f03c8903b61c7cbbddb3dacd3c0c55dfcf02124a15f8",
-          "markdownDigest": "8b648c833d764bf07a4c1041784372a7a56268564ab1f9b79d25d01444dc4357",
+          "jsonDigest": "7312e45f496e54a6dbd4a20b367b3d87dd0a577e3defa49900be06ea97ac430c",
+          "markdownDigest": "e7f17fae5290a466284630c2b7038ad78541736b899818f296d037fc3a775a8d",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 8387,
+            "versionMutatorsMs": 16006,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 7533,
+            "diffEngineMs": 13490,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 15923
+            "totalMs": 29504
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "3cb7bb9cbaad5206080b323cf30ed6cbfba91ef633f24ebf375eef3a690dc00f",
+      "reportDigest": "1ce818e4c2171124b763695a2a67072fffe67241c926ecff60f2aa4495c605d8",
       "comparisonsPerformed": 12,
       "versionComparisons": [
         {
@@ -1660,19 +1660,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/ecccb9100eb6b9f7-phase-a.json",
           "markdownReport": "report-artifacts/typespec/ecccb9100eb6b9f7-phase-a.md",
-          "jsonDigest": "ddf7ca21a5c524ab0e88686cd07ec398180805c331b36c0bc3bd1eba1e85d4ea",
-          "markdownDigest": "6e4a20e2cda875465a4838039b75ced03a770c5df736354684407fbcbf11ae51",
+          "jsonDigest": "7ed2a5318d13787b049678c09765def047abf3bf18d04d23e61d51f566ef4887",
+          "markdownDigest": "19d567ddfdb4bdd672abb6413cf64b126f1f30947b1be97a44d828d7ea9fe197",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 1402,
+            "versionMutatorsMs": 1603,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 560,
+            "diffEngineMs": 770,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 1966
+            "totalMs": 2377
           },
           "comparisonsPerformed": 3,
           "versionComparisons": [
@@ -1707,26 +1707,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/ecccb9100eb6b9f7-phase-b.json",
           "markdownReport": "report-artifacts/typespec/ecccb9100eb6b9f7-phase-b.md",
-          "jsonDigest": "333acd25e383855fe0ab6a177cd3d389f4f6bbd7323f00f6b98124dea3c57a8a",
-          "markdownDigest": "ce1e2be646af91d9d564350ea21493aeb05d541939284b0ee3c0300d7f3807ec",
+          "jsonDigest": "0f23bda73bd89d2a58405c40dc2f1d5bb95d86e11b6499f6f11c94b67cebdba5",
+          "markdownDigest": "fc3babc45710107c69c4d82a6d977bd2de948785e74066223a74a0ec2b9e2703",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 1202,
+            "versionMutatorsMs": 1756,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 477,
+            "diffEngineMs": 759,
             "classifyMs": 0,
-            "suppressMs": 0,
+            "suppressMs": 1,
             "reportMs": 0,
-            "totalMs": 1683
+            "totalMs": 2520
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "9c61b08c1416aa4f941ab0d5421b577392efa6aeb7eac510da2ae73c4ac8a863",
+      "reportDigest": "170c8421f3764cceb84078b0cfc462a8ccf7a009d9599d781f8cbdc944adb043",
       "comparisonsPerformed": 3,
       "versionComparisons": [
         {
@@ -1766,19 +1766,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/5a2890a92772bb20-phase-a.json",
           "markdownReport": "report-artifacts/typespec/5a2890a92772bb20-phase-a.md",
-          "jsonDigest": "5b7bc39cd9751c1a93133970daf73a923dba7fad962db31914722c676737bf4e",
-          "markdownDigest": "8eeeffe579922415a2ae3aa498ff7794f65e88a5199078a36391edc6225492f6",
+          "jsonDigest": "ca444fe7e3a66d1a73ff07c4fa17e04f0e5df98768f2d3c436c00636cc846ab8",
+          "markdownDigest": "a22ca52dc8e7f2d5d1f0a6d2ae8173943b40e6f856674a0af729e9632494798f",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 1692,
+            "versionMutatorsMs": 2080,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 462,
+            "diffEngineMs": 481,
             "classifyMs": 0,
-            "suppressMs": 0,
+            "suppressMs": 1,
             "reportMs": 0,
-            "totalMs": 2157
+            "totalMs": 2566
           },
           "comparisonsPerformed": 5,
           "versionComparisons": [
@@ -1827,26 +1827,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/5a2890a92772bb20-phase-b.json",
           "markdownReport": "report-artifacts/typespec/5a2890a92772bb20-phase-b.md",
-          "jsonDigest": "75b67ab00d9bfd94986aacaa83e544c0f1039b12ddd8347f5375935484d3b5d4",
-          "markdownDigest": "646a8bf17932987c9bcfde5d9b6ae07933320557e8f00a3ad6571c6b52f7c5e3",
+          "jsonDigest": "7ca6abd4498c61243b32be33a7418bc97cd20a7d525855c55a868dfa6885fe4b",
+          "markdownDigest": "c7116da2b0faa472ac0168a260bd2a982c9ac663b0dccf8e285876cf2d6126f4",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 2208,
+            "versionMutatorsMs": 2858,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 637,
+            "diffEngineMs": 739,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 2849
+            "totalMs": 3601
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "88f529fe11e8cbae6ac3c34d50b6b0cb970f405b51c24b2e2f5ba40f42a5af52",
+      "reportDigest": "c2bd8b138de4a4ca29962fdece39b93584f24363ee8d3eb5d04a4fbba663114c",
       "comparisonsPerformed": 5,
       "versionComparisons": [
         {
@@ -1900,19 +1900,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/97f06217f38f8af6-phase-a.json",
           "markdownReport": "report-artifacts/typespec/97f06217f38f8af6-phase-a.md",
-          "jsonDigest": "d6104a6dea2e472777b2b5f61a0b0eb3c45f8b8bbd50132aa604dc15dfbd614b",
-          "markdownDigest": "e6ab87037a2f0657d1e91dfdf3caa9fe3e8a677c4f9e659437b45493b87954aa",
+          "jsonDigest": "05fb4bf7651b2bf4c0e7dcb04f4d73fddee7821b4a44153ea1c184dd56c42437",
+          "markdownDigest": "1f15b2a504377ab1f8fee6308b962e2ad459ef3420ff48b7da0d4c87d666c57e",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 505,
+            "versionMutatorsMs": 450,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 288,
+            "diffEngineMs": 236,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 797
+            "totalMs": 688
           },
           "comparisonsPerformed": 1,
           "versionComparisons": [
@@ -1933,26 +1933,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/97f06217f38f8af6-phase-b.json",
           "markdownReport": "report-artifacts/typespec/97f06217f38f8af6-phase-b.md",
-          "jsonDigest": "1f340adb2ee002d1552d30173abe901004bab988d66d383e971c4b943cfc407f",
-          "markdownDigest": "76ff2b7b389f2ee0a22036cf5e4972e8eb8f0517e72c42f3adcf9ab4e2c85c82",
+          "jsonDigest": "df63824634c94c2153874c054e1c78584208fcef31e8a0b42dc91557c79f5f87",
+          "markdownDigest": "59267cbed8ae36217797fc6cd14f5635a0f77d2770b1e5a801ca00c867b87aa6",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 378,
+            "versionMutatorsMs": 409,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 209,
-            "classifyMs": 1,
+            "diffEngineMs": 205,
+            "classifyMs": 0,
             "suppressMs": 1,
             "reportMs": 0,
-            "totalMs": 591
+            "totalMs": 617
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "d698813422b06e241fad3dc5c299d60948a7f7c1bf756ba3374065828bddfda8",
+      "reportDigest": "b49767a184a05e444486f6b05aa4805d36b55ce93da50d1d26e9aab1539d9483",
       "comparisonsPerformed": 1,
       "versionComparisons": [
         {
@@ -1978,19 +1978,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/4371f83ce0c2e304-phase-a.json",
           "markdownReport": "report-artifacts/typespec/4371f83ce0c2e304-phase-a.md",
-          "jsonDigest": "0b56bdf1e3ad691eca685514e6804f103cd302ca3ba0cae1fef3fc8846109033",
-          "markdownDigest": "dfa894452671c5245f286da7d96b51119754e5a3952eb73857ceec1fbe6826ba",
+          "jsonDigest": "f685afe395708e815c756dc738c405ded04c0fac6759f313f1a95486ebfddd4f",
+          "markdownDigest": "066122ce47db9b0b4b49aa9f318d562500743fc3b73e37021512fd9fa5ee20c3",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 1920,
+            "versionMutatorsMs": 2231,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 563,
+            "diffEngineMs": 564,
             "classifyMs": 0,
-            "suppressMs": 1,
+            "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 2486
+            "totalMs": 2800
           },
           "comparisonsPerformed": 6,
           "versionComparisons": [
@@ -2046,26 +2046,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/4371f83ce0c2e304-phase-b.json",
           "markdownReport": "report-artifacts/typespec/4371f83ce0c2e304-phase-b.md",
-          "jsonDigest": "2d2c7b0212a3b3eccb7d9b6192a589112956d25ed807e49ac8ce802664d21339",
-          "markdownDigest": "6928d049f98f539491a28491fd75625a63d4441ff0120bafbc98ef0bbf4a1a04",
+          "jsonDigest": "b269e3ac9fbe35ab99c37ead4c0cc94d2b5d12342ec1ef0c6458d1d0cc0545b4",
+          "markdownDigest": "beaae8f2e71b473783898a001a7493acd15dbc28b2520c797289dda145e29c84",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 1855,
+            "versionMutatorsMs": 2523,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 468,
+            "diffEngineMs": 598,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 2326
+            "totalMs": 3126
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "14504ebf7a2a86af89624516c8de5d7c106b77e60178944f381dfb9926783971",
+      "reportDigest": "5ff81a18824fa64d704b3893d8c38b8b804367df24eabb43b99250bdc31d135b",
       "comparisonsPerformed": 6,
       "versionComparisons": [
         {
@@ -2126,19 +2126,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/34d48bf6162c6014-phase-a.json",
           "markdownReport": "report-artifacts/typespec/34d48bf6162c6014-phase-a.md",
-          "jsonDigest": "524c4b097a4eff7d2d472c33d6d831d9844ae345bbbf961bd938f2ea19d66e82",
-          "markdownDigest": "3ad551db5afa6b7c7665762f3e6ad755a3b456ea9461cf758ae0000ff0b6dba2",
+          "jsonDigest": "888bfd2428738ab6a57ac6baca95f0e5fc07a5ab4d92e1013bc0e531d0b29fe7",
+          "markdownDigest": "5469590b76552f50c2f5f828a7992e4c3bb1dd6783594bd6ee69ee875daa927a",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 3911,
+            "versionMutatorsMs": 4637,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 3563,
+            "diffEngineMs": 4550,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 7478
+            "totalMs": 9192
           },
           "comparisonsPerformed": 5,
           "versionComparisons": [
@@ -2187,26 +2187,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/34d48bf6162c6014-phase-b.json",
           "markdownReport": "report-artifacts/typespec/34d48bf6162c6014-phase-b.md",
-          "jsonDigest": "c7e1466cd210a14a1aa21fadfd21b38f2f87798bacd133e8e5c0820e5b66a1cf",
+          "jsonDigest": "a6a8519d786187125937bff86926b93d6e755ab6878617246e6725171425ebe4",
           "markdownDigest": "d236b5ab800cfd6cf9714037339d9734dd35dc9d8c9d2bd88ddf829fb9e0bced",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 3571,
+            "versionMutatorsMs": 3579,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 3209,
+            "diffEngineMs": 3235,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 6784
+            "totalMs": 6819
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "fcda2b7b4516d44ffca1c7514babf19398751b5bc728329cee0ec47fb8173f79",
+      "reportDigest": "46ba1cb2fe1894bf37215677ccedd5c44957a4561704c915bd8a4dc4c1c5b370",
       "comparisonsPerformed": 5,
       "versionComparisons": [
         {

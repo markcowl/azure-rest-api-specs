@@ -4,6 +4,29 @@
   "branch": "breaking-change-comparison-data",
   "runs": [
     {
+      "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+      "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+      "title": "Breaking-change evaluation: merged TypeSpec PRs from October 15 through October 29, 2026",
+      "path": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+      "summary": "merged-2026-10-15-to-2026-10-29-65f3ad98/README.md",
+      "manifest": "merged-2026-10-15-to-2026-10-29-65f3ad98/run.json",
+      "selection": "merged-2026-10-15-to-2026-10-29-65f3ad98/selection.json",
+      "generatedAt": "2026-10-29T07:12:44Z",
+      "status": {
+        "total": 94,
+        "evaluated": 46,
+        "notQualified": 42,
+        "partial": 6,
+        "failed": 0
+      },
+      "reportSchema": {
+        "name": "azure-rest-api-specs/breaking-change-evaluator",
+        "version": 3,
+        "compatibility": ">=3 <4",
+        "legacy": false
+      }
+    },
+    {
       "id": "recent-main-typespec-asof-2026-10-15-fixed-55a6e7d1",
       "datasetId": "recent-main-typespec-asof-2026-10-15",
       "title": "Breaking-change evaluation: recent main TypeSpec PRs as of October 14, 2026",

@@ -134,19 +134,19 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/199707c82451cbab-phase-a.json",
           "markdownReport": "report-artifacts/typespec/199707c82451cbab-phase-a.md",
-          "jsonDigest": "22376427bd928f51f33ef429fc8c2a34c533cafa0e2c4fa7d502a08830bafc6f",
-          "markdownDigest": "1fcd009cb25f5d87a70f1484cb5b342c06264d997cee0105420b6b97ce4d5d8b",
+          "jsonDigest": "4f9613441c10bcf53e29ac3e3cecd7951a440583ece75ee6e75f47d10a923ca7",
+          "markdownDigest": "d8869c76c173e27e1145387a9950d10d1c2799340da6a1e9c75d3501ec7d2d6a",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 21306,
+            "versionMutatorsMs": 30450,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 40950,
+            "diffEngineMs": 57383,
             "classifyMs": 0,
             "suppressMs": 0,
             "reportMs": 0,
-            "totalMs": 62264
+            "totalMs": 87839
           },
           "comparisonsPerformed": 5,
           "versionComparisons": [
@@ -195,26 +195,26 @@
           "exitCode": 0,
           "jsonReport": "report-artifacts/typespec/199707c82451cbab-phase-b.json",
           "markdownReport": "report-artifacts/typespec/199707c82451cbab-phase-b.md",
-          "jsonDigest": "e4faaf7f69699792bd1230aa12df2dab21c5aab8d8f926b891f5ef6d2566d90e",
-          "markdownDigest": "936677b4e38fed240304e2c909cf1d08791d93e000fb07403ee8fa5218cfde31",
+          "jsonDigest": "09cc547c5073adaefb5486a87d820e1df15926e0acb12045f6046a6d53301571",
+          "markdownDigest": "0d634116ace19eac66a9bc732a3d9c438d5ef75cc8d0bb80e1220e63cb20ecc4",
           "timing": {
             "compileBaseMs": 0,
             "compileHeadMs": 0,
-            "versionMutatorsMs": 16070,
+            "versionMutatorsMs": 31473,
             "canonicalizeMs": 0,
             "identityMatchingMs": 0,
-            "diffEngineMs": 26355,
+            "diffEngineMs": 57457,
             "classifyMs": 0,
-            "suppressMs": 0,
+            "suppressMs": 1,
             "reportMs": 0,
-            "totalMs": 42430
+            "totalMs": 88938
           },
           "comparisonsPerformed": 0,
           "versionComparisons": [],
           "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
         }
       },
-      "reportDigest": "08329a527da26b0ac176833ade61832ad6a4d0aa7477229e630d89bd5cd6a98d",
+      "reportDigest": "04542351be4a29c11260b8ce75d2057ec70dc3864d5e82996c9847feea0d0191",
       "comparisonsPerformed": 5,
       "versionComparisons": [
         {

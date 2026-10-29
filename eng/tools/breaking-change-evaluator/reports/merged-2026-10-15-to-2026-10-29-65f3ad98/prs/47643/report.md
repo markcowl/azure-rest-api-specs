@@ -69,8 +69,8 @@ Durations are detector-analysis time reported by each tool. GitHub Actions workf
 
 | Phase | OAD detector time | TypeSpec detector time | Comparison | Evidence |
 | --- | ---: | ---: | --- | --- |
-| A | Unavailable | 62264 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/40472678109) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/199707c82451cbab-phase-a.md) |
-| B | Unavailable | Unavailable independently (combined A+B: 42430 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/40472678322) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/199707c82451cbab-phase-b.md) |
+| A | Unavailable | 87839 ms | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/40472678109) (no detector timing emitted); [TypeSpec Phase A report](report-artifacts/typespec/199707c82451cbab-phase-a.md) |
+| B | Unavailable | Unavailable independently (combined A+B: 88938 ms) | Not comparable: one or both detector timings are unavailable | [OAD workflow](https://github.com/Azure/azure-rest-api-specs/actions/runs/40472678322) (no detector timing emitted); [TypeSpec combined report containing Phase B](report-artifacts/typespec/199707c82451cbab-phase-b.md) |
 
 ## TypeSpec phase execution
 

@@ -1,0 +1,520 @@
+{
+  "schemaVersion": 1,
+  "schemaCompatibility": ">=1 <2",
+  "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+  "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+  "immutable": true,
+  "title": "Breaking-change evaluation: merged TypeSpec PRs from October 15 through October 29, 2026",
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "repository": "Azure/azure-rest-api-specs",
+  "reportSchema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4",
+    "legacy": false
+  },
+  "selection": {
+    "file": "selection.json",
+    "digest": "4a05f613084e84d17fbc18bb0f9f5651361df56c6f12e3512c4110477531ec8f",
+    "selectedCount": 94,
+    "sourceCount": 170,
+    "excludedCount": 76,
+    "continuationCursor": null
+  },
+  "analyzer": {
+    "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prototypeParentSha": "64550a561cbd7f5eb0ec6865802a908744a3528f",
+    "cacheFormatVersion": 3,
+    "environment": {
+      "os": "win32 10.0.26300",
+      "architecture": "x64",
+      "node": "24.22.2",
+      "pnpm": "11.10.0"
+    },
+    "readiness": {
+      "verified": true,
+      "intrinsicFixVerified": true,
+      "details": "Exact analyzer commit built and cached successfully; full package suite passed with 465 tests and 11 skips. A real #47326 base/head comparison completed all three same-version comparisons and reported findings without the prior TypeKit realm failure. Fix published as Azure/typespec-azure#5879."
+    }
+  },
+  "records": [
+    {
+      "pr": 47295,
+      "report": "prs/47295/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47234,
+      "report": "prs/47234/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47284,
+      "report": "prs/47284/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47058,
+      "report": "prs/47058/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47315,
+      "report": "prs/47315/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47322,
+      "report": "prs/47322/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46097,
+      "report": "prs/46097/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47084,
+      "report": "prs/47084/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 45468,
+      "report": "prs/45468/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47331,
+      "report": "prs/47331/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47265,
+      "report": "prs/47265/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47320,
+      "report": "prs/47320/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46811,
+      "report": "prs/46811/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47356,
+      "report": "prs/47356/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47357,
+      "report": "prs/47357/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47326,
+      "report": "prs/47326/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47338,
+      "report": "prs/47338/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46315,
+      "report": "prs/46315/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46034,
+      "report": "prs/46034/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47375,
+      "report": "prs/47375/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46371,
+      "report": "prs/46371/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47352,
+      "report": "prs/47352/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47353,
+      "report": "prs/47353/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47402,
+      "report": "prs/47402/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46545,
+      "report": "prs/46545/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47279,
+      "report": "prs/47279/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46350,
+      "report": "prs/46350/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47290,
+      "report": "prs/47290/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47419,
+      "report": "prs/47419/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47162,
+      "report": "prs/47162/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47432,
+      "report": "prs/47432/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 45742,
+      "report": "prs/45742/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 45961,
+      "report": "prs/45961/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46450,
+      "report": "prs/46450/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47448,
+      "report": "prs/47448/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47156,
+      "report": "prs/47156/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47423,
+      "report": "prs/47423/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47438,
+      "report": "prs/47438/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47204,
+      "report": "prs/47204/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47451,
+      "report": "prs/47451/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46300,
+      "report": "prs/46300/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47478,
+      "report": "prs/47478/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47048,
+      "report": "prs/47048/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47069,
+      "report": "prs/47069/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47459,
+      "report": "prs/47459/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47496,
+      "report": "prs/47496/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46176,
+      "report": "prs/46176/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47081,
+      "report": "prs/47081/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47321,
+      "report": "prs/47321/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47408,
+      "report": "prs/47408/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47484,
+      "report": "prs/47484/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47349,
+      "report": "prs/47349/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47462,
+      "report": "prs/47462/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47361,
+      "report": "prs/47361/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47306,
+      "report": "prs/47306/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46163,
+      "report": "prs/46163/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47424,
+      "report": "prs/47424/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47255,
+      "report": "prs/47255/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46965,
+      "report": "prs/46965/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47515,
+      "report": "prs/47515/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47547,
+      "report": "prs/47547/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47557,
+      "report": "prs/47557/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47324,
+      "report": "prs/47324/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46495,
+      "report": "prs/46495/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 46093,
+      "report": "prs/46093/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47574,
+      "report": "prs/47574/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46400,
+      "report": "prs/46400/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47555,
+      "report": "prs/47555/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47018,
+      "report": "prs/47018/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 44986,
+      "report": "prs/44986/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47561,
+      "report": "prs/47561/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47244,
+      "report": "prs/47244/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46782,
+      "report": "prs/46782/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47603,
+      "report": "prs/47603/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47506,
+      "report": "prs/47506/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47643,
+      "report": "prs/47643/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47541,
+      "report": "prs/47541/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47667,
+      "report": "prs/47667/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46010,
+      "report": "prs/46010/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47600,
+      "report": "prs/47600/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 46291,
+      "report": "prs/46291/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47645,
+      "report": "prs/47645/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47590,
+      "report": "prs/47590/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47685,
+      "report": "prs/47685/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47690,
+      "report": "prs/47690/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47689,
+      "report": "prs/47689/report.json",
+      "status": "not-qualified"
+    },
+    {
+      "pr": 47642,
+      "report": "prs/47642/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47628,
+      "report": "prs/47628/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47706,
+      "report": "prs/47706/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47726,
+      "report": "prs/47726/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47287,
+      "report": "prs/47287/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47727,
+      "report": "prs/47727/report.json",
+      "status": "evaluated"
+    },
+    {
+      "pr": 47691,
+      "report": "prs/47691/report.json",
+      "status": "partial"
+    },
+    {
+      "pr": 47594,
+      "report": "prs/47594/report.json",
+      "status": "evaluated"
+    }
+  ],
+  "status": {
+    "total": 94,
+    "evaluated": 46,
+    "notQualified": 42,
+    "partial": 6,
+    "failed": 0
+  }
+}

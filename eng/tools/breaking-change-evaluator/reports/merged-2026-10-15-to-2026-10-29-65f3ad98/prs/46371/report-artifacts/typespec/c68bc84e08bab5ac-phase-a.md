@@ -24,6 +24,6 @@
 <details>
 <summary>Performance</summary>
 
-Total: 3.9s · Version mutators: 2.9s · Diff engine: 986ms · Classify: 0ms
+Total: 8.0s · Version mutators: 5.8s · Diff engine: 2.2s · Classify: 1ms
 
 </details>
