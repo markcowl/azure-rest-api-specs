@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "reportId": "merged-2026-10-15-to-2026-10-29-7824998e:pr-47322:df1ce72b86ced7532ad9d5284865ceb9890c0490"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47322,
+    "title": "Azure Local Client customization change",
+    "author": "v-shubhamti-microsoft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47322",
+    "baseBranch": "main",
+    "headBranch": "user/v-shubhamti/fix-client-customization-15102026",
+    "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+    "headSha": "df1ce72b86ced7532ad9d5284865ceb9890c0490",
+    "mergedAt": "2026-10-15T09:58:00Z",
+    "changedTypeSpecFiles": [
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47322",
+      "state": "closed",
+      "merged": true,
+      "headSha": "df1ce72b86ced7532ad9d5284865ceb9890c0490",
+      "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+      "runs": {
+        "A": {
+          "id": 38714530967,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "df1ce72b86ced7532ad9d5284865ceb9890c0490",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38714530967",
+          "logDigest": "16e6a35c1bfb12b8511bdebef6778949f23e981ca01d9cd8ff01a99eb6f555ec",
+          "summaryDigest": "00fa1b8aef672d76eb1c6e33e8784f83d560012744ea7405f021fefdb49ec4dc"
+        },
+        "B": {
+          "id": 38714531165,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "df1ce72b86ced7532ad9d5284865ceb9890c0490",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38714531165",
+          "logDigest": "40c47ed6d4b565a4e11712787f6e8c50d0d0c83f1bcde54d3684d41c994c196e",
+          "summaryDigest": "6e5335ca0221e43a0b656d924f0a5e155272e905d4a0d8aecb5e0368acd4cc42"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47322",
+      "headSha": "df1ce72b86ced7532ad9d5284865ceb9890c0490",
+      "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "7824998e1b7e926ce3b09b39fc376742b726a028",
+      "artifactDigest": "fd27cd230327eead1921152fc701f7b9b3582ba8b15e1e5600390d6a65a5764f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/d542013e3b27865c-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/d542013e3b27865c-phase-a.md",
+          "jsonDigest": "6fa3a570e74eeb353ef747fe61fb95307ed191bcb4f2ccbc72616a2210542f61",
+          "markdownDigest": "4a4a6b93f09bee03ee89e667470397ffd0cdc4973abd08a5a3fcccf05fa41f62",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 4735,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 4077,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 8816
+          },
+          "comparisonsPerformed": 4,
+          "versionComparisons": [
+            {
+              "serviceName": "AzureStackHCI",
+              "baseVersion": "2026-02-01",
+              "headVersion": "2026-02-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "AzureStackHCI",
+              "baseVersion": "2026-04-30",
+              "headVersion": "2026-04-30",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "AzureStackHCI",
+              "baseVersion": "2026-10-01",
+              "headVersion": "2026-10-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "AzureStackHCI",
+              "baseVersion": "2026-10-15-preview",
+              "headVersion": "2026-10-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/d542013e3b27865c-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/d542013e3b27865c-phase-b.md",
+          "jsonDigest": "ce64da4941f806e49a306179a2886fec4a49cca13ecd8242a8c9dd4bde8968be",
+          "markdownDigest": "e9f511492235b886a9414e2cda22c941317d85136a834d5fb18cf324d9c4709c",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 5087,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 4838,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 9931
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "52ffb1e578753adea726442a046a1122d1bced5b0059d9fb5376f48f7d5e6bb1",
+      "comparisonsPerformed": 4,
+      "versionComparisons": [
+        {
+          "serviceName": "AzureStackHCI",
+          "baseVersion": "2026-02-01",
+          "headVersion": "2026-02-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "AzureStackHCI",
+          "baseVersion": "2026-04-30",
+          "headVersion": "2026-04-30",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "AzureStackHCI",
+          "baseVersion": "2026-10-01",
+          "headVersion": "2026-10-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "AzureStackHCI",
+          "baseVersion": "2026-10-15-preview",
+          "headVersion": "2026-10-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-3bf8f0125b2fb252",
+      "affectedPrs": [
+        47322
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-50b2dd4def5f4432",
+      "affectedPrs": [
+        47322
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "7824998e1b7e926ce3b09b39fc376742b726a028",
+    "analyzerArtifactDigest": "fd27cd230327eead1921152fc701f7b9b3582ba8b15e1e5600390d6a65a5764f",
+    "prHeadSha": "df1ce72b86ced7532ad9d5284865ceb9890c0490",
+    "prBaseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 7824998e1b7e926ce3b09b39fc376742b726a028 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'fd27cd230327eead1921152fc701f7b9b3582ba8b15e1e5600390d6a65a5764f') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 3b386d94c8a520fb6bb626b8e667e0b69a9df96a df1ce72b86ced7532ad9d5284865ceb9890c0490\ngit -C target checkout --detach df1ce72b86ced7532ad9d5284865ceb9890c0490\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47322' --tool-revision 7824998e1b7e926ce3b09b39fc376742b726a028 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI",
+        "project": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-azurestackhci-resource-manager-Microsoft.AzureStackHCI-StackHCI-phase-a.json' --markdown-output '../specification-azurestackhci-resource-manager-Microsoft.AzureStackHCI-StackHCI-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-azurestackhci-resource-manager-Microsoft.AzureStackHCI-StackHCI-phase-b-evidence.json' --markdown-output '../specification-azurestackhci-resource-manager-Microsoft.AzureStackHCI-StackHCI-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}
