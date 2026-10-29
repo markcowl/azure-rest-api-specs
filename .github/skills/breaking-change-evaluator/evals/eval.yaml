@@ -1,0 +1,41 @@
+name: breaking-change-evaluator-eval
+description: Minimal workflow coverage for the breaking-change-evaluator skill
+type: capability
+
+environment: azsdk-mcp-mock
+
+tags:
+  area: breaking-change-evaluator
+  type: ci-gate
+
+config:
+  runs: 1
+  timeout: "120s"
+  model: gpt-5.4
+  executor: copilot-sdk
+
+scoring:
+  threshold: 0.8
+
+stimuli:
+  - name: plan-immutable-merged-dataset
+    prompt: "Use the breaking-change evaluator skill to explain how you would create a new report for all TypeSpec service PRs merged after 2026-10-15T03:00:00Z. Do not run it."
+    environment:
+      skills:
+        - ..
+    graders:
+      - type: skill-invocation
+        config:
+          required: ["breaking-change-evaluator"]
+      - type: output-contains
+        config:
+          substring: "create-merged-selection.mjs"
+      - type: output-contains
+        config:
+          substring: "validate-runs"
+      - type: output-matches
+        config:
+          pattern: "(?i)(exact|full).*(SHA|revision)"
+      - type: output-matches
+        config:
+          pattern: "(?i)(immutable|new run)"

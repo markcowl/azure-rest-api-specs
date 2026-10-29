@@ -1,0 +1,61 @@
+name: breaking-change-evaluator-trigger-eval
+description: Trigger and anti-trigger tests for the breaking-change-evaluator skill
+type: capability
+
+environment: azsdk-mcp-mock
+
+tags:
+  area: breaking-change-evaluator
+  type: ci-gate
+
+config:
+  runs: 1
+  timeout: "90s"
+  model: gpt-5.4
+  executor: copilot-sdk
+
+scoring:
+  threshold: 0.8
+
+stimuli:
+  - name: trigger-refresh-comparison-data
+    prompt: "Refresh the breaking-change evaluator reports for TypeSpec PRs merged since the last dataset."
+    environment:
+      skills:
+        - ..
+    graders:
+      - type: skill-invocation
+        config:
+          required: ["breaking-change-evaluator"]
+
+  - name: trigger-analyze-detector-agreement
+    prompt: "Analyze the latest Swagger versus TypeSpec breaking-change comparison report."
+    environment:
+      skills:
+        - ..
+    graders:
+      - type: skill-invocation
+        config:
+          required: ["breaking-change-evaluator"]
+
+  - name: anti-trigger-author-typespec
+    prompt: "Add a new property to a TypeSpec model and bump the API version."
+    environment:
+      skills:
+        - ..
+        - ../../azure-typespec-author
+    graders:
+      - type: skill-invocation
+        config:
+          disallowed: ["breaking-change-evaluator"]
+
+  - name: anti-trigger-api-review
+    prompt: "Review this ARM API for Azure REST API guideline violations."
+    environment:
+      skills:
+        - ..
+        - ../../azure-api-review
+    graders:
+      - type: skill-invocation
+        config:
+          disallowed: ["breaking-change-evaluator"]
