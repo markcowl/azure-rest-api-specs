@@ -1,0 +1,69 @@
+{
+  "specPaths": [
+    "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "DevOpsInfrastructure",
+        "baseVersion": "2025-01-21",
+        "headVersion": "2025-01-21",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "DevOpsInfrastructure",
+        "baseVersion": "2025-09-20",
+        "headVersion": "2025-09-20",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "DevOpsInfrastructure",
+        "baseVersion": "2026-04-17-preview",
+        "headVersion": "2026-04-17-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "DevOpsInfrastructure",
+        "baseVersion": "2026-06-02",
+        "headVersion": "2026-06-02",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "DevOpsInfrastructure",
+        "baseVersion": "2026-07-03-preview",
+        "headVersion": "2026-07-03-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1751,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 548,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 2304
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47484
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47484,
+    "title": "Update MongoCluster descriptions to Azure DocumentDB",
+    "author": "sandeepsnairms",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47484",
+    "baseBranch": "main",
+    "headBranch": "docs/documentdb-cluster-descriptions",
+    "baseSha": "2371f14ab26ab99500de46ac5c507476a8e0fc61",
+    "headSha": "21e38b8940ceff9727f45fed459c776d9df2eb45",
+    "mergedAt": "2026-10-22T03:52:02Z",
+    "changedTypeSpecFiles": [
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/FirewallRule.tsp",
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp",
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/Replica.tsp",
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/User.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47484",
+      "state": "closed",
+      "merged": true,
+      "headSha": "21e38b8940ceff9727f45fed459c776d9df2eb45",
+      "baseSha": "2371f14ab26ab99500de46ac5c507476a8e0fc61",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/FirewallRule.tsp",
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp",
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/Replica.tsp",
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/User.tsp"
+      ]
+    }
+  },
+  "headSha": "21e38b8940ceff9727f45fed459c776d9df2eb45",
+  "baseSha": "2371f14ab26ab99500de46ac5c507476a8e0fc61",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/FirewallRule.tsp",
+    "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp",
+    "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/Replica.tsp",
+    "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/User.tsp"
+  ],
+  "oadFindings": []
+}

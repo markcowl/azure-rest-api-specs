@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47496
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47496,
+    "title": "[HealthDataAIServices] Disable Python TypedDict generation for DeID data-plane SDK",
+    "author": "jovinson-ms",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47496",
+    "baseBranch": "main",
+    "headBranch": "deid-python-typeddict-opt-out",
+    "baseSha": "d57a3d026976ebfaba6ffcf8b0745e15f920407c",
+    "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+    "mergedAt": "2026-10-21T22:01:11Z",
+    "changedTypeSpecFiles": [
+      "specification/healthdataaiservices/data-plane/HealthDataAIServices/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47496",
+      "state": "closed",
+      "merged": true,
+      "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+      "baseSha": "d57a3d026976ebfaba6ffcf8b0745e15f920407c",
+      "runs": {
+        "A": {
+          "id": 39664124861,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39664124861",
+          "logDigest": "5090f1b7c1130e041024914e0f3b34294c68eb74588757bbf27f5f1b061171f4",
+          "summaryDigest": "d2d7af1a07fc6f1fe7bb31d28c5148d1b8a92a25db024920b21c9ba8b388466d"
+        },
+        "B": {
+          "id": 39664124972,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39664124972",
+          "logDigest": "2d25d2bd3aa95cbc0af4adf1cba20063b5a18b32161b81661901fca21cb99626",
+          "summaryDigest": "b3854089366a34aec1518de6b82062a6b78a38e4c6a2d842ebe1169b7c2e78c8"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/healthdataaiservices/data-plane/HealthDataAIServices/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+  "baseSha": "d57a3d026976ebfaba6ffcf8b0745e15f920407c",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/healthdataaiservices/data-plane/HealthDataAIServices/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

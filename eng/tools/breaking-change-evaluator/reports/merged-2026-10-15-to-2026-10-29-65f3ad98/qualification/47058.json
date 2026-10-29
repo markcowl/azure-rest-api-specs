@@ -1,0 +1,532 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47058
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47058,
+    "title": "Add 2026-10-01-preview API version with session artifacts support",
+    "author": "radhikajain99",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47058",
+    "baseBranch": "main",
+    "headBranch": "users/radhikajain/playwright_session_artifacts",
+    "baseSha": "efb0884620a801846ba9af4f622e004e08522583",
+    "headSha": "4ff431b69626accbf18a853bb5094c2ad24d41ee",
+    "mergedAt": "2026-10-15T07:07:54Z",
+    "changedTypeSpecFiles": [
+      "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/main.tsp",
+      "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47058",
+      "state": "closed",
+      "merged": true,
+      "headSha": "4ff431b69626accbf18a853bb5094c2ad24d41ee",
+      "baseSha": "efb0884620a801846ba9af4f622e004e08522583",
+      "runs": {
+        "A": {
+          "id": 37490444904,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "4ff431b69626accbf18a853bb5094c2ad24d41ee",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37490444904",
+          "logDigest": "e4284a08de48ba71c1dc2b4ccca88daa7a5384c9d44553ce711202775f39f039",
+          "summaryDigest": "5580dc9e0b472463bcf092fdecf6ace5161ac95e6c96a638b7e12ef020860e46"
+        },
+        "B": {
+          "id": 37490444803,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "4ff431b69626accbf18a853bb5094c2ad24d41ee",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37490444803",
+          "logDigest": "8ad2af14627361ce28c4172fcd216fa1febf4af83d11e4ea5d8036c590d692da",
+          "summaryDigest": "9a93930a289d26256d5e405eea296fcff5dfce1d561ceebb2ba44fcee15798ae"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/main.tsp",
+        "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp"
+      ]
+    }
+  },
+  "headSha": "4ff431b69626accbf18a853bb5094c2ad24d41ee",
+  "baseSha": "efb0884620a801846ba9af4f622e004e08522583",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/main.tsp",
+    "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "B-oad-0",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'reporting' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'reporting' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-1",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'storageUri' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'storageUri' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-2",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'subnetId' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'subnetId' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-3",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'sessionArtifacts' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'sessionArtifacts' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-4",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'storageIdentity' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'storageIdentity' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-5",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'identity' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspace/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspace/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspace.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspace.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'identity' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspace/properties\",\"path\":\"definitions.PlaywrightWorkspace.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:811:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspace/properties\",\"path\":\"definitions.PlaywrightWorkspace.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:857:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-6",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'identity' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspace/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspace/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspace.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspace.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'identity' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspace/properties\",\"path\":\"definitions.PlaywrightWorkspace.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:811:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspace/properties\",\"path\":\"definitions.PlaywrightWorkspace.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:857:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-7",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'reporting' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'reporting' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-8",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'storageUri' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'storageUri' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-9",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'subnetId' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'subnetId' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-10",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'sessionArtifacts' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'sessionArtifacts' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-11",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'storageIdentity' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'storageIdentity' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:893:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-12",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'identity' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdate/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdate/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceUpdate.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceUpdate.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'identity' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdate/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdate.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:1021:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdate/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdate.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:1146:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-13",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'reporting' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'reporting' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:1039:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:1168:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-14",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'storageUri' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'storageUri' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:1039:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:1168:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-15",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'sessionArtifacts' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'sessionArtifacts' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:1039:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:1168:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-16",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'storageIdentity' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'storageIdentity' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/stable/2025-09-01/playwright.json:1039:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:1168:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-17",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'sessionArtifacts' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-08-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'sessionArtifacts' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json:897:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-18",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'storageIdentity' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-08-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'storageIdentity' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json:897:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-19",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'sessionArtifacts' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-08-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'sessionArtifacts' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json:897:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-20",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'storageIdentity' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-08-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'storageIdentity' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json:897:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:943:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-21",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'sessionArtifacts' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-08-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'sessionArtifacts' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json:1093:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:1168:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-22",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'storageIdentity' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties",
+      "oldJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "newJsonPath": "definitions.PlaywrightWorkspaceUpdateProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json",
+        "newPath": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-08-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'storageIdentity' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-08-01-preview/playwright.json:1093:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PlaywrightWorkspaceUpdateProperties/properties\",\"path\":\"definitions.PlaywrightWorkspaceUpdateProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/preview/2026-10-01-preview/playwright.json:1168:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46176
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46176,
+    "title": "Add Key Vault data-plane stable 2026-04-01 API version",
+    "author": "melissamserv",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46176",
+    "baseBranch": "main",
+    "headBranch": "melissame-release-keyvault-Microsoft.KeyVault-2026-04-01",
+    "baseSha": "ec877ee0e8e77b284f333f186cfa2a6e0250fbb9",
+    "headSha": "3038e001a059a5b22aafa80310a88ff01a0a6f71",
+    "mergedAt": "2026-10-21T22:09:15Z",
+    "changedTypeSpecFiles": [
+      "specification/keyvault/data-plane/Administration/BackupRestore/main.tsp",
+      "specification/keyvault/data-plane/Administration/EKM/main.tsp",
+      "specification/keyvault/data-plane/Administration/RBAC/main.tsp",
+      "specification/keyvault/data-plane/Administration/Settings/main.tsp",
+      "specification/keyvault/data-plane/Administration/main.tsp",
+      "specification/keyvault/data-plane/Certificates/main.tsp",
+      "specification/keyvault/data-plane/Keys/main.tsp",
+      "specification/keyvault/data-plane/Secrets/main.tsp",
+      "specification/keyvault/data-plane/SecurityDomain/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46176",
+      "state": "closed",
+      "merged": true,
+      "headSha": "3038e001a059a5b22aafa80310a88ff01a0a6f71",
+      "baseSha": "ec877ee0e8e77b284f333f186cfa2a6e0250fbb9",
+      "runs": {
+        "A": {
+          "id": 39681503560,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "3038e001a059a5b22aafa80310a88ff01a0a6f71",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39681503560",
+          "logDigest": "192711e75f518d858c1a1b0c5be85fe520843dcc7a2ac962f9e142feaa36939d",
+          "summaryDigest": "fe53899f4d44b3fec53f7545ef28ec1d71a6f6895d298b4717cbcfb791993da2"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/keyvault/data-plane/Administration/BackupRestore/main.tsp",
+        "specification/keyvault/data-plane/Administration/EKM/main.tsp",
+        "specification/keyvault/data-plane/Administration/RBAC/main.tsp",
+        "specification/keyvault/data-plane/Administration/Settings/main.tsp",
+        "specification/keyvault/data-plane/Administration/main.tsp",
+        "specification/keyvault/data-plane/Certificates/main.tsp",
+        "specification/keyvault/data-plane/Keys/main.tsp",
+        "specification/keyvault/data-plane/Secrets/main.tsp",
+        "specification/keyvault/data-plane/SecurityDomain/main.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary claims no findings but workflow logs contain OAD findings"
+      ]
+    }
+  },
+  "headSha": "3038e001a059a5b22aafa80310a88ff01a0a6f71",
+  "baseSha": "ec877ee0e8e77b284f333f186cfa2a6e0250fbb9",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/keyvault/data-plane/Administration/BackupRestore/main.tsp",
+    "specification/keyvault/data-plane/Administration/EKM/main.tsp",
+    "specification/keyvault/data-plane/Administration/RBAC/main.tsp",
+    "specification/keyvault/data-plane/Administration/Settings/main.tsp",
+    "specification/keyvault/data-plane/Administration/main.tsp",
+    "specification/keyvault/data-plane/Certificates/main.tsp",
+    "specification/keyvault/data-plane/Keys/main.tsp",
+    "specification/keyvault/data-plane/Secrets/main.tsp",
+    "specification/keyvault/data-plane/SecurityDomain/main.tsp"
+  ],
+  "oadFindings": []
+}

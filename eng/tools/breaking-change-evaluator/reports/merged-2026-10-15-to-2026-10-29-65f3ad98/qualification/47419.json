@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47419
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47419,
+    "title": "Customize .NET default action group model name",
+    "author": "GokulPrasad-Work",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47419",
+    "baseBranch": "main",
+    "headBranch": "gokulpk/amw-dotnet-sdk-customization",
+    "baseSha": "67034e78a54df341ebad6e76b0c6fd1a44627c67",
+    "headSha": "4b4a271ce0ad523a9e8afb4ba6bd848f00a5ed08",
+    "mergedAt": "2026-10-19T19:12:51Z",
+    "changedTypeSpecFiles": [
+      "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47419",
+      "state": "closed",
+      "merged": true,
+      "headSha": "4b4a271ce0ad523a9e8afb4ba6bd848f00a5ed08",
+      "baseSha": "67034e78a54df341ebad6e76b0c6fd1a44627c67",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/client.tsp"
+      ]
+    }
+  },
+  "headSha": "4b4a271ce0ad523a9e8afb4ba6bd848f00a5ed08",
+  "baseSha": "67034e78a54df341ebad6e76b0c6fd1a44627c67",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/monitoringservice/resource-manager/Microsoft.Monitor/Accounts/client.tsp"
+  ],
+  "oadFindings": []
+}

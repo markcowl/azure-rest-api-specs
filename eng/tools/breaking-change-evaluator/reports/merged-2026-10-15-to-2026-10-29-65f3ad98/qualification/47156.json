@@ -1,0 +1,85 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47156
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47156,
+    "title": "[Microsoft.ApiManagement] AI Gateway 2026-11-01",
+    "author": "azaslonov",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47156",
+    "baseBranch": "main",
+    "headBranch": "alzaslon/aigateway-2026-10-preview",
+    "baseSha": "8acc59200b5eaf6a993b3db1d35900c6fe8c80ea",
+    "headSha": "a5ccbf8129d4e835acbbddc8c8f07e263a97f72c",
+    "mergedAt": "2026-10-20T16:42:38Z",
+    "changedTypeSpecFiles": [
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayAlias.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayApiKey.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayCommon.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModel.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModelProvider.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayOperations.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResource.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResponses.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayTelemetryExporter.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayToolServer.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayWorkspace.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/client.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47156",
+      "state": "closed",
+      "merged": true,
+      "headSha": "a5ccbf8129d4e835acbbddc8c8f07e263a97f72c",
+      "baseSha": "8acc59200b5eaf6a993b3db1d35900c6fe8c80ea",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayAlias.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayApiKey.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayCommon.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModel.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModelProvider.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayOperations.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResource.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResponses.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayTelemetryExporter.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayToolServer.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayWorkspace.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/client.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/main.tsp"
+      ]
+    }
+  },
+  "headSha": "a5ccbf8129d4e835acbbddc8c8f07e263a97f72c",
+  "baseSha": "8acc59200b5eaf6a993b3db1d35900c6fe8c80ea",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayAlias.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayApiKey.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayCommon.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModel.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModelProvider.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayOperations.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResource.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResponses.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayTelemetryExporter.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayToolServer.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayWorkspace.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/client.tsp",
+    "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/main.tsp"
+  ],
+  "oadFindings": []
+}

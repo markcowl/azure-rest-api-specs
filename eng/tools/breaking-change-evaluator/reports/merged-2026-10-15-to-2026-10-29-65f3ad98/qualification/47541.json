@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47541
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47541,
+    "title": "Preserve NetApp C# account patch compatibility",
+    "author": "nandakus2",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47541",
+    "baseBranch": "main",
+    "headBranch": "netapp-csharp-compat-20260801",
+    "baseSha": "af9d89cce154a6d5bfdcb5090cd3b1ed82d149b7",
+    "headSha": "e6f55d4ac8ddb56bb80abf9470ae93e00d4c6e10",
+    "mergedAt": "2026-10-27T18:23:54Z",
+    "changedTypeSpecFiles": [
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47541",
+      "state": "closed",
+      "merged": true,
+      "headSha": "e6f55d4ac8ddb56bb80abf9470ae93e00d4c6e10",
+      "baseSha": "af9d89cce154a6d5bfdcb5090cd3b1ed82d149b7",
+      "runs": {
+        "A": {
+          "id": 40556882925,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "e6f55d4ac8ddb56bb80abf9470ae93e00d4c6e10",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40556882925",
+          "logDigest": "f5370ccd2d4208a7b4d99c2ff90d8bea0c54854c19691ad595b849f4d39a187d",
+          "summaryDigest": "c1d7ef2145a586146fc88f468512554d711eebfa85c26f5766c20e19194bb8bb"
+        },
+        "B": {
+          "id": 40556882868,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "e6f55d4ac8ddb56bb80abf9470ae93e00d4c6e10",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40556882868",
+          "logDigest": "f0fb9a130648007d27c9c44c45d74151fb092b71fce71654f45805c53d4ca70d",
+          "summaryDigest": "7edbc2886a5ff5124489a71ef4ccf167f577e0ebb1364a27146916374c746e42"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp"
+      ]
+    }
+  },
+  "headSha": "e6f55d4ac8ddb56bb80abf9470ae93e00d4c6e10",
+  "baseSha": "af9d89cce154a6d5bfdcb5090cd3b1ed82d149b7",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp"
+  ],
+  "oadFindings": []
+}

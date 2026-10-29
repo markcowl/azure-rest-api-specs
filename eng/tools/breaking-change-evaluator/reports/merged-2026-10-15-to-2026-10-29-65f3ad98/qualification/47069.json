@@ -1,0 +1,150 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47069
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47069,
+    "title": "[RedHatOpenShift] Add 2026-10-01 for HCP service",
+    "author": "twolff-az",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47069",
+    "baseBranch": "main",
+    "headBranch": "release-aro-hcp/2026-10-01",
+    "baseSha": "7e3d5a565115344643a3333a950f6f29b241293d",
+    "headSha": "dfe87dc096ec04b9b521a8de69feb197608d55ea",
+    "mergedAt": "2026-10-21T15:37:31Z",
+    "changedTypeSpecFiles": [
+      "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/client.tsp",
+      "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/hcpCluster-models.tsp",
+      "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47069",
+      "state": "closed",
+      "merged": true,
+      "headSha": "dfe87dc096ec04b9b521a8de69feb197608d55ea",
+      "baseSha": "7e3d5a565115344643a3333a950f6f29b241293d",
+      "runs": {
+        "A": {
+          "id": 38453305302,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "dfe87dc096ec04b9b521a8de69feb197608d55ea",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38453305302",
+          "logDigest": "8e534c0cfedb1898dcbf04f6bbb7952628c92ac8f836e07dd83598c91fc6a6f3",
+          "summaryDigest": "4d695d44574d342c855065151ede521b3515087b67f8c0994b2a28fc68aa9f3f"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/client.tsp",
+        "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/hcpCluster-models.tsp",
+        "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/main.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary claims no findings but workflow logs contain OAD findings"
+      ]
+    }
+  },
+  "headSha": "dfe87dc096ec04b9b521a8de69feb197608d55ea",
+  "baseSha": "7e3d5a565115344643a3333a950f6f29b241293d",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/client.tsp",
+    "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/hcpCluster-models.tsp",
+    "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/main.tsp"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2024-06-10-preview/openapi.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2024-06-10-preview/openapi.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2024-06-10-preview/openapi.json",
+        "newPath": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2024-06-10-preview/openapi.json",
+        "oldVersion": "2024-06-10-preview",
+        "newVersion": "2024-06-10-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2024-06-10-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2024-06-10-preview/openapi.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2024-06-10-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2024-06-10-preview/openapi.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2025-12-23-preview/openapi.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2025-12-23-preview/openapi.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2025-12-23-preview/openapi.json",
+        "newPath": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2025-12-23-preview/openapi.json",
+        "oldVersion": "2025-12-23-preview",
+        "newVersion": "2025-12-23-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2025-12-23-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2025-12-23-preview/openapi.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2025-12-23-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2025-12-23-preview/openapi.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-06-30-preview/openapi.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-06-30-preview/openapi.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-06-30-preview/openapi.json",
+        "newPath": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-06-30-preview/openapi.json",
+        "oldVersion": "2026-06-30-preview",
+        "newVersion": "2026-06-30-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-06-30-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-06-30-preview/openapi.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-06-30-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-06-30-preview/openapi.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-09-01-preview/openapi.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-09-01-preview/openapi.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-09-01-preview/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-09-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-09-01-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-09-01-preview/openapi.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-09-01-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/preview/2026-09-01-preview/openapi.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    }
+  ]
+}

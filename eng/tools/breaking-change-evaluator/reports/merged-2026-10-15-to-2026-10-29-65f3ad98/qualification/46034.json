@@ -1,0 +1,58 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46034
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46034,
+    "title": "[Microsoft.ProviderHub] Add 2026-09-01-preview API version",
+    "author": "gerardoglzb",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46034",
+    "baseBranch": "main",
+    "headBranch": "feature/providerhub-2026-09-01-preview",
+    "baseSha": "a058c0286266319c95c58d04a37b8b96f324461e",
+    "headSha": "abf586ee7b47f5fff71c131f4d09895dec1ce94a",
+    "mergedAt": "2026-10-16T19:05:21Z",
+    "changedTypeSpecFiles": [
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/EndpointRegistration.tsp",
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/client.tsp",
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/main.tsp",
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46034",
+      "state": "closed",
+      "merged": true,
+      "headSha": "abf586ee7b47f5fff71c131f4d09895dec1ce94a",
+      "baseSha": "a058c0286266319c95c58d04a37b8b96f324461e",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/EndpointRegistration.tsp",
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/client.tsp",
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/main.tsp",
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/models.tsp"
+      ]
+    }
+  },
+  "headSha": "abf586ee7b47f5fff71c131f4d09895dec1ce94a",
+  "baseSha": "a058c0286266319c95c58d04a37b8b96f324461e",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/EndpointRegistration.tsp",
+    "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/client.tsp",
+    "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/main.tsp",
+    "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/models.tsp"
+  ],
+  "oadFindings": []
+}

@@ -1,0 +1,66 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46010
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46010,
+    "title": "Add Resource Health 2026-07-01 version",
+    "author": "mumurug-MSFT",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46010",
+    "baseBranch": "main",
+    "headBranch": "resourcehealth-2026-07-01",
+    "baseSha": "bc2219879bafda17e3c3d30935a0d72dc4da84d6",
+    "headSha": "90ff0a13e7c3f9126ee642faa44b1c6636d7bf75",
+    "mergedAt": "2026-10-27T22:17:50Z",
+    "changedTypeSpecFiles": [
+      "specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/main.tsp",
+      "specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46010",
+      "state": "closed",
+      "merged": true,
+      "headSha": "90ff0a13e7c3f9126ee642faa44b1c6636d7bf75",
+      "baseSha": "bc2219879bafda17e3c3d30935a0d72dc4da84d6",
+      "runs": {
+        "A": {
+          "id": 40564177154,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "90ff0a13e7c3f9126ee642faa44b1c6636d7bf75",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40564177154",
+          "logDigest": "42a64a96f53dd66b83274001deb96fc135b00cb2ed0e17891b0e9adf603982b7",
+          "summaryDigest": "5f30704c80803ff1f1034c993022db982701d34e872c5907a587fc35badb067d"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/main.tsp",
+        "specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/models.tsp"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "headSha": "90ff0a13e7c3f9126ee642faa44b1c6636d7bf75",
+  "baseSha": "bc2219879bafda17e3c3d30935a0d72dc4da84d6",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/main.tsp",
+    "specification/resourcehealth/resource-manager/Microsoft.ResourceHealth/ResourceHealth/models.tsp"
+  ],
+  "oadFindings": []
+}

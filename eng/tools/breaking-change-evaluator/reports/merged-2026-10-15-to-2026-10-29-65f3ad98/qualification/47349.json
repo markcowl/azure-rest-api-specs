@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47349
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47349,
+    "title": "Enable Azure.Provisioning.SerialConsole generation",
+    "author": "cxznmhdcxz",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47349",
+    "baseBranch": "main",
+    "headBranch": "onboard/azure-provisioning-serialconsole",
+    "baseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4",
+    "headSha": "84e575d9f48cfbdedbc3111d5d1b7e4e1d3aa24a",
+    "mergedAt": "2026-10-22T07:38:32Z",
+    "changedTypeSpecFiles": [
+      "specification/serialconsole/resource-manager/Microsoft.SerialConsole/SerialConsole/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47349",
+      "state": "closed",
+      "merged": true,
+      "headSha": "84e575d9f48cfbdedbc3111d5d1b7e4e1d3aa24a",
+      "baseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/serialconsole/resource-manager/Microsoft.SerialConsole/SerialConsole/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "84e575d9f48cfbdedbc3111d5d1b7e4e1d3aa24a",
+  "baseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/serialconsole/resource-manager/Microsoft.SerialConsole/SerialConsole/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

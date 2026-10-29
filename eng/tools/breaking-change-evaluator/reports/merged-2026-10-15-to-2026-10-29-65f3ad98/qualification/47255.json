@@ -1,0 +1,52 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47255
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47255,
+    "title": "Add ACS incoming call event properties",
+    "author": "osaghaso",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47255",
+    "baseBranch": "main",
+    "headBranch": "user/osaghaso/Update_incomingCall_events",
+    "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264",
+    "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+    "mergedAt": "2026-10-22T22:43:16Z",
+    "changedTypeSpecFiles": [
+      "specification/eventgrid/data-plane/EventGridSystemEvents/Microsoft.Communication/AzureCommunicationServices.tsp",
+      "specification/eventgrid/data-plane/EventGridSystemEvents/propertyNameOverrideCsharp.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47255",
+      "state": "closed",
+      "merged": true,
+      "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+      "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/eventgrid/data-plane/EventGridSystemEvents/Microsoft.Communication/AzureCommunicationServices.tsp",
+        "specification/eventgrid/data-plane/EventGridSystemEvents/propertyNameOverrideCsharp.tsp"
+      ]
+    }
+  },
+  "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+  "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/eventgrid/data-plane/EventGridSystemEvents/Microsoft.Communication/AzureCommunicationServices.tsp",
+    "specification/eventgrid/data-plane/EventGridSystemEvents/propertyNameOverrideCsharp.tsp"
+  ],
+  "oadFindings": []
+}

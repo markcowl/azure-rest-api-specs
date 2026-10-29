@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47353
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47353,
+    "title": "Make Scheduled Events Acknowledge Error Details Classes Public",
+    "author": "ArthurMa1978",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47353",
+    "baseBranch": "main",
+    "headBranch": "mgmt-maintenance-spec",
+    "baseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4",
+    "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+    "mergedAt": "2026-10-19T02:38:10Z",
+    "changedTypeSpecFiles": [
+      "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47353",
+      "state": "closed",
+      "merged": true,
+      "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+      "baseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4",
+      "runs": {
+        "A": {
+          "id": 38873435512,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38873435512",
+          "logDigest": "f6c4d8d498f5f6cdb9d9fa9cba92903eeea47136e593e4d4347eb668d7a33ea8",
+          "summaryDigest": "d08f5c6f5c21ff8864f6ef65e1972d357ba4501bb257a9db84d0b8e69a2e3e01"
+        },
+        "B": {
+          "id": 38873435868,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38873435868",
+          "logDigest": "4315f07582c3aee2531b253638b1f677af3291c381e2ccba507468fc3b91ebf8",
+          "summaryDigest": "ce53bc7234ba3a3b5bf4c55d78fc29ae4ed4aa6e1ccd4023614e503d488a27b7"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance/client.tsp"
+      ]
+    }
+  },
+  "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+  "baseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance/client.tsp"
+  ],
+  "oadFindings": []
+}

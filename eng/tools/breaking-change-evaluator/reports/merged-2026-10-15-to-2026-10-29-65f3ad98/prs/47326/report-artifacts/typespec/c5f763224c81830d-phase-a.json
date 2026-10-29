@@ -1,0 +1,304 @@
+{
+  "specPaths": [
+    "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 8,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 8,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-09-01-preview",
+        "headVersion": "2025-09-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-12-01-preview",
+        "headVersion": "2025-12-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01",
+        "phase": "same-version",
+        "findingCount": 8,
+        "rawFindingCount": 22
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResponsePropertyRemoved",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response property 'deploymentType' was removed at body.properties.deploymentType.",
+      "element": "body.properties.deploymentType",
+      "versionPair": {
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01"
+      },
+      "location": {
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "line": 214
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Cdn.EdgeActionVersionProperties.deploymentType",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/edgeActions/{}/versions/{}/deployVersionCode"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Cdn.EdgeActionVersionProperties.deploymentType",
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "example": "model EdgeActionVersionProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })\n  deploymentType: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyRemoved",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response property 'validationStatus' was removed at body.properties.validationStatus.",
+      "element": "body.properties.validationStatus",
+      "versionPair": {
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01"
+      },
+      "location": {
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "line": 219
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Cdn.EdgeActionVersionProperties.validationStatus",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/edgeActions/{}/versions/{}/deployVersionCode"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Cdn.EdgeActionVersionProperties.validationStatus",
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "example": "model EdgeActionVersionProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })\n  validationStatus: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyRemoved",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response property 'provisioningState' was removed at body.properties.provisioningState.",
+      "element": "body.properties.provisioningState",
+      "versionPair": {
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01"
+      },
+      "location": {
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "line": 223
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Cdn.EdgeActionVersionProperties.provisioningState",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/edgeActions/{}/versions/{}/deployVersionCode"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Cdn.EdgeActionVersionProperties.provisioningState",
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "example": "model EdgeActionVersionProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })\n  provisioningState: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyRemoved",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response property 'isDefaultVersion' was removed at body.properties.isDefaultVersion.",
+      "element": "body.properties.isDefaultVersion",
+      "versionPair": {
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01"
+      },
+      "location": {
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "line": 234
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Cdn.EdgeActionVersionProperties.isDefaultVersion",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/edgeActions/{}/versions/{}/deployVersionCode"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Cdn.EdgeActionVersionProperties.isDefaultVersion",
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "example": "model EdgeActionVersionProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })\n  isDefaultVersion: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyRemoved",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response property 'lastPackageUpdateTime' was removed at body.properties.lastPackageUpdateTime.",
+      "element": "body.properties.lastPackageUpdateTime",
+      "versionPair": {
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01"
+      },
+      "location": {
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "line": 239
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Cdn.EdgeActionVersionProperties.lastPackageUpdateTime",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/edgeActions/{}/versions/{}/deployVersionCode"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })",
+        "placement": "On the declaration: Microsoft.Cdn.EdgeActionVersionProperties.lastPackageUpdateTime",
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/edgeactionsbasemodels.tsp",
+        "example": "model EdgeActionVersionProperties {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyRemoved\" })\n  lastPackageUpdateTime: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response property 'name' was added at body.properties.name.",
+      "element": "body.properties.name",
+      "versionPair": {
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01"
+      },
+      "location": {
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp",
+        "line": 73
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Cdn.EdgeActionVersion.name",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/edgeActions/{}/versions/{}/deployVersionCode"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Cdn.EdgeActionVersion.name",
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp",
+        "example": "model EdgeActionVersion {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyAdded\" })\n  name: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponsePropertyAdded",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response property 'properties' was added at body.properties.properties.",
+      "element": "body.properties.properties",
+      "versionPair": {
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01"
+      },
+      "location": {
+        "file": "<local-path>",
+        "line": 70
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Azure.ResourceManager.TrackedResource.properties",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/edgeActions/{}/versions/{}/deployVersionCode"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyAdded\" })",
+        "placement": "On the declaration: Azure.ResourceManager.TrackedResource.properties",
+        "file": "<local-path>",
+        "example": "model TrackedResource {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyAdded\" })\n  properties: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResponseHeaderAdded",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response header 'Azure-AsyncOperation' was added.",
+      "element": "headers.Azure-AsyncOperation",
+      "versionPair": {
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01"
+      },
+      "location": {
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp",
+        "line": 118
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/edgeActions/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponseHeaderAdded\", path: \"responses.200.headers.Azure-AsyncOperation\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Cdn/edgeActions/{}",
+        "file": "specification/cdn/resource-manager/Microsoft.Cdn/EdgeActions/main.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponseHeaderAdded\", path: \"responses.200.headers.Azure-AsyncOperation\" })\nop create(...): ...;"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1468,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 421,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 1897
+  }
+}

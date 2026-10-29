@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46093
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46093,
+    "title": "[Billing] Enable C# provisioning emitter",
+    "author": "HarveyLink",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46093",
+    "baseBranch": "main",
+    "headBranch": "provisioning-billing-onboarding",
+    "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+    "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+    "mergedAt": "2026-10-23T17:40:53Z",
+    "changedTypeSpecFiles": [
+      "specification/billing/resource-manager/Microsoft.Billing/Billing/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46093",
+      "state": "closed",
+      "merged": true,
+      "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+      "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+      "runs": {
+        "A": {
+          "id": 37903800567,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37903800567",
+          "logDigest": "dbfca41826ade6cc0b5ba9ff273c0d9a54f995c7d43a1bbfa51a8b08e89aab4b",
+          "summaryDigest": "a33e7202e6f4c9989f0d9ba7775b0f1de3e737af306f319038a1330a5d3709df"
+        },
+        "B": {
+          "id": 37903800814,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37903800814",
+          "logDigest": "c89e0980c8f8b77e920dfe7ab955ad372551c9ea8c3f12b6f2a3333e50179268",
+          "summaryDigest": "b9baa1fe410448dd6c89454f67514ab51709915d0d4c800a83261b011cf55c0b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/billing/resource-manager/Microsoft.Billing/Billing/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+  "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/billing/resource-manager/Microsoft.Billing/Billing/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

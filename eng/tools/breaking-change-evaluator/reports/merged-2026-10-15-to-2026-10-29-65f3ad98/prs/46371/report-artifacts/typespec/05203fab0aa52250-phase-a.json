@@ -1,0 +1,118 @@
+{
+  "specPaths": [
+    "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 12
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 12,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2025-02-01",
+        "headVersion": "2025-02-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2025-08-01",
+        "headVersion": "2025-08-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-01-01",
+        "headVersion": "2026-01-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-01-31-preview",
+        "headVersion": "2026-01-31-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-02-01",
+        "headVersion": "2026-02-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-03-31-preview",
+        "headVersion": "2026-03-31-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-05-01",
+        "headVersion": "2026-05-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-05-31-preview",
+        "headVersion": "2026-05-31-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-07-01",
+        "headVersion": "2026-07-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-08-01",
+        "headVersion": "2026-08-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-08-31-preview",
+        "headVersion": "2026-08-31-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "RecoveryServices",
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 8521,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 6676,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 15201
+  }
+}

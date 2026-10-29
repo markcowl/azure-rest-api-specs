@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47628
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47628,
+    "title": "[HybridConnectivity] Add Go clientName overrides for GCP acronym casing",
+    "author": "alexmahonic",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47628",
+    "baseBranch": "main",
+    "headBranch": "hybridconnectivity-go-gcp-clientname",
+    "baseSha": "e3442857cb92aa9a458550b3f26ef2cd31e9a3d4",
+    "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+    "mergedAt": "2026-10-28T18:00:36Z",
+    "changedTypeSpecFiles": [
+      "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47628",
+      "state": "closed",
+      "merged": true,
+      "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+      "baseSha": "e3442857cb92aa9a458550b3f26ef2cd31e9a3d4",
+      "runs": {
+        "A": {
+          "id": 40411393328,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40411393328",
+          "logDigest": "683dbfe7ccf115578da6cffb36e4f4d5561377ba3d677a3fddb136ad4a6dc4be",
+          "summaryDigest": "01a637bc7c05a7a5bfc01bebf0c306ebf260c37b9575f901db505e02474750fc"
+        },
+        "B": {
+          "id": 40411392953,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40411392953",
+          "logDigest": "e0468cf0bd689e19bc790a3ab89d4b32f49e8dc608a3dcb8a5a476d77c746127",
+          "summaryDigest": "e3e9dd5141e0f64b72ae6c8daecad593deb2b64dbf2a5c7241112e1245139de0"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity/client.tsp"
+      ]
+    }
+  },
+  "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+  "baseSha": "e3442857cb92aa9a458550b3f26ef2cd31e9a3d4",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity/client.tsp"
+  ],
+  "oadFindings": []
+}

@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47432
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47432,
+    "title": "Management API - client tsp fix up for Microsoft.DurableTask",
+    "author": "berndverst",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47432",
+    "baseBranch": "main",
+    "headBranch": "durabletask-dotnet-review-fixes",
+    "baseSha": "c783b6583b52feb7aa25fb192c30efb8adc4f29b",
+    "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+    "mergedAt": "2026-10-20T01:53:36Z",
+    "changedTypeSpecFiles": [
+      "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47432",
+      "state": "closed",
+      "merged": true,
+      "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+      "baseSha": "c783b6583b52feb7aa25fb192c30efb8adc4f29b",
+      "runs": {
+        "A": {
+          "id": 39340000957,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39340000957",
+          "logDigest": "e952567266369e9243e81a8e709a1b20728f35df63390fb4ecd4454429a50332",
+          "summaryDigest": "df2d71380e92fca7d1f9061b04b1d202c87dc0bda4df000b3589b1a08a69b8e5"
+        },
+        "B": {
+          "id": 39340000904,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39340000904",
+          "logDigest": "a12b279aecd97f6236492d27b12257cf9fc293a846b7773bb0f5c5377ec9737b",
+          "summaryDigest": "b21204c100046552e43717add5a3fc8223897064a964a9f680b1c7fe64591364"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask/client.tsp"
+      ]
+    }
+  },
+  "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+  "baseSha": "c783b6583b52feb7aa25fb192c30efb8adc4f29b",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask/client.tsp"
+  ],
+  "oadFindings": []
+}

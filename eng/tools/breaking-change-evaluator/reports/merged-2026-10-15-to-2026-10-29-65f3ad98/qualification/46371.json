@@ -1,0 +1,116 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46371
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46371,
+    "title": "[JS] use exact() for js customization",
+    "author": "kazrael2119",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46371",
+    "baseBranch": "main",
+    "headBranch": "try-exact-for-js-customize",
+    "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+    "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+    "mergedAt": "2026-10-19T00:53:51Z",
+    "changedTypeSpecFiles": [
+      "specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule/client.tsp",
+      "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry/client.tsp",
+      "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure/client.tsp",
+      "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/client.tsp",
+      "specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices/client.tsp",
+      "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations/client.tsp",
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/client.tsp",
+      "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+      "specification/playwrighttesting/PlaywrightTesting.Management/client.tsp",
+      "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/client.tsp",
+      "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/client.tsp",
+      "specification/relay/resource-manager/Microsoft.Relay/Relay/client.tsp",
+      "specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking/client.tsp",
+      "specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine/client.tsp",
+      "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool/client.tsp",
+      "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46371",
+      "state": "closed",
+      "merged": true,
+      "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+      "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+      "runs": {
+        "A": {
+          "id": 38715543923,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38715543923",
+          "logDigest": "c7ce9c84dc0d455bd45c7f6ff1d6cd8ebb7aab2dae51014d013c92deab82b461",
+          "summaryDigest": "c6677aaa598499734b84be6141f2a4860487edef2a7201e619cbbeb75ca46044"
+        },
+        "B": {
+          "id": 38715543857,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38715543857",
+          "logDigest": "98459149d60be605cf0f900296f34e519d69d0aac400e8935d8a04923ac59ab6",
+          "summaryDigest": "29a59f3d566ca37c0ccdeb29d60779baf54ed083dbccdaf37a4143afeaf4b1e3"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule/client.tsp",
+        "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry/client.tsp",
+        "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure/client.tsp",
+        "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/client.tsp",
+        "specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices/client.tsp",
+        "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations/client.tsp",
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/client.tsp",
+        "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+        "specification/playwrighttesting/PlaywrightTesting.Management/client.tsp",
+        "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/client.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/client.tsp",
+        "specification/relay/resource-manager/Microsoft.Relay/Relay/client.tsp",
+        "specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking/client.tsp",
+        "specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine/client.tsp",
+        "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool/client.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+      ]
+    }
+  },
+  "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+  "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule/client.tsp",
+    "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry/client.tsp",
+    "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure/client.tsp",
+    "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/client.tsp",
+    "specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices/client.tsp",
+    "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations/client.tsp",
+    "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/client.tsp",
+    "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+    "specification/playwrighttesting/PlaywrightTesting.Management/client.tsp",
+    "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/client.tsp",
+    "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/client.tsp",
+    "specification/relay/resource-manager/Microsoft.Relay/Relay/client.tsp",
+    "specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking/client.tsp",
+    "specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine/client.tsp",
+    "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool/client.tsp",
+    "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+  ],
+  "oadFindings": []
+}

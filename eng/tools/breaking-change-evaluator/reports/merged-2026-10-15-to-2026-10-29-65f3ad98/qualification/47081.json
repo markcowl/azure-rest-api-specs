@@ -1,0 +1,58 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47081
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47081,
+    "title": "[Microsoft.ProviderHub] Add 2026-10-01 stable API version",
+    "author": "wwendyc",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47081",
+    "baseBranch": "main",
+    "headBranch": "providerhub-2026-10-01",
+    "baseSha": "ae348cc71f54a61f5d17472052cfef279a23db6b",
+    "headSha": "fb68dc398a3716abcd0cd5a747af09cccbb33757",
+    "mergedAt": "2026-10-22T00:02:58Z",
+    "changedTypeSpecFiles": [
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/ResourceTypeRegistration.tsp",
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/back-compatible.tsp",
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/main.tsp",
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47081",
+      "state": "closed",
+      "merged": true,
+      "headSha": "fb68dc398a3716abcd0cd5a747af09cccbb33757",
+      "baseSha": "ae348cc71f54a61f5d17472052cfef279a23db6b",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/ResourceTypeRegistration.tsp",
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/back-compatible.tsp",
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/main.tsp",
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "fb68dc398a3716abcd0cd5a747af09cccbb33757",
+  "baseSha": "ae348cc71f54a61f5d17472052cfef279a23db6b",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/ResourceTypeRegistration.tsp",
+    "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/back-compatible.tsp",
+    "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/main.tsp",
+    "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

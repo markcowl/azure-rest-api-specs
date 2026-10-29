@@ -1,0 +1,69 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46300
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46300,
+    "title": "Add Microsoft.Cdn 2026-09-01-preview API version",
+    "author": "HandsomeJay",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46300",
+    "baseBranch": "main",
+    "headBranch": "release-microsoft-cdn-2026-09-01-preview",
+    "baseSha": "ae348cc71f54a61f5d17472052cfef279a23db6b",
+    "headSha": "87cc92da24cd9010599da9911198fc9bd6d3ee01",
+    "mergedAt": "2026-10-21T04:58:31Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/main.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46300",
+      "state": "closed",
+      "merged": true,
+      "headSha": "87cc92da24cd9010599da9911198fc9bd6d3ee01",
+      "baseSha": "ae348cc71f54a61f5d17472052cfef279a23db6b",
+      "runs": {
+        "A": {
+          "id": 39031949947,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "87cc92da24cd9010599da9911198fc9bd6d3ee01",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39031949947",
+          "logDigest": "9890307f606eb13a228b576e2811470415120dadbed27560c28fa36a5eb9bfb1",
+          "summaryDigest": "25ade77b3f5fbd8c285dfc7bd67e50d93b638b3f54da12cef749627d741dcad7"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/main.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary occurrence counts are lower than the complete OAD log findings"
+      ]
+    }
+  },
+  "headSha": "87cc92da24cd9010599da9911198fc9bd6d3ee01",
+  "baseSha": "ae348cc71f54a61f5d17472052cfef279a23db6b",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+    "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/main.tsp",
+    "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp"
+  ],
+  "oadFindings": []
+}

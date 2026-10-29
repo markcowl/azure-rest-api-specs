@@ -1,0 +1,61 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47048
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47048,
+    "title": "Fix Defender for Storage TypeSpec migration issues and suppression justifications",
+    "author": "fhaddad21",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47048",
+    "baseBranch": "main",
+    "headBranch": "defender-for-storage-fixes",
+    "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+    "headSha": "29b4a77e76c92674e13040c3139ce553ef126a74",
+    "mergedAt": "2026-10-21T10:36:49Z",
+    "changedTypeSpecFiles": [
+      "specification/security/resource-manager/Microsoft.Security/Security/Common/main.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/DefenderForStorageSetting.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/back-compatible.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/main.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47048",
+      "state": "closed",
+      "merged": true,
+      "headSha": "29b4a77e76c92674e13040c3139ce553ef126a74",
+      "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/security/resource-manager/Microsoft.Security/Security/Common/main.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/DefenderForStorageSetting.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/back-compatible.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/main.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/models.tsp"
+      ]
+    }
+  },
+  "headSha": "29b4a77e76c92674e13040c3139ce553ef126a74",
+  "baseSha": "0dbfc08bb2eeea34cc05dfd25c0b0a3c74672a3b",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/security/resource-manager/Microsoft.Security/Security/Common/main.tsp",
+    "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/DefenderForStorageSetting.tsp",
+    "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/back-compatible.tsp",
+    "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/main.tsp",
+    "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/models.tsp"
+  ],
+  "oadFindings": []
+}

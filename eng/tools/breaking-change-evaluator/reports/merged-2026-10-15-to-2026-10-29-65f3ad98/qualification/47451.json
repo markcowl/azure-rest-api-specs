@@ -1,0 +1,71 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47451
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47451,
+    "title": "[ContainerService] Prepare SDK config for 2026-08-02-preview",
+    "author": "FumingZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47451",
+    "baseBranch": "main",
+    "headBranch": "fuming/aks-2026-08-preview-sdk-config",
+    "baseSha": "2e6da2758f90bc908117dba7dda8969d984e6aa1",
+    "headSha": "73cef75f1490d1377419c8e4ce96efed5a1d7ac4",
+    "mergedAt": "2026-10-21T00:24:02Z",
+    "changedTypeSpecFiles": [
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/client.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47451",
+      "state": "closed",
+      "merged": true,
+      "headSha": "73cef75f1490d1377419c8e4ce96efed5a1d7ac4",
+      "baseSha": "2e6da2758f90bc908117dba7dda8969d984e6aa1",
+      "runs": {
+        "A": {
+          "id": 39519991560,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "73cef75f1490d1377419c8e4ce96efed5a1d7ac4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39519991560",
+          "logDigest": "7613d98c950f7c8e8d012aa89f42cf2096b60240101057017c8e501f4ca73bfb",
+          "summaryDigest": "fada0b59198660e0c63fa358234ffb2de637c99d69b41113928d69f719aba43c"
+        },
+        "B": {
+          "id": 39519991430,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "73cef75f1490d1377419c8e4ce96efed5a1d7ac4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39519991430",
+          "logDigest": "8bc53756e8dda75749d170982acea4d54ddf8570049fe6c1520071da826d41b5",
+          "summaryDigest": "831b9db8abfe3e1b0295128d39082fe751f404df5f42cd4bebcbf076b501f646"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/client.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "73cef75f1490d1377419c8e4ce96efed5a1d7ac4",
+  "baseSha": "2e6da2758f90bc908117dba7dda8969d984e6aa1",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/client.tsp",
+    "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

@@ -1,0 +1,102 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45961
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45961,
+    "title": "Publish Advisor API Version 2026-10-01",
+    "author": "abhishekraj-msft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45961",
+    "baseBranch": "main",
+    "headBranch": "main",
+    "baseSha": "9584a076a20d33bf725cf5fe0cf2595b1cc9aab1",
+    "headSha": "cd1ed70716048912fa2b49506c666e3d86e237bc",
+    "mergedAt": "2026-10-20T11:16:46Z",
+    "changedTypeSpecFiles": [
+      "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/AssessmentResult.tsp",
+      "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/ResourceRecommendationBase.tsp",
+      "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/back-compatible.tsp",
+      "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/client.tsp",
+      "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/main.tsp",
+      "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/models.tsp",
+      "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/routes.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45961",
+      "state": "closed",
+      "merged": true,
+      "headSha": "cd1ed70716048912fa2b49506c666e3d86e237bc",
+      "baseSha": "9584a076a20d33bf725cf5fe0cf2595b1cc9aab1",
+      "runs": {
+        "A": {
+          "id": 39410838569,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "cd1ed70716048912fa2b49506c666e3d86e237bc",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39410838569",
+          "logDigest": "4076220fb9a6219737a51519c6626c84426a7459786d12f8f6dce7365a31a68c",
+          "summaryDigest": "da6cee18df6133c698541517245eebc1d0cb4cbfef52bb3b1bd27ab423a914cc"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/AssessmentResult.tsp",
+        "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/ResourceRecommendationBase.tsp",
+        "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/back-compatible.tsp",
+        "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/client.tsp",
+        "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/main.tsp",
+        "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/models.tsp",
+        "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/routes.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary claims no findings but workflow logs contain OAD findings"
+      ]
+    }
+  },
+  "headSha": "cd1ed70716048912fa2b49506c666e3d86e237bc",
+  "baseSha": "9584a076a20d33bf725cf5fe0cf2595b1cc9aab1",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/AssessmentResult.tsp",
+    "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/ResourceRecommendationBase.tsp",
+    "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/back-compatible.tsp",
+    "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/client.tsp",
+    "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/main.tsp",
+    "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/models.tsp",
+    "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/routes.tsp"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-08-01-preview/openapi.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-08-01-preview/openapi.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-08-01-preview/openapi.json",
+        "newPath": "specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-08-01-preview/openapi.json",
+        "oldVersion": "2026-08-01-preview",
+        "newVersion": "2026-08-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-08-01-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-08-01-preview/openapi.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-08-01-preview/openapi.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/advisor/resource-manager/Microsoft.Advisor/Advisor/preview/2026-08-01-preview/openapi.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    }
+  ]
+}

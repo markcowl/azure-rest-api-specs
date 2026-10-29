@@ -1,0 +1,286 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46291
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46291,
+    "title": "Remove OpenAPI decorators from TypeSpec specs",
+    "author": "melina5656",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46291",
+    "baseBranch": "main",
+    "headBranch": "fix/RemoveOpenAPIDecorator",
+    "baseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec",
+    "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+    "mergedAt": "2026-10-28T04:06:00Z",
+    "changedTypeSpecFiles": [
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/privateAccess.tsp",
+      "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/models.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/EmailConfigurationModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricAgentModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PolicyModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PrivateEndpointConnection.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ProtectedItemModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ReplicationExtensionModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/VaultModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/main.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI/TopologyResource.tsp",
+      "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedClusterCodeVersionResult.tsp",
+      "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedVMSize.tsp",
+      "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/NodeType.tsp",
+      "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/Operations.tsp",
+      "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+      "specification/support/resource-manager/Microsoft.Support/Support/back-compatible.tsp",
+      "specification/support/resource-manager/Microsoft.Support/Support/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46291",
+      "state": "closed",
+      "merged": true,
+      "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+      "baseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec",
+      "runs": {
+        "A": {
+          "id": 40626533086,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+          "status": "completed",
+          "conclusion": "failure",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+          "logDigest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9",
+          "summaryDigest": "c7294f57bccc90c66f4df383844ac1387c18688b6aa3822ae561577fc2b442e4"
+        },
+        "B": {
+          "id": 40626533094,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533094",
+          "logDigest": "dc2d52e637747a4c8648e7791b67ffb3a746dacee141e25e1fb8dc0787e495f4",
+          "summaryDigest": "c48321b5a2dd772dadab12136765b3f0c98273de0b372edf82178295bb3eef0b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/privateAccess.tsp",
+        "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/models.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/EmailConfigurationModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricAgentModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PolicyModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PrivateEndpointConnection.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ProtectedItemModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ReplicationExtensionModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/VaultModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/main.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI/TopologyResource.tsp",
+        "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedClusterCodeVersionResult.tsp",
+        "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedVMSize.tsp",
+        "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/NodeType.tsp",
+        "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/Operations.tsp",
+        "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+        "specification/support/resource-manager/Microsoft.Support/Support/back-compatible.tsp",
+        "specification/support/resource-manager/Microsoft.Support/Support/models.tsp"
+      ]
+    }
+  },
+  "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+  "baseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/privateAccess.tsp",
+    "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/models.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/EmailConfigurationModel.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricAgentModel.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricModel.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PolicyModel.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PrivateEndpointConnection.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ProtectedItemModel.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ReplicationExtensionModel.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/VaultModel.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp",
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/main.tsp",
+    "specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI/TopologyResource.tsp",
+    "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedClusterCodeVersionResult.tsp",
+    "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedVMSize.tsp",
+    "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/NodeType.tsp",
+    "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/Operations.tsp",
+    "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+    "specification/support/resource-manager/Microsoft.Support/Support/back-compatible.tsp",
+    "specification/support/resource-manager/Microsoft.Support/Support/models.tsp"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2024-11-01-preview",
+        "newVersion": "2024-11-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2025-03-01-preview",
+        "newVersion": "2025-03-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2025-06-01-preview",
+        "newVersion": "2025-06-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2025-10-01-preview",
+        "newVersion": "2025-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2026-05-01-preview",
+        "newVersion": "2026-05-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-5",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json",
+        "oldVersion": "2026-02-01",
+        "newVersion": "2026-02-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-6",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+        "newPath": "specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+        "oldVersion": "2025-06-01-preview",
+        "newVersion": "2025-06-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-7",
+      "phase": "A",
+      "id": "1017",
+      "rule": "ReferenceRedirection",
+      "severity": "Error",
+      "message": "The '$ref' property points to different models in the old and new versions.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#/definitions/LookUpResourceIdRequest/properties/type",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#/definitions/LookUpResourceIdRequest/properties/type",
+      "oldJsonPath": "definitions.LookUpResourceIdRequest.properties.type",
+      "newJsonPath": "definitions.LookUpResourceIdRequest.properties.type",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+        "newPath": "specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+        "oldVersion": "2025-06-01-preview",
+        "newVersion": "2025-06-01-preview"
+      },
+      "evidence": "{\"id\":\"1017\",\"code\":\"ReferenceRedirection\",\"message\":\"The '$ref' property points to different models in the old and new versions.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#/definitions/LookUpResourceIdRequest/properties/type\",\"path\":\"definitions.LookUpResourceIdRequest.properties.type\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json:2880:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#/definitions/LookUpResourceIdRequest/properties/type\",\"path\":\"definitions.LookUpResourceIdRequest.properties.type\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json:2878:9\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1017.md\",\"mode\":\"Update\"}"
+    }
+  ]
+}
