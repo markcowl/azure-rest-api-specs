@@ -1,0 +1,83 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47279
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47279,
+    "title": "[Kore.AgentPlatform] Add 2026-07-01-preview TypeSpec",
+    "author": "poshett",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47279",
+    "baseBranch": "main",
+    "headBranch": "users/poshett/kore-artemis-2026-07-01-preview",
+    "baseSha": "5dd4dc124a2f5f5b4533aa4e79ab15607d34e950",
+    "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+    "mergedAt": "2026-10-19T05:59:39Z",
+    "changedTypeSpecFiles": [
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/client.tsp",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/main.tsp",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/models.tsp",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/organizations.tsp",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/tspconfig.yaml",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/workspaces.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47279",
+      "state": "closed",
+      "merged": true,
+      "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+      "baseSha": "5dd4dc124a2f5f5b4533aa4e79ab15607d34e950",
+      "runs": {
+        "A": {
+          "id": 39206543368,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39206543368",
+          "logDigest": "d962c92aaa8c78df155c2ad3f231e80a07fe0ee9483991ef8163163a7c218d44",
+          "summaryDigest": "88034d50b57bb843ba53d622b138592c00d6f59fe6a6c61933f96ec5eb06dd23"
+        },
+        "B": {
+          "id": 39206543399,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39206543399",
+          "logDigest": "4e0f97d7057c4e2034322c7af8a26fef1e130d9e6785ef9efba53224f5d0da9e",
+          "summaryDigest": "6cf68e6e7a00342293761ee25244a691dbedb10a9e364c345a21fe35be7133d6"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/client.tsp",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/main.tsp",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/models.tsp",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/organizations.tsp",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/tspconfig.yaml",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/workspaces.tsp"
+      ]
+    }
+  },
+  "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+  "baseSha": "5dd4dc124a2f5f5b4533aa4e79ab15607d34e950",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/client.tsp",
+    "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/main.tsp",
+    "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/models.tsp",
+    "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/organizations.tsp",
+    "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/tspconfig.yaml",
+    "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/workspaces.tsp"
+  ],
+  "oadFindings": []
+}

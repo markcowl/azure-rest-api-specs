@@ -1,0 +1,77 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46315
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46315,
+    "title": "Azure Search Data-Plane 2026-10-01 GA Release",
+    "author": "yangylu91",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46315",
+    "baseBranch": "main",
+    "headBranch": "search/dp-2026-10-01",
+    "baseSha": "90e63e5fe2c596e8bd807aad7dd9d62cee1746dd",
+    "headSha": "1413bddd5fe634247b6075d3f2c89b89fc05d451",
+    "mergedAt": "2026-10-16T17:57:04Z",
+    "changedTypeSpecFiles": [
+      "specification/search/data-plane/Search/client.tsp",
+      "specification/search/data-plane/Search/main.tsp",
+      "specification/search/data-plane/Search/models-index.tsp",
+      "specification/search/data-plane/Search/models-knowledgebase.tsp",
+      "specification/search/data-plane/Search/models-service.tsp",
+      "specification/search/data-plane/Search/models-shared.tsp",
+      "specification/search/data-plane/Search/routes-knowledgebase.tsp",
+      "specification/search/data-plane/Search/routes-service.tsp",
+      "specification/search/data-plane/Search/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46315",
+      "state": "closed",
+      "merged": true,
+      "headSha": "1413bddd5fe634247b6075d3f2c89b89fc05d451",
+      "baseSha": "90e63e5fe2c596e8bd807aad7dd9d62cee1746dd",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/search/data-plane/Search/client.tsp",
+        "specification/search/data-plane/Search/main.tsp",
+        "specification/search/data-plane/Search/models-index.tsp",
+        "specification/search/data-plane/Search/models-knowledgebase.tsp",
+        "specification/search/data-plane/Search/models-service.tsp",
+        "specification/search/data-plane/Search/models-shared.tsp",
+        "specification/search/data-plane/Search/routes-knowledgebase.tsp",
+        "specification/search/data-plane/Search/routes-service.tsp",
+        "specification/search/data-plane/Search/tspconfig.yaml"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable",
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "headSha": "1413bddd5fe634247b6075d3f2c89b89fc05d451",
+  "baseSha": "90e63e5fe2c596e8bd807aad7dd9d62cee1746dd",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/search/data-plane/Search/client.tsp",
+    "specification/search/data-plane/Search/main.tsp",
+    "specification/search/data-plane/Search/models-index.tsp",
+    "specification/search/data-plane/Search/models-knowledgebase.tsp",
+    "specification/search/data-plane/Search/models-service.tsp",
+    "specification/search/data-plane/Search/models-shared.tsp",
+    "specification/search/data-plane/Search/routes-knowledgebase.tsp",
+    "specification/search/data-plane/Search/routes-service.tsp",
+    "specification/search/data-plane/Search/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

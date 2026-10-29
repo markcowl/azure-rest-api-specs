@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47515
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47515,
+    "title": "[RedHatOpenShift] Client name overrides for azure-sdk-for-net",
+    "author": "mbarnes-azure",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47515",
+    "baseBranch": "main",
+    "headBranch": "aro-2026-10-01-client-tweaks-1",
+    "baseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890",
+    "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+    "mergedAt": "2026-10-23T02:40:58Z",
+    "changedTypeSpecFiles": [
+      "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47515",
+      "state": "closed",
+      "merged": true,
+      "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+      "baseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890",
+      "runs": {
+        "A": {
+          "id": 39782450676,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39782450676",
+          "logDigest": "e4421a71f06e1cab3446cbf44d65be3d163c6f607bec7265167c9e67b13d9b88",
+          "summaryDigest": "f17a39b9f5d0134525a071208fe07731282d6b5dee4518631cc2dea35af20897"
+        },
+        "B": {
+          "id": 39782450516,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39782450516",
+          "logDigest": "070c9d69ffede0045b596a02fbe197083f61ddd6366cdd0f228ef2ef6ae7d0d9",
+          "summaryDigest": "b89a39238edad035c1bd711b7374342d913cd11d7cc8dea23757a779acc77acb"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/client.tsp"
+      ]
+    }
+  },
+  "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+  "baseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/client.tsp"
+  ],
+  "oadFindings": []
+}

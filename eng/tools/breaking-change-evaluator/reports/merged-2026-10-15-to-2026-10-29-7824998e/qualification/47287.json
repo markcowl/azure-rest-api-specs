@@ -1,0 +1,80 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47287
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47287,
+    "title": "New Resource Provider - Microsoft.AIInfraOptimization",
+    "author": "sakshamgargMS",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47287",
+    "baseBranch": "main",
+    "headBranch": "user/sakshamgarg/aiinfraoptimization-2026-06-01-preview",
+    "baseSha": "88d6e45d207acd606c3a2926b21a70c822fa8b13",
+    "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+    "mergedAt": "2026-10-29T04:46:54Z",
+    "changedTypeSpecFiles": [
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/client.tsp",
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/main.tsp",
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/models.tsp",
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/routes.tsp",
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47287",
+      "state": "closed",
+      "merged": true,
+      "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+      "baseSha": "88d6e45d207acd606c3a2926b21a70c822fa8b13",
+      "runs": {
+        "A": {
+          "id": 40816962754,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40816962754",
+          "logDigest": "ca54a5631c288866327c820ef69414c9732ddd95a981f47c49e947f58df0640e",
+          "summaryDigest": "51b86131b2ca8b727ef24f6517c1addd912c492b607231c90119fc8164d0e7da"
+        },
+        "B": {
+          "id": 40816962971,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40816962971",
+          "logDigest": "75371bd8696a024b2ca685b9ec8c8210f633712865c65475eb85366e0440df70",
+          "summaryDigest": "b241f68bea0d05bcc12456d23b68815d2f4f74b17caab7744730e4921f176d9b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/client.tsp",
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/main.tsp",
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/models.tsp",
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/routes.tsp",
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+  "baseSha": "88d6e45d207acd606c3a2926b21a70c822fa8b13",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/client.tsp",
+    "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/main.tsp",
+    "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/models.tsp",
+    "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/routes.tsp",
+    "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

@@ -1,0 +1,204 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47018
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47018,
+    "title": "Add browser session artifact API",
+    "author": "Ishita-Jinturkar",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47018",
+    "baseBranch": "main",
+    "headBranch": "browser-session-recording-from-44885",
+    "baseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a",
+    "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+    "mergedAt": "2026-10-25T12:13:24Z",
+    "changedTypeSpecFiles": [
+      "specification/loadtestservice/data-plane/playwright/main.tsp",
+      "specification/loadtestservice/data-plane/playwright/typespec/browsersessions.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47018",
+      "state": "closed",
+      "merged": true,
+      "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+      "baseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a",
+      "runs": {
+        "A": {
+          "id": 40190664731,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664731",
+          "logDigest": "a4acc14cf330dbe21c459869a49d83121dbb548d99d3cb2feb3ab65e08ef4f56",
+          "summaryDigest": "045a3d89ba974afc0b6d23f2cf7a2dc92f5c733e9d0393b891b174bdeea7dd29"
+        },
+        "B": {
+          "id": 40190664630,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664630",
+          "logDigest": "28350d091f709e16473a20c4cdcdb0e070bc5658047948a291f7124059dd35fd",
+          "summaryDigest": "2f1347e997bb8d21dfaa1a1458b926d42c5cbd47ad34402fe9aec32ea6c4b8d9"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/loadtestservice/data-plane/playwright/main.tsp",
+        "specification/loadtestservice/data-plane/playwright/typespec/browsersessions.tsp"
+      ]
+    }
+  },
+  "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+  "baseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/loadtestservice/data-plane/playwright/main.tsp",
+    "specification/loadtestservice/data-plane/playwright/typespec/browsersessions.tsp"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "B-oad-0",
+      "phase": "B",
+      "id": "1039",
+      "rule": "AddedOperation",
+      "severity": "Info",
+      "message": "The new version is adding an operation that was not found in the old version.",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/paths/~1playwrightworkspaces~1{workspaceId}~1test-runs~1{runId}/get",
+      "newJsonPath": "paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1039\",\"code\":\"AddedOperation\",\"message\":\"The new version is adding an operation that was not found in the old version.\",\"old\":{},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/paths/~1playwrightworkspaces~1{workspaceId}~1test-runs~1{runId}/get\",\"path\":\"paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json:833:7\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1039.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-1",
+      "phase": "B",
+      "id": "1038",
+      "rule": "AddedPath",
+      "severity": "Info",
+      "message": "The new version is adding a path that was not found in the old version.",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/paths/~1playwrightworkspaces~1{workspaceId}",
+      "newJsonPath": "paths['/playwrightworkspaces/{workspaceId}']",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1038\",\"code\":\"AddedPath\",\"message\":\"The new version is adding a path that was not found in the old version.\",\"old\":{},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/paths/~1playwrightworkspaces~1{workspaceId}\",\"path\":\"paths['/playwrightworkspaces/{workspaceId}']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json:67:5\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1038.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-2",
+      "phase": "B",
+      "id": "1038",
+      "rule": "AddedPath",
+      "severity": "Info",
+      "message": "The new version is adding a path that was not found in the old version.",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/paths/~1playwrightworkspaces~1{workspaceId}~1browser-sessions",
+      "newJsonPath": "paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1038\",\"code\":\"AddedPath\",\"message\":\"The new version is adding a path that was not found in the old version.\",\"old\":{},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/paths/~1playwrightworkspaces~1{workspaceId}~1browser-sessions\",\"path\":\"paths['/playwrightworkspaces/{workspaceId}/browser-sessions']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json:430:5\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1038.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-3",
+      "phase": "B",
+      "id": "1038",
+      "rule": "AddedPath",
+      "severity": "Info",
+      "message": "The new version is adding a path that was not found in the old version.",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/paths/~1playwrightworkspaces~1{workspaceId}~1browser-sessions~1{sessionId}",
+      "newJsonPath": "paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1038\",\"code\":\"AddedPath\",\"message\":\"The new version is adding a path that was not found in the old version.\",\"old\":{},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/paths/~1playwrightworkspaces~1{workspaceId}~1browser-sessions~1{sessionId}\",\"path\":\"paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json:496:5\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1038.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-4",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'sessionArtifacts' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json#/definitions/BrowserSession/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/definitions/BrowserSession/properties",
+      "oldJsonPath": "definitions.BrowserSession.properties",
+      "newJsonPath": "definitions.BrowserSession.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-06-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'sessionArtifacts' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json#/definitions/BrowserSession/properties\",\"path\":\"definitions.BrowserSession.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json:1147:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/definitions/BrowserSession/properties\",\"path\":\"definitions.BrowserSession.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json:1147:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-5",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'sessionArtifacts' in response that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json#/definitions/PatchRequestBrowserSession/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PatchRequestBrowserSession/properties",
+      "oldJsonPath": "definitions.PatchRequestBrowserSession.properties",
+      "newJsonPath": "definitions.PatchRequestBrowserSession.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-06-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'sessionArtifacts' in response that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json#/definitions/PatchRequestBrowserSession/properties\",\"path\":\"definitions.PatchRequestBrowserSession.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json:1516:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PatchRequestBrowserSession/properties\",\"path\":\"definitions.PatchRequestBrowserSession.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json:1699:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-6",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'sessionArtifacts' that was not found in the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json#/definitions/PatchRequestBrowserSessionCreateOrUpdate/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PatchRequestBrowserSessionCreateOrUpdate/properties",
+      "oldJsonPath": "definitions.PatchRequestBrowserSessionCreateOrUpdate.properties",
+      "newJsonPath": "definitions.PatchRequestBrowserSessionCreateOrUpdate.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-06-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'sessionArtifacts' that was not found in the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json#/definitions/PatchRequestBrowserSessionCreateOrUpdate/properties\",\"path\":\"definitions.PatchRequestBrowserSessionCreateOrUpdate.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json:1626:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#/definitions/PatchRequestBrowserSessionCreateOrUpdate/properties\",\"path\":\"definitions.PatchRequestBrowserSessionCreateOrUpdate.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json:1818:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}"
+    }
+  ]
+}

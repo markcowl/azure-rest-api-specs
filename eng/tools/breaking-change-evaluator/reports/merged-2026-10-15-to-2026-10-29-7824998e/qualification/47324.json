@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47324
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47324,
+    "title": "Add missing ACL changes for RedisEnterprise 2026-10-01-preview version",
+    "author": "vikotha",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47324",
+    "baseBranch": "main",
+    "headBranch": "vikotha/preview-update",
+    "baseSha": "8219d0886c5cf87c1e9a8702e70a3205d26d5a8b",
+    "headSha": "f789b35e72d9bdb62bfdedd40f069165be4ad4fb",
+    "mergedAt": "2026-10-23T07:47:56Z",
+    "changedTypeSpecFiles": [
+      "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47324",
+      "state": "closed",
+      "merged": true,
+      "headSha": "f789b35e72d9bdb62bfdedd40f069165be4ad4fb",
+      "baseSha": "8219d0886c5cf87c1e9a8702e70a3205d26d5a8b",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise/models.tsp"
+      ]
+    }
+  },
+  "headSha": "f789b35e72d9bdb62bfdedd40f069165be4ad4fb",
+  "baseSha": "8219d0886c5cf87c1e9a8702e70a3205d26d5a8b",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise/models.tsp"
+  ],
+  "oadFindings": []
+}

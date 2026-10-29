@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47423
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47423,
+    "title": "[Search] 2026-10-01 DP SDK Customizations",
+    "author": "efrainretana",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47423",
+    "baseBranch": "main",
+    "headBranch": "efrainretana/search-2026-10-01-ga",
+    "baseSha": "c642211ad79d01f37e7f0d0085ce70647e1a64f8",
+    "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+    "mergedAt": "2026-10-20T21:40:01Z",
+    "changedTypeSpecFiles": [
+      "specification/search/data-plane/Search/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47423",
+      "state": "closed",
+      "merged": true,
+      "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+      "baseSha": "c642211ad79d01f37e7f0d0085ce70647e1a64f8",
+      "runs": {
+        "A": {
+          "id": 39295336397,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39295336397",
+          "logDigest": "1ca198d9cd98c1554e3a3af4cdaa6cbc6f00ce73966cd1da303a9fa1c6d4926f",
+          "summaryDigest": "f12dd957fea769c341a2e264de1769641d81049c3f04af1ca3d24acf186ba345"
+        },
+        "B": {
+          "id": 39295336535,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39295336535",
+          "logDigest": "d40bf89b3a8b9fc11232e6f54bfcfd7ffcfba353cf82ff6cb17a5f056998a173",
+          "summaryDigest": "7cdd18bbe9381c1a6d402e1423a5847ef7d086a9269e92cee122595c318e2e3a"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/search/data-plane/Search/client.tsp"
+      ]
+    }
+  },
+  "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+  "baseSha": "c642211ad79d01f37e7f0d0085ce70647e1a64f8",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/search/data-plane/Search/client.tsp"
+  ],
+  "oadFindings": []
+}

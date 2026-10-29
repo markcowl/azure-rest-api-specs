@@ -1,0 +1,1040 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46782
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46782,
+    "title": "Add Sovereign 2026-10-31-preview API version",
+    "author": "degautam",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46782",
+    "baseBranch": "main",
+    "headBranch": "personal/degautam/sovereignview-2026-10-31-preview",
+    "baseSha": "87ab5f33a20302c8ecaef6442be77f8a8fca7786",
+    "headSha": "3fbbaed080518bbcfa2074311109e24fd8a1ea64",
+    "mergedAt": "2026-10-26T12:08:14Z",
+    "changedTypeSpecFiles": [
+      "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/common.tsp",
+      "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/landingZoneAccountResourceProperties.tsp",
+      "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/landingZoneConfigurationResourceProperties.tsp",
+      "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/landingZoneRegistrationResourceProperties.tsp",
+      "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/main.tsp",
+      "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/sovereignViewResourceProperties.tsp",
+      "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46782",
+      "state": "closed",
+      "merged": true,
+      "headSha": "3fbbaed080518bbcfa2074311109e24fd8a1ea64",
+      "baseSha": "87ab5f33a20302c8ecaef6442be77f8a8fca7786",
+      "runs": {
+        "A": {
+          "id": 40317426185,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "3fbbaed080518bbcfa2074311109e24fd8a1ea64",
+          "status": "completed",
+          "conclusion": "failure",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40317426185",
+          "logDigest": "94447a94c4ba18cd26b1dbb925adc256a21564f1de8a8972a420ff63812270c1",
+          "summaryDigest": "0e9a9c309bcedf1494c642af03b1e16cf061c57fe91dd26d9e888da45b2a3e27"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/common.tsp",
+        "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/landingZoneAccountResourceProperties.tsp",
+        "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/landingZoneConfigurationResourceProperties.tsp",
+        "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/landingZoneRegistrationResourceProperties.tsp",
+        "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/main.tsp",
+        "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/sovereignViewResourceProperties.tsp",
+        "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/tspconfig.yaml"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "headSha": "3fbbaed080518bbcfa2074311109e24fd8a1ea64",
+  "baseSha": "87ab5f33a20302c8ecaef6442be77f8a8fca7786",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/common.tsp",
+    "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/landingZoneAccountResourceProperties.tsp",
+    "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/landingZoneConfigurationResourceProperties.tsp",
+    "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/landingZoneRegistrationResourceProperties.tsp",
+    "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/main.tsp",
+    "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/sovereignViewResourceProperties.tsp",
+    "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/tspconfig.yaml"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/providers/Microsoft.Sovereign/operations' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1providers~1Microsoft.Sovereign~1operations",
+      "oldJsonPath": "paths['/providers/Microsoft.Sovereign/operations']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/providers/Microsoft.Sovereign/operations' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1providers~1Microsoft.Sovereign~1operations\",\"path\":\"paths['/providers/Microsoft.Sovereign/operations']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/providers/Microsoft.Sovereign/landingZoneAccounts' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1providers~1Microsoft.Sovereign~1landingZoneAccounts",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/providers/Microsoft.Sovereign/landingZoneAccounts']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/providers/Microsoft.Sovereign/landingZoneAccounts' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1providers~1Microsoft.Sovereign~1landingZoneAccounts\",\"path\":\"paths['/subscriptions/{subscriptionId}/providers/Microsoft.Sovereign/landingZoneAccounts']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:91:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:130:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:172:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-5",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:426:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-6",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations~1{landingZoneConfigurationName}",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations~1{landingZoneConfigurationName}\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:476:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-7",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/createCopy' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations~1{landingZoneConfigurationName}~1createCopy",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/createCopy']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/createCopy' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations~1{landingZoneConfigurationName}~1createCopy\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/createCopy']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:762:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-8",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/generateLandingZone' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations~1{landingZoneConfigurationName}~1generateLandingZone",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/generateLandingZone']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/generateLandingZone' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations~1{landingZoneConfigurationName}~1generateLandingZone\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/generateLandingZone']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:844:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-9",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/updateAuthoringStatus' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations~1{landingZoneConfigurationName}~1updateAuthoringStatus",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/updateAuthoringStatus']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/updateAuthoringStatus' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneConfigurations~1{landingZoneConfigurationName}~1updateAuthoringStatus\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneConfigurations/{landingZoneConfigurationName}/updateAuthoringStatus']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:926:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-10",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneRegistrations' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneRegistrations",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneRegistrations']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneRegistrations' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneRegistrations\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneRegistrations']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1008:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-11",
+      "phase": "A",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Error",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneRegistrations/{landingZoneRegistrationName}' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneRegistrations~1{landingZoneRegistrationName}",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneRegistrations/{landingZoneRegistrationName}']",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneRegistrations/{landingZoneRegistrationName}' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Sovereign~1landingZoneAccounts~1{landingZoneAccountName}~1landingZoneRegistrations~1{landingZoneRegistrationName}\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sovereign/landingZoneAccounts/{landingZoneAccountName}/landingZoneRegistrations/{landingZoneRegistrationName}']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1058:5\"},\"new\":{},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-12",
+      "phase": "A",
+      "id": "1007",
+      "rule": "RemovedClientParameter",
+      "severity": "Error",
+      "message": "The new version is missing a client parameter that was found in the old version. Was 'ResourceGroupNameParameter' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters",
+      "oldJsonPath": "parameters",
+      "newJsonPath": "parameters",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1007\",\"code\":\"RemovedClientParameter\",\"message\":\"The new version is missing a client parameter that was found in the old version. Was 'ResourceGroupNameParameter' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters\",\"path\":\"parameters\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:2745:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters\",\"path\":\"parameters\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:56:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1007.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-13",
+      "phase": "A",
+      "id": "1007",
+      "rule": "RemovedClientParameter",
+      "severity": "Error",
+      "message": "The new version is missing a client parameter that was found in the old version. Was 'SubscriptionIdParameter' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters",
+      "oldJsonPath": "parameters",
+      "newJsonPath": "parameters",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1007\",\"code\":\"RemovedClientParameter\",\"message\":\"The new version is missing a client parameter that was found in the old version. Was 'SubscriptionIdParameter' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters\",\"path\":\"parameters\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:2745:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters\",\"path\":\"parameters\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:56:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1007.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-14",
+      "phase": "A",
+      "id": "1007",
+      "rule": "RemovedClientParameter",
+      "severity": "Error",
+      "message": "The new version is missing a client parameter that was found in the old version. Was 'ApiVersionParameter' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters",
+      "oldJsonPath": "parameters",
+      "newJsonPath": "parameters",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1007\",\"code\":\"RemovedClientParameter\",\"message\":\"The new version is missing a client parameter that was found in the old version. Was 'ApiVersionParameter' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters\",\"path\":\"parameters\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:2745:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/parameters\",\"path\":\"parameters\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:56:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1007.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-15",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AuthoringStatus' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AuthoringStatus' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-16",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'Azure.ResourceManager.CommonTypes.ManagedServiceIdentityUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'Azure.ResourceManager.CommonTypes.ManagedServiceIdentityUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-17",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'CreateLandingZoneConfigurationCopyRequest' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'CreateLandingZoneConfigurationCopyRequest' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-18",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'DecommissionedManagementGroupProperties' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'DecommissionedManagementGroupProperties' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-19",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'DecommissionedManagementGroupPropertiesUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'DecommissionedManagementGroupPropertiesUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-20",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'FirewallCreationOptions' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'FirewallCreationOptions' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-21",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'GenerateLandingZoneRequest' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'GenerateLandingZoneRequest' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-22",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'InfrastructureAsCodeOutputOptions' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'InfrastructureAsCodeOutputOptions' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-23",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneAccountResource' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneAccountResource' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-24",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneAccountResourceProperties' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneAccountResourceProperties' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-25",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneAccountResourcePropertiesUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneAccountResourcePropertiesUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-26",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneAccountResourceUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneAccountResourceUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-27",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneConfigurationResource' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneConfigurationResource' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-28",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneConfigurationResourceProperties' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneConfigurationResourceProperties' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-29",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneConfigurationResourcePropertiesUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneConfigurationResourcePropertiesUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-30",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneConfigurationResourceUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneConfigurationResourceUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-31",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneRegistrationResource' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneRegistrationResource' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-32",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneRegistrationResourceProperties' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneRegistrationResourceProperties' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-33",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneRegistrationResourcePropertiesUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneRegistrationResourcePropertiesUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-34",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'LandingZoneRegistrationResourceUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'LandingZoneRegistrationResourceUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-35",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'ManagedIdentityProperties' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'ManagedIdentityProperties' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-36",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'ManagedIdentityPropertiesUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'ManagedIdentityPropertiesUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-37",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'ManagedIdentityResourceType' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'ManagedIdentityResourceType' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-38",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'ManagementGroupProperties' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'ManagementGroupProperties' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-39",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'ManagementGroupPropertiesUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'ManagementGroupPropertiesUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-40",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'ResourceCreationOptions' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'ResourceCreationOptions' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-41",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'SandboxManagementGroupProperties' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'SandboxManagementGroupProperties' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-42",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'SandboxManagementGroupPropertiesUpdate' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'SandboxManagementGroupPropertiesUpdate' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-43",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'UpdateAuthoringStatusRequest' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'UpdateAuthoringStatusRequest' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-44",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'provisioningState' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'provisioningState' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-45",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'systemData' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'systemData' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-46",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'UserAssignedIdentities' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'UserAssignedIdentities' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-47",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'ManagedServiceIdentityType' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'ManagedServiceIdentityType' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "A-oad-48",
+      "phase": "A",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Error",
+      "message": "The new version is missing a definition that was found in the old version. Was 'ManagedServiceIdentity' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "newPath": "specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json",
+        "oldVersion": "2025-02-27-preview",
+        "newVersion": "2025-02-27-preview"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'ManagedServiceIdentity' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:1330:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/sovereign/resource-manager/Microsoft.Sovereign/Sovereign/preview/2025-02-27-preview/sovereign.json:55:3\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    }
+  ]
+}

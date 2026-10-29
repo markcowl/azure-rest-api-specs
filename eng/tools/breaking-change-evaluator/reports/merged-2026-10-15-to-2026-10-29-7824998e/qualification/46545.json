@@ -1,0 +1,55 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46545
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46545,
+    "title": "Add version 2026-08-01 for Web PubSub Chat.",
+    "author": "vwxyzh",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46545",
+    "baseBranch": "main",
+    "headBranch": "z/2026-08",
+    "baseSha": "1b5de86203e384422d49080a955410aa553ed8a9",
+    "headSha": "44c2a4f48a4a2e4d77f9658749f990bcf9ab110f",
+    "mergedAt": "2026-10-19T05:47:50Z",
+    "changedTypeSpecFiles": [
+      "specification/webpubsub/data-plane/WebPubSubChat/main.tsp",
+      "specification/webpubsub/data-plane/WebPubSubChat/models.tsp",
+      "specification/webpubsub/data-plane/WebPubSubChat/routes.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46545",
+      "state": "closed",
+      "merged": true,
+      "headSha": "44c2a4f48a4a2e4d77f9658749f990bcf9ab110f",
+      "baseSha": "1b5de86203e384422d49080a955410aa553ed8a9",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/webpubsub/data-plane/WebPubSubChat/main.tsp",
+        "specification/webpubsub/data-plane/WebPubSubChat/models.tsp",
+        "specification/webpubsub/data-plane/WebPubSubChat/routes.tsp"
+      ]
+    }
+  },
+  "headSha": "44c2a4f48a4a2e4d77f9658749f990bcf9ab110f",
+  "baseSha": "1b5de86203e384422d49080a955410aa553ed8a9",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/webpubsub/data-plane/WebPubSubChat/main.tsp",
+    "specification/webpubsub/data-plane/WebPubSubChat/models.tsp",
+    "specification/webpubsub/data-plane/WebPubSubChat/routes.tsp"
+  ],
+  "oadFindings": []
+}

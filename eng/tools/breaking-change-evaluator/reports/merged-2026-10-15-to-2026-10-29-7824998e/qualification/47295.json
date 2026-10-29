@@ -1,0 +1,129 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47295
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47295,
+    "title": "Correct MongoCluster network bypass documentation",
+    "author": "sandeepsnairms",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47295",
+    "baseBranch": "main",
+    "headBranch": "fix/mongocluster-network-bypass-description",
+    "baseSha": "505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0",
+    "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+    "mergedAt": "2026-10-15T03:55:52Z",
+    "changedTypeSpecFiles": [
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47295",
+      "state": "closed",
+      "merged": true,
+      "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+      "baseSha": "505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0",
+      "runs": {
+        "A": {
+          "id": 38588566941,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38588566941",
+          "logDigest": "08ad256286230bfbef8cb7154ec064bdb6f79a30b0fc733dcf0226fb3f4f1892",
+          "summaryDigest": "4b512152793cca47c6f2bd9a94e633237c3bc3bfe08ebb5154360d87fb88be68"
+        },
+        "B": {
+          "id": 38588567465,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38588567465",
+          "logDigest": "72748f06331ace549bd40b567e88495a299984434d8c78670c194767350ff4cf",
+          "summaryDigest": "98089eff7b3cd00f3a1834bca0088925a5efeb406a246ecde6d94b8a07549045"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp"
+      ]
+    }
+  },
+  "headSha": "e043ede3a96716ea373090b007ae292f4629d9e6",
+  "baseSha": "505d2b30d8ab3ac1d8d8bb262bae8945fe6631c0",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json",
+        "newPath": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json",
+        "oldVersion": "2026-02-01-preview",
+        "newVersion": "2026-02-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-02-01-preview/mongoCluster.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json",
+        "newPath": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json",
+        "oldVersion": "2026-06-15-preview",
+        "newVersion": "2026-06-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/preview/2026-06-15-preview/mongoCluster.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json",
+        "newPath": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json",
+        "oldVersion": "2026-06-01",
+        "newVersion": "2026-06-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/stable/2026-06-01/mongoCluster.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    }
+  ]
+}

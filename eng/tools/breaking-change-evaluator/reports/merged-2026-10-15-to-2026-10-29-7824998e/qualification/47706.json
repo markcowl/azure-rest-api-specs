@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47706
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47706,
+    "title": "[InferenceService] Promote semantic reranking API to GA (2026-10-30)",
+    "author": "aayush3011",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47706",
+    "baseBranch": "main",
+    "headBranch": "users/akataria/semanticRerankerGA",
+    "baseSha": "7aa1ea88a08c6b12cabd943ad441fcebc26988a4",
+    "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+    "mergedAt": "2026-10-28T19:07:22Z",
+    "changedTypeSpecFiles": [
+      "specification/inferenceservice/data-plane/InferenceService/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47706",
+      "state": "closed",
+      "merged": true,
+      "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+      "baseSha": "7aa1ea88a08c6b12cabd943ad441fcebc26988a4",
+      "runs": {
+        "A": {
+          "id": 40746903231,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40746903231",
+          "logDigest": "95aec6a582bcb1197119d673851616ed69d9ddf8e88205da7474cf1ea531815f",
+          "summaryDigest": "90aa4a81cf815a9f10ff14d0e033c171d58ccb27f1101e2158ce1e13a2fefc01"
+        },
+        "B": {
+          "id": 40746901834,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40746901834",
+          "logDigest": "e20b05b6d55c8373551df4e712506743848d8db02accc472f49c5a4c3c41dc1a",
+          "summaryDigest": "53d703b360d491d011adb83cc94c8bf7891a27138efcb2bc579c385c81cd027b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/inferenceservice/data-plane/InferenceService/main.tsp"
+      ]
+    }
+  },
+  "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+  "baseSha": "7aa1ea88a08c6b12cabd943ad441fcebc26988a4",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/inferenceservice/data-plane/InferenceService/main.tsp"
+  ],
+  "oadFindings": []
+}

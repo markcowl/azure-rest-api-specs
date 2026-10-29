@@ -1,0 +1,61 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47204
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47204,
+    "title": "Release app Microsoft.App SreAgent stable/2026-07-01",
+    "author": "RobiladK",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47204",
+    "baseBranch": "main",
+    "headBranch": "release-app-Microsoft.App-SreAgent-stable/2026-07-01",
+    "baseSha": "56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f",
+    "headSha": "9b6d31f95344255adf7d2ba467d87c17551351c7",
+    "mergedAt": "2026-10-21T00:20:58Z",
+    "changedTypeSpecFiles": [
+      "specification/app/resource-manager/Microsoft.App/SreAgent/agent.models.tsp",
+      "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.models.tsp",
+      "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.tsp",
+      "specification/app/resource-manager/Microsoft.App/SreAgent/commontypes.tsp",
+      "specification/app/resource-manager/Microsoft.App/SreAgent/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47204",
+      "state": "closed",
+      "merged": true,
+      "headSha": "9b6d31f95344255adf7d2ba467d87c17551351c7",
+      "baseSha": "56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/app/resource-manager/Microsoft.App/SreAgent/agent.models.tsp",
+        "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.models.tsp",
+        "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.tsp",
+        "specification/app/resource-manager/Microsoft.App/SreAgent/commontypes.tsp",
+        "specification/app/resource-manager/Microsoft.App/SreAgent/main.tsp"
+      ]
+    }
+  },
+  "headSha": "9b6d31f95344255adf7d2ba467d87c17551351c7",
+  "baseSha": "56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/app/resource-manager/Microsoft.App/SreAgent/agent.models.tsp",
+    "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.models.tsp",
+    "specification/app/resource-manager/Microsoft.App/SreAgent/agentconnector.tsp",
+    "specification/app/resource-manager/Microsoft.App/SreAgent/commontypes.tsp",
+    "specification/app/resource-manager/Microsoft.App/SreAgent/main.tsp"
+  ],
+  "oadFindings": []
+}

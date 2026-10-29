@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47600
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47600,
+    "title": "Fix CDN MTLS field name for Go sdk model",
+    "author": "Place1",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47600",
+    "baseBranch": "main",
+    "headBranch": "fix/cdn-go-mtls-initialism",
+    "baseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb",
+    "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+    "mergedAt": "2026-10-27T23:14:36Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47600",
+      "state": "closed",
+      "merged": true,
+      "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+      "baseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb",
+      "runs": {
+        "A": {
+          "id": 40273290569,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40273290569",
+          "logDigest": "010a97adc77093b4e29abf050840fba6f54c0425f7086d29ef067002ea0bb73c",
+          "summaryDigest": "075077a5c8d09768bbf71a9c16d86fa4de38c46ddb50a86b11ebb7cc6cee162d"
+        },
+        "B": {
+          "id": 40273290544,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40273290544",
+          "logDigest": "c43de36b3cc75888573cfb06541f3b4441661ad086be164dab10c986b9a036d7",
+          "summaryDigest": "d7a0f03aabfc728985bf42dc4775f7446a910b0400465d75ff38e89b5a971ceb"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+      ]
+    }
+  },
+  "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+  "baseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+  ],
+  "oadFindings": []
+}

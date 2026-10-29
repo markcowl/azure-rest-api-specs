@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47557
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47557,
+    "title": "Update .NET mappings for SRP 2026-09-01",
+    "author": "nateprewitt",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47557",
+    "baseBranch": "main",
+    "headBranch": "storage-bap-csharp-operation-name",
+    "baseSha": "a2de2d1a53d195c987a30184b2ddd378417ff44e",
+    "headSha": "1ba0ef01552f48496d7c1ccb850f693ea66bffc3",
+    "mergedAt": "2026-10-23T07:01:03Z",
+    "changedTypeSpecFiles": [
+      "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47557",
+      "state": "closed",
+      "merged": true,
+      "headSha": "1ba0ef01552f48496d7c1ccb850f693ea66bffc3",
+      "baseSha": "a2de2d1a53d195c987a30184b2ddd378417ff44e",
+      "runs": {
+        "A": {
+          "id": 39898644379,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "1ba0ef01552f48496d7c1ccb850f693ea66bffc3",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39898644379",
+          "logDigest": "67f68dbbae6b64d6fd5d0088e530d655365d45d1cd1259ca327bced440765e63",
+          "summaryDigest": "58df75d71fa2ffa927e50fb892b2de1adfcfbf50508405a0f1ad0ba50ea19af7"
+        },
+        "B": {
+          "id": 39898644547,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "1ba0ef01552f48496d7c1ccb850f693ea66bffc3",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39898644547",
+          "logDigest": "9cb0e5ca27d9ed8da4a103d9a26dccdf7a7f0074d2d3ee3fe5f11e698683a7b3",
+          "summaryDigest": "4dfb30c37d980946a839f0094505b4d9b5d86d7df5598d06383f350828546930"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+      ]
+    }
+  },
+  "headSha": "1ba0ef01552f48496d7c1ccb850f693ea66bffc3",
+  "baseSha": "a2de2d1a53d195c987a30184b2ddd378417ff44e",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+  ],
+  "oadFindings": []
+}

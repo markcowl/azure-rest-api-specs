@@ -1,0 +1,1071 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46965
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46965,
+    "title": "Microsoft.Cdn: 2026-10-01 stable and single active preview TypeSpec (draft for review)",
+    "author": "vincent1114",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46965",
+    "baseBranch": "main",
+    "headBranch": "dev/vincenthu/cdn-stable-typespec",
+    "baseSha": "2371f14ab26ab99500de46ac5c507476a8e0fc61",
+    "headSha": "bf9529bf2ce66f6b3de75094b38769f0a1a89327",
+    "mergedAt": "2026-10-22T22:54:23Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/main.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46965",
+      "state": "closed",
+      "merged": true,
+      "headSha": "bf9529bf2ce66f6b3de75094b38769f0a1a89327",
+      "baseSha": "2371f14ab26ab99500de46ac5c507476a8e0fc61",
+      "runs": {
+        "A": {
+          "id": 39555246522,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "bf9529bf2ce66f6b3de75094b38769f0a1a89327",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39555246522",
+          "logDigest": "becc2e9d451c00389bb52208cfb246ac696d0669deb5d4b441172f141b5d134a",
+          "summaryDigest": "95c94cbe397cc76cf2f6923acc48c03882ee0fcfa569d7b692faea7622b6f828"
+        },
+        "B": {
+          "id": 39555246517,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "bf9529bf2ce66f6b3de75094b38769f0a1a89327",
+          "status": "completed",
+          "conclusion": "failure",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39555246517",
+          "logDigest": "8ff9ae8983722ffac815b29590bc9f63d15859ac70ee27dd4c05512e2dcb03c6",
+          "summaryDigest": "81fbba2bc1e470eebe5fcaf3c1ff555f35a83fe2597a604eee5c4b7c605a1b25"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/main.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp"
+      ]
+    }
+  },
+  "headSha": "bf9529bf2ce66f6b3de75094b38769f0a1a89327",
+  "baseSha": "2371f14ab26ab99500de46ac5c507476a8e0fc61",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+    "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/main.tsp",
+    "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "B-oad-0",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-1",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AfdUrlSigningAction' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AfdUrlSigningAction' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:8351:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-2",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AfdUrlSigningActionParameters' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AfdUrlSigningActionParameters' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:8351:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-3",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleActionName",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleActionName",
+      "oldJsonPath": "definitions.DeliveryRuleActionName",
+      "newJsonPath": "definitions.DeliveryRuleActionName",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleActionName\",\"path\":\"definitions.DeliveryRuleActionName\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11288:5\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleActionName\",\"path\":\"definitions.DeliveryRuleActionName\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11241:5\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-4",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleCacheExpirationAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleCacheExpirationAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleCacheExpirationAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleCacheExpirationAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-5",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleCacheKeyQueryStringAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleCacheKeyQueryStringAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleCacheKeyQueryStringAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleCacheKeyQueryStringAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-6",
+      "phase": "B",
+      "id": "1020",
+      "rule": "AddedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is adding enum value(s) 'ClientResponse' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleEdgeActionParameters/properties/invocationPoint",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleEdgeActionParameters/properties/invocationPoint",
+      "oldJsonPath": "definitions.DeliveryRuleEdgeActionParameters.properties.invocationPoint",
+      "newJsonPath": "definitions.DeliveryRuleEdgeActionParameters.properties.invocationPoint",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1020\",\"code\":\"AddedEnumValue\",\"message\":\"The new version is adding enum value(s) 'ClientResponse' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleEdgeActionParameters/properties/invocationPoint\",\"path\":\"definitions.DeliveryRuleEdgeActionParameters.properties.invocationPoint\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11641:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleEdgeActionParameters/properties/invocationPoint\",\"path\":\"definitions.DeliveryRuleEdgeActionParameters.properties.invocationPoint\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11589:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1020.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-7",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleRequestHeaderAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleRequestHeaderAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleRequestHeaderAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleRequestHeaderAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-8",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleResponseHeaderAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleResponseHeaderAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleResponseHeaderAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleResponseHeaderAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-9",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleRouteConfigurationOverrideAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleRouteConfigurationOverrideAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleRouteConfigurationOverrideAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleRouteConfigurationOverrideAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-10",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.EdgeAction.properties.name",
+      "newJsonPath": "definitions.EdgeAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.EdgeAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.EdgeAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-11",
+      "phase": "B",
+      "id": "1020",
+      "rule": "AddedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is adding enum value(s) 'ClientResponse' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/InvocationPoint",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/InvocationPoint",
+      "oldJsonPath": "definitions.InvocationPoint",
+      "newJsonPath": "definitions.InvocationPoint",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1020\",\"code\":\"AddedEnumValue\",\"message\":\"The new version is adding enum value(s) 'ClientResponse' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/InvocationPoint\",\"path\":\"definitions.InvocationPoint\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:12957:5\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/InvocationPoint\",\"path\":\"definitions.InvocationPoint\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:12905:5\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1020.md\",\"mode\":\"Addition\"}"
+    },
+    {
+      "occurrenceId": "B-oad-12",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.OriginGroupOverrideAction.properties.name",
+      "newJsonPath": "definitions.OriginGroupOverrideAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.OriginGroupOverrideAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.OriginGroupOverrideAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-13",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'TypeName' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'TypeName' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:8351:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-14",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.UrlRedirectAction.properties.name",
+      "newJsonPath": "definitions.UrlRedirectAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlRedirectAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlRedirectAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-15",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.UrlRewriteAction.properties.name",
+      "newJsonPath": "definitions.UrlRewriteAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlRewriteAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlRewriteAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-16",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.UrlSigningAction.properties.name",
+      "newJsonPath": "definitions.UrlSigningAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-07-01",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlSigningAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-07-01/openapi.json:11278:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlSigningAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-17",
+      "phase": "B",
+      "id": "1033",
+      "rule": "RemovedProperty",
+      "severity": "Warning",
+      "message": "The new version is missing a property found in the old version. Was 'grpcState' renamed or removed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/RouteProperties/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/RouteProperties/properties",
+      "oldJsonPath": "definitions.RouteProperties.properties",
+      "newJsonPath": "definitions.RouteProperties.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1033\",\"code\":\"RemovedProperty\",\"message\":\"The new version is missing a property found in the old version. Was 'grpcState' renamed or removed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/RouteProperties/properties\",\"path\":\"definitions.RouteProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:17269:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/RouteProperties/properties\",\"path\":\"definitions.RouteProperties.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:16428:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1033.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-18",
+      "phase": "B",
+      "id": "1033",
+      "rule": "RemovedProperty",
+      "severity": "Warning",
+      "message": "The new version is missing a property found in the old version. Was 'grpcState' renamed or removed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/RouteUpdatePropertiesParameters/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/RouteUpdatePropertiesParameters/properties",
+      "oldJsonPath": "definitions.RouteUpdatePropertiesParameters.properties",
+      "newJsonPath": "definitions.RouteUpdatePropertiesParameters.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1033\",\"code\":\"RemovedProperty\",\"message\":\"The new version is missing a property found in the old version. Was 'grpcState' renamed or removed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/RouteUpdatePropertiesParameters/properties\",\"path\":\"definitions.RouteUpdatePropertiesParameters.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:17426:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/RouteUpdatePropertiesParameters/properties\",\"path\":\"definitions.RouteUpdatePropertiesParameters.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:16581:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1033.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-19",
+      "phase": "B",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Warning",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/authPolicies' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Cdn~1profiles~1{profileName}~1authPolicies",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/authPolicies']",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/authPolicies' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Cdn~1profiles~1{profileName}~1authPolicies\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/authPolicies']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:2147:5\"},\"new\":{},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-20",
+      "phase": "B",
+      "id": "1005",
+      "rule": "RemovedPath",
+      "severity": "Warning",
+      "message": "The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/authPolicies/{authPolicyName}' removed or restructured?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Cdn~1profiles~1{profileName}~1authPolicies~1{authPolicyName}",
+      "oldJsonPath": "paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/authPolicies/{authPolicyName}']",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1005\",\"code\":\"RemovedPath\",\"message\":\"The new version is missing a path that was found in the old version. Was path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/authPolicies/{authPolicyName}' removed or restructured?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/paths/~1subscriptions~1{subscriptionId}~1resourceGroups~1{resourceGroupName}~1providers~1Microsoft.Cdn~1profiles~1{profileName}~1authPolicies~1{authPolicyName}\",\"path\":\"paths['/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Cdn/profiles/{profileName}/authPolicies/{authPolicyName}']\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:2199:5\"},\"new\":{},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1005.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-21",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'Grpc' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/HealthProbeParameters/properties/probeProtocol",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/HealthProbeParameters/properties/probeProtocol",
+      "oldJsonPath": "definitions.HealthProbeParameters.properties.probeProtocol",
+      "newJsonPath": "definitions.HealthProbeParameters.properties.probeProtocol",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'Grpc' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/HealthProbeParameters/properties/probeProtocol\",\"path\":\"definitions.HealthProbeParameters.properties.probeProtocol\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:13540:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/HealthProbeParameters/properties/probeProtocol\",\"path\":\"definitions.HealthProbeParameters.properties.probeProtocol\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:12704:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-22",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-23",
+      "phase": "B",
+      "id": "1033",
+      "rule": "RemovedProperty",
+      "severity": "Warning",
+      "message": "The new version is missing a property found in the old version. Was 'capacityDistributionSettings' renamed or removed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/LoadBalancingSettingsParameters/properties",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/LoadBalancingSettingsParameters/properties",
+      "oldJsonPath": "definitions.LoadBalancingSettingsParameters.properties",
+      "newJsonPath": "definitions.LoadBalancingSettingsParameters.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1033\",\"code\":\"RemovedProperty\",\"message\":\"The new version is missing a property found in the old version. Was 'capacityDistributionSettings' renamed or removed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/LoadBalancingSettingsParameters/properties\",\"path\":\"definitions.LoadBalancingSettingsParameters.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:13979:7\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/LoadBalancingSettingsParameters/properties\",\"path\":\"definitions.LoadBalancingSettingsParameters.properties\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:13143:7\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1033.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-24",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AFDRouteGrpcState' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AFDRouteGrpcState' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-25",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AfdUrlSigningAction' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AfdUrlSigningAction' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-26",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AfdUrlSigningActionParameters' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AfdUrlSigningActionParameters' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-27",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AuthPolicy' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AuthPolicy' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-28",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AuthPolicyAction' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AuthPolicyAction' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-29",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AuthPolicyAssociation' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AuthPolicyAssociation' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-30",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AuthPolicyConfigIdentityProvider' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AuthPolicyConfigIdentityProvider' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-31",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AuthPolicyEntraIDConfig' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AuthPolicyEntraIDConfig' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-32",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AuthPolicyProperties' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AuthPolicyProperties' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-33",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AuthPolicyUpdateParameters' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AuthPolicyUpdateParameters' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-34",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'AuthPolicyUpdatePropertiesParameters' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'AuthPolicyUpdatePropertiesParameters' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-35",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'CapacityDistributionSettingsParameters' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'CapacityDistributionSettingsParameters' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-36",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleActionName",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleActionName",
+      "oldJsonPath": "definitions.DeliveryRuleActionName",
+      "newJsonPath": "definitions.DeliveryRuleActionName",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleActionName\",\"path\":\"definitions.DeliveryRuleActionName\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12048:5\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleActionName\",\"path\":\"definitions.DeliveryRuleActionName\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11241:5\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-37",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleCacheExpirationAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleCacheExpirationAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleCacheExpirationAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleCacheExpirationAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-38",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleCacheKeyQueryStringAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleCacheKeyQueryStringAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleCacheKeyQueryStringAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleCacheKeyQueryStringAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-39",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleRequestHeaderAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleRequestHeaderAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleRequestHeaderAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleRequestHeaderAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-40",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleResponseHeaderAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleResponseHeaderAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleResponseHeaderAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleResponseHeaderAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-41",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.DeliveryRuleRouteConfigurationOverrideAction.properties.name",
+      "newJsonPath": "definitions.DeliveryRuleRouteConfigurationOverrideAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleRouteConfigurationOverrideAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.DeliveryRuleRouteConfigurationOverrideAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-42",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'DistributionType' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'DistributionType' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-43",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.EdgeAction.properties.name",
+      "newJsonPath": "definitions.EdgeAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.EdgeAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.EdgeAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-44",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.OriginGroupOverrideAction.properties.name",
+      "newJsonPath": "definitions.OriginGroupOverrideAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.OriginGroupOverrideAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.OriginGroupOverrideAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-45",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'Grpc' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/ProbeProtocol",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/ProbeProtocol",
+      "oldJsonPath": "definitions.ProbeProtocol",
+      "newJsonPath": "definitions.ProbeProtocol",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'Grpc' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/ProbeProtocol\",\"path\":\"definitions.ProbeProtocol\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:15774:5\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/ProbeProtocol\",\"path\":\"definitions.ProbeProtocol\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:14934:5\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-46",
+      "phase": "B",
+      "id": "1006",
+      "rule": "RemovedDefinition",
+      "severity": "Warning",
+      "message": "The new version is missing a definition that was found in the old version. Was 'TypeName' removed or renamed?",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions",
+      "oldJsonPath": "definitions",
+      "newJsonPath": "definitions",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1006\",\"code\":\"RemovedDefinition\",\"message\":\"The new version is missing a definition that was found in the old version. Was 'TypeName' removed or renamed?\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:8751:3\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions\",\"path\":\"definitions\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:8354:3\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1006.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-47",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.UrlRedirectAction.properties.name",
+      "newJsonPath": "definitions.UrlRedirectAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlRedirectAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlRedirectAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-48",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.UrlRewriteAction.properties.name",
+      "newJsonPath": "definitions.UrlRewriteAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlRewriteAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlRewriteAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    },
+    {
+      "occurrenceId": "B-oad-49",
+      "phase": "B",
+      "id": "1019",
+      "rule": "RemovedEnumValue",
+      "severity": "Warning",
+      "message": "The new version is removing enum value(s) 'AfdUrlSigning' from the old version.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name",
+      "oldJsonPath": "definitions.UrlSigningAction.properties.name",
+      "newJsonPath": "definitions.UrlSigningAction.properties.name",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json",
+        "newPath": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json",
+        "oldVersion": "2026-09-01-preview",
+        "newVersion": "2026-10-01"
+      },
+      "evidence": "{\"id\":\"1019\",\"code\":\"RemovedEnumValue\",\"message\":\"The new version is removing enum value(s) 'AfdUrlSigning' from the old version.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlSigningAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/cross-version-c93b354fd9c14905bb574a8834c4d69b/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/preview/2026-09-01-preview/openapi.json:12038:9\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json#/definitions/DeliveryRuleAction/properties/name\",\"path\":\"definitions.UrlSigningAction.properties.name\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/cdn/resource-manager/Microsoft.Cdn/Cdn/stable/2026-10-01/openapi.json:11231:9\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1019.md\",\"mode\":\"Removal\"}"
+    }
+  ]
+}

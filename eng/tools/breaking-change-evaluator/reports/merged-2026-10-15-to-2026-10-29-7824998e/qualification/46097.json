@@ -1,0 +1,341 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46097
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46097,
+    "title": "[NetAppFiles] Release microsoft.net app 2026 07 01",
+    "author": "audunn",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46097",
+    "baseBranch": "main",
+    "headBranch": "release-Microsoft.NetApp-2026-07-01",
+    "baseSha": "5b6e8f31b1b893b1a2fe56ac64aef5caea37f056",
+    "headSha": "c66a611a79bd3cfb60ea58cbe30a41efcc50ea57",
+    "mergedAt": "2026-10-15T16:12:43Z",
+    "changedTypeSpecFiles": [
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ActiveDirectory.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Bucket.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Cache.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/CapacityPool.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticAccount.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackup.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupPolicy.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupVault.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticCapacityPool.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticRegionInfoResource.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshot.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshotPolicy.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticVolume.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/NetAppAccount.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Volume.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/VolumeQuotaRule.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/main.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/models.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46097",
+      "state": "closed",
+      "merged": true,
+      "headSha": "c66a611a79bd3cfb60ea58cbe30a41efcc50ea57",
+      "baseSha": "5b6e8f31b1b893b1a2fe56ac64aef5caea37f056",
+      "runs": {
+        "A": {
+          "id": 38763926170,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "c66a611a79bd3cfb60ea58cbe30a41efcc50ea57",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+          "logDigest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0",
+          "summaryDigest": "1a753aa41734a9b6beeffda613d12ca199d5796403b01c41810c4e9faa8bc780"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ActiveDirectory.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Bucket.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Cache.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/CapacityPool.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticAccount.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackup.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupPolicy.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupVault.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticCapacityPool.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticRegionInfoResource.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshot.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshotPolicy.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticVolume.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/NetAppAccount.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Volume.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/VolumeQuotaRule.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/main.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/models.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "headSha": "c66a611a79bd3cfb60ea58cbe30a41efcc50ea57",
+  "baseSha": "5b6e8f31b1b893b1a2fe56ac64aef5caea37f056",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ActiveDirectory.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Bucket.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Cache.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/CapacityPool.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticAccount.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackup.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupPolicy.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupVault.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticCapacityPool.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticRegionInfoResource.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshot.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshotPolicy.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticVolume.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/NetAppAccount.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Volume.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/VolumeQuotaRule.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/main.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/models.tsp",
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json",
+        "oldVersion": "2025-12-15-preview",
+        "newVersion": "2025-12-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json",
+        "oldVersion": "2026-01-15-preview",
+        "newVersion": "2026-01-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json",
+        "oldVersion": "2026-03-15-preview",
+        "newVersion": "2026-03-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json",
+        "oldVersion": "2026-04-15-preview",
+        "newVersion": "2026-04-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json",
+        "oldVersion": "2026-05-15-preview",
+        "newVersion": "2026-05-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-5",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json",
+        "oldVersion": "2026-06-15-preview",
+        "newVersion": "2026-06-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-6",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json",
+        "oldVersion": "2026-01-01",
+        "newVersion": "2026-01-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-7",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json",
+        "oldVersion": "2026-03-01",
+        "newVersion": "2026-03-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-8",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json",
+        "oldVersion": "2026-04-01",
+        "newVersion": "2026-04-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-9",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json",
+        "oldVersion": "2026-05-01",
+        "newVersion": "2026-05-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-10",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json",
+        "oldVersion": "2026-06-01",
+        "newVersion": "2026-06-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    }
+  ]
+}

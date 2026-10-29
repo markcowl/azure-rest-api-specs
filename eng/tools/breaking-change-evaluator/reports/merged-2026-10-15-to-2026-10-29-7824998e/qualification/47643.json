@@ -1,0 +1,77 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47643
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47643,
+    "title": "[Network] Update TypeSpec configuration for .NET SDK compatibility",
+    "author": "ArcturusZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47643",
+    "baseBranch": "main",
+    "headBranch": "restore-network-resource-type",
+    "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+    "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+    "mergedAt": "2026-10-27T14:19:44Z",
+    "changedTypeSpecFiles": [
+      "specification/network/resource-manager/Microsoft.Network/Network/Network/ApplicationGatewayWafDynamicManifestResult.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/Network/back-compatible.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/client.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47643",
+      "state": "closed",
+      "merged": true,
+      "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+      "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+      "runs": {
+        "A": {
+          "id": 40472678109,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40472678109",
+          "logDigest": "f5ba2ada09461a33358ad6e4353017971903579ddc4eb774a0411311f9946eb2",
+          "summaryDigest": "7ed56c99d315612c41dff71ad790f97449a219f36d93246af0f4057657f50917"
+        },
+        "B": {
+          "id": 40472678322,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40472678322",
+          "logDigest": "a87df044374a06ccfa1200302afbed11414414ecf9a22c0693171c4f16ad30ec",
+          "summaryDigest": "9f4a9fa3b770369127ceb7925aa9224cfca1ff5bed71d0cebe1083af2a460f0b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/ApplicationGatewayWafDynamicManifestResult.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/back-compatible.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/client.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+  "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/network/resource-manager/Microsoft.Network/Network/Network/ApplicationGatewayWafDynamicManifestResult.tsp",
+    "specification/network/resource-manager/Microsoft.Network/Network/Network/back-compatible.tsp",
+    "specification/network/resource-manager/Microsoft.Network/Network/client.tsp",
+    "specification/network/resource-manager/Microsoft.Network/Network/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

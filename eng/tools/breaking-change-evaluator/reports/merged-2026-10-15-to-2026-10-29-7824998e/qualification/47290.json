@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47290
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47290,
+    "title": "PrivateTrafficManager: C# naming fixes for types flagged in SDK review",
+    "author": "imsiddhartha",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47290",
+    "baseBranch": "main",
+    "headBranch": "dev/ssaklecha/ptm-csharp-naming",
+    "baseSha": "919b8298b2b6322f3068f33ef4afee7c44bd07d8",
+    "headSha": "c5781b15c47d6002064aeef0ffd5ecf668a9b9f8",
+    "mergedAt": "2026-10-19T16:46:32Z",
+    "changedTypeSpecFiles": [
+      "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47290",
+      "state": "closed",
+      "merged": true,
+      "headSha": "c5781b15c47d6002064aeef0ffd5ecf668a9b9f8",
+      "baseSha": "919b8298b2b6322f3068f33ef4afee7c44bd07d8",
+      "runs": {
+        "A": {
+          "id": 39285558107,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "c5781b15c47d6002064aeef0ffd5ecf668a9b9f8",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39285558107",
+          "logDigest": "46bf8920bb40af4112937133cc2db2eb7cb38c7038793b8a950a63909008e17f",
+          "summaryDigest": "8a039e4e90ab3d6a320aa6a1152f82e5a84464eb4450d1bfda60973362bfa2d3"
+        },
+        "B": {
+          "id": 39285558187,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "c5781b15c47d6002064aeef0ffd5ecf668a9b9f8",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39285558187",
+          "logDigest": "5e6da88b4bcf3407bd9bfc2eacb90597cae5e55c5ec4048be4a53176b048da49",
+          "summaryDigest": "4ccafc3acfe0dd214848b3940da549fa2bd3d5fa827432c05b3f7c7b95f59e52"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp"
+      ]
+    }
+  },
+  "headSha": "c5781b15c47d6002064aeef0ffd5ecf668a9b9f8",
+  "baseSha": "919b8298b2b6322f3068f33ef4afee7c44bd07d8",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/client.tsp"
+  ],
+  "oadFindings": []
+}

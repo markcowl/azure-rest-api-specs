@@ -1,0 +1,55 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47162
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47162,
+    "title": "Adding SystemConfiguration API specs to ALDO EdgeOperator RP",
+    "author": "kleyvaortega",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47162",
+    "baseBranch": "main",
+    "headBranch": "users/kleyvaortega/systemConfigurationSpecs",
+    "baseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c",
+    "headSha": "2f7eb98b1d5ecb45dec8d568db18fa0bfdeb800f",
+    "mergedAt": "2026-10-19T19:16:29Z",
+    "changedTypeSpecFiles": [
+      "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemConfiguration/main.tsp",
+      "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemConfiguration/systemConfiguration.tsp",
+      "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemConfiguration/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47162",
+      "state": "closed",
+      "merged": true,
+      "headSha": "2f7eb98b1d5ecb45dec8d568db18fa0bfdeb800f",
+      "baseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemConfiguration/main.tsp",
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemConfiguration/systemConfiguration.tsp",
+        "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemConfiguration/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "2f7eb98b1d5ecb45dec8d568db18fa0bfdeb800f",
+  "baseSha": "91a08e9bdaa4370a0b50cae7ddbae209b77a6d0c",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemConfiguration/main.tsp",
+    "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemConfiguration/systemConfiguration.tsp",
+    "specification/edgeoperator/resource-manager/Microsoft.EdgeOperator/SystemConfiguration/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47320
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47320,
+    "title": "[Storage] Remove provisioning API version pin",
+    "author": "ArcturusZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47320",
+    "baseBranch": "main",
+    "headBranch": "storage/remove-provisioning-api-version-pin",
+    "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+    "headSha": "60f6e0825c8bfba3449443725759e9175729f983",
+    "mergedAt": "2026-10-16T03:50:20Z",
+    "changedTypeSpecFiles": [
+      "specification/storage/resource-manager/Microsoft.Storage/Storage/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47320",
+      "state": "closed",
+      "merged": true,
+      "headSha": "60f6e0825c8bfba3449443725759e9175729f983",
+      "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+      "runs": {
+        "A": {
+          "id": 38705268942,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "60f6e0825c8bfba3449443725759e9175729f983",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38705268942",
+          "logDigest": "bdd341538ac04f578ae8adf0a4d3c4403c3efae17e9e366026d5fe3174f559e7",
+          "summaryDigest": "566b146b05d6ff5ae2935b38ccb8ea230fc68a3de12705f81ea35b10604f4857"
+        },
+        "B": {
+          "id": 38705269043,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "60f6e0825c8bfba3449443725759e9175729f983",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38705269043",
+          "logDigest": "f9b05f82eb7312df4a7ed67d8966229e7323887ae36ebbb7bef553636d765911",
+          "summaryDigest": "28e7a21f1ef0a8c6fc3fef09d3a93a77d07798ec31b210d108f5290b5c92c789"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "60f6e0825c8bfba3449443725759e9175729f983",
+  "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/storage/resource-manager/Microsoft.Storage/Storage/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

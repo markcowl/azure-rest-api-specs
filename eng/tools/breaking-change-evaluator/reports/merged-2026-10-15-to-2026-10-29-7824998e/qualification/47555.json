@@ -1,0 +1,83 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47555
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47555,
+    "title": "[Storage] Add C++-scoped TypeSpec protocol customizations",
+    "author": "Jinming-Hu",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47555",
+    "baseBranch": "main",
+    "headBranch": "jinming-hu-storage-typespec-customization-pr",
+    "baseSha": "119b7458f41688cceac321cc425198bbef2966d6",
+    "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+    "mergedAt": "2026-10-23T22:56:14Z",
+    "changedTypeSpecFiles": [
+      "specification/storage/data-plane/BlobStorage/Cpp/client.tsp",
+      "specification/storage/data-plane/BlobStorage/client.tsp",
+      "specification/storage/data-plane/DataLakeStorage/client.tsp",
+      "specification/storage/data-plane/FileStorage/client.tsp",
+      "specification/storage/data-plane/QueueStorage/client.tsp",
+      "specification/storage/data-plane/QueueStorage/routes.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47555",
+      "state": "closed",
+      "merged": true,
+      "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+      "baseSha": "119b7458f41688cceac321cc425198bbef2966d6",
+      "runs": {
+        "A": {
+          "id": 39889302132,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39889302132",
+          "logDigest": "2d8cf1f494cb9c184742ae2070077f9525b9d0305cba9e210470fecaa5f2d0dd",
+          "summaryDigest": "241f58d93bb0ebdfb5603d80ebef341a6fed2414533f7f56d2029693a37f4575"
+        },
+        "B": {
+          "id": 39889302192,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39889302192",
+          "logDigest": "22e489c96fc9788905ead5696d7b327ed29bb60b6818171c2873b33429089d51",
+          "summaryDigest": "e71fb5a16b556dcd1355f7a7dc2709cf4d635dbf9f4f8650354d508f72d73294"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/storage/data-plane/BlobStorage/Cpp/client.tsp",
+        "specification/storage/data-plane/BlobStorage/client.tsp",
+        "specification/storage/data-plane/DataLakeStorage/client.tsp",
+        "specification/storage/data-plane/FileStorage/client.tsp",
+        "specification/storage/data-plane/QueueStorage/client.tsp",
+        "specification/storage/data-plane/QueueStorage/routes.tsp"
+      ]
+    }
+  },
+  "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+  "baseSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/storage/data-plane/BlobStorage/Cpp/client.tsp",
+    "specification/storage/data-plane/BlobStorage/client.tsp",
+    "specification/storage/data-plane/DataLakeStorage/client.tsp",
+    "specification/storage/data-plane/FileStorage/client.tsp",
+    "specification/storage/data-plane/QueueStorage/client.tsp",
+    "specification/storage/data-plane/QueueStorage/routes.tsp"
+  ],
+  "oadFindings": []
+}

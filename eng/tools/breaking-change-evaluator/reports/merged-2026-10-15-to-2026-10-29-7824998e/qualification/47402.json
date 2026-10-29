@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47402
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47402,
+    "title": "[Azure Data Transfer] Set Python client name",
+    "author": "ChenxiJiang333",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47402",
+    "baseBranch": "main",
+    "headBranch": "chenxi/add-datatransfer-python-client-name",
+    "baseSha": "c8190fb3d1d89e788cb5b36edbc386588521153c",
+    "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+    "mergedAt": "2026-10-19T03:13:00Z",
+    "changedTypeSpecFiles": [
+      "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47402",
+      "state": "closed",
+      "merged": true,
+      "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+      "baseSha": "c8190fb3d1d89e788cb5b36edbc386588521153c",
+      "runs": {
+        "A": {
+          "id": 39190248082,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39190248082",
+          "logDigest": "53251a15cdb8d5fe18e38725e5d4fd70978cadcadf7016b0b0c5e665bc514f95",
+          "summaryDigest": "4811b6a78eac61708fad6ad4e37551e9ede0a39c8e542b3930307a396e64f34e"
+        },
+        "B": {
+          "id": 39190247984,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39190247984",
+          "logDigest": "acdac5bbc9ac2327a3c77bb86752c04b35a60695796c539cb9f44a46eb8b7529",
+          "summaryDigest": "38290e46b4446af6fa294c2460e741a46be800111c0a38be60e262710e647ff0"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer/client.tsp"
+      ]
+    }
+  },
+  "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+  "baseSha": "c8190fb3d1d89e788cb5b36edbc386588521153c",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer/client.tsp"
+  ],
+  "oadFindings": []
+}

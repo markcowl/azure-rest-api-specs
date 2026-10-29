@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47645
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47645,
+    "title": "update JS customization for monitor",
+    "author": "kazrael2119",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47645",
+    "baseBranch": "main",
+    "headBranch": "update-js-custom-for-monitor",
+    "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+    "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+    "mergedAt": "2026-10-28T05:14:44Z",
+    "changedTypeSpecFiles": [
+      "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47645",
+      "state": "closed",
+      "merged": true,
+      "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+      "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+      "runs": {
+        "A": {
+          "id": 40482309218,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40482309218",
+          "logDigest": "1dac97e04e84e6abd726998c578f41cd46411e98fa81b5baa18bf7bb10d24ffa",
+          "summaryDigest": "6f663dfff5db0cac707320485b4b403994bd8961f64001a95d4d573e21429651"
+        },
+        "B": {
+          "id": 40482308829,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40482308829",
+          "logDigest": "560d7e67f127920c29a85f2abda306893a0b289c69af4dbe635d4bbfaa8fc65f",
+          "summaryDigest": "f8cf3ab7120b7c9c22c927d593ee4b2dbe3e0ba85089862ead13242168559c46"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp"
+      ]
+    }
+  },
+  "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+  "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp"
+  ],
+  "oadFindings": []
+}
