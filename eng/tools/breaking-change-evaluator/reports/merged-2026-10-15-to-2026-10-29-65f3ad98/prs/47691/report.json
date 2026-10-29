@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47691:52457c0b9c8ba4d8f57b7a779bb0b426dee77215"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47691,
+    "title": "Compute: rename FlexProfile.preferredVMSize to PreferredVmSize for C#",
+    "author": "audreyttt",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47691",
+    "baseBranch": "main",
+    "headBranch": "audreyttt/compute-flexprofile-vmsize-csharp",
+    "baseSha": "18fe880eaa7fe5ded0e64d2ba14d82aebad44897",
+    "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+    "mergedAt": "2026-10-29T04:59:32Z",
+    "changedTypeSpecFiles": [
+      "specification/compute/resource-manager/Microsoft.Compute/Compute/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47691",
+      "state": "closed",
+      "merged": true,
+      "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+      "baseSha": "18fe880eaa7fe5ded0e64d2ba14d82aebad44897",
+      "runs": {
+        "A": {
+          "id": 40641632987,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40641632987",
+          "logDigest": "24882e3b36ec72235f3865241e74eb75ecc8e0687e3b26cd95f0e68889aabdef",
+          "summaryDigest": "d289b6ee4bc225e0c9c5186ee53737c62d3ba60297eff2cd420c3530794d2190"
+        },
+        "B": {
+          "id": 40641633012,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40641633012",
+          "logDigest": "a41915ba2db6dbac8a222b6220929ac2966d6ee45ea5df8e67ec68b3c00c3d24",
+          "summaryDigest": "ad37f422a60dd0f7f85fef61fd5e148e118017832668f4d92330c528c4c26210"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/compute/resource-manager/Microsoft.Compute/Compute/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47691",
+      "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+      "baseSha": "18fe880eaa7fe5ded0e64d2ba14d82aebad44897"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/compute/resource-manager/Microsoft.Compute/Compute",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/0cf024a8f69efe8c-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/0cf024a8f69efe8c-phase-a.md",
+          "error": "Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/0cf024a8f69efe8c-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/0cf024a8f69efe8c-phase-b.md",
+          "error": "Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-a9bce8e6dfcbe16f",
+      "affectedPrs": [
+        47691
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/compute/resource-manager/Microsoft.Compute/Compute: Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/compute/resource-manager/Microsoft.Compute/Compute: Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (18fe880eaa7fe5ded0e64d2ba14d82aebad44897): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+    "prBaseSha": "18fe880eaa7fe5ded0e64d2ba14d82aebad44897",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 18fe880eaa7fe5ded0e64d2ba14d82aebad44897 52457c0b9c8ba4d8f57b7a779bb0b426dee77215\ngit -C target checkout --detach 52457c0b9c8ba4d8f57b7a779bb0b426dee77215\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47691' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/compute/resource-manager/Microsoft.Compute/Compute",
+        "project": "specification/compute/resource-manager/Microsoft.Compute/Compute",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/compute/resource-manager/Microsoft.Compute/Compute' --base-ref 18fe880eaa7fe5ded0e64d2ba14d82aebad44897 --phase same-version --json-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-phase-a.json' --markdown-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/compute/resource-manager/Microsoft.Compute/Compute' --base-ref 18fe880eaa7fe5ded0e64d2ba14d82aebad44897 --json-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-phase-b-evidence.json' --markdown-output '../specification-compute-resource-manager-Microsoft.Compute-Compute-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

@@ -1,0 +1,885 @@
+{
+  "specPaths": [
+    "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 26,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 26,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 11
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 11,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2025-12-01",
+        "headVersion": "2025-12-01",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2026-01-15-preview",
+        "headVersion": "2026-01-15-preview",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2026-03-01",
+        "headVersion": "2026-03-01",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2026-03-15-preview",
+        "headVersion": "2026-03-15-preview",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2026-05-01",
+        "headVersion": "2026-05-01",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2026-05-15-preview",
+        "headVersion": "2026-05-15-preview",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2026-07-01",
+        "headVersion": "2026-07-01",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2026-07-15-preview",
+        "headVersion": "2026-07-15-preview",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2026-09-01",
+        "headVersion": "2026-09-01",
+        "phase": "same-version",
+        "findingCount": 20,
+        "rawFindingCount": 104
+      },
+      {
+        "serviceName": "CognitiveServices",
+        "baseVersion": "2026-09-15-preview",
+        "headVersion": "2026-09-15-preview",
+        "phase": "same-version",
+        "findingCount": 26,
+        "rawFindingCount": 118
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.aiServicesConnections removed variant TypeSpec.Array.",
+      "element": "body.properties.properties.aiServicesConnections.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 4909
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.aiServicesConnections.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.aiServicesConnections.variants.TypeSpec.Array\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.aiServicesConnections added variant TypeSpec.Array.",
+      "element": "body.properties.properties.aiServicesConnections.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CapabilityHost.tsp",
+        "line": 74
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\", path: \"request.body.properties.properties.aiServicesConnections.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CapabilityHost.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\", path: \"request.body.properties.properties.aiServicesConnections.variants.TypeSpec.Array\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.storageConnections removed variant TypeSpec.Array.",
+      "element": "body.properties.properties.storageConnections.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 4932
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.storageConnections.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.storageConnections.variants.TypeSpec.Array\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.storageConnections added variant TypeSpec.Array.",
+      "element": "body.properties.properties.storageConnections.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CapabilityHost.tsp",
+        "line": 74
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\", path: \"request.body.properties.properties.storageConnections.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CapabilityHost.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\", path: \"request.body.properties.properties.storageConnections.variants.TypeSpec.Array\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.threadStorageConnections removed variant TypeSpec.Array.",
+      "element": "body.properties.properties.threadStorageConnections.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 4938
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.threadStorageConnections.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.threadStorageConnections.variants.TypeSpec.Array\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.threadStorageConnections added variant TypeSpec.Array.",
+      "element": "body.properties.properties.threadStorageConnections.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CapabilityHost.tsp",
+        "line": 74
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\", path: \"request.body.properties.properties.threadStorageConnections.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CapabilityHost.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\", path: \"request.body.properties.properties.threadStorageConnections.variants.TypeSpec.Array\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.vectorStoreConnections removed variant TypeSpec.Array.",
+      "element": "body.properties.properties.vectorStoreConnections.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 4944
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.vectorStoreConnections.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.vectorStoreConnections.variants.TypeSpec.Array\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.vectorStoreConnections added variant TypeSpec.Array.",
+      "element": "body.properties.properties.vectorStoreConnections.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CapabilityHost.tsp",
+        "line": 74
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\", path: \"request.body.properties.properties.vectorStoreConnections.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/capabilityHosts/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CapabilityHost.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\", path: \"request.body.properties.properties.vectorStoreConnections.variants.TypeSpec.Array\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.outboundRules removed variant TypeSpec.RecordCreate.",
+      "element": "body.properties.properties.outboundRules.variants.TypeSpec.RecordCreate",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 5138
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/managedNetworks/{}/batchOutboundRules"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.outboundRules.variants.TypeSpec.RecordCreate\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/managedNetworks/{}/batchOutboundRules",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.outboundRules.variants.TypeSpec.RecordCreate\" })\nop post(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.outboundRules added variant TypeSpec.RecordCreate.",
+      "element": "body.properties.properties.outboundRules.variants.TypeSpec.RecordCreate",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedNetworkSettingsPropertiesBasicResource.tsp",
+        "line": 85
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/managedNetworks/{}/batchOutboundRules"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.outboundRules.variants.TypeSpec.RecordCreate\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/managedNetworks/{}/batchOutboundRules",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/ManagedNetworkSettingsPropertiesBasicResource.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.outboundRules.variants.TypeSpec.RecordCreate\" })\nop post(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.agents removed variant TypeSpec.Array.",
+      "element": "body.properties.properties.agents.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 5244
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.agents.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.agents.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.agents added variant TypeSpec.Array.",
+      "element": "body.properties.properties.agents.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "line": 82
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.agents.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.agents.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicy.properties.rules removed variant TypeSpec.Array.",
+      "element": "body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicy.properties.rules.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 5366
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicy.properties.rules.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicy.properties.rules.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicy.properties.rules added variant TypeSpec.Array.",
+      "element": "body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicy.properties.rules.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "line": 82
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicy.properties.rules.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicy.properties.rules.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.agents removed variant TypeSpec.ArrayCreateOrUpdate.",
+      "element": "body.properties.properties.agents.variants.TypeSpec.ArrayCreateOrUpdate",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 5244
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.agents.variants.TypeSpec.ArrayCreateOrUpdate\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.agents.variants.TypeSpec.ArrayCreateOrUpdate\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.agents added variant TypeSpec.ArrayCreateOrUpdate.",
+      "element": "body.properties.properties.agents.variants.TypeSpec.ArrayCreateOrUpdate",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "line": 91
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.agents.variants.TypeSpec.ArrayCreateOrUpdate\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.agents.variants.TypeSpec.ArrayCreateOrUpdate\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicyCreateOrUpdate.properties.rules removed variant TypeSpec.ArrayCreateOrUpdate.",
+      "element": "body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicyCreateOrUpdate.properties.rules.variants.TypeSpec.ArrayCreateOrUpdate",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 5366
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicyCreateOrUpdate.properties.rules.variants.TypeSpec.ArrayCreateOrUpdate\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicyCreateOrUpdate.properties.rules.variants.TypeSpec.ArrayCreateOrUpdate\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicyCreateOrUpdate.properties.rules added variant TypeSpec.ArrayCreateOrUpdate.",
+      "element": "body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicyCreateOrUpdate.properties.rules.variants.TypeSpec.ArrayCreateOrUpdate",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "line": 91
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicyCreateOrUpdate.properties.rules.variants.TypeSpec.ArrayCreateOrUpdate\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.trafficRoutingPolicy.variants.Microsoft.CognitiveServices.ApplicationTrafficRoutingPolicyCreateOrUpdate.properties.rules.variants.TypeSpec.ArrayCreateOrUpdate\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.value removed variant TypeSpec.Array.",
+      "element": "body.properties.value.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "line": 5411
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}/listAgents"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.value.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}/listAgents",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.value.variants.TypeSpec.Array\" })\nop listAgents(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.value added variant TypeSpec.Array.",
+      "element": "body.properties.value.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "line": 135
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}/listAgents"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.value.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/projects/{}/applications/{}/listAgents",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/AgentApplication.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.value.variants.TypeSpec.Array\" })\nop listAgents(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.rules.properties.thresholds removed variant TypeSpec.Array.",
+      "element": "body.properties.properties.rules.properties.thresholds.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2026-09-15-preview",
+        "headVersion": "2026-09-15-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "line": 184
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.rules.properties.thresholds added variant TypeSpec.Array.",
+      "element": "body.properties.properties.rules.properties.thresholds.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2026-09-15-preview",
+        "headVersion": "2026-09-15-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "line": 473
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.rules.properties.thresholds removed variant TypeSpec.ArrayCreateOrUpdate.",
+      "element": "body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayCreateOrUpdate",
+      "versionPair": {
+        "baseVersion": "2026-09-15-preview",
+        "headVersion": "2026-09-15-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "line": 184
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayCreateOrUpdate\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayCreateOrUpdate\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.rules.properties.thresholds added variant TypeSpec.ArrayCreateOrUpdate.",
+      "element": "body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayCreateOrUpdate",
+      "versionPair": {
+        "baseVersion": "2026-09-15-preview",
+        "headVersion": "2026-09-15-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "line": 481
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayCreateOrUpdate\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayCreateOrUpdate\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.rules.properties.thresholds removed variant TypeSpec.ArrayUpdate.",
+      "element": "body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayUpdate",
+      "versionPair": {
+        "baseVersion": "2026-09-15-preview",
+        "headVersion": "2026-09-15-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "line": 184
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayUpdate\" })",
+        "placement": "On the operation: PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayUpdate\" })\nop update(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.rules.properties.thresholds added variant TypeSpec.ArrayUpdate.",
+      "element": "body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayUpdate",
+      "versionPair": {
+        "baseVersion": "2026-09-15-preview",
+        "headVersion": "2026-09-15-preview"
+      },
+      "location": {
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "line": 492
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayUpdate\" })",
+        "placement": "On the operation: PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.CognitiveServices/accounts/{}/costControls/{}",
+        "file": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/CostControl.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.properties.rules.properties.thresholds.variants.TypeSpec.ArrayUpdate\" })\nop update(...): ...;"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 9443,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 7327,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 16779
+  }
+}

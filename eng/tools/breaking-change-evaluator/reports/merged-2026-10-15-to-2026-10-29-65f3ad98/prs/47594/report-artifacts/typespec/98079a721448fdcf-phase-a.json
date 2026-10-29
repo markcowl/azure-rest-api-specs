@@ -1,0 +1,103 @@
+{
+  "specPaths": [
+    "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 2,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 2,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "DataFactory",
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01",
+        "phase": "same-version",
+        "findingCount": 2,
+        "rawFindingCount": 4
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.linkedServices.properties.properties.variants.OData.properties.typeProperties.properties.authHeaders removed variant TypeSpec.Record.",
+      "element": "body.properties.linkedServices.properties.properties.variants.OData.properties.typeProperties.properties.authHeaders.variants.TypeSpec.Record",
+      "versionPair": {
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01"
+      },
+      "location": {
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "line": 28
+      },
+      "sourceTraceLevel": "origin",
+      "sourceElementPath": "Microsoft.DataFactory.Dfe",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })",
+        "placement": "On the declaration: Microsoft.DataFactory.Dfe",
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "example": "model DataFactory {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\" })\n  Dfe: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.linkedServices.properties.properties.variants.OData.properties.typeProperties.properties.authHeaders added variant TypeSpec.Record.",
+      "element": "body.properties.linkedServices.properties.properties.variants.OData.properties.typeProperties.properties.authHeaders.variants.TypeSpec.Record",
+      "versionPair": {
+        "baseVersion": "2018-06-01",
+        "headVersion": "2018-06-01"
+      },
+      "location": {
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "line": 29
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.DataFactory.Dfe",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.DataFactory/factories/{}/addDataFlowToDebugSession"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.DataFactory.Dfe",
+        "file": "specification/datafactory/resource-manager/Microsoft.DataFactory/DataFactory/models.tsp",
+        "example": "model DataFactory {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  Dfe: ...;\n}"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 917,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 1757,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 2676
+  }
+}

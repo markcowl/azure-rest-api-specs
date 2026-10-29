@@ -1,0 +1,100 @@
+{
+  "specPaths": [
+    "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 2,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 2,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "HDInsight",
+        "baseVersion": "2025-01-15-preview",
+        "headVersion": "2025-01-15-preview",
+        "phase": "same-version",
+        "findingCount": 2
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.tags removed variant TypeSpec.Record.",
+      "element": "body.properties.tags.variants.TypeSpec.Record",
+      "versionPair": {
+        "baseVersion": "2025-01-15-preview",
+        "headVersion": "2025-01-15-preview"
+      },
+      "location": {
+        "file": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/models.tsp",
+        "line": 1768
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.HDInsight/clusters/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.tags.variants.TypeSpec.Record\" })",
+        "placement": "On the operation: PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.HDInsight/clusters/{}",
+        "file": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.tags.variants.TypeSpec.Record\" })\nop update(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.tags added variant TypeSpec.Record.",
+      "element": "body.properties.tags.variants.TypeSpec.Record",
+      "versionPair": {
+        "baseVersion": "2025-01-15-preview",
+        "headVersion": "2025-01-15-preview"
+      },
+      "location": {
+        "file": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp",
+        "line": 66
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.HDInsight/clusters/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.tags.variants.TypeSpec.Record\" })",
+        "placement": "On the operation: PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.HDInsight/clusters/{}",
+        "file": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.tags.variants.TypeSpec.Record\" })\nop update(...): ...;"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 470,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 297,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 771
+  }
+}
