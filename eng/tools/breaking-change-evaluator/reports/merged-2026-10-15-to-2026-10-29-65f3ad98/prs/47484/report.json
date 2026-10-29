@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47484:21e38b8940ceff9727f45fed459c776d9df2eb45"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47484,
+    "title": "Update MongoCluster descriptions to Azure DocumentDB",
+    "author": "sandeepsnairms",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47484",
+    "baseBranch": "main",
+    "headBranch": "docs/documentdb-cluster-descriptions",
+    "baseSha": "2371f14ab26ab99500de46ac5c507476a8e0fc61",
+    "headSha": "21e38b8940ceff9727f45fed459c776d9df2eb45",
+    "mergedAt": "2026-10-22T03:52:02Z",
+    "changedTypeSpecFiles": [
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/FirewallRule.tsp",
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp",
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/Replica.tsp",
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/User.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47484",
+      "state": "closed",
+      "merged": true,
+      "headSha": "21e38b8940ceff9727f45fed459c776d9df2eb45",
+      "baseSha": "2371f14ab26ab99500de46ac5c507476a8e0fc61",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/FirewallRule.tsp",
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/MongoCluster.tsp",
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/Replica.tsp",
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/User.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47484",
+      "headSha": "21e38b8940ceff9727f45fed459c776d9df2eb45",
+      "baseSha": "2371f14ab26ab99500de46ac5c507476a8e0fc61"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-2f6d3b636d055f54",
+      "affectedPrs": [
+        47484
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

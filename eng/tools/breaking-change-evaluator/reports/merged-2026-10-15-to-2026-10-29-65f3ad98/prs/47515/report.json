@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47515:3c688f6b915beb5209a605160173d4964b52cabd"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47515,
+    "title": "[RedHatOpenShift] Client name overrides for azure-sdk-for-net",
+    "author": "mbarnes-azure",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47515",
+    "baseBranch": "main",
+    "headBranch": "aro-2026-10-01-client-tweaks-1",
+    "baseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890",
+    "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+    "mergedAt": "2026-10-23T02:40:58Z",
+    "changedTypeSpecFiles": [
+      "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47515",
+      "state": "closed",
+      "merged": true,
+      "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+      "baseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890",
+      "runs": {
+        "A": {
+          "id": 39782450676,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39782450676",
+          "logDigest": "e4421a71f06e1cab3446cbf44d65be3d163c6f607bec7265167c9e67b13d9b88",
+          "summaryDigest": "f17a39b9f5d0134525a071208fe07731282d6b5dee4518631cc2dea35af20897"
+        },
+        "B": {
+          "id": 39782450516,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39782450516",
+          "logDigest": "070c9d69ffede0045b596a02fbe197083f61ddd6366cdd0f228ef2ef6ae7d0d9",
+          "summaryDigest": "b89a39238edad035c1bd711b7374342d913cd11d7cc8dea23757a779acc77acb"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47515",
+      "headSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+      "baseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/831145c0e1f1dea4-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/831145c0e1f1dea4-phase-a.md",
+          "jsonDigest": "69c1e676a108a08d55ec702227c7e9055ef7fe644c173e5e2cabb086e25beed8",
+          "markdownDigest": "7a7698de1c497a2002b8dc52f7457be1b178f581f93cb3d3425e2e6b26a569db",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3022,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1438,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 4466
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "RedHatOpenShift",
+              "baseVersion": "2024-06-10-preview",
+              "headVersion": "2024-06-10-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RedHatOpenShift",
+              "baseVersion": "2025-12-23-preview",
+              "headVersion": "2025-12-23-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RedHatOpenShift",
+              "baseVersion": "2026-06-30-preview",
+              "headVersion": "2026-06-30-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RedHatOpenShift",
+              "baseVersion": "2026-09-01-preview",
+              "headVersion": "2026-09-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RedHatOpenShift",
+              "baseVersion": "2026-10-01",
+              "headVersion": "2026-10-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/831145c0e1f1dea4-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/831145c0e1f1dea4-phase-b.md",
+          "jsonDigest": "68551fe21bc1369540677c5298b916842d0e7357645695078476128aa8a42306",
+          "markdownDigest": "460071af1194b76f7c16fa87991fb6cf0563293430fd5963d66189a43c03bb01",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3432,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1584,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 5021
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "bb79d5d5184cff3afcbd9a73bf633ef23cb9794c4274ec03ac39b7446a12d1e0",
+      "comparisonsPerformed": 5,
+      "versionComparisons": [
+        {
+          "serviceName": "RedHatOpenShift",
+          "baseVersion": "2024-06-10-preview",
+          "headVersion": "2024-06-10-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RedHatOpenShift",
+          "baseVersion": "2025-12-23-preview",
+          "headVersion": "2025-12-23-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RedHatOpenShift",
+          "baseVersion": "2026-06-30-preview",
+          "headVersion": "2026-06-30-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RedHatOpenShift",
+          "baseVersion": "2026-09-01-preview",
+          "headVersion": "2026-09-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RedHatOpenShift",
+          "baseVersion": "2026-10-01",
+          "headVersion": "2026-10-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-d7ca9923e28766b0",
+      "affectedPrs": [
+        47515
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-daf70a6233b2a2f6",
+      "affectedPrs": [
+        47515
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "3c688f6b915beb5209a605160173d4964b52cabd",
+    "prBaseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890 3c688f6b915beb5209a605160173d4964b52cabd\ngit -C target checkout --detach 3c688f6b915beb5209a605160173d4964b52cabd\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47515' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters",
+        "project": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters' --base-ref a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890 --phase same-version --json-output '../specification-redhatopenshift-resource-manager-Microsoft.RedHatOpenShift-hcpopenshiftclusters-phase-a.json' --markdown-output '../specification-redhatopenshift-resource-manager-Microsoft.RedHatOpenShift-hcpopenshiftclusters-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters' --base-ref a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890 --json-output '../specification-redhatopenshift-resource-manager-Microsoft.RedHatOpenShift-hcpopenshiftclusters-phase-b-evidence.json' --markdown-output '../specification-redhatopenshift-resource-manager-Microsoft.RedHatOpenShift-hcpopenshiftclusters-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

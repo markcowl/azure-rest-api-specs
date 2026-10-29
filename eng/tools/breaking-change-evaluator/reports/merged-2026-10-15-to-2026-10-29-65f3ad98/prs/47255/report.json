@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47255:4459681a24578d2f211e4a05bbd64cb8c02f491d"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47255,
+    "title": "Add ACS incoming call event properties",
+    "author": "osaghaso",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47255",
+    "baseBranch": "main",
+    "headBranch": "user/osaghaso/Update_incomingCall_events",
+    "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264",
+    "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+    "mergedAt": "2026-10-22T22:43:16Z",
+    "changedTypeSpecFiles": [
+      "specification/eventgrid/data-plane/EventGridSystemEvents/Microsoft.Communication/AzureCommunicationServices.tsp",
+      "specification/eventgrid/data-plane/EventGridSystemEvents/propertyNameOverrideCsharp.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47255",
+      "state": "closed",
+      "merged": true,
+      "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+      "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/eventgrid/data-plane/EventGridSystemEvents/Microsoft.Communication/AzureCommunicationServices.tsp",
+        "specification/eventgrid/data-plane/EventGridSystemEvents/propertyNameOverrideCsharp.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47255",
+      "headSha": "4459681a24578d2f211e4a05bbd64cb8c02f491d",
+      "baseSha": "b8e052ca3659235e2051aa629cfb058f7fb53264"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-9a0b950811079ce2",
+      "affectedPrs": [
+        47255
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}
