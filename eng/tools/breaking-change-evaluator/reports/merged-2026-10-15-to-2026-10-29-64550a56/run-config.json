@@ -1,0 +1,20 @@
+{
+  "title": "Breaking-change evaluation: merged TypeSpec PRs from October 15 through October 29, 2026",
+  "analyzer": {
+    "sourceSha": "64550a561cbd7f5eb0ec6865802a908744a3528f",
+    "artifactDigest": "50150db6c408dedca023a248f83bc39491e3bb79be5f001cc742b6b84366c1e1",
+    "prototypeParentSha": "b3be74f664066d1289e19a321561a9726ec348da",
+    "cacheFormatVersion": 3,
+    "environment": {
+      "os": "win32 10.0.26300",
+      "architecture": "x64",
+      "node": "24.22.2",
+      "pnpm": "11.10.0"
+    },
+    "readiness": {
+      "verified": true,
+      "intrinsicFixVerified": true,
+      "details": "Exact analyzer commit built and cached successfully; the complete artifact digest and final executable readiness were verified. The full analyzer package suite passed with 463 tests and 11 skips; test-isolation fix published as Azure/typespec-azure#5879."
+    }
+  }
+}
