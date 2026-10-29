@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47574:75661a17f96526df519462c33b04cf22cdabbe4e"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47574,
+    "title": "Fix Code Transparency CBOR error response classification",
+    "author": "JoshLove-msft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47574",
+    "baseBranch": "main",
+    "headBranch": "joshlove-msft-code-transparency-error-models",
+    "baseSha": "1adae4d935a546aae8c6cce1207f76f301f56227",
+    "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+    "mergedAt": "2026-10-23T18:26:46Z",
+    "changedTypeSpecFiles": [
+      "specification/confidentialledger/data-plane/CodeTransparency/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47574",
+      "state": "closed",
+      "merged": true,
+      "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+      "baseSha": "1adae4d935a546aae8c6cce1207f76f301f56227",
+      "runs": {
+        "A": {
+          "id": 40001438150,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40001438150",
+          "logDigest": "aad8c2fdcd58ed1c185571d774ff57c902a0a0b799a31561244db7cd4a5540b4",
+          "summaryDigest": "c22d78c5e6ae2e50d9d026e1eaf7405858e89d404e49241b2416a1ccc9d2a742"
+        },
+        "B": {
+          "id": 40001437818,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40001437818",
+          "logDigest": "32937e24f0a437b154de554ba8ede55ceed99e2f043568d228d88a1619dae771",
+          "summaryDigest": "c99ea4396e0513a2fc986fbc59eb84268748759270f94133e8950345669c622c"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/confidentialledger/data-plane/CodeTransparency/main.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47574",
+      "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+      "baseSha": "1adae4d935a546aae8c6cce1207f76f301f56227"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json",
+        "oldVersion": "2025-01-31-preview",
+        "newVersion": "2025-01-31-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40001438150",
+        "digest": "aad8c2fdcd58ed1c185571d774ff57c902a0a0b799a31561244db7cd4a5540b4"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/1adae4d935a546aae8c6cce1207f76f301f56227/specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/75661a17f96526df519462c33b04cf22cdabbe4e/specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json",
+        "oldVersion": "2026-03-26",
+        "newVersion": "2026-03-26"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40001438150",
+        "digest": "aad8c2fdcd58ed1c185571d774ff57c902a0a0b799a31561244db7cd4a5540b4"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/1adae4d935a546aae8c6cce1207f76f301f56227/specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/75661a17f96526df519462c33b04cf22cdabbe4e/specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json#L1"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [
+    {
+      "project": "specification/confidentialledger/data-plane/CodeTransparency",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/94fb4e2525852ed5-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/94fb4e2525852ed5-phase-a.md",
+          "jsonDigest": "7552f609c84de6e0ed93360f4c7b489692789b73c1b197791796ac880e17a2f8",
+          "markdownDigest": "f5bd16124e15bda402182e64e6b49b5a54b6c24c2375cecccada09d491632507",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 373,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 158,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 537
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "CodeTransparency",
+              "baseVersion": "2025-01-31-preview",
+              "headVersion": "2025-01-31-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "CodeTransparency",
+              "baseVersion": "2026-03-26",
+              "headVersion": "2026-03-26",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/94fb4e2525852ed5-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/94fb4e2525852ed5-phase-b.md",
+          "jsonDigest": "4de6ba1a5de5eb49c039ac7affdb8decc459701cf55689adebb135b950550b52",
+          "markdownDigest": "f6c941fc04cac4e1372d5a213df01dd9786f53d6595ec210f03a41d52a13d6d5",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 398,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 164,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 566
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "9cba7fd30b31bdafcc797c85965321c2126b1d453dc3d3806b4c76446d05d38d",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "CodeTransparency",
+          "baseVersion": "2025-01-31-preview",
+          "headVersion": "2025-01-31-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "CodeTransparency",
+          "baseVersion": "2026-03-26",
+          "headVersion": "2026-03-26",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [
+    {
+      "oadOccurrenceId": "A-oad-0",
+      "target": {
+        "spec": "specification\\confidentialledger\\data-plane\\CodeTransparency\\preview\\2025-01-31-preview\\cts.json",
+        "project": "specification/confidentialledger/data-plane",
+        "phase": "A",
+        "baseVersion": "2025-01-31-preview",
+        "headVersion": "2025-01-31-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document cts.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\confidentialledger\\data-plane\\CodeTransparency\\preview\\2025-01-31-preview\\cts.json",
+          "project": "specification/confidentialledger/data-plane",
+          "phase": "A",
+          "baseVersion": "2025-01-31-preview",
+          "headVersion": "2025-01-31-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document cts.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-1",
+      "target": {
+        "spec": "specification\\confidentialledger\\data-plane\\CodeTransparency\\stable\\2026-03-26\\cts.json",
+        "project": "specification/confidentialledger/data-plane",
+        "phase": "A",
+        "baseVersion": "2026-03-26",
+        "headVersion": "2026-03-26",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document cts.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\confidentialledger\\data-plane\\CodeTransparency\\stable\\2026-03-26\\cts.json",
+          "project": "specification/confidentialledger/data-plane",
+          "phase": "A",
+          "baseVersion": "2026-03-26",
+          "headVersion": "2026-03-26",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document cts.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    }
+  ],
+  "findingGroups": [
+    {
+      "category": "informational-oad",
+      "key": "NoVersionChange",
+      "swaggerRule": "NoVersionChange",
+      "oadOccurrenceIds": [
+        "A-oad-0",
+        "A-oad-1"
+      ],
+      "typeSpecOccurrenceIds": []
+    }
+  ],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-4d38c69b51cbeaa5",
+      "affectedPrs": [
+        47574
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-7b886984f517295e",
+      "affectedPrs": [
+        47574
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+    "prBaseSha": "1adae4d935a546aae8c6cce1207f76f301f56227",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 1adae4d935a546aae8c6cce1207f76f301f56227 75661a17f96526df519462c33b04cf22cdabbe4e\ngit -C target checkout --detach 75661a17f96526df519462c33b04cf22cdabbe4e\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47574' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/confidentialledger/data-plane/CodeTransparency",
+        "project": "specification/confidentialledger/data-plane/CodeTransparency",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/confidentialledger/data-plane/CodeTransparency' --base-ref 1adae4d935a546aae8c6cce1207f76f301f56227 --phase same-version --json-output '../specification-confidentialledger-data-plane-CodeTransparency-phase-a.json' --markdown-output '../specification-confidentialledger-data-plane-CodeTransparency-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/confidentialledger/data-plane/CodeTransparency' --base-ref 1adae4d935a546aae8c6cce1207f76f301f56227 --json-output '../specification-confidentialledger-data-plane-CodeTransparency-phase-b-evidence.json' --markdown-output '../specification-confidentialledger-data-plane-CodeTransparency-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 2,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 2,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

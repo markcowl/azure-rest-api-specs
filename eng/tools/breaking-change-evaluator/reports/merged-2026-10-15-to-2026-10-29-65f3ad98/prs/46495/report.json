@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-46495:a266a8d77552e0f4501f6a0cfc84bfb5a27c1eb6"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46495,
+    "title": "[Microsoft.Devices] Added IoT Hub 2026-11-01 API version",
+    "author": "davidemontanari",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46495",
+    "baseBranch": "main",
+    "headBranch": "davidemontanari/iothub-microsoft.devices-2026-11-01",
+    "baseSha": "f4d3ffca09f884850694ecfbfe0b775a391a2936",
+    "headSha": "a266a8d77552e0f4501f6a0cfc84bfb5a27c1eb6",
+    "mergedAt": "2026-10-23T17:39:01Z",
+    "changedTypeSpecFiles": [
+      "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/main.tsp",
+      "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46495",
+      "state": "closed",
+      "merged": true,
+      "headSha": "a266a8d77552e0f4501f6a0cfc84bfb5a27c1eb6",
+      "baseSha": "f4d3ffca09f884850694ecfbfe0b775a391a2936",
+      "runs": {
+        "A": {
+          "id": 39716279747,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "a266a8d77552e0f4501f6a0cfc84bfb5a27c1eb6",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39716279747",
+          "logDigest": "9ab4345cb0b34304a056ce029131f1e49cda824de384c92905a927751a8e485c",
+          "summaryDigest": "2b8522e4d9d49be73cee609d0727e43ca9d015c121ac5408127c4800190d0ced"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/main.tsp",
+        "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/models.tsp"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46495",
+      "headSha": "a266a8d77552e0f4501f6a0cfc84bfb5a27c1eb6",
+      "baseSha": "f4d3ffca09f884850694ecfbfe0b775a391a2936"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-e7c31a6327ee81a2",
+      "affectedPrs": [
+        46495
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

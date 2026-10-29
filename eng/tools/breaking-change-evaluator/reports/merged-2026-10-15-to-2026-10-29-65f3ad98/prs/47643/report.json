@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47643:5d36e8927ca8a2455e4bf6d05d626c831a2e3342"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47643,
+    "title": "[Network] Update TypeSpec configuration for .NET SDK compatibility",
+    "author": "ArcturusZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47643",
+    "baseBranch": "main",
+    "headBranch": "restore-network-resource-type",
+    "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+    "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+    "mergedAt": "2026-10-27T14:19:44Z",
+    "changedTypeSpecFiles": [
+      "specification/network/resource-manager/Microsoft.Network/Network/Network/ApplicationGatewayWafDynamicManifestResult.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/Network/back-compatible.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/client.tsp",
+      "specification/network/resource-manager/Microsoft.Network/Network/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47643",
+      "state": "closed",
+      "merged": true,
+      "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+      "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+      "runs": {
+        "A": {
+          "id": 40472678109,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40472678109",
+          "logDigest": "f5ba2ada09461a33358ad6e4353017971903579ddc4eb774a0411311f9946eb2",
+          "summaryDigest": "7ed56c99d315612c41dff71ad790f97449a219f36d93246af0f4057657f50917"
+        },
+        "B": {
+          "id": 40472678322,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40472678322",
+          "logDigest": "a87df044374a06ccfa1200302afbed11414414ecf9a22c0693171c4f16ad30ec",
+          "summaryDigest": "9f4a9fa3b770369127ceb7925aa9224cfca1ff5bed71d0cebe1083af2a460f0b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/ApplicationGatewayWafDynamicManifestResult.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/Network/back-compatible.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/client.tsp",
+        "specification/network/resource-manager/Microsoft.Network/Network/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47643",
+      "headSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+      "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/network/resource-manager/Microsoft.Network/Network",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/5c965f57f5360abe-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/5c965f57f5360abe-phase-a.md",
+          "error": "Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/5c965f57f5360abe-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/5c965f57f5360abe-phase-b.md",
+          "error": "Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+    },
+    {
+      "project": "specification/network/resource-manager/Microsoft.Network/Network/Network",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/199707c82451cbab-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/199707c82451cbab-phase-a.md",
+          "jsonDigest": "22376427bd928f51f33ef429fc8c2a34c533cafa0e2c4fa7d502a08830bafc6f",
+          "markdownDigest": "1fcd009cb25f5d87a70f1484cb5b342c06264d997cee0105420b6b97ce4d5d8b",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 21306,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 40950,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 62264
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "Network",
+              "baseVersion": "2025-05-01",
+              "headVersion": "2025-05-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Network",
+              "baseVersion": "2025-07-01",
+              "headVersion": "2025-07-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Network",
+              "baseVersion": "2025-09-01",
+              "headVersion": "2025-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Network",
+              "baseVersion": "2026-01-01",
+              "headVersion": "2026-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Network",
+              "baseVersion": "2026-03-01",
+              "headVersion": "2026-03-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/199707c82451cbab-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/199707c82451cbab-phase-b.md",
+          "jsonDigest": "e4faaf7f69699792bd1230aa12df2dab21c5aab8d8f926b891f5ef6d2566d90e",
+          "markdownDigest": "936677b4e38fed240304e2c909cf1d08791d93e000fb07403ee8fa5218cfde31",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 16070,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 26355,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 42430
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "08329a527da26b0ac176833ade61832ad6a4d0aa7477229e630d89bd5cd6a98d",
+      "comparisonsPerformed": 5,
+      "versionComparisons": [
+        {
+          "serviceName": "Network",
+          "baseVersion": "2025-05-01",
+          "headVersion": "2025-05-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Network",
+          "baseVersion": "2025-07-01",
+          "headVersion": "2025-07-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Network",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2025-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Network",
+          "baseVersion": "2026-01-01",
+          "headVersion": "2026-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Network",
+          "baseVersion": "2026-03-01",
+          "headVersion": "2026-03-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-5fab168115f21800",
+      "affectedPrs": [
+        47643
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "5d36e8927ca8a2455e4bf6d05d626c831a2e3342",
+    "prBaseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30 5d36e8927ca8a2455e4bf6d05d626c831a2e3342\ngit -C target checkout --detach 5d36e8927ca8a2455e4bf6d05d626c831a2e3342\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47643' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/network/resource-manager/Microsoft.Network/Network",
+        "project": "specification/network/resource-manager/Microsoft.Network/Network",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network' --base-ref 2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30 --phase same-version --json-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-a.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network' --base-ref 2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30 --json-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-b-evidence.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/network/resource-manager/Microsoft.Network/Network/Network",
+        "project": "specification/network/resource-manager/Microsoft.Network/Network/Network",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network/Network' --base-ref 2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30 --phase same-version --json-output '../specification-network-resource-manager-Microsoft.Network-Network-Network-phase-a.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-Network-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network/Network' --base-ref 2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30 --json-output '../specification-network-resource-manager-Microsoft.Network-Network-Network-phase-b-evidence.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-Network-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

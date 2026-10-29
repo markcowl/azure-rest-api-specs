@@ -1,0 +1,55 @@
+{
+  "specPaths": [
+    "specification/storage/data-plane/FileStorage"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "File",
+        "baseVersion": "2026-06-06",
+        "headVersion": "2026-06-06",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "File",
+        "baseVersion": "2026-10-06",
+        "headVersion": "2026-10-06",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "File",
+        "baseVersion": "2026-12-06",
+        "headVersion": "2026-12-06",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1805,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 2362,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 4173
+  }
+}

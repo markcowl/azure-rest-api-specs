@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-46093:716a9acc9661105690b6466d7442345712c1b733"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46093,
+    "title": "[Billing] Enable C# provisioning emitter",
+    "author": "HarveyLink",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46093",
+    "baseBranch": "main",
+    "headBranch": "provisioning-billing-onboarding",
+    "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+    "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+    "mergedAt": "2026-10-23T17:40:53Z",
+    "changedTypeSpecFiles": [
+      "specification/billing/resource-manager/Microsoft.Billing/Billing/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46093",
+      "state": "closed",
+      "merged": true,
+      "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+      "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+      "runs": {
+        "A": {
+          "id": 37903800567,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37903800567",
+          "logDigest": "dbfca41826ade6cc0b5ba9ff273c0d9a54f995c7d43a1bbfa51a8b08e89aab4b",
+          "summaryDigest": "a33e7202e6f4c9989f0d9ba7775b0f1de3e737af306f319038a1330a5d3709df"
+        },
+        "B": {
+          "id": 37903800814,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37903800814",
+          "logDigest": "c89e0980c8f8b77e920dfe7ab955ad372551c9ea8c3f12b6f2a3333e50179268",
+          "summaryDigest": "b9baa1fe410448dd6c89454f67514ab51709915d0d4c800a83261b011cf55c0b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/billing/resource-manager/Microsoft.Billing/Billing/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46093",
+      "headSha": "716a9acc9661105690b6466d7442345712c1b733",
+      "baseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/billing/resource-manager/Microsoft.Billing/Billing",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/335ae388a08390c8-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/335ae388a08390c8-phase-a.md",
+          "jsonDigest": "aa34203edfd64aaa8477b358cb447914b25037d06b291ff6fb4b0ec3f1f36876",
+          "markdownDigest": "72bcef88401f6e3d7fbe3f3b7b1014d66b58ccdefff578595760d3e6e0ad56e9",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1971,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1819,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 3796
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "Billing",
+              "baseVersion": "2024-04-01",
+              "headVersion": "2024-04-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/335ae388a08390c8-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/335ae388a08390c8-phase-b.md",
+          "jsonDigest": "8c2b939e76f461169278b18bdb56e8201feee37cb9b4635c5573e695dc34512d",
+          "markdownDigest": "b285851096f797b8fc1a368cf44186ad9504984ac14ea166db5ccf3a725b21cd",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1575,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1809,
+            "classifyMs": 1,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3389
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "9f88b8e4abbf0d5c0f84b8aae1290cbb3c9e76c52729ac96e474a7cc9a147d86",
+      "comparisonsPerformed": 1,
+      "versionComparisons": [
+        {
+          "serviceName": "Billing",
+          "baseVersion": "2024-04-01",
+          "headVersion": "2024-04-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-5efd1d4d0cee2502",
+      "affectedPrs": [
+        46093
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-7d7956f41d9d245c",
+      "affectedPrs": [
+        46093
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "716a9acc9661105690b6466d7442345712c1b733",
+    "prBaseSha": "663934c93853cb58f6477c2e8e0f48d5eca2d770",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 663934c93853cb58f6477c2e8e0f48d5eca2d770 716a9acc9661105690b6466d7442345712c1b733\ngit -C target checkout --detach 716a9acc9661105690b6466d7442345712c1b733\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46093' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/billing/resource-manager/Microsoft.Billing/Billing",
+        "project": "specification/billing/resource-manager/Microsoft.Billing/Billing",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/billing/resource-manager/Microsoft.Billing/Billing' --base-ref 663934c93853cb58f6477c2e8e0f48d5eca2d770 --phase same-version --json-output '../specification-billing-resource-manager-Microsoft.Billing-Billing-phase-a.json' --markdown-output '../specification-billing-resource-manager-Microsoft.Billing-Billing-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/billing/resource-manager/Microsoft.Billing/Billing' --base-ref 663934c93853cb58f6477c2e8e0f48d5eca2d770 --json-output '../specification-billing-resource-manager-Microsoft.Billing-Billing-phase-b-evidence.json' --markdown-output '../specification-billing-resource-manager-Microsoft.Billing-Billing-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

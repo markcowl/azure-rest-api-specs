@@ -1,0 +1,324 @@
+{
+  "specPaths": [
+    "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 8,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 8,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 7
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 7,
+    "versionComparisons": [
+      {
+        "serviceName": "Management",
+        "baseVersion": "2025-07-01-preview",
+        "headVersion": "2025-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2025-09-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2026-01-01-preview",
+        "headVersion": "2026-01-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2026-02-01-preview",
+        "headVersion": "2026-02-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2026-08-01-preview",
+        "headVersion": "2026-08-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2026-10-01-preview",
+        "headVersion": "2026-10-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-11-01-preview",
+        "phase": "cross-version",
+        "findingCount": 8,
+        "rawFindingCount": 16
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'reporting' was added at body.properties.properties.reporting.",
+      "element": "body.properties.properties.reporting",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-11-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "line": 46
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.Management.PlaywrightWorkspaceProperties.reporting",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.LoadTestService/playwrightWorkspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Playwright.Management.PlaywrightWorkspaceProperties.reporting",
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "example": "model PlaywrightWorkspaceProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  reporting: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'storageUri' was added at body.properties.properties.storageUri.",
+      "element": "body.properties.properties.storageUri",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-11-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "line": 50
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.Management.PlaywrightWorkspaceProperties.storageUri",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.LoadTestService/playwrightWorkspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Playwright.Management.PlaywrightWorkspaceProperties.storageUri",
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "example": "model PlaywrightWorkspaceProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  storageUri: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'subnetId' was added at body.properties.properties.subnetId.",
+      "element": "body.properties.properties.subnetId",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-11-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "line": 55
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.Management.PlaywrightWorkspaceProperties.subnetId",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.LoadTestService/playwrightWorkspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Playwright.Management.PlaywrightWorkspaceProperties.subnetId",
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "example": "model PlaywrightWorkspaceProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  subnetId: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'sessionArtifacts' was added at body.properties.properties.sessionArtifacts.",
+      "element": "body.properties.properties.sessionArtifacts",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-11-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "line": 63
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.Management.PlaywrightWorkspaceProperties.sessionArtifacts",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.LoadTestService/playwrightWorkspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Playwright.Management.PlaywrightWorkspaceProperties.sessionArtifacts",
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "example": "model PlaywrightWorkspaceProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  sessionArtifacts: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'storageIdentity' was added at body.properties.properties.storageIdentity.",
+      "element": "body.properties.properties.storageIdentity",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-11-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "line": 67
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.Management.PlaywrightWorkspaceProperties.storageIdentity",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.LoadTestService/playwrightWorkspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Playwright.Management.PlaywrightWorkspaceProperties.storageIdentity",
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "example": "model PlaywrightWorkspaceProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  storageIdentity: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'browserProxy' was added at body.properties.properties.browserProxy.",
+      "element": "body.properties.properties.browserProxy",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-11-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "line": 71
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.Management.PlaywrightWorkspaceProperties.browserProxy",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.LoadTestService/playwrightWorkspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Playwright.Management.PlaywrightWorkspaceProperties.browserProxy",
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "example": "model PlaywrightWorkspaceProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  browserProxy: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'linkedKeyVault' was added at body.properties.properties.linkedKeyVault.",
+      "element": "body.properties.properties.linkedKeyVault",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-11-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "line": 75
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.Management.PlaywrightWorkspaceProperties.linkedKeyVault",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.LoadTestService/playwrightWorkspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Playwright.Management.PlaywrightWorkspaceProperties.linkedKeyVault",
+        "file": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright/typespec/models.tsp",
+        "example": "model PlaywrightWorkspaceProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  linkedKeyVault: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'identity' was added at body.properties.identity.",
+      "element": "body.properties.identity",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-11-01-preview"
+      },
+      "location": {
+        "file": "<local-path>",
+        "line": 256
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Azure.ResourceManager.ManagedServiceIdentityProperty.identity",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.LoadTestService/playwrightWorkspaces/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Azure.ResourceManager.ManagedServiceIdentityProperty.identity",
+        "file": "<local-path>",
+        "example": "model ManagedServiceIdentityProperty {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  identity: ...;\n}"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 5568,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 1067,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 6646
+  }
+}

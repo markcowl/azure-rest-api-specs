@@ -1,0 +1,41 @@
+{
+  "specPaths": [
+    "specification/storage/data-plane/DataLakeStorage"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "DataLake",
+        "baseVersion": "2026-06-06",
+        "headVersion": "2026-06-06",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 357,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 334,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 697
+  }
+}

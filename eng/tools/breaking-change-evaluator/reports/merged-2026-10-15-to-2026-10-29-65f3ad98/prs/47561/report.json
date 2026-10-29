@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47561:f410a9c4531c4dbea1b61ede19265e24712560ac"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47561,
+    "title": "Normalize CloudHealth C# model names on HealthModel for GA",
+    "author": "mariehalloran",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47561",
+    "baseBranch": "main",
+    "headBranch": "mariehalloran/cloudhealth-healthmodel-ga-names",
+    "baseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a",
+    "headSha": "f410a9c4531c4dbea1b61ede19265e24712560ac",
+    "mergedAt": "2026-10-26T06:48:51Z",
+    "changedTypeSpecFiles": [
+      "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47561",
+      "state": "closed",
+      "merged": true,
+      "headSha": "f410a9c4531c4dbea1b61ede19265e24712560ac",
+      "baseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a",
+      "runs": {
+        "A": {
+          "id": 40175313877,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "f410a9c4531c4dbea1b61ede19265e24712560ac",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40175313877",
+          "logDigest": "c6ff3a3ac62f36c6d5ef2817860acd38ced18b7f96468fc20c0348eac771dadc",
+          "summaryDigest": "7b2a5a1941be8fcc92eda963cda1443c3737cabe5b3ea5431df1018d686d4d94"
+        },
+        "B": {
+          "id": 40175313837,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "f410a9c4531c4dbea1b61ede19265e24712560ac",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40175313837",
+          "logDigest": "7bf96fcdf420a7f6eaf9ece9c41fa9e147ad6613b0bf1d380e3601ab29ecd034",
+          "summaryDigest": "7c22c01e8fe23117af64c74848c22c7c2019d43ac4ea57f7c5c542c66ef7e9e9"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47561",
+      "headSha": "f410a9c4531c4dbea1b61ede19265e24712560ac",
+      "baseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/7e6ad85fe49e9054-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/7e6ad85fe49e9054-phase-a.md",
+          "jsonDigest": "3a96172c70fdde52495693b37112b18256fa542369cf3c034c4e50dc972ccd5b",
+          "markdownDigest": "efe16e6e09eaa153210eee70aaa86a7fd8d09656ffa99aa334246820234be115",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 5744,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2979,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 8734
+          },
+          "comparisonsPerformed": 6,
+          "versionComparisons": [
+            {
+              "serviceName": "CloudHealth",
+              "baseVersion": "2025-05-01-preview",
+              "headVersion": "2025-05-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "CloudHealth",
+              "baseVersion": "2026-01-01-preview",
+              "headVersion": "2026-01-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "CloudHealth",
+              "baseVersion": "2026-05-01-preview",
+              "headVersion": "2026-05-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "CloudHealth",
+              "baseVersion": "2026-09-01-preview",
+              "headVersion": "2026-09-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "CloudHealth",
+              "baseVersion": "2026-10-01-preview",
+              "headVersion": "2026-10-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "CloudHealth",
+              "baseVersion": "2026-11-01",
+              "headVersion": "2026-11-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/7e6ad85fe49e9054-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/7e6ad85fe49e9054-phase-b.md",
+          "jsonDigest": "290929224eaec29485e1434aa45330a957433f40f7cd1b23840db06450c5d191",
+          "markdownDigest": "edb78870d751f1c14ac763d03ac92d102282748227b624cbe40bd514d0b82fd3",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 7285,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 3625,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 10918
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "6765dfa7ad92a42a7c44d4e69a799abfb32daca006561cfd0a3f082c374d7b0a",
+      "comparisonsPerformed": 6,
+      "versionComparisons": [
+        {
+          "serviceName": "CloudHealth",
+          "baseVersion": "2025-05-01-preview",
+          "headVersion": "2025-05-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "CloudHealth",
+          "baseVersion": "2026-01-01-preview",
+          "headVersion": "2026-01-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "CloudHealth",
+          "baseVersion": "2026-05-01-preview",
+          "headVersion": "2026-05-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "CloudHealth",
+          "baseVersion": "2026-09-01-preview",
+          "headVersion": "2026-09-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "CloudHealth",
+          "baseVersion": "2026-10-01-preview",
+          "headVersion": "2026-10-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "CloudHealth",
+          "baseVersion": "2026-11-01",
+          "headVersion": "2026-11-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-d6fd24c6cc5a011e",
+      "affectedPrs": [
+        47561
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-d945929fd8a0084d",
+      "affectedPrs": [
+        47561
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "f410a9c4531c4dbea1b61ede19265e24712560ac",
+    "prBaseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a f410a9c4531c4dbea1b61ede19265e24712560ac\ngit -C target checkout --detach f410a9c4531c4dbea1b61ede19265e24712560ac\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47561' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth",
+        "project": "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth' --base-ref ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a --phase same-version --json-output '../specification-cloudhealth-resource-manager-Microsoft.CloudHealth-CloudHealth-phase-a.json' --markdown-output '../specification-cloudhealth-resource-manager-Microsoft.CloudHealth-CloudHealth-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth' --base-ref ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a --json-output '../specification-cloudhealth-resource-manager-Microsoft.CloudHealth-CloudHealth-phase-b-evidence.json' --markdown-output '../specification-cloudhealth-resource-manager-Microsoft.CloudHealth-CloudHealth-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

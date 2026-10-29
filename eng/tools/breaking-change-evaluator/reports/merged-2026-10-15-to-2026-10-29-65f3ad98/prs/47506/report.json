@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47506:d4474f95b37d9b3c2705aa5ac1dd8865b8d8f2f7"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47506,
+    "title": "Enable Azure.Provisioning.StorageActions generation",
+    "author": "cxznmhdcxz",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47506",
+    "baseBranch": "main",
+    "headBranch": "onboard-provisioning-storageactions",
+    "baseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890",
+    "headSha": "d4474f95b37d9b3c2705aa5ac1dd8865b8d8f2f7",
+    "mergedAt": "2026-10-27T02:31:52Z",
+    "changedTypeSpecFiles": [
+      "specification/storageactions/resource-manager/Microsoft.StorageActions/StorageActions/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47506",
+      "state": "closed",
+      "merged": true,
+      "headSha": "d4474f95b37d9b3c2705aa5ac1dd8865b8d8f2f7",
+      "baseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890",
+      "runs": {
+        "A": {
+          "id": 39752601681,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "d4474f95b37d9b3c2705aa5ac1dd8865b8d8f2f7",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39752601681",
+          "logDigest": "085198664b7329c1077ada4130e81003e8e179060d6575105fc6b0325b3ac7b6",
+          "summaryDigest": "43d99a33ad6ad1491a0da94d6da7271f97e9fc3382f227a89e81f042866c43ea"
+        },
+        "B": {
+          "id": 39752601801,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "d4474f95b37d9b3c2705aa5ac1dd8865b8d8f2f7",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39752601801",
+          "logDigest": "1e0979a317fc5b5ee8b2a3df2eaec103a7a470682e8f949b54ffe747e2b2c710",
+          "summaryDigest": "7d121954b2dd94e612939c2fea766a826fc3a23b885bb487513f3a3a284f8ba7"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/storageactions/resource-manager/Microsoft.StorageActions/StorageActions/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47506",
+      "headSha": "d4474f95b37d9b3c2705aa5ac1dd8865b8d8f2f7",
+      "baseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/storageactions/resource-manager/Microsoft.StorageActions/StorageActions",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/bb577d523a526373-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/bb577d523a526373-phase-a.md",
+          "jsonDigest": "1f5b165cc2d5f35af1fdf8c88d2aa932b772a95bd1dd1fdf255edeea1398dfc1",
+          "markdownDigest": "1b747e33f4c4d713add6ff75b182e1aff6276b7fb9b8ee5c89907f8fc355336d",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1456,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 385,
+            "classifyMs": 1,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 1847
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "StorageActions",
+              "baseVersion": "2023-01-01",
+              "headVersion": "2023-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "StorageActions",
+              "baseVersion": "2026-03-01",
+              "headVersion": "2026-03-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/bb577d523a526373-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/bb577d523a526373-phase-b.md",
+          "jsonDigest": "22df758e0475a8346ccc1fbb92980687949f95a2c750989d29e78d201e465eae",
+          "markdownDigest": "7157c8df3439cedd7c712037003cae3f86df099d7c628de80113a19f80853ee3",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1524,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 385,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 1916
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "cc4a8326665e72f6106e2f0eb622532b14bae3f78d6f4a025bdb4256536f89f4",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "StorageActions",
+          "baseVersion": "2023-01-01",
+          "headVersion": "2023-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "StorageActions",
+          "baseVersion": "2026-03-01",
+          "headVersion": "2026-03-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-dc6206a457597ff1",
+      "affectedPrs": [
+        47506
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-f9791d4f7df9d193",
+      "affectedPrs": [
+        47506
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "d4474f95b37d9b3c2705aa5ac1dd8865b8d8f2f7",
+    "prBaseSha": "a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890 d4474f95b37d9b3c2705aa5ac1dd8865b8d8f2f7\ngit -C target checkout --detach d4474f95b37d9b3c2705aa5ac1dd8865b8d8f2f7\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47506' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/storageactions/resource-manager/Microsoft.StorageActions/StorageActions",
+        "project": "specification/storageactions/resource-manager/Microsoft.StorageActions/StorageActions",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/storageactions/resource-manager/Microsoft.StorageActions/StorageActions' --base-ref a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890 --phase same-version --json-output '../specification-storageactions-resource-manager-Microsoft.StorageActions-StorageActions-phase-a.json' --markdown-output '../specification-storageactions-resource-manager-Microsoft.StorageActions-StorageActions-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/storageactions/resource-manager/Microsoft.StorageActions/StorageActions' --base-ref a2a9f21ba9303dec1bc3d1743a2c4c6dc47b4890 --json-output '../specification-storageactions-resource-manager-Microsoft.StorageActions-StorageActions-phase-b-evidence.json' --markdown-output '../specification-storageactions-resource-manager-Microsoft.StorageActions-StorageActions-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

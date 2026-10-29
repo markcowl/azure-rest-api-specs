@@ -1,0 +1,2061 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47018:51c7ed6f5a03ab70639824ed736ef1374bac8f3f"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47018,
+    "title": "Add browser session artifact API",
+    "author": "Ishita-Jinturkar",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47018",
+    "baseBranch": "main",
+    "headBranch": "browser-session-recording-from-44885",
+    "baseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a",
+    "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+    "mergedAt": "2026-10-25T12:13:24Z",
+    "changedTypeSpecFiles": [
+      "specification/loadtestservice/data-plane/playwright/main.tsp",
+      "specification/loadtestservice/data-plane/playwright/typespec/browsersessions.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47018",
+      "state": "closed",
+      "merged": true,
+      "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+      "baseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a",
+      "runs": {
+        "A": {
+          "id": 40190664731,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664731",
+          "logDigest": "a4acc14cf330dbe21c459869a49d83121dbb548d99d3cb2feb3ab65e08ef4f56",
+          "summaryDigest": "045a3d89ba974afc0b6d23f2cf7a2dc92f5c733e9d0393b891b174bdeea7dd29"
+        },
+        "B": {
+          "id": 40190664630,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664630",
+          "logDigest": "28350d091f709e16473a20c4cdcdb0e070bc5658047948a291f7124059dd35fd",
+          "summaryDigest": "2f1347e997bb8d21dfaa1a1458b926d42c5cbd47ad34402fe9aec32ea6c4b8d9"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/loadtestservice/data-plane/playwright/main.tsp",
+        "specification/loadtestservice/data-plane/playwright/typespec/browsersessions.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47018",
+      "headSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+      "baseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [
+    {
+      "phase": "B",
+      "project": "specification/loadtestservice/data-plane/playwright",
+      "baseVersion": "2025-09-01",
+      "headVersion": "2026-10-01-preview"
+    }
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "B-oad-0",
+      "phase": "B",
+      "id": "1039",
+      "rule": "AddedOperation",
+      "severity": "Info",
+      "message": "The new version is adding an operation that was not found in the old version.",
+      "newPath": "<local-path>",
+      "newJsonPath": "paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "<local-path>",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1039\",\"code\":\"AddedOperation\",\"message\":\"The new version is adding an operation that was not found in the old version.\",\"old\":{},\"new\":{\"ref\":\"<local-path>\",\"path\":\"paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1039.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase B workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664630",
+        "digest": "28350d091f709e16473a20c4cdcdb0e070bc5658047948a291f7124059dd35fd"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a/specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json"
+        },
+        {
+          "revision": "head",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+          "line": 833,
+          "jsonPath": "paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#L833"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "B-oad-1",
+      "phase": "B",
+      "id": "1038",
+      "rule": "AddedPath",
+      "severity": "Info",
+      "message": "The new version is adding a path that was not found in the old version.",
+      "newPath": "<local-path>",
+      "newJsonPath": "paths['/playwrightworkspaces/{workspaceId}']",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "<local-path>",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1038\",\"code\":\"AddedPath\",\"message\":\"The new version is adding a path that was not found in the old version.\",\"old\":{},\"new\":{\"ref\":\"<local-path>\",\"path\":\"paths['/playwrightworkspaces/{workspaceId}']\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1038.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase B workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664630",
+        "digest": "28350d091f709e16473a20c4cdcdb0e070bc5658047948a291f7124059dd35fd"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a/specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json"
+        },
+        {
+          "revision": "head",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+          "line": 67,
+          "jsonPath": "paths['/playwrightworkspaces/{workspaceId}']",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#L67"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "B-oad-2",
+      "phase": "B",
+      "id": "1038",
+      "rule": "AddedPath",
+      "severity": "Info",
+      "message": "The new version is adding a path that was not found in the old version.",
+      "newPath": "<local-path>",
+      "newJsonPath": "paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "<local-path>",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1038\",\"code\":\"AddedPath\",\"message\":\"The new version is adding a path that was not found in the old version.\",\"old\":{},\"new\":{\"ref\":\"<local-path>\",\"path\":\"paths['/playwrightworkspaces/{workspaceId}/browser-sessions']\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1038.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase B workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664630",
+        "digest": "28350d091f709e16473a20c4cdcdb0e070bc5658047948a291f7124059dd35fd"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a/specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json"
+        },
+        {
+          "revision": "head",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+          "line": 430,
+          "jsonPath": "paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#L430"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "B-oad-3",
+      "phase": "B",
+      "id": "1038",
+      "rule": "AddedPath",
+      "severity": "Info",
+      "message": "The new version is adding a path that was not found in the old version.",
+      "newPath": "<local-path>",
+      "newJsonPath": "paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "<local-path>",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2025-09-01",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1038\",\"code\":\"AddedPath\",\"message\":\"The new version is adding a path that was not found in the old version.\",\"old\":{},\"new\":{\"ref\":\"<local-path>\",\"path\":\"paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1038.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase B workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664630",
+        "digest": "28350d091f709e16473a20c4cdcdb0e070bc5658047948a291f7124059dd35fd"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a/specification/loadtestservice/data-plane/playwright/stable/2025-09-01/playwright.json"
+        },
+        {
+          "revision": "head",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+          "line": 496,
+          "jsonPath": "paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#L496"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "B-oad-4",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'sessionArtifacts' in response that was not found in the old version.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "definitions.BrowserSession.properties",
+      "newJsonPath": "definitions.BrowserSession.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "<local-path>",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-06-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'sessionArtifacts' in response that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.BrowserSession.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.BrowserSession.properties\",\"location\":\"<local-path>\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase B workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664630",
+        "digest": "28350d091f709e16473a20c4cdcdb0e070bc5658047948a291f7124059dd35fd"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json",
+          "line": 1147,
+          "jsonPath": "definitions.BrowserSession.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json#L1147"
+        },
+        {
+          "revision": "head",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+          "line": 1147,
+          "jsonPath": "definitions.BrowserSession.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#L1147"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "B-oad-5",
+      "phase": "B",
+      "id": "1041",
+      "rule": "AddedPropertyInResponse",
+      "severity": "Warning",
+      "message": "The new version has a new property 'sessionArtifacts' in response that was not found in the old version.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "definitions.PatchRequestBrowserSession.properties",
+      "newJsonPath": "definitions.PatchRequestBrowserSession.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "<local-path>",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-06-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1041\",\"code\":\"AddedPropertyInResponse\",\"message\":\"The new version has a new property 'sessionArtifacts' in response that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.PatchRequestBrowserSession.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.PatchRequestBrowserSession.properties\",\"location\":\"<local-path>\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1041.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase B workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664630",
+        "digest": "28350d091f709e16473a20c4cdcdb0e070bc5658047948a291f7124059dd35fd"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json",
+          "line": 1516,
+          "jsonPath": "definitions.PatchRequestBrowserSession.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json#L1516"
+        },
+        {
+          "revision": "head",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+          "line": 1699,
+          "jsonPath": "definitions.PatchRequestBrowserSession.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#L1699"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "B-oad-6",
+      "phase": "B",
+      "id": "1045",
+      "rule": "AddedOptionalProperty",
+      "severity": "Warning",
+      "message": "The new version has a new optional property 'sessionArtifacts' that was not found in the old version.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "definitions.PatchRequestBrowserSessionCreateOrUpdate.properties",
+      "newJsonPath": "definitions.PatchRequestBrowserSessionCreateOrUpdate.properties",
+      "comparison": {
+        "phase": "B",
+        "oldPath": "<local-path>",
+        "newPath": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+        "oldVersion": "2026-06-01-preview",
+        "newVersion": "2026-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1045\",\"code\":\"AddedOptionalProperty\",\"message\":\"The new version has a new optional property 'sessionArtifacts' that was not found in the old version.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.PatchRequestBrowserSessionCreateOrUpdate.properties\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.PatchRequestBrowserSessionCreateOrUpdate.properties\",\"location\":\"<local-path>\"},\"type\":\"Warning\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1045.md\",\"mode\":\"Addition\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase B workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40190664630",
+        "digest": "28350d091f709e16473a20c4cdcdb0e070bc5658047948a291f7124059dd35fd"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json",
+          "line": 1626,
+          "jsonPath": "definitions.PatchRequestBrowserSessionCreateOrUpdate.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a/specification/loadtestservice/data-plane/playwright/preview/2026-06-01-preview/playwright.json#L1626"
+        },
+        {
+          "revision": "head",
+          "path": "specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json",
+          "line": 1818,
+          "jsonPath": "definitions.PatchRequestBrowserSessionCreateOrUpdate.properties",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/preview/2026-10-01-preview/playwright.json#L1818"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [
+    {
+      "project": "specification/loadtestservice/data-plane/playwright",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/f849fd75af5f9760-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/f849fd75af5f9760-phase-a.md",
+          "jsonDigest": "246fa2ce795c177bf021b4d116573a11e63239952c3ce46205dacd1580da92bf",
+          "markdownDigest": "7be7a38cfa515e4f64bf159e9570f6830e7b75444aab5c641802b74c1b7e1fd2",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1832,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1049,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 2901
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "Playwright",
+              "baseVersion": "2025-07-01-preview",
+              "headVersion": "2025-07-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Playwright",
+              "baseVersion": "2025-09-01",
+              "headVersion": "2025-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Playwright",
+              "baseVersion": "2026-01-01-preview",
+              "headVersion": "2026-01-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Playwright",
+              "baseVersion": "2026-04-01-preview",
+              "headVersion": "2026-04-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Playwright",
+              "baseVersion": "2026-06-01-preview",
+              "headVersion": "2026-06-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/f849fd75af5f9760-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/f849fd75af5f9760-phase-b.md",
+          "jsonDigest": "77f3636db705332a397d13c76e4bcf411c21b280f460fd3b9fa678c2c730bf58",
+          "markdownDigest": "20a13f942cea1545e043ba807b3a90bbd712fc0514ac26c3fe65eb1c5cd21744",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1353,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 800,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 2162
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "Playwright",
+              "baseVersion": "2025-09-01",
+              "headVersion": "2026-10-01-preview",
+              "phase": "cross-version",
+              "findingCount": 5
+            }
+          ]
+        }
+      },
+      "reportDigest": "60b315e6aaff3c44e5797839b154871c85229fa0179be3697e16ceb9495204ce",
+      "comparisonsPerformed": 6,
+      "versionComparisons": [
+        {
+          "serviceName": "Playwright",
+          "baseVersion": "2025-07-01-preview",
+          "headVersion": "2025-07-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Playwright",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2025-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Playwright",
+          "baseVersion": "2026-01-01-preview",
+          "headVersion": "2026-01-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Playwright",
+          "baseVersion": "2026-04-01-preview",
+          "headVersion": "2026-04-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Playwright",
+          "baseVersion": "2026-06-01-preview",
+          "headVersion": "2026-06-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Playwright",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2026-10-01-preview",
+          "phase": "cross-version",
+          "findingCount": 5
+        }
+      ],
+      "findings": [
+        {
+          "occurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-0",
+          "project": "specification/loadtestservice/data-plane/playwright",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /playwrightworkspaces/{} was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/playwrightworkspaces/{}"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Playwright.Workspaces.get",
+          "versionPair": {
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview"
+          },
+          "location": {
+            "file": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+            "line": 61
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/f849fd75af5f9760-phase-b.md",
+            "digest": "20a13f942cea1545e043ba807b3a90bbd712fc0514ac26c3fe65eb1c5cd21744"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+            "line": 61,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/typespec/routes.tsp#L61"
+          }
+        },
+        {
+          "occurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-1",
+          "project": "specification/loadtestservice/data-plane/playwright",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /playwrightworkspaces/{}/browser-sessions/{} was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/playwrightworkspaces/{}/browser-sessions/{}"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Playwright.BrowserSessions.get",
+          "versionPair": {
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview"
+          },
+          "location": {
+            "file": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+            "line": 77
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/f849fd75af5f9760-phase-b.md",
+            "digest": "20a13f942cea1545e043ba807b3a90bbd712fc0514ac26c3fe65eb1c5cd21744"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+            "line": 77,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/typespec/routes.tsp#L77"
+          }
+        },
+        {
+          "occurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-2",
+          "project": "specification/loadtestservice/data-plane/playwright",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /playwrightworkspaces/{}/browser-sessions was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/playwrightworkspaces/{}/browser-sessions"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Playwright.BrowserSessions.list",
+          "versionPair": {
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview"
+          },
+          "location": {
+            "file": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+            "line": 81
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/f849fd75af5f9760-phase-b.md",
+            "digest": "20a13f942cea1545e043ba807b3a90bbd712fc0514ac26c3fe65eb1c5cd21744"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+            "line": 81,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/typespec/routes.tsp#L81"
+          }
+        },
+        {
+          "occurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-3",
+          "project": "specification/loadtestservice/data-plane/playwright",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation PATCH /playwrightworkspaces/{}/browser-sessions/{} was added.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/playwrightworkspaces/{}/browser-sessions/{}"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Playwright.BrowserSessions.createOrUpdate",
+          "versionPair": {
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview"
+          },
+          "location": {
+            "file": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+            "line": 85
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/f849fd75af5f9760-phase-b.md",
+            "digest": "20a13f942cea1545e043ba807b3a90bbd712fc0514ac26c3fe65eb1c5cd21744"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+            "line": 85,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/typespec/routes.tsp#L85"
+          }
+        },
+        {
+          "occurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-4",
+          "project": "specification/loadtestservice/data-plane/playwright",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation GET /playwrightworkspaces/{}/test-runs/{} was added.",
+          "operation": {
+            "method": "GET",
+            "path": "/playwrightworkspaces/{}/test-runs/{}"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Playwright.TestRuns.get",
+          "versionPair": {
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview"
+          },
+          "location": {
+            "file": "specification/loadtestservice/data-plane/playwright/typespec/testruns.tsp",
+            "line": 177
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/f849fd75af5f9760-phase-b.md",
+            "digest": "20a13f942cea1545e043ba807b3a90bbd712fc0514ac26c3fe65eb1c5cd21744"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/loadtestservice/data-plane/playwright/typespec/testruns.tsp",
+            "line": 177,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/51c7ed6f5a03ab70639824ed736ef1374bac8f3f/specification/loadtestservice/data-plane/playwright/typespec/testruns.tsp#L177"
+          }
+        }
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "oadOccurrenceId": "B-oad-0",
+      "target": {
+        "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+        "project": "specification/loadtestservice/data-plane",
+        "phase": "B",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview",
+        "evidence": [
+          "OAD rule AddedOperation",
+          "JSON path paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+          "No terminal reference"
+        ],
+        "route": "/playwrightworkspaces/{}/test-runs/{}",
+        "method": "GET"
+      },
+      "targets": [
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2026-10-01-preview",
+          "evidence": [
+            "OAD rule AddedOperation",
+            "JSON path paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+            "No terminal reference"
+          ],
+          "route": "/playwrightworkspaces/{}/test-runs/{}",
+          "method": "GET"
+        }
+      ],
+      "candidates": [
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-0",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedOperation",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+              "No terminal reference"
+            ],
+            "route": "/playwrightworkspaces/{}/test-runs/{}",
+            "method": "GET"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-1",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedOperation",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+              "No terminal reference"
+            ],
+            "route": "/playwrightworkspaces/{}/test-runs/{}",
+            "method": "GET"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-2",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedOperation",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+              "No terminal reference"
+            ],
+            "route": "/playwrightworkspaces/{}/test-runs/{}",
+            "method": "GET"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-3",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedOperation",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+              "No terminal reference"
+            ],
+            "route": "/playwrightworkspaces/{}/test-runs/{}",
+            "method": "GET"
+          },
+          "score": 0,
+          "exactIdentity": [],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "HTTP method differs",
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-4",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedOperation",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/test-runs/{runId}'].get",
+              "No terminal reference"
+            ],
+            "route": "/playwrightworkspaces/{}/test-runs/{}",
+            "method": "GET"
+          },
+          "score": 3,
+          "exactIdentity": [
+            "method",
+            "route"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": []
+        }
+      ],
+      "selectedTypeSpecOccurrenceIds": [
+        "specification/loadtestservice/data-plane/playwright:tsp-B-4"
+      ],
+      "category": "exact",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "B-oad-1",
+      "target": {
+        "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+        "project": "specification/loadtestservice/data-plane",
+        "phase": "B",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview",
+        "evidence": [
+          "OAD rule AddedPath",
+          "JSON path paths['/playwrightworkspaces/{workspaceId}']",
+          "No terminal reference",
+          "Expanded path item to GET operation"
+        ],
+        "route": "/playwrightworkspaces/{}",
+        "method": "GET",
+        "operationId": "Workspaces_Get"
+      },
+      "targets": [
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2026-10-01-preview",
+          "evidence": [
+            "OAD rule AddedPath",
+            "JSON path paths['/playwrightworkspaces/{workspaceId}']",
+            "No terminal reference",
+            "Expanded path item to GET operation"
+          ],
+          "route": "/playwrightworkspaces/{}",
+          "method": "GET",
+          "operationId": "Workspaces_Get"
+        }
+      ],
+      "candidates": [
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-0",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}",
+            "method": "GET",
+            "operationId": "Workspaces_Get"
+          },
+          "score": 3,
+          "exactIdentity": [
+            "method",
+            "route"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-1",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}",
+            "method": "GET",
+            "operationId": "Workspaces_Get"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-2",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}",
+            "method": "GET",
+            "operationId": "Workspaces_Get"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-3",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}",
+            "method": "GET",
+            "operationId": "Workspaces_Get"
+          },
+          "score": 0,
+          "exactIdentity": [],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "HTTP method differs",
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-4",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}",
+            "method": "GET",
+            "operationId": "Workspaces_Get"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        }
+      ],
+      "selectedTypeSpecOccurrenceIds": [
+        "specification/loadtestservice/data-plane/playwright:tsp-B-0"
+      ],
+      "category": "exact",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "B-oad-2",
+      "target": {
+        "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+        "project": "specification/loadtestservice/data-plane",
+        "phase": "B",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview",
+        "evidence": [
+          "OAD rule AddedPath",
+          "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+          "No terminal reference",
+          "Expanded path item to GET operation"
+        ],
+        "route": "/playwrightworkspaces/{}/browser-sessions",
+        "method": "GET",
+        "operationId": "BrowserSessions_List"
+      },
+      "targets": [
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2026-10-01-preview",
+          "evidence": [
+            "OAD rule AddedPath",
+            "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+            "No terminal reference",
+            "Expanded path item to GET operation"
+          ],
+          "route": "/playwrightworkspaces/{}/browser-sessions",
+          "method": "GET",
+          "operationId": "BrowserSessions_List"
+        }
+      ],
+      "candidates": [
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-0",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions",
+            "method": "GET",
+            "operationId": "BrowserSessions_List"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-1",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions",
+            "method": "GET",
+            "operationId": "BrowserSessions_List"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-2",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions",
+            "method": "GET",
+            "operationId": "BrowserSessions_List"
+          },
+          "score": 3,
+          "exactIdentity": [
+            "method",
+            "route"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-3",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions",
+            "method": "GET",
+            "operationId": "BrowserSessions_List"
+          },
+          "score": 0,
+          "exactIdentity": [],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "HTTP method differs",
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-4",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions",
+            "method": "GET",
+            "operationId": "BrowserSessions_List"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        }
+      ],
+      "selectedTypeSpecOccurrenceIds": [
+        "specification/loadtestservice/data-plane/playwright:tsp-B-2"
+      ],
+      "category": "exact",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "B-oad-3",
+      "target": {
+        "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+        "project": "specification/loadtestservice/data-plane",
+        "phase": "B",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview",
+        "evidence": [
+          "OAD rule AddedPath",
+          "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+          "No terminal reference",
+          "Expanded path item to GET operation"
+        ],
+        "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+        "method": "GET",
+        "operationId": "BrowserSessions_Get"
+      },
+      "targets": [
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2026-10-01-preview",
+          "evidence": [
+            "OAD rule AddedPath",
+            "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+            "No terminal reference",
+            "Expanded path item to GET operation"
+          ],
+          "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+          "method": "GET",
+          "operationId": "BrowserSessions_Get"
+        },
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2026-10-01-preview",
+          "evidence": [
+            "OAD rule AddedPath",
+            "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+            "No terminal reference",
+            "Expanded path item to PATCH operation"
+          ],
+          "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+          "method": "PATCH",
+          "operationId": "BrowserSessions_CreateOrUpdate"
+        }
+      ],
+      "candidates": [
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-0",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "GET",
+            "operationId": "BrowserSessions_Get"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-1",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "GET",
+            "operationId": "BrowserSessions_Get"
+          },
+          "score": 3,
+          "exactIdentity": [
+            "method",
+            "route"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-2",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "GET",
+            "operationId": "BrowserSessions_Get"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-3",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "GET",
+            "operationId": "BrowserSessions_Get"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "route"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "HTTP method differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-4",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to GET operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "GET",
+            "operationId": "BrowserSessions_Get"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "method"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-0",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to PATCH operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "PATCH",
+            "operationId": "BrowserSessions_CreateOrUpdate"
+          },
+          "score": 0,
+          "exactIdentity": [],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "HTTP method differs",
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-1",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to PATCH operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "PATCH",
+            "operationId": "BrowserSessions_CreateOrUpdate"
+          },
+          "score": 0,
+          "exactIdentity": [
+            "route"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "HTTP method differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-2",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to PATCH operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "PATCH",
+            "operationId": "BrowserSessions_CreateOrUpdate"
+          },
+          "score": 0,
+          "exactIdentity": [],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "HTTP method differs",
+            "normalized route differs"
+          ]
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-3",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to PATCH operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "PATCH",
+            "operationId": "BrowserSessions_CreateOrUpdate"
+          },
+          "score": 3,
+          "exactIdentity": [
+            "method",
+            "route"
+          ],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": []
+        },
+        {
+          "typeSpecOccurrenceId": "specification/loadtestservice/data-plane/playwright:tsp-B-4",
+          "target": {
+            "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+            "project": "specification/loadtestservice/data-plane",
+            "phase": "B",
+            "baseVersion": "2025-09-01",
+            "headVersion": "2026-10-01-preview",
+            "evidence": [
+              "OAD rule AddedPath",
+              "JSON path paths['/playwrightworkspaces/{workspaceId}/browser-sessions/{sessionId}']",
+              "No terminal reference",
+              "Expanded path item to PATCH operation"
+            ],
+            "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+            "method": "PATCH",
+            "operationId": "BrowserSessions_CreateOrUpdate"
+          },
+          "score": 0,
+          "exactIdentity": [],
+          "scoreEvidence": [
+            "version pair"
+          ],
+          "rejectionReasons": [
+            "HTTP method differs",
+            "normalized route differs"
+          ]
+        }
+      ],
+      "selectedTypeSpecOccurrenceIds": [
+        "specification/loadtestservice/data-plane/playwright:tsp-B-1",
+        "specification/loadtestservice/data-plane/playwright:tsp-B-3"
+      ],
+      "category": "exact",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "B-oad-4",
+      "target": {
+        "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+        "project": "specification/loadtestservice/data-plane",
+        "phase": "B",
+        "baseVersion": "2026-06-01-preview",
+        "headVersion": "2026-10-01-preview",
+        "direction": "response",
+        "propertyPath": [
+          "sessionArtifacts"
+        ],
+        "schema": "BrowserSession",
+        "declaration": "BrowserSession",
+        "evidence": [
+          "OAD rule AddedPropertyInResponse",
+          "JSON path definitions.BrowserSession.properties",
+          "No terminal reference",
+          "Expanded shared schema BrowserSession to operation usage"
+        ],
+        "method": "GET",
+        "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+        "operationId": "BrowserSessions_Get",
+        "statusCode": "200"
+      },
+      "targets": [
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2026-06-01-preview",
+          "headVersion": "2026-10-01-preview",
+          "direction": "response",
+          "propertyPath": [
+            "sessionArtifacts"
+          ],
+          "schema": "BrowserSession",
+          "declaration": "BrowserSession",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.BrowserSession.properties",
+            "No terminal reference",
+            "Expanded shared schema BrowserSession to operation usage"
+          ],
+          "method": "GET",
+          "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+          "operationId": "BrowserSessions_Get",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2026-06-01-preview",
+          "headVersion": "2026-10-01-preview",
+          "direction": "response",
+          "propertyPath": [
+            "sessionArtifacts"
+          ],
+          "schema": "BrowserSession",
+          "declaration": "BrowserSession",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.BrowserSession.properties",
+            "No terminal reference",
+            "Expanded shared schema BrowserSession to operation usage"
+          ],
+          "method": "GET",
+          "route": "/playwrightworkspaces/{}/browser-sessions",
+          "operationId": "BrowserSessions_List",
+          "statusCode": "200"
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "missed-equivalent",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "B-oad-5",
+      "target": {
+        "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+        "project": "specification/loadtestservice/data-plane",
+        "phase": "B",
+        "baseVersion": "2026-06-01-preview",
+        "headVersion": "2026-10-01-preview",
+        "direction": "response",
+        "propertyPath": [
+          "sessionArtifacts"
+        ],
+        "schema": "PatchRequestBrowserSession",
+        "declaration": "PatchRequestBrowserSession",
+        "evidence": [
+          "OAD rule AddedPropertyInResponse",
+          "JSON path definitions.PatchRequestBrowserSession.properties",
+          "No terminal reference",
+          "Expanded shared schema PatchRequestBrowserSession to operation usage"
+        ],
+        "method": "PATCH",
+        "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+        "operationId": "BrowserSessions_CreateOrUpdate",
+        "statusCode": "200"
+      },
+      "targets": [
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2026-06-01-preview",
+          "headVersion": "2026-10-01-preview",
+          "direction": "response",
+          "propertyPath": [
+            "sessionArtifacts"
+          ],
+          "schema": "PatchRequestBrowserSession",
+          "declaration": "PatchRequestBrowserSession",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.PatchRequestBrowserSession.properties",
+            "No terminal reference",
+            "Expanded shared schema PatchRequestBrowserSession to operation usage"
+          ],
+          "method": "PATCH",
+          "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+          "operationId": "BrowserSessions_CreateOrUpdate",
+          "statusCode": "200"
+        },
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2026-06-01-preview",
+          "headVersion": "2026-10-01-preview",
+          "direction": "response",
+          "propertyPath": [
+            "sessionArtifacts"
+          ],
+          "schema": "PatchRequestBrowserSession",
+          "declaration": "PatchRequestBrowserSession",
+          "evidence": [
+            "OAD rule AddedPropertyInResponse",
+            "JSON path definitions.PatchRequestBrowserSession.properties",
+            "No terminal reference",
+            "Expanded shared schema PatchRequestBrowserSession to operation usage"
+          ],
+          "method": "PATCH",
+          "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+          "operationId": "BrowserSessions_CreateOrUpdate",
+          "statusCode": "201"
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "missed-equivalent",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "B-oad-6",
+      "target": {
+        "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+        "project": "specification/loadtestservice/data-plane",
+        "phase": "B",
+        "baseVersion": "2026-06-01-preview",
+        "headVersion": "2026-10-01-preview",
+        "direction": "request",
+        "propertyPath": [
+          "sessionArtifacts"
+        ],
+        "schema": "PatchRequestBrowserSessionCreateOrUpdate",
+        "declaration": "PatchRequestBrowserSessionCreateOrUpdate",
+        "evidence": [
+          "OAD rule AddedOptionalProperty",
+          "JSON path definitions.PatchRequestBrowserSessionCreateOrUpdate.properties",
+          "No terminal reference",
+          "Expanded shared schema PatchRequestBrowserSessionCreateOrUpdate to operation usage"
+        ],
+        "method": "PATCH",
+        "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+        "operationId": "BrowserSessions_CreateOrUpdate"
+      },
+      "targets": [
+        {
+          "spec": "specification\\loadtestservice\\data-plane\\playwright\\preview\\2026-10-01-preview\\playwright.json",
+          "project": "specification/loadtestservice/data-plane",
+          "phase": "B",
+          "baseVersion": "2026-06-01-preview",
+          "headVersion": "2026-10-01-preview",
+          "direction": "request",
+          "propertyPath": [
+            "sessionArtifacts"
+          ],
+          "schema": "PatchRequestBrowserSessionCreateOrUpdate",
+          "declaration": "PatchRequestBrowserSessionCreateOrUpdate",
+          "evidence": [
+            "OAD rule AddedOptionalProperty",
+            "JSON path definitions.PatchRequestBrowserSessionCreateOrUpdate.properties",
+            "No terminal reference",
+            "Expanded shared schema PatchRequestBrowserSessionCreateOrUpdate to operation usage"
+          ],
+          "method": "PATCH",
+          "route": "/playwrightworkspaces/{}/browser-sessions/{}",
+          "operationId": "BrowserSessions_CreateOrUpdate"
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "missed-equivalent",
+      "reviewRequired": false
+    }
+  ],
+  "findingGroups": [
+    {
+      "category": "exact",
+      "key": "AddedOperation → OperationAdded",
+      "swaggerRule": "AddedOperation",
+      "typeSpecKind": "OperationAdded",
+      "oadOccurrenceIds": [
+        "B-oad-0"
+      ],
+      "typeSpecOccurrenceIds": [
+        "specification/loadtestservice/data-plane/playwright:tsp-B-4"
+      ]
+    },
+    {
+      "category": "exact",
+      "key": "AddedPath → OperationAdded",
+      "swaggerRule": "AddedPath",
+      "typeSpecKind": "OperationAdded",
+      "oadOccurrenceIds": [
+        "B-oad-1",
+        "B-oad-2",
+        "B-oad-3"
+      ],
+      "typeSpecOccurrenceIds": [
+        "specification/loadtestservice/data-plane/playwright:tsp-B-0",
+        "specification/loadtestservice/data-plane/playwright:tsp-B-1",
+        "specification/loadtestservice/data-plane/playwright:tsp-B-2",
+        "specification/loadtestservice/data-plane/playwright:tsp-B-3"
+      ]
+    },
+    {
+      "category": "missed-equivalent",
+      "key": "AddedOptionalProperty",
+      "swaggerRule": "AddedOptionalProperty",
+      "oadOccurrenceIds": [
+        "B-oad-6"
+      ],
+      "typeSpecOccurrenceIds": []
+    },
+    {
+      "category": "missed-equivalent",
+      "key": "AddedPropertyInResponse",
+      "swaggerRule": "AddedPropertyInResponse",
+      "oadOccurrenceIds": [
+        "B-oad-4",
+        "B-oad-5"
+      ],
+      "typeSpecOccurrenceIds": []
+    }
+  ],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-3d42d3d417e11cc5",
+      "affectedPrs": [
+        47018
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-oad-only-20e99650ac7b0b55",
+      "affectedPrs": [
+        47018
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "B-oad-5"
+      ],
+      "category": "oad-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "OAD finding has evaluator classification 'missed-equivalent' and no selected TypeSpec equivalent.",
+      "evidence": [
+        {
+          "kind": "oad-finding",
+          "id": "B-oad-5",
+          "detail": "AddedPropertyInResponse: The new version has a new property 'sessionArtifacts' in response that was not found in the old version."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to OAD-only or missed-equivalent totals.",
+      "suggestedFix": "Review detector coverage and the canonical target mapping.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-oad-only-3506a59ff7ae1e33",
+      "affectedPrs": [
+        47018
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "B-oad-6"
+      ],
+      "category": "oad-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "OAD finding has evaluator classification 'missed-equivalent' and no selected TypeSpec equivalent.",
+      "evidence": [
+        {
+          "kind": "oad-finding",
+          "id": "B-oad-6",
+          "detail": "AddedOptionalProperty: The new version has a new optional property 'sessionArtifacts' that was not found in the old version."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to OAD-only or missed-equivalent totals.",
+      "suggestedFix": "Review detector coverage and the canonical target mapping.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-oad-only-887d05cb4f9f62e8",
+      "affectedPrs": [
+        47018
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "B-oad-4"
+      ],
+      "category": "oad-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "OAD finding has evaluator classification 'missed-equivalent' and no selected TypeSpec equivalent.",
+      "evidence": [
+        {
+          "kind": "oad-finding",
+          "id": "B-oad-4",
+          "detail": "AddedPropertyInResponse: The new version has a new property 'sessionArtifacts' in response that was not found in the old version."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to OAD-only or missed-equivalent totals.",
+      "suggestedFix": "Review detector coverage and the canonical target mapping.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "51c7ed6f5a03ab70639824ed736ef1374bac8f3f",
+    "prBaseSha": "ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a 51c7ed6f5a03ab70639824ed736ef1374bac8f3f\ngit -C target checkout --detach 51c7ed6f5a03ab70639824ed736ef1374bac8f3f\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47018' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/loadtestservice/data-plane/playwright",
+        "project": "specification/loadtestservice/data-plane/playwright",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/loadtestservice/data-plane/playwright' --base-ref ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a --phase same-version --json-output '../specification-loadtestservice-data-plane-playwright-phase-a.json' --markdown-output '../specification-loadtestservice-data-plane-playwright-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/loadtestservice/data-plane/playwright' --base-ref ba3eef39e5be55cd5ed1a2e5c6c9bb1a17c36b9a --json-output '../specification-loadtestservice-data-plane-playwright-phase-b-evidence.json' --markdown-output '../specification-loadtestservice-data-plane-playwright-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 7,
+    "oadInformational": 0,
+    "typeSpecTotal": 5,
+    "exact": 4,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 3,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "exactRecall": 0.5714285714285714,
+    "probableInclusiveRecall": 0.5714285714285714,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 7,
+        "oadInformational": 0,
+        "typeSpecTotal": 5,
+        "exact": 4,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 3,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "exactRecall": 0.5714285714285714,
+        "probableInclusiveRecall": 0.5714285714285714,
+        "outcome": "compared"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

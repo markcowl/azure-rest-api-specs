@@ -1,0 +1,48 @@
+{
+  "specPaths": [
+    "specification/confidentialledger/data-plane/CodeTransparency"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "CodeTransparency",
+        "baseVersion": "2025-01-31-preview",
+        "headVersion": "2025-01-31-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "CodeTransparency",
+        "baseVersion": "2026-03-26",
+        "headVersion": "2026-03-26",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 373,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 158,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 537
+  }
+}

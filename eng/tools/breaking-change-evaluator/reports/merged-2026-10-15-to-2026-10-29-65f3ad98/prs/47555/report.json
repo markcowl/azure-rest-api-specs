@@ -1,0 +1,671 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47555:b8fd281382ffe9108f4efcea957abcc0cf48d1b6"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47555,
+    "title": "[Storage] Add C++-scoped TypeSpec protocol customizations",
+    "author": "Jinming-Hu",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47555",
+    "baseBranch": "main",
+    "headBranch": "jinming-hu-storage-typespec-customization-pr",
+    "baseSha": "119b7458f41688cceac321cc425198bbef2966d6",
+    "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+    "mergedAt": "2026-10-23T22:56:14Z",
+    "changedTypeSpecFiles": [
+      "specification/storage/data-plane/BlobStorage/Cpp/client.tsp",
+      "specification/storage/data-plane/BlobStorage/client.tsp",
+      "specification/storage/data-plane/DataLakeStorage/client.tsp",
+      "specification/storage/data-plane/FileStorage/client.tsp",
+      "specification/storage/data-plane/QueueStorage/client.tsp",
+      "specification/storage/data-plane/QueueStorage/routes.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47555",
+      "state": "closed",
+      "merged": true,
+      "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+      "baseSha": "119b7458f41688cceac321cc425198bbef2966d6",
+      "runs": {
+        "A": {
+          "id": 39889302132,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39889302132",
+          "logDigest": "2d8cf1f494cb9c184742ae2070077f9525b9d0305cba9e210470fecaa5f2d0dd",
+          "summaryDigest": "241f58d93bb0ebdfb5603d80ebef341a6fed2414533f7f56d2029693a37f4575"
+        },
+        "B": {
+          "id": 39889302192,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39889302192",
+          "logDigest": "22e489c96fc9788905ead5696d7b327ed29bb60b6818171c2873b33429089d51",
+          "summaryDigest": "e71fb5a16b556dcd1355f7a7dc2709cf4d635dbf9f4f8650354d508f72d73294"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/storage/data-plane/BlobStorage/Cpp/client.tsp",
+        "specification/storage/data-plane/BlobStorage/client.tsp",
+        "specification/storage/data-plane/DataLakeStorage/client.tsp",
+        "specification/storage/data-plane/FileStorage/client.tsp",
+        "specification/storage/data-plane/QueueStorage/client.tsp",
+        "specification/storage/data-plane/QueueStorage/routes.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47555",
+      "headSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+      "baseSha": "119b7458f41688cceac321cc425198bbef2966d6"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/storage/data-plane/BlobStorage",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/1ddb3bc183c2b472-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/1ddb3bc183c2b472-phase-a.md",
+          "jsonDigest": "f6ba72390e701f26601b3e2316653d6b72ef25891b6a933f73fc0000c168fb8c",
+          "markdownDigest": "51e4ecd9eb8f7fef62d7e5d4b49522e1d01fe6817cebae558c69cbe26d0a809c",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 4283,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 5447,
+            "classifyMs": 1,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 9737
+          },
+          "comparisonsPerformed": 6,
+          "versionComparisons": [
+            {
+              "serviceName": "Blob",
+              "baseVersion": "2025-11-05",
+              "headVersion": "2025-11-05",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Blob",
+              "baseVersion": "2026-02-06",
+              "headVersion": "2026-02-06",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Blob",
+              "baseVersion": "2026-04-06",
+              "headVersion": "2026-04-06",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Blob",
+              "baseVersion": "2026-06-06",
+              "headVersion": "2026-06-06",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Blob",
+              "baseVersion": "2026-10-06",
+              "headVersion": "2026-10-06",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Blob",
+              "baseVersion": "2026-12-06",
+              "headVersion": "2026-12-06",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/1ddb3bc183c2b472-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/1ddb3bc183c2b472-phase-b.md",
+          "jsonDigest": "9e6887cd135aa317733633f243747c44a6cedbf46a29f3928249709bd56c1a97",
+          "markdownDigest": "daa4d42858b4346f0762e4c8378f6eaa5b7aff4e815f9835f5de38eaf901cd47",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3885,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 4607,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 8496
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "1b7e360ca1c1f17836f5edae5a2c642e8442d5e4fa850ceaa13f2b63a55ac08a",
+      "comparisonsPerformed": 6,
+      "versionComparisons": [
+        {
+          "serviceName": "Blob",
+          "baseVersion": "2025-11-05",
+          "headVersion": "2025-11-05",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Blob",
+          "baseVersion": "2026-02-06",
+          "headVersion": "2026-02-06",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Blob",
+          "baseVersion": "2026-04-06",
+          "headVersion": "2026-04-06",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Blob",
+          "baseVersion": "2026-06-06",
+          "headVersion": "2026-06-06",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Blob",
+          "baseVersion": "2026-10-06",
+          "headVersion": "2026-10-06",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Blob",
+          "baseVersion": "2026-12-06",
+          "headVersion": "2026-12-06",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/storage/data-plane/DataLakeStorage",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/673ad912f27c9b43-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/673ad912f27c9b43-phase-a.md",
+          "jsonDigest": "edabfbb979eaa5025c4174ba681cf20fa22033678b06a1495aecdbea7e8b45c6",
+          "markdownDigest": "82e1ffa9ba02574dab3a68d6c2463a714f54200cd8d7ee2e85a662fd0091887f",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 357,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 334,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 697
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "DataLake",
+              "baseVersion": "2026-06-06",
+              "headVersion": "2026-06-06",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/673ad912f27c9b43-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/673ad912f27c9b43-phase-b.md",
+          "jsonDigest": "823859772b7e522107c478b22396e0c990baf2f6bb23a4ae1e719c4376156b2a",
+          "markdownDigest": "9c3572415769d5f4669db76f1eade8348b273ae7e7196092b6211d04e12cb35b",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 542,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 510,
+            "classifyMs": 1,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 1060
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "03a03dc382ad16b6601dcb6ce58398cebb0a59321603dd834bc89817cc8fcce3",
+      "comparisonsPerformed": 1,
+      "versionComparisons": [
+        {
+          "serviceName": "DataLake",
+          "baseVersion": "2026-06-06",
+          "headVersion": "2026-06-06",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/storage/data-plane/FileStorage",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/11ca76782d2ec7ea-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/11ca76782d2ec7ea-phase-a.md",
+          "jsonDigest": "24e130276b55aad0e93909f7abe5caffb492ebc974ab8ee4e119645ff027adb8",
+          "markdownDigest": "883dedced4f01185b79289f391c34d59d5992b38f607b61f1637c4b64bbdac2d",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1805,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2362,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4173
+          },
+          "comparisonsPerformed": 3,
+          "versionComparisons": [
+            {
+              "serviceName": "File",
+              "baseVersion": "2026-06-06",
+              "headVersion": "2026-06-06",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "File",
+              "baseVersion": "2026-10-06",
+              "headVersion": "2026-10-06",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "File",
+              "baseVersion": "2026-12-06",
+              "headVersion": "2026-12-06",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/11ca76782d2ec7ea-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/11ca76782d2ec7ea-phase-b.md",
+          "jsonDigest": "2397aa0a666c9c2e3dbd442531f288d058616383362e845aace384dac8075553",
+          "markdownDigest": "1722a927bca44eaa3ce64cd1b6fa7fcdb2791121d0f87b251e93b13d22746a58",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1883,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2255,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4146
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "d1a6d56d83cbdd1eb36013ff1451a08b494e0e6acd72608240f9c579178af332",
+      "comparisonsPerformed": 3,
+      "versionComparisons": [
+        {
+          "serviceName": "File",
+          "baseVersion": "2026-06-06",
+          "headVersion": "2026-06-06",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "File",
+          "baseVersion": "2026-10-06",
+          "headVersion": "2026-10-06",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "File",
+          "baseVersion": "2026-12-06",
+          "headVersion": "2026-12-06",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/storage/data-plane/QueueStorage",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/b8d0b107bb0fd94f-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/b8d0b107bb0fd94f-phase-a.md",
+          "jsonDigest": "2bd2845b3fac54ed14058e2c503ce703e654325ac17f7b210727ce2fa04ca62e",
+          "markdownDigest": "6cf8576dbee8cc12bc96dd5f688575b2d5a836a2171ed2981a65e1991b7fd536",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 395,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 362,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 762
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "Queues",
+              "baseVersion": "2026-04-06",
+              "headVersion": "2026-04-06",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/b8d0b107bb0fd94f-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/b8d0b107bb0fd94f-phase-b.md",
+          "jsonDigest": "19c1557786073e8a5ee7559d10f8705322278fd0296bd7306a53ad600c7e944e",
+          "markdownDigest": "b79ebd445ddb06940e80c5effb28846664322adc5fd1970a0af6f47a3bfd6e3d",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 395,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 272,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 671
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "74cb053f3dd8e28371a988c1253dac0512e1d96b8918c0b194c7fad40505c714",
+      "comparisonsPerformed": 1,
+      "versionComparisons": [
+        {
+          "serviceName": "Queues",
+          "baseVersion": "2026-04-06",
+          "headVersion": "2026-04-06",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-11d3990ab145c2c9",
+      "affectedPrs": [
+        47555
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-6e758e4a05e8919a",
+      "affectedPrs": [
+        47555
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "b8fd281382ffe9108f4efcea957abcc0cf48d1b6",
+    "prBaseSha": "119b7458f41688cceac321cc425198bbef2966d6",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 119b7458f41688cceac321cc425198bbef2966d6 b8fd281382ffe9108f4efcea957abcc0cf48d1b6\ngit -C target checkout --detach b8fd281382ffe9108f4efcea957abcc0cf48d1b6\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47555' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/storage/data-plane/BlobStorage",
+        "project": "specification/storage/data-plane/BlobStorage",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/storage/data-plane/BlobStorage' --base-ref 119b7458f41688cceac321cc425198bbef2966d6 --phase same-version --json-output '../specification-storage-data-plane-BlobStorage-phase-a.json' --markdown-output '../specification-storage-data-plane-BlobStorage-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/storage/data-plane/BlobStorage' --base-ref 119b7458f41688cceac321cc425198bbef2966d6 --json-output '../specification-storage-data-plane-BlobStorage-phase-b-evidence.json' --markdown-output '../specification-storage-data-plane-BlobStorage-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/storage/data-plane/DataLakeStorage",
+        "project": "specification/storage/data-plane/DataLakeStorage",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/storage/data-plane/DataLakeStorage' --base-ref 119b7458f41688cceac321cc425198bbef2966d6 --phase same-version --json-output '../specification-storage-data-plane-DataLakeStorage-phase-a.json' --markdown-output '../specification-storage-data-plane-DataLakeStorage-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/storage/data-plane/DataLakeStorage' --base-ref 119b7458f41688cceac321cc425198bbef2966d6 --json-output '../specification-storage-data-plane-DataLakeStorage-phase-b-evidence.json' --markdown-output '../specification-storage-data-plane-DataLakeStorage-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/storage/data-plane/FileStorage",
+        "project": "specification/storage/data-plane/FileStorage",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/storage/data-plane/FileStorage' --base-ref 119b7458f41688cceac321cc425198bbef2966d6 --phase same-version --json-output '../specification-storage-data-plane-FileStorage-phase-a.json' --markdown-output '../specification-storage-data-plane-FileStorage-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/storage/data-plane/FileStorage' --base-ref 119b7458f41688cceac321cc425198bbef2966d6 --json-output '../specification-storage-data-plane-FileStorage-phase-b-evidence.json' --markdown-output '../specification-storage-data-plane-FileStorage-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/storage/data-plane/QueueStorage",
+        "project": "specification/storage/data-plane/QueueStorage",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/storage/data-plane/QueueStorage' --base-ref 119b7458f41688cceac321cc425198bbef2966d6 --phase same-version --json-output '../specification-storage-data-plane-QueueStorage-phase-a.json' --markdown-output '../specification-storage-data-plane-QueueStorage-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/storage/data-plane/QueueStorage' --base-ref 119b7458f41688cceac321cc425198bbef2966d6 --json-output '../specification-storage-data-plane-QueueStorage-phase-b-evidence.json' --markdown-output '../specification-storage-data-plane-QueueStorage-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

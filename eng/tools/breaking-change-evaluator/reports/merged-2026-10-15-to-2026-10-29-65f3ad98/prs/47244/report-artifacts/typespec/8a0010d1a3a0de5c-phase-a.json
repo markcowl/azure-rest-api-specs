@@ -1,0 +1,76 @@
+{
+  "specPaths": [
+    "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/playwright"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 6
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 6,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "Management",
+        "baseVersion": "2025-07-01-preview",
+        "headVersion": "2025-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2025-09-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2026-01-01-preview",
+        "headVersion": "2026-01-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2026-02-01-preview",
+        "headVersion": "2026-02-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2026-08-01-preview",
+        "headVersion": "2026-08-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Management",
+        "baseVersion": "2026-10-01-preview",
+        "headVersion": "2026-10-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 4698,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 983,
+    "classifyMs": 1,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 5692
+  }
+}

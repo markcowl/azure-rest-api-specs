@@ -1,0 +1,196 @@
+{
+  "specPaths": [
+    "specification/loadtestservice/data-plane/playwright"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 5,
+    "totalFindings": 5,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 6
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 6,
+    "versionComparisons": [
+      {
+        "serviceName": "Playwright",
+        "baseVersion": "2025-07-01-preview",
+        "headVersion": "2025-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Playwright",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2025-09-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Playwright",
+        "baseVersion": "2026-01-01-preview",
+        "headVersion": "2026-01-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Playwright",
+        "baseVersion": "2026-04-01-preview",
+        "headVersion": "2026-04-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Playwright",
+        "baseVersion": "2026-06-01-preview",
+        "headVersion": "2026-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Playwright",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview",
+        "phase": "cross-version",
+        "findingCount": 5
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /playwrightworkspaces/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+        "line": 61
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.Workspaces.get",
+      "operation": {
+        "method": "GET",
+        "path": "/playwrightworkspaces/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /playwrightworkspaces/{}/browser-sessions/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+        "line": 77
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.BrowserSessions.get",
+      "operation": {
+        "method": "GET",
+        "path": "/playwrightworkspaces/{}/browser-sessions/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /playwrightworkspaces/{}/browser-sessions was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+        "line": 81
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.BrowserSessions.list",
+      "operation": {
+        "method": "GET",
+        "path": "/playwrightworkspaces/{}/browser-sessions"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation PATCH /playwrightworkspaces/{}/browser-sessions/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/data-plane/playwright/typespec/routes.tsp",
+        "line": 85
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.BrowserSessions.createOrUpdate",
+      "operation": {
+        "method": "PATCH",
+        "path": "/playwrightworkspaces/{}/browser-sessions/{}"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation GET /playwrightworkspaces/{}/test-runs/{} was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2025-09-01",
+        "headVersion": "2026-10-01-preview"
+      },
+      "location": {
+        "file": "specification/loadtestservice/data-plane/playwright/typespec/testruns.tsp",
+        "line": 177
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Playwright.TestRuns.get",
+      "operation": {
+        "method": "GET",
+        "path": "/playwrightworkspaces/{}/test-runs/{}"
+      },
+      "component": "request"
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1353,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 800,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 2162
+  }
+}

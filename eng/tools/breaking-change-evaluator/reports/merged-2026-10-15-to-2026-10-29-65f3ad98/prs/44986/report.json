@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-44986:8cc2e17c93d57743b1acba5f521f222414b7f1e1"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 44986,
+    "title": "[Microsoft.Security] Add DefenderForStorageSettings 2026-03-01-preview (per-extension scanners)",
+    "author": "raniwishahy",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/44986",
+    "baseBranch": "main",
+    "headBranch": "rani/AddDfs20260301PreviewWithPerExtensionScanners",
+    "baseSha": "322d99debcab19ffe9f41bfbd44631b9ba0de3b3",
+    "headSha": "8cc2e17c93d57743b1acba5f521f222414b7f1e1",
+    "mergedAt": "2026-10-25T12:35:44Z",
+    "changedTypeSpecFiles": [
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/main.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/44986",
+      "state": "closed",
+      "merged": true,
+      "headSha": "8cc2e17c93d57743b1acba5f521f222414b7f1e1",
+      "baseSha": "322d99debcab19ffe9f41bfbd44631b9ba0de3b3",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/main.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/DefenderForStorageAPI/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/44986",
+      "headSha": "8cc2e17c93d57743b1acba5f521f222414b7f1e1",
+      "baseSha": "322d99debcab19ffe9f41bfbd44631b9ba0de3b3"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-8de434cf47aa6fa6",
+      "affectedPrs": [
+        44986
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}
