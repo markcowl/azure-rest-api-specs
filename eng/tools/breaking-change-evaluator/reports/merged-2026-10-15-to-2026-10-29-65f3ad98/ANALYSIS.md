@@ -84,7 +84,7 @@ evidence rather than no-findings.
 The pinned analyzer is stable enough to execute the qualified corpus: there
 were no failed reports, and the cross-install TypeKit realm crash found during
 the run was fixed and regression-tested in
-[markcowl/typespec-azure#13](https://github.com/markcowl/typespec-azure/pull/13).
+[Azure/typespec-azure#5879](https://github.com/Azure/typespec-azure/pull/5879).
 
 Before using the analyzer as a replacement signal, the highest-value follow-up
 work is:
