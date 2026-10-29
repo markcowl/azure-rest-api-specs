@@ -1,0 +1,48 @@
+{
+  "specPaths": [
+    "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "Maintenance",
+        "baseVersion": "2023-10-01-preview",
+        "headVersion": "2023-10-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Maintenance",
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1411,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 569,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 1986
+  }
+}

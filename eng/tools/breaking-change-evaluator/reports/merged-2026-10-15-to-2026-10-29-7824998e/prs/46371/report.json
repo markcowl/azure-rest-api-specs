@@ -1,0 +1,2454 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "reportId": "merged-2026-10-15-to-2026-10-29-7824998e:pr-46371:c773c23d5ec6c65244d5554ab808054cf58cbc28"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46371,
+    "title": "[JS] use exact() for js customization",
+    "author": "kazrael2119",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46371",
+    "baseBranch": "main",
+    "headBranch": "try-exact-for-js-customize",
+    "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+    "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+    "mergedAt": "2026-10-19T00:53:51Z",
+    "changedTypeSpecFiles": [
+      "specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule/client.tsp",
+      "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry/client.tsp",
+      "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure/client.tsp",
+      "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/client.tsp",
+      "specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices/client.tsp",
+      "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations/client.tsp",
+      "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/client.tsp",
+      "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+      "specification/playwrighttesting/PlaywrightTesting.Management/client.tsp",
+      "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/client.tsp",
+      "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/client.tsp",
+      "specification/relay/resource-manager/Microsoft.Relay/Relay/client.tsp",
+      "specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking/client.tsp",
+      "specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine/client.tsp",
+      "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool/client.tsp",
+      "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46371",
+      "state": "closed",
+      "merged": true,
+      "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+      "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+      "runs": {
+        "A": {
+          "id": 38715543923,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38715543923",
+          "logDigest": "c7ce9c84dc0d455bd45c7f6ff1d6cd8ebb7aab2dae51014d013c92deab82b461",
+          "summaryDigest": "c6677aaa598499734b84be6141f2a4860487edef2a7201e619cbbeb75ca46044"
+        },
+        "B": {
+          "id": 38715543857,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38715543857",
+          "logDigest": "98459149d60be605cf0f900296f34e519d69d0aac400e8935d8a04923ac59ab6",
+          "summaryDigest": "29a59f3d566ca37c0ccdeb29d60779baf54ed083dbccdaf37a4143afeaf4b1e3"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule/client.tsp",
+        "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry/client.tsp",
+        "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure/client.tsp",
+        "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/client.tsp",
+        "specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices/client.tsp",
+        "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations/client.tsp",
+        "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster/client.tsp",
+        "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+        "specification/playwrighttesting/PlaywrightTesting.Management/client.tsp",
+        "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/client.tsp",
+        "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup/client.tsp",
+        "specification/relay/resource-manager/Microsoft.Relay/Relay/client.tsp",
+        "specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking/client.tsp",
+        "specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine/client.tsp",
+        "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool/client.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46371",
+      "headSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+      "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "7824998e1b7e926ce3b09b39fc376742b726a028",
+      "artifactDigest": "fd27cd230327eead1921152fc701f7b9b3582ba8b15e1e5600390d6a65a5764f"
+    }
+  },
+  "dimensions": [
+    {
+      "phase": "A",
+      "project": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight",
+      "baseVersion": "2025-01-15-preview",
+      "headVersion": "2025-01-15-preview"
+    }
+  ],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/c68bc84e08bab5ac-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/c68bc84e08bab5ac-phase-a.md",
+          "jsonDigest": "984bffbad24b609c0fa99465e693f6fc01cd9e1f8ed402eca063d7dc2ec5fcf5",
+          "markdownDigest": "4a2d590dfc31c1473fda66ac5c4cdfd3470ecfb5bf506d791c8ff3b3f186a951",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3998,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1351,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 5355
+          },
+          "comparisonsPerformed": 7,
+          "versionComparisons": [
+            {
+              "serviceName": "ComputeSchedule",
+              "baseVersion": "2024-08-15-preview",
+              "headVersion": "2024-08-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ComputeSchedule",
+              "baseVersion": "2024-10-01",
+              "headVersion": "2024-10-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ComputeSchedule",
+              "baseVersion": "2025-05-01",
+              "headVersion": "2025-05-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ComputeSchedule",
+              "baseVersion": "2025-04-15-preview",
+              "headVersion": "2025-04-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ComputeSchedule",
+              "baseVersion": "2026-01-01-preview",
+              "headVersion": "2026-01-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ComputeSchedule",
+              "baseVersion": "2026-03-01-preview",
+              "headVersion": "2026-03-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ComputeSchedule",
+              "baseVersion": "2026-04-15-preview",
+              "headVersion": "2026-04-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/c68bc84e08bab5ac-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/c68bc84e08bab5ac-phase-b.md",
+          "jsonDigest": "ce0eedc1c93e6e0978b3c446e8b025ec3fc824458f526951546ae29a2ea25cfc",
+          "markdownDigest": "60d645f2df011b2d3749b29899a73a456b5587ec23e438ff46f45f485b47b586",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 5021,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1841,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 6870
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "d497665b6aa6bc3a7addd692112775d4a34eac37719cbacac104e1f937c3f658",
+      "comparisonsPerformed": 7,
+      "versionComparisons": [
+        {
+          "serviceName": "ComputeSchedule",
+          "baseVersion": "2024-08-15-preview",
+          "headVersion": "2024-08-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ComputeSchedule",
+          "baseVersion": "2024-10-01",
+          "headVersion": "2024-10-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ComputeSchedule",
+          "baseVersion": "2025-05-01",
+          "headVersion": "2025-05-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ComputeSchedule",
+          "baseVersion": "2025-04-15-preview",
+          "headVersion": "2025-04-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ComputeSchedule",
+          "baseVersion": "2026-01-01-preview",
+          "headVersion": "2026-01-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ComputeSchedule",
+          "baseVersion": "2026-03-01-preview",
+          "headVersion": "2026-03-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ComputeSchedule",
+          "baseVersion": "2026-04-15-preview",
+          "headVersion": "2026-04-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/9dc15a9f8aded987-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/9dc15a9f8aded987-phase-a.md",
+          "jsonDigest": "2d483e7a4b3dd25d9875c53da7b122b36c8eed31eef6c7faef3add5059779240",
+          "markdownDigest": "23fed49544724f6808d0a30b7eefa5847dc1f85bc4bdf7ada20f3d9ab777d7a3",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2335,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1553,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3893
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "ContainerRegistry",
+              "baseVersion": "2025-11-01",
+              "headVersion": "2025-11-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ContainerRegistry",
+              "baseVersion": "2026-09-01-preview",
+              "headVersion": "2026-09-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/9dc15a9f8aded987-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/9dc15a9f8aded987-phase-b.md",
+          "jsonDigest": "dd65fdcb68ab0142906fa213ef8d1abf6fbbb3efe7b8acd0dd80fd77de316908",
+          "markdownDigest": "49af28b745027afbd04501bfe1379945c67f397d2c1102be9b5737f3612bcb77",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2763,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1728,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4496
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "1e837ba39ebfe0d12c6ddac246701aa66c5fe22acfd57d9d11367047deaec293",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "ContainerRegistry",
+          "baseVersion": "2025-11-01",
+          "headVersion": "2025-11-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ContainerRegistry",
+          "baseVersion": "2026-09-01-preview",
+          "headVersion": "2026-09-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/c1ecabb6f66ba4a7-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/c1ecabb6f66ba4a7-phase-a.md",
+          "jsonDigest": "6fdcb0339a4a86620a62d4b0019577b2741b32aed7c7ba61d221c5b60d909d5c",
+          "markdownDigest": "cebbf6c122975b7f7b36216667c2fefa335c3ba4ad2bcff287e546ccd34cf029",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 4152,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1633,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 5797
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "DevOpsInfrastructure",
+              "baseVersion": "2025-01-21",
+              "headVersion": "2025-01-21",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DevOpsInfrastructure",
+              "baseVersion": "2025-09-20",
+              "headVersion": "2025-09-20",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DevOpsInfrastructure",
+              "baseVersion": "2026-04-17-preview",
+              "headVersion": "2026-04-17-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DevOpsInfrastructure",
+              "baseVersion": "2026-06-02",
+              "headVersion": "2026-06-02",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DevOpsInfrastructure",
+              "baseVersion": "2026-07-03-preview",
+              "headVersion": "2026-07-03-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/c1ecabb6f66ba4a7-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/c1ecabb6f66ba4a7-phase-b.md",
+          "jsonDigest": "7c17e81f016472953eb7e623af85d099a0be2627ff708c75aa1ba538beb558b9",
+          "markdownDigest": "d723147b96cbacb91fb01077a913eabf0fc487e8201104ecdbe765932804c76d",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2559,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 886,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3450
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "20f26124d45a1459ca5cc16742f85f342670715f7ee0677c23d78d8cb5dc699a",
+      "comparisonsPerformed": 5,
+      "versionComparisons": [
+        {
+          "serviceName": "DevOpsInfrastructure",
+          "baseVersion": "2025-01-21",
+          "headVersion": "2025-01-21",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DevOpsInfrastructure",
+          "baseVersion": "2025-09-20",
+          "headVersion": "2025-09-20",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DevOpsInfrastructure",
+          "baseVersion": "2026-04-17-preview",
+          "headVersion": "2026-04-17-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DevOpsInfrastructure",
+          "baseVersion": "2026-06-02",
+          "headVersion": "2026-06-02",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DevOpsInfrastructure",
+          "baseVersion": "2026-07-03-preview",
+          "headVersion": "2026-07-03-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight",
+      "status": "complete",
+      "exitCode": 1,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/d00f78f5813386ac-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/d00f78f5813386ac-phase-a.md",
+          "jsonDigest": "6b4cdf2ec45dafba33b64c9b7ab6d7ac747260088c6d290117fbe2bb51ef3277",
+          "markdownDigest": "3734acc916088b43a2545714f83b166a58887edde1987366d8649411d7e45f45",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 789,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 500,
+            "classifyMs": 1,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 1295
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "HDInsight",
+              "baseVersion": "2025-01-15-preview",
+              "headVersion": "2025-01-15-preview",
+              "phase": "same-version",
+              "findingCount": 2
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/d00f78f5813386ac-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/d00f78f5813386ac-phase-b.md",
+          "jsonDigest": "85b2a472ee25259eecbefcbb5e16f9564fcba0ffbcc6c62608209aba122006bf",
+          "markdownDigest": "4ff7f05cd00aea3229cf19e3ff0d37e17de66842237ffbab77afdd43513df099",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 847,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 515,
+            "classifyMs": 1,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 1369
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "4eb5d683ed27a16e9a7d743d6cb0a6b5d2aad1b9b3c5c46a707c8840cb3456f2",
+      "comparisonsPerformed": 1,
+      "versionComparisons": [
+        {
+          "serviceName": "HDInsight",
+          "baseVersion": "2025-01-15-preview",
+          "headVersion": "2025-01-15-preview",
+          "phase": "same-version",
+          "findingCount": 2
+        }
+      ],
+      "findings": [
+        {
+          "occurrenceId": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-0",
+          "project": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight",
+          "kind": "RequestPropertyTypeNarrowed",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.tags removed variant TypeSpec.Record.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.HDInsight/clusters/{}"
+          },
+          "element": "body.properties.tags.variants.TypeSpec.Record",
+          "component": "request",
+          "sourceTraceLevel": "ancestor",
+          "suppression": {
+            "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.tags.variants.TypeSpec.Record\" })",
+            "placement": "On the operation: PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.HDInsight/clusters/{}",
+            "file": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/models.tsp",
+            "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.tags.variants.TypeSpec.Record\" })\nop update(...): ...;"
+          },
+          "versionPair": {
+            "baseVersion": "2025-01-15-preview",
+            "headVersion": "2025-01-15-preview"
+          },
+          "location": {
+            "file": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/models.tsp",
+            "line": 1768
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/d00f78f5813386ac-phase-a.md",
+            "digest": "3734acc916088b43a2545714f83b166a58887edde1987366d8649411d7e45f45"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/models.tsp",
+            "line": 1768,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/c773c23d5ec6c65244d5554ab808054cf58cbc28/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/models.tsp#L1768"
+          }
+        },
+        {
+          "occurrenceId": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-1",
+          "project": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight",
+          "kind": "RequestPropertyTypeWidened",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request union at body.properties.tags added variant TypeSpec.Record.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.HDInsight/clusters/{}"
+          },
+          "element": "body.properties.tags.variants.TypeSpec.Record",
+          "component": "request",
+          "sourceTraceLevel": "operation",
+          "suppression": {
+            "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.tags.variants.TypeSpec.Record\" })",
+            "placement": "On the operation: PATCH /subscriptions/{}/resourceGroups/{}/providers/Microsoft.HDInsight/clusters/{}",
+            "file": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp",
+            "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\", path: \"request.body.properties.tags.variants.TypeSpec.Record\" })\nop update(...): ...;"
+          },
+          "versionPair": {
+            "baseVersion": "2025-01-15-preview",
+            "headVersion": "2025-01-15-preview"
+          },
+          "location": {
+            "file": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp",
+            "line": 66
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/d00f78f5813386ac-phase-a.md",
+            "digest": "3734acc916088b43a2545714f83b166a58887edde1987366d8649411d7e45f45"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp",
+            "line": 66,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/c773c23d5ec6c65244d5554ab808054cf58cbc28/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L66"
+          }
+        }
+      ]
+    },
+    {
+      "project": "specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/246cc19a448a07ae-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/246cc19a448a07ae-phase-a.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/246cc19a448a07ae-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/246cc19a448a07ae-phase-b.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+    },
+    {
+      "project": "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/35835db16c9b7cd6-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/35835db16c9b7cd6-phase-a.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/35835db16c9b7cd6-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/35835db16c9b7cd6-phase-b.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+    },
+    {
+      "project": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-a.md",
+          "jsonDigest": "4f11754e0d7608daf2c75e44b848a799ff0fc8a77c32840656226d9c40c1795a",
+          "markdownDigest": "b5d84b7980db295d8cf8865b0c9883d82522d63e30e870b85758d9018096129f",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 7283,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2553,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 9845
+          },
+          "comparisonsPerformed": 11,
+          "versionComparisons": [
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2024-03-01-preview",
+              "headVersion": "2024-03-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2024-06-01-preview",
+              "headVersion": "2024-06-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2024-07-01",
+              "headVersion": "2024-07-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2024-10-01-preview",
+              "headVersion": "2024-10-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2025-04-01-preview",
+              "headVersion": "2025-04-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2025-07-01-preview",
+              "headVersion": "2025-07-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2025-08-01-preview",
+              "headVersion": "2025-08-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2025-09-01",
+              "headVersion": "2025-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2026-02-01-preview",
+              "headVersion": "2026-02-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2026-06-01",
+              "headVersion": "2026-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DocumentDB",
+              "baseVersion": "2026-06-15-preview",
+              "headVersion": "2026-06-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/af97c3bfeee72cfb-phase-b.md",
+          "jsonDigest": "ebdabb8a75eaa8bdd8726bfe891ea0db96139f26d56b2abc8b58c5c23f40af9e",
+          "markdownDigest": "3d4a89470a58d857b5902c424c0a465692a68be53380499f85d85868ed10c034",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 6323,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2165,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 8498
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "12a927da538ab75aff06830cbd31530307355b1391ca818243691d2f50262a07",
+      "comparisonsPerformed": 11,
+      "versionComparisons": [
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2024-03-01-preview",
+          "headVersion": "2024-03-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2024-06-01-preview",
+          "headVersion": "2024-06-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2024-07-01",
+          "headVersion": "2024-07-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2024-10-01-preview",
+          "headVersion": "2024-10-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2025-04-01-preview",
+          "headVersion": "2025-04-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2025-07-01-preview",
+          "headVersion": "2025-07-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2025-08-01-preview",
+          "headVersion": "2025-08-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2025-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2026-02-01-preview",
+          "headVersion": "2026-02-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2026-06-01",
+          "headVersion": "2026-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DocumentDB",
+          "baseVersion": "2026-06-15-preview",
+          "headVersion": "2026-06-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/monitor/resource-manager/Microsoft.Insights/Insights",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/d8fc44332c61eb85-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/d8fc44332c61eb85-phase-a.md",
+          "error": "Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/d8fc44332c61eb85-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/d8fc44332c61eb85-phase-b.md",
+          "error": "Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+    },
+    {
+      "project": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-a.md",
+          "jsonDigest": "c6420e8a543f35435899a42305cee5eb92162ee6e70a176757afc894d42c1f1d",
+          "markdownDigest": "de2ee9e85578919f832009d88763d8305c8ec001452fec1aa04d268c51235a96",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 21618,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 16494,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 38118
+          },
+          "comparisonsPerformed": 15,
+          "versionComparisons": [
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-06-01",
+              "headVersion": "2025-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-08-01",
+              "headVersion": "2025-08-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-09-01",
+              "headVersion": "2025-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-12-01",
+              "headVersion": "2025-12-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-12-15-preview",
+              "headVersion": "2025-12-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-01-01",
+              "headVersion": "2026-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-01-15-preview",
+              "headVersion": "2026-01-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-03-01",
+              "headVersion": "2026-03-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-03-15-preview",
+              "headVersion": "2026-03-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-04-01",
+              "headVersion": "2026-04-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-04-15-preview",
+              "headVersion": "2026-04-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-05-01",
+              "headVersion": "2026-05-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-05-15-preview",
+              "headVersion": "2026-05-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-06-01",
+              "headVersion": "2026-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-06-15-preview",
+              "headVersion": "2026-06-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-b.md",
+          "jsonDigest": "c8bddc99a91ec1ac12b901754b2f05d578ee2ecf8b43020d8949269ed5407214",
+          "markdownDigest": "43435d1b8fe4c3f7b2135d251405d753a58c7d00f76934b66908e100657fc52b",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 21904,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 17221,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 39133
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "345d196773b09347376453706acf1e80d18d42651c10394d214a57ee2f52b72b",
+      "comparisonsPerformed": 15,
+      "versionComparisons": [
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-06-01",
+          "headVersion": "2025-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-08-01",
+          "headVersion": "2025-08-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2025-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-12-01",
+          "headVersion": "2025-12-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-12-15-preview",
+          "headVersion": "2025-12-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-01-01",
+          "headVersion": "2026-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-01-15-preview",
+          "headVersion": "2026-01-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-03-01",
+          "headVersion": "2026-03-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-03-15-preview",
+          "headVersion": "2026-03-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-04-15-preview",
+          "headVersion": "2026-04-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-05-01",
+          "headVersion": "2026-05-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-05-15-preview",
+          "headVersion": "2026-05-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-06-01",
+          "headVersion": "2026-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-06-15-preview",
+          "headVersion": "2026-06-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/playwrighttesting/PlaywrightTesting.Management",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/d576ba5f97304776-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/d576ba5f97304776-phase-a.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/d576ba5f97304776-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/d576ba5f97304776-phase-b.md",
+          "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+    },
+    {
+      "project": "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/901bf8d8808023fc-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/901bf8d8808023fc-phase-a.md",
+          "error": "Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/901bf8d8808023fc-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/901bf8d8808023fc-phase-b.md",
+          "error": "Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+    },
+    {
+      "project": "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/05203fab0aa52250-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/05203fab0aa52250-phase-a.md",
+          "jsonDigest": "3d83e94e7adcc4c84b9c864bea80705d0fbda34e984fb2d8af3173a688c6db52",
+          "markdownDigest": "83a011be6b5e3f1a14b764774cd2ce74c179cc230513c2baef458cdabf26d4e4",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 17069,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 14370,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 31449
+          },
+          "comparisonsPerformed": 12,
+          "versionComparisons": [
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2025-02-01",
+              "headVersion": "2025-02-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2025-08-01",
+              "headVersion": "2025-08-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-01-01",
+              "headVersion": "2026-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-01-31-preview",
+              "headVersion": "2026-01-31-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-02-01",
+              "headVersion": "2026-02-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-03-31-preview",
+              "headVersion": "2026-03-31-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-05-01",
+              "headVersion": "2026-05-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-05-31-preview",
+              "headVersion": "2026-05-31-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-07-01",
+              "headVersion": "2026-07-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-08-01",
+              "headVersion": "2026-08-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-08-31-preview",
+              "headVersion": "2026-08-31-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "RecoveryServices",
+              "baseVersion": "2026-10-01",
+              "headVersion": "2026-10-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/05203fab0aa52250-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/05203fab0aa52250-phase-b.md",
+          "jsonDigest": "f9486590297767a5d8c1a4da0a6f4b4f9299cc6541a52ccdf841ff40583f2a46",
+          "markdownDigest": "354d45f9b5e00d52e5ee20930a407e248f388d9a2594e57d05157e0a491c5937",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 15964,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 13572,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 29544
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "f04863c416abc9c66c4d297be46a5792eff7a0bb19f380e69c4ec7299ab23f39",
+      "comparisonsPerformed": 12,
+      "versionComparisons": [
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2025-02-01",
+          "headVersion": "2025-02-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2025-08-01",
+          "headVersion": "2025-08-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-01-01",
+          "headVersion": "2026-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-01-31-preview",
+          "headVersion": "2026-01-31-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-02-01",
+          "headVersion": "2026-02-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-03-31-preview",
+          "headVersion": "2026-03-31-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-05-01",
+          "headVersion": "2026-05-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-05-31-preview",
+          "headVersion": "2026-05-31-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-07-01",
+          "headVersion": "2026-07-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-08-01",
+          "headVersion": "2026-08-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-08-31-preview",
+          "headVersion": "2026-08-31-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "RecoveryServices",
+          "baseVersion": "2026-10-01",
+          "headVersion": "2026-10-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/relay/resource-manager/Microsoft.Relay/Relay",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/ecccb9100eb6b9f7-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/ecccb9100eb6b9f7-phase-a.md",
+          "jsonDigest": "4f1f60f554719e7734dab483c4e96f434e501d96128303b389d26399f274f4d4",
+          "markdownDigest": "55e082de3957b14448ecbb7948443151eabb0335b50bbdcc383ac723e48b2c7a",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2310,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 965,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3280
+          },
+          "comparisonsPerformed": 3,
+          "versionComparisons": [
+            {
+              "serviceName": "Relay",
+              "baseVersion": "2024-01-01",
+              "headVersion": "2024-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Relay",
+              "baseVersion": "2026-01-01",
+              "headVersion": "2026-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Relay",
+              "baseVersion": "2026-07-01-preview",
+              "headVersion": "2026-07-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/ecccb9100eb6b9f7-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/ecccb9100eb6b9f7-phase-b.md",
+          "jsonDigest": "bcc5a533aa0b692c8370409686ac3ad94a813797bd3ca6e4fd6d1511a14d1a4e",
+          "markdownDigest": "5b7f9839a5bdf223a8a6f6a95a1f924e86aed099852e6d8510edc90389b377e9",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2244,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 911,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3160
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "42da9c93fc485c4700b974b44ed512109fe64980b60059e0b8ef891d57a49723",
+      "comparisonsPerformed": 3,
+      "versionComparisons": [
+        {
+          "serviceName": "Relay",
+          "baseVersion": "2024-01-01",
+          "headVersion": "2024-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Relay",
+          "baseVersion": "2026-01-01",
+          "headVersion": "2026-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Relay",
+          "baseVersion": "2026-07-01-preview",
+          "headVersion": "2026-07-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/5a2890a92772bb20-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/5a2890a92772bb20-phase-a.md",
+          "jsonDigest": "641410674bba8216a576e2607d0bae4989f506663662cb90de4aad6487d06233",
+          "markdownDigest": "4af1f319c382f9b1e4ad6b79daa28154dd99d4dcaed3241f4a984ee78b95a0aa",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2952,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 847,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 3807
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "ServiceNetworking",
+              "baseVersion": "2023-11-01",
+              "headVersion": "2023-11-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ServiceNetworking",
+              "baseVersion": "2024-05-01-preview",
+              "headVersion": "2024-05-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ServiceNetworking",
+              "baseVersion": "2025-01-01",
+              "headVersion": "2025-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ServiceNetworking",
+              "baseVersion": "2025-03-01-preview",
+              "headVersion": "2025-03-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ServiceNetworking",
+              "baseVersion": "2026-03-01",
+              "headVersion": "2026-03-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/5a2890a92772bb20-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/5a2890a92772bb20-phase-b.md",
+          "jsonDigest": "7d1600fbc4c8520c1214a84cc8d1dbeb7503442de181f70c8b045ed682bcd608",
+          "markdownDigest": "967071c0302d903734816109be050e7376a10ae97b0a2b12c4812c23fecaa4c3",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3055,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 813,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3874
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "9f36c88d248200b1ed4859f91fa72a9cca3de24ad4c73c65ca74d28d4162b460",
+      "comparisonsPerformed": 5,
+      "versionComparisons": [
+        {
+          "serviceName": "ServiceNetworking",
+          "baseVersion": "2023-11-01",
+          "headVersion": "2023-11-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ServiceNetworking",
+          "baseVersion": "2024-05-01-preview",
+          "headVersion": "2024-05-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ServiceNetworking",
+          "baseVersion": "2025-01-01",
+          "headVersion": "2025-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ServiceNetworking",
+          "baseVersion": "2025-03-01-preview",
+          "headVersion": "2025-03-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ServiceNetworking",
+          "baseVersion": "2026-03-01",
+          "headVersion": "2026-03-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/97f06217f38f8af6-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/97f06217f38f8af6-phase-a.md",
+          "jsonDigest": "dc00ce04fcd90fa014d8e7b67139eaa6a5732a9f0049d622612ba7aabcb1acb0",
+          "markdownDigest": "5b6aa68161c8977b70e361f79ee6ddc648752d6367a85ef58091f525a4acd784",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 712,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 421,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 1136
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "SqlVirtualMachine",
+              "baseVersion": "2023-10-01",
+              "headVersion": "2023-10-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/97f06217f38f8af6-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/97f06217f38f8af6-phase-b.md",
+          "jsonDigest": "170d2558823c5693aa2c394cd0e58b9e3ad5913f772b426125630bf087a346a2",
+          "markdownDigest": "0cfe0c4608411b5b108885921ee28e5cce29bb6aae492375ba1aef2ae5c961d3",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 706,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 422,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 1134
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "212cab48ad9e5947dd6a262e544d588b71c2094d385338c0d0547aefce9f5b0b",
+      "comparisonsPerformed": 1,
+      "versionComparisons": [
+        {
+          "serviceName": "SqlVirtualMachine",
+          "baseVersion": "2023-10-01",
+          "headVersion": "2023-10-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/4371f83ce0c2e304-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/4371f83ce0c2e304-phase-a.md",
+          "jsonDigest": "673997e3f258b4db008dff5f000c2f7f7e1f9788dc06eecff6d1da24c75d2309",
+          "markdownDigest": "8b7a3430cc7fbb644f3fa97eec89156c24306a23fde934dd88267aa5c4311017",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3568,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1012,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4584
+          },
+          "comparisonsPerformed": 6,
+          "versionComparisons": [
+            {
+              "serviceName": "StandbyPool",
+              "baseVersion": "2023-12-01-preview",
+              "headVersion": "2023-12-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "StandbyPool",
+              "baseVersion": "2024-03-01-preview",
+              "headVersion": "2024-03-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "StandbyPool",
+              "baseVersion": "2024-03-01",
+              "headVersion": "2024-03-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "StandbyPool",
+              "baseVersion": "2025-03-01",
+              "headVersion": "2025-03-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "StandbyPool",
+              "baseVersion": "2025-10-01",
+              "headVersion": "2025-10-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "StandbyPool",
+              "baseVersion": "2026-04-01",
+              "headVersion": "2026-04-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/4371f83ce0c2e304-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/4371f83ce0c2e304-phase-b.md",
+          "jsonDigest": "5234a16888f5538282071b5d91e92c60cda48bdd974514f1a57f20a08eaed66d",
+          "markdownDigest": "14e549ee8efee4f8d459f076700a96572768805a602416025d7ca44d6bc4ce5d",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 4208,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1150,
+            "classifyMs": 1,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 5367
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "c465047d308c0d2c77cc82d460a9ccb6dfbc90315f929e49aaaaf5a3c2dfabc6",
+      "comparisonsPerformed": 6,
+      "versionComparisons": [
+        {
+          "serviceName": "StandbyPool",
+          "baseVersion": "2023-12-01-preview",
+          "headVersion": "2023-12-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "StandbyPool",
+          "baseVersion": "2024-03-01-preview",
+          "headVersion": "2024-03-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "StandbyPool",
+          "baseVersion": "2024-03-01",
+          "headVersion": "2024-03-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "StandbyPool",
+          "baseVersion": "2025-03-01",
+          "headVersion": "2025-03-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "StandbyPool",
+          "baseVersion": "2025-10-01",
+          "headVersion": "2025-10-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "StandbyPool",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/storage/resource-manager/Microsoft.Storage/Storage",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/34d48bf6162c6014-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/34d48bf6162c6014-phase-a.md",
+          "jsonDigest": "5c516b7dd591f57f261fd3e3d8947f8f196b3ccc7783e8decb990a4f5f6af6a2",
+          "markdownDigest": "a6ed825c82f3540ef97fc452763f9fbaa4695b395e4a271ec6cdaef9b82b2e66",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 5753,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 5342,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 11100
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2025-06-01",
+              "headVersion": "2025-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2025-08-01",
+              "headVersion": "2025-08-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2026-04-01",
+              "headVersion": "2026-04-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2026-06-01",
+              "headVersion": "2026-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2026-09-01",
+              "headVersion": "2026-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/34d48bf6162c6014-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/34d48bf6162c6014-phase-b.md",
+          "jsonDigest": "9a90983f9e7e7999564cf51d80759c391da5e08ee45da417629a9dafc665742f",
+          "markdownDigest": "d84679ab37ed06506cadafb087f6cfd9baf2265da5a49e3edc2b249202ee3063",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 6141,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 5841,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 11988
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "0cf1158e90519ae581ef7dd818ea1979221b887c334f63f849474526e3018b82",
+      "comparisonsPerformed": 5,
+      "versionComparisons": [
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2025-06-01",
+          "headVersion": "2025-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2025-08-01",
+          "headVersion": "2025-08-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2026-06-01",
+          "headVersion": "2026-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2026-09-01",
+          "headVersion": "2026-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [
+    {
+      "category": "typespec-only",
+      "key": "RequestPropertyTypeNarrowed",
+      "typeSpecKind": "RequestPropertyTypeNarrowed",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-0"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "RequestPropertyTypeWidened",
+      "typeSpecKind": "RequestPropertyTypeWidened",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-1"
+      ]
+    }
+  ],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-4e0128d98b3b509d",
+      "affectedPrs": [
+        46371
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-2",
+          "detail": "specification/monitor/resource-manager/Microsoft.Insights/Insights: Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-3",
+          "detail": "specification/playwrighttesting/PlaywrightTesting.Management: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-4",
+          "detail": "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights: Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-5",
+          "detail": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-6",
+          "detail": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-7",
+          "detail": "Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-8",
+          "detail": "Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-9",
+          "detail": "Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-reciprocal-narrowed-widened-pair-b9759cfa02082cf1",
+      "affectedPrs": [
+        46371
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [
+        "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-0",
+        "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-1"
+      ],
+      "category": "reciprocal-narrowed-widened-pair",
+      "conclusion": "likely-detector-defect",
+      "confidence": "high",
+      "rationale": "The same target and version pair was reported as both narrowed and widened in one comparison.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-0",
+          "detail": "RequestPropertyTypeNarrowed: Request union at body.properties.tags removed variant TypeSpec.Record."
+        },
+        {
+          "kind": "typespec-finding",
+          "id": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-1",
+          "detail": "RequestPropertyTypeWidened: Request union at body.properties.tags added variant TypeSpec.Record."
+        }
+      ],
+      "aggregateImpact": "Inflates TypeSpec-only Phase A totals by two findings.",
+      "suggestedFix": "Review structural type identity and deduplicate reciprocal change reports.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-71355dc6ffa57951",
+      "affectedPrs": [
+        46371
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [
+        "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-0"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-0",
+          "detail": "RequestPropertyTypeNarrowed: Request union at body.properties.tags removed variant TypeSpec.Record."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-bd419427bbf21bbb",
+      "affectedPrs": [
+        46371
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [
+        "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-1"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight:tsp-A-1",
+          "detail": "RequestPropertyTypeWidened: Request union at body.properties.tags added variant TypeSpec.Record."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n",
+    "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n",
+    "specification/monitor/resource-manager/Microsoft.Insights/Insights: Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n",
+    "specification/playwrighttesting/PlaywrightTesting.Management: Analysis failed: Cannot read properties of undefined (reading 'get')\n; Analysis failed: Cannot read properties of undefined (reading 'get')\n",
+    "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights: Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (3b386d94c8a520fb6bb626b8e667e0b69a9df96a): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "7824998e1b7e926ce3b09b39fc376742b726a028",
+    "analyzerArtifactDigest": "fd27cd230327eead1921152fc701f7b9b3582ba8b15e1e5600390d6a65a5764f",
+    "prHeadSha": "c773c23d5ec6c65244d5554ab808054cf58cbc28",
+    "prBaseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 7824998e1b7e926ce3b09b39fc376742b726a028 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'fd27cd230327eead1921152fc701f7b9b3582ba8b15e1e5600390d6a65a5764f') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 3b386d94c8a520fb6bb626b8e667e0b69a9df96a c773c23d5ec6c65244d5554ab808054cf58cbc28\ngit -C target checkout --detach c773c23d5ec6c65244d5554ab808054cf58cbc28\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46371' --tool-revision 7824998e1b7e926ce3b09b39fc376742b726a028 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule",
+        "project": "specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-computeschedule-resource-manager-Microsoft.ComputeSchedule-ComputeSchedule-phase-a.json' --markdown-output '../specification-computeschedule-resource-manager-Microsoft.ComputeSchedule-ComputeSchedule-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/computeschedule/resource-manager/Microsoft.ComputeSchedule/ComputeSchedule' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-computeschedule-resource-manager-Microsoft.ComputeSchedule-ComputeSchedule-phase-b-evidence.json' --markdown-output '../specification-computeschedule-resource-manager-Microsoft.ComputeSchedule-ComputeSchedule-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry",
+        "project": "specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-containerregistry-resource-manager-Microsoft.ContainerRegistry-Registry-phase-a.json' --markdown-output '../specification-containerregistry-resource-manager-Microsoft.ContainerRegistry-Registry-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/Registry' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-containerregistry-resource-manager-Microsoft.ContainerRegistry-Registry-phase-b-evidence.json' --markdown-output '../specification-containerregistry-resource-manager-Microsoft.ContainerRegistry-Registry-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure",
+        "project": "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-devopsinfrastructure-resource-manager-Microsoft.DevOpsInfrastructure-DevOpsInfrastructure-phase-a.json' --markdown-output '../specification-devopsinfrastructure-resource-manager-Microsoft.DevOpsInfrastructure-DevOpsInfrastructure-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-devopsinfrastructure-resource-manager-Microsoft.DevOpsInfrastructure-DevOpsInfrastructure-phase-b-evidence.json' --markdown-output '../specification-devopsinfrastructure-resource-manager-Microsoft.DevOpsInfrastructure-DevOpsInfrastructure-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight",
+        "project": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-hdinsight-resource-manager-Microsoft.HDInsight-HDInsight-phase-a.json' --markdown-output '../specification-hdinsight-resource-manager-Microsoft.HDInsight-HDInsight-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-hdinsight-resource-manager-Microsoft.HDInsight-HDInsight-phase-b-evidence.json' --markdown-output '../specification-hdinsight-resource-manager-Microsoft.HDInsight-HDInsight-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices",
+        "project": "specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-healthdataaiservices-resource-manager-Microsoft.HealthDataAIServices-HealthDataAIServices-phase-a.json' --markdown-output '../specification-healthdataaiservices-resource-manager-Microsoft.HealthDataAIServices-HealthDataAIServices-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/healthdataaiservices/resource-manager/Microsoft.HealthDataAIServices/HealthDataAIServices' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-healthdataaiservices-resource-manager-Microsoft.HealthDataAIServices-HealthDataAIServices-phase-b-evidence.json' --markdown-output '../specification-healthdataaiservices-resource-manager-Microsoft.HealthDataAIServices-HealthDataAIServices-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations",
+        "project": "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-iotoperations-resource-manager-Microsoft.IoTOperations-IoTOperations-phase-a.json' --markdown-output '../specification-iotoperations-resource-manager-Microsoft.IoTOperations-IoTOperations-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-iotoperations-resource-manager-Microsoft.IoTOperations-IoTOperations-phase-b-evidence.json' --markdown-output '../specification-iotoperations-resource-manager-Microsoft.IoTOperations-IoTOperations-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster",
+        "project": "specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-mongocluster-resource-manager-Microsoft.DocumentDB-MongoCluster-phase-a.json' --markdown-output '../specification-mongocluster-resource-manager-Microsoft.DocumentDB-MongoCluster-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/mongocluster/resource-manager/Microsoft.DocumentDB/MongoCluster' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-mongocluster-resource-manager-Microsoft.DocumentDB-MongoCluster-phase-b-evidence.json' --markdown-output '../specification-mongocluster-resource-manager-Microsoft.DocumentDB-MongoCluster-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/monitor/resource-manager/Microsoft.Insights/Insights",
+        "project": "specification/monitor/resource-manager/Microsoft.Insights/Insights",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/monitor/resource-manager/Microsoft.Insights/Insights' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-monitor-resource-manager-Microsoft.Insights-Insights-phase-a.json' --markdown-output '../specification-monitor-resource-manager-Microsoft.Insights-Insights-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/monitor/resource-manager/Microsoft.Insights/Insights' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-monitor-resource-manager-Microsoft.Insights-Insights-phase-b-evidence.json' --markdown-output '../specification-monitor-resource-manager-Microsoft.Insights-Insights-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/netapp/resource-manager/Microsoft.NetApp/NetApp",
+        "project": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/netapp/resource-manager/Microsoft.NetApp/NetApp' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-netapp-resource-manager-Microsoft.NetApp-NetApp-phase-a.json' --markdown-output '../specification-netapp-resource-manager-Microsoft.NetApp-NetApp-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/netapp/resource-manager/Microsoft.NetApp/NetApp' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-netapp-resource-manager-Microsoft.NetApp-NetApp-phase-b-evidence.json' --markdown-output '../specification-netapp-resource-manager-Microsoft.NetApp-NetApp-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/playwrighttesting/PlaywrightTesting.Management",
+        "project": "specification/playwrighttesting/PlaywrightTesting.Management",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/playwrighttesting/PlaywrightTesting.Management' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-playwrighttesting-PlaywrightTesting.Management-phase-a.json' --markdown-output '../specification-playwrighttesting-PlaywrightTesting.Management-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/playwrighttesting/PlaywrightTesting.Management' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-playwrighttesting-PlaywrightTesting.Management-phase-b-evidence.json' --markdown-output '../specification-playwrighttesting-PlaywrightTesting.Management-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights",
+        "project": "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-policyinsights-resource-manager-Microsoft.PolicyInsights-PolicyInsights-phase-a.json' --markdown-output '../specification-policyinsights-resource-manager-Microsoft.PolicyInsights-PolicyInsights-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-policyinsights-resource-manager-Microsoft.PolicyInsights-PolicyInsights-phase-b-evidence.json' --markdown-output '../specification-policyinsights-resource-manager-Microsoft.PolicyInsights-PolicyInsights-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup",
+        "project": "specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-recoveryservicesbackup-resource-manager-Microsoft.RecoveryServices-RecoveryServicesBackup-phase-a.json' --markdown-output '../specification-recoveryservicesbackup-resource-manager-Microsoft.RecoveryServices-RecoveryServicesBackup-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/recoveryservicesbackup/resource-manager/Microsoft.RecoveryServices/RecoveryServicesBackup' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-recoveryservicesbackup-resource-manager-Microsoft.RecoveryServices-RecoveryServicesBackup-phase-b-evidence.json' --markdown-output '../specification-recoveryservicesbackup-resource-manager-Microsoft.RecoveryServices-RecoveryServicesBackup-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/relay/resource-manager/Microsoft.Relay/Relay",
+        "project": "specification/relay/resource-manager/Microsoft.Relay/Relay",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/relay/resource-manager/Microsoft.Relay/Relay' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-relay-resource-manager-Microsoft.Relay-Relay-phase-a.json' --markdown-output '../specification-relay-resource-manager-Microsoft.Relay-Relay-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/relay/resource-manager/Microsoft.Relay/Relay' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-relay-resource-manager-Microsoft.Relay-Relay-phase-b-evidence.json' --markdown-output '../specification-relay-resource-manager-Microsoft.Relay-Relay-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking",
+        "project": "specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-servicenetworking-resource-manager-Microsoft.ServiceNetworking-ServiceNetworking-phase-a.json' --markdown-output '../specification-servicenetworking-resource-manager-Microsoft.ServiceNetworking-ServiceNetworking-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/servicenetworking/resource-manager/Microsoft.ServiceNetworking/ServiceNetworking' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-servicenetworking-resource-manager-Microsoft.ServiceNetworking-ServiceNetworking-phase-b-evidence.json' --markdown-output '../specification-servicenetworking-resource-manager-Microsoft.ServiceNetworking-ServiceNetworking-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine",
+        "project": "specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-sqlvirtualmachine-resource-manager-Microsoft.SqlVirtualMachine-SqlVirtualMachine-phase-a.json' --markdown-output '../specification-sqlvirtualmachine-resource-manager-Microsoft.SqlVirtualMachine-SqlVirtualMachine-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/sqlvirtualmachine/resource-manager/Microsoft.SqlVirtualMachine/SqlVirtualMachine' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-sqlvirtualmachine-resource-manager-Microsoft.SqlVirtualMachine-SqlVirtualMachine-phase-b-evidence.json' --markdown-output '../specification-sqlvirtualmachine-resource-manager-Microsoft.SqlVirtualMachine-SqlVirtualMachine-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool",
+        "project": "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-standbypool-resource-manager-Microsoft.StandbyPool-StandbyPool-phase-a.json' --markdown-output '../specification-standbypool-resource-manager-Microsoft.StandbyPool-StandbyPool-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-standbypool-resource-manager-Microsoft.StandbyPool-StandbyPool-phase-b-evidence.json' --markdown-output '../specification-standbypool-resource-manager-Microsoft.StandbyPool-StandbyPool-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/storage/resource-manager/Microsoft.Storage/Storage",
+        "project": "specification/storage/resource-manager/Microsoft.Storage/Storage",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/storage/resource-manager/Microsoft.Storage/Storage' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --phase same-version --json-output '../specification-storage-resource-manager-Microsoft.Storage-Storage-phase-a.json' --markdown-output '../specification-storage-resource-manager-Microsoft.Storage-Storage-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/storage/resource-manager/Microsoft.Storage/Storage' --base-ref 3b386d94c8a520fb6bb626b8e667e0b69a9df96a --json-output '../specification-storage-resource-manager-Microsoft.Storage-Storage-phase-b-evidence.json' --markdown-output '../specification-storage-resource-manager-Microsoft.Storage-Storage-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "specPaths": [
+    "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 11
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 11,
+    "versionComparisons": [
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2024-02-01-preview",
+        "headVersion": "2024-02-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2024-05-01-preview",
+        "headVersion": "2024-05-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2024-08-01-preview",
+        "headVersion": "2024-08-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2024-10-01-preview",
+        "headVersion": "2024-10-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2025-02-01-preview",
+        "headVersion": "2025-02-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2025-04-01-preview",
+        "headVersion": "2025-04-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2025-09-01-preview",
+        "headVersion": "2025-09-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2026-02-01-preview",
+        "headVersion": "2026-02-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2026-04-01-preview",
+        "headVersion": "2026-04-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "AzureStackHCI",
+        "baseVersion": "2026-07-01-preview",
+        "headVersion": "2026-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 11383,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 7221,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 18615
+  }
+}

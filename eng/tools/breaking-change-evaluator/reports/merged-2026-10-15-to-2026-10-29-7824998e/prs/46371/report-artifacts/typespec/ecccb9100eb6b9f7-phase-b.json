@@ -1,0 +1,54 @@
+{
+  "specPaths": [
+    "specification/relay/resource-manager/Microsoft.Relay/Relay"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3,
+    "versionComparisons": [
+      {
+        "serviceName": "Relay",
+        "baseVersion": "2024-01-01",
+        "headVersion": "2024-01-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Relay",
+        "baseVersion": "2026-01-01",
+        "headVersion": "2026-01-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Relay",
+        "baseVersion": "2026-07-01-preview",
+        "headVersion": "2026-07-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 2244,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 911,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 3160
+  }
+}

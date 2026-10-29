@@ -1,0 +1,68 @@
+{
+  "specPaths": [
+    "specification/storage/resource-manager/Microsoft.Storage/Storage"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5,
+    "versionComparisons": [
+      {
+        "serviceName": "Storage",
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Storage",
+        "baseVersion": "2025-08-01",
+        "headVersion": "2025-08-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Storage",
+        "baseVersion": "2026-04-01",
+        "headVersion": "2026-04-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Storage",
+        "baseVersion": "2026-06-01",
+        "headVersion": "2026-06-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Storage",
+        "baseVersion": "2026-09-01",
+        "headVersion": "2026-09-01",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 6141,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 5841,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 11988
+  }
+}

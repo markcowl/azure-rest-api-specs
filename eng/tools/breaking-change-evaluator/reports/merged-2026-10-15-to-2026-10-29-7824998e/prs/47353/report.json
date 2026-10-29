@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "reportId": "merged-2026-10-15-to-2026-10-29-7824998e:pr-47353:4eb328eff5289fee1473ed0e461e927f4761ee3d"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47353,
+    "title": "Make Scheduled Events Acknowledge Error Details Classes Public",
+    "author": "ArthurMa1978",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47353",
+    "baseBranch": "main",
+    "headBranch": "mgmt-maintenance-spec",
+    "baseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4",
+    "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+    "mergedAt": "2026-10-19T02:38:10Z",
+    "changedTypeSpecFiles": [
+      "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47353",
+      "state": "closed",
+      "merged": true,
+      "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+      "baseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4",
+      "runs": {
+        "A": {
+          "id": 38873435512,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38873435512",
+          "logDigest": "f6c4d8d498f5f6cdb9d9fa9cba92903eeea47136e593e4d4347eb668d7a33ea8",
+          "summaryDigest": "d08f5c6f5c21ff8864f6ef65e1972d357ba4501bb257a9db84d0b8e69a2e3e01"
+        },
+        "B": {
+          "id": 38873435868,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38873435868",
+          "logDigest": "4315f07582c3aee2531b253638b1f677af3291c381e2ccba507468fc3b91ebf8",
+          "summaryDigest": "ce53bc7234ba3a3b5bf4c55d78fc29ae4ed4aa6e1ccd4023614e503d488a27b7"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47353",
+      "headSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+      "baseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "7824998e1b7e926ce3b09b39fc376742b726a028",
+      "artifactDigest": "fd27cd230327eead1921152fc701f7b9b3582ba8b15e1e5600390d6a65a5764f"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/ab18f7ce3900ff4f-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/ab18f7ce3900ff4f-phase-a.md",
+          "jsonDigest": "1727ad51289a2aa694bd85983f55c544eb637f65dd3ce26d941383616d02cd03",
+          "markdownDigest": "4e37222e9c534fbd2b9ef548be1a742217d408f074caa6cb4839cec30e98f1ad",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1411,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 569,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 1986
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "Maintenance",
+              "baseVersion": "2023-10-01-preview",
+              "headVersion": "2023-10-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Maintenance",
+              "baseVersion": "2025-10-01-preview",
+              "headVersion": "2025-10-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/ab18f7ce3900ff4f-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/ab18f7ce3900ff4f-phase-b.md",
+          "jsonDigest": "7c16b4e0facb94b4ee9f00970949c297c2b41cdfa477a050f8359c8361956f66",
+          "markdownDigest": "92ad8fc9cf864a17c763fefbf2696ede9461790f5f3587ddf1161ab6067cebed",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1441,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 539,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 1985
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "9f5817c5cb786d140fd58846c56eb90e50648749cf335972fe6e812819b5f0ca",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "Maintenance",
+          "baseVersion": "2023-10-01-preview",
+          "headVersion": "2023-10-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Maintenance",
+          "baseVersion": "2025-10-01-preview",
+          "headVersion": "2025-10-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-525c5ccb0c2c625a",
+      "affectedPrs": [
+        47353
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-54270ff71d5f847a",
+      "affectedPrs": [
+        47353
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "7824998e1b7e926ce3b09b39fc376742b726a028",
+    "analyzerArtifactDigest": "fd27cd230327eead1921152fc701f7b9b3582ba8b15e1e5600390d6a65a5764f",
+    "prHeadSha": "4eb328eff5289fee1473ed0e461e927f4761ee3d",
+    "prBaseSha": "f0be0c6db7e284b9f38d4e115ec466946db5d9f4",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 7824998e1b7e926ce3b09b39fc376742b726a028 | ConvertFrom-Json\nif ($prepared.artifactDigest -ne 'fd27cd230327eead1921152fc701f7b9b3582ba8b15e1e5600390d6a65a5764f') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin f0be0c6db7e284b9f38d4e115ec466946db5d9f4 4eb328eff5289fee1473ed0e461e927f4761ee3d\ngit -C target checkout --detach 4eb328eff5289fee1473ed0e461e927f4761ee3d\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47353' --tool-revision 7824998e1b7e926ce3b09b39fc376742b726a028 --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance",
+        "project": "specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance' --base-ref f0be0c6db7e284b9f38d4e115ec466946db5d9f4 --phase same-version --json-output '../specification-maintenance-resource-manager-Microsoft.Maintenance-Maintenance-phase-a.json' --markdown-output '../specification-maintenance-resource-manager-Microsoft.Maintenance-Maintenance-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/maintenance/resource-manager/Microsoft.Maintenance/Maintenance' --base-ref f0be0c6db7e284b9f38d4e115ec466946db5d9f4 --json-output '../specification-maintenance-resource-manager-Microsoft.Maintenance-Maintenance-phase-b-evidence.json' --markdown-output '../specification-maintenance-resource-manager-Microsoft.Maintenance-Maintenance-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

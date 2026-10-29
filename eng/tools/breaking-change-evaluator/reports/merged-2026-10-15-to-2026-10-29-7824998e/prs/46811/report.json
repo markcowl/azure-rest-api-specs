@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "reportId": "merged-2026-10-15-to-2026-10-29-7824998e:pr-46811:d63dfe25dad4d9123e95c8d5c2d7941cd2651b92"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46811,
+    "title": "Review request for Microsoft.ContainerService/aks to add version stable/2026-08-01 and preview/2026-08-02-preview",
+    "author": "FumingZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46811",
+    "baseBranch": "main",
+    "headBranch": "dev-containerservice-Microsoft.ContainerService-2026-08",
+    "baseSha": "fd7acf72fc1d90922ef0536a06863c414328824f",
+    "headSha": "d63dfe25dad4d9123e95c8d5c2d7941cd2651b92",
+    "mergedAt": "2026-10-16T10:22:09Z",
+    "changedTypeSpecFiles": [
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentFabricMembership.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPool.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPoolModels.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPoolUpgradeProfile.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AlertConfiguration.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/CommonModels.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/FlexNodeBootstrap.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/GuardrailsAvailableVersion.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/IdentityBinding.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/JWTAuthenticator.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/LoadBalancer.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/LocationRoutes.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/Machine.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MaintenanceConfiguration.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MaintenanceWindow.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedCluster.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedClusterSnapshot.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedClusterUpgradeProfile.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MeshMembership.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/SafeguardsAvailableVersion.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/UpgradeInsight.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/VmSkus.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/main.tsp",
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46811",
+      "state": "closed",
+      "merged": true,
+      "headSha": "d63dfe25dad4d9123e95c8d5c2d7941cd2651b92",
+      "baseSha": "fd7acf72fc1d90922ef0536a06863c414328824f",
+      "runs": {
+        "A": {
+          "id": 38672000593,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "d63dfe25dad4d9123e95c8d5c2d7941cd2651b92",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38672000593",
+          "logDigest": "75e90bf2adb0a6795e7452ffb0793bd476e8592e8562811f1167d3aceab72656",
+          "summaryDigest": "dc2302a8efd8ae74d348f3d30f2087face76efc00d850078d5a860b2e52a7178"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentFabricMembership.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPool.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPoolModels.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AgentPoolUpgradeProfile.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/AlertConfiguration.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/CommonModels.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/FlexNodeBootstrap.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/GuardrailsAvailableVersion.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/IdentityBinding.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/JWTAuthenticator.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/LoadBalancer.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/LocationRoutes.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/Machine.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MaintenanceConfiguration.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MaintenanceWindow.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedCluster.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedClusterSnapshot.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/ManagedClusterUpgradeProfile.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/MeshMembership.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/SafeguardsAvailableVersion.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/UpgradeInsight.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/VmSkus.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/main.tsp",
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/tspconfig.yaml"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46811",
+      "headSha": "d63dfe25dad4d9123e95c8d5c2d7941cd2651b92",
+      "baseSha": "fd7acf72fc1d90922ef0536a06863c414328824f"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-c89309a49db5412c",
+      "affectedPrs": [
+        46811
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

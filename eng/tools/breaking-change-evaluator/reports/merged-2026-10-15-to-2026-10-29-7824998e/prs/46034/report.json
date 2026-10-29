@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "reportId": "merged-2026-10-15-to-2026-10-29-7824998e:pr-46034:abf586ee7b47f5fff71c131f4d09895dec1ce94a"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46034,
+    "title": "[Microsoft.ProviderHub] Add 2026-09-01-preview API version",
+    "author": "gerardoglzb",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46034",
+    "baseBranch": "main",
+    "headBranch": "feature/providerhub-2026-09-01-preview",
+    "baseSha": "a058c0286266319c95c58d04a37b8b96f324461e",
+    "headSha": "abf586ee7b47f5fff71c131f4d09895dec1ce94a",
+    "mergedAt": "2026-10-16T19:05:21Z",
+    "changedTypeSpecFiles": [
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/EndpointRegistration.tsp",
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/client.tsp",
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/main.tsp",
+      "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46034",
+      "state": "closed",
+      "merged": true,
+      "headSha": "abf586ee7b47f5fff71c131f4d09895dec1ce94a",
+      "baseSha": "a058c0286266319c95c58d04a37b8b96f324461e",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/EndpointRegistration.tsp",
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/client.tsp",
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/main.tsp",
+        "specification/providerhub/resource-manager/Microsoft.ProviderHub/ProviderHub/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46034",
+      "headSha": "abf586ee7b47f5fff71c131f4d09895dec1ce94a",
+      "baseSha": "a058c0286266319c95c58d04a37b8b96f324461e"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-430c8dcec21415f9",
+      "affectedPrs": [
+        46034
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

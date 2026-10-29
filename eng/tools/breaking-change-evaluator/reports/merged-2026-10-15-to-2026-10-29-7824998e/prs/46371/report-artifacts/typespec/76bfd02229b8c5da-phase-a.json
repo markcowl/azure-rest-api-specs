@@ -1,0 +1,139 @@
+{
+  "specPaths": [
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 15
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 15,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2025-08-01",
+        "headVersion": "2025-08-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2025-09-01",
+        "headVersion": "2025-09-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2025-12-01",
+        "headVersion": "2025-12-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2025-12-15-preview",
+        "headVersion": "2025-12-15-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-01-01",
+        "headVersion": "2026-01-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-01-15-preview",
+        "headVersion": "2026-01-15-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-03-01",
+        "headVersion": "2026-03-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-03-15-preview",
+        "headVersion": "2026-03-15-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-04-01",
+        "headVersion": "2026-04-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-04-15-preview",
+        "headVersion": "2026-04-15-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-05-01",
+        "headVersion": "2026-05-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-05-15-preview",
+        "headVersion": "2026-05-15-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-06-01",
+        "headVersion": "2026-06-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "NetApp",
+        "baseVersion": "2026-06-15-preview",
+        "headVersion": "2026-06-15-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 21618,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 16494,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 38118
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-7824998e",
+    "reportId": "merged-2026-10-15-to-2026-10-29-7824998e:pr-47338:2abd1a09ab3c6e43370995af969d773d2879e3f9"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47338,
+    "title": "[Commvault] Add 2026-10-15-preview API",
+    "author": "saurabh-jaiswal-333",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47338",
+    "baseBranch": "main",
+    "headBranch": "saurabh-jaiswal-333-commvault/api-2026-10-15-preview",
+    "baseSha": "d218330c5a3b727df9504ba852e97259479e8fef",
+    "headSha": "2abd1a09ab3c6e43370995af969d773d2879e3f9",
+    "mergedAt": "2026-10-16T14:41:08Z",
+    "changedTypeSpecFiles": [
+      "specification/liftrcommvault/Commvault.ContentStore.Management/client.tsp",
+      "specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47338",
+      "state": "closed",
+      "merged": true,
+      "headSha": "2abd1a09ab3c6e43370995af969d773d2879e3f9",
+      "baseSha": "d218330c5a3b727df9504ba852e97259479e8fef",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/liftrcommvault/Commvault.ContentStore.Management/client.tsp",
+        "specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47338",
+      "headSha": "2abd1a09ab3c6e43370995af969d773d2879e3f9",
+      "baseSha": "d218330c5a3b727df9504ba852e97259479e8fef"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-c5f6276b474cb84c",
+      "affectedPrs": [
+        47338
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

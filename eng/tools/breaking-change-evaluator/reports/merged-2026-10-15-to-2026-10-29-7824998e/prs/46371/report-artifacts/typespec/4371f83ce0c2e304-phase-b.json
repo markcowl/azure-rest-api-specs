@@ -1,0 +1,75 @@
+{
+  "specPaths": [
+    "specification/standbypool/resource-manager/Microsoft.StandbyPool/StandbyPool"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 6
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 6,
+    "versionComparisons": [
+      {
+        "serviceName": "StandbyPool",
+        "baseVersion": "2023-12-01-preview",
+        "headVersion": "2023-12-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "StandbyPool",
+        "baseVersion": "2024-03-01-preview",
+        "headVersion": "2024-03-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "StandbyPool",
+        "baseVersion": "2024-03-01",
+        "headVersion": "2024-03-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "StandbyPool",
+        "baseVersion": "2025-03-01",
+        "headVersion": "2025-03-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "StandbyPool",
+        "baseVersion": "2025-10-01",
+        "headVersion": "2025-10-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "StandbyPool",
+        "baseVersion": "2026-04-01",
+        "headVersion": "2026-04-01",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 4208,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 1150,
+    "classifyMs": 1,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 5367
+  }
+}
