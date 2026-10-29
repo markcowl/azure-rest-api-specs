@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-64550a56",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-64550a56",
+    "reportId": "merged-2026-10-15-to-2026-10-29-64550a56:pr-45468:75a289049e60db2733dc21cf0718d6fd481dc1ce"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 45468,
+    "title": "Add DPP Cross-Tenant Restore (CTR) feature - API version 2026-08-31-preview",
+    "author": "zubairabid",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/45468",
+    "baseBranch": "main",
+    "headBranch": "users/zubair/ctr-dpp",
+    "baseSha": "f9e4d576ed3f68246d1b35d699bc9387a34589c6",
+    "headSha": "75a289049e60db2733dc21cf0718d6fd481dc1ce",
+    "mergedAt": "2026-10-15T16:52:21Z",
+    "changedTypeSpecFiles": [
+      "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/CrossTenantVaultMappingResource.tsp",
+      "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/client.tsp",
+      "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/main.tsp",
+      "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/45468",
+      "state": "closed",
+      "merged": true,
+      "headSha": "75a289049e60db2733dc21cf0718d6fd481dc1ce",
+      "baseSha": "f9e4d576ed3f68246d1b35d699bc9387a34589c6",
+      "runs": {
+        "A": {
+          "id": 37431178135,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "75a289049e60db2733dc21cf0718d6fd481dc1ce",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/37431178135",
+          "logDigest": "b285a62d9aa6518fc5eed2f9633aaf52674a83c5577d7c63d9c6c6dfc30749b2",
+          "summaryDigest": "bc5050a65178c4768fc56a3e15c38c0b80685a630bc0825ae17338c3efa414b2"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/CrossTenantVaultMappingResource.tsp",
+        "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/client.tsp",
+        "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/main.tsp",
+        "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/models.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary occurrence counts are lower than the complete OAD log findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/45468",
+      "headSha": "75a289049e60db2733dc21cf0718d6fd481dc1ce",
+      "baseSha": "f9e4d576ed3f68246d1b35d699bc9387a34589c6"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-f8d8360d9ebce213",
+      "affectedPrs": [
+        45468
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "invalid-oad-output",
+          "detail": "invalid-oad-output"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "Job summary occurrence counts are lower than the complete OAD log findings"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

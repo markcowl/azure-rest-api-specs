@@ -1,0 +1,649 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-64550a56",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-64550a56",
+    "reportId": "merged-2026-10-15-to-2026-10-29-64550a56:pr-47084:ff10e727430bc1694151d6f5fe54cecd7c10cb68"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47084,
+    "title": "[AzureStackHCI] Add StackHCIVM 2026-07-01-preview API version",
+    "author": "vishal-kadam",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47084",
+    "baseBranch": "main",
+    "headBranch": "azurestackhci-stackhcivm-2026-07-01-preview",
+    "baseSha": "dfc14ebb8c03f7875f8c7622dabb1e900ac21e70",
+    "headSha": "ff10e727430bc1694151d6f5fe54cecd7c10cb68",
+    "mergedAt": "2026-10-15T16:26:47Z",
+    "changedTypeSpecFiles": [
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/main.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47084",
+      "state": "closed",
+      "merged": true,
+      "headSha": "ff10e727430bc1694151d6f5fe54cecd7c10cb68",
+      "baseSha": "dfc14ebb8c03f7875f8c7622dabb1e900ac21e70",
+      "runs": {
+        "A": {
+          "id": 38415300292,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "ff10e727430bc1694151d6f5fe54cecd7c10cb68",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+          "logDigest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587",
+          "summaryDigest": "325ddcdaeda7bc2a06d85721bf49b2a8e6f85da202f02198021f9291c89720c1"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/main.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/models.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary claims no findings but workflow logs contain OAD findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47084",
+      "headSha": "ff10e727430bc1694151d6f5fe54cecd7c10cb68",
+      "baseSha": "dfc14ebb8c03f7875f8c7622dabb1e900ac21e70"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-07-01-preview/virtualMachineInstances.json",
+        "oldVersion": "2023-07-01-preview",
+        "newVersion": "2023-07-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-07-01-preview/virtualMachineInstances.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-07-01-preview/virtualMachineInstances.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-07-01-preview/virtualMachineInstances.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-07-01-preview/virtualMachineInstances.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-09-01-preview/virtualMachineInstances.json",
+        "oldVersion": "2023-09-01-preview",
+        "newVersion": "2023-09-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-09-01-preview/virtualMachineInstances.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-09-01-preview/virtualMachineInstances.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-09-01-preview/virtualMachineInstances.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2023-09-01-preview/virtualMachineInstances.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-02-01-preview/stackhcivm.json",
+        "oldVersion": "2024-02-01-preview",
+        "newVersion": "2024-02-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-02-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-02-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-02-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-02-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-05-01-preview/stackhcivm.json",
+        "oldVersion": "2024-05-01-preview",
+        "newVersion": "2024-05-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-05-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-05-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-05-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-05-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-08-01-preview/stackhcivm.json",
+        "oldVersion": "2024-08-01-preview",
+        "newVersion": "2024-08-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-08-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-08-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-08-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-08-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-5",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-10-01-preview/stackhcivm.json",
+        "oldVersion": "2024-10-01-preview",
+        "newVersion": "2024-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-10-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-10-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-10-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2024-10-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-6",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-02-01-preview/stackhcivm.json",
+        "oldVersion": "2025-02-01-preview",
+        "newVersion": "2025-02-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-02-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-02-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-02-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-02-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-7",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-04-01-preview/stackhcivm.json",
+        "oldVersion": "2025-04-01-preview",
+        "newVersion": "2025-04-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-04-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-04-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-04-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-04-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-8",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-06-01-preview/stackhcivm.json",
+        "oldVersion": "2025-06-01-preview",
+        "newVersion": "2025-06-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-06-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-06-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-06-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-06-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-9",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-09-01-preview/stackhcivm.json",
+        "oldVersion": "2025-09-01-preview",
+        "newVersion": "2025-09-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-09-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-09-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-09-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2025-09-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-10",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-02-01-preview/stackhcivm.json",
+        "oldVersion": "2026-02-01-preview",
+        "newVersion": "2026-02-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-02-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-02-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-02-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-02-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-11",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-04-01-preview/stackhcivm.json",
+        "oldVersion": "2026-04-01-preview",
+        "newVersion": "2026-04-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-04-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-04-01-preview/stackhcivm.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-04-01-preview/stackhcivm.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/preview/2026-04-01-preview/stackhcivm.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-12",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/stable/2024-01-01/virtualMachineInstances.json",
+        "oldVersion": "2024-01-01",
+        "newVersion": "2024-01-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38415300292",
+        "digest": "21d6272730ac0d35a51ce933cada29620648bc6ca45d06e138b4d7e2f67fd587"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/stable/2024-01-01/virtualMachineInstances.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/dfc14ebb8c03f7875f8c7622dabb1e900ac21e70/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/stable/2024-01-01/virtualMachineInstances.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/stable/2024-01-01/virtualMachineInstances.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/ff10e727430bc1694151d6f5fe54cecd7c10cb68/specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCIVM/stable/2024-01-01/virtualMachineInstances.json#L1"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-00c5b1efb6bd66e3",
+      "affectedPrs": [
+        47084
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "invalid-oad-output",
+          "detail": "invalid-oad-output"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "Job summary claims no findings but workflow logs contain OAD findings"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-64550a56",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-64550a56",
+    "reportId": "merged-2026-10-15-to-2026-10-29-64550a56:pr-47284:884aefe117c0b7750c8f6b66e12187fc823bcc6b"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47284,
+    "title": "[Go] update client.tsp for customization",
+    "author": "kazrael2119",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47284",
+    "baseBranch": "main",
+    "headBranch": "update-go-custom",
+    "baseSha": "dc7218d2648d05079de45c616d940deded784a7d",
+    "headSha": "884aefe117c0b7750c8f6b66e12187fc823bcc6b",
+    "mergedAt": "2026-10-15T06:22:47Z",
+    "changedTypeSpecFiles": [
+      "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47284",
+      "state": "closed",
+      "merged": true,
+      "headSha": "884aefe117c0b7750c8f6b66e12187fc823bcc6b",
+      "baseSha": "dc7218d2648d05079de45c616d940deded784a7d",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47284",
+      "headSha": "884aefe117c0b7750c8f6b66e12187fc823bcc6b",
+      "baseSha": "dc7218d2648d05079de45c616d940deded784a7d"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-fe6f32f35604a577",
+      "affectedPrs": [
+        47284
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}
