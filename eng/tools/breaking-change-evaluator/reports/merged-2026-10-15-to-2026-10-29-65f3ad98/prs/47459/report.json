@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47459:d7d3695c93ff3b3f30739f2009ea8fbed0f1077d"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47459,
+    "title": "Add FIST 2026-10-01-preview API and latest CVE results",
+    "author": "jillianpenfield",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47459",
+    "baseBranch": "main",
+    "headBranch": "fist/2026-10-01-preview",
+    "baseSha": "9d29928794867148db0aed101144d14b2876e3a1",
+    "headSha": "d7d3695c93ff3b3f30739f2009ea8fbed0f1077d",
+    "mergedAt": "2026-10-21T18:36:38Z",
+    "changedTypeSpecFiles": [
+      "specification/fist/resource-manager/Microsoft.IoTFirmwareDefense/IoTFirmwareDefense/LatestCveResource.tsp",
+      "specification/fist/resource-manager/Microsoft.IoTFirmwareDefense/IoTFirmwareDefense/main.tsp",
+      "specification/fist/resource-manager/Microsoft.IoTFirmwareDefense/IoTFirmwareDefense/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47459",
+      "state": "closed",
+      "merged": true,
+      "headSha": "d7d3695c93ff3b3f30739f2009ea8fbed0f1077d",
+      "baseSha": "9d29928794867148db0aed101144d14b2876e3a1",
+      "runs": {
+        "A": {
+          "id": 39468111743,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "d7d3695c93ff3b3f30739f2009ea8fbed0f1077d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39468111743",
+          "logDigest": "a268fd0fd492ceb13c30d112262722fd942c02655cc5eb95e0f1fe6d3080738a",
+          "summaryDigest": "27e237ae74091155c58cf85756bfc50b8f0f6697013460c9ced3babd4ff399db"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/fist/resource-manager/Microsoft.IoTFirmwareDefense/IoTFirmwareDefense/LatestCveResource.tsp",
+        "specification/fist/resource-manager/Microsoft.IoTFirmwareDefense/IoTFirmwareDefense/main.tsp",
+        "specification/fist/resource-manager/Microsoft.IoTFirmwareDefense/IoTFirmwareDefense/models.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary occurrence counts are lower than the complete OAD log findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47459",
+      "headSha": "d7d3695c93ff3b3f30739f2009ea8fbed0f1077d",
+      "baseSha": "9d29928794867148db0aed101144d14b2876e3a1"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-c15097bc5e66d7d1",
+      "affectedPrs": [
+        47459
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "invalid-oad-output",
+          "detail": "invalid-oad-output"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "Job summary occurrence counts are lower than the complete OAD log findings"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

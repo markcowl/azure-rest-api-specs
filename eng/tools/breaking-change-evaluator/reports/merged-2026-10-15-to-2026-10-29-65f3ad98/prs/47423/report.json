@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47423:aa4a5d58a43fb05c6b1c783a65e65508662ee2b4"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47423,
+    "title": "[Search] 2026-10-01 DP SDK Customizations",
+    "author": "efrainretana",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47423",
+    "baseBranch": "main",
+    "headBranch": "efrainretana/search-2026-10-01-ga",
+    "baseSha": "c642211ad79d01f37e7f0d0085ce70647e1a64f8",
+    "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+    "mergedAt": "2026-10-20T21:40:01Z",
+    "changedTypeSpecFiles": [
+      "specification/search/data-plane/Search/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47423",
+      "state": "closed",
+      "merged": true,
+      "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+      "baseSha": "c642211ad79d01f37e7f0d0085ce70647e1a64f8",
+      "runs": {
+        "A": {
+          "id": 39295336397,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39295336397",
+          "logDigest": "1ca198d9cd98c1554e3a3af4cdaa6cbc6f00ce73966cd1da303a9fa1c6d4926f",
+          "summaryDigest": "f12dd957fea769c341a2e264de1769641d81049c3f04af1ca3d24acf186ba345"
+        },
+        "B": {
+          "id": 39295336535,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39295336535",
+          "logDigest": "d40bf89b3a8b9fc11232e6f54bfcfd7ffcfba353cf82ff6cb17a5f056998a173",
+          "summaryDigest": "7cdd18bbe9381c1a6d402e1423a5847ef7d086a9269e92cee122595c318e2e3a"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/search/data-plane/Search/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47423",
+      "headSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+      "baseSha": "c642211ad79d01f37e7f0d0085ce70647e1a64f8"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/search/data-plane/Search",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/9795eaaf5a1dc5f2-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/9795eaaf5a1dc5f2-phase-a.md",
+          "error": "Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/9795eaaf5a1dc5f2-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/9795eaaf5a1dc5f2-phase-b.md",
+          "error": "Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n; Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-5f67f855d26e9f97",
+      "affectedPrs": [
+        47423
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/search/data-plane/Search: Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n; Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n; Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/search/data-plane/Search: Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n; Analysis failed: Failed to compile the base revision (c642211ad79d01f37e7f0d0085ce70647e1a64f8): 1 error(s) found:\n  <local-path>'union-extends' feature to be enabled. Add 'union-extends' to the 'features' list in your tspconfig.yaml.\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "aa4a5d58a43fb05c6b1c783a65e65508662ee2b4",
+    "prBaseSha": "c642211ad79d01f37e7f0d0085ce70647e1a64f8",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin c642211ad79d01f37e7f0d0085ce70647e1a64f8 aa4a5d58a43fb05c6b1c783a65e65508662ee2b4\ngit -C target checkout --detach aa4a5d58a43fb05c6b1c783a65e65508662ee2b4\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47423' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/search/data-plane/Search",
+        "project": "specification/search/data-plane/Search",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/search/data-plane/Search' --base-ref c642211ad79d01f37e7f0d0085ce70647e1a64f8 --phase same-version --json-output '../specification-search-data-plane-Search-phase-a.json' --markdown-output '../specification-search-data-plane-Search-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/search/data-plane/Search' --base-ref c642211ad79d01f37e7f0d0085ce70647e1a64f8 --json-output '../specification-search-data-plane-Search-phase-b-evidence.json' --markdown-output '../specification-search-data-plane-Search-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

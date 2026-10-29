@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47496:876d6affeb52e0a66d9bc660e18b1332c0240f33"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47496,
+    "title": "[HealthDataAIServices] Disable Python TypedDict generation for DeID data-plane SDK",
+    "author": "jovinson-ms",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47496",
+    "baseBranch": "main",
+    "headBranch": "deid-python-typeddict-opt-out",
+    "baseSha": "d57a3d026976ebfaba6ffcf8b0745e15f920407c",
+    "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+    "mergedAt": "2026-10-21T22:01:11Z",
+    "changedTypeSpecFiles": [
+      "specification/healthdataaiservices/data-plane/HealthDataAIServices/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47496",
+      "state": "closed",
+      "merged": true,
+      "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+      "baseSha": "d57a3d026976ebfaba6ffcf8b0745e15f920407c",
+      "runs": {
+        "A": {
+          "id": 39664124861,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39664124861",
+          "logDigest": "5090f1b7c1130e041024914e0f3b34294c68eb74588757bbf27f5f1b061171f4",
+          "summaryDigest": "d2d7af1a07fc6f1fe7bb31d28c5148d1b8a92a25db024920b21c9ba8b388466d"
+        },
+        "B": {
+          "id": 39664124972,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39664124972",
+          "logDigest": "2d25d2bd3aa95cbc0af4adf1cba20063b5a18b32161b81661901fca21cb99626",
+          "summaryDigest": "b3854089366a34aec1518de6b82062a6b78a38e4c6a2d842ebe1169b7c2e78c8"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/healthdataaiservices/data-plane/HealthDataAIServices/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47496",
+      "headSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+      "baseSha": "d57a3d026976ebfaba6ffcf8b0745e15f920407c"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/healthdataaiservices/data-plane/HealthDataAIServices",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/0add114a7e3d3a14-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/0add114a7e3d3a14-phase-a.md",
+          "jsonDigest": "1641b154ddc61363c173b5abbd80959b1fd329718c9c0ff2c3d427450aa2765d",
+          "markdownDigest": "776426152ff3bafbc1f7576878407c93df7aafef9b2424b76b5ee81ccc6b2fcf",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 254,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 137,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 394
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "DeidServices",
+              "baseVersion": "2024-11-15",
+              "headVersion": "2024-11-15",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DeidServices",
+              "baseVersion": "2025-07-15-preview",
+              "headVersion": "2025-07-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/0add114a7e3d3a14-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/0add114a7e3d3a14-phase-b.md",
+          "jsonDigest": "5564a291f10a362eb83f9b657ad85e67fdeee14970a69b7a792d11feb92aa366",
+          "markdownDigest": "f0d5b644df1a682eb5b8fe5313d6d5b0353b77696180f4e40de6089621f55317",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 269,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 170,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 442
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "c7a1114c733fd995ee672c9a95bc49638ec323c9c6612e4ab6e86fc561301222",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "DeidServices",
+          "baseVersion": "2024-11-15",
+          "headVersion": "2024-11-15",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DeidServices",
+          "baseVersion": "2025-07-15-preview",
+          "headVersion": "2025-07-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-162d7f4c8f8adf90",
+      "affectedPrs": [
+        47496
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-45f6792adb30ebb1",
+      "affectedPrs": [
+        47496
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "876d6affeb52e0a66d9bc660e18b1332c0240f33",
+    "prBaseSha": "d57a3d026976ebfaba6ffcf8b0745e15f920407c",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin d57a3d026976ebfaba6ffcf8b0745e15f920407c 876d6affeb52e0a66d9bc660e18b1332c0240f33\ngit -C target checkout --detach 876d6affeb52e0a66d9bc660e18b1332c0240f33\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47496' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/healthdataaiservices/data-plane/HealthDataAIServices",
+        "project": "specification/healthdataaiservices/data-plane/HealthDataAIServices",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/healthdataaiservices/data-plane/HealthDataAIServices' --base-ref d57a3d026976ebfaba6ffcf8b0745e15f920407c --phase same-version --json-output '../specification-healthdataaiservices-data-plane-HealthDataAIServices-phase-a.json' --markdown-output '../specification-healthdataaiservices-data-plane-HealthDataAIServices-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/healthdataaiservices/data-plane/HealthDataAIServices' --base-ref d57a3d026976ebfaba6ffcf8b0745e15f920407c --json-output '../specification-healthdataaiservices-data-plane-HealthDataAIServices-phase-b-evidence.json' --markdown-output '../specification-healthdataaiservices-data-plane-HealthDataAIServices-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

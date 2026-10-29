@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-46300:87cc92da24cd9010599da9911198fc9bd6d3ee01"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46300,
+    "title": "Add Microsoft.Cdn 2026-09-01-preview API version",
+    "author": "HandsomeJay",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46300",
+    "baseBranch": "main",
+    "headBranch": "release-microsoft-cdn-2026-09-01-preview",
+    "baseSha": "ae348cc71f54a61f5d17472052cfef279a23db6b",
+    "headSha": "87cc92da24cd9010599da9911198fc9bd6d3ee01",
+    "mergedAt": "2026-10-21T04:58:31Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/main.tsp",
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "invalid-oad-output"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46300",
+      "state": "closed",
+      "merged": true,
+      "headSha": "87cc92da24cd9010599da9911198fc9bd6d3ee01",
+      "baseSha": "ae348cc71f54a61f5d17472052cfef279a23db6b",
+      "runs": {
+        "A": {
+          "id": 39031949947,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "87cc92da24cd9010599da9911198fc9bd6d3ee01",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39031949947",
+          "logDigest": "9890307f606eb13a228b576e2811470415120dadbed27560c28fa36a5eb9bfb1",
+          "summaryDigest": "25ade77b3f5fbd8c285dfc7bd67e50d93b638b3f54da12cef749627d741dcad7"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/AuthPolicy.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/main.tsp",
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/models.tsp"
+      ],
+      "evidenceErrors": [
+        "Job summary occurrence counts are lower than the complete OAD log findings"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46300",
+      "headSha": "87cc92da24cd9010599da9911198fc9bd6d3ee01",
+      "baseSha": "ae348cc71f54a61f5d17472052cfef279a23db6b"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-cec3bdddaeee0def",
+      "affectedPrs": [
+        46300
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "invalid-oad-output",
+          "detail": "invalid-oad-output"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "Job summary occurrence counts are lower than the complete OAD log findings"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

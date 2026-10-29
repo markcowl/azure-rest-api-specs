@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-46450:2aa993096085d1096443b222df49dd42badc7b6b"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46450,
+    "title": "[NetAppFiles] Release Microsoft.NetApp 2026-08-01 and 2026-08-15-preview",
+    "author": "nandakus2",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46450",
+    "baseBranch": "main",
+    "headBranch": "release-Microsoft.NetApp-2026-08-01",
+    "baseSha": "b0dc05398a518ad54dd5cd5a2ff868e48bba7bd4",
+    "headSha": "2aa993096085d1096443b222df49dd42badc7b6b",
+    "mergedAt": "2026-10-20T14:55:40Z",
+    "changedTypeSpecFiles": [
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ActiveDirectory.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Bucket.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Cache.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/CapacityPool.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticAccount.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackup.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupPolicy.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupVault.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticCapacityPool.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticRegionInfoResource.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshot.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshotPolicy.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticVolume.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ClusterPeer.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalCache.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalCacheConnection.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalCluster.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalResourceEnums.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalSvm.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/SvmPeer.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/NetAppAccount.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Volume.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/main.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/models.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46450",
+      "state": "closed",
+      "merged": true,
+      "headSha": "2aa993096085d1096443b222df49dd42badc7b6b",
+      "baseSha": "b0dc05398a518ad54dd5cd5a2ff868e48bba7bd4",
+      "runs": {
+        "A": {
+          "id": 39299987615,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "2aa993096085d1096443b222df49dd42badc7b6b",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39299987615",
+          "logDigest": "299b8c37dba8432b8bf78222a3fe8874e7d88fbc04b3420472e3468e3284cf8e",
+          "summaryDigest": "023c3c709e4e1912e6181854abf92abd85d5abf868f86f8afab8275500984d3f"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ActiveDirectory.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Bucket.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Cache.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/CapacityPool.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticAccount.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackup.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupPolicy.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupVault.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticCapacityPool.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticRegionInfoResource.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshot.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshotPolicy.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticVolume.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ClusterPeer.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalCache.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalCacheConnection.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalCluster.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalResourceEnums.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/ExternalSvm.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ExternalResources/SvmPeer.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/NetAppAccount.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Volume.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/main.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/models.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46450",
+      "headSha": "2aa993096085d1096443b222df49dd42badc7b6b",
+      "baseSha": "b0dc05398a518ad54dd5cd5a2ff868e48bba7bd4"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-a7407d6c428d8244",
+      "affectedPrs": [
+        46450
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

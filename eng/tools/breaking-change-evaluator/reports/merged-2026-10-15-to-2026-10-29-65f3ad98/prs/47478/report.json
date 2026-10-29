@@ -1,0 +1,566 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47478:5a440faa4c91bbe5ec9eb2456181741a4f2a3ff0"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47478,
+    "title": "ANF -Preserve the released Java update APIs with these NetApp TypeSpec client.tsp customizations",
+    "author": "nandakus2",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47478",
+    "baseBranch": "main",
+    "headBranch": "fix/netapp-java-update-compat",
+    "baseSha": "225e9e606441aa3b48cbec26c4c02f54b32d16c3",
+    "headSha": "5a440faa4c91bbe5ec9eb2456181741a4f2a3ff0",
+    "mergedAt": "2026-10-21T06:10:28Z",
+    "changedTypeSpecFiles": [
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47478",
+      "state": "closed",
+      "merged": true,
+      "headSha": "5a440faa4c91bbe5ec9eb2456181741a4f2a3ff0",
+      "baseSha": "225e9e606441aa3b48cbec26c4c02f54b32d16c3",
+      "runs": {
+        "A": {
+          "id": 39543188263,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "5a440faa4c91bbe5ec9eb2456181741a4f2a3ff0",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39543188263",
+          "logDigest": "bc86b420b7d466f2faa18437b19b9d56d63e6a90d0b23de78a655c8f1aa67a27",
+          "summaryDigest": "13c592151fa5f22f35e2e48a4eca221c7622f6daf78aeda5c45401901098eee2"
+        },
+        "B": {
+          "id": 39543188245,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "5a440faa4c91bbe5ec9eb2456181741a4f2a3ff0",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39543188245",
+          "logDigest": "1893282888e6eb758e7ee87fd8c33ba2e3a8f5341c5153f2d580a31319c6976b",
+          "summaryDigest": "058836cf200c2a20c9dd37ba4c184cf8387dfbae2dfe5922e9bb9f5d17b84a46"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47478",
+      "headSha": "5a440faa4c91bbe5ec9eb2456181741a4f2a3ff0",
+      "baseSha": "225e9e606441aa3b48cbec26c4c02f54b32d16c3"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-a.md",
+          "jsonDigest": "f76946eab0d020ce7ea8d4a62ed0f8bc8b77014f9720c55cafc972992b78089b",
+          "markdownDigest": "004c855e36a2d3d95244fca9493f7da25121f4afaa226b5b65fd192eb330b4a3",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 39276,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 30287,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 69573
+          },
+          "comparisonsPerformed": 19,
+          "versionComparisons": [
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-06-01",
+              "headVersion": "2025-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-08-01",
+              "headVersion": "2025-08-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-09-01",
+              "headVersion": "2025-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-12-01",
+              "headVersion": "2025-12-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2025-12-15-preview",
+              "headVersion": "2025-12-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-01-01",
+              "headVersion": "2026-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-01-15-preview",
+              "headVersion": "2026-01-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-03-01",
+              "headVersion": "2026-03-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-03-15-preview",
+              "headVersion": "2026-03-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-04-01",
+              "headVersion": "2026-04-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-04-15-preview",
+              "headVersion": "2026-04-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-05-01",
+              "headVersion": "2026-05-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-05-15-preview",
+              "headVersion": "2026-05-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-06-01",
+              "headVersion": "2026-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-06-15-preview",
+              "headVersion": "2026-06-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-07-01",
+              "headVersion": "2026-07-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-07-15-preview",
+              "headVersion": "2026-07-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-08-01",
+              "headVersion": "2026-08-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "NetApp",
+              "baseVersion": "2026-08-15-preview",
+              "headVersion": "2026-08-15-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/76bfd02229b8c5da-phase-b.md",
+          "jsonDigest": "23c7882ce5a0c277547526af9d30325fb79c0d721625ca3c9dfa8b0aca477d73",
+          "markdownDigest": "45d4b72c5b931d9d6c405a65bad6817da1e76fd1ef74e50a150ee1be72fb99fc",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 39683,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 30544,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 70241
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "a50c100ded4b99269be695e05389389e1471628d7a624fdfba52d85bef841090",
+      "comparisonsPerformed": 19,
+      "versionComparisons": [
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-06-01",
+          "headVersion": "2025-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-08-01",
+          "headVersion": "2025-08-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-09-01",
+          "headVersion": "2025-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-12-01",
+          "headVersion": "2025-12-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2025-12-15-preview",
+          "headVersion": "2025-12-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-01-01",
+          "headVersion": "2026-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-01-15-preview",
+          "headVersion": "2026-01-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-03-01",
+          "headVersion": "2026-03-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-03-15-preview",
+          "headVersion": "2026-03-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-04-15-preview",
+          "headVersion": "2026-04-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-05-01",
+          "headVersion": "2026-05-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-05-15-preview",
+          "headVersion": "2026-05-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-06-01",
+          "headVersion": "2026-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-06-15-preview",
+          "headVersion": "2026-06-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-07-01",
+          "headVersion": "2026-07-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-07-15-preview",
+          "headVersion": "2026-07-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-08-01",
+          "headVersion": "2026-08-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "NetApp",
+          "baseVersion": "2026-08-15-preview",
+          "headVersion": "2026-08-15-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-80d2dbd0b428520d",
+      "affectedPrs": [
+        47478
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-9be28e24e9358796",
+      "affectedPrs": [
+        47478
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "5a440faa4c91bbe5ec9eb2456181741a4f2a3ff0",
+    "prBaseSha": "225e9e606441aa3b48cbec26c4c02f54b32d16c3",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 225e9e606441aa3b48cbec26c4c02f54b32d16c3 5a440faa4c91bbe5ec9eb2456181741a4f2a3ff0\ngit -C target checkout --detach 5a440faa4c91bbe5ec9eb2456181741a4f2a3ff0\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47478' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/netapp/resource-manager/Microsoft.NetApp/NetApp",
+        "project": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/netapp/resource-manager/Microsoft.NetApp/NetApp' --base-ref 225e9e606441aa3b48cbec26c4c02f54b32d16c3 --phase same-version --json-output '../specification-netapp-resource-manager-Microsoft.NetApp-NetApp-phase-a.json' --markdown-output '../specification-netapp-resource-manager-Microsoft.NetApp-NetApp-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/netapp/resource-manager/Microsoft.NetApp/NetApp' --base-ref 225e9e606441aa3b48cbec26c4c02f54b32d16c3 --json-output '../specification-netapp-resource-manager-Microsoft.NetApp-NetApp-phase-b-evidence.json' --markdown-output '../specification-netapp-resource-manager-Microsoft.NetApp-NetApp-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

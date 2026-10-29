@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47438:8bbbce0c0b7f1eb237af4527b95e10d49cf70a59"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47438,
+    "title": "Carbon: remove list semantics from emissions query operations",
+    "author": "itiinani-msft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47438",
+    "baseBranch": "main",
+    "headBranch": "carbon-spec-update",
+    "baseSha": "f1f796502a81c1cf4d44fe97109e8a71fe8ba485",
+    "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+    "mergedAt": "2026-10-20T23:03:59Z",
+    "changedTypeSpecFiles": [
+      "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47438",
+      "state": "closed",
+      "merged": true,
+      "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+      "baseSha": "f1f796502a81c1cf4d44fe97109e8a71fe8ba485",
+      "runs": {
+        "A": {
+          "id": 39375388872,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39375388872",
+          "logDigest": "1d7b20d2b974a995107f86f19d2d4e4f47ab62a80cde69573a233310dfc6100c",
+          "summaryDigest": "e8d6994bafefdd9ef8b29c8a73c66ccafccfe242b4fb4aa623958f96500aa21c"
+        },
+        "B": {
+          "id": 39375388822,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39375388822",
+          "logDigest": "a7120dfc8e2b1468ae79ba574d0b67da74feed37287cabf30a269f5de200163b",
+          "summaryDigest": "7a9444fed9dfc3ba565323b4024bd09f15af39f326c96c826255838faa2db3ab"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47438",
+      "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+      "baseSha": "f1f796502a81c1cf4d44fe97109e8a71fe8ba485"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/carbon/resource-manager/Microsoft.Carbon/Carbon",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/dc177c3b14173cff-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/dc177c3b14173cff-phase-a.md",
+          "jsonDigest": "150f6ab5669c1c0278681664bb0c49d461feb3cac92b90408613e1b9dfc7ecd3",
+          "markdownDigest": "65c6f8743a4d1f3d0b8b412416232d2c6e1b30cd28bb25cf2876927cb98c795d",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1349,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 199,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 1555
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "Carbon",
+              "baseVersion": "2025-04-01",
+              "headVersion": "2025-04-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Carbon",
+              "baseVersion": "2026-05-01-preview",
+              "headVersion": "2026-05-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/dc177c3b14173cff-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/dc177c3b14173cff-phase-b.md",
+          "jsonDigest": "ee338f9520f380687d8dd77961abaf3a6143657864b3e31ef91b3853bd8d11fb",
+          "markdownDigest": "0e7b09d448fe798d1eed8e305cb472b7ba52faaac61c55e0cbd9f7de035922c1",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1356,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 240,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 1602
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "38e72688ac4e37fa3203b522e55163b8af6293c49feb77f74f264a52ca79ae7d",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "Carbon",
+          "baseVersion": "2025-04-01",
+          "headVersion": "2025-04-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Carbon",
+          "baseVersion": "2026-05-01-preview",
+          "headVersion": "2026-05-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-b364e878dcd91b6d",
+      "affectedPrs": [
+        47438
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-fcbfd2db21d396dd",
+      "affectedPrs": [
+        47438
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+    "prBaseSha": "f1f796502a81c1cf4d44fe97109e8a71fe8ba485",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin f1f796502a81c1cf4d44fe97109e8a71fe8ba485 8bbbce0c0b7f1eb237af4527b95e10d49cf70a59\ngit -C target checkout --detach 8bbbce0c0b7f1eb237af4527b95e10d49cf70a59\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47438' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/carbon/resource-manager/Microsoft.Carbon/Carbon",
+        "project": "specification/carbon/resource-manager/Microsoft.Carbon/Carbon",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/carbon/resource-manager/Microsoft.Carbon/Carbon' --base-ref f1f796502a81c1cf4d44fe97109e8a71fe8ba485 --phase same-version --json-output '../specification-carbon-resource-manager-Microsoft.Carbon-Carbon-phase-a.json' --markdown-output '../specification-carbon-resource-manager-Microsoft.Carbon-Carbon-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/carbon/resource-manager/Microsoft.Carbon/Carbon' --base-ref f1f796502a81c1cf4d44fe97109e8a71fe8ba485 --json-output '../specification-carbon-resource-manager-Microsoft.Carbon-Carbon-phase-b-evidence.json' --markdown-output '../specification-carbon-resource-manager-Microsoft.Carbon-Carbon-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

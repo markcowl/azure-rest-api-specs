@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47156:a5ccbf8129d4e835acbbddc8c8f07e263a97f72c"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47156,
+    "title": "[Microsoft.ApiManagement] AI Gateway 2026-11-01",
+    "author": "azaslonov",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47156",
+    "baseBranch": "main",
+    "headBranch": "alzaslon/aigateway-2026-10-preview",
+    "baseSha": "8acc59200b5eaf6a993b3db1d35900c6fe8c80ea",
+    "headSha": "a5ccbf8129d4e835acbbddc8c8f07e263a97f72c",
+    "mergedAt": "2026-10-20T16:42:38Z",
+    "changedTypeSpecFiles": [
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayAlias.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayApiKey.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayCommon.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModel.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModelProvider.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayOperations.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResource.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResponses.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayTelemetryExporter.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayToolServer.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayWorkspace.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/client.tsp",
+      "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47156",
+      "state": "closed",
+      "merged": true,
+      "headSha": "a5ccbf8129d4e835acbbddc8c8f07e263a97f72c",
+      "baseSha": "8acc59200b5eaf6a993b3db1d35900c6fe8c80ea",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayAlias.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayApiKey.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayCommon.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModel.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayModelProvider.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayOperations.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResource.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayResponses.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayTelemetryExporter.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayToolServer.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/AIGatewayWorkspace.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/client.tsp",
+        "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/main.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47156",
+      "headSha": "a5ccbf8129d4e835acbbddc8c8f07e263a97f72c",
+      "baseSha": "8acc59200b5eaf6a993b3db1d35900c6fe8c80ea"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-ddead62774b57a1c",
+      "affectedPrs": [
+        47156
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "run-association-unverified",
+          "detail": "run-association-unverified"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}
