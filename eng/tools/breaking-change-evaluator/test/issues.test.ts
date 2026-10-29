@@ -4,11 +4,11 @@ import type { EvaluationReport, TypeSpecFinding } from "../src/types.ts";
 
 function report(findings: TypeSpecFinding[]): EvaluationReport {
   return {
-    schemaVersion: 3,
+    schemaVersion: 4,
     schema: {
       name: "azure-rest-api-specs/breaking-change-evaluator",
-      version: 3,
-      compatibility: ">=3 <4",
+      version: 4,
+      compatibility: ">=4 <5",
     },
     run: {
       id: "weekly-fixed",

@@ -28,6 +28,14 @@ validation in prompts or ad hoc shell pipelines.
 - Persist `query-snapshot.json`, `selection.json`, `run-config.json`, per-PR dossiers, aggregate data,
   run manifest, and catalog entries.
 - Retain nonqualified and partial results with their evidence. Never reinterpret them as no findings.
+- Compare actionable errors only:
+  - Phase A compares Same-Version Swagger messages whose post-policy severity is `Error` with
+    unsuppressed TypeSpec `same-version` findings whose severity is `error`.
+  - Phase B compares Cross-Version Swagger messages whose post-policy severity is `Error` with
+    unsuppressed TypeSpec `cross-version` findings whose severity is `error`.
+- Preserve Warning/Info OAD messages and ignored/suppressed TypeSpec findings only in raw detector
+  artifacts. Never include them in matching, effectiveness totals, rates, or conclusions.
+- Do not describe an all-differences report as an error-parity evaluation.
 - Run `validate-runs` before committing or publishing.
 - Commit and push validated checkpoints to the requested fork branch. Verify the remote SHA.
 

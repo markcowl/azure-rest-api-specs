@@ -3,8 +3,8 @@ import type { OadRuleCode } from "../../openapi-diff-runner/src/types/oad-types.
 export type Phase = "A" | "B";
 export type EvaluationStatus = "evaluated" | "partial" | "not-qualified" | "failed";
 export const EVALUATION_SCHEMA_NAME = "azure-rest-api-specs/breaking-change-evaluator";
-export const EVALUATION_SCHEMA_VERSION = 3;
-export const EVALUATION_SCHEMA_COMPATIBILITY = ">=3 <4";
+export const EVALUATION_SCHEMA_VERSION = 4;
+export const EVALUATION_SCHEMA_COMPATIBILITY = ">=4 <5";
 export type MatchCategory =
   | "exact"
   | "probable-review"
@@ -373,7 +373,7 @@ export interface Reproduction {
 }
 
 export interface EvaluationReport {
-  schemaVersion: 3;
+  schemaVersion: typeof EVALUATION_SCHEMA_VERSION;
   schema: ReportSchemaIdentity;
   run: EvaluationRunIdentity;
   status: EvaluationStatus;

@@ -13,11 +13,11 @@ import type { EvaluationReport, MatchTrace, OadFinding, TypeSpecFinding } from "
 
 function report(): EvaluationReport {
   return {
-    schemaVersion: 3,
+    schemaVersion: 4,
     schema: {
       name: "azure-rest-api-specs/breaking-change-evaluator",
-      version: 3,
-      compatibility: ">=3 <4",
+      version: 4,
+      compatibility: ">=4 <5",
     },
     run: {
       id: "test-run",
@@ -65,6 +65,99 @@ function report(): EvaluationReport {
 }
 
 describe("report aggregation", () => {
+  it("counts actionable errors only", () => {
+    const errorOad: OadFinding = {
+      occurrenceId: "oad-error",
+      phase: "B",
+      id: "1",
+      rule: "RemovedProperty",
+      severity: "Error",
+      message: "removed",
+      evidence: "{}",
+    };
+    const warningOad: OadFinding = {
+      ...errorOad,
+      occurrenceId: "oad-warning",
+      severity: "Warning",
+    };
+    const errorTypeSpec: TypeSpecFinding = {
+      occurrenceId: "tsp-error",
+      project: "specification/foo/Foo",
+      kind: "ResponsePropertyRemoved",
+      rule: "RemovedResponseProperty",
+      phase: "cross-version",
+      severity: "error",
+      message: "removed",
+      versionPair: { baseVersion: "v1", headVersion: "v2" },
+    };
+    const ignoredTypeSpec: TypeSpecFinding = {
+      ...errorTypeSpec,
+      occurrenceId: "tsp-ignore",
+      severity: "ignore",
+    };
+    const suppressedTypeSpec: TypeSpecFinding = {
+      ...errorTypeSpec,
+      occurrenceId: "tsp-suppressed",
+      suppressed: true,
+    };
+    const matches: MatchTrace[] = [
+      {
+        oadOccurrenceId: "oad-error",
+        target: { evidence: [] },
+        targets: [{ evidence: [] }],
+        candidates: [],
+        selectedTypeSpecOccurrenceIds: ["tsp-error"],
+        category: "exact",
+        reviewRequired: false,
+      },
+      {
+        oadOccurrenceId: "oad-warning",
+        target: { evidence: [] },
+        targets: [{ evidence: [] }],
+        candidates: [],
+        selectedTypeSpecOccurrenceIds: ["tsp-ignore"],
+        category: "exact",
+        reviewRequired: false,
+      },
+    ];
+
+    expect(
+      computeRollup(
+        [errorOad, warningOad],
+        [errorTypeSpec, ignoredTypeSpec, suppressedTypeSpec],
+        matches,
+      ),
+    ).toMatchObject({
+      oadTotal: 1,
+      typeSpecTotal: 1,
+      exact: 1,
+      typeSpecOnly: 0,
+    });
+  });
+
+  it("rejects non-actionable findings in schema v4 reports", () => {
+    const value = report();
+    value.typeSpecProjects = [
+      {
+        project: "specification/foo/Foo",
+        status: "complete",
+        findings: [
+          {
+            occurrenceId: "tsp-ignore",
+            project: "specification/foo/Foo",
+            kind: "OperationAdded",
+            rule: "OperationAdded",
+            phase: "cross-version",
+            severity: "ignore",
+            message: "added",
+            versionPair: { baseVersion: "v1", headVersion: "v2" },
+          },
+        ],
+      },
+    ];
+    expect(() => validateRollup(value)).toThrow("actionable errors only");
+  });
+
   it("recomputes deterministic rollups", () => {
     const value = report();
     expect(() => validateRollup(value)).not.toThrow();
@@ -232,7 +325,7 @@ describe("report aggregation", () => {
         phase: "A",
         id: "a",
         rule: "AddedPath",
-        severity: "Info",
+        severity: "Error",
         message: "added",
         evidence: "{}",
       },
@@ -452,8 +545,7 @@ describe("report aggregation", () => {
     expect(markdown).toContain("[details](#finding-typespec-tsp-only)");
   });
 
-  it("keeps semantic matches while prominently reporting error-status mismatch", () => {
-    const value = report();
+  it("does not count semantic matches to non-error TypeSpec findings", () => {
     const oad: OadFinding = {
       occurrenceId: "oad-error",
       phase: "A",
@@ -495,38 +587,7 @@ describe("report aggregation", () => {
         url: "https://example.test/main.tsp#L20",
       },
     };
-    value.oadFindings = [oad];
-    value.typeSpecProjects = [
-      {
-        project: typeSpec.project,
-        status: "complete",
-        phaseExecutions: {
-          A: {
-            phase: "A",
-            analyzerPhase: "same-version",
-            timingScope: "phase",
-            status: "complete",
-            exitCode: 0,
-            jsonReport: "report-artifacts/typespec/phase-a.json",
-            markdownReport: "report-artifacts/typespec/phase-a.md",
-            timing: {
-              compileBaseMs: 1,
-              compileHeadMs: 1,
-              versionMutatorsMs: 1,
-              canonicalizeMs: 1,
-              identityMatchingMs: 1,
-              diffEngineMs: 1,
-              classifyMs: 1,
-              suppressMs: 1,
-              reportMs: 1,
-              totalMs: 9,
-            },
-          },
-        },
-        findings: [typeSpec],
-      },
-    ];
-    value.matches = [
+    const matches: MatchTrace[] = [
       {
         oadOccurrenceId: oad.occurrenceId,
         target: { phase: "A", method: "GET", route: "/widgets", evidence: [] },
@@ -546,33 +607,20 @@ describe("report aggregation", () => {
         reviewRequired: false,
       },
     ];
-    value.rollup = computeRollup(value.oadFindings, [typeSpec], value.matches);
-    value.findingGroups = computeFindingGroups(value.oadFindings, [typeSpec], value.matches);
 
-    const markdown = renderMarkdown(value);
-    expect(value.rollup.errorEquivalence.A).toMatchObject({
+    const rollup = computeRollup([oad], [typeSpec], matches);
+    expect(rollup.byPhase.A).toMatchObject({
+      oadTotal: 1,
+      typeSpecTotal: 0,
+      exact: 0,
+      missedEquivalent: 1,
+      typeSpecOnly: 0,
+    });
+    expect(rollup.errorEquivalence.A).toMatchObject({
       oadErrors: 1,
       typeSpecErrors: 0,
-      oadErrorMatchedToTypeSpecNonError: 1,
+      oadErrorsWithoutEquivalent: 1,
     });
-    expect(markdown.indexOf("## Error equivalence by phase")).toBeLessThan(
-      markdown.indexOf("## Finding review"),
-    );
-    expect(markdown).toContain("Error status differs:");
-    expect(markdown).toContain("Phase A (`same-version`)");
-    expect(markdown).toContain(
-      "[TypeSpec Phase A analyzer report](report-artifacts/typespec/phase-a.md)",
-    );
-    expect(markdown).toContain("Canonical identity agrees.");
-    expect(markdown).toContain("Suggested fix / review");
-    expect(markdown).toContain("No detector or evaluator change suggested.");
-    expect(markdown).toContain("[head](https://example.test/openapi.json#L10)");
-    expect(markdown).toContain("[head](https://example.test/main.tsp#L20)");
-    expect(markdown).toContain("[details](#finding-oad-error)");
-    expect(markdown).toContain('<a id="finding-review"></a>');
-    expect(markdown).toContain("[1](#finding-review-correlations)");
-    expect(markdown).toContain("[1](#finding-review-partial)");
-    expect(markdown).not.toContain("**Decision trace:**");
   });
 
   it("clusters repeated issue analyses while preserving every issue anchor", () => {
@@ -712,7 +760,7 @@ describe("report aggregation", () => {
         phase: "A",
         id: "1",
         rule: "AddedPath",
-        severity: "Info",
+        severity: "Error",
         message: "path added",
         evidence: "{}",
       },

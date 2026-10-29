@@ -2,6 +2,7 @@ import { mkdir, readFile, rm, unlink } from "node:fs/promises";
 import { basename, dirname, extname, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { enrichOadFindingEvidence, normalizeTypeSpecFindingEvidence } from "./evidence.ts";
+import { isActionableOadFinding, isActionableTypeSpecFinding } from "./finding-policy.ts";
 import { parsePrReference, qualifyPullRequest, type QualifiedPr } from "./github.ts";
 import { matchFindings } from "./matcher.ts";
 import { applyIssueAnalysisOverlays, generateIssueAnalyses } from "./issues.ts";
@@ -61,16 +62,18 @@ function baseReport(qualifiedPr: QualifiedPr, options: EvaluateOptions): Evaluat
           changedTypeSpecFiles: qualifiedPr.changedTypeSpecFiles,
         }
       : undefined);
-  const oadFindings = qualifiedPr.oadFindings.map((finding) =>
-    pullRequest
-      ? enrichOadFindingEvidence(
-          finding,
-          pullRequest,
-          qualifiedPr.qualification.evidence.runs?.[finding.phase]?.htmlUrl,
-          qualifiedPr.qualification.evidence.runs?.[finding.phase]?.logDigest,
-        )
-      : finding,
-  );
+  const oadFindings = qualifiedPr.oadFindings
+    .filter(isActionableOadFinding)
+    .map((finding) =>
+      pullRequest
+        ? enrichOadFindingEvidence(
+            finding,
+            pullRequest,
+            qualifiedPr.qualification.evidence.runs?.[finding.phase]?.htmlUrl,
+            qualifiedPr.qualification.evidence.runs?.[finding.phase]?.logDigest,
+          )
+        : finding,
+    );
   return {
     schemaVersion: EVALUATION_SCHEMA_VERSION,
     schema: {
@@ -449,7 +452,7 @@ export async function evaluate(options: EvaluateOptions): Promise<number> {
             ]),
           )
         : undefined,
-      findings: project.findings.map((finding) =>
+      findings: project.findings.filter(isActionableTypeSpecFinding).map((finding) =>
         normalizeTypeSpecFindingEvidence(
           finding,
           checkout,

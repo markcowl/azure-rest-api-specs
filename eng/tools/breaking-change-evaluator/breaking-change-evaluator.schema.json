@@ -21,14 +21,14 @@
     "errors"
   ],
   "properties": {
-    "schemaVersion": { "const": 3 },
+    "schemaVersion": { "const": 4 },
     "schema": {
       "type": "object",
       "required": ["name", "version", "compatibility"],
       "properties": {
         "name": { "const": "azure-rest-api-specs/breaking-change-evaluator" },
-        "version": { "const": 3 },
-        "compatibility": { "const": ">=3 <4" }
+        "version": { "const": 4 },
+        "compatibility": { "const": ">=4 <5" }
       },
       "additionalProperties": false
     },

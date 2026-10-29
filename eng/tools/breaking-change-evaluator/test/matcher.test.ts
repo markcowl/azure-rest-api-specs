@@ -52,6 +52,26 @@ const target: CanonicalTarget = {
 };
 
 describe("finding matching", () => {
+  it("matches actionable errors only", () => {
+    const ignored = { ...tsp("ignored", "/widgets/{name}"), severity: "ignore" };
+    const suppressed = { ...tsp("suppressed", "/widgets/{name}"), suppressed: true };
+    const actionable = tsp("actionable", "/widgets/{name}");
+
+    const matches = matchFindings([oad], new Map([["oad-1", [target]]]), [
+      ignored,
+      suppressed,
+      actionable,
+    ]);
+
+    expect(matches).toHaveLength(1);
+    expect(matches[0].category).toBe("exact");
+    expect(matches[0].selectedTypeSpecOccurrenceIds).toEqual(["actionable"]);
+    expect(matches[0].candidates.map((candidate) => candidate.typeSpecOccurrenceId)).toEqual([
+      "actionable",
+    ]);
+    expect(matchFindings([{ ...oad, severity: "Warning" }], new Map(), [actionable])).toEqual([]);
+  });
+
   it("uses canonical wire identity instead of the leaf name alone", () => {
     const matches = matchFindings([oad], new Map([["oad-1", [target]]]), [
       tsp("correct", "/widgets/{name}"),

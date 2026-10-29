@@ -1,4 +1,5 @@
 import { correlatedKinds, oadCorrelation } from "./correlation.ts";
+import { isActionableOadFinding, isActionableTypeSpecFinding } from "./finding-policy.ts";
 import { normalizeRoute } from "./swagger-target.ts";
 import type {
   CanonicalTarget,
@@ -168,7 +169,8 @@ export function matchFindings(
   typeSpecFindings: TypeSpecFinding[],
 ): MatchTrace[] {
   const traces: MatchTrace[] = [];
-  for (const finding of oadFindings) {
+  const actionableTypeSpecFindings = typeSpecFindings.filter(isActionableTypeSpecFinding);
+  for (const finding of oadFindings.filter(isActionableOadFinding)) {
     const correlation = oadCorrelation[finding.rule];
     const resolvedTargets = oadTargets.get(finding.occurrenceId);
     const targets =
@@ -201,7 +203,7 @@ export function matchFindings(
     }
     const permittedKinds = new Set(correlatedKinds(finding.rule));
     const candidates = targets.flatMap((target) =>
-      typeSpecFindings
+      actionableTypeSpecFindings
         .filter((candidate) => permittedKinds.has(candidate.kind))
         .map((candidate) => ({
           target,

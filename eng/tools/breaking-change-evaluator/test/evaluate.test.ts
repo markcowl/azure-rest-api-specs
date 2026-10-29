@@ -118,11 +118,33 @@ describe("evaluation exits", () => {
     temporaryDirectories.push(directory);
     const jsonOutput = join(directory, "missing-tool.json");
 
+    const qualifiedPr = qualified();
+    qualifiedPr.oadFindings = [
+      {
+        occurrenceId: "oad-error",
+        phase: "A",
+        id: "1",
+        rule: "RemovedProperty",
+        severity: "Error",
+        message: "removed",
+        evidence: "{}",
+      },
+      {
+        occurrenceId: "oad-warning",
+        phase: "B",
+        id: "2",
+        rule: "RemovedProperty",
+        severity: "Warning",
+        message: "removed from a previous preview",
+        evidence: "{}",
+      },
+    ];
+
     const exit = await evaluate({
       pr: "Azure/azure-rest-api-specs#1",
       jsonOutput,
       markdownOutput: join(directory, "missing-tool.md"),
-      qualifiedPr: qualified(),
+      qualifiedPr,
       evaluatorCommit,
       toolRevision: "d0ab464d60c47d6699bfea0292c901864b5d8ba0",
       cacheDir: join(directory, "empty-cache"),
@@ -132,6 +154,7 @@ describe("evaluation exits", () => {
     expect(JSON.parse(await readFile(jsonOutput, "utf8"))).toMatchObject({
       status: "failed",
       complete: false,
+      oadFindings: [{ occurrenceId: "oad-error", severity: "Error" }],
       errors: [expect.stringContaining("Run the prepare command explicitly")],
     });
   });

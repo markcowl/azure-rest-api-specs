@@ -39,3 +39,25 @@ stimuli:
       - type: output-matches
         config:
           pattern: "(?i)(immutable|new run)"
+
+  - name: explain-error-only-comparison
+    prompt: "Use the breaking-change evaluator skill to explain which Swagger and TypeSpec findings belong in Phase A and Phase B effectiveness totals. Do not run a report."
+    environment:
+      skills:
+        - ..
+    graders:
+      - type: skill-invocation
+        config:
+          required: ["breaking-change-evaluator"]
+      - type: output-matches
+        config:
+          pattern: "(?i)Phase A.*Error.*same-version"
+      - type: output-matches
+        config:
+          pattern: "(?i)Phase B.*Error.*cross-version"
+      - type: output-matches
+        config:
+          pattern: "(?i)(Warning|Info).*(exclude|not include)"
+      - type: output-matches
+        config:
+          pattern: "(?i)(ignore|suppressed).*(exclude|not include)"

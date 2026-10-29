@@ -22,6 +22,25 @@ node cmd/breaking-change-evaluator.js prepare `
 Record the returned source SHA and artifact digest. Verify the executable with controlled zero and
 finding-producing fixtures before a dataset run.
 
+### Error-only comparison contract
+
+The evaluator compares the findings that each existing workflow treats as actionable errors:
+
+- Phase A: Same-Version OAD messages after repository policy has assigned severity `Error`, compared
+  with unsuppressed TypeSpec `same-version` findings whose severity is `error`.
+- Phase B: Cross-Version OAD messages after repository policy has assigned severity `Error`,
+  compared with unsuppressed TypeSpec `cross-version` findings whose severity is `error`.
+
+The OAD runner may downgrade previous-preview cross-version messages to `Warning`; those messages are
+intentionally excluded. OAD `Info` messages, TypeSpec `ignore` findings, and suppressed TypeSpec
+findings remain available in raw JSON/Markdown artifacts for provenance but must not participate in
+target resolution, matching, rollups, rates, issue analyses, or conclusions.
+
+Before publishing a run, verify that every comparison-facing OAD finding has severity `Error` and
+every comparison-facing TypeSpec finding is an unsuppressed `error`. If an older run contains broader
+classified differences, label it explicitly as an all-findings legacy run and do not use it for
+error-level parity conclusions.
+
 ## 3. Create an immutable merged-PR selection
 
 Create a new, previously nonexistent reports directory:
@@ -78,12 +97,15 @@ node cmd/breaking-change-evaluator.js validate-runs --reports-root reports
 Analyze:
 
 - complete, not-qualified, partial, and failed counts;
-- Phase A and Phase B OAD/TypeSpec totals;
+- Phase A and Phase B actionable-error OAD/TypeSpec totals;
 - exact, probable, missed-equivalent, intentional-gap, TypeSpec-only, and ambiguous findings;
 - severity disagreements and recurring rule/kind pairs;
 - qualification evidence gaps and compile/runtime failures;
 - detector timing only when the detector emitted timing provenance;
 - comparisons with historical datasets only when schema and completeness permit.
+
+Recompute every headline number from the error-only comparison collections. Do not use raw analyzer
+finding counts, which include ignored and suppressed differences, as detector effectiveness totals.
 
 Write conclusions into the new run summary or a linked analysis artifact without changing detector
 evidence.

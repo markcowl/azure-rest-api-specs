@@ -1,5 +1,11 @@
 # Analysis
 
+> **Legacy all-findings analysis:** This run was generated before the evaluator enforced the
+> error-only comparison contract. Its TypeSpec totals include `ignore` findings, and its OAD totals
+> include non-error records. Do not use its matching or effectiveness totals to assess Phase A or
+> Phase B error parity. Regenerate this immutable interval under schema v4 for the corrected
+> error-only analysis.
+
 This run evaluates every merged pull request selected by the frozen query for
 October 15 through October 29, 2026. The source set contains 170 merged pull
 requests; 94 changed a TypeSpec service input and were selected without a cap.

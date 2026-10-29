@@ -23,6 +23,11 @@ cataloged run, selection digest, status total, report/run association, finding/p
 timing provenance, relative link, deterministic Markdown, and privacy invariant. Historical runs
 remain cataloged under their original schema instead of being overwritten.
 
+Schema v4 comparison reports contain actionable errors only: post-policy OAD messages with severity
+`Error` and unsuppressed TypeSpec findings with severity `error`. Warning/Info OAD messages and
+ignored/suppressed TypeSpec findings remain in raw detector artifacts but are excluded from
+matching, rollups, rates, and conclusions.
+
 ```bash
 node cmd/breaking-change-evaluator.js prepare \
   --typespec-revision d0ab464d60c47d6699bfea0292c901864b5d8ba0
