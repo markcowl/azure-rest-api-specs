@@ -83,8 +83,7 @@ export function mergedPullRequestQuery(options: MergedDatasetOptions): string {
     "is:pr",
     "is:merged",
     `base:${options.baseBranch}`,
-    `merged:>${options.lowerBoundExclusive}`,
-    `merged:<=${options.upperBoundInclusive}`,
+    `merged:${options.lowerBoundExclusive}..${options.upperBoundInclusive}`,
   ].join(" ");
 }
 

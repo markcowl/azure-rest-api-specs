@@ -68,7 +68,7 @@ describe("merged pull request discovery", () => {
   it("creates a complete uncapped deterministic TypeSpec selection", async () => {
     const result = await discoverMergedDataset(api(), options);
     expect(mergedPullRequestQuery(options)).toContain(
-      "merged:>2026-10-15T03:00:00Z merged:<=2026-10-29T06:30:00Z",
+      "merged:2026-10-15T03:00:00Z..2026-10-29T06:30:00Z",
     );
     expect(result.selection).toMatchObject({
       selection: {
