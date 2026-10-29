@@ -1,0 +1,603 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-46097:c66a611a79bd3cfb60ea58cbe30a41efcc50ea57"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46097,
+    "title": "[NetAppFiles] Release microsoft.net app 2026 07 01",
+    "author": "audunn",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46097",
+    "baseBranch": "main",
+    "headBranch": "release-Microsoft.NetApp-2026-07-01",
+    "baseSha": "5b6e8f31b1b893b1a2fe56ac64aef5caea37f056",
+    "headSha": "c66a611a79bd3cfb60ea58cbe30a41efcc50ea57",
+    "mergedAt": "2026-10-15T16:12:43Z",
+    "changedTypeSpecFiles": [
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ActiveDirectory.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Bucket.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Cache.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/CapacityPool.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticAccount.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackup.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupPolicy.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupVault.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticCapacityPool.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticRegionInfoResource.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshot.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshotPolicy.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticVolume.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/NetAppAccount.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Volume.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/VolumeQuotaRule.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/main.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/models.tsp",
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46097",
+      "state": "closed",
+      "merged": true,
+      "headSha": "c66a611a79bd3cfb60ea58cbe30a41efcc50ea57",
+      "baseSha": "5b6e8f31b1b893b1a2fe56ac64aef5caea37f056",
+      "runs": {
+        "A": {
+          "id": 38763926170,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "c66a611a79bd3cfb60ea58cbe30a41efcc50ea57",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+          "logDigest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0",
+          "summaryDigest": "1a753aa41734a9b6beeffda613d12ca199d5796403b01c41810c4e9faa8bc780"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/ActiveDirectory.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Bucket.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Cache.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/CapacityPool.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticAccount.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackup.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupPolicy.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticBackupVault.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticCapacityPool.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticRegionInfoResource.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshot.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticSnapshotPolicy.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Elastic/ElasticVolume.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/NetAppAccount.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/Volume.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/VolumeQuotaRule.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/client.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/main.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/models.tsp",
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46097",
+      "headSha": "c66a611a79bd3cfb60ea58cbe30a41efcc50ea57",
+      "baseSha": "5b6e8f31b1b893b1a2fe56ac64aef5caea37f056"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json",
+        "oldVersion": "2025-12-15-preview",
+        "newVersion": "2025-12-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2025-12-15-preview/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json",
+        "oldVersion": "2026-01-15-preview",
+        "newVersion": "2026-01-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-01-15-preview/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json",
+        "oldVersion": "2026-03-15-preview",
+        "newVersion": "2026-03-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-03-15-preview/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json",
+        "oldVersion": "2026-04-15-preview",
+        "newVersion": "2026-04-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-04-15-preview/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json",
+        "oldVersion": "2026-05-15-preview",
+        "newVersion": "2026-05-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-05-15-preview/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-5",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json",
+        "oldVersion": "2026-06-15-preview",
+        "newVersion": "2026-06-15-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/preview/2026-06-15-preview/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-6",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json",
+        "oldVersion": "2026-01-01",
+        "newVersion": "2026-01-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-01-01/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-7",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json",
+        "oldVersion": "2026-03-01",
+        "newVersion": "2026-03-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-03-01/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-8",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json",
+        "oldVersion": "2026-04-01",
+        "newVersion": "2026-04-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-04-01/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-9",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json",
+        "oldVersion": "2026-05-01",
+        "newVersion": "2026-05-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-05-01/netapp.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-10",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json",
+        "oldVersion": "2026-06-01",
+        "newVersion": "2026-06-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38763926170",
+        "digest": "23ea0e8ff3cedf1f1e01769a3f531fb63ac254f8fe5aaba7192e08a2c22bc3a0"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/5b6e8f31b1b893b1a2fe56ac64aef5caea37f056/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/c66a611a79bd3cfb60ea58cbe30a41efcc50ea57/specification/netapp/resource-manager/Microsoft.NetApp/NetApp/stable/2026-06-01/netapp.json#L1"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-c199ba588fb9d250",
+      "affectedPrs": [
+        46097
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

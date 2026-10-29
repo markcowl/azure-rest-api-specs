@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47356:7269bdaf14e02161722a10329f75b5d5859a344d"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47356,
+    "title": "Azure Local november preview",
+    "author": "abaranwal-ms",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47356",
+    "baseBranch": "main",
+    "headBranch": "users/abaranwal/azlocal-nov-prev-2026_sq",
+    "baseSha": "ebc13f67950a95e50c6828c27dd979e8608c0329",
+    "headSha": "7269bdaf14e02161722a10329f75b5d5859a344d",
+    "mergedAt": "2026-10-16T10:59:06Z",
+    "changedTypeSpecFiles": [
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/CapacitySetting.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/Cluster.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/ClusterVolume.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/DevicePool.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/EdgeMachineGpu.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/EdgeMachineUpdate.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/KubernetesVersions.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/NetworkProfile.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/PlatformUpdates.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/ProxyConfiguration.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/Publisher.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/UpdateContents.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/main.tsp",
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47356",
+      "state": "closed",
+      "merged": true,
+      "headSha": "7269bdaf14e02161722a10329f75b5d5859a344d",
+      "baseSha": "ebc13f67950a95e50c6828c27dd979e8608c0329",
+      "runs": {
+        "A": {
+          "id": 38888741140,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "7269bdaf14e02161722a10329f75b5d5859a344d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38888741140",
+          "logDigest": "08b086246fbe6f4d7348c72bf345c6acdbd2206ffd52c36daa87c28c96364919",
+          "summaryDigest": "285c75b5ec942e7f5bab29b6d96fea225e67402f561203db4ce168b5b3088151"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/CapacitySetting.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/Cluster.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/ClusterVolume.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/DevicePool.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/EdgeMachineGpu.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/EdgeMachineUpdate.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/KubernetesVersions.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/NetworkProfile.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/PlatformUpdates.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/ProxyConfiguration.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/Publisher.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/UpdateContents.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/main.tsp",
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/models.tsp"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47356",
+      "headSha": "7269bdaf14e02161722a10329f75b5d5859a344d",
+      "baseSha": "ebc13f67950a95e50c6828c27dd979e8608c0329"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-6c1ed8212ef41097",
+      "affectedPrs": [
+        47356
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}
