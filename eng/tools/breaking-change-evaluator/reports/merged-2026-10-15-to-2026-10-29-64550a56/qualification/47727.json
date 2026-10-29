@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47727
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47727,
+    "title": "[Cdn] C#: rename RuleSetProperties.batchMode to IsBatchMode",
+    "author": "vincent1114",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47727",
+    "baseBranch": "main",
+    "headBranch": "dev/vincenthu/cdn-csharp-isbatchmode",
+    "baseSha": "35a34321b9738f30959b2a9d40a40459c2f8dc48",
+    "headSha": "41d1f744110cf9200898b192318288c4d1ad9cae",
+    "mergedAt": "2026-10-29T04:58:15Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47727",
+      "state": "closed",
+      "merged": true,
+      "headSha": "41d1f744110cf9200898b192318288c4d1ad9cae",
+      "baseSha": "35a34321b9738f30959b2a9d40a40459c2f8dc48",
+      "runs": {
+        "A": {
+          "id": 40813081208,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "41d1f744110cf9200898b192318288c4d1ad9cae",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40813081208",
+          "logDigest": "ba699a56263a4889e9cee9cd65c1261a84630244fcbe3f13c01a545dd1ef6c95",
+          "summaryDigest": "5be671958cf935c59f397eb5923c6ce1c547b613737497aaf99396ac9e11ae91"
+        },
+        "B": {
+          "id": 40813081008,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "41d1f744110cf9200898b192318288c4d1ad9cae",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40813081008",
+          "logDigest": "a5ef4593ba72d997de1f91992d7c92edf994ff430a0e8234e5bc0fb7f90f25af",
+          "summaryDigest": "a72e2e04541e96ce9d76e7f9f5dee324826e9e361acbbf75cb3eee17ec4293fb"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+      ]
+    }
+  },
+  "headSha": "41d1f744110cf9200898b192318288c4d1ad9cae",
+  "baseSha": "35a34321b9738f30959b2a9d40a40459c2f8dc48",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+  ],
+  "oadFindings": []
+}

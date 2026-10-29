@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47284
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47284,
+    "title": "[Go] update client.tsp for customization",
+    "author": "kazrael2119",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47284",
+    "baseBranch": "main",
+    "headBranch": "update-go-custom",
+    "baseSha": "dc7218d2648d05079de45c616d940deded784a7d",
+    "headSha": "884aefe117c0b7750c8f6b66e12187fc823bcc6b",
+    "mergedAt": "2026-10-15T06:22:47Z",
+    "changedTypeSpecFiles": [
+      "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47284",
+      "state": "closed",
+      "merged": true,
+      "headSha": "884aefe117c0b7750c8f6b66e12187fc823bcc6b",
+      "baseSha": "dc7218d2648d05079de45c616d940deded784a7d",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+      ]
+    }
+  },
+  "headSha": "884aefe117c0b7750c8f6b66e12187fc823bcc6b",
+  "baseSha": "dc7218d2648d05079de45c616d940deded784a7d",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+  ],
+  "oadFindings": []
+}

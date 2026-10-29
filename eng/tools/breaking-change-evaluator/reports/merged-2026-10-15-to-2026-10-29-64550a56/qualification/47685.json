@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47685
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47685,
+    "title": "[NetAppFiles] Update SDK emitters to API version 2026-08-15-preview",
+    "author": "nandakus2",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47685",
+    "baseBranch": "main",
+    "headBranch": "fix/netapp-sdk-api-version-2026-08-15-preview",
+    "baseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec",
+    "headSha": "c8747e35d6cd39db6a450f4537c9b79520472b46",
+    "mergedAt": "2026-10-28T06:06:35Z",
+    "changedTypeSpecFiles": [
+      "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47685",
+      "state": "closed",
+      "merged": true,
+      "headSha": "c8747e35d6cd39db6a450f4537c9b79520472b46",
+      "baseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec",
+      "runs": {
+        "A": {
+          "id": 40617674609,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "c8747e35d6cd39db6a450f4537c9b79520472b46",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40617674609",
+          "logDigest": "b0939247ea5f9b832d0185adbef620c9d3698bee0cb8076e02584a7f35597c75",
+          "summaryDigest": "c9e9bcaf752da9632198b8ac6e6b9dd4c375c682f40a2cd4f2578ee8fb738052"
+        },
+        "B": {
+          "id": 40617674604,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "c8747e35d6cd39db6a450f4537c9b79520472b46",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40617674604",
+          "logDigest": "4a910e0935a793c2a823f7cc05635ab8cf0585625e8cf64190bd70027bb24fc6",
+          "summaryDigest": "4afaa5b4f8464af176cd31b814ac3a15a5dfb7942224c6a76630399fab3df94c"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "c8747e35d6cd39db6a450f4537c9b79520472b46",
+  "baseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/netapp/resource-manager/Microsoft.NetApp/NetApp/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

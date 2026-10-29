@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47603
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47603,
+    "title": "[ContainerService] Fix C# upgrade insight payload names",
+    "author": "FumingZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47603",
+    "baseBranch": "main",
+    "headBranch": "fuming/aks-2026-08-csharp-resource-names",
+    "baseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb",
+    "headSha": "67664273aeef1dac5bc7254bc7fc76b878de0ee4",
+    "mergedAt": "2026-10-26T16:06:46Z",
+    "changedTypeSpecFiles": [
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47603",
+      "state": "closed",
+      "merged": true,
+      "headSha": "67664273aeef1dac5bc7254bc7fc76b878de0ee4",
+      "baseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb",
+      "runs": {
+        "A": {
+          "id": 40282797665,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "67664273aeef1dac5bc7254bc7fc76b878de0ee4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40282797665",
+          "logDigest": "9812ee140d9cdfde45488a1ddebf5f040ec99e3f417e38dec9f42c9512c73069",
+          "summaryDigest": "957eacbc51679d875b5d15ea293259c591f382068ee1937ff544574a8629d43b"
+        },
+        "B": {
+          "id": 40282797573,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "67664273aeef1dac5bc7254bc7fc76b878de0ee4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40282797573",
+          "logDigest": "74197c6cb9d67fc92201a8745d76d8bc255307e1eab402cd1475604ec3a3e7cd",
+          "summaryDigest": "fa4514b30877d67efb57a0caafe320b05898f684dea3f286b141c34b402bba8c"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/client.tsp"
+      ]
+    }
+  },
+  "headSha": "67664273aeef1dac5bc7254bc7fc76b878de0ee4",
+  "baseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/client.tsp"
+  ],
+  "oadFindings": []
+}

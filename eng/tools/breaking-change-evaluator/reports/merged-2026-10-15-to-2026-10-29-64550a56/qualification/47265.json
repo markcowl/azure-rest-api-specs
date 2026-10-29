@@ -1,0 +1,79 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47265
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47265,
+    "title": "Microsoft.HorizonDB API version 2026-10-01-preview- #46525",
+    "author": "nasc17",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47265",
+    "baseBranch": "main",
+    "headBranch": "nasc/release-Microsoft.HorizonDb-2026-10-01-preview",
+    "baseSha": "d0ceb0c4ef92615139f3e9c1c77c509c5e17d122",
+    "headSha": "4c725024080a10b931276c39115fb00add344bf3",
+    "mergedAt": "2026-10-15T23:21:14Z",
+    "changedTypeSpecFiles": [
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/capabilities.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/change-data-capture.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/client.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/endpoints.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/log-files.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/main.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/maintenance-event.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/models.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/nodes.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/routes.tsp",
+      "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47265",
+      "state": "closed",
+      "merged": true,
+      "headSha": "4c725024080a10b931276c39115fb00add344bf3",
+      "baseSha": "d0ceb0c4ef92615139f3e9c1c77c509c5e17d122",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/capabilities.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/change-data-capture.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/client.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/endpoints.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/log-files.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/main.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/maintenance-event.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/models.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/nodes.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/routes.tsp",
+        "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "4c725024080a10b931276c39115fb00add344bf3",
+  "baseSha": "d0ceb0c4ef92615139f3e9c1c77c509c5e17d122",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/capabilities.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/change-data-capture.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/client.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/endpoints.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/log-files.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/main.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/maintenance-event.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/models.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/nodes.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/routes.tsp",
+    "specification/horizondb/resource-manager/Microsoft.HorizonDb/HorizonDb/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

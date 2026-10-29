@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47547
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47547,
+    "title": "[ContainerService] Normalize C# preview API names",
+    "author": "FumingZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47547",
+    "baseBranch": "main",
+    "headBranch": "fuming/aks-2026-08-csharp-review",
+    "baseSha": "119b7458f41688cceac321cc425198bbef2966d6",
+    "headSha": "ec33c47c20cbaa876ffc985f71e9de0430183df3",
+    "mergedAt": "2026-10-23T06:08:13Z",
+    "changedTypeSpecFiles": [
+      "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47547",
+      "state": "closed",
+      "merged": true,
+      "headSha": "ec33c47c20cbaa876ffc985f71e9de0430183df3",
+      "baseSha": "119b7458f41688cceac321cc425198bbef2966d6",
+      "runs": {
+        "A": {
+          "id": 39872547450,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "ec33c47c20cbaa876ffc985f71e9de0430183df3",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39872547450",
+          "logDigest": "14abd24a280a11fb64da4c08ea2a5b86a1cffadcb438663f61bda3fd2a962a3c",
+          "summaryDigest": "3299696bd7ee3e28872f3ea5f9fe53c2af93f9539214135972a6f46979ef4db3"
+        },
+        "B": {
+          "id": 39872547319,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "ec33c47c20cbaa876ffc985f71e9de0430183df3",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39872547319",
+          "logDigest": "63c2006e3293704b4c2dad6f6ba1079633ddd9d5cf61181d9ee1acc288e460c9",
+          "summaryDigest": "91a22e73c8b332961a82f7336e99a05c4070502e9c5e9846e94e62e6ad5a5fe9"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/client.tsp"
+      ]
+    }
+  },
+  "headSha": "ec33c47c20cbaa876ffc985f71e9de0430183df3",
+  "baseSha": "119b7458f41688cceac321cc425198bbef2966d6",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/client.tsp"
+  ],
+  "oadFindings": []
+}

@@ -1,0 +1,103 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46350
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46350,
+    "title": "Add MachineLearningServices preview API version 2026-09-15-preview",
+    "author": "fmabroukmsft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46350",
+    "baseBranch": "main",
+    "headBranch": "swagger-agent/MLS-2026-09-15-preview-typespec",
+    "baseSha": "56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f",
+    "headSha": "fcc3feb83886088b8c7054409074bf174d83ee9d",
+    "mergedAt": "2026-10-19T14:01:07Z",
+    "changedTypeSpecFiles": [
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/CapabilityHost.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ComputeResource.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ConnectionName.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/EndpointDeploymentResourcePropertiesBasicResource.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/EndpointResourcePropertiesBasicResource.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferenceEndpoint.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferenceGroup.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferencePool.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ManagedNetworkSettingsPropertiesBasicResource.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/OutboundRuleBasicResource.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiBlocklistItemPropertiesBasicResource.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiBlocklistPropertiesBasicResource.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiPolicyPropertiesBasicResource.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/Workspace.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/WorkspaceConnectionPropertiesV2BasicResource.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/main.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/models.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/routes.tsp",
+      "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46350",
+      "state": "closed",
+      "merged": true,
+      "headSha": "fcc3feb83886088b8c7054409074bf174d83ee9d",
+      "baseSha": "56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/CapabilityHost.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ComputeResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ConnectionName.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/EndpointDeploymentResourcePropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/EndpointResourcePropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferenceEndpoint.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferenceGroup.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferencePool.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ManagedNetworkSettingsPropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/OutboundRuleBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiBlocklistItemPropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiBlocklistPropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiPolicyPropertiesBasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/Workspace.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/WorkspaceConnectionPropertiesV2BasicResource.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/main.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/models.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/routes.tsp",
+        "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "fcc3feb83886088b8c7054409074bf174d83ee9d",
+  "baseSha": "56b13af91ff8d8b5ad706a502e6b4e44e6d57e1f",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/CapabilityHost.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ComputeResource.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ConnectionName.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/EndpointDeploymentResourcePropertiesBasicResource.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/EndpointResourcePropertiesBasicResource.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferenceEndpoint.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferenceGroup.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/InferencePool.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/ManagedNetworkSettingsPropertiesBasicResource.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/OutboundRuleBasicResource.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiBlocklistItemPropertiesBasicResource.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiBlocklistPropertiesBasicResource.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/RaiPolicyPropertiesBasicResource.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/Workspace.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/WorkspaceConnectionPropertiesV2BasicResource.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/main.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/models.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/routes.tsp",
+    "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

@@ -1,0 +1,52 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47338
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47338,
+    "title": "[Commvault] Add 2026-10-15-preview API",
+    "author": "saurabh-jaiswal-333",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47338",
+    "baseBranch": "main",
+    "headBranch": "saurabh-jaiswal-333-commvault/api-2026-10-15-preview",
+    "baseSha": "d218330c5a3b727df9504ba852e97259479e8fef",
+    "headSha": "2abd1a09ab3c6e43370995af969d773d2879e3f9",
+    "mergedAt": "2026-10-16T14:41:08Z",
+    "changedTypeSpecFiles": [
+      "specification/liftrcommvault/Commvault.ContentStore.Management/client.tsp",
+      "specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47338",
+      "state": "closed",
+      "merged": true,
+      "headSha": "2abd1a09ab3c6e43370995af969d773d2879e3f9",
+      "baseSha": "d218330c5a3b727df9504ba852e97259479e8fef",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/liftrcommvault/Commvault.ContentStore.Management/client.tsp",
+        "specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp"
+      ]
+    }
+  },
+  "headSha": "2abd1a09ab3c6e43370995af969d773d2879e3f9",
+  "baseSha": "d218330c5a3b727df9504ba852e97259479e8fef",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/liftrcommvault/Commvault.ContentStore.Management/client.tsp",
+    "specification/liftrcommvault/Commvault.ContentStore.Management/main.tsp"
+  ],
+  "oadFindings": []
+}

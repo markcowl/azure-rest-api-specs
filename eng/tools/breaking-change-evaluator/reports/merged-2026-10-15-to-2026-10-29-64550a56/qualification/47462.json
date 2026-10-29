@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47462
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47462,
+    "title": "Polish CloudHealth .NET SDK for 2026-11-01 GA",
+    "author": "mariehalloran",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47462",
+    "baseBranch": "main",
+    "headBranch": "mariehalloran/cloudhealth-dotnet-ga-polish",
+    "baseSha": "8fba48337fa3552e44b30eb7281b8049a6ce289b",
+    "headSha": "2f7d3cfb7bde4ee4c67d270a54bee982bf7537d5",
+    "mergedAt": "2026-10-22T07:51:41Z",
+    "changedTypeSpecFiles": [
+      "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47462",
+      "state": "closed",
+      "merged": true,
+      "headSha": "2f7d3cfb7bde4ee4c67d270a54bee982bf7537d5",
+      "baseSha": "8fba48337fa3552e44b30eb7281b8049a6ce289b",
+      "runs": {
+        "A": {
+          "id": 39741018989,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "2f7d3cfb7bde4ee4c67d270a54bee982bf7537d5",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39741018989",
+          "logDigest": "73a1625d8ab8ac0260d91ea14b653d4e5754530897db774b5de9c631cfdfa182",
+          "summaryDigest": "abc5f72bb74e3af644339c79015d987fe06efc408bf093198721766aabbd3c6a"
+        },
+        "B": {
+          "id": 39741018844,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "2f7d3cfb7bde4ee4c67d270a54bee982bf7537d5",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39741018844",
+          "logDigest": "fa476837728758e22c0e1a68dedb830f6f4ef6f49178880eafd23b6add30f0db",
+          "summaryDigest": "3b181cb048366009cd58bf02bb2ab6ebb5b289b56c7aaaa85c5db17dd27e9c91"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth/client.tsp"
+      ]
+    }
+  },
+  "headSha": "2f7d3cfb7bde4ee4c67d270a54bee982bf7537d5",
+  "baseSha": "8fba48337fa3552e44b30eb7281b8049a6ce289b",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth/client.tsp"
+  ],
+  "oadFindings": []
+}

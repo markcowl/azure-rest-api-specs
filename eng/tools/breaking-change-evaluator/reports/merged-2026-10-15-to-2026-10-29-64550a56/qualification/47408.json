@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47408
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47408,
+    "title": "Enable Azure.Provisioning.SiteManager SDK generation",
+    "author": "cxznmhdcxz",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47408",
+    "baseBranch": "main",
+    "headBranch": "onboard-provisioning-sitemanager",
+    "baseSha": "01fdd6a82b0d97158b1dcc67bbe55f4eba11490f",
+    "headSha": "6fa4d78ca6b60ea412562e83d1481e1b374ff853",
+    "mergedAt": "2026-10-22T03:30:31Z",
+    "changedTypeSpecFiles": [
+      "specification/edge/resource-manager/Microsoft.Edge/sites/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47408",
+      "state": "closed",
+      "merged": true,
+      "headSha": "6fa4d78ca6b60ea412562e83d1481e1b374ff853",
+      "baseSha": "01fdd6a82b0d97158b1dcc67bbe55f4eba11490f",
+      "runs": {
+        "A": {
+          "id": 39213177592,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "6fa4d78ca6b60ea412562e83d1481e1b374ff853",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39213177592",
+          "logDigest": "d903494ced8b6fece36fd669ce80f1779d2ace5af2a50cb2a06de142209a6d0b",
+          "summaryDigest": "0fc3fdf5eb41666a18aec20213ce0be7433cf01deec4ed8feabfb961b4aadc81"
+        },
+        "B": {
+          "id": 39213177467,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "6fa4d78ca6b60ea412562e83d1481e1b374ff853",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39213177467",
+          "logDigest": "a85aa98a43d7401f4a9879cc0f61b772b18fcd7d4efe5bd6c9534233351fbeb6",
+          "summaryDigest": "6bbe22351e297655c8d65b56ef7e54458ed0124a231d64c28ba1db14a8b75fcf"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/edge/resource-manager/Microsoft.Edge/sites/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "6fa4d78ca6b60ea412562e83d1481e1b374ff853",
+  "baseSha": "01fdd6a82b0d97158b1dcc67bbe55f4eba11490f",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/edge/resource-manager/Microsoft.Edge/sites/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

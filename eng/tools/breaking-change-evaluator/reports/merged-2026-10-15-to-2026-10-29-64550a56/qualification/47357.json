@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47357
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47357,
+    "title": " addressed comments",
+    "author": "v-shubhamti-microsoft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47357",
+    "baseBranch": "main",
+    "headBranch": "user/v-shubhamti/fix-issuesfordotnet-16102026",
+    "baseSha": "9465622d7495d7a59f80d1d319db08bd4f0b81ac",
+    "headSha": "fe879dc8b7265e82f4f8dcd565d9a135307673a9",
+    "mergedAt": "2026-10-16T11:38:43Z",
+    "changedTypeSpecFiles": [
+      "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47357",
+      "state": "closed",
+      "merged": true,
+      "headSha": "fe879dc8b7265e82f4f8dcd565d9a135307673a9",
+      "baseSha": "9465622d7495d7a59f80d1d319db08bd4f0b81ac",
+      "runs": {
+        "A": {
+          "id": 38893417022,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "fe879dc8b7265e82f4f8dcd565d9a135307673a9",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38893417022",
+          "logDigest": "97dfc4cf89d7ff0701bf74fc261a551539282a0306463daf94f14fb9847a7359",
+          "summaryDigest": "3a5bd8ba10a33c4dbd9731af2595a5c4f81d4ec48f7838218460aed3a3c217b3"
+        },
+        "B": {
+          "id": 38893417085,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "fe879dc8b7265e82f4f8dcd565d9a135307673a9",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38893417085",
+          "logDigest": "b1249a5d26590b00a7347bd5037dcbd3643685c0910a00c1609665c288413995",
+          "summaryDigest": "7f65047159e2e9f85cf5187ffa7b0838155dc90b68e87f7b539b7ed4e2ec1e68"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/client.tsp"
+      ]
+    }
+  },
+  "headSha": "fe879dc8b7265e82f4f8dcd565d9a135307673a9",
+  "baseSha": "9465622d7495d7a59f80d1d319db08bd4f0b81ac",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/azurestackhci/resource-manager/Microsoft.AzureStackHCI/StackHCI/client.tsp"
+  ],
+  "oadFindings": []
+}

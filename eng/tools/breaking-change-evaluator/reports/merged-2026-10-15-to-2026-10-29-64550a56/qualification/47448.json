@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47448
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47448,
+    "title": "chore/update openai types",
+    "author": "baywet",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47448",
+    "baseBranch": "main",
+    "headBranch": "chore/update-openai-types",
+    "baseSha": "d12589a10cc5da0d3b2190d698fc16ead10a6c65",
+    "headSha": "36743b6024df7a85ac258cf06fc9bfcb649a1153",
+    "mergedAt": "2026-10-20T15:20:24Z",
+    "changedTypeSpecFiles": [
+      "specification/ai-foundry/data-plane/Foundry/src/openai/images/routes.generated.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47448",
+      "state": "closed",
+      "merged": true,
+      "headSha": "36743b6024df7a85ac258cf06fc9bfcb649a1153",
+      "baseSha": "d12589a10cc5da0d3b2190d698fc16ead10a6c65",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/ai-foundry/data-plane/Foundry/src/openai/images/routes.generated.tsp"
+      ]
+    }
+  },
+  "headSha": "36743b6024df7a85ac258cf06fc9bfcb649a1153",
+  "baseSha": "d12589a10cc5da0d3b2190d698fc16ead10a6c65",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/ai-foundry/data-plane/Foundry/src/openai/images/routes.generated.tsp"
+  ],
+  "oadFindings": []
+}

@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47689
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47689,
+    "title": "Consolidate Network C# resource helpers and client names",
+    "author": "ArcturusZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47689",
+    "baseBranch": "main",
+    "headBranch": "network-csharp-model-consolidation",
+    "baseSha": "ece1d42d7338ef524ef34496e027e41c4874d3b5",
+    "headSha": "3e4e94e82aa16bf6495d4b8658599363e397fd02",
+    "mergedAt": "2026-10-28T09:31:28Z",
+    "changedTypeSpecFiles": [
+      "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47689",
+      "state": "closed",
+      "merged": true,
+      "headSha": "3e4e94e82aa16bf6495d4b8658599363e397fd02",
+      "baseSha": "ece1d42d7338ef524ef34496e027e41c4874d3b5",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+      ]
+    }
+  },
+  "headSha": "3e4e94e82aa16bf6495d4b8658599363e397fd02",
+  "baseSha": "ece1d42d7338ef524ef34496e027e41c4874d3b5",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/network/resource-manager/Microsoft.Network/Network/client.tsp"
+  ],
+  "oadFindings": []
+}

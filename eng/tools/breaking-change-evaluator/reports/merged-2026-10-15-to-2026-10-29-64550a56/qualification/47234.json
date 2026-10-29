@@ -1,0 +1,52 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47234
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47234,
+    "title": "Enable AgriculturePlatform provisioning emitter",
+    "author": "cxznmhdcxz",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47234",
+    "baseBranch": "main",
+    "headBranch": "onboard-provisioning-agricultureplatform",
+    "baseSha": "8ec074d8a9d4929f9db8c1e0c464507722f0f105",
+    "headSha": "222294a50bda9c0543f10c562ac31299e07eb67c",
+    "mergedAt": "2026-10-15T05:06:05Z",
+    "changedTypeSpecFiles": [
+      "specification/agricultureplatform/AgriculturePlatform.Management/client.tsp",
+      "specification/agricultureplatform/AgriculturePlatform.Management/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47234",
+      "state": "closed",
+      "merged": true,
+      "headSha": "222294a50bda9c0543f10c562ac31299e07eb67c",
+      "baseSha": "8ec074d8a9d4929f9db8c1e0c464507722f0f105",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/agricultureplatform/AgriculturePlatform.Management/client.tsp",
+        "specification/agricultureplatform/AgriculturePlatform.Management/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "222294a50bda9c0543f10c562ac31299e07eb67c",
+  "baseSha": "8ec074d8a9d4929f9db8c1e0c464507722f0f105",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/agricultureplatform/AgriculturePlatform.Management/client.tsp",
+    "specification/agricultureplatform/AgriculturePlatform.Management/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

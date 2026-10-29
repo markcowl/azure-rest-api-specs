@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47690
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47690,
+    "title": "Preserve Python DataReplication request parameter compatibility",
+    "author": "msyyc",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47690",
+    "baseBranch": "main",
+    "headBranch": "fix/datareplication-python-parameter-compat",
+    "baseSha": "1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd",
+    "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+    "mergedAt": "2026-10-28T06:17:30Z",
+    "changedTypeSpecFiles": [
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47690",
+      "state": "closed",
+      "merged": true,
+      "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+      "baseSha": "1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd",
+      "runs": {
+        "A": {
+          "id": 40639661066,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40639661066",
+          "logDigest": "929fb7b4700c82950df89cfd05d0e75346cc9100e08850fab9c10f500ae6740d",
+          "summaryDigest": "2d3355170811b6761911a024ed0577d44a94d8cb04009031d1669b32a1eb3513"
+        },
+        "B": {
+          "id": 40639661008,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40639661008",
+          "logDigest": "8ffac4a2dd3fc351783d24ea9eb910567d93c2e02b22be216b17bc185588a301",
+          "summaryDigest": "d2fa76e7d88c2a4968c1f8949f3296fe26fbf9f6bc9388047ec8858edd2943e1"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp"
+      ]
+    }
+  },
+  "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+  "baseSha": "1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp"
+  ],
+  "oadFindings": []
+}

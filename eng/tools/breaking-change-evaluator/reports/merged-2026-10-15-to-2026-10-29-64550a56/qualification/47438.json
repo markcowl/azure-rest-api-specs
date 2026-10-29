@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47438
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47438,
+    "title": "Carbon: remove list semantics from emissions query operations",
+    "author": "itiinani-msft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47438",
+    "baseBranch": "main",
+    "headBranch": "carbon-spec-update",
+    "baseSha": "f1f796502a81c1cf4d44fe97109e8a71fe8ba485",
+    "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+    "mergedAt": "2026-10-20T23:03:59Z",
+    "changedTypeSpecFiles": [
+      "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47438",
+      "state": "closed",
+      "merged": true,
+      "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+      "baseSha": "f1f796502a81c1cf4d44fe97109e8a71fe8ba485",
+      "runs": {
+        "A": {
+          "id": 39375388872,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39375388872",
+          "logDigest": "1d7b20d2b974a995107f86f19d2d4e4f47ab62a80cde69573a233310dfc6100c",
+          "summaryDigest": "e8d6994bafefdd9ef8b29c8a73c66ccafccfe242b4fb4aa623958f96500aa21c"
+        },
+        "B": {
+          "id": 39375388822,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39375388822",
+          "logDigest": "a7120dfc8e2b1468ae79ba574d0b67da74feed37287cabf30a269f5de200163b",
+          "summaryDigest": "7a9444fed9dfc3ba565323b4024bd09f15af39f326c96c826255838faa2db3ab"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+      ]
+    }
+  },
+  "headSha": "8bbbce0c0b7f1eb237af4527b95e10d49cf70a59",
+  "baseSha": "f1f796502a81c1cf4d44fe97109e8a71fe8ba485",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+  ],
+  "oadFindings": []
+}

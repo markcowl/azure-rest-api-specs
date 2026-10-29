@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47321
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47321,
+    "title": "Enable HealthBot provisioning SDK generation",
+    "author": "cxznmhdcxz",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47321",
+    "baseBranch": "main",
+    "headBranch": "onboard-provisioning-healthbot",
+    "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+    "headSha": "404c4b19020adda084e8815a9a00960f92caf095",
+    "mergedAt": "2026-10-22T03:24:57Z",
+    "changedTypeSpecFiles": [
+      "specification/healthbot/resource-manager/Microsoft.HealthBot/HealthBot/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47321",
+      "state": "closed",
+      "merged": true,
+      "headSha": "404c4b19020adda084e8815a9a00960f92caf095",
+      "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+      "runs": {
+        "A": {
+          "id": 38706883711,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "404c4b19020adda084e8815a9a00960f92caf095",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38706883711",
+          "logDigest": "ebe809a9caad7dcce44d96854d9b53f3986a8f289157fd69ae63b850e9f21d60",
+          "summaryDigest": "8a73275e732666f5812139d3f0eed96c4b973204832cecbadba572af95d17663"
+        },
+        "B": {
+          "id": 38706883305,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "404c4b19020adda084e8815a9a00960f92caf095",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38706883305",
+          "logDigest": "95787a9094510ff63eb575bea3c9e24c907eee4e2c31a12053ee1140f6eaeda5",
+          "summaryDigest": "59e496ccffebeb58aabeedf5dc633539f299de490706145b82c9c34dbd34bb9c"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/healthbot/resource-manager/Microsoft.HealthBot/HealthBot/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "404c4b19020adda084e8815a9a00960f92caf095",
+  "baseSha": "3b386d94c8a520fb6bb626b8e667e0b69a9df96a",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/healthbot/resource-manager/Microsoft.HealthBot/HealthBot/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}

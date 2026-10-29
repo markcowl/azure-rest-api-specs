@@ -1,0 +1,89 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47375
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47375,
+    "title": "Carbon: add continuationToken to skipToken properties",
+    "author": "itiinani-msft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47375",
+    "baseBranch": "main",
+    "headBranch": "carbon-spec-update",
+    "baseSha": "18aa5d5a436c6d5360d64f8df86db6f2adcfbe75",
+    "headSha": "7d52729a288dd3a57426f46766c70f142affdaef",
+    "mergedAt": "2026-10-16T21:14:02Z",
+    "changedTypeSpecFiles": [
+      "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47375",
+      "state": "closed",
+      "merged": true,
+      "headSha": "7d52729a288dd3a57426f46766c70f142affdaef",
+      "baseSha": "18aa5d5a436c6d5360d64f8df86db6f2adcfbe75",
+      "runs": {
+        "A": {
+          "id": 38963726973,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "7d52729a288dd3a57426f46766c70f142affdaef",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38963726973",
+          "logDigest": "02704f0af596c180ea29e18224cebf0d8df073c485c4d2cbc59eda1a44ddf7c4",
+          "summaryDigest": "34fa061819fbf3d946eb53a11866acf4f009bf6ce82ef2846a0621f4b756ec94"
+        },
+        "B": {
+          "id": 38963726931,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "7d52729a288dd3a57426f46766c70f142affdaef",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/38963726931",
+          "logDigest": "f7e22c44c53a262b8dd904401fb6a20fed1de40465a8b09aff42f18350608eb1",
+          "summaryDigest": "9667062604d11562a8a4840011fc9d9faf0f78b5222bf7e30c87a564bfee9094"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+      ]
+    }
+  },
+  "headSha": "7d52729a288dd3a57426f46766c70f142affdaef",
+  "baseSha": "18aa5d5a436c6d5360d64f8df86db6f2adcfbe75",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/main.tsp"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/carbon/resource-manager/Microsoft.Carbon/Carbon/preview/2026-05-01-preview/main.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/carbon/resource-manager/Microsoft.Carbon/Carbon/preview/2026-05-01-preview/main.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/carbon/resource-manager/Microsoft.Carbon/Carbon/preview/2026-05-01-preview/main.json",
+        "newPath": "specification/carbon/resource-manager/Microsoft.Carbon/Carbon/preview/2026-05-01-preview/main.json",
+        "oldVersion": "2026-05-01-preview",
+        "newVersion": "2026-05-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/carbon/resource-manager/Microsoft.Carbon/Carbon/preview/2026-05-01-preview/main.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/carbon/resource-manager/Microsoft.Carbon/Carbon/preview/2026-05-01-preview/main.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/carbon/resource-manager/Microsoft.Carbon/Carbon/preview/2026-05-01-preview/main.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/carbon/resource-manager/Microsoft.Carbon/Carbon/preview/2026-05-01-preview/main.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    }
+  ]
+}

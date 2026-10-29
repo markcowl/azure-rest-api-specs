@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47424
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47424,
+    "title": "Revert \"Create GA API version 2026-04-01 for dashboards (Microsoft.Portal)\" (#41480)",
+    "author": "Luke-Argosino",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47424",
+    "baseBranch": "main",
+    "headBranch": "lukeargosino/dashboards-revert-2026-04-01",
+    "baseSha": "b0dc05398a518ad54dd5cd5a2ff868e48bba7bd4",
+    "headSha": "28c3375ce2d66ae05fbed0f12ec2e953d68799cf",
+    "mergedAt": "2026-10-22T20:01:16Z",
+    "changedTypeSpecFiles": [
+      "specification/portal/resource-manager/Microsoft.Portal/Portal/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47424",
+      "state": "closed",
+      "merged": true,
+      "headSha": "28c3375ce2d66ae05fbed0f12ec2e953d68799cf",
+      "baseSha": "b0dc05398a518ad54dd5cd5a2ff868e48bba7bd4",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/portal/resource-manager/Microsoft.Portal/Portal/main.tsp"
+      ]
+    }
+  },
+  "headSha": "28c3375ce2d66ae05fbed0f12ec2e953d68799cf",
+  "baseSha": "b0dc05398a518ad54dd5cd5a2ff868e48bba7bd4",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/portal/resource-manager/Microsoft.Portal/Portal/main.tsp"
+  ],
+  "oadFindings": []
+}

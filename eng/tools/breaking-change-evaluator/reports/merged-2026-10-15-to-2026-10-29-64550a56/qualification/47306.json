@@ -1,0 +1,49 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47306
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47306,
+    "title": "sdk review based fixes to 2026-09-15-preview",
+    "author": "M-Hietala",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47306",
+    "baseBranch": "main",
+    "headBranch": "m-hietala/sdk_review_based_fixes_to_2026-09-15-preview",
+    "baseSha": "db05c7dff064a7e0b0de33acd75a251eb1eeeb12",
+    "headSha": "2a41e20899a546b42d7473ec558099de843df269",
+    "mergedAt": "2026-10-22T17:41:50Z",
+    "changedTypeSpecFiles": [
+      "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47306",
+      "state": "closed",
+      "merged": true,
+      "headSha": "2a41e20899a546b42d7473ec558099de843df269",
+      "baseSha": "db05c7dff064a7e0b0de33acd75a251eb1eeeb12",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/client.tsp"
+      ]
+    }
+  },
+  "headSha": "2a41e20899a546b42d7473ec558099de843df269",
+  "baseSha": "db05c7dff064a7e0b0de33acd75a251eb1eeeb12",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/client.tsp"
+  ],
+  "oadFindings": []
+}

@@ -1,0 +1,109 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47574
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47574,
+    "title": "Fix Code Transparency CBOR error response classification",
+    "author": "JoshLove-msft",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47574",
+    "baseBranch": "main",
+    "headBranch": "joshlove-msft-code-transparency-error-models",
+    "baseSha": "1adae4d935a546aae8c6cce1207f76f301f56227",
+    "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+    "mergedAt": "2026-10-23T18:26:46Z",
+    "changedTypeSpecFiles": [
+      "specification/confidentialledger/data-plane/CodeTransparency/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47574",
+      "state": "closed",
+      "merged": true,
+      "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+      "baseSha": "1adae4d935a546aae8c6cce1207f76f301f56227",
+      "runs": {
+        "A": {
+          "id": 40001438150,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40001438150",
+          "logDigest": "aad8c2fdcd58ed1c185571d774ff57c902a0a0b799a31561244db7cd4a5540b4",
+          "summaryDigest": "c22d78c5e6ae2e50d9d026e1eaf7405858e89d404e49241b2416a1ccc9d2a742"
+        },
+        "B": {
+          "id": 40001437818,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40001437818",
+          "logDigest": "32937e24f0a437b154de554ba8ede55ceed99e2f043568d228d88a1619dae771",
+          "summaryDigest": "c99ea4396e0513a2fc986fbc59eb84268748759270f94133e8950345669c622c"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/confidentialledger/data-plane/CodeTransparency/main.tsp"
+      ]
+    }
+  },
+  "headSha": "75661a17f96526df519462c33b04cf22cdabbe4e",
+  "baseSha": "1adae4d935a546aae8c6cce1207f76f301f56227",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/confidentialledger/data-plane/CodeTransparency/main.tsp"
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json",
+        "newPath": "specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json",
+        "oldVersion": "2025-01-31-preview",
+        "newVersion": "2025-01-31-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/confidentialledger/data-plane/CodeTransparency/preview/2025-01-31-preview/cts.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json#",
+      "newPath": "file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json#",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "/home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json",
+        "newPath": "specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json",
+        "oldVersion": "2026-03-26",
+        "newVersion": "2026-03-26"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/same-version-c93b354fd9c14905bb574a8834c4d69b/specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json:1:1\"},\"new\":{\"ref\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json#\",\"path\":\"\",\"location\":\"file:///home/runner/work/azure-rest-api-specs/azure-rest-api-specs/specification/confidentialledger/data-plane/CodeTransparency/stable/2026-03-26/cts.json:1:1\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}"
+    }
+  ]
+}

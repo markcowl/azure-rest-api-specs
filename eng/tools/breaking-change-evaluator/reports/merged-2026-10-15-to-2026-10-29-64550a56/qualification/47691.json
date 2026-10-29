@@ -1,0 +1,68 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47691
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47691,
+    "title": "Compute: rename FlexProfile.preferredVMSize to PreferredVmSize for C#",
+    "author": "audreyttt",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47691",
+    "baseBranch": "main",
+    "headBranch": "audreyttt/compute-flexprofile-vmsize-csharp",
+    "baseSha": "18fe880eaa7fe5ded0e64d2ba14d82aebad44897",
+    "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+    "mergedAt": "2026-10-29T04:59:32Z",
+    "changedTypeSpecFiles": [
+      "specification/compute/resource-manager/Microsoft.Compute/Compute/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47691",
+      "state": "closed",
+      "merged": true,
+      "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+      "baseSha": "18fe880eaa7fe5ded0e64d2ba14d82aebad44897",
+      "runs": {
+        "A": {
+          "id": 40641632987,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40641632987",
+          "logDigest": "24882e3b36ec72235f3865241e74eb75ecc8e0687e3b26cd95f0e68889aabdef",
+          "summaryDigest": "d289b6ee4bc225e0c9c5186ee53737c62d3ba60297eff2cd420c3530794d2190"
+        },
+        "B": {
+          "id": 40641633012,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40641633012",
+          "logDigest": "a41915ba2db6dbac8a222b6220929ac2966d6ee45ea5df8e67ec68b3c00c3d24",
+          "summaryDigest": "ad37f422a60dd0f7f85fef61fd5e148e118017832668f4d92330c528c4c26210"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/compute/resource-manager/Microsoft.Compute/Compute/client.tsp"
+      ]
+    }
+  },
+  "headSha": "52457c0b9c8ba4d8f57b7a779bb0b426dee77215",
+  "baseSha": "18fe880eaa7fe5ded0e64d2ba14d82aebad44897",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/compute/resource-manager/Microsoft.Compute/Compute/client.tsp"
+  ],
+  "oadFindings": []
+}

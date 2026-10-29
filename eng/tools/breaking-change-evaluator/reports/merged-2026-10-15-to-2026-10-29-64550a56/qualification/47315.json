@@ -1,0 +1,52 @@
+{
+  "reference": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47315
+  },
+  "details": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47315,
+    "title": "[Storage] Restore provisioning name constraints through client options",
+    "author": "ArcturusZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47315",
+    "baseBranch": "main",
+    "headBranch": "storage/fix-provisioning-resource-name-constraints",
+    "baseSha": "fd7acf72fc1d90922ef0536a06863c414328824f",
+    "headSha": "9adac132d23f8177f16537879e5d00ff8c74d1ce",
+    "mergedAt": "2026-10-15T08:16:31Z",
+    "changedTypeSpecFiles": [
+      "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp",
+      "specification/storage/resource-manager/Microsoft.Storage/Storage/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "run-association-unverified"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47315",
+      "state": "closed",
+      "merged": true,
+      "headSha": "9adac132d23f8177f16537879e5d00ff8c74d1ce",
+      "baseSha": "fd7acf72fc1d90922ef0536a06863c414328824f",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp",
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/tspconfig.yaml"
+      ]
+    }
+  },
+  "headSha": "9adac132d23f8177f16537879e5d00ff8c74d1ce",
+  "baseSha": "fd7acf72fc1d90922ef0536a06863c414328824f",
+  "cloneUrl": "https://github.com/Azure/azure-rest-api-specs.git",
+  "changedTypeSpecFiles": [
+    "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp",
+    "specification/storage/resource-manager/Microsoft.Storage/Storage/tspconfig.yaml"
+  ],
+  "oadFindings": []
+}
