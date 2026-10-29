@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47645:836d5cc356a7de82b012f125c24f5afc6c5b122c"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47645,
+    "title": "update JS customization for monitor",
+    "author": "kazrael2119",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47645",
+    "baseBranch": "main",
+    "headBranch": "update-js-custom-for-monitor",
+    "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+    "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+    "mergedAt": "2026-10-28T05:14:44Z",
+    "changedTypeSpecFiles": [
+      "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47645",
+      "state": "closed",
+      "merged": true,
+      "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+      "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+      "runs": {
+        "A": {
+          "id": 40482309218,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40482309218",
+          "logDigest": "1dac97e04e84e6abd726998c578f41cd46411e98fa81b5baa18bf7bb10d24ffa",
+          "summaryDigest": "6f663dfff5db0cac707320485b4b403994bd8961f64001a95d4d573e21429651"
+        },
+        "B": {
+          "id": 40482308829,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40482308829",
+          "logDigest": "560d7e67f127920c29a85f2abda306893a0b289c69af4dbe635d4bbfaa8fc65f",
+          "summaryDigest": "f8cf3ab7120b7c9c22c927d593ee4b2dbe3e0ba85089862ead13242168559c46"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/monitor/resource-manager/Microsoft.Insights/Insights/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47645",
+      "headSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+      "baseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/monitor/resource-manager/Microsoft.Insights/Insights",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/d8fc44332c61eb85-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/d8fc44332c61eb85-phase-a.md",
+          "error": "Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/d8fc44332c61eb85-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/d8fc44332c61eb85-phase-b.md",
+          "error": "Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-96e9cd631ea40f4c",
+      "affectedPrs": [
+        47645
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/monitor/resource-manager/Microsoft.Insights/Insights: Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/monitor/resource-manager/Microsoft.Insights/Insights: Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "836d5cc356a7de82b012f125c24f5afc6c5b122c",
+    "prBaseSha": "2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30 836d5cc356a7de82b012f125c24f5afc6c5b122c\ngit -C target checkout --detach 836d5cc356a7de82b012f125c24f5afc6c5b122c\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47645' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/monitor/resource-manager/Microsoft.Insights/Insights",
+        "project": "specification/monitor/resource-manager/Microsoft.Insights/Insights",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/monitor/resource-manager/Microsoft.Insights/Insights' --base-ref 2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30 --phase same-version --json-output '../specification-monitor-resource-manager-Microsoft.Insights-Insights-phase-a.json' --markdown-output '../specification-monitor-resource-manager-Microsoft.Insights-Insights-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/monitor/resource-manager/Microsoft.Insights/Insights' --base-ref 2455f14a8f2b69b2b5dcfb40c4ef8d8a3aa1aa30 --json-output '../specification-monitor-resource-manager-Microsoft.Insights-Insights-phase-b-evidence.json' --markdown-output '../specification-monitor-resource-manager-Microsoft.Insights-Insights-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

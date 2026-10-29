@@ -1,0 +1,307 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47287:698b4fae43a1827e0524861252503c8f483aa523"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47287,
+    "title": "New Resource Provider - Microsoft.AIInfraOptimization",
+    "author": "sakshamgargMS",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47287",
+    "baseBranch": "main",
+    "headBranch": "user/sakshamgarg/aiinfraoptimization-2026-06-01-preview",
+    "baseSha": "88d6e45d207acd606c3a2926b21a70c822fa8b13",
+    "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+    "mergedAt": "2026-10-29T04:46:54Z",
+    "changedTypeSpecFiles": [
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/client.tsp",
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/main.tsp",
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/models.tsp",
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/routes.tsp",
+      "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47287",
+      "state": "closed",
+      "merged": true,
+      "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+      "baseSha": "88d6e45d207acd606c3a2926b21a70c822fa8b13",
+      "runs": {
+        "A": {
+          "id": 40816962754,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40816962754",
+          "logDigest": "ca54a5631c288866327c820ef69414c9732ddd95a981f47c49e947f58df0640e",
+          "summaryDigest": "51b86131b2ca8b727ef24f6517c1addd912c492b607231c90119fc8164d0e7da"
+        },
+        "B": {
+          "id": 40816962971,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40816962971",
+          "logDigest": "75371bd8696a024b2ca685b9ec8c8210f633712865c65475eb85366e0440df70",
+          "summaryDigest": "b241f68bea0d05bcc12456d23b68815d2f4f74b17caab7744730e4921f176d9b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/client.tsp",
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/main.tsp",
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/models.tsp",
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/routes.tsp",
+        "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47287",
+      "headSha": "698b4fae43a1827e0524861252503c8f483aa523",
+      "baseSha": "88d6e45d207acd606c3a2926b21a70c822fa8b13"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/cc96d5dbcd0b3dad-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/cc96d5dbcd0b3dad-phase-a.md",
+          "jsonDigest": "ea12f2e33d697dea2b4e2f06ae986f3693ba4f58f095c5a572a2d4383cf919b4",
+          "markdownDigest": "02a0190ef52791bc0f174ba468a9c84884b267f2b09e1fe846b25009d9a18f4a",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 1,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Phase A (same-version) requires a base program for comparison. Use analyzeBaseAndHead() instead."
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/cc96d5dbcd0b3dad-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/cc96d5dbcd0b3dad-phase-b.md",
+          "jsonDigest": "09a2f5b85a5d0a33c4d4d7bd9fa9b30d7a407600fafbcb82280368b34c6ba1b8",
+          "markdownDigest": "eeda75d2d17e11b437730e1e062eb6f33c1649ec32d93f905aafce2eae87de22",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "No cross-version comparisons needed: all versions are preview (no stable baseline exists)."
+        }
+      },
+      "reportDigest": "6362d68b7ed2553a84900fce48093a656a973d50d45a164bb1fb4c814d8a5fba",
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-45d6ec6f955f1b5c",
+      "affectedPrs": [
+        47287
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-f77634a16e78a4ab",
+      "affectedPrs": [
+        47287
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "698b4fae43a1827e0524861252503c8f483aa523",
+    "prBaseSha": "88d6e45d207acd606c3a2926b21a70c822fa8b13",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 88d6e45d207acd606c3a2926b21a70c822fa8b13 698b4fae43a1827e0524861252503c8f483aa523\ngit -C target checkout --detach 698b4fae43a1827e0524861252503c8f483aa523\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47287' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization",
+        "project": "specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization' --base-ref 88d6e45d207acd606c3a2926b21a70c822fa8b13 --phase same-version --json-output '../specification-aiinfraoptimization-resource-manager-Microsoft.AIInfraOptimization-AIInfraOptimization-phase-a.json' --markdown-output '../specification-aiinfraoptimization-resource-manager-Microsoft.AIInfraOptimization-AIInfraOptimization-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/aiinfraoptimization/resource-manager/Microsoft.AIInfraOptimization/AIInfraOptimization' --base-ref 88d6e45d207acd606c3a2926b21a70c822fa8b13 --json-output '../specification-aiinfraoptimization-resource-manager-Microsoft.AIInfraOptimization-AIInfraOptimization-phase-b-evidence.json' --markdown-output '../specification-aiinfraoptimization-resource-manager-Microsoft.AIInfraOptimization-AIInfraOptimization-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

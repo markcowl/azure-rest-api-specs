@@ -1,0 +1,283 @@
+{
+  "specPaths": [
+    "specification/management/resource-manager/Microsoft.Management/ManagementGroups"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 8,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 8,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "Management",
+        "baseVersion": "2023-04-01",
+        "headVersion": "2023-04-01",
+        "phase": "same-version",
+        "findingCount": 8,
+        "rawFindingCount": 16
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.details.properties.managementGroupAncestors removed variant TypeSpec.Array.",
+      "element": "body.properties.properties.details.properties.managementGroupAncestors.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2023-04-01",
+        "headVersion": "2023-04-01"
+      },
+      "location": {
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/models.tsp",
+        "line": 338
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/providers/Microsoft.Management/managementGroups/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.details.properties.managementGroupAncestors.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /providers/Microsoft.Management/managementGroups/{}",
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.details.properties.managementGroupAncestors.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.details.properties.managementGroupAncestors added variant TypeSpec.Array.",
+      "element": "body.properties.properties.details.properties.managementGroupAncestors.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2023-04-01",
+        "headVersion": "2023-04-01"
+      },
+      "location": {
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/ManagementGroup.tsp",
+        "line": 66
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/providers/Microsoft.Management/managementGroups/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.details.properties.managementGroupAncestors.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /providers/Microsoft.Management/managementGroups/{}",
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/ManagementGroup.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.details.properties.managementGroupAncestors.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.children removed variant TypeSpec.Array.",
+      "element": "body.properties.properties.children.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2023-04-01",
+        "headVersion": "2023-04-01"
+      },
+      "location": {
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/models.tsp",
+        "line": 300
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "GET",
+        "path": "/providers/Microsoft.Management/managementGroups/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.children.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /providers/Microsoft.Management/managementGroups/{}",
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.properties.children.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.properties.children added variant TypeSpec.Array.",
+      "element": "body.properties.properties.children.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2023-04-01",
+        "headVersion": "2023-04-01"
+      },
+      "location": {
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/ManagementGroup.tsp",
+        "line": 66
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "GET",
+        "path": "/providers/Microsoft.Management/managementGroups/{}"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.children.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: GET /providers/Microsoft.Management/managementGroups/{}",
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/ManagementGroup.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.properties.children.variants.TypeSpec.Array\" })\nop get(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentDisplayNameChain removed variant TypeSpec.Array.",
+      "element": "body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentDisplayNameChain.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2023-04-01",
+        "headVersion": "2023-04-01"
+      },
+      "location": {
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/models.tsp",
+        "line": 960
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/providers/Microsoft.Management/getEntities"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentDisplayNameChain.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: POST /providers/Microsoft.Management/getEntities",
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentDisplayNameChain.variants.TypeSpec.Array\" })\nop list(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentDisplayNameChain added variant TypeSpec.Array.",
+      "element": "body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentDisplayNameChain.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2023-04-01",
+        "headVersion": "2023-04-01"
+      },
+      "location": {
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/routes.tsp",
+        "line": 149
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/providers/Microsoft.Management/getEntities"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentDisplayNameChain.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: POST /providers/Microsoft.Management/getEntities",
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentDisplayNameChain.variants.TypeSpec.Array\" })\nop list(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentNameChain removed variant TypeSpec.Array.",
+      "element": "body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentNameChain.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2023-04-01",
+        "headVersion": "2023-04-01"
+      },
+      "location": {
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/models.tsp",
+        "line": 966
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/providers/Microsoft.Management/getEntities"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentNameChain.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: POST /providers/Microsoft.Management/getEntities",
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/models.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeNarrowed\", path: \"responses.200.body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentNameChain.variants.TypeSpec.Array\" })\nop list(...): ...;"
+      }
+    },
+    {
+      "kind": "ResponsePropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Response union at body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentNameChain added variant TypeSpec.Array.",
+      "element": "body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentNameChain.variants.TypeSpec.Array",
+      "versionPair": {
+        "baseVersion": "2023-04-01",
+        "headVersion": "2023-04-01"
+      },
+      "location": {
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/routes.tsp",
+        "line": 149
+      },
+      "sourceTraceLevel": "operation",
+      "operation": {
+        "method": "POST",
+        "path": "/providers/Microsoft.Management/getEntities"
+      },
+      "component": "response",
+      "statusCode": "200",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentNameChain.variants.TypeSpec.Array\" })",
+        "placement": "On the operation: POST /providers/Microsoft.Management/getEntities",
+        "file": "specification/management/resource-manager/Microsoft.Management/ManagementGroups/routes.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResponsePropertyTypeWidened\", path: \"responses.200.body.properties.value.properties.properties.variants.Microsoft.Management.EntityInfoProperties.properties.parentNameChain.variants.TypeSpec.Array\" })\nop list(...): ...;"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 679,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 219,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 903
+  }
+}

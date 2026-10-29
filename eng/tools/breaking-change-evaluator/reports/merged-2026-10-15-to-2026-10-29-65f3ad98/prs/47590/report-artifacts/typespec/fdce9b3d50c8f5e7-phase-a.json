@@ -1,0 +1,41 @@
+{
+  "specPaths": [
+    "specification/edgeorder/resource-manager/Microsoft.EdgeOrder/EdgeOrder"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 1,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "EdgeOrder",
+        "baseVersion": "2024-02-01",
+        "headVersion": "2024-02-01",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 698,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 540,
+    "classifyMs": 1,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 1244
+  }
+}

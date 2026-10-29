@@ -1,0 +1,2222 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-46291:67e7950b49eba5420ef463e8e65b025fb23d5dae"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46291,
+    "title": "Remove OpenAPI decorators from TypeSpec specs",
+    "author": "melina5656",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46291",
+    "baseBranch": "main",
+    "headBranch": "fix/RemoveOpenAPIDecorator",
+    "baseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec",
+    "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+    "mergedAt": "2026-10-28T04:06:00Z",
+    "changedTypeSpecFiles": [
+      "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/privateAccess.tsp",
+      "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/models.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/EmailConfigurationModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricAgentModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PolicyModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PrivateEndpointConnection.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ProtectedItemModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ReplicationExtensionModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/VaultModel.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp",
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/main.tsp",
+      "specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI/TopologyResource.tsp",
+      "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedClusterCodeVersionResult.tsp",
+      "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedVMSize.tsp",
+      "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/NodeType.tsp",
+      "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/Operations.tsp",
+      "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+      "specification/support/resource-manager/Microsoft.Support/Support/back-compatible.tsp",
+      "specification/support/resource-manager/Microsoft.Support/Support/models.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46291",
+      "state": "closed",
+      "merged": true,
+      "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+      "baseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec",
+      "runs": {
+        "A": {
+          "id": 40626533086,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+          "status": "completed",
+          "conclusion": "failure",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+          "logDigest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9",
+          "summaryDigest": "c7294f57bccc90c66f4df383844ac1387c18688b6aa3822ae561577fc2b442e4"
+        },
+        "B": {
+          "id": 40626533094,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533094",
+          "logDigest": "dc2d52e637747a4c8648e7791b67ffb3a746dacee141e25e1fb8dc0787e495f4",
+          "summaryDigest": "c48321b5a2dd772dadab12136765b3f0c98273de0b372edf82178295bb3eef0b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/chaos/resource-manager/Microsoft.Chaos/Chaos/privateAccess.tsp",
+        "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/models.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/EmailConfigurationModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricAgentModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/FabricModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PolicyModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/PrivateEndpointConnection.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ProtectedItemModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/ReplicationExtensionModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/VaultModel.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp",
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/main.tsp",
+        "specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI/TopologyResource.tsp",
+        "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedClusterCodeVersionResult.tsp",
+        "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/ManagedVMSize.tsp",
+        "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/NodeType.tsp",
+        "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/Operations.tsp",
+        "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+        "specification/support/resource-manager/Microsoft.Support/Support/back-compatible.tsp",
+        "specification/support/resource-manager/Microsoft.Support/Support/models.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46291",
+      "headSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+      "baseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [
+    {
+      "phase": "A",
+      "project": "specification/support/resource-manager/Microsoft.Support/Support",
+      "baseVersion": "2025-06-01-preview",
+      "headVersion": "2025-06-01-preview"
+    },
+    {
+      "phase": "B",
+      "project": "specification/support/resource-manager/Microsoft.Support/Support",
+      "baseVersion": "2024-04-01",
+      "headVersion": "2025-06-01-preview"
+    }
+  ],
+  "oadFindings": [
+    {
+      "occurrenceId": "A-oad-0",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2024-11-01-preview",
+        "newVersion": "2024-11-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+        "digest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/139c4c0cabf25c50141d048f2d4c9832306d47ec/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2024-11-01-preview/servicefabricmanagedclusters.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-1",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2025-03-01-preview",
+        "newVersion": "2025-03-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+        "digest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/139c4c0cabf25c50141d048f2d4c9832306d47ec/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-03-01-preview/servicefabricmanagedclusters.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-2",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2025-06-01-preview",
+        "newVersion": "2025-06-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+        "digest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/139c4c0cabf25c50141d048f2d4c9832306d47ec/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-06-01-preview/servicefabricmanagedclusters.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-3",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2025-10-01-preview",
+        "newVersion": "2025-10-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+        "digest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/139c4c0cabf25c50141d048f2d4c9832306d47ec/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2025-10-01-preview/servicefabricmanagedclusters.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-4",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json",
+        "oldVersion": "2026-05-01-preview",
+        "newVersion": "2026-05-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+        "digest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/139c4c0cabf25c50141d048f2d4c9832306d47ec/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/preview/2026-05-01-preview/servicefabricmanagedclusters.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-5",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json",
+        "oldVersion": "2026-02-01",
+        "newVersion": "2026-02-01"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+        "digest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/139c4c0cabf25c50141d048f2d4c9832306d47ec/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/stable/2026-02-01/servicefabricmanagedclusters.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-6",
+      "phase": "A",
+      "id": "1001",
+      "rule": "NoVersionChange",
+      "severity": "Info",
+      "message": "The versions have not changed.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "",
+      "newJsonPath": "",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+        "oldVersion": "2025-06-01-preview",
+        "newVersion": "2025-06-01-preview"
+      },
+      "evidence": "{\"id\":\"1001\",\"code\":\"NoVersionChange\",\"message\":\"The versions have not changed.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"\",\"location\":\"<local-path>\"},\"type\":\"Info\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1001.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+        "digest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/139c4c0cabf25c50141d048f2d4c9832306d47ec/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#L1"
+        },
+        {
+          "revision": "head",
+          "path": "specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+          "line": 1,
+          "jsonPath": "",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#L1"
+        }
+      ]
+    },
+    {
+      "occurrenceId": "A-oad-7",
+      "phase": "A",
+      "id": "1017",
+      "rule": "ReferenceRedirection",
+      "severity": "Error",
+      "message": "The '$ref' property points to different models in the old and new versions.",
+      "oldPath": "<local-path>",
+      "newPath": "<local-path>",
+      "oldJsonPath": "definitions.LookUpResourceIdRequest.properties.type",
+      "newJsonPath": "definitions.LookUpResourceIdRequest.properties.type",
+      "comparison": {
+        "phase": "A",
+        "oldPath": "<local-path>",
+        "newPath": "specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+        "oldVersion": "2025-06-01-preview",
+        "newVersion": "2025-06-01-preview"
+      },
+      "evidence": "{\"id\":\"1017\",\"code\":\"ReferenceRedirection\",\"message\":\"The '$ref' property points to different models in the old and new versions.\",\"old\":{\"ref\":\"<local-path>\",\"path\":\"definitions.LookUpResourceIdRequest.properties.type\",\"location\":\"<local-path>\"},\"new\":{\"ref\":\"<local-path>\",\"path\":\"definitions.LookUpResourceIdRequest.properties.type\",\"location\":\"<local-path>\"},\"type\":\"Error\",\"docUrl\":\"https://github.com/Azure/openapi-diff/tree/master/docs/rules/1017.md\",\"mode\":\"Update\"}",
+      "detectorEvidence": {
+        "label": "Swagger breaking-change phase A workflow",
+        "url": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40626533086",
+        "digest": "d12ad6ffb3909f51a2f13ef8493483d2388aaa7363ae753a0c13685007ad33a9"
+      },
+      "sources": [
+        {
+          "revision": "base",
+          "path": "specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+          "line": 2880,
+          "jsonPath": "definitions.LookUpResourceIdRequest.properties.type",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/139c4c0cabf25c50141d048f2d4c9832306d47ec/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#L2880"
+        },
+        {
+          "revision": "head",
+          "path": "specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json",
+          "line": 2878,
+          "jsonPath": "definitions.LookUpResourceIdRequest.properties.type",
+          "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/preview/2025-06-01-preview/support.json#L2878"
+        }
+      ]
+    }
+  ],
+  "typeSpecProjects": [
+    {
+      "project": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/a3a154cb066a5d27-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/a3a154cb066a5d27-phase-a.md",
+          "jsonDigest": "36845dc55150bf577989089bbac8f262178e321cef3a8a72001515bd9a9f9559",
+          "markdownDigest": "b0e384d2d2b22c095a7aec1e924396a88a2795dec7735e14a9cc84464756e536",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3506,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1806,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 5319
+          },
+          "comparisonsPerformed": 3,
+          "versionComparisons": [
+            {
+              "serviceName": "Chaos",
+              "baseVersion": "2025-01-01",
+              "headVersion": "2025-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Chaos",
+              "baseVersion": "2026-05-01-preview",
+              "headVersion": "2026-05-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Chaos",
+              "baseVersion": "2026-08-01-preview",
+              "headVersion": "2026-08-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/a3a154cb066a5d27-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/a3a154cb066a5d27-phase-b.md",
+          "jsonDigest": "a9c459e4069db7706941b2d862ad23c78e8b0471f976b37b21a0c060aba7b7be",
+          "markdownDigest": "e3596b376af32e5eee8fea0dffa8148fbc2d2699708e4c60e7651a3cff755db7",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2964,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1519,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4488
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "74f499aac7cb253104e3a6826745d8c9759b69a11227f84072c6071f0007ca6a",
+      "comparisonsPerformed": 3,
+      "versionComparisons": [
+        {
+          "serviceName": "Chaos",
+          "baseVersion": "2025-01-01",
+          "headVersion": "2025-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Chaos",
+          "baseVersion": "2026-05-01-preview",
+          "headVersion": "2026-05-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Chaos",
+          "baseVersion": "2026-08-01-preview",
+          "headVersion": "2026-08-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/dbe559622b2b80b7-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/dbe559622b2b80b7-phase-a.md",
+          "jsonDigest": "fc770e753a5f71603a5b2473ce38fbe93c7346bf06c47050e15935b62d9bfadb",
+          "markdownDigest": "0f4c3834ebd9fe5ab2ad229fdd7a52102fc639e092d6ab468d7b3f858634d9a2",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 4122,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2406,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 6534
+          },
+          "comparisonsPerformed": 4,
+          "versionComparisons": [
+            {
+              "serviceName": "DBforMySQL",
+              "baseVersion": "2024-12-01-preview",
+              "headVersion": "2024-12-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DBforMySQL",
+              "baseVersion": "2024-12-30",
+              "headVersion": "2024-12-30",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DBforMySQL",
+              "baseVersion": "2025-06-01-preview",
+              "headVersion": "2025-06-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DBforMySQL",
+              "baseVersion": "2025-12-01-preview",
+              "headVersion": "2025-12-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/dbe559622b2b80b7-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/dbe559622b2b80b7-phase-b.md",
+          "jsonDigest": "e888719475c50c429ef2ba4ce0382e58930bbee1cb2bc91712685e72581048b7",
+          "markdownDigest": "de2bf0333b93dd1ef5469abdcfbf7af893c6b1a8565f20dc6c60dc1efbb60607",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 5502,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 3197,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 8706
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "9671fd5f04bcb909548b95655a6740902cd28c67c169ee5f863e80d27051e519",
+      "comparisonsPerformed": 4,
+      "versionComparisons": [
+        {
+          "serviceName": "DBforMySQL",
+          "baseVersion": "2024-12-01-preview",
+          "headVersion": "2024-12-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DBforMySQL",
+          "baseVersion": "2024-12-30",
+          "headVersion": "2024-12-30",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DBforMySQL",
+          "baseVersion": "2025-06-01-preview",
+          "headVersion": "2025-06-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DBforMySQL",
+          "baseVersion": "2025-12-01-preview",
+          "headVersion": "2025-12-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/186101ec6211864a-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/186101ec6211864a-phase-a.md",
+          "jsonDigest": "9833950c102264b6f2841879a4e70dd294b7add4c3689a1863d796271bf539b1",
+          "markdownDigest": "a97511fc76e8061fdf15b46520c057f08e091e7f061447fcd314d32ce0da0d81",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2019,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1549,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3575
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "DataReplication",
+              "baseVersion": "2024-09-01",
+              "headVersion": "2024-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DataReplication",
+              "baseVersion": "2026-05-01",
+              "headVersion": "2026-05-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/186101ec6211864a-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/186101ec6211864a-phase-b.md",
+          "jsonDigest": "c3c730328a28312ca59b83f3a1753720ddec1c82f595c93ada9efb5df4f5db3b",
+          "markdownDigest": "8900b0a95bc7c62a4edee431e9d51798f858691fe48dd8d3617deb906f147e4b",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2026,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1528,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3559
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "6d444957cc51c7567f0f88289d10f21220d36c2e4673e9e1c4299fcd16ef5b83",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "DataReplication",
+          "baseVersion": "2024-09-01",
+          "headVersion": "2024-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DataReplication",
+          "baseVersion": "2026-05-01",
+          "headVersion": "2026-05-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/13a3aae04c515d03-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/13a3aae04c515d03-phase-a.md",
+          "jsonDigest": "f66c581463d6ade548773c424518004034e1fc7d1d399b517b7bdc07c06523b6",
+          "markdownDigest": "4959d610ad43bc964c36c89df37252ea922479f0a225f9165b1680db3c22aab5",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 859,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 294,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 1160
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "SecuritySolutionsAPI",
+              "baseVersion": "2020-01-01",
+              "headVersion": "2020-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/13a3aae04c515d03-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/13a3aae04c515d03-phase-b.md",
+          "jsonDigest": "15fa55a3088123d6d3f4286b1547c66926c42ad5aff2d2b843cf50ca7a76f59f",
+          "markdownDigest": "06ad3700dbba3de01aab83caedcad208b757dffc48f008d700e151ac5e1d851c",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 761,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 281,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 1047
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "819622e70bb803ae9aba140c8d0f486040f2b47e1b41ea9a9875cdd29e51f8fa",
+      "comparisonsPerformed": 1,
+      "versionComparisons": [
+        {
+          "serviceName": "SecuritySolutionsAPI",
+          "baseVersion": "2020-01-01",
+          "headVersion": "2020-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/331c7ace6fed126b-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/331c7ace6fed126b-phase-a.md",
+          "jsonDigest": "fb46362da3ec077123df9439a5ee1ea3847cb6d49d54c91faa1cff79119811f7",
+          "markdownDigest": "06ad672d7d139f987236b5f00af5880b7630a535a5e4ef8179953e8a45f64b17",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 5771,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 4710,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 10488
+          },
+          "comparisonsPerformed": 6,
+          "versionComparisons": [
+            {
+              "serviceName": "ServiceFabric",
+              "baseVersion": "2024-11-01-preview",
+              "headVersion": "2024-11-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ServiceFabric",
+              "baseVersion": "2025-03-01-preview",
+              "headVersion": "2025-03-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ServiceFabric",
+              "baseVersion": "2025-06-01-preview",
+              "headVersion": "2025-06-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ServiceFabric",
+              "baseVersion": "2025-10-01-preview",
+              "headVersion": "2025-10-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ServiceFabric",
+              "baseVersion": "2026-02-01",
+              "headVersion": "2026-02-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "ServiceFabric",
+              "baseVersion": "2026-05-01-preview",
+              "headVersion": "2026-05-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/331c7ace6fed126b-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/331c7ace6fed126b-phase-b.md",
+          "jsonDigest": "65f79120f6c73ee4fc6796498af9779e4e7eb296eecc7bfa4aab6b4c044e1c7c",
+          "markdownDigest": "c04ad51c89ef0d7676b7ab921e9b3d005d4d6625fc880ad1d60954791f777193",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 5794,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 4411,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 10213
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "e75ef454f6bace00210746d63da263275e50929a587c27ffdcbfcdec0b5bd686",
+      "comparisonsPerformed": 6,
+      "versionComparisons": [
+        {
+          "serviceName": "ServiceFabric",
+          "baseVersion": "2024-11-01-preview",
+          "headVersion": "2024-11-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ServiceFabric",
+          "baseVersion": "2025-03-01-preview",
+          "headVersion": "2025-03-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ServiceFabric",
+          "baseVersion": "2025-06-01-preview",
+          "headVersion": "2025-06-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ServiceFabric",
+          "baseVersion": "2025-10-01-preview",
+          "headVersion": "2025-10-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ServiceFabric",
+          "baseVersion": "2026-02-01",
+          "headVersion": "2026-02-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "ServiceFabric",
+          "baseVersion": "2026-05-01-preview",
+          "headVersion": "2026-05-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    },
+    {
+      "project": "specification/support/resource-manager/Microsoft.Support/Support",
+      "status": "complete",
+      "exitCode": 1,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-a.md",
+          "jsonDigest": "65efbac34fd1856f754fb7159a3a73d8eafd02ce813209d3345722e877817878",
+          "markdownDigest": "2153fbec7736331aafa7a4d86a446170fd8baa8127003580197cab61928bec3f",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1590,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 622,
+            "classifyMs": 1,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 2217
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "Support",
+              "baseVersion": "2024-04-01",
+              "headVersion": "2024-04-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Support",
+              "baseVersion": "2025-06-01-preview",
+              "headVersion": "2025-06-01-preview",
+              "phase": "same-version",
+              "findingCount": 1
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 1,
+          "jsonReport": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.md",
+          "jsonDigest": "12933577e4a943491e14801826088f540288ea7da80252cd2f7cca9577fdcc02",
+          "markdownDigest": "854766adc3d2ebcf4b44e4a8f4bf588e1be23e70e0ce23e5a37253edf8007f67",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2376,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 865,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 3250
+          },
+          "comparisonsPerformed": 1,
+          "versionComparisons": [
+            {
+              "serviceName": "Support",
+              "baseVersion": "2024-04-01",
+              "headVersion": "2025-06-01-preview",
+              "phase": "cross-version",
+              "findingCount": 8,
+              "rawFindingCount": 10
+            }
+          ]
+        }
+      },
+      "reportDigest": "fc054b539750f89e58292702fe6afbdb943772253f28305fa1933e630619ae2f",
+      "comparisonsPerformed": 3,
+      "versionComparisons": [
+        {
+          "serviceName": "Support",
+          "baseVersion": "2024-04-01",
+          "headVersion": "2024-04-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Support",
+          "baseVersion": "2025-06-01-preview",
+          "headVersion": "2025-06-01-preview",
+          "phase": "same-version",
+          "findingCount": 1
+        },
+        {
+          "serviceName": "Support",
+          "baseVersion": "2024-04-01",
+          "headVersion": "2025-06-01-preview",
+          "phase": "cross-version",
+          "findingCount": 8,
+          "rawFindingCount": 10
+        }
+      ],
+      "findings": [
+        {
+          "occurrenceId": "specification/support/resource-manager/Microsoft.Support/Support:tsp-A-0",
+          "project": "specification/support/resource-manager/Microsoft.Support/Support",
+          "kind": "RequestPropertyTypeChanged",
+          "rule": "phase-a-any-change",
+          "phase": "same-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request type kind changed at body.properties.type from String to Enum.",
+          "operation": {
+            "method": "POST",
+            "path": "/providers/Microsoft.Support/lookUpResourceId"
+          },
+          "element": "body.properties.type",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.Support.LookUpResourceIdRequest.type",
+          "suppression": {
+            "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeChanged\" })",
+            "placement": "On the declaration: Microsoft.Support.LookUpResourceIdRequest.type",
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "example": "model LookUpResourceIdRequest {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeChanged\" })\n  type: ...;\n}"
+          },
+          "versionPair": {
+            "baseVersion": "2025-06-01-preview",
+            "headVersion": "2025-06-01-preview"
+          },
+          "location": {
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "line": 1066
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec Phase A analyzer report",
+            "url": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-a.md",
+            "digest": "2153fbec7736331aafa7a4d86a446170fd8baa8127003580197cab61928bec3f"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "line": 1066,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/models.tsp#L1066"
+          }
+        },
+        {
+          "occurrenceId": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-0",
+          "project": "specification/support/resource-manager/Microsoft.Support/Support",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'directConnectEscalation' was added at body.properties.properties.directConnectEscalation.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/providers/Microsoft.Support/supportTickets/{}"
+          },
+          "element": "body.properties.properties.directConnectEscalation",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.Support.SupportTicketDetailsProperties.directConnectEscalation",
+          "suppression": {
+            "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+            "placement": "On the declaration: Microsoft.Support.SupportTicketDetailsProperties.directConnectEscalation",
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "example": "model SupportTicketDetailsProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  directConnectEscalation: ...;\n}"
+          },
+          "versionPair": {
+            "baseVersion": "2024-04-01",
+            "headVersion": "2025-06-01-preview"
+          },
+          "location": {
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "line": 632
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.md",
+            "digest": "854766adc3d2ebcf4b44e4a8f4bf588e1be23e70e0ce23e5a37253edf8007f67"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "line": 632,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/models.tsp#L632"
+          }
+        },
+        {
+          "occurrenceId": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-1",
+          "project": "specification/support/resource-manager/Microsoft.Support/Support",
+          "kind": "ResourcePropertyAdded",
+          "rule": "resource-contract-change",
+          "phase": "cross-version",
+          "severity": "error",
+          "suppressed": false,
+          "message": "Request property 'communityForumPost' was added at body.properties.properties.communityForumPost.",
+          "operation": {
+            "method": "PUT",
+            "path": "/subscriptions/{}/providers/Microsoft.Support/supportTickets/{}"
+          },
+          "element": "body.properties.properties.communityForumPost",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.Support.SupportTicketDetailsProperties.communityForumPost",
+          "suppression": {
+            "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+            "placement": "On the declaration: Microsoft.Support.SupportTicketDetailsProperties.communityForumPost",
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "example": "model SupportTicketDetailsProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  communityForumPost: ...;\n}"
+          },
+          "versionPair": {
+            "baseVersion": "2024-04-01",
+            "headVersion": "2025-06-01-preview"
+          },
+          "location": {
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "line": 638
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.md",
+            "digest": "854766adc3d2ebcf4b44e4a8f4bf588e1be23e70e0ce23e5a37253edf8007f67"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "line": 638,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/models.tsp#L638"
+          }
+        },
+        {
+          "occurrenceId": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-3",
+          "project": "specification/support/resource-manager/Microsoft.Support/Support",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation POST /subscriptions/{}/providers/Microsoft.Support/classifyServices was added.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/providers/Microsoft.Support/classifyServices"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.Support.ClassifyServices.classifyServices",
+          "versionPair": {
+            "baseVersion": "2024-04-01",
+            "headVersion": "2025-06-01-preview"
+          },
+          "location": {
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/ServiceClassification.tsp",
+            "line": 25
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.md",
+            "digest": "854766adc3d2ebcf4b44e4a8f4bf588e1be23e70e0ce23e5a37253edf8007f67"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/support/resource-manager/Microsoft.Support/Support/ServiceClassification.tsp",
+            "line": 25,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/ServiceClassification.tsp#L25"
+          }
+        },
+        {
+          "occurrenceId": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-4",
+          "project": "specification/support/resource-manager/Microsoft.Support/Support",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation POST /providers/Microsoft.Support/classifyServices was added.",
+          "operation": {
+            "method": "POST",
+            "path": "/providers/Microsoft.Support/classifyServices"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.Support.ClassifyServicesNoSubscription.classifyServices",
+          "versionPair": {
+            "baseVersion": "2024-04-01",
+            "headVersion": "2025-06-01-preview"
+          },
+          "location": {
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/ServiceClassification.tsp",
+            "line": 42
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.md",
+            "digest": "854766adc3d2ebcf4b44e4a8f4bf588e1be23e70e0ce23e5a37253edf8007f67"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/support/resource-manager/Microsoft.Support/Support/ServiceClassification.tsp",
+            "line": 42,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/ServiceClassification.tsp#L42"
+          }
+        },
+        {
+          "occurrenceId": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-5",
+          "project": "specification/support/resource-manager/Microsoft.Support/Support",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation POST /subscriptions/{}/providers/Microsoft.Support/services/{}/classifyProblems was added.",
+          "operation": {
+            "method": "POST",
+            "path": "/subscriptions/{}/providers/Microsoft.Support/services/{}/classifyProblems"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.Support.ClassifyProblems.classifyProblems",
+          "versionPair": {
+            "baseVersion": "2024-04-01",
+            "headVersion": "2025-06-01-preview"
+          },
+          "location": {
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+            "line": 26
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.md",
+            "digest": "854766adc3d2ebcf4b44e4a8f4bf588e1be23e70e0ce23e5a37253edf8007f67"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+            "line": 26,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp#L26"
+          }
+        },
+        {
+          "occurrenceId": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-6",
+          "project": "specification/support/resource-manager/Microsoft.Support/Support",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation POST /providers/Microsoft.Support/services/{}/classifyProblems was added.",
+          "operation": {
+            "method": "POST",
+            "path": "/providers/Microsoft.Support/services/{}/classifyProblems"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.Support.ClassifyProblemsNoSubscription.classifyProblems",
+          "versionPair": {
+            "baseVersion": "2024-04-01",
+            "headVersion": "2025-06-01-preview"
+          },
+          "location": {
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+            "line": 52
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.md",
+            "digest": "854766adc3d2ebcf4b44e4a8f4bf588e1be23e70e0ce23e5a37253edf8007f67"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+            "line": 52,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp#L52"
+          }
+        },
+        {
+          "occurrenceId": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-7",
+          "project": "specification/support/resource-manager/Microsoft.Support/Support",
+          "kind": "OperationAdded",
+          "rule": "operation-lifecycle",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Operation POST /providers/Microsoft.Support/lookUpResourceId was added.",
+          "operation": {
+            "method": "POST",
+            "path": "/providers/Microsoft.Support/lookUpResourceId"
+          },
+          "element": "",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.Support.SupportTickets.lookUpResourceId",
+          "versionPair": {
+            "baseVersion": "2024-04-01",
+            "headVersion": "2025-06-01-preview"
+          },
+          "location": {
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp",
+            "line": 130
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.md",
+            "digest": "854766adc3d2ebcf4b44e4a8f4bf588e1be23e70e0ce23e5a37253edf8007f67"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp",
+            "line": 130,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L130"
+          }
+        },
+        {
+          "occurrenceId": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-8",
+          "project": "specification/support/resource-manager/Microsoft.Support/Support",
+          "kind": "RequestPropertyAdded",
+          "rule": "request-widening",
+          "phase": "cross-version",
+          "severity": "ignore",
+          "suppressed": false,
+          "message": "Request property 'directConnectEscalation' was added at body.properties.directConnectEscalation.",
+          "operation": {
+            "method": "PATCH",
+            "path": "/subscriptions/{}/providers/Microsoft.Support/supportTickets/{}"
+          },
+          "element": "body.properties.directConnectEscalation",
+          "component": "request",
+          "sourceTraceLevel": "direct",
+          "sourceElementPath": "Microsoft.Support.UpdateSupportTicket.directConnectEscalation",
+          "versionPair": {
+            "baseVersion": "2024-04-01",
+            "headVersion": "2025-06-01-preview"
+          },
+          "location": {
+            "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "line": 822
+          },
+          "detectorEvidence": {
+            "label": "TypeSpec combined analyzer report containing Phase B",
+            "url": "report-artifacts/typespec/fe57f17c4f29fd3b-phase-b.md",
+            "digest": "854766adc3d2ebcf4b44e4a8f4bf588e1be23e70e0ce23e5a37253edf8007f67"
+          },
+          "source": {
+            "revision": "head",
+            "path": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+            "line": 822,
+            "url": "https://github.com/Azure/azure-rest-api-specs/blob/67e7950b49eba5420ef463e8e65b025fb23d5dae/specification/support/resource-manager/Microsoft.Support/Support/models.tsp#L822"
+          }
+        }
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "oadOccurrenceId": "A-oad-0",
+      "target": {
+        "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2024-11-01-preview\\servicefabricmanagedclusters.json",
+        "project": "specification/servicefabricmanagedclusters/resource-manager",
+        "phase": "A",
+        "baseVersion": "2024-11-01-preview",
+        "headVersion": "2024-11-01-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document servicefabricmanagedclusters.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2024-11-01-preview\\servicefabricmanagedclusters.json",
+          "project": "specification/servicefabricmanagedclusters/resource-manager",
+          "phase": "A",
+          "baseVersion": "2024-11-01-preview",
+          "headVersion": "2024-11-01-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document servicefabricmanagedclusters.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-1",
+      "target": {
+        "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2025-03-01-preview\\servicefabricmanagedclusters.json",
+        "project": "specification/servicefabricmanagedclusters/resource-manager",
+        "phase": "A",
+        "baseVersion": "2025-03-01-preview",
+        "headVersion": "2025-03-01-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document servicefabricmanagedclusters.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2025-03-01-preview\\servicefabricmanagedclusters.json",
+          "project": "specification/servicefabricmanagedclusters/resource-manager",
+          "phase": "A",
+          "baseVersion": "2025-03-01-preview",
+          "headVersion": "2025-03-01-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document servicefabricmanagedclusters.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-2",
+      "target": {
+        "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2025-06-01-preview\\servicefabricmanagedclusters.json",
+        "project": "specification/servicefabricmanagedclusters/resource-manager",
+        "phase": "A",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document servicefabricmanagedclusters.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2025-06-01-preview\\servicefabricmanagedclusters.json",
+          "project": "specification/servicefabricmanagedclusters/resource-manager",
+          "phase": "A",
+          "baseVersion": "2025-06-01-preview",
+          "headVersion": "2025-06-01-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document servicefabricmanagedclusters.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-3",
+      "target": {
+        "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2025-10-01-preview\\servicefabricmanagedclusters.json",
+        "project": "specification/servicefabricmanagedclusters/resource-manager",
+        "phase": "A",
+        "baseVersion": "2025-10-01-preview",
+        "headVersion": "2025-10-01-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document servicefabricmanagedclusters.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2025-10-01-preview\\servicefabricmanagedclusters.json",
+          "project": "specification/servicefabricmanagedclusters/resource-manager",
+          "phase": "A",
+          "baseVersion": "2025-10-01-preview",
+          "headVersion": "2025-10-01-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document servicefabricmanagedclusters.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-4",
+      "target": {
+        "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2026-05-01-preview\\servicefabricmanagedclusters.json",
+        "project": "specification/servicefabricmanagedclusters/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-05-01-preview",
+        "headVersion": "2026-05-01-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document servicefabricmanagedclusters.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\preview\\2026-05-01-preview\\servicefabricmanagedclusters.json",
+          "project": "specification/servicefabricmanagedclusters/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-05-01-preview",
+          "headVersion": "2026-05-01-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document servicefabricmanagedclusters.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-5",
+      "target": {
+        "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\stable\\2026-02-01\\servicefabricmanagedclusters.json",
+        "project": "specification/servicefabricmanagedclusters/resource-manager",
+        "phase": "A",
+        "baseVersion": "2026-02-01",
+        "headVersion": "2026-02-01",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document servicefabricmanagedclusters.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\servicefabricmanagedclusters\\resource-manager\\Microsoft.ServiceFabric\\ServiceFabricManagedClusters\\stable\\2026-02-01\\servicefabricmanagedclusters.json",
+          "project": "specification/servicefabricmanagedclusters/resource-manager",
+          "phase": "A",
+          "baseVersion": "2026-02-01",
+          "headVersion": "2026-02-01",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document servicefabricmanagedclusters.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-6",
+      "target": {
+        "spec": "specification\\support\\resource-manager\\Microsoft.Support\\Support\\preview\\2025-06-01-preview\\support.json",
+        "project": "specification/support/resource-manager",
+        "phase": "A",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "evidence": [
+          "OAD rule NoVersionChange",
+          "JSON path ",
+          "No terminal reference",
+          "Document support.json"
+        ]
+      },
+      "targets": [
+        {
+          "spec": "specification\\support\\resource-manager\\Microsoft.Support\\Support\\preview\\2025-06-01-preview\\support.json",
+          "project": "specification/support/resource-manager",
+          "phase": "A",
+          "baseVersion": "2025-06-01-preview",
+          "headVersion": "2025-06-01-preview",
+          "evidence": [
+            "OAD rule NoVersionChange",
+            "JSON path ",
+            "No terminal reference",
+            "Document support.json"
+          ]
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "informational-oad",
+      "reviewRequired": false
+    },
+    {
+      "oadOccurrenceId": "A-oad-7",
+      "target": {
+        "spec": "specification\\support\\resource-manager\\Microsoft.Support\\Support\\preview\\2025-06-01-preview\\support.json",
+        "project": "specification/support/resource-manager",
+        "phase": "A",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "direction": "request",
+        "propertyPath": [
+          "type"
+        ],
+        "schema": "ResourceType",
+        "declaration": "ResourceType",
+        "evidence": [
+          "OAD rule ReferenceRedirection",
+          "JSON path definitions.LookUpResourceIdRequest.properties.type",
+          "Resolved reference #/definitions/ResourceType",
+          "Expanded shared schema ResourceType to operation usage"
+        ],
+        "method": "POST",
+        "route": "/providers/microsoft.support/lookupresourceid",
+        "operationId": "LookUpResourceId_Post"
+      },
+      "targets": [
+        {
+          "spec": "specification\\support\\resource-manager\\Microsoft.Support\\Support\\preview\\2025-06-01-preview\\support.json",
+          "project": "specification/support/resource-manager",
+          "phase": "A",
+          "baseVersion": "2025-06-01-preview",
+          "headVersion": "2025-06-01-preview",
+          "direction": "request",
+          "propertyPath": [
+            "type"
+          ],
+          "schema": "ResourceType",
+          "declaration": "ResourceType",
+          "evidence": [
+            "OAD rule ReferenceRedirection",
+            "JSON path definitions.LookUpResourceIdRequest.properties.type",
+            "Resolved reference #/definitions/ResourceType",
+            "Expanded shared schema ResourceType to operation usage"
+          ],
+          "method": "POST",
+          "route": "/providers/microsoft.support/lookupresourceid",
+          "operationId": "LookUpResourceId_Post"
+        }
+      ],
+      "candidates": [],
+      "selectedTypeSpecOccurrenceIds": [],
+      "category": "intentional-swagger-only",
+      "reviewRequired": false
+    }
+  ],
+  "findingGroups": [
+    {
+      "category": "informational-oad",
+      "key": "NoVersionChange",
+      "swaggerRule": "NoVersionChange",
+      "oadOccurrenceIds": [
+        "A-oad-0",
+        "A-oad-1",
+        "A-oad-2",
+        "A-oad-3",
+        "A-oad-4",
+        "A-oad-5",
+        "A-oad-6"
+      ],
+      "typeSpecOccurrenceIds": []
+    },
+    {
+      "category": "intentional-swagger-only",
+      "key": "ReferenceRedirection",
+      "swaggerRule": "ReferenceRedirection",
+      "oadOccurrenceIds": [
+        "A-oad-7"
+      ],
+      "typeSpecOccurrenceIds": []
+    },
+    {
+      "category": "typespec-only",
+      "key": "OperationAdded",
+      "typeSpecKind": "OperationAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-3",
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-4",
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-5",
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-6",
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-7"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "RequestPropertyAdded",
+      "typeSpecKind": "RequestPropertyAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-8"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "RequestPropertyTypeChanged",
+      "typeSpecKind": "RequestPropertyTypeChanged",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-A-0"
+      ]
+    },
+    {
+      "category": "typespec-only",
+      "key": "ResourcePropertyAdded",
+      "typeSpecKind": "ResourcePropertyAdded",
+      "oadOccurrenceIds": [],
+      "typeSpecOccurrenceIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-0",
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-1"
+      ]
+    }
+  ],
+  "issueAnalyses": [
+    {
+      "id": "issue-oad-only-d5bb2f6c37da16fd",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [
+        "A-oad-7"
+      ],
+      "category": "oad-only",
+      "conclusion": "likely-expected-difference",
+      "confidence": "medium",
+      "rationale": "OAD finding has evaluator classification 'intentional-swagger-only' and no selected TypeSpec equivalent.",
+      "evidence": [
+        {
+          "kind": "oad-finding",
+          "id": "A-oad-7",
+          "detail": "ReferenceRedirection: The '$ref' property points to different models in the old and new versions."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to OAD-only or missed-equivalent totals.",
+      "suggestedFix": "Review detector coverage and the canonical target mapping.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-09ed0ea07b00edd3",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-5"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-5",
+          "detail": "OperationAdded: Operation POST /subscriptions/{}/providers/Microsoft.Support/services/{}/classifyProblems was added."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-0a7ad48622e5dec7",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-6"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-6",
+          "detail": "OperationAdded: Operation POST /providers/Microsoft.Support/services/{}/classifyProblems was added."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-0ae90cf2115558f0",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-0"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-0",
+          "detail": "ResourcePropertyAdded: Request property 'directConnectEscalation' was added at body.properties.properties.directConnectEscalation."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-299055c37a6f6e83",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-4"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-4",
+          "detail": "OperationAdded: Operation POST /providers/Microsoft.Support/classifyServices was added."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-2db5e1aadb6edab9",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-7"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-7",
+          "detail": "OperationAdded: Operation POST /providers/Microsoft.Support/lookUpResourceId was added."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-53634e912dfbd18f",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-3"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-3",
+          "detail": "OperationAdded: Operation POST /subscriptions/{}/providers/Microsoft.Support/classifyServices was added."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-9d29db8125879745",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-8"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-8",
+          "detail": "RequestPropertyAdded: Request property 'directConnectEscalation' was added at body.properties.directConnectEscalation."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-a2ee2e04283eda21",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-A-0"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/support/resource-manager/Microsoft.Support/Support:tsp-A-0",
+          "detail": "RequestPropertyTypeChanged: Request type kind changed at body.properties.type from String to Enum."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-typespec-only-de15ac37cec69dd5",
+      "affectedPrs": [
+        46291
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [
+        "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-1"
+      ],
+      "category": "typespec-only",
+      "conclusion": "requires-review",
+      "confidence": "medium",
+      "rationale": "The TypeSpec finding has no selected OAD equivalent.",
+      "evidence": [
+        {
+          "kind": "typespec-finding",
+          "id": "specification/support/resource-manager/Microsoft.Support/Support:tsp-B-1",
+          "detail": "ResourcePropertyAdded: Request property 'communityForumPost' was added at body.properties.properties.communityForumPost."
+        }
+      ],
+      "aggregateImpact": "Contributes one finding to TypeSpec-only totals.",
+      "suggestedFix": "Confirm whether this is additional coverage, noise, or a matching gap.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "67e7950b49eba5420ef463e8e65b025fb23d5dae",
+    "prBaseSha": "139c4c0cabf25c50141d048f2d4c9832306d47ec",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 139c4c0cabf25c50141d048f2d4c9832306d47ec 67e7950b49eba5420ef463e8e65b025fb23d5dae\ngit -C target checkout --detach 67e7950b49eba5420ef463e8e65b025fb23d5dae\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/46291' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/chaos/resource-manager/Microsoft.Chaos/Chaos",
+        "project": "specification/chaos/resource-manager/Microsoft.Chaos/Chaos",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/chaos/resource-manager/Microsoft.Chaos/Chaos' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --phase same-version --json-output '../specification-chaos-resource-manager-Microsoft.Chaos-Chaos-phase-a.json' --markdown-output '../specification-chaos-resource-manager-Microsoft.Chaos-Chaos-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/chaos/resource-manager/Microsoft.Chaos/Chaos' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --json-output '../specification-chaos-resource-manager-Microsoft.Chaos-Chaos-phase-b-evidence.json' --markdown-output '../specification-chaos-resource-manager-Microsoft.Chaos-Chaos-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers",
+        "project": "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --phase same-version --json-output '../specification-mysql-resource-manager-Microsoft.DBforMySQL-FlexibleServers-phase-a.json' --markdown-output '../specification-mysql-resource-manager-Microsoft.DBforMySQL-FlexibleServers-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --json-output '../specification-mysql-resource-manager-Microsoft.DBforMySQL-FlexibleServers-phase-b-evidence.json' --markdown-output '../specification-mysql-resource-manager-Microsoft.DBforMySQL-FlexibleServers-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication",
+        "project": "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --phase same-version --json-output '../specification-recoveryservicesdatareplication-resource-manager-Microsoft.DataReplication-DataReplication-phase-a.json' --markdown-output '../specification-recoveryservicesdatareplication-resource-manager-Microsoft.DataReplication-DataReplication-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --json-output '../specification-recoveryservicesdatareplication-resource-manager-Microsoft.DataReplication-DataReplication-phase-b-evidence.json' --markdown-output '../specification-recoveryservicesdatareplication-resource-manager-Microsoft.DataReplication-DataReplication-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI",
+        "project": "specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --phase same-version --json-output '../specification-security-resource-manager-Microsoft.Security-Security-SecuritySolutionsAPI-phase-a.json' --markdown-output '../specification-security-resource-manager-Microsoft.Security-Security-SecuritySolutionsAPI-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/security/resource-manager/Microsoft.Security/Security/SecuritySolutionsAPI' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --json-output '../specification-security-resource-manager-Microsoft.Security-Security-SecuritySolutionsAPI-phase-b-evidence.json' --markdown-output '../specification-security-resource-manager-Microsoft.Security-Security-SecuritySolutionsAPI-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters",
+        "project": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --phase same-version --json-output '../specification-servicefabricmanagedclusters-resource-manager-Microsoft.ServiceFabric-ServiceFabricManagedClusters-phase-a.json' --markdown-output '../specification-servicefabricmanagedclusters-resource-manager-Microsoft.ServiceFabric-ServiceFabricManagedClusters-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --json-output '../specification-servicefabricmanagedclusters-resource-manager-Microsoft.ServiceFabric-ServiceFabricManagedClusters-phase-b-evidence.json' --markdown-output '../specification-servicefabricmanagedclusters-resource-manager-Microsoft.ServiceFabric-ServiceFabricManagedClusters-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      },
+      {
+        "label": "Run the TypeSpec analyzer for specification/support/resource-manager/Microsoft.Support/Support",
+        "project": "specification/support/resource-manager/Microsoft.Support/Support",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/support/resource-manager/Microsoft.Support/Support' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --phase same-version --json-output '../specification-support-resource-manager-Microsoft.Support-Support-phase-a.json' --markdown-output '../specification-support-resource-manager-Microsoft.Support-Support-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/support/resource-manager/Microsoft.Support/Support' --base-ref 139c4c0cabf25c50141d048f2d4c9832306d47ec --json-output '../specification-support-resource-manager-Microsoft.Support-Support-phase-b-evidence.json' --markdown-output '../specification-support-resource-manager-Microsoft.Support-Support-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 1,
+    "oadInformational": 7,
+    "typeSpecTotal": 9,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 1,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 9,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 1,
+        "oadInformational": 7,
+        "typeSpecTotal": 1,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 1,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 1,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "compared"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 8,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 8,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "typespec-only-divergence"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 1,
+        "typeSpecErrors": 1,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 1,
+        "typeSpecErrorsWithoutEquivalent": 1
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 2,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 2
+      }
+    }
+  }
+}

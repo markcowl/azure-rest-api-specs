@@ -1,0 +1,290 @@
+{
+  "specPaths": [
+    "specification/support/resource-manager/Microsoft.Support/Support"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 3,
+    "suppressed": 0,
+    "ignored": 6,
+    "totalFindings": 9,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 3,
+    "versionComparisons": [
+      {
+        "serviceName": "Support",
+        "baseVersion": "2024-04-01",
+        "headVersion": "2024-04-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Support",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 1
+      },
+      {
+        "serviceName": "Support",
+        "baseVersion": "2024-04-01",
+        "headVersion": "2025-06-01-preview",
+        "phase": "cross-version",
+        "findingCount": 8,
+        "rawFindingCount": 10
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'directConnectEscalation' was added at body.properties.properties.directConnectEscalation.",
+      "element": "body.properties.properties.directConnectEscalation",
+      "versionPair": {
+        "baseVersion": "2024-04-01",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+        "line": 632
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.SupportTicketDetailsProperties.directConnectEscalation",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/providers/Microsoft.Support/supportTickets/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Support.SupportTicketDetailsProperties.directConnectEscalation",
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+        "example": "model SupportTicketDetailsProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  directConnectEscalation: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyAdded",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'communityForumPost' was added at body.properties.properties.communityForumPost.",
+      "element": "body.properties.properties.communityForumPost",
+      "versionPair": {
+        "baseVersion": "2024-04-01",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+        "line": 638
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.SupportTicketDetailsProperties.communityForumPost",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/providers/Microsoft.Support/supportTickets/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })",
+        "placement": "On the declaration: Microsoft.Support.SupportTicketDetailsProperties.communityForumPost",
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+        "example": "model SupportTicketDetailsProperties {\n  @approvedBreakingChange(\"your reason here\", #{ kind: \"ResourcePropertyAdded\" })\n  communityForumPost: ...;\n}"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeChanged",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request type kind changed at body.properties.type from String to Enum.",
+      "element": "body.properties.type",
+      "versionPair": {
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+        "line": 1066
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.LookUpResourceIdRequest.type",
+      "operation": {
+        "method": "POST",
+        "path": "/providers/Microsoft.Support/lookUpResourceId"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeChanged\" })",
+        "placement": "On the declaration: Microsoft.Support.LookUpResourceIdRequest.type",
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+        "example": "model LookUpResourceIdRequest {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeChanged\" })\n  type: ...;\n}"
+      }
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /subscriptions/{}/providers/Microsoft.Support/classifyServices was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-04-01",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/ServiceClassification.tsp",
+        "line": 25
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.ClassifyServices.classifyServices",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/providers/Microsoft.Support/classifyServices"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /providers/Microsoft.Support/classifyServices was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-04-01",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/ServiceClassification.tsp",
+        "line": 42
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.ClassifyServicesNoSubscription.classifyServices",
+      "operation": {
+        "method": "POST",
+        "path": "/providers/Microsoft.Support/classifyServices"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /subscriptions/{}/providers/Microsoft.Support/services/{}/classifyProblems was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-04-01",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+        "line": 26
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.ClassifyProblems.classifyProblems",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/providers/Microsoft.Support/services/{}/classifyProblems"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /providers/Microsoft.Support/services/{}/classifyProblems was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-04-01",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/ProblemClassification.tsp",
+        "line": 52
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.ClassifyProblemsNoSubscription.classifyProblems",
+      "operation": {
+        "method": "POST",
+        "path": "/providers/Microsoft.Support/services/{}/classifyProblems"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "OperationAdded",
+      "severity": "ignore",
+      "rule": "operation-lifecycle",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Operation POST /providers/Microsoft.Support/lookUpResourceId was added.",
+      "element": "",
+      "versionPair": {
+        "baseVersion": "2024-04-01",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp",
+        "line": 130
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.SupportTickets.lookUpResourceId",
+      "operation": {
+        "method": "POST",
+        "path": "/providers/Microsoft.Support/lookUpResourceId"
+      },
+      "component": "request"
+    },
+    {
+      "kind": "RequestPropertyAdded",
+      "severity": "ignore",
+      "rule": "request-widening",
+      "phase": "cross-version",
+      "suppressed": false,
+      "message": "Request property 'directConnectEscalation' was added at body.properties.directConnectEscalation.",
+      "element": "body.properties.directConnectEscalation",
+      "versionPair": {
+        "baseVersion": "2024-04-01",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+        "line": 822
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.UpdateSupportTicket.directConnectEscalation",
+      "operation": {
+        "method": "PATCH",
+        "path": "/subscriptions/{}/providers/Microsoft.Support/supportTickets/{}"
+      },
+      "component": "request"
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 2376,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 865,
+    "classifyMs": 0,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 3250
+  }
+}

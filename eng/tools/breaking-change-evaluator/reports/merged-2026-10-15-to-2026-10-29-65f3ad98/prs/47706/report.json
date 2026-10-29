@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47706:397e622eac65701593a8b4d9b29e4ae5f94779ae"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47706,
+    "title": "[InferenceService] Promote semantic reranking API to GA (2026-10-30)",
+    "author": "aayush3011",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47706",
+    "baseBranch": "main",
+    "headBranch": "users/akataria/semanticRerankerGA",
+    "baseSha": "7aa1ea88a08c6b12cabd943ad441fcebc26988a4",
+    "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+    "mergedAt": "2026-10-28T19:07:22Z",
+    "changedTypeSpecFiles": [
+      "specification/inferenceservice/data-plane/InferenceService/main.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47706",
+      "state": "closed",
+      "merged": true,
+      "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+      "baseSha": "7aa1ea88a08c6b12cabd943ad441fcebc26988a4",
+      "runs": {
+        "A": {
+          "id": 40746903231,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40746903231",
+          "logDigest": "95aec6a582bcb1197119d673851616ed69d9ddf8e88205da7474cf1ea531815f",
+          "summaryDigest": "90aa4a81cf815a9f10ff14d0e033c171d58ccb27f1101e2158ce1e13a2fefc01"
+        },
+        "B": {
+          "id": 40746901834,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40746901834",
+          "logDigest": "e20b05b6d55c8373551df4e712506743848d8db02accc472f49c5a4c3c41dc1a",
+          "summaryDigest": "53d703b360d491d011adb83cc94c8bf7891a27138efcb2bc579c385c81cd027b"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/inferenceservice/data-plane/InferenceService/main.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47706",
+      "headSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+      "baseSha": "7aa1ea88a08c6b12cabd943ad441fcebc26988a4"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/inferenceservice/data-plane/InferenceService",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/0cd08e7a329af42e-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/0cd08e7a329af42e-phase-a.md",
+          "jsonDigest": "981a9e57a1b3c187adcd84a993beceaee0989f2c063e5c5120b107e482b4a4b0",
+          "markdownDigest": "918eef0fe81fae679e23b923b75ef680c373bbb51149c21767d8f0704e712779",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Phase A (same-version) requires a base program for comparison. Use analyzeBaseAndHead() instead."
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/0cd08e7a329af42e-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/0cd08e7a329af42e-phase-b.md",
+          "jsonDigest": "945ade8cd210c09762c01832b1fb67a4eacc1ff95d8e69822bca55062d017f31",
+          "markdownDigest": "330a14a09a297b1e0635cd97a87b86116886fc89e6d04623fe82df978a789cd0",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 5
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "No cross-version comparisons needed: no comparisons to stable versions needed."
+        }
+      },
+      "reportDigest": "f352ab3d562843079f2c0fb647053d7a6d4ecc17c1c421bfba4bd8afb469117b",
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-3f4949cf0657280d",
+      "affectedPrs": [
+        47706
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-a10dc883086974f4",
+      "affectedPrs": [
+        47706
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "397e622eac65701593a8b4d9b29e4ae5f94779ae",
+    "prBaseSha": "7aa1ea88a08c6b12cabd943ad441fcebc26988a4",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 7aa1ea88a08c6b12cabd943ad441fcebc26988a4 397e622eac65701593a8b4d9b29e4ae5f94779ae\ngit -C target checkout --detach 397e622eac65701593a8b4d9b29e4ae5f94779ae\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47706' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/inferenceservice/data-plane/InferenceService",
+        "project": "specification/inferenceservice/data-plane/InferenceService",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/inferenceservice/data-plane/InferenceService' --base-ref 7aa1ea88a08c6b12cabd943ad441fcebc26988a4 --phase same-version --json-output '../specification-inferenceservice-data-plane-InferenceService-phase-a.json' --markdown-output '../specification-inferenceservice-data-plane-InferenceService-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/inferenceservice/data-plane/InferenceService' --base-ref 7aa1ea88a08c6b12cabd943ad441fcebc26988a4 --json-output '../specification-inferenceservice-data-plane-InferenceService-phase-b-evidence.json' --markdown-output '../specification-inferenceservice-data-plane-InferenceService-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

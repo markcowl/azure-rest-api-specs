@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47726:f6fdff216e92e19b2f9cbde50fd507525912de72"
+  },
+  "status": "partial",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47726,
+    "title": "Remove Network API-version pins for .NET SDK emitters",
+    "author": "ArcturusZhang",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47726",
+    "baseBranch": "main",
+    "headBranch": "arcturuszhang-remove-network-api-version-pins",
+    "baseSha": "35a34321b9738f30959b2a9d40a40459c2f8dc48",
+    "headSha": "f6fdff216e92e19b2f9cbde50fd507525912de72",
+    "mergedAt": "2026-10-29T03:47:51Z",
+    "changedTypeSpecFiles": [
+      "specification/network/resource-manager/Microsoft.Network/Network/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47726",
+      "state": "closed",
+      "merged": true,
+      "headSha": "f6fdff216e92e19b2f9cbde50fd507525912de72",
+      "baseSha": "35a34321b9738f30959b2a9d40a40459c2f8dc48",
+      "runs": {
+        "A": {
+          "id": 40808457688,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "f6fdff216e92e19b2f9cbde50fd507525912de72",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40808457688",
+          "logDigest": "779d5a79879965d873b8d94a29a24b57071265f4e5037e4eff2736e55dfed37b",
+          "summaryDigest": "67e411995d273f70b6bc1b0ea642a55bad1fef8ec3536fada3307779d6c7520d"
+        },
+        "B": {
+          "id": 40808457604,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "f6fdff216e92e19b2f9cbde50fd507525912de72",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40808457604",
+          "logDigest": "51df6322945fb54d04205474417e1035777412b00d845ec0e012e67bea5f7dbf",
+          "summaryDigest": "d813ed2e90dfdcf13c5f56ee252df472a33c2180f05504a38dccb882cd601216"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/network/resource-manager/Microsoft.Network/Network/tspconfig.yaml"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47726",
+      "headSha": "f6fdff216e92e19b2f9cbde50fd507525912de72",
+      "baseSha": "35a34321b9738f30959b2a9d40a40459c2f8dc48"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/network/resource-manager/Microsoft.Network/Network",
+      "status": "error",
+      "exitCode": 2,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/5c965f57f5360abe-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/5c965f57f5360abe-phase-a.md",
+          "error": "Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "error",
+          "exitCode": 2,
+          "jsonReport": "report-artifacts/typespec/5c965f57f5360abe-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/5c965f57f5360abe-phase-b.md",
+          "error": "Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      },
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": [],
+      "error": "Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-compile-runtime-failure-67023476d2def5d9",
+      "affectedPrs": [
+        47726
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "compile-runtime-failure",
+      "conclusion": "execution-failure",
+      "confidence": "high",
+      "rationale": "One or more evaluator, compile, or analyzer executions failed.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "execution-error-0",
+          "detail": "specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        },
+        {
+          "kind": "execution",
+          "id": "execution-error-1",
+          "detail": "Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+        }
+      ],
+      "aggregateImpact": "Preserves a partial or failed outcome instead of success-shaped metrics.",
+      "suggestedFix": "Resolve the recorded execution error and rerun the same immutable input.",
+      "status": "generated"
+    }
+  ],
+  "errors": [
+    "specification/network/resource-manager/Microsoft.Network/Network: Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n; Analysis failed: Failed to compile the base revision (35a34321b9738f30959b2a9d40a40459c2f8dc48): 1 error(s) found:\n  error file-not-found: File <local-path>\n"
+  ],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "f6fdff216e92e19b2f9cbde50fd507525912de72",
+    "prBaseSha": "35a34321b9738f30959b2a9d40a40459c2f8dc48",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 35a34321b9738f30959b2a9d40a40459c2f8dc48 f6fdff216e92e19b2f9cbde50fd507525912de72\ngit -C target checkout --detach f6fdff216e92e19b2f9cbde50fd507525912de72\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47726' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/network/resource-manager/Microsoft.Network/Network",
+        "project": "specification/network/resource-manager/Microsoft.Network/Network",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network' --base-ref 35a34321b9738f30959b2a9d40a40459c2f8dc48 --phase same-version --json-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-a.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/network/resource-manager/Microsoft.Network/Network' --base-ref 35a34321b9738f30959b2a9d40a40459c2f8dc48 --json-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-b-evidence.json' --markdown-output '../specification-network-resource-manager-Microsoft.Network-Network-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  }
+}

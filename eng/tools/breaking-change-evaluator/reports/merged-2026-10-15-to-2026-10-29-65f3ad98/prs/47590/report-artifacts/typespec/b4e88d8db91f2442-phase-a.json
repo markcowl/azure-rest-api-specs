@@ -1,0 +1,48 @@
+{
+  "specPaths": [
+    "specification/resourceconnector/resource-manager/Microsoft.ResourceConnector/ResourceConnector"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "ResourceConnector",
+        "baseVersion": "2022-10-27",
+        "headVersion": "2022-10-27",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "ResourceConnector",
+        "baseVersion": "2025-03-01-preview",
+        "headVersion": "2025-03-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 706,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 183,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 893
+  }
+}

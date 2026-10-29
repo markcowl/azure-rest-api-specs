@@ -1,0 +1,79 @@
+{
+  "specPaths": [
+    "specification/support/resource-manager/Microsoft.Support/Support"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 1,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 1,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 2,
+    "phase": "same-version",
+    "versionComparisons": [
+      {
+        "serviceName": "Support",
+        "baseVersion": "2024-04-01",
+        "headVersion": "2024-04-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Support",
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 1
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "RequestPropertyTypeChanged",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request type kind changed at body.properties.type from String to Enum.",
+      "element": "body.properties.type",
+      "versionPair": {
+        "baseVersion": "2025-06-01-preview",
+        "headVersion": "2025-06-01-preview"
+      },
+      "location": {
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+        "line": 1066
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Support.LookUpResourceIdRequest.type",
+      "operation": {
+        "method": "POST",
+        "path": "/providers/Microsoft.Support/lookUpResourceId"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeChanged\" })",
+        "placement": "On the declaration: Microsoft.Support.LookUpResourceIdRequest.type",
+        "file": "specification/support/resource-manager/Microsoft.Support/Support/models.tsp",
+        "example": "model LookUpResourceIdRequest {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeChanged\" })\n  type: ...;\n}"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 1590,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 622,
+    "classifyMs": 1,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 2217
+  }
+}

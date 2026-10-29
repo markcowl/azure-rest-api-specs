@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47690:e96507db9f32634bb4e008d2faba08798960d2c4"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47690,
+    "title": "Preserve Python DataReplication request parameter compatibility",
+    "author": "msyyc",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47690",
+    "baseBranch": "main",
+    "headBranch": "fix/datareplication-python-parameter-compat",
+    "baseSha": "1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd",
+    "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+    "mergedAt": "2026-10-28T06:17:30Z",
+    "changedTypeSpecFiles": [
+      "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47690",
+      "state": "closed",
+      "merged": true,
+      "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+      "baseSha": "1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd",
+      "runs": {
+        "A": {
+          "id": 40639661066,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40639661066",
+          "logDigest": "929fb7b4700c82950df89cfd05d0e75346cc9100e08850fab9c10f500ae6740d",
+          "summaryDigest": "2d3355170811b6761911a024ed0577d44a94d8cb04009031d1669b32a1eb3513"
+        },
+        "B": {
+          "id": 40639661008,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40639661008",
+          "logDigest": "8ffac4a2dd3fc351783d24ea9eb910567d93c2e02b22be216b17bc185588a301",
+          "summaryDigest": "d2fa76e7d88c2a4968c1f8949f3296fe26fbf9f6bc9388047ec8858edd2943e1"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/back-compatible.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47690",
+      "headSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+      "baseSha": "1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/186101ec6211864a-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/186101ec6211864a-phase-a.md",
+          "jsonDigest": "f9c1280e0c9f8530404243ae43007526aec142ca0428c96c09b47b87096e9ff5",
+          "markdownDigest": "abaaed0b1d2ca152719853eb274c919ea94745da72a5659d65eb3dce498aaa6e",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1875,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1549,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3429
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "DataReplication",
+              "baseVersion": "2024-09-01",
+              "headVersion": "2024-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DataReplication",
+              "baseVersion": "2026-05-01",
+              "headVersion": "2026-05-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/186101ec6211864a-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/186101ec6211864a-phase-b.md",
+          "jsonDigest": "e1ea54feea2317ac13e9a329e968f4cca0a3cc44ad5192225a803646b5f881e4",
+          "markdownDigest": "b724136deb17db70c04ea1b8d7e73b9189638808a77abf5914e2e0d05e853f40",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2046,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 1471,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3522
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "f8160d5845c8a42d9c9edf14b6b97c4cb8658cb00afae651f586a284b7f11b29",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "DataReplication",
+          "baseVersion": "2024-09-01",
+          "headVersion": "2024-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DataReplication",
+          "baseVersion": "2026-05-01",
+          "headVersion": "2026-05-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-0ffeee0a312489cc",
+      "affectedPrs": [
+        47690
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-adf8c8e452828c41",
+      "affectedPrs": [
+        47690
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "e96507db9f32634bb4e008d2faba08798960d2c4",
+    "prBaseSha": "1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd e96507db9f32634bb4e008d2faba08798960d2c4\ngit -C target checkout --detach e96507db9f32634bb4e008d2faba08798960d2c4\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47690' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication",
+        "project": "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication' --base-ref 1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd --phase same-version --json-output '../specification-recoveryservicesdatareplication-resource-manager-Microsoft.DataReplication-DataReplication-phase-a.json' --markdown-output '../specification-recoveryservicesdatareplication-resource-manager-Microsoft.DataReplication-DataReplication-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication' --base-ref 1dce14c9a26cbed81d1c38ecfc06a8d5f1f75ebd --json-output '../specification-recoveryservicesdatareplication-resource-manager-Microsoft.DataReplication-DataReplication-phase-b-evidence.json' --markdown-output '../specification-recoveryservicesdatareplication-resource-manager-Microsoft.DataReplication-DataReplication-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

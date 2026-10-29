@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47667:a903bfdbfd42234306bffa889a4bafe5099206a9"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47667,
+    "title": "Update types and auth naming for .NET",
+    "author": "nateprewitt",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47667",
+    "baseBranch": "main",
+    "headBranch": "SRP_auth_updates",
+    "baseSha": "bc2219879bafda17e3c3d30935a0d72dc4da84d6",
+    "headSha": "a903bfdbfd42234306bffa889a4bafe5099206a9",
+    "mergedAt": "2026-10-27T21:27:49Z",
+    "changedTypeSpecFiles": [
+      "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47667",
+      "state": "closed",
+      "merged": true,
+      "headSha": "a903bfdbfd42234306bffa889a4bafe5099206a9",
+      "baseSha": "bc2219879bafda17e3c3d30935a0d72dc4da84d6",
+      "runs": {
+        "A": {
+          "id": 40572642463,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "a903bfdbfd42234306bffa889a4bafe5099206a9",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40572642463",
+          "logDigest": "09b19a05efe47a642229141af7acc940ee4a8d86e610288524944c15f2788782",
+          "summaryDigest": "1d41445c2351280c3cb672e9cd7c5dc995b38e78bf85755fac0c0d405765a147"
+        },
+        "B": {
+          "id": 40572643370,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "a903bfdbfd42234306bffa889a4bafe5099206a9",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40572643370",
+          "logDigest": "bbd1486717e9b507b5b95d1273eb68f6f7b66558b229f530055b224716894227",
+          "summaryDigest": "80c45d6a183c2a55699c4119e6f7bb308d8ae9c1563afb08da6fa29042f94614"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/storage/resource-manager/Microsoft.Storage/Storage/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47667",
+      "headSha": "a903bfdbfd42234306bffa889a4bafe5099206a9",
+      "baseSha": "bc2219879bafda17e3c3d30935a0d72dc4da84d6"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/storage/resource-manager/Microsoft.Storage/Storage",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/34d48bf6162c6014-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/34d48bf6162c6014-phase-a.md",
+          "jsonDigest": "067785323ed3adf048b53015bc245f8ca2bd2a99cc134f92428a9cb40f1a410f",
+          "markdownDigest": "51b73ea83d87cc04c24d3e43df2b4582cbb77582553363f083c833215eb75f16",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 8137,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 7258,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 15404
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2025-06-01",
+              "headVersion": "2025-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2025-08-01",
+              "headVersion": "2025-08-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2026-04-01",
+              "headVersion": "2026-04-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2026-06-01",
+              "headVersion": "2026-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Storage",
+              "baseVersion": "2026-09-01",
+              "headVersion": "2026-09-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/34d48bf6162c6014-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/34d48bf6162c6014-phase-b.md",
+          "jsonDigest": "c6b52b4262191540bad0d553022afdfd1d86573997367714a6528979b9930bda",
+          "markdownDigest": "a95cb08d328c16b97027d0e2900392e6c936eb7a06e17a6a9611acd78753981a",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 7242,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 6621,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 13871
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "2492801c037cdbfaae2ae2495a8cd40a8b28b179d600e1fed007e4ebf8372bd3",
+      "comparisonsPerformed": 5,
+      "versionComparisons": [
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2025-06-01",
+          "headVersion": "2025-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2025-08-01",
+          "headVersion": "2025-08-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2026-04-01",
+          "headVersion": "2026-04-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2026-06-01",
+          "headVersion": "2026-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Storage",
+          "baseVersion": "2026-09-01",
+          "headVersion": "2026-09-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-ab3e16bbc792a006",
+      "affectedPrs": [
+        47667
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-de2e9282695c4a5b",
+      "affectedPrs": [
+        47667
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "a903bfdbfd42234306bffa889a4bafe5099206a9",
+    "prBaseSha": "bc2219879bafda17e3c3d30935a0d72dc4da84d6",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin bc2219879bafda17e3c3d30935a0d72dc4da84d6 a903bfdbfd42234306bffa889a4bafe5099206a9\ngit -C target checkout --detach a903bfdbfd42234306bffa889a4bafe5099206a9\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47667' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/storage/resource-manager/Microsoft.Storage/Storage",
+        "project": "specification/storage/resource-manager/Microsoft.Storage/Storage",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/storage/resource-manager/Microsoft.Storage/Storage' --base-ref bc2219879bafda17e3c3d30935a0d72dc4da84d6 --phase same-version --json-output '../specification-storage-resource-manager-Microsoft.Storage-Storage-phase-a.json' --markdown-output '../specification-storage-resource-manager-Microsoft.Storage-Storage-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/storage/resource-manager/Microsoft.Storage/Storage' --base-ref bc2219879bafda17e3c3d30935a0d72dc4da84d6 --json-output '../specification-storage-resource-manager-Microsoft.Storage-Storage-phase-b-evidence.json' --markdown-output '../specification-storage-resource-manager-Microsoft.Storage-Storage-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47628:93bc43251672e8a940a4f00607ecd71e20fb9d94"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47628,
+    "title": "[HybridConnectivity] Add Go clientName overrides for GCP acronym casing",
+    "author": "alexmahonic",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47628",
+    "baseBranch": "main",
+    "headBranch": "hybridconnectivity-go-gcp-clientname",
+    "baseSha": "e3442857cb92aa9a458550b3f26ef2cd31e9a3d4",
+    "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+    "mergedAt": "2026-10-28T18:00:36Z",
+    "changedTypeSpecFiles": [
+      "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47628",
+      "state": "closed",
+      "merged": true,
+      "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+      "baseSha": "e3442857cb92aa9a458550b3f26ef2cd31e9a3d4",
+      "runs": {
+        "A": {
+          "id": 40411393328,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40411393328",
+          "logDigest": "683dbfe7ccf115578da6cffb36e4f4d5561377ba3d677a3fddb136ad4a6dc4be",
+          "summaryDigest": "01a637bc7c05a7a5bfc01bebf0c306ebf260c37b9575f901db505e02474750fc"
+        },
+        "B": {
+          "id": 40411392953,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40411392953",
+          "logDigest": "e0468cf0bd689e19bc790a3ab89d4b32f49e8dc608a3dcb8a5a476d77c746127",
+          "summaryDigest": "e3e9dd5141e0f64b72ae6c8daecad593deb2b64dbf2a5c7241112e1245139de0"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47628",
+      "headSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+      "baseSha": "e3442857cb92aa9a458550b3f26ef2cd31e9a3d4"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/40109812c9d86495-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/40109812c9d86495-phase-a.md",
+          "jsonDigest": "db7d5be92619de9cdc3a42b0eaf823c3134b355cd64c2c98108659aca1f30020",
+          "markdownDigest": "60e246b33f44181ba210c3e46bb32d40328bb30f86c6cc53d05e02891a2d15c5",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1538,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 644,
+            "classifyMs": 0,
+            "suppressMs": 1,
+            "reportMs": 0,
+            "totalMs": 2189
+          },
+          "comparisonsPerformed": 2,
+          "versionComparisons": [
+            {
+              "serviceName": "HybridConnectivity",
+              "baseVersion": "2024-12-01",
+              "headVersion": "2024-12-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "HybridConnectivity",
+              "baseVersion": "2027-01-01",
+              "headVersion": "2027-01-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/40109812c9d86495-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/40109812c9d86495-phase-b.md",
+          "jsonDigest": "72bb7d16e6c32452cd851618c9a2a25e53e33fffe3cd36d114de440163757df9",
+          "markdownDigest": "790fa13bfaa63c888f865363316a8282969c3cdf27e4c87e0e5d82ca09f4974b",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 1460,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 570,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 2037
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "a51adb83b090e41bd6a7ac2e46b052422d64d79a12e0449befb9b42ad0675a96",
+      "comparisonsPerformed": 2,
+      "versionComparisons": [
+        {
+          "serviceName": "HybridConnectivity",
+          "baseVersion": "2024-12-01",
+          "headVersion": "2024-12-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "HybridConnectivity",
+          "baseVersion": "2027-01-01",
+          "headVersion": "2027-01-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-35a5d31dc8e19f70",
+      "affectedPrs": [
+        47628
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-78cbeb2a28592018",
+      "affectedPrs": [
+        47628
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "93bc43251672e8a940a4f00607ecd71e20fb9d94",
+    "prBaseSha": "e3442857cb92aa9a458550b3f26ef2cd31e9a3d4",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin e3442857cb92aa9a458550b3f26ef2cd31e9a3d4 93bc43251672e8a940a4f00607ecd71e20fb9d94\ngit -C target checkout --detach 93bc43251672e8a940a4f00607ecd71e20fb9d94\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47628' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity",
+        "project": "specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity' --base-ref e3442857cb92aa9a458550b3f26ef2cd31e9a3d4 --phase same-version --json-output '../specification-hybridconnectivity-resource-manager-Microsoft.HybridConnectivity-HybridConnectivity-phase-a.json' --markdown-output '../specification-hybridconnectivity-resource-manager-Microsoft.HybridConnectivity-HybridConnectivity-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/hybridconnectivity/resource-manager/Microsoft.HybridConnectivity/HybridConnectivity' --base-ref e3442857cb92aa9a458550b3f26ef2cd31e9a3d4 --json-output '../specification-hybridconnectivity-resource-manager-Microsoft.HybridConnectivity-HybridConnectivity-phase-b-evidence.json' --markdown-output '../specification-hybridconnectivity-resource-manager-Microsoft.HybridConnectivity-HybridConnectivity-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

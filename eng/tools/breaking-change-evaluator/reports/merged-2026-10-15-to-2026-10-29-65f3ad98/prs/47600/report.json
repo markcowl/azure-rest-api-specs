@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47600:f0a6639285e2439500919a5ca54bb5441928ea6d"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47600,
+    "title": "Fix CDN MTLS field name for Go sdk model",
+    "author": "Place1",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47600",
+    "baseBranch": "main",
+    "headBranch": "fix/cdn-go-mtls-initialism",
+    "baseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb",
+    "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+    "mergedAt": "2026-10-27T23:14:36Z",
+    "changedTypeSpecFiles": [
+      "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47600",
+      "state": "closed",
+      "merged": true,
+      "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+      "baseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb",
+      "runs": {
+        "A": {
+          "id": 40273290569,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40273290569",
+          "logDigest": "010a97adc77093b4e29abf050840fba6f54c0425f7086d29ef067002ea0bb73c",
+          "summaryDigest": "075077a5c8d09768bbf71a9c16d86fa4de38c46ddb50a86b11ebb7cc6cee162d"
+        },
+        "B": {
+          "id": 40273290544,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/40273290544",
+          "logDigest": "c43de36b3cc75888573cfb06541f3b4441661ad086be164dab10c986b9a036d7",
+          "summaryDigest": "d7a0f03aabfc728985bf42dc4775f7446a910b0400465d75ff38e89b5a971ceb"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/cdn/resource-manager/Microsoft.Cdn/Cdn/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47600",
+      "headSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+      "baseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/495bf9259924f532-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/495bf9259924f532-phase-a.md",
+          "jsonDigest": "8a87eac4305d25fb3236edba01c9cafb7046ba290707a659847a4916267d2ec7",
+          "markdownDigest": "30977b16c16883b166007f03dda519350a8c1ef9cda0a3b43bc1574741816e87",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 8905,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 8230,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 17142
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-06-01",
+              "headVersion": "2025-06-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-09-01-preview",
+              "headVersion": "2025-09-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2025-12-01",
+              "headVersion": "2025-12-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2026-07-01",
+              "headVersion": "2026-07-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "Cdn",
+              "baseVersion": "2026-10-01",
+              "headVersion": "2026-10-01",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/495bf9259924f532-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/495bf9259924f532-phase-b.md",
+          "jsonDigest": "138dd54f19cde1faad26e09d9cd74fd40e57464297234433564086033ea8d5cc",
+          "markdownDigest": "ccaf4314af35133174d85a4501b9ec7412fd3c87a9a041b967bbfdf3e8a0413c",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 8366,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 7432,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 15803
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "b235407899a48b802b10b18fd3767c23a48fc8c25c6d6db4fceeb99ac4a71ada",
+      "comparisonsPerformed": 5,
+      "versionComparisons": [
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-06-01",
+          "headVersion": "2025-06-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-09-01-preview",
+          "headVersion": "2025-09-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2025-12-01",
+          "headVersion": "2025-12-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2026-07-01",
+          "headVersion": "2026-07-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "Cdn",
+          "baseVersion": "2026-10-01",
+          "headVersion": "2026-10-01",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-9c64a3c5a64fb656",
+      "affectedPrs": [
+        47600
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-9fb95b5b2bd99972",
+      "affectedPrs": [
+        47600
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "f0a6639285e2439500919a5ca54bb5441928ea6d",
+    "prBaseSha": "54b3852a392c5cc504c4edf97f5c18fbcd5820cb",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 54b3852a392c5cc504c4edf97f5c18fbcd5820cb f0a6639285e2439500919a5ca54bb5441928ea6d\ngit -C target checkout --detach f0a6639285e2439500919a5ca54bb5441928ea6d\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47600' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+        "project": "specification/cdn/resource-manager/Microsoft.Cdn/Cdn",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/Cdn' --base-ref 54b3852a392c5cc504c4edf97f5c18fbcd5820cb --phase same-version --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-a.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/cdn/resource-manager/Microsoft.Cdn/Cdn' --base-ref 54b3852a392c5cc504c4edf97f5c18fbcd5820cb --json-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-b-evidence.json' --markdown-output '../specification-cdn-resource-manager-Microsoft.Cdn-Cdn-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

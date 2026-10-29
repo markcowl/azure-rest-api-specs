@@ -1,0 +1,68 @@
+{
+  "specPaths": [
+    "specification/cdn/resource-manager/Microsoft.Cdn/Cdn"
+  ],
+  "requiresAction": false,
+  "counts": {
+    "errors": 0,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 0,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 5,
+    "versionComparisons": [
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-06-01",
+        "headVersion": "2025-06-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-09-01-preview",
+        "headVersion": "2025-09-01-preview",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2025-12-01",
+        "headVersion": "2025-12-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2026-07-01",
+        "headVersion": "2026-07-01",
+        "phase": "same-version",
+        "findingCount": 0
+      },
+      {
+        "serviceName": "Cdn",
+        "baseVersion": "2026-10-01",
+        "headVersion": "2026-10-01",
+        "phase": "same-version",
+        "findingCount": 0
+      }
+    ]
+  },
+  "findings": [],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 6136,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 5728,
+    "classifyMs": 0,
+    "suppressMs": 0,
+    "reportMs": 0,
+    "totalMs": 11869
+  }
+}
