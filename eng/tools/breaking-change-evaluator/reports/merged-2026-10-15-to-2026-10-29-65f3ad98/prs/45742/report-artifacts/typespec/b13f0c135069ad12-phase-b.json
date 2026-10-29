@@ -1,0 +1,1281 @@
+{
+  "specPaths": [
+    "specification/mission/resource-manager/Microsoft.Mission/Mission"
+  ],
+  "requiresAction": true,
+  "counts": {
+    "errors": 41,
+    "suppressed": 0,
+    "ignored": 0,
+    "totalFindings": 41,
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 6
+  },
+  "summary": {
+    "servicesAnalyzed": 1,
+    "comparisonsPerformed": 6,
+    "versionComparisons": [
+      {
+        "serviceName": "Mission",
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview",
+        "phase": "same-version",
+        "findingCount": 30,
+        "rawFindingCount": 161
+      },
+      {
+        "serviceName": "Mission",
+        "baseVersion": "2024-12-01-preview",
+        "headVersion": "2024-12-01-preview",
+        "phase": "same-version",
+        "findingCount": 30,
+        "rawFindingCount": 348
+      },
+      {
+        "serviceName": "Mission",
+        "baseVersion": "2025-05-01-preview",
+        "headVersion": "2025-05-01-preview",
+        "phase": "same-version",
+        "findingCount": 37,
+        "rawFindingCount": 464
+      },
+      {
+        "serviceName": "Mission",
+        "baseVersion": "2025-11-01-preview",
+        "headVersion": "2025-11-01-preview",
+        "phase": "same-version",
+        "findingCount": 37,
+        "rawFindingCount": 464
+      },
+      {
+        "serviceName": "Mission",
+        "baseVersion": "2026-03-01-preview",
+        "headVersion": "2026-03-01-preview",
+        "phase": "same-version",
+        "findingCount": 37,
+        "rawFindingCount": 464
+      },
+      {
+        "serviceName": "Mission",
+        "baseVersion": "2026-04-01",
+        "headVersion": "2026-04-01",
+        "phase": "same-version",
+        "findingCount": 37,
+        "rawFindingCount": 464
+      }
+    ]
+  },
+  "findings": [
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.mode added variant 'On'.",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.On",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 88
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.MaintenanceModeConfigurationModelMode",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.MaintenanceModeConfigurationModelMode",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  MaintenanceModeConfigurationModelMode: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type added variant 'User'.",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.User",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 122
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.PrincipalType",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.PrincipalType",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  PrincipalType: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.justification added variant 'Networking'.",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.Networking",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 108
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.MaintenanceModeConfigurationModelJustification",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.MaintenanceModeConfigurationModelJustification",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  MaintenanceModeConfigurationModelJustification: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.option added variant 'Allow'.",
+      "element": "body.properties.properties.governedServiceList.properties.option.variants.Allow",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 46
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.GovernedServiceItemOption",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.GovernedServiceItemOption",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  GovernedServiceItemOption: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.enforcement added variant 'Enabled'.",
+      "element": "body.properties.properties.governedServiceList.properties.enforcement.variants.Enabled",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 63
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.GovernedServiceItemEnforcement",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.GovernedServiceItemEnforcement",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  GovernedServiceItemEnforcement: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.mode removed variant \"On\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"On\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "line": 10
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"On\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"On\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.mode removed variant \"CanNotDelete\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"CanNotDelete\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "line": 10
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"CanNotDelete\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"CanNotDelete\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.mode removed variant \"Off\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"Off\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "line": 10
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"Off\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"Off\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.mode removed variant \"General\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"General\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "line": 10
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"General\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"General\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.mode removed variant \"Advanced\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"Advanced\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "line": 10
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"Advanced\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.mode.variants.\"Advanced\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type removed variant \"User\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.\"User\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "line": 11
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.\"User\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.\"User\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type removed variant \"Group\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.\"Group\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "line": 11
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.\"Group\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.\"Group\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type removed variant \"ServicePrincipal\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.\"ServicePrincipal\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "line": 11
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.\"ServicePrincipal\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.principals.properties.type.variants.\"ServicePrincipal\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.justification removed variant \"Networking\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.\"Networking\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "line": 17
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.\"Networking\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.\"Networking\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.justification removed variant \"Governance\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.\"Governance\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "line": 17
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.\"Governance\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.\"Governance\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.maintenanceModeConfiguration.properties.justification removed variant \"Off\".",
+      "element": "body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.\"Off\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "line": 17
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.\"Off\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/maintenancemodeconfiguration.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.maintenanceModeConfiguration.properties.justification.variants.\"Off\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.option removed variant \"Allow\".",
+      "element": "body.properties.properties.governedServiceList.properties.option.variants.\"Allow\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "line": 75
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.option.variants.\"Allow\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.option.variants.\"Allow\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.option removed variant \"Deny\".",
+      "element": "body.properties.properties.governedServiceList.properties.option.variants.\"Deny\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "line": 75
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.option.variants.\"Deny\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.option.variants.\"Deny\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.option removed variant \"ExceptionOnly\".",
+      "element": "body.properties.properties.governedServiceList.properties.option.variants.\"ExceptionOnly\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "line": 75
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.option.variants.\"ExceptionOnly\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.option.variants.\"ExceptionOnly\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.option removed variant \"NotApplicable\".",
+      "element": "body.properties.properties.governedServiceList.properties.option.variants.\"NotApplicable\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "line": 75
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.option.variants.\"NotApplicable\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.option.variants.\"NotApplicable\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.enforcement removed variant \"Enabled\".",
+      "element": "body.properties.properties.governedServiceList.properties.enforcement.variants.\"Enabled\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "line": 79
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.enforcement.variants.\"Enabled\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.enforcement.variants.\"Enabled\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.enforcement removed variant \"Disabled\".",
+      "element": "body.properties.properties.governedServiceList.properties.enforcement.variants.\"Disabled\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "line": 79
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.enforcement.variants.\"Disabled\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.enforcement.variants.\"Disabled\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type added variant 'User'.",
+      "element": "body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.User",
+      "versionPair": {
+        "baseVersion": "2024-12-01-preview",
+        "headVersion": "2024-12-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 122
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.PrincipalType",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.PrincipalType",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  PrincipalType: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type removed variant \"User\".",
+      "element": "body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.\"User\"",
+      "versionPair": {
+        "baseVersion": "2024-12-01-preview",
+        "headVersion": "2024-12-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "line": 11
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.\"User\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.\"User\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type removed variant \"Group\".",
+      "element": "body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.\"Group\"",
+      "versionPair": {
+        "baseVersion": "2024-12-01-preview",
+        "headVersion": "2024-12-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "line": 11
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.\"Group\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.\"Group\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type removed variant \"ServicePrincipal\".",
+      "element": "body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.\"ServicePrincipal\"",
+      "versionPair": {
+        "baseVersion": "2024-12-01-preview",
+        "headVersion": "2024-12-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "line": 11
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.\"ServicePrincipal\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/principal.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.enclaveRoleAssignments.properties.principals.properties.type.variants.\"ServicePrincipal\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.policyAction added variant 'AuditOnly'.",
+      "element": "body.properties.properties.governedServiceList.properties.policyAction.variants.AuditOnly",
+      "versionPair": {
+        "baseVersion": "2025-05-01-preview",
+        "headVersion": "2025-05-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 74
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.GovernedServiceItemPolicyAction",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.GovernedServiceItemPolicyAction",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  GovernedServiceItemPolicyAction: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeWidened",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.policyOverride added variant 'Enclave'.",
+      "element": "body.properties.properties.policyOverride.variants.Enclave",
+      "versionPair": {
+        "baseVersion": "2025-05-01-preview",
+        "headVersion": "2025-05-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 190
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.CommunityPropertiesPolicyOverride",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.CommunityPropertiesPolicyOverride",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeWidened\" })\n  CommunityPropertiesPolicyOverride: ...;\n}"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.policyAction removed variant \"AuditOnly\".",
+      "element": "body.properties.properties.governedServiceList.properties.policyAction.variants.\"AuditOnly\"",
+      "versionPair": {
+        "baseVersion": "2025-05-01-preview",
+        "headVersion": "2025-05-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "line": 88
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.policyAction.variants.\"AuditOnly\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.policyAction.variants.\"AuditOnly\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.policyAction removed variant \"Enforce\".",
+      "element": "body.properties.properties.governedServiceList.properties.policyAction.variants.\"Enforce\"",
+      "versionPair": {
+        "baseVersion": "2025-05-01-preview",
+        "headVersion": "2025-05-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "line": 88
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.policyAction.variants.\"Enforce\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.policyAction.variants.\"Enforce\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.governedServiceList.properties.policyAction removed variant \"None\".",
+      "element": "body.properties.properties.governedServiceList.properties.policyAction.variants.\"None\"",
+      "versionPair": {
+        "baseVersion": "2025-05-01-preview",
+        "headVersion": "2025-05-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "line": 88
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.policyAction.variants.\"None\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/virtualEnclaves/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/shared/governedserviceitem.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.governedServiceList.properties.policyAction.variants.\"None\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.policyOverride removed variant \"Enclave\".",
+      "element": "body.properties.properties.policyOverride.variants.\"Enclave\"",
+      "versionPair": {
+        "baseVersion": "2025-05-01-preview",
+        "headVersion": "2025-05-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/community/community.tsp",
+        "line": 216
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.policyOverride.variants.\"Enclave\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/community/community.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.policyOverride.variants.\"Enclave\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "ResourcePropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "resource-contract-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.properties.policyOverride removed variant \"None\".",
+      "element": "body.properties.properties.policyOverride.variants.\"None\"",
+      "versionPair": {
+        "baseVersion": "2025-05-01-preview",
+        "headVersion": "2025-05-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/community/community.tsp",
+        "line": 216
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "PUT",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.policyOverride.variants.\"None\"\" })",
+        "placement": "On the operation: PUT /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/communities/{}",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/community/community.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"ResourcePropertyTypeNarrowed\", path: \"request.body.properties.properties.policyOverride.variants.\"None\"\" })\nop createOrUpdate(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.resourceRequestAction added variant 'Create'.",
+      "element": "body.properties.resourceRequestAction.variants.Create",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 136
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.ApprovalCallbackRequestResourceRequestAction",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.ApprovalCallbackRequestResourceRequestAction",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\n  ApprovalCallbackRequestResourceRequestAction: ...;\n}"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeWidened",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.approvalStatus added variant 'Approved'.",
+      "element": "body.properties.approvalStatus.variants.Approved",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "line": 167
+      },
+      "sourceTraceLevel": "direct",
+      "sourceElementPath": "Microsoft.Mission.ApprovalCallbackRequestApprovalStatus",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })",
+        "placement": "On the declaration: Microsoft.Mission.ApprovalCallbackRequestApprovalStatus",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/model.tsp",
+        "example": "model Mission {\n  @approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeWidened\" })\n  ApprovalCallbackRequestApprovalStatus: ...;\n}"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.resourceRequestAction removed variant \"Create\".",
+      "element": "body.properties.resourceRequestAction.variants.\"Create\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "line": 20
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.resourceRequestAction.variants.\"Create\"\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.resourceRequestAction.variants.\"Create\"\" })\nop approvalCallback(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.resourceRequestAction removed variant \"Delete\".",
+      "element": "body.properties.resourceRequestAction.variants.\"Delete\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "line": 20
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.resourceRequestAction.variants.\"Delete\"\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.resourceRequestAction.variants.\"Delete\"\" })\nop approvalCallback(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.resourceRequestAction removed variant \"Update\".",
+      "element": "body.properties.resourceRequestAction.variants.\"Update\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "line": 20
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.resourceRequestAction.variants.\"Update\"\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.resourceRequestAction.variants.\"Update\"\" })\nop approvalCallback(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.resourceRequestAction removed variant \"Reset\".",
+      "element": "body.properties.resourceRequestAction.variants.\"Reset\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "line": 20
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.resourceRequestAction.variants.\"Reset\"\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.resourceRequestAction.variants.\"Reset\"\" })\nop approvalCallback(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.approvalStatus removed variant \"Approved\".",
+      "element": "body.properties.approvalStatus.variants.\"Approved\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "line": 24
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.approvalStatus.variants.\"Approved\"\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.approvalStatus.variants.\"Approved\"\" })\nop approvalCallback(...): ...;"
+      }
+    },
+    {
+      "kind": "RequestPropertyTypeNarrowed",
+      "severity": "error",
+      "rule": "phase-a-any-change",
+      "phase": "same-version",
+      "suppressed": false,
+      "message": "Request union at body.properties.approvalStatus removed variant \"Rejected\".",
+      "element": "body.properties.approvalStatus.variants.\"Rejected\"",
+      "versionPair": {
+        "baseVersion": "2024-06-01-preview",
+        "headVersion": "2024-06-01-preview"
+      },
+      "location": {
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "line": 24
+      },
+      "sourceTraceLevel": "ancestor",
+      "operation": {
+        "method": "POST",
+        "path": "/subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback"
+      },
+      "component": "request",
+      "suppression": {
+        "decorator": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.approvalStatus.variants.\"Rejected\"\" })",
+        "placement": "On the operation: POST /subscriptions/{}/resourceGroups/{}/providers/Microsoft.Mission/enclaveConnections/{}/approvalCallback",
+        "file": "specification/mission/resource-manager/Microsoft.Mission/Mission/resourcetypes/postActions/approvalspostactions.tsp",
+        "example": "@approvedUnversionedChange(\"your reason here\", #{ kind: \"RequestPropertyTypeNarrowed\", path: \"request.body.properties.approvalStatus.variants.\"Rejected\"\" })\nop approvalCallback(...): ...;"
+      }
+    }
+  ],
+  "timing": {
+    "compileBaseMs": 0,
+    "compileHeadMs": 0,
+    "versionMutatorsMs": 4721,
+    "canonicalizeMs": 0,
+    "identityMatchingMs": 0,
+    "diffEngineMs": 2714,
+    "classifyMs": 3,
+    "suppressMs": 1,
+    "reportMs": 0,
+    "totalMs": 7448
+  }
+}

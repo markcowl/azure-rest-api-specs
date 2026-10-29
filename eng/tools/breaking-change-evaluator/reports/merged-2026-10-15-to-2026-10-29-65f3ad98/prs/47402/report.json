@@ -1,0 +1,370 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47402:b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47402,
+    "title": "[Azure Data Transfer] Set Python client name",
+    "author": "ChenxiJiang333",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47402",
+    "baseBranch": "main",
+    "headBranch": "chenxi/add-datatransfer-python-client-name",
+    "baseSha": "c8190fb3d1d89e788cb5b36edbc386588521153c",
+    "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+    "mergedAt": "2026-10-19T03:13:00Z",
+    "changedTypeSpecFiles": [
+      "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47402",
+      "state": "closed",
+      "merged": true,
+      "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+      "baseSha": "c8190fb3d1d89e788cb5b36edbc386588521153c",
+      "runs": {
+        "A": {
+          "id": 39190248082,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39190248082",
+          "logDigest": "53251a15cdb8d5fe18e38725e5d4fd70978cadcadf7016b0b0c5e665bc514f95",
+          "summaryDigest": "4811b6a78eac61708fad6ad4e37551e9ede0a39c8e542b3930307a396e64f34e"
+        },
+        "B": {
+          "id": 39190247984,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39190247984",
+          "logDigest": "acdac5bbc9ac2327a3c77bb86752c04b35a60695796c539cb9f44a46eb8b7529",
+          "summaryDigest": "38290e46b4446af6fa294c2460e741a46be800111c0a38be60e262710e647ff0"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47402",
+      "headSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+      "baseSha": "c8190fb3d1d89e788cb5b36edbc386588521153c"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/9c89d286bfc4f504-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/9c89d286bfc4f504-phase-a.md",
+          "jsonDigest": "70c6db07dae47a58bceb6133d3014e89c213462b0b35d0c65ad11a67d3176057",
+          "markdownDigest": "78e72f679b9320101bcdc4ca57b3a4fb4379a9d0781ffa4e48a5e6bce0949bae",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3845,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2349,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 6200
+          },
+          "comparisonsPerformed": 5,
+          "versionComparisons": [
+            {
+              "serviceName": "AzureDataTransfer",
+              "baseVersion": "2025-04-11-preview",
+              "headVersion": "2025-04-11-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "AzureDataTransfer",
+              "baseVersion": "2025-05-21",
+              "headVersion": "2025-05-21",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "AzureDataTransfer",
+              "baseVersion": "2025-05-30-preview",
+              "headVersion": "2025-05-30-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "AzureDataTransfer",
+              "baseVersion": "2025-10-10-preview",
+              "headVersion": "2025-10-10-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "AzureDataTransfer",
+              "baseVersion": "2026-02-06-preview",
+              "headVersion": "2026-02-06-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/9c89d286bfc4f504-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/9c89d286bfc4f504-phase-b.md",
+          "jsonDigest": "342f929c5444cb24fa5a1f3ca86e2708b492acc130383d1b852e43322469a7f8",
+          "markdownDigest": "a00c57b8be5c5191e0f1008875659483a54246a72bed1f9b60f347beb935e30d",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 3920,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 2579,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 6506
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "a1b3265ab0eb54ac4d6bd1b6503dde9f6d364da7c471981dc596e3d0fc644855",
+      "comparisonsPerformed": 5,
+      "versionComparisons": [
+        {
+          "serviceName": "AzureDataTransfer",
+          "baseVersion": "2025-04-11-preview",
+          "headVersion": "2025-04-11-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "AzureDataTransfer",
+          "baseVersion": "2025-05-21",
+          "headVersion": "2025-05-21",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "AzureDataTransfer",
+          "baseVersion": "2025-05-30-preview",
+          "headVersion": "2025-05-30-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "AzureDataTransfer",
+          "baseVersion": "2025-10-10-preview",
+          "headVersion": "2025-10-10-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "AzureDataTransfer",
+          "baseVersion": "2026-02-06-preview",
+          "headVersion": "2026-02-06-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-e08855a3e2c1d49c",
+      "affectedPrs": [
+        47402
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-ec3d69e19d238c00",
+      "affectedPrs": [
+        47402
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b",
+    "prBaseSha": "c8190fb3d1d89e788cb5b36edbc386588521153c",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin c8190fb3d1d89e788cb5b36edbc386588521153c b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b\ngit -C target checkout --detach b4d7908d3b16e6cd0e663ddcd04fac462fe10d4b\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47402' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer",
+        "project": "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer' --base-ref c8190fb3d1d89e788cb5b36edbc386588521153c --phase same-version --json-output '../specification-azuredatatransfer-resource-manager-Microsoft.AzureDataTransfer-AzureDataTransfer-phase-a.json' --markdown-output '../specification-azuredatatransfer-resource-manager-Microsoft.AzureDataTransfer-AzureDataTransfer-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer' --base-ref c8190fb3d1d89e788cb5b36edbc386588521153c --json-output '../specification-azuredatatransfer-resource-manager-Microsoft.AzureDataTransfer-AzureDataTransfer-phase-b-evidence.json' --markdown-output '../specification-azuredatatransfer-resource-manager-Microsoft.AzureDataTransfer-AzureDataTransfer-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

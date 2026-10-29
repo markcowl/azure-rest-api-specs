@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47279:a314853553ca9fca04ffc8641ea464e7d29a3194"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47279,
+    "title": "[Kore.AgentPlatform] Add 2026-07-01-preview TypeSpec",
+    "author": "poshett",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47279",
+    "baseBranch": "main",
+    "headBranch": "users/poshett/kore-artemis-2026-07-01-preview",
+    "baseSha": "5dd4dc124a2f5f5b4533aa4e79ab15607d34e950",
+    "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+    "mergedAt": "2026-10-19T05:59:39Z",
+    "changedTypeSpecFiles": [
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/client.tsp",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/main.tsp",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/models.tsp",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/organizations.tsp",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/tspconfig.yaml",
+      "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/workspaces.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47279",
+      "state": "closed",
+      "merged": true,
+      "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+      "baseSha": "5dd4dc124a2f5f5b4533aa4e79ab15607d34e950",
+      "runs": {
+        "A": {
+          "id": 39206543368,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39206543368",
+          "logDigest": "d962c92aaa8c78df155c2ad3f231e80a07fe0ee9483991ef8163163a7c218d44",
+          "summaryDigest": "88034d50b57bb843ba53d622b138592c00d6f59fe6a6c61933f96ec5eb06dd23"
+        },
+        "B": {
+          "id": 39206543399,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39206543399",
+          "logDigest": "4e0f97d7057c4e2034322c7af8a26fef1e130d9e6785ef9efba53224f5d0da9e",
+          "summaryDigest": "6cf68e6e7a00342293761ee25244a691dbedb10a9e364c345a21fe35be7133d6"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/client.tsp",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/main.tsp",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/models.tsp",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/organizations.tsp",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/tspconfig.yaml",
+        "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform/workspaces.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47279",
+      "headSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+      "baseSha": "5dd4dc124a2f5f5b4533aa4e79ab15607d34e950"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/70c41b76f1757d04-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/70c41b76f1757d04-phase-a.md",
+          "jsonDigest": "5d4060f2d4e2f0e327905a4a018db94b2a7cd5d74e82385d6beae9b51392e3e6",
+          "markdownDigest": "9812a4e477153ad21abe031aefb1ac320dde63ca0320508b0bd7ed42694ac300",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Phase A (same-version) requires a base program for comparison. Use analyzeBaseAndHead() instead."
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/70c41b76f1757d04-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/70c41b76f1757d04-phase-b.md",
+          "jsonDigest": "b55ab9bbfbea2d28039d8de429b4a6760299fe9b8e1f29b373cd74eef52834aa",
+          "markdownDigest": "35feacc52c5dfec9f6c4578c6d52af3c93f522b93e64f99fd48d186b0b67839b",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 0,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 0,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 4
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "No cross-version comparisons needed: all versions are preview (no stable baseline exists)."
+        }
+      },
+      "reportDigest": "18e6f4d107a98888796cfa706a239496dd78c4ea99f42fcdc2c79777628d361b",
+      "comparisonsPerformed": 0,
+      "versionComparisons": [],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-0fc9ac65646c22f6",
+      "affectedPrs": [
+        47279
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-bbaaf7ba672d9733",
+      "affectedPrs": [
+        47279
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "a314853553ca9fca04ffc8641ea464e7d29a3194",
+    "prBaseSha": "5dd4dc124a2f5f5b4533aa4e79ab15607d34e950",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin 5dd4dc124a2f5f5b4533aa4e79ab15607d34e950 a314853553ca9fca04ffc8641ea464e7d29a3194\ngit -C target checkout --detach a314853553ca9fca04ffc8641ea464e7d29a3194\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47279' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform",
+        "project": "specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform' --base-ref 5dd4dc124a2f5f5b4533aa4e79ab15607d34e950 --phase same-version --json-output '../specification-azure-native-integrations-resource-manager-Kore.AgentPlatform-AgentPlatform-phase-a.json' --markdown-output '../specification-azure-native-integrations-resource-manager-Kore.AgentPlatform-AgentPlatform-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/azure-native-integrations/resource-manager/Kore.AgentPlatform/AgentPlatform' --base-ref 5dd4dc124a2f5f5b4533aa4e79ab15607d34e950 --json-output '../specification-azure-native-integrations-resource-manager-Kore.AgentPlatform-AgentPlatform-phase-b-evidence.json' --markdown-output '../specification-azure-native-integrations-resource-manager-Kore.AgentPlatform-AgentPlatform-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}

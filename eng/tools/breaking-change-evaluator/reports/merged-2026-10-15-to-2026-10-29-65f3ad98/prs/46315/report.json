@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-46315:1413bddd5fe634247b6075d3f2c89b89fc05d451"
+  },
+  "status": "not-qualified",
+  "complete": false,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 46315,
+    "title": "Azure Search Data-Plane 2026-10-01 GA Release",
+    "author": "yangylu91",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/46315",
+    "baseBranch": "main",
+    "headBranch": "search/dp-2026-10-01",
+    "baseSha": "90e63e5fe2c596e8bd807aad7dd9d62cee1746dd",
+    "headSha": "1413bddd5fe634247b6075d3f2c89b89fc05d451",
+    "mergedAt": "2026-10-16T17:57:04Z",
+    "changedTypeSpecFiles": [
+      "specification/search/data-plane/Search/client.tsp",
+      "specification/search/data-plane/Search/main.tsp",
+      "specification/search/data-plane/Search/models-index.tsp",
+      "specification/search/data-plane/Search/models-knowledgebase.tsp",
+      "specification/search/data-plane/Search/models-service.tsp",
+      "specification/search/data-plane/Search/models-shared.tsp",
+      "specification/search/data-plane/Search/routes-knowledgebase.tsp",
+      "specification/search/data-plane/Search/routes-service.tsp",
+      "specification/search/data-plane/Search/tspconfig.yaml"
+    ]
+  },
+  "qualification": {
+    "qualified": false,
+    "reasonCodes": [
+      "evidence-incomplete"
+    ],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/46315",
+      "state": "closed",
+      "merged": true,
+      "headSha": "1413bddd5fe634247b6075d3f2c89b89fc05d451",
+      "baseSha": "90e63e5fe2c596e8bd807aad7dd9d62cee1746dd",
+      "runs": {},
+      "changedTypeSpecFiles": [
+        "specification/search/data-plane/Search/client.tsp",
+        "specification/search/data-plane/Search/main.tsp",
+        "specification/search/data-plane/Search/models-index.tsp",
+        "specification/search/data-plane/Search/models-knowledgebase.tsp",
+        "specification/search/data-plane/Search/models-service.tsp",
+        "specification/search/data-plane/Search/models-shared.tsp",
+        "specification/search/data-plane/Search/routes-knowledgebase.tsp",
+        "specification/search/data-plane/Search/routes-service.tsp",
+        "specification/search/data-plane/Search/tspconfig.yaml"
+      ],
+      "evidenceErrors": [
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable",
+        "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/46315",
+      "headSha": "1413bddd5fe634247b6075d3f2c89b89fc05d451",
+      "baseSha": "90e63e5fe2c596e8bd807aad7dd9d62cee1746dd"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-evidence-gap-a183c84b5a80afe0",
+      "affectedPrs": [
+        46315
+      ],
+      "phases": [
+        "A",
+        "B"
+      ],
+      "findingIds": [],
+      "category": "evidence-gap",
+      "conclusion": "insufficient-evidence",
+      "confidence": "high",
+      "rationale": "Required independent OAD evidence is missing, incomplete, or invalid.",
+      "evidence": [
+        {
+          "kind": "qualification",
+          "id": "evidence-incomplete",
+          "detail": "evidence-incomplete"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-0",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        },
+        {
+          "kind": "qualification",
+          "id": "evidence-error-1",
+          "detail": "oadCompareOutput was truncated by the workflow logger; complete OAD evidence is unavailable"
+        }
+      ],
+      "aggregateImpact": "Excludes this report from complete-run effectiveness totals.",
+      "suggestedFix": "Restore immutable workflow logs and job-summary evidence, then rerun.",
+      "status": "generated"
+    }
+  ],
+  "errors": []
+}

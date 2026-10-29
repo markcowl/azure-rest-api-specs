@@ -1,0 +1,384 @@
+{
+  "schemaVersion": 3,
+  "schema": {
+    "name": "azure-rest-api-specs/breaking-change-evaluator",
+    "version": 3,
+    "compatibility": ">=3 <4"
+  },
+  "run": {
+    "id": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "datasetId": "merged-2026-10-15-to-2026-10-29-65f3ad98",
+    "reportId": "merged-2026-10-15-to-2026-10-29-65f3ad98:pr-47432:14e7e47b97f7c6033ed89f2500bbad1e89bb8a95"
+  },
+  "status": "evaluated",
+  "complete": true,
+  "generatedAt": "2026-10-29T07:12:44Z",
+  "pullRequest": {
+    "owner": "Azure",
+    "repo": "azure-rest-api-specs",
+    "number": 47432,
+    "title": "Management API - client tsp fix up for Microsoft.DurableTask",
+    "author": "berndverst",
+    "state": "closed",
+    "merged": true,
+    "url": "https://github.com/Azure/azure-rest-api-specs/pull/47432",
+    "baseBranch": "main",
+    "headBranch": "durabletask-dotnet-review-fixes",
+    "baseSha": "c783b6583b52feb7aa25fb192c30efb8adc4f29b",
+    "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+    "mergedAt": "2026-10-20T01:53:36Z",
+    "changedTypeSpecFiles": [
+      "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask/client.tsp"
+    ]
+  },
+  "qualification": {
+    "qualified": true,
+    "reasonCodes": [],
+    "evidence": {
+      "prUrl": "https://github.com/Azure/azure-rest-api-specs/pull/47432",
+      "state": "closed",
+      "merged": true,
+      "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+      "baseSha": "c783b6583b52feb7aa25fb192c30efb8adc4f29b",
+      "runs": {
+        "A": {
+          "id": 39340000957,
+          "name": "Swagger BreakingChange - Analyze Code",
+          "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39340000957",
+          "logDigest": "e952567266369e9243e81a8e709a1b20728f35df63390fb4ecd4454429a50332",
+          "summaryDigest": "df2d71380e92fca7d1f9061b04b1d202c87dc0bda4df000b3589b1a08a69b8e5"
+        },
+        "B": {
+          "id": 39340000904,
+          "name": "Breaking Change(Cross-Version) - Analyze Code",
+          "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+          "status": "completed",
+          "conclusion": "success",
+          "htmlUrl": "https://github.com/Azure/azure-rest-api-specs/actions/runs/39340000904",
+          "logDigest": "a12b279aecd97f6236492d27b12257cf9fc293a846b7773bb0f5c5377ec9737b",
+          "summaryDigest": "b21204c100046552e43717add5a3fc8223897064a964a9f680b1c7fe64591364"
+        }
+      },
+      "changedTypeSpecFiles": [
+        "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask/client.tsp"
+      ]
+    }
+  },
+  "provenance": {
+    "pr": {
+      "url": "https://github.com/Azure/azure-rest-api-specs/pull/47432",
+      "headSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+      "baseSha": "c783b6583b52feb7aa25fb192c30efb8adc4f29b"
+    },
+    "evaluator": {
+      "commit": "f37db08ada6edd33d546129d99410fcce79aeb5a"
+    },
+    "tool": {
+      "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+      "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5"
+    }
+  },
+  "dimensions": [],
+  "oadFindings": [],
+  "typeSpecProjects": [
+    {
+      "project": "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask",
+      "status": "complete",
+      "exitCode": 0,
+      "phaseExecutions": {
+        "A": {
+          "phase": "A",
+          "analyzerPhase": "same-version",
+          "timingScope": "phase",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/7c23914bec5d8d00-phase-a.json",
+          "markdownReport": "report-artifacts/typespec/7c23914bec5d8d00-phase-a.md",
+          "jsonDigest": "6a1d3901d7337892436de79e60dc40e938d943e76e28c6c0a0cec246534ebaad",
+          "markdownDigest": "da47f71cdf236d6e271ae035f4eced80a463af9f70ad694157c80f4534123ee4",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2964,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 910,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3880
+          },
+          "comparisonsPerformed": 6,
+          "versionComparisons": [
+            {
+              "serviceName": "DurableTask",
+              "baseVersion": "2024-10-01-preview",
+              "headVersion": "2024-10-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DurableTask",
+              "baseVersion": "2025-04-01-preview",
+              "headVersion": "2025-04-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DurableTask",
+              "baseVersion": "2025-11-01",
+              "headVersion": "2025-11-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DurableTask",
+              "baseVersion": "2026-02-01",
+              "headVersion": "2026-02-01",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DurableTask",
+              "baseVersion": "2026-05-01-preview",
+              "headVersion": "2026-05-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            },
+            {
+              "serviceName": "DurableTask",
+              "baseVersion": "2026-07-01-preview",
+              "headVersion": "2026-07-01-preview",
+              "phase": "same-version",
+              "findingCount": 0
+            }
+          ]
+        },
+        "B": {
+          "phase": "B",
+          "analyzerPhase": "all-phases",
+          "timingScope": "combined",
+          "status": "complete",
+          "exitCode": 0,
+          "jsonReport": "report-artifacts/typespec/7c23914bec5d8d00-phase-b.json",
+          "markdownReport": "report-artifacts/typespec/7c23914bec5d8d00-phase-b.md",
+          "jsonDigest": "4da78f08413387daa0c644900438008c69568ad159b9739e133d87f73844022b",
+          "markdownDigest": "aba92dd1af0243aea7e2fb425a2c2591c3165748fd6f318c0af2f989dbc6584b",
+          "timing": {
+            "compileBaseMs": 0,
+            "compileHeadMs": 0,
+            "versionMutatorsMs": 2641,
+            "canonicalizeMs": 0,
+            "identityMatchingMs": 0,
+            "diffEngineMs": 795,
+            "classifyMs": 0,
+            "suppressMs": 0,
+            "reportMs": 0,
+            "totalMs": 3440
+          },
+          "comparisonsPerformed": 0,
+          "versionComparisons": [],
+          "noComparisonReason": "Combined analyzer report contained no cross-version comparisons"
+        }
+      },
+      "reportDigest": "85b74062a94a38f90a8a443093cc400f083c152f3d169fde8ad8ad2a2bc360b2",
+      "comparisonsPerformed": 6,
+      "versionComparisons": [
+        {
+          "serviceName": "DurableTask",
+          "baseVersion": "2024-10-01-preview",
+          "headVersion": "2024-10-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DurableTask",
+          "baseVersion": "2025-04-01-preview",
+          "headVersion": "2025-04-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DurableTask",
+          "baseVersion": "2025-11-01",
+          "headVersion": "2025-11-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DurableTask",
+          "baseVersion": "2026-02-01",
+          "headVersion": "2026-02-01",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DurableTask",
+          "baseVersion": "2026-05-01-preview",
+          "headVersion": "2026-05-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        },
+        {
+          "serviceName": "DurableTask",
+          "baseVersion": "2026-07-01-preview",
+          "headVersion": "2026-07-01-preview",
+          "phase": "same-version",
+          "findingCount": 0
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "matches": [],
+  "findingGroups": [],
+  "issueAnalyses": [
+    {
+      "id": "issue-concordant-zero-00d0a4ab55f7cc87",
+      "affectedPrs": [
+        47432
+      ],
+      "phases": [
+        "B"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase B.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-B",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    },
+    {
+      "id": "issue-concordant-zero-734d966820a24f63",
+      "affectedPrs": [
+        47432
+      ],
+      "phases": [
+        "A"
+      ],
+      "findingIds": [],
+      "category": "concordant-zero",
+      "conclusion": "confirmed-agreement",
+      "confidence": "high",
+      "rationale": "Both detectors reported zero findings for Phase A.",
+      "evidence": [
+        {
+          "kind": "execution",
+          "id": "phase-A",
+          "detail": "Independent OAD evidence and TypeSpec execution both completed with zero findings."
+        }
+      ],
+      "aggregateImpact": "Adds one confirmed zero-result agreement to longitudinal metrics.",
+      "suggestedFix": "No detector change suggested.",
+      "status": "generated"
+    }
+  ],
+  "errors": [],
+  "reproduction": {
+    "shell": "powershell",
+    "evaluatorCommit": "f37db08ada6edd33d546129d99410fcce79aeb5a",
+    "analyzerSourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "analyzerArtifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prHeadSha": "14e7e47b97f7c6033ed89f2500bbad1e89bb8a95",
+    "prBaseSha": "c783b6583b52feb7aa25fb192c30efb8adc4f29b",
+    "setupCommands": [
+      {
+        "label": "Check out the evaluator",
+        "command": "git clone 'https://github.com/markcowl/azure-rest-api-specs.git' evaluator\ngit -C evaluator checkout 'f37db08ada6edd33d546129d99410fcce79aeb5a'\ncorepack pnpm --dir evaluator install --frozen-lockfile"
+      },
+      {
+        "label": "Prepare the immutable analyzer",
+        "command": "$prepared = node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js prepare --typespec-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a | ConvertFrom-Json\nif ($prepared.artifactDigest -ne '95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5') { throw 'Prepared analyzer digest does not match the report' }"
+      },
+      {
+        "label": "Check out the evaluated target",
+        "command": "git clone --filter=blob:none --no-checkout 'https://github.com/Azure/azure-rest-api-specs.git' target\ngit -C target fetch --no-tags origin c783b6583b52feb7aa25fb192c30efb8adc4f29b 14e7e47b97f7c6033ed89f2500bbad1e89bb8a95\ngit -C target checkout --detach 14e7e47b97f7c6033ed89f2500bbad1e89bb8a95\ncorepack pnpm --dir target install --frozen-lockfile"
+      }
+    ],
+    "evaluatorCommand": {
+      "label": "Rerun the complete evaluator",
+      "command": "node evaluator/eng/tools/breaking-change-evaluator/cmd/breaking-change-evaluator.js evaluate --pr 'https://github.com/Azure/azure-rest-api-specs/pull/47432' --tool-revision 65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a --json-output evaluator.json --markdown-output evaluator.md"
+    },
+    "directAnalyzerCommands": [
+      {
+        "label": "Run the TypeSpec analyzer for specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask",
+        "project": "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask",
+        "command": "Push-Location target\nnode $prepared.executable 'specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask' --base-ref c783b6583b52feb7aa25fb192c30efb8adc4f29b --phase same-version --json-output '../specification-durabletask-resource-manager-Microsoft.DurableTask-DurableTask-phase-a.json' --markdown-output '../specification-durabletask-resource-manager-Microsoft.DurableTask-DurableTask-phase-a.md' --fail-on-breaking\nnode $prepared.executable 'specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask' --base-ref c783b6583b52feb7aa25fb192c30efb8adc4f29b --json-output '../specification-durabletask-resource-manager-Microsoft.DurableTask-DurableTask-phase-b-evidence.json' --markdown-output '../specification-durabletask-resource-manager-Microsoft.DurableTask-DurableTask-phase-b-evidence.md' --fail-on-breaking\nPop-Location"
+      }
+    ]
+  },
+  "rollup": {
+    "oadTotal": 0,
+    "oadInformational": 0,
+    "typeSpecTotal": 0,
+    "exact": 0,
+    "probableReview": 0,
+    "intentionalSwaggerOnly": 0,
+    "missedEquivalent": 0,
+    "typeSpecOnly": 0,
+    "ambiguous": 0,
+    "errors": 0,
+    "byPhase": {
+      "A": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      },
+      "B": {
+        "oadTotal": 0,
+        "oadInformational": 0,
+        "typeSpecTotal": 0,
+        "exact": 0,
+        "probableReview": 0,
+        "intentionalSwaggerOnly": 0,
+        "missedEquivalent": 0,
+        "typeSpecOnly": 0,
+        "ambiguous": 0,
+        "errors": 0,
+        "outcome": "concordant-zero"
+      }
+    },
+    "errorEquivalence": {
+      "A": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      },
+      "B": {
+        "oadErrors": 0,
+        "typeSpecErrors": 0,
+        "matchedErrorOad": 0,
+        "matchedErrorTypeSpec": 0,
+        "oadErrorMatchedToTypeSpecNonError": 0,
+        "typeSpecErrorMatchedToOadNonError": 0,
+        "oadErrorsWithoutEquivalent": 0,
+        "typeSpecErrorsWithoutEquivalent": 0
+      }
+    }
+  }
+}
