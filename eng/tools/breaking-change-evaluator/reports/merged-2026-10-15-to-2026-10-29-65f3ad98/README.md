@@ -7,7 +7,7 @@
 - **Run manifest:** [machine contract](run.json)
 - **Analyzer source:** `65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a` (parent `64550a561cbd7f5eb0ec6865802a908744a3528f`)
 - **Analyzer artifact digest:** `95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5`
-- **Analyzer readiness:** Exact analyzer commit built and cached successfully; full package suite passed with 465 tests and 11 skips. A real #47326 base/head comparison completed all three same-version comparisons and reported findings without the prior TypeKit realm failure. Fix published as Azure/typespec-azure#5879.
+- **Analyzer readiness:** Exact analyzer commit built and cached successfully; full package suite passed with 465 tests and 11 skips. A real #47326 base/head comparison completed all three same-version comparisons and reported findings without the prior TypeKit realm failure. Fix retained in markcowl/typespec-azure#13.
 
 ## Selection
 
