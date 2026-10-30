@@ -1,0 +1,20 @@
+{
+  "title": "Error-only breaking-change evaluation: merged TypeSpec PRs from October 15 through October 29, 2026",
+  "analyzer": {
+    "sourceSha": "65f3ad98e7d82a2fdb26e7c24a4587a4db9cd52a",
+    "artifactDigest": "95835342e0e018bc513e3f639a2b36ec641918b5db3084bdb380fce3bd8f6cc5",
+    "prototypeParentSha": "64550a561cbd7f5eb0ec6865802a908744a3528f",
+    "cacheFormatVersion": 3,
+    "environment": {
+      "os": "win32 10.0.26300",
+      "architecture": "x64",
+      "node": "26.13.0",
+      "pnpm": "11.8.0"
+    },
+    "readiness": {
+      "verified": true,
+      "intrinsicFixVerified": true,
+      "details": "Exact analyzer commit and artifact were rebuilt and verified on 2026-10-30; analyzer package previously passed 465 tests with 11 skips and the evaluator enforces schema-v4 actionable-error comparisons."
+    }
+  }
+}
