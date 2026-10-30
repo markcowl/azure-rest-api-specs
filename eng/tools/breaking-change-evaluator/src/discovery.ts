@@ -11,8 +11,10 @@ export interface MergedPullRequestDetails {
   number: number;
   title: string;
   html_url: string;
+  created_at: string;
   updated_at: string;
   merged_at: string | null;
+  state: "open" | "closed";
   head: { sha: string };
   base: { sha: string; ref: string };
 }
@@ -23,6 +25,16 @@ export interface PullRequestFile {
 
 export interface MergedPullRequestDiscoveryApi {
   searchMergedPullRequests(
+    query: string,
+    page: number,
+    perPage: number,
+  ): Promise<{ totalCount: number; items: MergedPullRequestSearchItem[] }>;
+  getPullRequest(number: number): Promise<MergedPullRequestDetails>;
+  listPullRequestFiles(number: number): Promise<PullRequestFile[]>;
+}
+
+export interface CreatedPullRequestDiscoveryApi {
+  searchCreatedPullRequests(
     query: string,
     page: number,
     perPage: number,
@@ -63,6 +75,23 @@ export interface MergedDatasetRecord {
   exclusionReason: "no-typespec-service-input" | null;
 }
 
+export interface CreatedDatasetRecord {
+  number: number;
+  title: string;
+  url: string;
+  stateSource: "open" | "merged" | "closed";
+  createdAt: string;
+  updatedAt: string;
+  mergedAt: string | null;
+  headSha: string;
+  baseSha: string;
+  changedFiles: string[];
+  matchingFiles: string[];
+  qualifies: boolean;
+  selected: boolean;
+  exclusionReason: "no-typespec-service-input" | null;
+}
+
 function stableJson(value: unknown): string {
   return `${JSON.stringify(value, null, 2)}\n`;
 }
@@ -84,6 +113,15 @@ export function mergedPullRequestQuery(options: MergedDatasetOptions): string {
     "is:merged",
     `base:${options.baseBranch}`,
     `merged:${options.lowerBoundExclusive}..${options.upperBoundInclusive}`,
+  ].join(" ");
+}
+
+export function createdPullRequestQuery(options: MergedDatasetOptions): string {
+  return [
+    `repo:${options.repository}`,
+    "is:pr",
+    `base:${options.baseBranch}`,
+    `created:${options.lowerBoundExclusive}..${options.upperBoundInclusive}`,
   ].join(" ");
 }
 
@@ -196,6 +234,136 @@ export async function discoverMergedDataset(
       retrievedAt: options.retrievedAt,
       merged: `state:merged base:${options.baseBranch} merged:>${options.lowerBoundExclusive} merged:<=${options.upperBoundInclusive}`,
       order: "mergedAt ascending, PR number ascending",
+    },
+    selection: {
+      cap: null,
+      sourceCount: records.length,
+      excludedCount: records.length - selectedCount,
+      qualifyingCount: selectedCount,
+      selectedCount,
+      remainingCount: 0,
+      continuationCursor: null,
+      pathScope: "specification/",
+      filePatterns: ["*.tsp", "tspconfig.yaml"],
+      exclusionCounts: {
+        "no-typespec-service-input": records.length - selectedCount,
+        "after-cap": 0,
+      },
+    },
+    analyzer: options.analyzer,
+    evaluatorCommit: options.evaluatorCommit,
+    records,
+  };
+  return { snapshot, selection };
+}
+
+export async function discoverCreatedDataset(
+  api: CreatedPullRequestDiscoveryApi,
+  options: MergedDatasetOptions,
+): Promise<{ snapshot: Record<string, unknown>; selection: Record<string, unknown> }> {
+  const lower = parseInstant(options.lowerBoundExclusive, "lowerBoundExclusive");
+  const upper = parseInstant(options.upperBoundInclusive, "upperBoundInclusive");
+  if (lower >= upper) throw new Error("Created PR interval must have a positive duration");
+  if (parseInstant(options.retrievedAt, "retrievedAt") < upper) {
+    throw new Error("retrievedAt cannot precede the frozen upper bound");
+  }
+
+  const query = createdPullRequestQuery(options);
+  const searchItems: MergedPullRequestSearchItem[] = [];
+  let expectedTotal: number | undefined;
+  for (let page = 1; ; page++) {
+    const response = await api.searchCreatedPullRequests(query, page, 100);
+    expectedTotal ??= response.totalCount;
+    if (expectedTotal > 1_000) {
+      throw new Error(
+        `Created PR query returned ${expectedTotal} records; split the interval to avoid GitHub's 1,000-result search limit`,
+      );
+    }
+    searchItems.push(...response.items);
+    if (response.items.length < 100 || searchItems.length >= expectedTotal) break;
+  }
+  if (searchItems.length !== expectedTotal) {
+    throw new Error(
+      `Created PR query was incomplete: expected ${expectedTotal}, retrieved ${searchItems.length}`,
+    );
+  }
+  if (new Set(searchItems.map((item) => item.number)).size !== searchItems.length) {
+    throw new Error("Created PR query returned duplicate pull requests");
+  }
+
+  const records: CreatedDatasetRecord[] = [];
+  for (const item of searchItems) {
+    const pullRequest = await api.getPullRequest(item.number);
+    const createdAt = parseInstant(pullRequest.created_at, `PR #${item.number} created_at`);
+    if (createdAt <= lower || createdAt > upper) {
+      throw new Error(`PR #${item.number} falls outside the frozen created interval`);
+    }
+    if (pullRequest.base.ref !== options.baseBranch) {
+      throw new Error(
+        `PR #${item.number} targets ${pullRequest.base.ref}, not ${options.baseBranch}`,
+      );
+    }
+    const changedFiles = (await api.listPullRequestFiles(item.number))
+      .map((file) => file.filename.replaceAll("\\", "/"))
+      .sort();
+    const matchingFiles = changedFiles.filter(
+      (filename) => filename.startsWith("specification/") && isTypeSpecInputFile(filename),
+    );
+    records.push({
+      number: pullRequest.number,
+      title: pullRequest.title,
+      url: pullRequest.html_url,
+      stateSource: pullRequest.merged_at ? "merged" : pullRequest.state,
+      createdAt: pullRequest.created_at,
+      updatedAt: pullRequest.updated_at,
+      mergedAt: pullRequest.merged_at,
+      headSha: pullRequest.head.sha,
+      baseSha: pullRequest.base.sha,
+      changedFiles,
+      matchingFiles,
+      qualifies: matchingFiles.length > 0,
+      selected: matchingFiles.length > 0,
+      exclusionReason: matchingFiles.length > 0 ? null : "no-typespec-service-input",
+    });
+  }
+  records.sort(
+    (left, right) => left.createdAt.localeCompare(right.createdAt) || left.number - right.number,
+  );
+
+  const snapshot = {
+    schemaVersion: 1,
+    schemaCompatibility: ">=1 <2",
+    repository: options.repository,
+    retrievedAt: options.retrievedAt,
+    queries: [
+      {
+        name: "created-in-frozen-interval",
+        expression: query,
+        order: "createdAt ascending, PR number ascending",
+        complete: true,
+        continuationCursor: null,
+      },
+    ],
+    sourceCount: records.length,
+    records,
+  };
+  const snapshotContent = stableJson(snapshot);
+  const selectedCount = records.filter((record) => record.selected).length;
+  const selection = {
+    schemaVersion: 2,
+    schemaCompatibility: ">=2 <3",
+    run: {
+      id: options.runId,
+      datasetId: options.datasetId,
+      generatedAt: options.generatedAt,
+    },
+    repository: options.repository,
+    query: {
+      snapshot: "query-snapshot.json",
+      snapshotDigest: sha256(snapshotContent),
+      retrievedAt: options.retrievedAt,
+      created: `base:${options.baseBranch} created:>${options.lowerBoundExclusive} created:<=${options.upperBoundInclusive}`,
+      order: "createdAt ascending, PR number ascending",
     },
     selection: {
       cap: null,

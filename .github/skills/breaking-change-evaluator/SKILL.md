@@ -22,6 +22,8 @@ validation in prompts or ad hoc shell pipelines.
 
 - Work from the user-selected report branch and keep historical run directories immutable.
 - Use a half-open lower bound and a frozen inclusive upper bound for merged-PR discovery.
+- For created-PR assessments, freeze the same half-open/inclusive interval and preserve each PR's
+  current open, merged, or closed state in the selection snapshot.
 - Query every page and refuse an incomplete GitHub search or a hidden selection cap.
 - Select TypeSpec service inputs under `specification/` (`*.tsp` and `tspconfig.yaml`).
 - Pin the analyzer by full source SHA and artifact digest. Never follow a moving branch during a run.

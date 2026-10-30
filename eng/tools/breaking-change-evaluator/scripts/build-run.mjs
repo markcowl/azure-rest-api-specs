@@ -23,6 +23,22 @@ const reports = await Promise.all(
     ),
   })),
 );
+const reportSchemas = [
+  ...new Map(
+    reports.map(({ report }) => [
+      `${report.schemaName}:${report.schemaVersion}:${report.schemaCompatibility}`,
+      {
+        name: report.schemaName,
+        version: report.schemaVersion,
+        compatibility: report.schemaCompatibility,
+      },
+    ]),
+  ).values(),
+];
+if (reportSchemas.length !== 1) {
+  throw new Error(`Run contains mixed report schemas: ${JSON.stringify(reportSchemas)}`);
+}
+const [reportSchema] = reportSchemas;
 
 function sumPhase(phase, name) {
   return reports.reduce(
@@ -201,7 +217,7 @@ const lines = [
   }),
   "",
   ...renderAggregateEvidence(aggregate.records),
-  "Phase A is Swagger BreakingChange versus TypeSpec same-version. Phase B is Cross-Version versus TypeSpec cross-version retained from the combined analyzer execution. OAD workflow duration is not treated as detector time.",
+  "Phase A compares actionable Swagger BreakingChange errors with unsuppressed TypeSpec same-version errors. Phase B compares actionable Cross-Version errors with unsuppressed TypeSpec cross-version errors. OAD workflow duration is not treated as detector time.",
   "",
 ];
 await writeFile(resolve(root, "README.md"), `${lines.join("\n")}\n`);
@@ -216,10 +232,8 @@ const manifest = {
   generatedAt: selection.run.generatedAt,
   repository: selection.repository,
   reportSchema: {
-    name: "azure-rest-api-specs/breaking-change-evaluator",
-    version: 3,
-    compatibility: ">=3 <4",
-    legacy: false,
+    ...reportSchema,
+    legacy: reportSchema.version < 4,
   },
   selection: {
     file: "selection.json",

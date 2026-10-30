@@ -69,6 +69,12 @@ The script must report a complete query, `cap: null`, `remainingCount: 0`, and
 
 ## 4. Snapshot and execute
 
+For an assessment selected by PR creation time, create a separate immutable directory with
+`scripts/create-created-selection.mjs` and the same provenance arguments. Supply the frozen
+`--lower-bound` and `--upper-bound`; the script queries every PR targeting the configured base branch
+whose creation time falls in that interval, records its current open/merged/closed state, and selects
+only TypeSpec service inputs. Never mix a created-date selection into a merged-date run.
+
 ```powershell
 node scripts/snapshot-qualification.mjs `
   --selection reports/<run-id>/selection.json `
