@@ -46,7 +46,9 @@ function pathCandidates(
 
 function resolveCmdShim(shimPath: string): ResolvedExecutable {
   const content = readFileSync(shimPath, "utf8");
-  const relativeEntry = content.match(/%~dp0[\\/]([^"\r\n]*?\.(?:c?js|mjs))(?=["\s])/i)?.[1];
+  const relativeEntry = content.match(
+    /(?:%~dp0|%dp0%)[\\/]([^"\r\n]*?\.(?:c?js|mjs))(?=["\s])/i,
+  )?.[1];
   if (!relativeEntry) {
     throw new Error(`Cannot safely resolve command shim '${shimPath}' without a shell`);
   }

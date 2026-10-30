@@ -1,4 +1,4 @@
-import { mkdtemp, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
@@ -23,6 +23,26 @@ describe("process execution", () => {
     await writeFile(
       join(directory, "corepack.cmd"),
       '@ECHO OFF\r\n"%~dp0\\node.exe" "%~dp0\\shim.cjs" %*\r\n',
+    );
+    const resolved = resolveExecutable(
+      "corepack",
+      { PATH: directory, PATHEXT: ".EXE;.CMD" },
+      "win32",
+    );
+    expect(resolved.command).toBe(process.execPath);
+    expect(resolved.prefixArgs).toEqual([entry]);
+  });
+
+  it("resolves a modern npm Windows CMD shim without a shell", async () => {
+    const directory = await mkdtemp(join(tmpdir(), "npm-cmd-shim-"));
+    temporaryDirectories.push(directory);
+    const packageDirectory = join(directory, "node_modules", "corepack", "dist");
+    await mkdir(packageDirectory, { recursive: true });
+    const entry = join(packageDirectory, "corepack.js");
+    await writeFile(entry, "console.log(process.argv[2]);");
+    await writeFile(
+      join(directory, "corepack.cmd"),
+      '@ECHO OFF\r\n"%_prog%" "%dp0%\\node_modules\\corepack\\dist\\corepack.js" %*\r\n',
     );
     const resolved = resolveExecutable(
       "corepack",
