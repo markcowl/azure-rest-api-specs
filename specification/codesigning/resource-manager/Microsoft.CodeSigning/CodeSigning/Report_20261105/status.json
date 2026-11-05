@@ -1,0 +1,32 @@
+{
+  "service": "codesigning",
+  "projectRoot": "specification/codesigning/resource-manager/Microsoft.CodeSigning/CodeSigning",
+  "entrypoint": "specification/codesigning/resource-manager/Microsoft.CodeSigning/CodeSigning/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "b62d7a7f9880ce36dbf37f7873b0e2e65a158869eeea177c90d17e55f93d39d0",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "20413dc470859231b429d967c687f6e33d0a7cd44357b36b46d42156415b2266",
+    "operationsCsv": "174b1df6c252a5c66f2405c08ebb84355e3626ccd0029e603a86ffffd1ddd89a",
+    "statusJson": "a4733334310d7529b49c9ae947eb662f98a0e4c767f6ef44e8f952080f1482b9"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "service": "alertsmanagement",
+  "projectRoot": "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertsManagement",
+  "entrypoint": "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/AlertsManagement/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "4e0110bdf3172dc7b4671fc5b9f05a6da1b25b042911569765549a9790e62549",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e357fe6856507564b2a2bfbec6a29ab6ae5f66af54cb7d4dca50317cbe099ff6",
+    "operationsCsv": "c73f1767fed643e95e46f20781bfe8a18c4cc70c999e75f30bc034ad5d327677",
+    "statusJson": "99bc0f6430662d0687a416f3cd6f5a6995049636dee5dd9bcfec43809230b0c8"
+  }
+}

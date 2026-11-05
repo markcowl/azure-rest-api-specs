@@ -1,0 +1,32 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/SensitivitySettingsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/SensitivitySettingsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "0be5414e5e641a759f1d8f2e293e88ec41e85b415ed7799e6636e34a63193caf",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 3,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "3117a5fe958626bb7baaa714e3ad291146cd098ee423472ed34d18a5021e441e",
+    "operationsCsv": "e100bfadcdc9d33381edc4b02908a4406c3f948a08e12b4ec12c79548b780fb4",
+    "statusJson": "dba4fa9b8f4e0345d7e14331df6c0b91a87f4043c1e12eb95054788396684584"
+  }
+}

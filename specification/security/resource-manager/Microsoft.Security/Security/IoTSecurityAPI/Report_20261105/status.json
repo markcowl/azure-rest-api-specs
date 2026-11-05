@@ -1,0 +1,32 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/IoTSecurityAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/IoTSecurityAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "52c87d583f3494ca614f96d2df119ec289df6c4753389becc816e5d0bfffaaa3",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 17,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "7a94c2f0396eae2e7b354466a080e541a6c2c4ade7e4f74272bb34981ba56b14",
+    "operationsCsv": "07cadcf16c39cbacb8b438cf17436e81d74edd5194831dc44828729eda3fbae4",
+    "statusJson": "d28ee42e09c7bb6b43e2fd4cae785ac5053667036f8a6c35d035650bf3edb9c7"
+  }
+}

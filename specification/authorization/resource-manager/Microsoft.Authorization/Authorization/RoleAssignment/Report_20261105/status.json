@@ -1,0 +1,32 @@
+{
+  "service": "authorization",
+  "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment",
+  "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "e1164c2438444f5de772891c6817701bf8158eb332653b67af3ba85db2e76b9b",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 10,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "16fa11c3199760b00b5671f344b95ff510165373c53d28d0ff41b95d4b87dab4",
+    "operationsCsv": "caa78f0413c7702ab20f0e807fc5f3540ea4689a8a058c4e45139c0c447e80c5",
+    "statusJson": "80c83789825892957cfb6930b2b140828c4e1dd77dede908768694e969593f36"
+  }
+}

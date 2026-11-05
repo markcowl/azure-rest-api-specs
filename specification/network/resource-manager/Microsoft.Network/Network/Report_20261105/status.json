@@ -1,0 +1,30 @@
+{
+  "service": "network",
+  "projectRoot": "specification/network/resource-manager/Microsoft.Network/Network",
+  "entrypoint": "specification/network/resource-manager/Microsoft.Network/Network/client.tsp",
+  "classification": "client-only",
+  "status": "skipped",
+  "resourceCount": 0,
+  "operationCount": 0,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "reportDirectory": "Report_20261105",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "statusJson": "0085d971f3de17bd110d4ae3446acb0938d094b4bf950e997e706fec8af79778"
+  }
+}

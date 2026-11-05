@@ -799,6 +799,9 @@ importers:
       '@azure-tools/tsp-client-tests':
         specifier: workspace:*
         version: link:tsp-client-tests
+      '@azure-tools/typespec-arm-resource-data-report':
+        specifier: workspace:*
+        version: link:typespec-arm-resource-data
       '@azure-tools/typespec-migration-validation':
         specifier: workspace:*
         version: link:typespec-migration-validation
@@ -1030,6 +1033,15 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 26.6.5
+
+  eng/tools/typespec-arm-resource-data:
+    dependencies:
+      '@azure-tools/typespec-azure-resource-manager':
+        specifier: 'catalog:'
+        version: 0.73.0(7f327fbcf017dd6acead538a3c60488b)
+      '@typespec/compiler':
+        specifier: 'catalog:'
+        version: 1.17.0(@types/node@26.6.3)
 
   eng/tools/typespec-migration-validation:
     dependencies:

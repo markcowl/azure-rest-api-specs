@@ -1,0 +1,32 @@
+{
+  "service": "app",
+  "projectRoot": "specification/app/resource-manager/Microsoft.App/SreAgent",
+  "entrypoint": "specification/app/resource-manager/Microsoft.App/SreAgent/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "74558c145b6f9e1aaedad0251df59c6752fcdd8b3292b081377913ad5a04e445",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 16,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "5a9c2a50fea9cd8326a463ae7821d0b72ad6a3a60143cf5cc1c50c180970f931",
+    "operationsCsv": "983103584cfd4647a6a4fa9d3f278df0af0dc4e408862ef826bc4e81636d4431",
+    "statusJson": "935f961b183f1d5c5d2ee95b84b295f8efc40cfbc86572db8bbaeeb2e915d22a"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "service": "deviceupdate",
+  "projectRoot": "specification/deviceupdate/resource-manager/Microsoft.DeviceUpdate/DuDeviceRegistry",
+  "entrypoint": "specification/deviceupdate/resource-manager/Microsoft.DeviceUpdate/DuDeviceRegistry/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "0589251d736b0f2ed2354266adb928e5bb22d2118bea0831bee12cfc99deb113",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 10,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b16837e0e09415c473ca79bc73f389ff7f48e3834d458103a354b129f573f0b0",
+    "operationsCsv": "cf852deeb7223ff4dab48737bb49f1bc61897e1e63575b4e25f6bbf841f80491",
+    "statusJson": "4bbe16959c1409c0d3a51bfe5010000bd428be01dd1181b59de1a3e10e33c3fb"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "service": "quantum",
+  "projectRoot": "specification/quantum/resource-manager/Microsoft.Quantum/Quantum",
+  "entrypoint": "specification/quantum/resource-manager/Microsoft.Quantum/Quantum/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "e1cc01d746c435f1d78eaf4d433990c50a941af2edbe46a89b4daf8e998e7830",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 8,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a42d87c9c4b19ba98e35334b3d23e1ea0e4bd3cae3530727ba9ce66351546790",
+    "operationsCsv": "40ec78c620461a3852e2cfc10c7b14a33ffa70c1a2078b3df40d5874358f0a63",
+    "statusJson": "4efa17cd1b34673f9bf00e3309128442d57dbe30799e072281802cbea31f03a9"
+  }
+}

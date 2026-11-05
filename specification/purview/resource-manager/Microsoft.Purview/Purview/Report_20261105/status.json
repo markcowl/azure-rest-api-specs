@@ -1,0 +1,32 @@
+{
+  "service": "purview",
+  "projectRoot": "specification/purview/resource-manager/Microsoft.Purview/Purview",
+  "entrypoint": "specification/purview/resource-manager/Microsoft.Purview/Purview/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "e86bc11b8410b8c3f2fd2a26801733aa2f94f28035ab0d2075ce5c89de314140",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 21,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1d9173daa1542b43c9a5b2916ec07d44f4d92223383488c268a6d96bbdf2cd9a",
+    "operationsCsv": "43e5745df5ee27152c23f63412df3d30a6d808dd92caffe6407030cd75bd165a",
+    "statusJson": "3f2c63c6ad9858100a3a9ba85939f9af3b4d0c1d67ffb277ce12603678d7dd60"
+  }
+}

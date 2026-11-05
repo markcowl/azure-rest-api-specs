@@ -1,0 +1,32 @@
+{
+  "service": "kubernetesruntime",
+  "projectRoot": "specification/kubernetesruntime/resource-manager/Microsoft.KubernetesRuntime/KubernetesRuntime",
+  "entrypoint": "specification/kubernetesruntime/resource-manager/Microsoft.KubernetesRuntime/KubernetesRuntime/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "5f03bc5ab66653348757f0346c47de232c7040baaab56a2c0fa795ed5d8d610b",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 4,
+  "operationCount": 19,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "7b8b2d3709859f85c42dffed010277e3cad77b137f56a4c2315a6894c4ed4fc9",
+    "operationsCsv": "f4715514698dbf7dbdc7263d3ba4a328f3c7a2ff59e93c24214e0b4ff06fa3d3",
+    "statusJson": "39b05f18488b00b02d60a011819bf43a739a67b67653c4759c67222aecf2e378"
+  }
+}

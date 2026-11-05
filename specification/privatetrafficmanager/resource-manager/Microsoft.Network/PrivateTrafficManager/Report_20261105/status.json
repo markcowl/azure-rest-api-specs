@@ -1,0 +1,32 @@
+{
+  "service": "privatetrafficmanager",
+  "projectRoot": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager",
+  "entrypoint": "specification/privatetrafficmanager/resource-manager/Microsoft.Network/PrivateTrafficManager/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "4789f3d25f05ec436b087e86b988c7eb858422cf0577e18d349b65776a17496a",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 31,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "ce472fe106ac03957ec482e942b0f1308d7df2e09025ee0666972d47a7a28d8c",
+    "operationsCsv": "c948c80c566168dd84cbd49c638d756c5e0f3b752761246a3fc4f3f15cbea2db",
+    "statusJson": "0693789fa93582507acd8ffd3b71687a607b374bdaffa8b2c833abd51ca09b72"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "service": "redis",
+  "projectRoot": "specification/redis/resource-manager/Microsoft.Cache/Redis",
+  "entrypoint": "specification/redis/resource-manager/Microsoft.Cache/Redis/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "acb6174eea7b4d1ac4094dec74be21e3b8a0f5ab4b573a57b8f4652edef372fb",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 38,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "8f891a30c2a508c0344437a21668f156960ddde22308532c42397bc62291b5d9",
+    "operationsCsv": "b859d322ce9fa7bdac95b97c7d3031960a5817a50ec607ca89e190c18b2cf4fe",
+    "statusJson": "d0b3bd1b35f39d8f631833769fd25b55ad5f67c9ccdf3be7e7574da51f7e2396"
+  }
+}

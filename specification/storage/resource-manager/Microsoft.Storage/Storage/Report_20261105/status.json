@@ -1,0 +1,66 @@
+{
+  "service": "storage",
+  "projectRoot": "specification/storage/resource-manager/Microsoft.Storage/Storage",
+  "entrypoint": "specification/storage/resource-manager/Microsoft.Storage/Storage/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "02a0199a852b5c0be1718ed6418d1b5e514548546d35f23ca774794ed16a500a",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 30,
+  "operationCount": 135,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 4,
+  "duplicateResourceErrorGroupCount": 2,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts/{}/blobservices/default/containers/{}/immutabilitypolicies/default; resource names: ContainersImmutabilityPolicies; ImmutabilityPolicy",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts/{}/tableservices/default/tables/{}; resource names: Table; TableServicesTables"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts/{}/blobservices/default/containers/{}/immutabilitypolicies/default",
+      "resources": [
+        {
+          "resourceName": "ContainersImmutabilityPolicies",
+          "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L14"
+        },
+        {
+          "resourceName": "ImmutabilityPolicy",
+          "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts/{}/tableservices/default/tables/{}",
+      "resources": [
+        {
+          "resourceName": "Table",
+          "resourceType": "Microsoft.Storage/storageAccounts/tableServices/tables",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L14"
+        },
+        {
+          "resourceName": "TableServicesTables",
+          "resourceType": "Microsoft.Storage/storageAccounts/tableServices/tables",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "ee551fc8aff6a402de0f7780dcf8682e5f497805cc5aedb1e3f584615ad3a38d",
+    "operationsCsv": "f2d284a1a0ffec070307504c0a6fdc18093c2256c0b196faa6daa7768aeac40e",
+    "statusJson": "99d9a9420c2840962cbf438ebefe531d6ea82265ff638436a222ab8220027fdd"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "service": "containerstorage",
+  "projectRoot": "specification/containerstorage/resource-manager/Microsoft.ContainerStorage/ContainerStorage",
+  "entrypoint": "specification/containerstorage/resource-manager/Microsoft.ContainerStorage/ContainerStorage/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "9b077902bbd0eb95dc8f677ce5891d6004eb3ae637ea2875f3ee1c7941847dfd",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 15,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d0dec71a5f624b6267323b6df72845f6026bd7d347025242165cc616ad726f55",
+    "operationsCsv": "70a988b4057ad8242a701eb39b508698f961e4f354b56ee3ebfe6fbf82e2a4ea",
+    "statusJson": "87ab28096f170774482e0d8c9834c084c991e37913bea2a2df21221fc4ebea36"
+  }
+}

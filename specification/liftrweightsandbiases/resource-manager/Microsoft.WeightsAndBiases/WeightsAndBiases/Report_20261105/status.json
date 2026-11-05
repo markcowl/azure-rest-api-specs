@@ -1,0 +1,32 @@
+{
+  "service": "liftrweightsandbiases",
+  "projectRoot": "specification/liftrweightsandbiases/resource-manager/Microsoft.WeightsAndBiases/WeightsAndBiases",
+  "entrypoint": "specification/liftrweightsandbiases/resource-manager/Microsoft.WeightsAndBiases/WeightsAndBiases/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "eeece0a7a019b9286126bc4db3f03e485c02e33fb727bd0840a0c8fae4e110eb",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a3b02c8addb31b8113fac1213633dea199ef95f822a762ffe11465237709d1eb",
+    "operationsCsv": "13c94d0a75f694b37a8dd84f95b1e5686cfc654a309ac2a17b7e71a1d83f79b1",
+    "statusJson": "62be88dc4086da1b818c7e83e33804ffbe8a991ac50c19d08f2eb88bb5c9bd23"
+  }
+}

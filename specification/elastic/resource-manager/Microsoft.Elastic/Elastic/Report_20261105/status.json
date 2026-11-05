@@ -1,0 +1,98 @@
+{
+  "service": "elastic",
+  "projectRoot": "specification/elastic/resource-manager/Microsoft.Elastic/Elastic",
+  "entrypoint": "specification/elastic/resource-manager/Microsoft.Elastic/Elastic/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "08b8b1c877be9ad2a4bc95f35b4e507e32224673a7131674f3dfe3f309bc2498",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 59,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 8,
+  "duplicateResourceErrorGroupCount": 4,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.elastic/monitors/{}/monitoredsubscriptions/{}; resource names: MonitoredSubscriptionProperties; MonitorsMonitoredSubscriptions",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.elastic/monitors/{}/openaiintegrations/{}; resource names: MonitorsOpenAiIntegrations; OpenAIIntegrationRPModel",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.elastic/monitors/{}/tagrules/{}; resource names: MonitoringTagRules; MonitorsTagRules",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.elastic/monitors/{}; resource names: ElasticMonitorResource; Monitors"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elastic/monitors/{}",
+      "resources": [
+        {
+          "resourceName": "ElasticMonitorResource",
+          "resourceType": "Microsoft.Elastic/monitors",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L14"
+        },
+        {
+          "resourceName": "Monitors",
+          "resourceType": "Microsoft.Elastic/monitors",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elastic/monitors/{}/monitoredsubscriptions/{}",
+      "resources": [
+        {
+          "resourceName": "MonitoredSubscriptionProperties",
+          "resourceType": "Microsoft.Elastic/monitors/monitoredSubscriptions",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoredSubscriptionProperties.tsp#L14"
+        },
+        {
+          "resourceName": "MonitorsMonitoredSubscriptions",
+          "resourceType": "Microsoft.Elastic/monitors/monitoredSubscriptions",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoredSubscriptionProperties.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elastic/monitors/{}/openaiintegrations/{}",
+      "resources": [
+        {
+          "resourceName": "MonitorsOpenAiIntegrations",
+          "resourceType": "Microsoft.Elastic/monitors/openAIIntegrations",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/OpenAIIntegrationRPModel.tsp#L14"
+        },
+        {
+          "resourceName": "OpenAIIntegrationRPModel",
+          "resourceType": "Microsoft.Elastic/monitors/openAIIntegrations",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/OpenAIIntegrationRPModel.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.elastic/monitors/{}/tagrules/{}",
+      "resources": [
+        {
+          "resourceName": "MonitoringTagRules",
+          "resourceType": "Microsoft.Elastic/monitors/tagRules",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoringTagRules.tsp#L14"
+        },
+        {
+          "resourceName": "MonitorsTagRules",
+          "resourceType": "Microsoft.Elastic/monitors/tagRules",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoringTagRules.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e0a5212465312658a7550ece03786054aa0a0fb18b08608c2e82343832efb08e",
+    "operationsCsv": "e35d97618b3c77c0758b065fc94ebeec8ca9f6ce18f920ef425914eb220c9863",
+    "statusJson": "554dd4942464240711fd7af4acf97237e275f80583d81d49986593eabc1f6f7c"
+  }
+}

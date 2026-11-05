@@ -1,0 +1,32 @@
+{
+  "service": "dataprotection",
+  "projectRoot": "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection",
+  "entrypoint": "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "c10d2ea771e9dfa6653d571ee246f53cdfe131f114f7908db4d473cd829219c9",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 17,
+  "operationCount": 62,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2ea6c8a2d62ce59cc5f4cdebf596f7c6075c36120d9d8fa68028c3f7b85fc291",
+    "operationsCsv": "d5daea27bc4fa63ac8c448b0472895f9d113136f42438953691b36c0a1525135",
+    "statusJson": "4a116f250a2b015ab92c039f9aa179ab06e2c8da0982b3e80506b546822b353c"
+  }
+}

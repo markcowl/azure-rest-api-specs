@@ -1,0 +1,32 @@
+{
+  "service": "edge",
+  "projectRoot": "specification/edge/resource-manager/Microsoft.Edge/configurationmanager",
+  "entrypoint": "specification/edge/resource-manager/Microsoft.Edge/configurationmanager/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "5a68aae024d3868de911e95c0124d58c883d2d7ae9b488e9db3293fbac18b285",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 38,
+  "operationCount": 199,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d48bbfaa41e9b7d167342ef4be73d3eee90869a9f429058b045db73830d16de9",
+    "operationsCsv": "3e5d92e6c232090707ce627f2460eef2461078c15c98ee290d9afa611592756c",
+    "statusJson": "ff53af3b45d30c3fc8446dbf125b6f8bbd2fe95047ae4777a8de16141a59980f"
+  }
+}

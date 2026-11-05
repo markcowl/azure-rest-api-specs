@@ -1,0 +1,32 @@
+{
+  "service": "eventgrid",
+  "projectRoot": "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid",
+  "entrypoint": "specification/eventgrid/resource-manager/Microsoft.EventGrid/EventGrid/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "593cb1836d051807adad84fe30356c7201f1772ba23d233d9f98b756ec2d6725",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 27,
+  "operationCount": 161,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "a2f44837e89b5ef9fcaa2fe99a256633cb81201d988eb02e38ab17fee22ea248",
+    "operationsCsv": "3adb0c6f344814fe93c289b9a9a09bfa90d03c8bd69a4812239e88d106079946",
+    "statusJson": "c760ac1375f0e8d8785125802e37040ecdf212907c84868202397fa723f21ca3"
+  }
+}

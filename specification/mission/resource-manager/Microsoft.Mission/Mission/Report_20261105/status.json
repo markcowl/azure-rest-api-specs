@@ -1,0 +1,32 @@
+{
+  "service": "mission",
+  "projectRoot": "specification/mission/resource-manager/Microsoft.Mission/Mission",
+  "entrypoint": "specification/mission/resource-manager/Microsoft.Mission/Mission/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "d96a9e6826b2d0764e44ed39799e087120dc3f9d9b749f2ace89692d50249cd6",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 9,
+  "operationCount": 63,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "3367e4ef712ac76ecd97ec70508d32588510dff8de943a8c1bcc52b95a9fa63a",
+    "operationsCsv": "e022deadb694841a328ee365e3fe7991bd50ea4c0edd194bcd7b5818705f64fd",
+    "statusJson": "da04f29b555c31c9a49cc04f3a635f7dcab0157afe00f0461e89727cd075fac1"
+  }
+}

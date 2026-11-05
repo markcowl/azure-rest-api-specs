@@ -1,0 +1,32 @@
+{
+  "service": "workloads",
+  "projectRoot": "specification/workloads/resource-manager/Microsoft.Workloads/monitors",
+  "entrypoint": "specification/workloads/resource-manager/Microsoft.Workloads/monitors/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "bbcf86544d9922f62f1b65d50d067e11f03b9d72f3a053c241b282455b54b4e7",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 21,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1967761ded72e08ef8782eb0616f53bc3e0e9a13e582146528d2c1212ee1b4ba",
+    "operationsCsv": "233798ed1033d4e689abd758d414bdcae54c1b9cb437c0f5b9e5ff515192ca1c",
+    "statusJson": "0c00f65c1d326550647bbb9ec4c30a15500d67242844b3e5b79e1eeeda90b84c"
+  }
+}
