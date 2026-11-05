@@ -1,0 +1,32 @@
+{
+  "service": "servicefabricmanagedclusters",
+  "projectRoot": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters",
+  "entrypoint": "specification/servicefabricmanagedclusters/resource-manager/Microsoft.ServiceFabric/ServiceFabricManagedClusters/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "58c5a2e34864c5b69bdec68bd21a340da9c1e35e43acbb5f13d9e8f87d6deda4",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 57,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "546d7e11851cfc18e14f64c7a1416c7c66b3cf77a1d715ad438c3a25d47c949b",
+    "operationsCsv": "47c72f154f859306209995c5a83e3958c2c6f8effd951eebc34c781cd19f9fba",
+    "statusJson": "87e64f552e49dfe06fa5eef88abfacfa4654ae9a2f8133173c7e16496183f90c"
+  }
+}

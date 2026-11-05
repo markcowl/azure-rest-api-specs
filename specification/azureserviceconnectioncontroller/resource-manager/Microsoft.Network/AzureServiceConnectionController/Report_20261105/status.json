@@ -1,0 +1,32 @@
+{
+  "service": "azureserviceconnectioncontroller",
+  "projectRoot": "specification/azureserviceconnectioncontroller/resource-manager/Microsoft.Network/AzureServiceConnectionController",
+  "entrypoint": "specification/azureserviceconnectioncontroller/resource-manager/Microsoft.Network/AzureServiceConnectionController/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "4113ed003471a6d23cc7a5b5deda46713cd51fc181343cb8b2f7c0ac8406050c",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "6e8ad0d6bbbb496164760dcedede08973bbc2c35107ef2411cd612f4100b8e0c",
+    "operationsCsv": "90e3ff5ba8db978d63223b55e21d36402b0793cf3229b0848d75e360a3c28917",
+    "statusJson": "67d41709d999894d12d79b92e77366729f188d65743889ac7eac40cd995d9eca"
+  }
+}

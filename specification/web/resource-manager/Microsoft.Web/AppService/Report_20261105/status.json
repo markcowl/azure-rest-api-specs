@@ -1,0 +1,32 @@
+{
+  "service": "web",
+  "projectRoot": "specification/web/resource-manager/Microsoft.Web/AppService",
+  "entrypoint": "specification/web/resource-manager/Microsoft.Web/AppService/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "bcc767ee216720ba13ff7a6a3319a106d52450b44e37cd75edff2b2ec5a8cfe7",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 151,
+  "operationCount": 761,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 3,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1c62ee4c4b35a2da8232e6905d078cc2c09a21c71f17414c24f166f5332e91d1",
+    "operationsCsv": "67126a0685f0e8edb1932bc2a4b5955129276657118c8a4ee89dd0e11d0df56f",
+    "statusJson": "ab96697d4287db8017e471d91a199617abe8bb65d270dedbcbb2908982ece717"
+  }
+}

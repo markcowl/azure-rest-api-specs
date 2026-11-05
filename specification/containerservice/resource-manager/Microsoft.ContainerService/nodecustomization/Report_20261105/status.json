@@ -1,0 +1,32 @@
+{
+  "service": "containerservice",
+  "projectRoot": "specification/containerservice/resource-manager/Microsoft.ContainerService/nodecustomization",
+  "entrypoint": "specification/containerservice/resource-manager/Microsoft.ContainerService/nodecustomization/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "c2e3810e32fb9f7f76b79c492cc19e7ead776c12306a68e88f11e236c197d446",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 9,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2d406537025a16992793f8559b508c0609f53dd3c9f9d5271f56310872778807",
+    "operationsCsv": "d5b85b433d896d1f84f7d3044fbfecfa33e6277ef2c391e9ad1427104cde9f55",
+    "statusJson": "dd07a3762ce66e065b2072bbbeb0d0214840c528f1dd9dd906e5f903afe64ac5"
+  }
+}

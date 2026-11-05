@@ -1,0 +1,32 @@
+{
+  "service": "recoveryservices",
+  "projectRoot": "specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/RecoveryServices",
+  "entrypoint": "specification/recoveryservices/resource-manager/Microsoft.RecoveryServices/RecoveryServices/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "1c9482d265b680fb744474a3a0808de79a8490c33ef1ebae5dc06dce586900e0",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 18,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "7116f0107c740c34e0dc8c9aad0ecbdc787e4aa0a5930f035075a1ff18201b9f",
+    "operationsCsv": "b0edafd43a49a091f04c14a5dfd12d8d1ed6ff41bf59d39ea49ff7807e5a6499",
+    "statusJson": "42c0e0b4c85f62eade60954394d14f629c31467d2723e4a70d98242f65dba938"
+  }
+}

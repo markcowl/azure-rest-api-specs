@@ -1,0 +1,32 @@
+{
+  "service": "appcomplianceautomation",
+  "projectRoot": "specification/appcomplianceautomation/resource-manager/Microsoft.AppComplianceAutomation/AppComplianceAutomation",
+  "entrypoint": "specification/appcomplianceautomation/resource-manager/Microsoft.AppComplianceAutomation/AppComplianceAutomation/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "c7188055e160a7eba8a898a5f5909fea48fc249a64811874e3f0e4cd432d270e",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 27,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "53db0082dc7a46fcc5f26c9fecb2f3a0f2296ca287abefd58d628bd1d8d8e0a8",
+    "operationsCsv": "30a271a34ee37e07d7a20156b6b11a6f5e1a9ab51ee105c0138c8b1a8e74d82b",
+    "statusJson": "8f5a6a68fb0b4af36bedbf91086a59dbf0de96d2d91aef1befa5fe0801efdd38"
+  }
+}

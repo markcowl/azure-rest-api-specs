@@ -1,0 +1,32 @@
+{
+  "service": "compute",
+  "projectRoot": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute",
+  "entrypoint": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "98fd4c138cd5e9c050fc117dbaa33966c93438e74c4a5125557572231e941b21",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 26,
+  "operationCount": 175,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 4,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "6c30c12063cf0736e6d949efa5eecaedaa64443b724905ab8b9c11bd0e71a67a",
+    "operationsCsv": "b453c8ac0fbaf184c2486b48724180dfc70f1b3cf8262bcc6a82592fea5c2c09",
+    "statusJson": "25505545eaba65c86ef4669a92e79878f122b03982891e81a0c9d66461dd3071"
+  }
+}

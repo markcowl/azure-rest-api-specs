@@ -1,0 +1,32 @@
+{
+  "service": "scvmm",
+  "projectRoot": "specification/scvmm/resource-manager/Microsoft.ScVmm/ScVmm",
+  "entrypoint": "specification/scvmm/resource-manager/Microsoft.ScVmm/ScVmm/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "4bdad1b92901b30bd06137557722d30776e3e8aaf1f35e8e3dd04aef915d5bee",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 9,
+  "operationCount": 51,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9381d7d14988413cd9a264356bc032af10450224680b7432870667b7643f1f82",
+    "operationsCsv": "b3c9053c0e3fe5309e2b01d38b375c28ff6f62f11c25eda159f5e5c7f402ee35",
+    "statusJson": "df2bf89e5f4a192ed703b5d82f3d1dc0dd10c0f8ff1e23323a775d4f45280da5"
+  }
+}

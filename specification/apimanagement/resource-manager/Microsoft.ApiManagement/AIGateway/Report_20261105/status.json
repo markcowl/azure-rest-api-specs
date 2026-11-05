@@ -1,0 +1,32 @@
+{
+  "service": "apimanagement",
+  "projectRoot": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway",
+  "entrypoint": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/AIGateway/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "455c8ab9fd7a763c9ce63b117d3f630b4c676c5823ede67ae3e99d1b5ddce60b",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 50,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4c42002d22e87905d66f6ad9039e9d65335da7a6e9f8b88291424f93fe52faa8",
+    "operationsCsv": "c80ad01920aeb8ddc3c1ba8f5cad6faea9832a70830d53048d5738ce02c9988f",
+    "statusJson": "548bf9c95dc0724eda45ba349f860e8d429d8423ec4687c8f72654c83d43d2e2"
+  }
+}

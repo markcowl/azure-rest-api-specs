@@ -1,0 +1,32 @@
+{
+  "service": "azurefleet",
+  "projectRoot": "specification/azurefleet/resource-manager/Microsoft.AzureFleet/AzureFleet",
+  "entrypoint": "specification/azurefleet/resource-manager/Microsoft.AzureFleet/AzureFleet/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "75fefc1a18751c6f3be3eab0294b1fea3da28e9926b617c5b02c51e25e03023c",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 8,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "11cf280aa7d1e54365cf014b4391dfe88f5ba82178c36fffe8eaa6205e69f538",
+    "operationsCsv": "7d3b2de1e7e808d0813d898db77a4c2a62c7c5017e82f5c9873e74e4954969ea",
+    "statusJson": "40390fa3c52a35c310fe7841a93851124cc381b5017e21118ab4f3b7fd6effb6"
+  }
+}

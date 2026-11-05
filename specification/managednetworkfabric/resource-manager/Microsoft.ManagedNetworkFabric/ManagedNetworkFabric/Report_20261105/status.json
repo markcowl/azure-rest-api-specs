@@ -1,0 +1,50 @@
+{
+  "service": "managednetworkfabric",
+  "projectRoot": "specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric",
+  "entrypoint": "specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "6ee9a40b282efa32e1aeeca0c7255f2fc6161aff51a08838896c7ce9fe817ba1",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 29,
+  "operationCount": 269,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 2,
+  "duplicateResourceErrorGroupCount": 1,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.managednetworkfabric/networkfabrics/{}; resource names: NetworkFabric; NetworkFabricDeprecated"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.managednetworkfabric/networkfabrics/{}",
+      "resources": [
+        {
+          "resourceName": "NetworkFabric",
+          "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/resources/NetworkFabric.tsp#L10"
+        },
+        {
+          "resourceName": "NetworkFabricDeprecated",
+          "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/resources/NetworkFabric.tsp#L34"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "5b055038118f0edcb685070e8183c7f2b5d62812278e969c00de2bec29e510f5",
+    "operationsCsv": "ce5cb8958111760eb0b13c0f49b86f1a1ccff9c2996b93be7693665fa1410b0f",
+    "statusJson": "9aa4bc23ffcee83196576173242e668d2e5101abcebcaf62b8c1d61883c3083b"
+  }
+}

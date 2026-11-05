@@ -1,0 +1,32 @@
+{
+  "service": "apicenter",
+  "projectRoot": "specification/apicenter/resource-manager/Microsoft.ApiCenter/ApiCenter",
+  "entrypoint": "specification/apicenter/resource-manager/Microsoft.ApiCenter/ApiCenter/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "33bfa6150da8a9d82d7ff2fae79b3a73ac025af19b5cbb880a86c30f6d845d57",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 10,
+  "operationCount": 45,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "cf586028c2b5fc63072126d5c1d96b2feae923c5b71cf25f701003abac290e8c",
+    "operationsCsv": "86692d41a8d3180121658e42e5b0ee415f0a47a43b6229aaae9149919507ba39",
+    "statusJson": "0eb5f13ba3c245958c987b63815364c1f1e6273ce777036ca284895375b05b40"
+  }
+}

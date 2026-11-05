@@ -1,0 +1,30 @@
+{
+  "service": "applicationinsights",
+  "projectRoot": "specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights",
+  "entrypoint": "specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/client.tsp",
+  "classification": "client-only",
+  "status": "skipped",
+  "resourceCount": 0,
+  "operationCount": 0,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "reportDirectory": "Report_20261105",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "statusJson": "d67603ae791a82965f00f3c5b44e6ba4eb3d94d5543dfff5bd91a81e93d508f7"
+  }
+}

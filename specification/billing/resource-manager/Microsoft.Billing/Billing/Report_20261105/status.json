@@ -1,0 +1,32 @@
+{
+  "service": "billing",
+  "projectRoot": "specification/billing/resource-manager/Microsoft.Billing/Billing",
+  "entrypoint": "specification/billing/resource-manager/Microsoft.Billing/Billing/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "10e8b98e8c40ed37b1b0873f39848f477f6b7d9c1953642a2b9e6838878f3d40",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 46,
+  "operationCount": 183,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1742ad362d037dc715af37f6e8936b45350ebc4179fdff081e731b5d5422cba3",
+    "operationsCsv": "ef7f7eb8cf5d7bab31e5b5cd636d0f521a5f66bb1b0218d4a606a6d0f8da7627",
+    "statusJson": "748e7aff18af85806269e1841127339add7f8418479be10958da972cdbd1555d"
+  }
+}

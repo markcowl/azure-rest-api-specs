@@ -1,0 +1,32 @@
+{
+  "service": "storagediscovery",
+  "projectRoot": "specification/storagediscovery/resource-manager/Microsoft.StorageDiscovery/StorageDiscovery",
+  "entrypoint": "specification/storagediscovery/resource-manager/Microsoft.StorageDiscovery/StorageDiscovery/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "1718a1b7960f56d78f9ac9c463005ec9d81cf0c799ff2cf64b6b494ce151e38b",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 11,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f3d17783ec872a5b2d1f96f495f2c34746fcfe000ee76ae709d559ba49ca4930",
+    "operationsCsv": "762d703e5eca6f80cebce7ca6493dfd97d2e7c001a011008ea842830eb299410",
+    "statusJson": "c1f5f012300778b4626a6822ff5978eb2865680af0e0c6fe259fb1c5aee0962b"
+  }
+}

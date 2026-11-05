@@ -1,0 +1,32 @@
+{
+  "service": "policyinsights",
+  "projectRoot": "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi",
+  "entrypoint": "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "898a9d1d3a110e74f9fe4b05c04203b9c71275ae7a77390416dc3e59d10c06db",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 35,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 7,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "0bb955c85494b1ffd32915da84bc6095e0fdc32c09ba33f55e040f973b6c60c4",
+    "operationsCsv": "8e674bd53fd11bde0b7c51709b0d56b32e76405cdd2edb384a38ee628ac3f4bf",
+    "statusJson": "c401710079a94764c1987b18c1467ae7e528cc7d9a8e5aa1422ced0e5ed44b20"
+  }
+}

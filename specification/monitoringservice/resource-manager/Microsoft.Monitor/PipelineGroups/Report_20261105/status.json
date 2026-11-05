@@ -1,0 +1,32 @@
+{
+  "service": "monitoringservice",
+  "projectRoot": "specification/monitoringservice/resource-manager/Microsoft.Monitor/PipelineGroups",
+  "entrypoint": "specification/monitoringservice/resource-manager/Microsoft.Monitor/PipelineGroups/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "43f126d12cfe45050a31b9776d3d350bab6c6920a4036b6d68815629634de2fc",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "6b10609f232394e46b7e2a13f29e748a1e95c5e4b4ed6bab208810af57c30a36",
+    "operationsCsv": "f241aacb83dd07d4abc1c99bb659fdd14bd37d7b828e48ffcf76868077c79b24",
+    "statusJson": "bbd55df700760ccacfcbf1655729fb9beff8d7ad34bb6b78b505d6a416152a18"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/RegulatoryComplianceAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/RegulatoryComplianceAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
+  "projectInputHash": "a3cd2739695bc3132548a5ffe82dc5cd65a4e1988fbaa028c7e945261e2534a3",
+  "toolVersion": "1.2.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.73.0",
+  "reportDirectory": "Report_20261105",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "75b5a0956b907ac15d225c305ca6174f225a39216faf2a351f4039dadd9f28ea",
+    "operationsCsv": "82e9662efbfae8f47fcbdb9fce79f6b721108a0a051fd9cb5676ceae8f4ec006",
+    "statusJson": "aea82dbf74ff3f318b1c794347c69ca30169150f843e33d8bd23cab72603854b"
+  }
+}
