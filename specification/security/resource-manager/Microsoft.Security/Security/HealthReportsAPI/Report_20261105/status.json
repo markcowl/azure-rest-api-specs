@@ -3,10 +3,10 @@
   "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/HealthReportsAPI",
   "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/HealthReportsAPI/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "001d23c31d0038e63f027fd5fe72bf09de08232902eaf021f4027ef993af310c",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 2,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "ec1e50b6e9b898608ad97230600e5824f07df51f3b2c0c8826f7389562456edc",
-    "operationsCsv": "0f6ba7ca91cb5b2d694493282429b58f2b8d49673fe0d623dd408ea52e0771e1",
-    "statusJson": "c40d9def81d451efd47cde958c40391fe1d190739fa0fb9e1be1203543f731a8"
+    "resourcesCsv": "6b609226a1aa74b5f617083dc6a2b7e30c426bf9512d86810a31df99319132b6",
+    "operationsCsv": "96b24b88e7379909b132d664c5809cf6c07c5ce2444d08ef8fcc5bbbcf5fe6ac",
+    "statusJson": "0af5b13c3f6489c282d8026dd065c166eb20b9a081a7dc6aeaed6820b6d126f4"
   }
 }

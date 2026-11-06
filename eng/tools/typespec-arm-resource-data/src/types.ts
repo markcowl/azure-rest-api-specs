@@ -55,6 +55,20 @@ export interface DuplicateResourceErrorGroup {
   resources: DuplicateResourceErrorResource[];
 }
 
+export type NameClashClassification = "case-only" | "genuine";
+
+export interface NameClashResource {
+  resourceType: string;
+  resourceInstancePath: string;
+  sourceUrl: string;
+}
+
+export interface NameClashGroup {
+  resourceName: string;
+  classification: NameClashClassification;
+  resources: NameClashResource[];
+}
+
 export interface OutputHashes {
   resourcesCsv?: string;
   operationsCsv?: string;
@@ -72,6 +86,8 @@ export interface ProjectResult {
   operationCount: number;
   caseOnlyClashCount: number;
   genuineClashCount: number;
+  nameClashGroupCount: number;
+  nameClashGroups: NameClashGroup[];
   duplicateResourceErrorCount: number;
   duplicateResourceErrorGroupCount: number;
   duplicateResourceErrorAnalysis: string[];
@@ -89,7 +105,7 @@ export interface ProjectResult {
 }
 
 export interface Manifest {
-  schemaVersion: 3;
+  schemaVersion: 4;
   generatedAt: string;
   repository: string;
   sourceSha: string;

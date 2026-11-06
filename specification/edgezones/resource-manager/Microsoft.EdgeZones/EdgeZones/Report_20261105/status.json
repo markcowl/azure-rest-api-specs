@@ -3,10 +3,10 @@
   "projectRoot": "specification/edgezones/resource-manager/Microsoft.EdgeZones/EdgeZones",
   "entrypoint": "specification/edgezones/resource-manager/Microsoft.EdgeZones/EdgeZones/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "c0647494fea2e493fe6db15c92dd378214816f29724e40d97db0306246fb15b5",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 4,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "2838031e6aaf30eb2b88c0f7af591ab239bf2bf6df9ae7287822b19ff6cb3050",
-    "operationsCsv": "c292733485c288c856c25ba5e13cbd3a280acd26a6f819d8b3768cc2da6c609f",
-    "statusJson": "67b4da1c170decf371f0cd822d2df9dfa1f78c9e651f6bb5a7ab160fd5543027"
+    "resourcesCsv": "a9f801e9147024d19eb8f444b2408f11900c10bc2050c4287f5fb644ead3deb1",
+    "operationsCsv": "0adc7cde987bc597f29698e4e0a1e287d82f40657a5cd67d6369faee34513a17",
+    "statusJson": "82b26875ed3ffd676212a087be4eecfd59aea405ae65ff03d91291f78b0b16d9"
   }
 }

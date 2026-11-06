@@ -3,10 +3,10 @@
   "projectRoot": "specification/databasefleetmanager/resource-manager/Microsoft.DatabaseFleetManager/DatabaseFleetManager",
   "entrypoint": "specification/databasefleetmanager/resource-manager/Microsoft.DatabaseFleetManager/DatabaseFleetManager/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "669843ac02d9a5f899d6d7adcc845401bb6a0230a6f64121a4fd794534486808",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 31,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "35fd8cefc9954e5ad87567239f118cae3d91f3798de67acf822b74cf1ae33746",
-    "operationsCsv": "07f6fef9c65d9f275674a30fcbf8613c77f0bd426ac03b4331c0877547914982",
-    "statusJson": "9baf8020cc4fe087757b4d5662383446a8e6602f4cf6688db1b7081a2c607fdc"
+    "resourcesCsv": "224887380bab4df3c2fc1ede13a4cf32d8632208aaae889707a837b2fd17a4a5",
+    "operationsCsv": "8abab13f426a54c99fd8b3f0ac2f59e881cf0beb17ef30daf024a29378021393",
+    "statusJson": "6685e258fbd5790a950c111167e8093ccfe6749cd30f85f411b5e74dd23060d5"
   }
 }

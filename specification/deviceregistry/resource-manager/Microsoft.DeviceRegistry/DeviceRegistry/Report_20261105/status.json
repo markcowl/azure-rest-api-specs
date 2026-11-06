@@ -3,10 +3,10 @@
   "projectRoot": "specification/deviceregistry/resource-manager/Microsoft.DeviceRegistry/DeviceRegistry",
   "entrypoint": "specification/deviceregistry/resource-manager/Microsoft.DeviceRegistry/DeviceRegistry/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "43094fca8d88418c3c9c84a850879ffc88810c5096169b0ec731ef3d0f162dad",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 133,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "00b84f2286aeabe1dbfec81b590dcf9e163d784796aae93b6f265ceb1cc2588c",
-    "operationsCsv": "bfb2b895e646547b13bb47d3daa6c73ff135420f4a281252355bdee318eb64ad",
-    "statusJson": "632af8622ef6d5c20196ecffec79b1d3f998db083d92bdc9a1cb441a18f85333"
+    "resourcesCsv": "d0b82265c3d923ba5c0a9cc469bcec8cad478e49a04bb227153c8ac11b127cb7",
+    "operationsCsv": "311d452c68bf48c48b5d600f7500c49cf36f82217f2f71ff4b830003a857f8e3",
+    "statusJson": "db91f1c757e9cadfaeb1b011cdcac24929e145369e3de321189f7c6b6e15ca0a"
   }
 }

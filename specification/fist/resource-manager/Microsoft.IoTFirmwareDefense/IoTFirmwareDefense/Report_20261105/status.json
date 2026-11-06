@@ -3,10 +3,10 @@
   "projectRoot": "specification/fist/resource-manager/Microsoft.IoTFirmwareDefense/IoTFirmwareDefense",
   "entrypoint": "specification/fist/resource-manager/Microsoft.IoTFirmwareDefense/IoTFirmwareDefense/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "d5949bb3de61547661fb9a66bf07f32fe800755377dd51c38edc9c56e8a72a08",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 17,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "57e934503c61812d3c569ba856907994a72bd00ace467ffaf1fda265f8a4dbb1",
-    "operationsCsv": "42bb26e94f7b86039bbf101e47bc3d18f98a3408754b095ac92ca628ec2410c2",
-    "statusJson": "8e8b01e5b84c7aeee942e79c7ddb5e40fc045c1e8060a5308e0ba8b644c27d09"
+    "resourcesCsv": "069dc36dc92f7f760c2934bfeb429ce92cb3b0011a5f42b5e8f177a9266b7b74",
+    "operationsCsv": "59ac6c093c3efc5c1d448f9d096189b3cffee7c4f0cc27383bc075b269afff96",
+    "statusJson": "240a26cdb07c2159e0c78ab6c3da9f3d5d1d882377d4720b76400686dcd33804"
   }
 }

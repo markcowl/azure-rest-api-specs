@@ -3,10 +3,10 @@
   "projectRoot": "specification/purestorage/resource-manager/PureStorage.Block/PureStorageBlock",
   "entrypoint": "specification/purestorage/resource-manager/PureStorage.Block/PureStorageBlock/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "07a5a3706e16702858ae5721fa9ec52dcef39032011353580f036795005baf9b",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 63,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "b4a1a29496c460a575c075190db35b3fe4726a69eb69f58d79b51a6ec6d702f0",
-    "operationsCsv": "fe2681ad75ddb1594ffa8bb804d3b5f44088150f681d4da6cec25b6096b0bc0f",
-    "statusJson": "e8ce47929c154f490be9bcdafd6868a18b3639e357dc5e8ddb720b9a7a902191"
+    "resourcesCsv": "6d2fe646c9ae88a51a06a76bdc50b7c297eea6c774145e45bd24d870f8249691",
+    "operationsCsv": "1938edd14f13f612074ac2111d93904c9f59bb1b43dd24a8854046c9e9b3f620",
+    "statusJson": "e1f104ff544d056e967647fc6548f32d7d04c009f15bfae8bec1a7d9992aab27"
   }
 }

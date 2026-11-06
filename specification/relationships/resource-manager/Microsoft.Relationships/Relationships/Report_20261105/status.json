@@ -3,10 +3,10 @@
   "projectRoot": "specification/relationships/resource-manager/Microsoft.Relationships/Relationships",
   "entrypoint": "specification/relationships/resource-manager/Microsoft.Relationships/Relationships/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "cb152d6ff11fc036f2c3b2610093fe026bf059547bc3a182502b735f7236530f",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 12,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "0cf418e4ee2baf13fb76833319c5e242651152398acfae42205731ef0a5ca855",
-    "operationsCsv": "9f1f6ef6d164063ca7d229267aab4af0029e7201d1d5af77e589fcfdf89ccbb3",
-    "statusJson": "f970ffeefe75eb009818b80cfecae9b8299b7dcd216b15478340ee941b6b6383"
+    "resourcesCsv": "7b7ee2d86b7738131e5b76c1cc61d79317b341c04a271c34a43e62e817f5361e",
+    "operationsCsv": "058fad998986ab93812507b557f6b1b87af3fb61eb06f2e9e30d06a2700556ba",
+    "statusJson": "29e426676ac3852bb0a88c16d5e8757c9bf1f4aae58c8d2caa67b2eafd1ad272"
   }
 }

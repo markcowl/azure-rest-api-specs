@@ -3,10 +3,10 @@
   "projectRoot": "specification/web/resource-manager/Microsoft.Web/AppService",
   "entrypoint": "specification/web/resource-manager/Microsoft.Web/AppService/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "bcc767ee216720ba13ff7a6a3319a106d52450b44e37cd75edff2b2ec5a8cfe7",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,30 @@
   "operationCount": 761,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 3,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "HybridConnectionNamespace",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Web/serverfarms/hybridConnectionNamespaces",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}/hybridConnectionNamespaces/{namespaceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/web/resource-manager/Microsoft.Web/AppService/HybridConnection.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.Web/sites/hybridConnectionNamespaces",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/hybridConnectionNamespaces/{namespaceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/web/resource-manager/Microsoft.Web/AppService/HybridConnection.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.Web/sites/slots/hybridConnectionNamespaces",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/hybridConnectionNamespaces/{namespaceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/web/resource-manager/Microsoft.Web/AppService/HybridConnection.tsp#L14"
+        }
+      ]
+    }
+  ],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +49,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "1c62ee4c4b35a2da8232e6905d078cc2c09a21c71f17414c24f166f5332e91d1",
-    "operationsCsv": "67126a0685f0e8edb1932bc2a4b5955129276657118c8a4ee89dd0e11d0df56f",
-    "statusJson": "ab96697d4287db8017e471d91a199617abe8bb65d270dedbcbb2908982ece717"
+    "resourcesCsv": "ef96cd9aef6130aa5d16eb25f121a2024da61d22bb2c82d9911709bf7be272ed",
+    "operationsCsv": "6270f5741d6ab3725bc4d44cdd986dd7db5209db41fe9cd7a44b483b6abb56b2",
+    "statusJson": "07eece6068e62d1c032540ffb0d218d1bb0876d33573110f542648c0338d368f"
   }
 }

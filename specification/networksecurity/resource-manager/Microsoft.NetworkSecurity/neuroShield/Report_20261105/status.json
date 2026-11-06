@@ -3,10 +3,10 @@
   "projectRoot": "specification/networksecurity/resource-manager/Microsoft.NetworkSecurity/neuroShield",
   "entrypoint": "specification/networksecurity/resource-manager/Microsoft.NetworkSecurity/neuroShield/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "50db66415e44acce82214aa1adc3bd807fb6aad54a1116901e43e98c4b7a611c",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 23,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "742ce6e986dfb3433be2428c845b8a508334a1b2ec7f7339ac47717378f14719",
-    "operationsCsv": "78d705584deb510d85ab8159403fa65e563b0cea2b39e85ebce20160967eb785",
-    "statusJson": "9118a79b0b23d2c315f253eddf4fb8bb0e81b0d77c761bf701ebf612ac18f4c2"
+    "resourcesCsv": "3fc6ce8e7287863e50d06d441d5b4caeaa174ffb9f8561208bd6081c6b395dd5",
+    "operationsCsv": "f1461d4a87f84cdb7b310cedb215062dd7b1d130059498bbec70077ad85765b4",
+    "statusJson": "e200fd046a8e436784e875b0773f7d96fe4742bf468535e7c269763e9825257c"
   }
 }

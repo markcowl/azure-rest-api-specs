@@ -3,10 +3,10 @@
   "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment",
   "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "543bdcb9e80c738977390182443a0ac6c443dec5fc9e02efc4ae2ae0e8f638b9",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,25 @@
   "operationCount": 8,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 2,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "DenyAssignment",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "",
+          "resourceInstancePath": "/{denyAssignmentId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.Authorization/denyAssignments",
+          "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L13"
+        }
+      ]
+    }
+  ],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +44,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "8ba9648220bcac0a790e11e0d44fb12c9b58e1f4e314c983056c02414fd479d0",
-    "operationsCsv": "f72079d8d8d8e528b021757281e75c7a9689b652c3a7bd83f0c9c08ebe900ba6",
-    "statusJson": "2eacab9e133a24fc9da69823b3219dc4a50a3e8a22190d9c5f824dbf9853ba68"
+    "resourcesCsv": "a410a74a1473c999498241fb910e504033820b151352f52ac8878fd17641f6df",
+    "operationsCsv": "ba80688ec671c89998967d73a3f01ed5fdbe88928acb201e21a5089184a361ad",
+    "statusJson": "5c4c7b2122a1218a83cd76134a7cab5a88c687b99ca4c09590c1cdb1d2366c1b"
   }
 }

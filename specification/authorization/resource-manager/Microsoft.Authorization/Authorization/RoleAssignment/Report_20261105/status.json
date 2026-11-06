@@ -3,10 +3,10 @@
   "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment",
   "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "e1164c2438444f5de772891c6817701bf8158eb332653b67af3ba85db2e76b9b",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,25 @@
   "operationCount": 10,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 2,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "RoleAssignment",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "",
+          "resourceInstancePath": "/{roleAssignmentId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.Authorization/roleAssignments",
+          "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L13"
+        }
+      ]
+    }
+  ],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +44,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "16fa11c3199760b00b5671f344b95ff510165373c53d28d0ff41b95d4b87dab4",
-    "operationsCsv": "caa78f0413c7702ab20f0e807fc5f3540ea4689a8a058c4e45139c0c447e80c5",
-    "statusJson": "80c83789825892957cfb6930b2b140828c4e1dd77dede908768694e969593f36"
+    "resourcesCsv": "530b0cfc92c104041122744f5b1d8420eb519abeea831fca492e36b73e2ea71f",
+    "operationsCsv": "23e01644e29caa36a99dc1f6fe9d5d3b67cb8ae1279d3cf7fd84ac26f4dea0e1",
+    "statusJson": "e684ecc133291f8ca0fdcd0817d28fb0edd2c5d864bca979028ed9f95f8ddc04"
   }
 }

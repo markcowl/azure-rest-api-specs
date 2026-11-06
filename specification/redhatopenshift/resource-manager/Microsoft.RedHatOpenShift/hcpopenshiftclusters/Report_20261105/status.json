@@ -3,10 +3,10 @@
   "projectRoot": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters",
   "entrypoint": "specification/redhatopenshift/resource-manager/Microsoft.RedHatOpenShift/hcpopenshiftclusters/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "dea214968bf25af93dc362970838892fb2372fce288c18769c76b84a0dba2658",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 23,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "567e8e4dc0dc2f3df6b0982da7e7b8bdcad3b105c2a993b1df7d0e128f22a304",
-    "operationsCsv": "d1b910839508411332cdd55983489ea5e95878feebaf607a6ec25de4b88590a8",
-    "statusJson": "6992f10a959aba56f10fb1174389b60e5de65c96f461820a2435545b138a2dff"
+    "resourcesCsv": "2bfe591efc88bcb90a3b6a6dc01262debf18af2b78eb72a0cc5eeff44b9146bb",
+    "operationsCsv": "a43d17f827ec1aa9e5f4b098d9a6e906453cdf20182f6576cd1a0cb668872b3f",
+    "statusJson": "2327dd92fff324436be89a498ffe75f9fc3c69cdb10b4f87294f6b155de41a5b"
   }
 }

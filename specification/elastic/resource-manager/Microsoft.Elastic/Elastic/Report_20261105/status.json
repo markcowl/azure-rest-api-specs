@@ -3,10 +3,10 @@
   "projectRoot": "specification/elastic/resource-manager/Microsoft.Elastic/Elastic",
   "entrypoint": "specification/elastic/resource-manager/Microsoft.Elastic/Elastic/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "08b8b1c877be9ad2a4bc95f35b4e507e32224673a7131674f3dfe3f309bc2498",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 59,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 8,
   "duplicateResourceErrorGroupCount": 4,
   "duplicateResourceErrorAnalysis": [
@@ -30,12 +32,12 @@
         {
           "resourceName": "ElasticMonitorResource",
           "resourceType": "Microsoft.Elastic/monitors",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L14"
         },
         {
           "resourceName": "Monitors",
           "resourceType": "Microsoft.Elastic/monitors",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L14"
         }
       ]
     },
@@ -45,12 +47,12 @@
         {
           "resourceName": "MonitoredSubscriptionProperties",
           "resourceType": "Microsoft.Elastic/monitors/monitoredSubscriptions",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoredSubscriptionProperties.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoredSubscriptionProperties.tsp#L14"
         },
         {
           "resourceName": "MonitorsMonitoredSubscriptions",
           "resourceType": "Microsoft.Elastic/monitors/monitoredSubscriptions",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoredSubscriptionProperties.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoredSubscriptionProperties.tsp#L14"
         }
       ]
     },
@@ -60,12 +62,12 @@
         {
           "resourceName": "MonitorsOpenAiIntegrations",
           "resourceType": "Microsoft.Elastic/monitors/openAIIntegrations",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/OpenAIIntegrationRPModel.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/OpenAIIntegrationRPModel.tsp#L14"
         },
         {
           "resourceName": "OpenAIIntegrationRPModel",
           "resourceType": "Microsoft.Elastic/monitors/openAIIntegrations",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/OpenAIIntegrationRPModel.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/OpenAIIntegrationRPModel.tsp#L14"
         }
       ]
     },
@@ -75,12 +77,12 @@
         {
           "resourceName": "MonitoringTagRules",
           "resourceType": "Microsoft.Elastic/monitors/tagRules",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoringTagRules.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoringTagRules.tsp#L14"
         },
         {
           "resourceName": "MonitorsTagRules",
           "resourceType": "Microsoft.Elastic/monitors/tagRules",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoringTagRules.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/MonitoringTagRules.tsp#L14"
         }
       ]
     }
@@ -91,8 +93,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "e0a5212465312658a7550ece03786054aa0a0fb18b08608c2e82343832efb08e",
-    "operationsCsv": "e35d97618b3c77c0758b065fc94ebeec8ca9f6ce18f920ef425914eb220c9863",
-    "statusJson": "554dd4942464240711fd7af4acf97237e275f80583d81d49986593eabc1f6f7c"
+    "resourcesCsv": "5a02ad7e9875db6125ac6703dacbb917b7c8feb446cbd64a2babd14c1257be86",
+    "operationsCsv": "b43c9c2cb04a5f16d3eb57778d9bba01b2040611e81f4b48da9507c78a82f756",
+    "statusJson": "55ac1ba6f9a5ec05cfc1d44b612ec7fb8c1fb1b1ec29a0195720d23ece221523"
   }
 }

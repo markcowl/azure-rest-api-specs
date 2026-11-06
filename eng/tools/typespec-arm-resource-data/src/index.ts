@@ -12,6 +12,7 @@ Options:
   --concurrency <count>  Maximum concurrent project workers (default: 4).
   --timeout <seconds>    Per-project timeout in seconds (default: 300).
   --resume               Reuse outputs whose source, inputs, dependencies, tool, and hashes match.
+  --source-ref <ref>     Git ref used for source links and metadata (default: HEAD).
   --report-directory <name>
                          Per-project report directory (default: resource-data).
   --root <path>          Repository root (default: current directory).
@@ -34,6 +35,7 @@ export async function main(): Promise<void> {
       concurrency: { type: "string", default: "4" },
       timeout: { type: "string", default: "300" },
       resume: { type: "boolean", default: false },
+      "source-ref": { type: "string", default: "HEAD" },
       "report-directory": { type: "string", default: "resource-data" },
       root: { type: "string", default: process.cwd() },
       help: { type: "boolean", short: "h", default: false },
@@ -54,6 +56,7 @@ export async function main(): Promise<void> {
   }
   const manifest = await runReports({
     repositoryRoot: resolve(parsed.values.root),
+    sourceRef: parsed.values["source-ref"],
     services: parsed.values.service,
     projects: parsed.values.project,
     concurrency,

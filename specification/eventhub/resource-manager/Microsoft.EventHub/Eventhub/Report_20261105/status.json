@@ -3,10 +3,10 @@
   "projectRoot": "specification/eventhub/resource-manager/Microsoft.EventHub/Eventhub",
   "entrypoint": "specification/eventhub/resource-manager/Microsoft.EventHub/Eventhub/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "6bf2260ada2f0bb7226960eb10596dec1b7f0e5ffed7958e1dea4bd4992d0bb9",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 73,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "40c6a78f00eacd6102884b76edfc0a74adcf293a19b9d5f1772d15c925544771",
-    "operationsCsv": "f53fb3ed3da39256b8432b9fd517af991e5c67066b04b4df6174beb3b5d34438",
-    "statusJson": "8988b7a737b70e54c4d9067bd9afcbcf81a2220dfc82ee372fa577dbe45dc2dc"
+    "resourcesCsv": "3355fe368c129d40cb0e43064272ebaea956e2c4f719cc289b15e31443ee85a0",
+    "operationsCsv": "a1351155c8be144a8e31ef2739998058e8375e832ee71053b685f18b96fb85de",
+    "statusJson": "06e8fe02f78cdbe1de8dfe944540a3b03064aca7ab915cb1a71bee4ccc856626"
   }
 }

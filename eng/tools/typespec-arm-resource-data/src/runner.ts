@@ -12,7 +12,7 @@ import type { Manifest, ProjectInventory, ProjectResult } from "./types.ts";
 import type { WorkerRequest } from "./worker.ts";
 
 const execFileAsync = promisify(execFile);
-const toolVersion = "1.2.0";
+const toolVersion = "1.3.0";
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -20,6 +20,7 @@ function escapeRegExp(value: string): string {
 
 export interface RunOptions {
   repositoryRoot: string;
+  sourceRef?: string;
   services: string[];
   projects: string[];
   concurrency: number;
@@ -62,13 +63,15 @@ async function packageVersion(repositoryRoot: string, packageName: string): Prom
   return (JSON.parse(await readFile(path, "utf8")) as { version: string }).version;
 }
 
-async function sourceSha(repositoryRoot: string): Promise<string> {
-  return (await execFileAsync("git", ["rev-parse", "HEAD"], { cwd: repositoryRoot })).stdout.trim();
+async function sourceSha(repositoryRoot: string, sourceRef: string): Promise<string> {
+  return (
+    await execFileAsync("git", ["rev-parse", sourceRef], { cwd: repositoryRoot })
+  ).stdout.trim();
 }
 
-async function sourceTimestamp(repositoryRoot: string): Promise<string> {
+async function sourceTimestamp(repositoryRoot: string, sourceRef: string): Promise<string> {
   return (
-    await execFileAsync("git", ["show", "-s", "--format=%cI", "HEAD"], { cwd: repositoryRoot })
+    await execFileAsync("git", ["show", "-s", "--format=%cI", sourceRef], { cwd: repositoryRoot })
   ).stdout.trim();
 }
 
@@ -230,10 +233,11 @@ async function runPool<T, R>(
 export async function runReports(options: RunOptions): Promise<Manifest> {
   const repositoryRoot = resolve(options.repositoryRoot);
   const reportDirectory = validateReportDirectoryName(options.reportDirectory ?? "resource-data");
+  const sourceRef = options.sourceRef ?? "HEAD";
   const [sha, generatedAt, compilerVersion, armLibraryVersion, dependencyLockHash] =
     await Promise.all([
-      sourceSha(repositoryRoot),
-      sourceTimestamp(repositoryRoot),
+      sourceSha(repositoryRoot, sourceRef),
+      sourceTimestamp(repositoryRoot, sourceRef),
       packageVersion(repositoryRoot, "@typespec/compiler"),
       packageVersion(repositoryRoot, "@azure-tools/typespec-azure-resource-manager"),
       readFile(join(repositoryRoot, "pnpm-lock.yaml")).then(sha256),
@@ -276,6 +280,8 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
       operationCount: 0,
       caseOnlyClashCount: 0,
       genuineClashCount: 0,
+      nameClashGroupCount: 0,
+      nameClashGroups: [],
       duplicateResourceErrorCount: 0,
       duplicateResourceErrorGroupCount: 0,
       duplicateResourceErrorAnalysis: [],
@@ -342,7 +348,7 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
       left.projectRoot.localeCompare(right.projectRoot),
     );
     return {
-      schemaVersion: 3,
+      schemaVersion: 4,
       generatedAt,
       repository: "Azure/azure-rest-api-specs",
       sourceSha: sha,

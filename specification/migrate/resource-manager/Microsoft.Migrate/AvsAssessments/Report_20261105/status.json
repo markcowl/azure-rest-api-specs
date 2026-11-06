@@ -3,10 +3,10 @@
   "projectRoot": "specification/migrate/resource-manager/Microsoft.Migrate/AvsAssessments",
   "entrypoint": "specification/migrate/resource-manager/Microsoft.Migrate/AvsAssessments/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "26b1fc984ed1317b182c8d399f426ababba06f766be04c5f36e6e24cc2c9b570",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 11,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "58e53ebd6068b6a6ded88d53db3960cd19e10ca2648d3748872c6bb3072fb95e",
-    "operationsCsv": "754dee7258e3ffa188c1548cd785d56dc334fb21c0fe0c120df7c9ba638a18d2",
-    "statusJson": "7154a475243f6b580eb59e20c15be3d469cf20551fce52da749076d488a1faa1"
+    "resourcesCsv": "22aa80a9c53239a36d62a24e56d6a6de786d7a990ad2fb4f6cc45bd94bceeb63",
+    "operationsCsv": "042b53da83e550e6949c107713d06cb150eeedcb486e0f493de2cc7e8bf5ba14",
+    "statusJson": "38c8149779ec232c085a7c74f4e67c3a1d6651ec6df6b1c7bf56d1e8bc2244e3"
   }
 }

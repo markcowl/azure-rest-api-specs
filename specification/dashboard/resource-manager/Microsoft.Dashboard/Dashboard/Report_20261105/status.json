@@ -3,10 +3,10 @@
   "projectRoot": "specification/dashboard/resource-manager/Microsoft.Dashboard/Dashboard",
   "entrypoint": "specification/dashboard/resource-manager/Microsoft.Dashboard/Dashboard/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "5cdae5537984617510d1dae01011802be237187fb48f98296c9515717de8d8bc",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 35,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 2,
   "duplicateResourceErrorGroupCount": 1,
   "duplicateResourceErrorAnalysis": [
@@ -27,12 +29,12 @@
         {
           "resourceName": "GrafanaPrivateEndpointConnections",
           "resourceType": "Microsoft.Dashboard/grafana/privateEndpointConnections",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/dashboard/resource-manager/Microsoft.Dashboard/Dashboard/PrivateEndpointConnection.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/dashboard/resource-manager/Microsoft.Dashboard/Dashboard/PrivateEndpointConnection.tsp#L14"
         },
         {
           "resourceName": "PrivateEndpointConnection",
           "resourceType": "Microsoft.Dashboard/grafana/privateEndpointConnections",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/dashboard/resource-manager/Microsoft.Dashboard/Dashboard/PrivateEndpointConnection.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/dashboard/resource-manager/Microsoft.Dashboard/Dashboard/PrivateEndpointConnection.tsp#L14"
         }
       ]
     }
@@ -43,8 +45,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "7106ddacfcf8fe1d0fe2b949ce50897a4839b2babe7d376fa44e8fe5dc39ba23",
-    "operationsCsv": "53f27c716030268e1372814681343cfbb8dd3389f38ec5182c53d2caf9f96546",
-    "statusJson": "caa7c8741f13a3fffec8986f5cbdb60d189ebd54da67537ea48e5f906023eb84"
+    "resourcesCsv": "9361804a49432a55c1bdebeeff5121b7cda4486280c74b174d9ccf26ebad25bb",
+    "operationsCsv": "48f7c7afdd457285e390d7ac0ef10880ae7221908b1f404e01a5c3857f11391b",
+    "statusJson": "d55d007faa5217c1a283aaf0fbc19261c21f47378ab7af895c3d42c316dea7ad"
   }
 }

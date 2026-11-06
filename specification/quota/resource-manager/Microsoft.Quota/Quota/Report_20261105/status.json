@@ -3,10 +3,10 @@
   "projectRoot": "specification/quota/resource-manager/Microsoft.Quota/Quota",
   "entrypoint": "specification/quota/resource-manager/Microsoft.Quota/Quota/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "6d2211abd503f14be862b2fc32484739e4d52b7519f0efbc98af42f82e097b0c",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 44,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 4,
   "duplicateResourceErrorGroupCount": 2,
   "duplicateResourceErrorAnalysis": [
@@ -28,12 +30,12 @@
         {
           "resourceName": "ManagementGroupGroupQuotasEntity",
           "resourceType": "Microsoft.Quota/groupQuotas",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L13"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L13"
         },
         {
           "resourceName": "ManagementGroupsGroupQuotas",
           "resourceType": "Microsoft.Quota/groupQuotas",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L13"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L13"
         }
       ]
     },
@@ -43,12 +45,12 @@
         {
           "resourceName": "GroupQuotasSubscriptions",
           "resourceType": "Microsoft.Quota/groupQuotas/subscriptions",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L14"
         },
         {
           "resourceName": "ManagementGroupGroupQuotaSubscriptionId",
           "resourceType": "Microsoft.Quota/groupQuotas/subscriptions",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L14"
         }
       ]
     }
@@ -59,8 +61,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "6f67b8d94c1ba75da51cefa5705903ff7ed7d03e5890eb661355454dedcfeb70",
-    "operationsCsv": "a4a66ef18511417819a2500b7db2c52ff9365dd8be4cfc8c13269fb0fe6e21ea",
-    "statusJson": "51401e5329ea6b451929c2070972590546d12056ae39eb9cf02c3d3bde6606a6"
+    "resourcesCsv": "89b4cc0eb28798dd3e4f8fc3a53f632be5656ed3c5f794870feabaff81deb9a5",
+    "operationsCsv": "a5250d1c7239a7c760a37749d5c3775c55b502df728a56e9aa814bf8fcab2170",
+    "statusJson": "2dd398d3c63cfd7991ceec5080b3d8811c943034baeababa1f35db468736e6f5"
   }
 }

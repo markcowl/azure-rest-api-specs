@@ -3,10 +3,10 @@
   "projectRoot": "specification/containerservice/resource-manager/Microsoft.ContainerService/aks",
   "entrypoint": "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "ef1fb3849dd56cbac3475e6159602c0fd4df6418793314fc110434d1e650ed5c",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 114,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "092a8f1233ee0160e1c235fce4b1e8d928666ad6de78bcc1ffea0b27dba071d1",
-    "operationsCsv": "dcd2b8ba618445703e5c27c36431572d4c1bf00b20cb58d21d2681eec4c996d9",
-    "statusJson": "3ab5a2672f62046cdd75d8789210406b0044f5def910c8c389927e809a0d8de6"
+    "resourcesCsv": "07e128ed64e5dd6b074162f424f20ec4a316855078accb451466abc468c61a80",
+    "operationsCsv": "0114995cd4e32e4bfc37e40ada418927547aaea505a72c4065eeb45cb90934ef",
+    "statusJson": "39a40d1fdf25565153d71864f7df69513e3f2c328eeb821189f83f394bd3a7aa"
   }
 }

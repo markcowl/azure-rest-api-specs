@@ -3,10 +3,10 @@
   "projectRoot": "specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus",
   "entrypoint": "specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "a2315f2def6360d2895e67d73bc1e2398bd2b19eeca115e9514c368870487a80",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 29,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 8,
   "duplicateResourceErrorGroupCount": 4,
   "duplicateResourceErrorAnalysis": [
@@ -30,12 +32,12 @@
         {
           "resourceName": "NginxDeployment",
           "resourceType": "Nginx.NginxPlus/nginxDeployments",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L13"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L13"
         },
         {
           "resourceName": "ResourceGroupNginxDeployment",
           "resourceType": "Nginx.NginxPlus/nginxDeployments",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L13"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L13"
         }
       ]
     },
@@ -45,12 +47,12 @@
         {
           "resourceName": "NginxCertificate",
           "resourceType": "Nginx.NginxPlus/nginxDeployments/certificates",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxCertificate.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxCertificate.tsp#L14"
         },
         {
           "resourceName": "ResourceGroupNginxCertificate",
           "resourceType": "Nginx.NginxPlus/nginxDeployments/certificates",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxCertificate.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxCertificate.tsp#L14"
         }
       ]
     },
@@ -60,12 +62,12 @@
         {
           "resourceName": "NginxConfigurationResponse",
           "resourceType": "Nginx.NginxPlus/nginxDeployments/configurations",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxConfigurationResponse.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxConfigurationResponse.tsp#L14"
         },
         {
           "resourceName": "ResourceGroupNginxConfigurationResponse",
           "resourceType": "Nginx.NginxPlus/nginxDeployments/configurations",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxConfigurationResponse.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxConfigurationResponse.tsp#L14"
         }
       ]
     },
@@ -75,12 +77,12 @@
         {
           "resourceName": "NginxDeploymentWafPolicy",
           "resourceType": "Nginx.NginxPlus/nginxDeployments/wafPolicies",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L16"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L16"
         },
         {
           "resourceName": "ResourceGroupNginxDeploymentWafPolicy",
           "resourceType": "Nginx.NginxPlus/nginxDeployments/wafPolicies",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L16"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L16"
         }
       ]
     }
@@ -91,8 +93,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "e997d78d0b881c9ec3a6dfde441af9b8643ff7ee57751ac5a5bddd1dab8f4f95",
-    "operationsCsv": "6a4ed0e38733e8a6c3d4cdd3391dc6a7dd68324a551090843c8458d547b46e66",
-    "statusJson": "cf87f642f49dc00722ff4decc92df9dbc2acadb3ed437cffb3ffa7e189238923"
+    "resourcesCsv": "aaaae65bdb0b901b7e5dd752640fefe9593ecf044b9a44a541b81d4f724fe7f4",
+    "operationsCsv": "6d56b5a22b0ccc84465b1df003856c6fb16ace178bc27fe5fbbf028f0f7b8ebb",
+    "statusJson": "5991202894bb7b8c648035bdc23eeaed3a85c4df92b5c19e9edbef8e78c935e6"
   }
 }

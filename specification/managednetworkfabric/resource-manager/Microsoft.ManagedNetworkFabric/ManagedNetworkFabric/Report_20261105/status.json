@@ -3,10 +3,10 @@
   "projectRoot": "specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric",
   "entrypoint": "specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "6ee9a40b282efa32e1aeeca0c7255f2fc6161aff51a08838896c7ce9fe817ba1",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 269,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 2,
   "duplicateResourceErrorGroupCount": 1,
   "duplicateResourceErrorAnalysis": [
@@ -27,12 +29,12 @@
         {
           "resourceName": "NetworkFabric",
           "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/resources/NetworkFabric.tsp#L10"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/resources/NetworkFabric.tsp#L10"
         },
         {
           "resourceName": "NetworkFabricDeprecated",
           "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/resources/NetworkFabric.tsp#L34"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/resources/NetworkFabric.tsp#L34"
         }
       ]
     }
@@ -43,8 +45,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "5b055038118f0edcb685070e8183c7f2b5d62812278e969c00de2bec29e510f5",
-    "operationsCsv": "ce5cb8958111760eb0b13c0f49b86f1a1ccff9c2996b93be7693665fa1410b0f",
-    "statusJson": "9aa4bc23ffcee83196576173242e668d2e5101abcebcaf62b8c1d61883c3083b"
+    "resourcesCsv": "2397cdcafe25e665b393f310e8a1c028d63a607b5746b7941ffe3de53b178eae",
+    "operationsCsv": "4f61377e321cc6da4551cca028db85aa453528ddc1234b5f4d274e4b83668aac",
+    "statusJson": "846969341c3a36a39e18d25fd9d1124467c6f22fdb22df5b3ed1e7c3cc02ced4"
   }
 }

@@ -3,10 +3,10 @@
   "projectRoot": "specification/storagemover/resource-manager/Microsoft.StorageMover/StorageMover",
   "entrypoint": "specification/storagemover/resource-manager/Microsoft.StorageMover/StorageMover/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "8fd650efc1b187c562c87dac8097651eb7249b8345f7a5cae6ed8041bd3c7bb2",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 35,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "161abcbd13c33640b0be5db386730edb47a935e785ba32f2d8339eee3b0bb64a",
-    "operationsCsv": "c09e41ebaf2c276b0f3232ed65eaf94304b3dde393dc0f0176db87b37ba3ce1a",
-    "statusJson": "e020bc1623d91d947e7d4cfefe8354ce85a78863439dd8c5effcb45521774f3e"
+    "resourcesCsv": "f2ce5f160b15cbb772f5543678c28a77ddb9de8e649164081bf03fd32afe9051",
+    "operationsCsv": "c79c91fd74c89bc1a0f3cbb34a9b072f16dcf590981e2ea3cd480d9a0f9fe508",
+    "statusJson": "90d0c7e78a50b3a4d0abf82c19756dcfed6e7ea5f04e1856adaf1bbbe2ff4e03"
   }
 }

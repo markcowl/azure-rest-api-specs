@@ -3,10 +3,10 @@
   "projectRoot": "specification/anyscale/resource-manager/Anyscale.Platform/platform",
   "entrypoint": "specification/anyscale/resource-manager/Anyscale.Platform/platform/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "3e54769d2e2cac6a4cbfd071dbdcce08e60f8aa034729ac9d3a66605a7361cc0",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 44,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "001e2058dd0261ca39f8dfa669bc59adaf447eac73b7ede1df33c540a60115bd",
-    "operationsCsv": "d685d05ad0cf15c084615f7826aeb33ef3b06f19169bfd94d1ea95a46c892696",
-    "statusJson": "02b04785df5eaa16efd120075ad700e2b787c99235ee6ab1e984053e74a27f1c"
+    "resourcesCsv": "c85717443357f3f063ce41a073598b06b5fd156ecfe091d571cca764b7ab6faf",
+    "operationsCsv": "281f9e7ac7d6ae7619b9ee1b1aa46dad9f70111eb4fa89b8ac089cdf307a3dc5",
+    "statusJson": "a041578eaeb8e174c7a0d4c9787e2cc3ba53bf2b14a29e5bf82b25f1109e5a98"
   }
 }

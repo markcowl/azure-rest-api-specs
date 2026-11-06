@@ -3,10 +3,10 @@
   "projectRoot": "specification/hybridaks/resource-manager/Microsoft.HybridContainerService/HybridContainerService",
   "entrypoint": "specification/hybridaks/resource-manager/Microsoft.HybridContainerService/HybridContainerService/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "add1797286b817aaf2ed245b347dcb9fbf250350715a2b788e282c7dbb64544f",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 30,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "e14f11ad8f09012aa9a05bf4ad193d08ad6a5ed0ff3546401fb7c13b40fbe045",
-    "operationsCsv": "d8f5b8f9aeb670fd762cdbb680b10781e07190d0abb1c38c5db8d0c62e5e0f38",
-    "statusJson": "821223ad4fbf0f41694ddabdcd2fcb0632afac714261808edcb4c567d768a922"
+    "resourcesCsv": "efd3b08dfdd66267f0e9c71942c97c64f8d109bff9dfdda8f974545c2d681a3a",
+    "operationsCsv": "b6c38a6a930c3665c16a52100dececa6dfb06c0b6bb0ada9c69b70771a6807e5",
+    "statusJson": "b3443cb24c26273d0179a6247440c55755c6b856bc8a746f1db9f5f4f834d806"
   }
 }

@@ -3,10 +3,10 @@
   "projectRoot": "specification/edgeorder/resource-manager/Microsoft.EdgeOrder/EdgeOrder",
   "entrypoint": "specification/edgeorder/resource-manager/Microsoft.EdgeOrder/EdgeOrder/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "5977245838acef334fbf9f01d0699cd81eb1a68c8e4aa7645ec97b58a56a88aa",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 15,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "2fde1d3c7745058afb48432c07efd6e4a293a6e030f183c938f70d34c923342f",
-    "operationsCsv": "9e423fdd67b1af4a715a494f04f49b0c7b5092131005597cc3c54207c89ea43b",
-    "statusJson": "0e5f39141702ebe142f6690de26fef0005bf979982447592231fd02d85cff665"
+    "resourcesCsv": "985b9db73e7641dca766973f98430c4e7461a95423b897aa3c54ce43ef01592b",
+    "operationsCsv": "c64b78c8b8196a1120d3eff35505115f4afe4df8415a50e27a8710601544aff9",
+    "statusJson": "ce41e1dc3060b87cce8869869d041242b881fe08d82d2fe2afa05b15bc315257"
   }
 }

@@ -13,6 +13,8 @@ function result(overrides: Partial<ProjectResult>): ProjectResult {
     operationCount: 2,
     caseOnlyClashCount: 0,
     genuineClashCount: 0,
+    nameClashGroupCount: 0,
+    nameClashGroups: [],
     duplicateResourceErrorCount: 0,
     duplicateResourceErrorGroupCount: 0,
     duplicateResourceErrorAnalysis: [],
@@ -48,8 +50,47 @@ describe("Markdown aggregation", () => {
         resourceCount: 0,
         operationCount: 0,
       }),
-      result({ projectRoot: "case", caseOnlyClashCount: 2 }),
-      result({ projectRoot: "genuine", genuineClashCount: 4 }),
+      result({
+        projectRoot: "case",
+        caseOnlyClashCount: 2,
+        nameClashGroupCount: 1,
+        nameClashGroups: [
+          {
+            resourceName: "Widget",
+            classification: "case-only",
+            resources: [
+              {
+                resourceType: "Microsoft.Example/widgets",
+                resourceInstancePath: "/widgets/{widgetName}",
+                sourceUrl: "https://example.test/widget",
+              },
+              {
+                resourceType: "",
+                resourceInstancePath: "/WIDGETS/{name}",
+                sourceUrl: "",
+              },
+            ],
+          },
+        ],
+      }),
+      result({
+        projectRoot: "genuine",
+        genuineClashCount: 4,
+        nameClashGroupCount: 1,
+        nameClashGroups: [
+          {
+            resourceName: "Setting",
+            classification: "genuine",
+            resources: [
+              {
+                resourceType: "Microsoft.Example/settings",
+                resourceInstancePath: "/settings/{name}",
+                sourceUrl: "https://example.test/setting",
+              },
+            ],
+          },
+        ],
+      }),
       result({
         projectRoot: "duplicate",
         duplicateResourceErrorCount: 3,
@@ -93,7 +134,7 @@ describe("Markdown aggregation", () => {
       }),
     ];
     const manifest: Manifest = {
-      schemaVersion: 3,
+      schemaVersion: 4,
       generatedAt: "2026-01-01T00:00:00.000Z",
       repository: "Azure/azure-rest-api-specs",
       sourceSha: "abc",
@@ -115,6 +156,17 @@ describe("Markdown aggregation", () => {
     expect(markdown).toContain("Case-only ARM identity duplicates: 2 records across 1 project");
     expect(markdown).toContain(
       "Genuine distinct-resource name clashes: 4 records across 1 project",
+    );
+    expect(markdown).toContain("`Widget` — case-only");
+    expect(markdown).toContain(
+      "[`Microsoft.Example/widgets` at `/widgets/{widgetName}`](https://example.test/widget)",
+    );
+    expect(markdown).toContain(
+      "`resource type unavailable` at `/WIDGETS/{name}` — source unavailable",
+    );
+    expect(markdown).toContain("`Setting` — genuine");
+    expect(markdown).toContain(
+      "[case](../../case/resource-data/resources.csv) — 1 group, 2 records",
     );
     expect(markdown).toContain("## Duplicate resource errors");
     expect(markdown).toContain("- Records: 3");
@@ -153,7 +205,7 @@ describe("Markdown aggregation", () => {
       }),
     ];
     const manifest: Manifest = {
-      schemaVersion: 3,
+      schemaVersion: 4,
       generatedAt: "2026-01-01T00:00:00.000Z",
       repository: "Azure/azure-rest-api-specs",
       sourceSha: "abc",
@@ -218,7 +270,7 @@ describe("Markdown aggregation", () => {
       }),
     ];
     const manifest: Manifest = {
-      schemaVersion: 3,
+      schemaVersion: 4,
       generatedAt: "2026-11-05T00:00:00.000Z",
       repository: "Azure/azure-rest-api-specs",
       sourceSha: "abc",

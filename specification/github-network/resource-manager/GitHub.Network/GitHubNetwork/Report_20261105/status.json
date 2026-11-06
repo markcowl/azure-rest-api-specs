@@ -3,10 +3,10 @@
   "projectRoot": "specification/github-network/resource-manager/GitHub.Network/GitHubNetwork",
   "entrypoint": "specification/github-network/resource-manager/GitHub.Network/GitHubNetwork/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "5c80406ca8d6571f3cf04aec65593c2b4ff61e1980f68486371dbcf86d40e377",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 6,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "ae583a04333e94f4484420a10667b61ece93f002da4dc0bd0f13ac7717bb2e80",
-    "operationsCsv": "be56bfc234ee5b699d65949723e1d83d7b3941b9b2d1f813453aff7a3a93dd6c",
-    "statusJson": "6b65b2cd57cc36400ae6f9d9b360bc30ec4690cc9e7b9ef3440427836642a3d9"
+    "resourcesCsv": "1a8f5efb24dbf6fad97bc820c398d3ac8d48cef600c4e05ad2ae9f5dc645d2e0",
+    "operationsCsv": "62ff3b7a0eca8eef0c1c906428615f34f320b2eb7bebbc8eac18cedd0599d2af",
+    "statusJson": "5ca2c10aeb2533b585f3a0db2cca8d5d68306ff53fefa0efdf57a8d5f2d35d8f"
   }
 }

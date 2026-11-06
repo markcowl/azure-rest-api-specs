@@ -3,10 +3,10 @@
   "projectRoot": "specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector",
   "entrypoint": "specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "3016477797b7a86769b64ed13acc662c43dddfed75e643c6dc71fe0c7f5b87ef",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 11,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "6c804880b9bb3b235b38a7af1f7b1f6e08e8e1f77a80e6a7a9d026cde26a56a4",
-    "operationsCsv": "165cf001b0cf4dafe798f9dd931c03d274e352c870a059a96c0f67d5912358b1",
-    "statusJson": "4440cc4f0370f954d79679900c2d6019b0c985fcd073c92bfc898c8cbe8849b3"
+    "resourcesCsv": "09cfcc7ddc4650f98da74f0db7bff001a93d85b8225232aef9f7d4b0ecfed262",
+    "operationsCsv": "dad3c98850b76a7a23f9c5acb334f38e3021a89f49acfe5a482ca6b84e21cf56",
+    "statusJson": "0d9030636d56525702e778a149514c744416be9d737d093b1bc44c1bfcf6ce75"
   }
 }

@@ -50,17 +50,42 @@ export function createReadme(
       : projects
           .map((project) => `- [${project.projectRoot}](${link(project, file, reportDirectory)})`)
           .join("\n");
-  const clashList = (
-    projects: ProjectResult[],
-    field: "caseOnlyClashCount" | "genuineClashCount",
-  ) =>
+  const clashList = (projects: ProjectResult[], classification: "case-only" | "genuine") =>
     projects.length === 0
       ? "- None"
       : projects
-          .map(
-            (project) =>
-              `- [${project.projectRoot}](${link(project, "status.json", reportDirectory)}) — ${project[field]} clash records`,
-          )
+          .map((project) => {
+            const groups = project.nameClashGroups
+              .filter((group) => group.classification === classification)
+              .map((group) => {
+                const resources = group.resources
+                  .map((resource) => {
+                    const resourceType = resource.resourceType || "resource type unavailable";
+                    const label =
+                      `\`${resourceType}\` at ` + `\`${resource.resourceInstancePath}\``;
+                    return resource.sourceUrl
+                      ? `    - [${label}](${resource.sourceUrl})`
+                      : `    - ${label} — source unavailable`;
+                  })
+                  .join("\n");
+                return `  - \`${group.resourceName}\` — ${group.classification}\n${resources}`;
+              })
+              .join("\n");
+            const recordCount =
+              classification === "case-only"
+                ? project.caseOnlyClashCount
+                : project.genuineClashCount;
+            const groupCount = project.nameClashGroups.filter(
+              (group) => group.classification === classification,
+            ).length;
+            const groupLabel = groupCount === 1 ? "group" : "groups";
+            return [
+              `- [${project.projectRoot}](${link(project, "resources.csv", reportDirectory)}) — ${groupCount} ${groupLabel}, ${recordCount} records`,
+              groups,
+            ]
+              .filter(Boolean)
+              .join("\n");
+          })
           .join("\n");
   const duplicateResourceErrorList =
     duplicateResourceErrors.length === 0
@@ -164,11 +189,11 @@ export function createReadme(
     "",
     "### Case-only ARM identity duplicates",
     "",
-    clashList(caseOnly, "caseOnlyClashCount"),
+    clashList(caseOnly, "case-only"),
     "",
     "### Genuine distinct-resource name clashes",
     "",
-    clashList(genuine, "genuineClashCount"),
+    clashList(genuine, "genuine"),
     "",
     `## Zero-resource projects (${summary.zeroResource})`,
     "",

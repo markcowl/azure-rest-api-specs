@@ -3,10 +3,10 @@
   "projectRoot": "specification/peering/resource-manager/Microsoft.Peering/Peering",
   "entrypoint": "specification/peering/resource-manager/Microsoft.Peering/Peering/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "23f20be05cc067b141897aea15cf51a32a2bf9aa6330f2fbad11e266f0303ac2",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 35,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "6e9635d431b3a63c8276a2522ff7c02ccb05d4bfc4f9f6633e8ea589c9bbd371",
-    "operationsCsv": "ba869226d2ccf4def430cd5d7ba21582ec0609abd6df908c9e02df8adac8e233",
-    "statusJson": "522f1b38151b78c9d79c081349c5cb917b378ec56f06a5ea07df9fa657862594"
+    "resourcesCsv": "8d93bef50f2fd088a579fe3e7bdbab9befcb0634502a803e9a6804b640efd50f",
+    "operationsCsv": "0d6593809a1852436fcd2e2e5a80fa9af93e4a0f174e6dad6787b522ad603c9f",
+    "statusJson": "ed35f09692e517c9702af256f136d198afc90c76131bc786ea6e3c0dab9428c9"
   }
 }

@@ -298,6 +298,8 @@ describe("report runner", () => {
       operationCount: 0,
       caseOnlyClashCount: 0,
       genuineClashCount: 0,
+      nameClashGroupCount: 0,
+      nameClashGroups: [],
       duplicateResourceErrorCount: 0,
       duplicateResourceErrorGroupCount: 0,
       duplicateResourceErrorAnalysis: [],
@@ -325,6 +327,9 @@ describe("report runner", () => {
     await expect(
       canResume(root, { ...workerRequest, sourceSha: "different-source" }),
     ).resolves.toBeUndefined();
+    await expect(
+      canResume(root, { ...workerRequest, toolVersion: "different-tool" }),
+    ).resolves.toBeUndefined();
     await writeFile(join(output, "resources.csv"), "tampered\n");
     await expect(canResume(root, workerRequest)).resolves.toBeUndefined();
   });
@@ -349,6 +354,8 @@ describe("report runner", () => {
       operationCount: 0,
       caseOnlyClashCount: 0,
       genuineClashCount: 0,
+      nameClashGroupCount: 0,
+      nameClashGroups: [],
       duplicateResourceErrorCount: 0,
       duplicateResourceErrorGroupCount: 0,
       duplicateResourceErrorAnalysis: [],
