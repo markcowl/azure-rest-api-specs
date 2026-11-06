@@ -3,10 +3,10 @@
   "projectRoot": "specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/PostgreSql",
   "entrypoint": "specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/PostgreSql/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "58a05cd7511cf4774a2bde0d837cf5b20cf31299a4bea0822302ec7e099e7bc5",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 70,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "f2fe3710df7e7a749380992c8d38f8829dd9aa77059d7d813c2671fdff0f7541",
-    "operationsCsv": "ca8916c3494169793e242abc3666073bad01dac94f5ae02c8e6843f0cc3536dc",
-    "statusJson": "bd188765b4baffeff7c0fa7e8874be56f6092046d2a3ca02e3921bb651e20040"
+    "resourcesCsv": "903c2528ec8d78942f5330325b16acb522b4bbc9ecac1bfd3c2333ebc6c02e32",
+    "operationsCsv": "6bb7ad93f3dd3678f1183cfbfef75cd63d1d2ae7238363ac63e5c3eb13e34f01",
+    "statusJson": "ef82498ce9dd10f753410e39727e4d0b3802f0c48395407517258a02c27d55d2"
   }
 }

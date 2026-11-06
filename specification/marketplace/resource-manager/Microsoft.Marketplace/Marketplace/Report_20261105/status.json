@@ -3,10 +3,10 @@
   "projectRoot": "specification/marketplace/resource-manager/Microsoft.Marketplace/Marketplace",
   "entrypoint": "specification/marketplace/resource-manager/Microsoft.Marketplace/Marketplace/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "116987b612ee6a094133f3553eab7b39d077b7ea8faffe7c1ec4012fee82990f",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 42,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "9f9b1f192da7defbeb1d333f6b5ec493c7263cdc002a1da628e524c593827ca7",
-    "operationsCsv": "9e271a667de3c6355ba79a77440fefa76df7ff93bc9fb6806900bf1e3235b4ff",
-    "statusJson": "96dcead4a1c008c422381593fb200baae96424baa53aa8ec7308145690a76b11"
+    "resourcesCsv": "64363936fdfd328485227b6619cf99ae163542781c8f5d0706209cd0ac3aea98",
+    "operationsCsv": "62af751083e1b0c1b67d5ad110f4b02f1f036358756485e433701abb8ecb3a8d",
+    "statusJson": "eea7c03f84e9250e1b1eec102ef70fac1368324de30db81adefcfa4b276852b5"
   }
 }

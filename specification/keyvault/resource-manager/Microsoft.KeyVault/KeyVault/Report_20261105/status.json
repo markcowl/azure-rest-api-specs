@@ -3,10 +3,10 @@
   "projectRoot": "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault",
   "entrypoint": "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "b224df5e0fa6873227331f458148b71049829c5fd43b3b6119ac29bd480a922f",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,25 @@
   "operationCount": 45,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 2,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "KeysVersions",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.KeyVault/managedHSMs/keys/versions",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/managedHSMs/{name}/keys/{keyName}/versions/{keyVersion}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.KeyVault/vaults/keys/versions",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}/keys/{keyName}/versions/{keyVersion}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/Key.tsp#L14"
+        }
+      ]
+    }
+  ],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +44,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "4b3f207bef256bafb2885653c92ae582b9599ba7d51d0d51743af40b0f57dd39",
-    "operationsCsv": "5c03fd6f24ecef6b8a12ab4e3fba4bb37efa5888865e1db91a8a8681888cf1b1",
-    "statusJson": "a96d25941ecc4a9ebf1201bdc0a4b586b96905c92a1dc887c825b2c7befe4483"
+    "resourcesCsv": "10658a228a3fd1ff9cfaae0cf8b4d86d657536e41d93795d906723743fb15164",
+    "operationsCsv": "973e4f5973e1cc9a504f2a67cd2ad92740b1dc1b972b01eef3c0f74ef2f4d151",
+    "statusJson": "4e99a1c28a0bb69bc962970f8640209407dcfc12ff6d486b2d7c4082424b2f35"
   }
 }

@@ -3,10 +3,10 @@
   "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ServiceDiagnosticsSettingsApi",
   "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ServiceDiagnosticsSettingsApi/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "5ec67dc4bbd4ee402ce3e3fc10c5067e69dd4b70e166e456a721537d7e97990c",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 3,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "b56219a027194efddde9de3680ea4796525803e6a0432e09aa894f8619bfb739",
-    "operationsCsv": "07a00665e78c0f8de6fb65fb41609ba30ec993ede7af862eb2208f37c746d644",
-    "statusJson": "03af71f670c8e22fba500b56c2d1baca4ce18769c4baa686ce35763c1bd0625d"
+    "resourcesCsv": "f9cb4646d40ff9b2cd5ee04a41e41d2af2fed1880d558a50b475d0f54fa65adf",
+    "operationsCsv": "d0d35a8e006de08a0d8ff0b3e9e67a0d904bd01e4e38dee58ea252f3d8d4eafc",
+    "statusJson": "fd2fa98fd3a295eeca14c1796130247c8d28da4a7b538e6e02292d4995fa53b8"
   }
 }

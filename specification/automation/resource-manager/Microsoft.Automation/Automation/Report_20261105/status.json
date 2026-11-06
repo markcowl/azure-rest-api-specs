@@ -3,10 +3,10 @@
   "projectRoot": "specification/automation/resource-manager/Microsoft.Automation/Automation",
   "entrypoint": "specification/automation/resource-manager/Microsoft.Automation/Automation/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "f43cfd2747ac1fb3932ec792519d3ad4893090b952919fb8734b890b3d426089",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,88 @@
   "operationCount": 169,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 11,
+  "nameClashGroupCount": 4,
+  "nameClashGroups": [
+    {
+      "resourceName": "AutomationAccount",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/nodecounts",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationMachineRuns",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationRuns",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13"
+        }
+      ]
+    },
+    {
+      "resourceName": "DscNode",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/nodes/reports",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports/{reportId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/nodes",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L15"
+        }
+      ]
+    },
+    {
+      "resourceName": "Job",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/jobs/streams",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/streams/{jobStreamId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L14"
+        }
+      ]
+    },
+    {
+      "resourceName": "SourceControl",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs/streams",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams/{streamId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14"
+        }
+      ]
+    }
+  ],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +107,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "1fb9215a0c9aff36a069dfe309a7bbd6d5916d0c0e9db18a4b74ddd68fe3cc9e",
-    "operationsCsv": "6a40b6391d1bb87b09661e710d2e66b10ec718e3f0bafa713423f27da65d2f3d",
-    "statusJson": "b95b4bef53a6e85673c0895e6d91683cefc403661810398fc59e7873a3d1a179"
+    "resourcesCsv": "f4b6e2079933b6d9ce9fc06cfeb5f995e137c738673698be7733771c49e83829",
+    "operationsCsv": "e3c1db82306b1cbae201a28911deb989fc8a546ca41de3135dbc6e9b8fa436c9",
+    "statusJson": "1aa7e06e81874f204d87d14496c7d8d50e08f45c7d690fe6e2ebde9e78b32f40"
   }
 }

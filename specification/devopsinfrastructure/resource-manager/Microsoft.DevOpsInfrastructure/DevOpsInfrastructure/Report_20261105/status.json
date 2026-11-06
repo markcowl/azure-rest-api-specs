@@ -3,10 +3,10 @@
   "projectRoot": "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure",
   "entrypoint": "specification/devopsinfrastructure/resource-manager/Microsoft.DevOpsInfrastructure/DevOpsInfrastructure/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "b0c66f9e4c891aae39ba1d3ba489ae9d1cb0e3fdc75f89b1c992be1bfd56955d",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 7,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "cbd249b9193c7100997b6182a6caf30e55a66f4248dbe8e439c148a09bf7e97e",
-    "operationsCsv": "cf73633b6e3dbc76c2bb25fba652d6eddcf58a56093f9ccd6547a0025e69391e",
-    "statusJson": "adb7a2fc9d3731cbcf5f507253af2d983035b8d4f634d7b51df528c6cf1784dc"
+    "resourcesCsv": "995e25bb79600c8c5f023aebd63cde2a3ff7170f29058ee3875b3a6fd798ee03",
+    "operationsCsv": "2e0cb8ab5da2fc37ca2b4e22c02197198a72aaab27535f6fb2aa45174abee8f6",
+    "statusJson": "5f544b8b7cfc25d307fef17b41b1c452f3b907386634049bc2cde5ff34bdc446"
   }
 }

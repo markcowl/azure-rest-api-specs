@@ -3,10 +3,10 @@
   "projectRoot": "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask",
   "entrypoint": "specification/durabletask/resource-manager/Microsoft.DurableTask/DurableTask/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "130cc9fa3ba9d4a91ae92636212178503ce1f2ccd740a907c90a6f997647930f",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 40,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "8f41602abf36c340065252ba77cb1a44cd5df80b5a6802cf7fcf24c0cdc1c459",
-    "operationsCsv": "63aa27b750780f194bdf64ad312e48a2cf417887033decffd730b8b41521d90c",
-    "statusJson": "ff5143b9a641a48d592ab79cba8d44efb605bc94d1a4eeb8863416b8d977d25a"
+    "resourcesCsv": "5532dbf0462516a9168c5aefc68135ef76425493d26cd254009707f6b31738a6",
+    "operationsCsv": "f467f0f86261918807bf1b7e2b9787a0d182060c16c3fa1a8373e20d3d24af03",
+    "statusJson": "7310f137658f75b87b5fa43271fcc28980217843c9b1de254a4f259307614f88"
   }
 }

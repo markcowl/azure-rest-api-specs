@@ -3,10 +3,10 @@
   "projectRoot": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/SQLAdminInstances",
   "entrypoint": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/SQLAdminInstances/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "34c4ccdafa7de0eec5555764f2716b6b04510ecf0fddb67e46c59e42b2478095",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 6,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "b8259a69b9244822bf6be3a3407dd9dc6925ab980ac4162f3f6964eb7aa7206b",
-    "operationsCsv": "3256b242818675dbd6d21c7d0fcd217e31997eb270577477d3e47c43c106baf6",
-    "statusJson": "6e93bc833841458994f86bcea4b81f17bbc09d4ab2f3049551c401c23a116980"
+    "resourcesCsv": "941015c889a5fd6d26ef34c83ea02da1b7c682aea3b809055ec5e4ded8a7b2ae",
+    "operationsCsv": "fbcf2300daa780a47949b678966d5d36bfc5f1ea1f53f5e7cccde5a435205df8",
+    "statusJson": "3e1fe481a00840ff3b4aed6346de9819c7fc79cb41cd1c5ca949ef9ed8f3550f"
   }
 }

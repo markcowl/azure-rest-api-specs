@@ -3,10 +3,10 @@
   "projectRoot": "specification/containerservice/resource-manager/Microsoft.ContainerService/aimanager",
   "entrypoint": "specification/containerservice/resource-manager/Microsoft.ContainerService/aimanager/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "4d9ffca45fadcb0865038c668cee4af976b2559fda7ed08f4f999a3cd65ca715",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 30,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "be5d7fe1b4244e03de5e58f8da8d8ae9552f15f345ebb1ebac397779b898ad1c",
-    "operationsCsv": "a18f1cb46d665adacde3457625879fb7f00b587d792cf85d7569ea6f78934a65",
-    "statusJson": "4431aad4f273457fa00b6988c03161fd43ad1fa66056564cd97d99de9d175a85"
+    "resourcesCsv": "bb2f94b80034b0254de4e48557f6ecd9d632667f05d173b7d72c3f2fd4a74737",
+    "operationsCsv": "707f4105b675ee51eafc1629b2ffb360d3a93c5f69213b697258edf1207f300b",
+    "statusJson": "420311991adc34a9426024e3f5f9468289117e9dfc0f5c1694a17dfcc6b90662"
   }
 }

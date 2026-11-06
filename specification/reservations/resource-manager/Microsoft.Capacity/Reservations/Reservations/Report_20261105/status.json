@@ -3,10 +3,10 @@
   "projectRoot": "specification/reservations/resource-manager/Microsoft.Capacity/Reservations/Reservations",
   "entrypoint": "specification/reservations/resource-manager/Microsoft.Capacity/Reservations/Reservations/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "e868799ce9d741494b170c726655db5ab64c7a187372fa424cfd332607edd383",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 15,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "f0195f254c5d6d570f9d1726b45bd4fd2a4e1d5e3deeb9c689e3ce26131d3211",
-    "operationsCsv": "fd82a564ecd3724f79b482e586799829082a6035d43fc254eae37c355d1380fb",
-    "statusJson": "170ec854fb4319cbc1474e127181cb2716557ce5f0acf10722901ddd59fd1026"
+    "resourcesCsv": "371d5c724875cb151d47b172b4bafc108e277af2a7c1bb25f2edf9e503dfeba3",
+    "operationsCsv": "e421a002de96105c1c495975188eda83e543fd90c1096186114c965fb52f5287",
+    "statusJson": "31eed9a54c15cee04dbfa358c71c92d0ad48af2a350a595339b7323d331a85b0"
   }
 }

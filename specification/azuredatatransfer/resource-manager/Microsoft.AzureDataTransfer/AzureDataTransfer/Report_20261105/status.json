@@ -3,10 +3,10 @@
   "projectRoot": "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer",
   "entrypoint": "specification/azuredatatransfer/resource-manager/Microsoft.AzureDataTransfer/AzureDataTransfer/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "2b376eb9933852bbdbeed22fe3609f5193470f14d2db2796d6cb93f5888175c1",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 42,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "928b73217e9f3811d332d5a6f2079838f03d43ad17e0592e883e868991280b34",
-    "operationsCsv": "f8f779b1af50b6a54cab5c7690af9ca9410c5fc3374142ac8b2bb06acabf3461",
-    "statusJson": "8a78a0ee13041ce6dd484e1429a0089cf9bf9fbcbe9cc0cfc600abc9c541d2b2"
+    "resourcesCsv": "91748ba5887d234e25f7777089d008ce9b999fccb22e5074d574f92177deb00f",
+    "operationsCsv": "9787621a58b407a816626e2e1ddb0baa2b04369923bd38624e33adf3dfeeb334",
+    "statusJson": "c29b5c82995184939eeb419a42de1edaf219cc247bf4b17d08efe8c53a0c0538"
   }
 }

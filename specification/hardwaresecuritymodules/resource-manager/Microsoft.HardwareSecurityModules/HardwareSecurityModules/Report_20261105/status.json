@@ -3,10 +3,10 @@
   "projectRoot": "specification/hardwaresecuritymodules/resource-manager/Microsoft.HardwareSecurityModules/HardwareSecurityModules",
   "entrypoint": "specification/hardwaresecuritymodules/resource-manager/Microsoft.HardwareSecurityModules/HardwareSecurityModules/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "0c92b105610b82f0ba41dac55780057cdcae29ec9a1157ac74a25337ad31ccfd",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 35,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "0ce9c4acbc573e90148ec5caabdb533d76267c1d7d7a3635a022b980bd7d26fa",
-    "operationsCsv": "853e5c691e9e0e846c44ded6bb65e05f1d18b3d5ec551cdfc4704949e812a81e",
-    "statusJson": "a749452e1bd5b3b2898d104803af002ef6106a66b5b28219bd658b70c3e6798c"
+    "resourcesCsv": "142f03978b7ff3d84ca39568f35b05dff8577b01a540fc1e8bfea77f09a8e896",
+    "operationsCsv": "e2b967b2dc1d08f3a72cb9af87efc6b6ee586302f8137b00185bd072aa68e1ec",
+    "statusJson": "f5e614edcfeeb4769cb059c55da597673beaa971f6ae706f6a7b7be10a29bbd0"
   }
 }

@@ -3,10 +3,10 @@
   "projectRoot": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/loadtesting",
   "entrypoint": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/loadtesting/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "0f5020a807067b6dfc154b27fcbcd1bdb074d90889c46776b13bfc4bc0c3b047",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 22,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "4a311ec47f57ded76e28115dbc51404a5f917ec5b46fd3f798d66690d6928ea8",
-    "operationsCsv": "80ebac44fe5a9fca5951da015b249e454ce38a7187ed2f4b5fd47e3de3596ec7",
-    "statusJson": "35aaaeae53aa24fc5baa20d34de845dcb111e93a42b0e573f60833b7fa436778"
+    "resourcesCsv": "d45410a20ac0df2816b9a656260fae75c92c4997887e3772616387f4868f502e",
+    "operationsCsv": "46f8da25f7eac33416a78eea72eb4b7a4697fb497ea6df81eac6616165c5864b",
+    "statusJson": "5bfad0990d0e742f380b5922e55b4473f4e851f435d646e0e8a4e2f51065e105"
   }
 }

@@ -3,10 +3,10 @@
   "projectRoot": "specification/dell/resource-manager/Dell.Storage/DellStorage",
   "entrypoint": "specification/dell/resource-manager/Dell.Storage/DellStorage/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "164f4b7745c54ee62fd4ddca0cf64205ad3b2d4d32edf47c2e3292c96cd5a9e3",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 6,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "c9171ad34586f01c869a38f2a8eba7d71405d634762acd80cff16ab7776e0fa6",
-    "operationsCsv": "6aae5673460fdf0ccf9e28f59cf5cb639c76797c19fbecbad3fe862228c41cc8",
-    "statusJson": "79de453cadab665e8ce8860e2d6b82490887cc487fe4e1fab1955e7482d16611"
+    "resourcesCsv": "cbab94ee036dee9515bfaf0aa988fa2f6ae5e698b7ab48ec70b23a4ce23450aa",
+    "operationsCsv": "86e6edea968af94828679bea1c6fefaedbb6161193c18bc8eb7c345c1c3c6b29",
+    "statusJson": "59d084ab89adc545f2594349dabea6fc8d1c261f648c279958aad1a493f022b1"
   }
 }

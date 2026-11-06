@@ -3,10 +3,10 @@
   "projectRoot": "specification/databricks/resource-manager/Microsoft.Databricks/Databricks",
   "entrypoint": "specification/databricks/resource-manager/Microsoft.Databricks/Databricks/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "89d60d00aad109aded2beb49129ea94d296807ce44369a945c3cab084ef3f33a",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 22,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "c46244a6615a988d56970a52fbc2dbf055ca39dad78de36b94181905c6ba609a",
-    "operationsCsv": "ac3a0ffc108d6f6d97393c17824cef45cb76c2292bc0a61c4b4f4b3a706f1278",
-    "statusJson": "5f8f2254ffefc3794534db9b3dfe18440c6e6653bb135f399abf79acb029c453"
+    "resourcesCsv": "09bdd6cbc863c2ec61899ee97b95d2b3a9d15f280622899d808edc93e78925c3",
+    "operationsCsv": "d4343f33ecc1379a4edb64be609842e8600f1b29b253c3a4235772bc4c4282d9",
+    "statusJson": "e29588464a7fcc297087956ab2e8c2e251a96808cbbec3b1b62c15501654e404"
   }
 }

@@ -3,10 +3,10 @@
   "projectRoot": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/ComputeInstance",
   "entrypoint": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/ComputeInstance/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "d41671d05a019c43de54a27888b7cfb82a91fe89e118183bc8dbecee7d81ac54",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 4,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "e9ebc2e6e6af14d5eee8dbd76302bd68eb138a9c427dfc8f4b8e230ae8067398",
-    "operationsCsv": "c075803d0433931a6842a9eb21c1abd131eb87a6443d6cd3c3d0aa185d43dd5d",
-    "statusJson": "c1004ad7a17bb13966872c355407d140b60eeb9b6f3f840ab3498118fd458aeb"
+    "resourcesCsv": "9f702125ab7a1d90c49e03a9030051840b7c5228981c0df037bc01c855ed45a2",
+    "operationsCsv": "f723662c310b6a82dbaef375b005d7e3d5c660238d7d5a73062cb9b8222168de",
+    "statusJson": "316e5f337597f5d7c215988dfc0266875cfc4ddfe9f2ec607b82e0e4a85c47a5"
   }
 }

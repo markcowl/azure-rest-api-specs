@@ -6,6 +6,7 @@ import {
   applyNameClashAnalysis,
   collectRows,
   getDuplicateResourceErrorGroups,
+  getNameClashGroups,
   getOperationKey,
   getResourceKey,
   normalizeArmPath,
@@ -66,6 +67,130 @@ describe("report canonicalization", () => {
     ];
     applyNameClashAnalysis(genuine);
     expect(genuine.every((item) => item.nameClashAnalysis.startsWith("genuine"))).toBe(true);
+  });
+
+  it("builds deterministic name clash groups with prioritized links and missing links", () => {
+    const row = (
+      resourceKey: string,
+      resourceType: string,
+      resourceInstancePath: string,
+      resourceDefinition: string,
+      readOperation: string,
+      createOrUpdateOperation: string,
+    ): ResourceRow => ({
+      resourceKey,
+      resourceType,
+      resourceInstancePath,
+      resourceName: "Widget",
+      resourceDefinition,
+      bicepResource: false,
+      readOperation,
+      createOrUpdateOperation,
+      nameClash: true,
+      nameClashAnalysis: "genuine",
+      duplicateResourceError: false,
+      duplicateResourceErrorAnalysis: "",
+    });
+    const rows = [
+      row(
+        "microsoft.z/z|/z/{}",
+        "Microsoft.Z/z",
+        "/z/{name}",
+        "",
+        "",
+        "https://example.test/create",
+      ),
+      row(
+        "microsoft.a/a|/a/{}",
+        "Microsoft.A/a",
+        "/a/{name}",
+        "https://example.test/definition",
+        "https://example.test/read",
+        "https://example.test/create-ignored",
+      ),
+      row(
+        "microsoft.b/b|/b/{}",
+        "Microsoft.B/b",
+        "/b/{name}",
+        "",
+        "https://example.test/read-first;https://example.test/read-second",
+        "https://example.test/create-ignored",
+      ),
+      row("microsoft.c/c|/c/{}", "Microsoft.C/c", "/c/{name}", "", "", ""),
+    ];
+
+    expect(getNameClashGroups(rows)).toEqual([
+      {
+        resourceName: "Widget",
+        classification: "genuine",
+        resources: [
+          {
+            resourceType: "Microsoft.A/a",
+            resourceInstancePath: "/a/{name}",
+            sourceUrl: "https://example.test/definition",
+          },
+          {
+            resourceType: "Microsoft.B/b",
+            resourceInstancePath: "/b/{name}",
+            sourceUrl: "https://example.test/read-first",
+          },
+          {
+            resourceType: "Microsoft.C/c",
+            resourceInstancePath: "/c/{name}",
+            sourceUrl: "",
+          },
+          {
+            resourceType: "Microsoft.Z/z",
+            resourceInstancePath: "/z/{name}",
+            sourceUrl: "https://example.test/create",
+          },
+        ],
+      },
+    ]);
+  });
+
+  it("classifies lowercased resource keys as a case-only name clash group", () => {
+    const rows = [
+      "MICROSOFT.EXAMPLE/WIDGETS|/WIDGETS/{}",
+      "microsoft.example/widgets|/widgets/{}",
+    ].map((resourceKey, index): ResourceRow => ({
+      resourceKey,
+      resourceType: index === 0 ? "MICROSOFT.EXAMPLE/WIDGETS" : "microsoft.example/widgets",
+      resourceInstancePath: index === 0 ? "/WIDGETS/{Name}" : "/widgets/{name}",
+      resourceName: "Widget",
+      resourceDefinition: `https://example.test/${index}`,
+      bicepResource: false,
+      readOperation: "",
+      createOrUpdateOperation: "",
+      nameClash: true,
+      nameClashAnalysis: "case-only",
+      duplicateResourceError: false,
+      duplicateResourceErrorAnalysis: "",
+    }));
+
+    expect(getNameClashGroups(rows)[0].classification).toBe("case-only");
+    expect(getNameClashGroups(rows)[0].resources).toHaveLength(2);
+  });
+
+  it("orders name clash groups by exact resource name", () => {
+    const rows = ["Zulu", "Alpha"].flatMap((resourceName) =>
+      ["one", "two"].map((suffix): ResourceRow => ({
+        resourceKey: `microsoft.example/${suffix}|/${suffix}/{}`,
+        resourceType: `Microsoft.Example/${suffix}`,
+        resourceInstancePath: `/${suffix}/{name}`,
+        resourceName,
+        resourceDefinition: `https://example.test/${resourceName}/${suffix}`,
+        bicepResource: false,
+        readOperation: "",
+        createOrUpdateOperation: "",
+        nameClash: true,
+        nameClashAnalysis: "genuine",
+        duplicateResourceError: false,
+        duplicateResourceErrorAnalysis: "",
+      })),
+    );
+
+    expect(getNameClashGroups(rows).map((group) => group.resourceName)).toEqual(["Alpha", "Zulu"]);
   });
 
   it("groups duplicate resource errors by normalized instance path", () => {

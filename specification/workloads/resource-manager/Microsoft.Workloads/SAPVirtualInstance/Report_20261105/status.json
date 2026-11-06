@@ -3,10 +3,10 @@
   "projectRoot": "specification/workloads/resource-manager/Microsoft.Workloads/SAPVirtualInstance",
   "entrypoint": "specification/workloads/resource-manager/Microsoft.Workloads/SAPVirtualInstance/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "b1641966cf3f0ef2ccaa03d59b9c440d621c7e1d155c855c8db7c3235d10a970",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 29,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "41cd87a5b13064a44a639d8458a2fd27bc8f9812bcb1519dbfcf04df353c965e",
-    "operationsCsv": "62bc058e864c489d78d9ed75cb33e431abfa541837d75aa67145faa3ccacd134",
-    "statusJson": "af06e48b2cc5ad54b8257120f4f09c370cd21034e6a41cacf40d066e2af683ea"
+    "resourcesCsv": "cf479b85f5ee7b2a1f0add027fe396da09c0183d09c05c496c1cb70df61001da",
+    "operationsCsv": "215355cf5ce39b3b6dee8d1cc57b3c6769cd018587803590fa59a31066fec10c",
+    "statusJson": "df009cec40531cabe7321757be8ec1559deb7e3ff4e4f2919a7a2a02d7de85fc"
   }
 }

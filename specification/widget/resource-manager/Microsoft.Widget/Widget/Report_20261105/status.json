@@ -3,10 +3,10 @@
   "projectRoot": "specification/widget/resource-manager/Microsoft.Widget/Widget",
   "entrypoint": "specification/widget/resource-manager/Microsoft.Widget/Widget/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "8a2b2f5010c64e082e607bc5108753a78696d02d0acf9b42e088f8b58e21ffa9",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 6,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "9c4cab81479507632da2c4584173fae963524b671e91753f2ee0975a2fdad8ba",
-    "operationsCsv": "3a8b73e0b90bfc0f7a368974ffef6044b399a1d3a381a50b8e0a04ce1dd14b70",
-    "statusJson": "a0f71a633847d71afa5ea55b9ed905431138b704c2f064c55515455de51ed0fc"
+    "resourcesCsv": "4476395d5aff0ea9ac12f388b6942c14659b5dbaa7ac07d84d2443a8490d88c6",
+    "operationsCsv": "9541a95a2ffb3c567ad1bb46d5beae7daffed0cfc187b29877143fe1f5528786",
+    "statusJson": "578f77ced70075bdd0d2a132cd848013464a35e27ee8c5875a4a44a4cf1d481b"
   }
 }

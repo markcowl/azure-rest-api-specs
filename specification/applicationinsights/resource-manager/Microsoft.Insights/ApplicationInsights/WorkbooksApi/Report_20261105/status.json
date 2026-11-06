@@ -3,10 +3,10 @@
   "projectRoot": "specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbooksApi",
   "entrypoint": "specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbooksApi/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "8ec1abbc9e66945edbd3db85303d3f8d3f658a4388a5964e509ff5f83828abd6",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 8,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "44158ba65ee04c10d30d356f932a33a81250214e1a51f0d4e8f64089e1280dd8",
-    "operationsCsv": "9e29026d6cd7e813857e7e8a27e796bc7ce08dd1f7e5defe25a73189a0704862",
-    "statusJson": "24d0efa69e657035df92073ba2aa9e650a74172d4632c185cc2a29ec9a2d61e4"
+    "resourcesCsv": "7aed52e6af551c1277bc57c932979868c51a6e6c12e88d0ca27126525ecc92a4",
+    "operationsCsv": "3c5de9ec110b11e1cbc474033ea786ae74b4d2f563986650995e0fc7c9f80c38",
+    "statusJson": "f89e3d1611ed85d43d4405404194b884c1e4309d5a845d6f17dbfd0b71549666"
   }
 }

@@ -3,10 +3,10 @@
   "projectRoot": "specification/newrelic/resource-manager/NewRelic.Observability/NewRelicObservability",
   "entrypoint": "specification/newrelic/resource-manager/NewRelic.Observability/NewRelicObservability/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "a0446c80eb8329ea90752344bc7c94d5cbab240277787d9578ba4c9cc2b160fc",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 30,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "73b5e6b8b27982923d28d65838fc9493df8a15569a91fc8bea6ca27bc58bc878",
-    "operationsCsv": "3ad3515a9ffabb46ba6bb642f84cf214c73f99db8b09b3fc3bc867f6efe3972a",
-    "statusJson": "3576c75fe6db65b531bc950efb3698acf1bd39cd854d5d3e60173074df5879af"
+    "resourcesCsv": "8f19de7bddd77920a3da9b0b0dcfb34b82cb7acc465b3b88d849dae746696304",
+    "operationsCsv": "04977c9d26fa3fe07dac1371ca4eb9c8a1d2fbfb411405370a380fe99a9ebbc2",
+    "statusJson": "9f6e1154a0a0157b36576a543ea0afcc3fcc3c59e3e4a0d089af0cbf4bb04fce"
   }
 }

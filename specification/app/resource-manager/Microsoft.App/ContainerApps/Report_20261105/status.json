@@ -3,10 +3,10 @@
   "projectRoot": "specification/app/resource-manager/Microsoft.App/ContainerApps",
   "entrypoint": "specification/app/resource-manager/Microsoft.App/ContainerApps/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "7329605e029b2f60b56aba74ae6f98d77ca425401caf906c13547af372df49cc",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,25 @@
   "operationCount": 201,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 2,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "ContainerAppLabelHistory",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.App/containerApps/labelHistories",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L33"
+        },
+        {
+          "resourceType": "Microsoft.App/containerApps/labelHistory",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L15"
+        }
+      ]
+    }
+  ],
   "duplicateResourceErrorCount": 6,
   "duplicateResourceErrorGroupCount": 3,
   "duplicateResourceErrorAnalysis": [
@@ -29,12 +48,12 @@
         {
           "resourceName": "ConnectedEnvironmentsDaprComponents",
           "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L14"
         },
         {
           "resourceName": "DaprComponent",
           "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L14"
         }
       ]
     },
@@ -44,12 +63,12 @@
         {
           "resourceName": "LogicApp",
           "resourceType": "Microsoft.App/logicApps",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L15"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L15"
         },
         {
           "resourceName": "LogicApps",
           "resourceType": "Microsoft.App/logicApps",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L15"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L15"
         }
       ]
     },
@@ -59,12 +78,12 @@
         {
           "resourceName": "ManagedCertificate",
           "resourceType": "Microsoft.App/managedEnvironments/managedCertificates",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L14"
         },
         {
           "resourceName": "ManagedEnvironmentsManagedCertificates",
           "resourceType": "Microsoft.App/managedEnvironments/managedCertificates",
-          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/5827ec08ce0dca7e04fcee8a67497921a7bf67f4/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L14"
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/73f1687f0b6875c99a32f145a28c589274791aed/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L14"
         }
       ]
     }
@@ -75,8 +94,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "b0239cb611a2206032c1d67a2fada2095dcccbca2810d68f3fb7e3d17a611059",
-    "operationsCsv": "0bfde1f483e588463efc72f0cbefee4835e042a2b4df62c55bb82a292dc2bbd5",
-    "statusJson": "b086aa2a58b64de205b1b28f9519f4e489af7b9814f2aec8eb793d824f37c41a"
+    "resourcesCsv": "6bdb4d83126375ac1d639eca6bfc263681a60c6cff8c8526b940df8e46ab06e4",
+    "operationsCsv": "f184580cb543cc5517b17d4590a06b24a762cdb105776898a85555caf3a04fb0",
+    "statusJson": "fcb032f7e9202cec17b9b8a6f96d85f836c555a1702cece9851b71d13c9ff68e"
   }
 }

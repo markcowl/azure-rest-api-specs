@@ -7,6 +7,7 @@ import {
   collectRows,
   formatDiagnostics,
   getDuplicateResourceErrorGroups,
+  getNameClashGroups,
   operationsCsv,
   resourcesCsv,
   sha256,
@@ -118,6 +119,7 @@ export async function runWorker(request: WorkerRequest): Promise<ProjectResult> 
       ...new Set(duplicateResourceErrorRows.map((row) => row.duplicateResourceErrorAnalysis)),
     ].sort();
     const duplicateResourceErrorGroups = getDuplicateResourceErrorGroups(rows.resources);
+    const nameClashGroups = getNameClashGroups(rows.resources);
     const resultWithoutStatusHash = {
       ...base,
       status: rows.resources.length === 0 ? "zero-resource" : "succeeded",
@@ -125,6 +127,8 @@ export async function runWorker(request: WorkerRequest): Promise<ProjectResult> 
       operationCount: rows.operations.length,
       caseOnlyClashCount,
       genuineClashCount,
+      nameClashGroupCount: nameClashGroups.length,
+      nameClashGroups,
       duplicateResourceErrorCount: duplicateResourceErrorRows.length,
       duplicateResourceErrorGroupCount: duplicateResourceErrorGroups.length,
       duplicateResourceErrorAnalysis,
@@ -174,6 +178,8 @@ export async function writeWorkerFailure(
     operationCount: 0,
     caseOnlyClashCount: 0,
     genuineClashCount: 0,
+    nameClashGroupCount: 0,
+    nameClashGroups: [],
     duplicateResourceErrorCount: 0,
     duplicateResourceErrorGroupCount: 0,
     duplicateResourceErrorAnalysis: [],

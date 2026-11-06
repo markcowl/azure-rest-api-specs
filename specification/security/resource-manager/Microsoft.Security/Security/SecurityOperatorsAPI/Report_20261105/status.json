@@ -3,10 +3,10 @@
   "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/SecurityOperatorsAPI",
   "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/SecurityOperatorsAPI/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "a4edd4d8c791a56c1b9238b17460e19cc5659fdcce6545ae2933588763cea23a",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 4,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "37f9f08cd4c4aed7e74c751ccfdb02948369f482e4452ecf87f963d58f28b31a",
-    "operationsCsv": "a7eca159af31d40802b841294a81e2162d233eae30c61b5ed16aaa5eda8b55c0",
-    "statusJson": "5664ef3e921709a303f1568ed98241b6b96da3da703d185b1daa50cf30413065"
+    "resourcesCsv": "3edae310d6dec4b02d427dd9172b07efa37c10815e8996e874704aa56cec0885",
+    "operationsCsv": "9982f1877dc0213e5383de7e6d4da9c5d03fd949ee36584ae2d5cdd2faebc563",
+    "statusJson": "e97abbb7406f33f9e4f3015c140e4d78344f758cf7b99a4e20dd3f9099ce8330"
   }
 }

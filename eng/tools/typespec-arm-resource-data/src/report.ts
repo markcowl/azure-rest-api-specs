@@ -6,7 +6,12 @@ import type {
 } from "@azure-tools/typespec-azure-resource-manager";
 import { createHash } from "node:crypto";
 import { relative, sep } from "node:path";
-import type { DuplicateResourceErrorGroup, OperationRow, ResourceRow } from "./types.ts";
+import type {
+  DuplicateResourceErrorGroup,
+  NameClashGroup,
+  OperationRow,
+  ResourceRow,
+} from "./types.ts";
 
 const resourceColumns: (keyof ResourceRow)[] = [
   "resourceKey",
@@ -192,6 +197,44 @@ export function applyNameClashAnalysis(rows: ResourceRow[]): void {
   }
 }
 
+function resourceSourceUrl(row: ResourceRow): string {
+  return (
+    row.resourceDefinition ||
+    row.readOperation.split(";").find(Boolean) ||
+    row.createOrUpdateOperation.split(";").find(Boolean) ||
+    ""
+  );
+}
+
+export function getNameClashGroups(rows: ResourceRow[]): NameClashGroup[] {
+  const byName = Map.groupBy(
+    rows.filter((row) => row.nameClash),
+    (row) => row.resourceName,
+  );
+  return [...byName.entries()]
+    .map(([resourceName, sameName]) => ({
+      resourceName,
+      classification:
+        new Set(sameName.map((row) => row.resourceKey.toLowerCase())).size === 1
+          ? ("case-only" as const)
+          : ("genuine" as const),
+      resources: sameName
+        .map((row) => ({
+          resourceType: row.resourceType,
+          resourceInstancePath: row.resourceInstancePath,
+          sourceUrl: resourceSourceUrl(row),
+        }))
+        .sort((left, right) =>
+          [left.resourceType, left.resourceInstancePath, left.sourceUrl]
+            .join("|")
+            .localeCompare(
+              [right.resourceType, right.resourceInstancePath, right.sourceUrl].join("|"),
+            ),
+        ),
+    }))
+    .sort((left, right) => left.resourceName.localeCompare(right.resourceName));
+}
+
 export function applyDuplicateResourceErrorAnalysis(rows: ResourceRow[]): void {
   const byInstancePath = Map.groupBy(rows, (row) => normalizeArmPath(row.resourceInstancePath));
   for (const [instancePath, samePath] of byInstancePath) {
@@ -219,11 +262,7 @@ export function getDuplicateResourceErrorGroups(
         .map((row) => ({
           resourceName: row.resourceName,
           resourceType: row.resourceType,
-          sourceUrl:
-            row.resourceDefinition ||
-            row.readOperation.split(";").find(Boolean) ||
-            row.createOrUpdateOperation.split(";").find(Boolean) ||
-            "",
+          sourceUrl: resourceSourceUrl(row),
         }))
         .sort((left, right) =>
           [left.resourceName, left.resourceType, left.sourceUrl]

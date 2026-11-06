@@ -3,10 +3,10 @@
   "projectRoot": "specification/impact/resource-manager/Microsoft.Impact/Impact",
   "entrypoint": "specification/impact/resource-manager/Microsoft.Impact/Impact/main.tsp",
   "classification": "main-bearing",
-  "sourceSha": "5827ec08ce0dca7e04fcee8a67497921a7bf67f4",
+  "sourceSha": "73f1687f0b6875c99a32f145a28c589274791aed",
   "dependencyLockHash": "e150420382fff7a19adda3752e1ebdbd349a28cd6d5269ea7208c4f8c013a718",
   "projectInputHash": "b486a7bf44506414b3c4f5158abd83af34ae537fbc838fdb14bef1d9b4b7dd64",
-  "toolVersion": "1.2.0",
+  "toolVersion": "1.3.0",
   "compilerVersion": "1.17.0",
   "armLibraryVersion": "0.73.0",
   "reportDirectory": "Report_20261105",
@@ -15,6 +15,8 @@
   "operationCount": 15,
   "caseOnlyClashCount": 0,
   "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
   "duplicateResourceErrorCount": 0,
   "duplicateResourceErrorGroupCount": 0,
   "duplicateResourceErrorAnalysis": [],
@@ -25,8 +27,8 @@
     "total": 0
   },
   "outputHashes": {
-    "resourcesCsv": "d077d0a8c3f2310b6ed6295a232f511d95bfafc7e7978b16cca695c4601f0bb9",
-    "operationsCsv": "5a257015ad6d519613ea32db15213dfca453c3962c7d68bfedd281248baf1703",
-    "statusJson": "3b97b7e9a285b83465fb08fac85fe46e52b4ac99122fcb56072cd80885dd3140"
+    "resourcesCsv": "0d9843e2cdb2d964c164a055b34f6668c16e2165d1ff03b2a46bf64bead166c6",
+    "operationsCsv": "4b4f05793ffe6d8f273941b01abe51aa2f40c6d5aa0056b41a50db86dbc2ce45",
+    "statusJson": "29cdd4350ad445f51d0b1eb7aec5dde7c73b5c0bd1c7dd82054a196625a061a5"
   }
 }
