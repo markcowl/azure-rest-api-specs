@@ -1,0 +1,42 @@
+{
+  "service": "servicelinker",
+  "projectRoot": "specification/servicelinker/resource-manager/Microsoft.ServiceLinker/ServiceLinker",
+  "entrypoint": "specification/servicelinker/resource-manager/Microsoft.ServiceLinker/ServiceLinker/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "5402238fed1aad9a3821e2d649084e63cfb22307804049dc9c1a63e25ea11015",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 25,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "28f62ef7758087f0d8b5a668ed61c66178cb90df975d891794d4f195a60b0336",
+    "operationsCsv": "5ea9ddf09016c4598d0d32aa75d5b39af40f949e9e9b936fe44357a42fc5daaf",
+    "statusJson": "9cce948e81f5604fae656b2b93f43172e7929e22ec061ec2c4a2694335324d7f"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "service": "dataprotection",
+  "projectRoot": "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection",
+  "entrypoint": "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "c10d2ea771e9dfa6653d571ee246f53cdfe131f114f7908db4d473cd829219c9",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 17,
+  "operationCount": 62,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b0b60df7fc14ab54e80aab39923261f4ad05ca04d4b7bc9b75ac7cf6d994502a",
+    "operationsCsv": "f3513af5a09fda230ea9ffff14e02c606a04f6bf2849a4ef4ce0ba63a409addb",
+    "statusJson": "27da957c3772377932b48f48e432006cbba3beef654852db8260bb42e351c030"
+  }
+}

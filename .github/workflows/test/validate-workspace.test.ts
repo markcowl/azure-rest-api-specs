@@ -277,12 +277,19 @@ describe("workspace validation", () => {
         },
       },
       "local@file:../local": { resolution: { directory: "../local", type: "directory" } },
+      "preview@pkg.pr.new": {
+        resolution: {
+          integrity: "sha512-example",
+          tarball:
+            "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+        },
+      },
     });
 
     expect(checkLockfile(repoRoot)).toEqual([]);
   });
 
-  it("rejects all non-Git-hosted tarballs, including resolutions with integrity", () => {
+  it("rejects mutable and non-pkg.pr.new non-Git-hosted tarballs", () => {
     writeLockfile({
       "registry@1.0.0": {
         resolution: { integrity: "sha512-example", tarball: "https://proxy.example/registry.tgz" },
@@ -290,11 +297,18 @@ describe("workspace validation", () => {
       "other@1.0.0": {
         resolution: { gitHosted: false, tarball: "https://registry.example/other.tgz" },
       },
+      "mutable@pkg.pr.new": {
+        resolution: {
+          integrity: "sha512-example",
+          tarball: "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@main",
+        },
+      },
     });
 
     expect(checkLockfile(repoRoot)).toEqual([
       'pnpm-lock.yaml: "registry@1.0.0" has a non-Git-hosted tarball resolution: https://proxy.example/registry.tgz. Regenerate the lockfile against the configured registry.',
       'pnpm-lock.yaml: "other@1.0.0" has a non-Git-hosted tarball resolution: https://registry.example/other.tgz. Regenerate the lockfile against the configured registry.',
+      'pnpm-lock.yaml: "mutable@pkg.pr.new" has a non-Git-hosted tarball resolution: https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@main. Regenerate the lockfile against the configured registry.',
     ]);
   });
 

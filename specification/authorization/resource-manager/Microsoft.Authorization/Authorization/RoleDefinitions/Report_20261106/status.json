@@ -1,0 +1,42 @@
+{
+  "service": "authorization",
+  "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleDefinitions",
+  "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleDefinitions/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "54f8232dedb87b331fb0d5f1023b7e264360a605ff9dd70f1a89c8df80ca7828",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 4,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 1,
+    "total": 1
+  },
+  "outputHashes": {
+    "resourcesCsv": "63fca9a574c1317a232a89dadb5b35c8e4d7247c0bdb79219345c554035c97d8",
+    "operationsCsv": "bb3c0549324079a891d667bd1f5245e3a8c84ffb5b60c0ea001c5ab4be4db923",
+    "statusJson": "b49712b9cd963f54abae8727746fbafaa9d74d93c5f4d9f8072ff2b92ee7901e"
+  }
+}

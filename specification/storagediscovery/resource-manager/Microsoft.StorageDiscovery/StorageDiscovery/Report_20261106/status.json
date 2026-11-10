@@ -1,0 +1,42 @@
+{
+  "service": "storagediscovery",
+  "projectRoot": "specification/storagediscovery/resource-manager/Microsoft.StorageDiscovery/StorageDiscovery",
+  "entrypoint": "specification/storagediscovery/resource-manager/Microsoft.StorageDiscovery/StorageDiscovery/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "1718a1b7960f56d78f9ac9c463005ec9d81cf0c799ff2cf64b6b494ce151e38b",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 10,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "7ec4c64baa2465e05991aeca0b57eb95ea4c89436ffd4ad681049ca22a5bf09c",
+    "operationsCsv": "42770953815abcf8905b7b8a6f393b1879f89f229cd63eecc2cce83d8f42813a",
+    "statusJson": "96af479e1c0ec139a42806367de717b26e29bf3d43a560553d990546049ea86b"
+  }
+}

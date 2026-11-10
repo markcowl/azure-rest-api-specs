@@ -1,0 +1,42 @@
+{
+  "service": "machinelearningservices",
+  "projectRoot": "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices",
+  "entrypoint": "specification/machinelearningservices/resource-manager/Microsoft.MachineLearningServices/MachineLearningServices/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "4c8568e8dab3f80076863a9c9e5d42cef61a018878f6cbdd198daac743371dd2",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 53,
+  "operationCount": 281,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "992ff632fbfdff317f9bc48152a88abc1897f7a2b5c7c98de6fa2d6672bed744",
+    "operationsCsv": "452423d32ea18fddd5f22e15cb96421b25182d15949a72b8dd1a2deb320ebc5d",
+    "statusJson": "a1e6254c5a76884158c437193eb0a8b3d5ded06c8633cb03aa49bfbeebc88cb4"
+  }
+}

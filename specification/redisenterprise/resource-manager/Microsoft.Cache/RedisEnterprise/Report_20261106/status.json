@@ -1,0 +1,42 @@
+{
+  "service": "redisenterprise",
+  "projectRoot": "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise",
+  "entrypoint": "specification/redisenterprise/resource-manager/Microsoft.Cache/RedisEnterprise/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "b6331dd0c102e0eb53e1e47997aedf11d1d66543cfc99a2cf8cf9d53e68344d5",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 36,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "229eaeade8b24f7b24c8c8f196aa72e4b4462e478cccfc1cdc9d9e2b788ade41",
+    "operationsCsv": "7228d66ffa6117a5f1f316bf0b98d461bba22d9e861ccfbb5f3ed7f28c4932a0",
+    "statusJson": "137fc53e6fd152d782ec0d9f0370462993d7522ed01cdf186e3bedea3dd5ae73"
+  }
+}

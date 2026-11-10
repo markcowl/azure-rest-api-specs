@@ -1,0 +1,42 @@
+{
+  "service": "connectedcache",
+  "projectRoot": "specification/connectedcache/resource-manager/Microsoft.ConnectedCache/ConnectedCache",
+  "entrypoint": "specification/connectedcache/resource-manager/Microsoft.ConnectedCache/ConnectedCache/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "f458862eb1b94aa0a80070c5202e920003f7940358e714b00b681904bd3aacc9",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 42,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "3cf85be108b8e88967d42fad67f0f469a5ac07d1a6aa75b78e8afeca565eb1fd",
+    "operationsCsv": "c313ffd1f65c14007899f3a3c3c9b28ec7376bbd08d64241a6911c7614033811",
+    "statusJson": "056ce646edd73c8cba16cc17f48de78bdb7282c4c5a1b6ddb8b86bec8c907fd1"
+  }
+}

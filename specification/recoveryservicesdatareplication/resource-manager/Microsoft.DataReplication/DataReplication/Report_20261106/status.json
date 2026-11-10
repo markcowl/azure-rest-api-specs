@@ -1,0 +1,42 @@
+{
+  "service": "recoveryservicesdatareplication",
+  "projectRoot": "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication",
+  "entrypoint": "specification/recoveryservicesdatareplication/resource-manager/Microsoft.DataReplication/DataReplication/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "bd7ad21a626bca81ff709804744f8e6fa12c0e150410b59031753f7b2d753ec2",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 12,
+  "operationCount": 45,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "aa03ef68f800657dbd225b474c070a6c46fcb3a5d99aaa57aeafdc35abe317d5",
+    "operationsCsv": "5cdf01e031ca06ddb146de0e9ef9c33ff4ec13945baa944eec45315aa06d275f",
+    "statusJson": "9319252432b7cce66e6d59007c6b10b6fd7d0eb4a0c11bcbd50dd84e0cf6cba8"
+  }
+}

@@ -13,6 +13,18 @@ Options:
   --timeout <seconds>    Per-project timeout in seconds (default: 300).
   --resume               Reuse outputs whose source, inputs, dependencies, tool, and hashes match.
   --source-ref <ref>     Git ref used for source links and metadata (default: HEAD).
+  --arm-library-package-url <url>
+                         Immutable URL for an overridden ARM library package.
+  --arm-library-package-version <version>
+                         Version declared by the overridden ARM library package.
+  --arm-library-package-integrity <sri>
+                         SHA-512 SRI integrity of the overridden ARM library package.
+  --arm-library-package-sha256 <hash>
+                         SHA-256 of the overridden ARM library package.
+  --arm-library-pr <number>
+                         Pull request that produced the overridden ARM library package.
+  --arm-library-pr-head-sha <sha>
+                         Exact pull request head commit that produced the package.
   --report-directory <name>
                          Per-project report directory (default: resource-data).
   --root <path>          Repository root (default: current directory).
@@ -36,6 +48,12 @@ export async function main(): Promise<void> {
       timeout: { type: "string", default: "300" },
       resume: { type: "boolean", default: false },
       "source-ref": { type: "string", default: "HEAD" },
+      "arm-library-package-url": { type: "string" },
+      "arm-library-package-version": { type: "string" },
+      "arm-library-package-integrity": { type: "string" },
+      "arm-library-package-sha256": { type: "string" },
+      "arm-library-pr": { type: "string" },
+      "arm-library-pr-head-sha": { type: "string" },
       "report-directory": { type: "string", default: "resource-data" },
       root: { type: "string", default: process.cwd() },
       help: { type: "boolean", short: "h", default: false },
@@ -54,6 +72,20 @@ export async function main(): Promise<void> {
   if (!Number.isFinite(timeoutSeconds) || timeoutSeconds <= 0) {
     throw new Error("--timeout must be a positive number of seconds.");
   }
+  const provenanceValues = [
+    parsed.values["arm-library-package-url"],
+    parsed.values["arm-library-package-version"],
+    parsed.values["arm-library-package-integrity"],
+    parsed.values["arm-library-package-sha256"],
+    parsed.values["arm-library-pr"],
+    parsed.values["arm-library-pr-head-sha"],
+  ];
+  if (provenanceValues.some(Boolean) && !provenanceValues.every(Boolean)) {
+    throw new Error(
+      "All --arm-library-package-* and --arm-library-pr* options must be provided together.",
+    );
+  }
+  const pullRequest = Number(parsed.values["arm-library-pr"]);
   const manifest = await runReports({
     repositoryRoot: resolve(parsed.values.root),
     sourceRef: parsed.values["source-ref"],
@@ -63,6 +95,16 @@ export async function main(): Promise<void> {
     timeoutMs: timeoutSeconds * 1000,
     resume: parsed.values.resume,
     reportDirectory: parsed.values["report-directory"],
+    armLibraryProvenance: provenanceValues.every(Boolean)
+      ? {
+          packageUrl: parsed.values["arm-library-package-url"]!,
+          packageVersion: parsed.values["arm-library-package-version"]!,
+          packageIntegrity: parsed.values["arm-library-package-integrity"]!,
+          packageSha256: parsed.values["arm-library-package-sha256"]!,
+          pullRequest,
+          prHeadSha: parsed.values["arm-library-pr-head-sha"]!,
+        }
+      : undefined,
   });
   if (manifest.projects.some((project) => project.status === "failed")) process.exitCode = 1;
 }

@@ -1,0 +1,75 @@
+{
+  "service": "sql",
+  "projectRoot": "specification/sql/resource-manager/Microsoft.Sql/SQL",
+  "entrypoint": "specification/sql/resource-manager/Microsoft.Sql/SQL/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "3bc684d0d5cbabf0a87422463c22adc735d386bc71ab9111298e18e14d9c9211",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 135,
+  "operationCount": 532,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 4,
+  "nameClashGroupCount": 2,
+  "nameClashGroups": [
+    {
+      "resourceName": "LongTermRetentionDatabase",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Sql/locations/longTermRetentionManagedInstances/longTermRetentionDatabases",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Sql/locations/{locationName}/longTermRetentionManagedInstances/{managedInstanceName}/longTermRetentionDatabases/{databaseName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/sql/resource-manager/Microsoft.Sql/SQL/ManagedInstanceLongTermRetentionBackup.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.Sql/locations/longTermRetentionServers/longTermRetentionDatabases",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Sql/locations/{locationName}/longTermRetentionServers/{longTermRetentionServerName}/longTermRetentionDatabases/{longTermRetentionDatabaseName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/sql/resource-manager/Microsoft.Sql/SQL/LongTermRetentionBackup.tsp#L14"
+        }
+      ]
+    },
+    {
+      "resourceName": "Rule",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Sql/managedInstances/databases/vulnerabilityAssessments/rules",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/managedInstances/{managedInstanceName}/databases/{databaseName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/rules/{ruleId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/sql/resource-manager/Microsoft.Sql/SQL/DatabaseVulnerabilityAssessmentRuleBaseline.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.Sql/servers/databases/vulnerabilityAssessments/rules",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Sql/servers/{serverName}/databases/{databaseName}/vulnerabilityAssessments/{vulnerabilityAssessmentName}/rules/{ruleId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/sql/resource-manager/Microsoft.Sql/SQL/DatabaseVulnerabilityAssessmentRuleBaseline.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 1,
+    "total": 1
+  },
+  "outputHashes": {
+    "resourcesCsv": "03835d09412dbaa9aa0c8916c8a18f5a33063a4a85ec6bd626d324bab7052f7b",
+    "operationsCsv": "56dba46c6a2d8dba7a6b23163239779fc742d286b3e3fcfc1d1a5305af8c19f6",
+    "statusJson": "8fe98086b1672dc0cd97dd60c9b57bce024e6c4e1f9633b02caab652586e5393"
+  }
+}

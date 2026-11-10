@@ -1,0 +1,42 @@
+{
+  "service": "containerservice",
+  "projectRoot": "specification/containerservice/resource-manager/Microsoft.ContainerService/aks",
+  "entrypoint": "specification/containerservice/resource-manager/Microsoft.ContainerService/aks/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "ef1fb3849dd56cbac3475e6159602c0fd4df6418793314fc110434d1e650ed5c",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 24,
+  "operationCount": 114,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 1,
+    "total": 1
+  },
+  "outputHashes": {
+    "resourcesCsv": "0dcbe4fd1953bc9a19f602d2a91168502c2eacb808e45132140682923ffa006a",
+    "operationsCsv": "82d41c690dae7dba6f8921f4470f5a9d82d491d6fdf9526926622ef0192ab8e2",
+    "statusJson": "e4201fac96a61e46814116ecee058d462ee7cc83155162add4f8f90c935f72c2"
+  }
+}

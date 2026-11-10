@@ -1,0 +1,60 @@
+{
+  "service": "botservice",
+  "projectRoot": "specification/botservice/resource-manager/Microsoft.BotService/BotService",
+  "entrypoint": "specification/botservice/resource-manager/Microsoft.BotService/BotService/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "3c5e3cc60b07c6044f6f37118e30b85bcb81dce3b8a0ccf9ac870a3cbb5b0e91",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 31,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 2,
+  "duplicateResourceErrorGroupCount": 1,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.botservice/botservices/{}/channels/{}; resource names: BotChannel; BotServicesChannels"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.botservice/botservices/{}/channels/{}",
+      "resources": [
+        {
+          "resourceName": "BotChannel",
+          "resourceType": "Microsoft.BotService/botServices/channels",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/botservice/resource-manager/Microsoft.BotService/BotService/BotChannel.tsp#L14"
+        },
+        {
+          "resourceName": "BotServicesChannels",
+          "resourceType": "Microsoft.BotService/botServices/channels",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/botservice/resource-manager/Microsoft.BotService/BotService/BotChannel.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9ae807616313014297ae7f966025ab73c0c2e007bbfd93face2705e31a2cbc5f",
+    "operationsCsv": "000f62af0306c42e73e2ef27378efd9815c4b2caf09c1f171a469cf68033664d",
+    "statusJson": "159ebc1a78ab159ee3680687dd8ebce2f6a4839d78b9f8a7a6fafbe1295962c8"
+  }
+}

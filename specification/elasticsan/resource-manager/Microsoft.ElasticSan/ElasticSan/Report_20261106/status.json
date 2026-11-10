@@ -1,0 +1,42 @@
+{
+  "service": "elasticsan",
+  "projectRoot": "specification/elasticsan/resource-manager/Microsoft.ElasticSan/ElasticSan",
+  "entrypoint": "specification/elasticsan/resource-manager/Microsoft.ElasticSan/ElasticSan/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "6c32b81065c911be3c04917c9525b6c12fc16ae57aec258494986d7eeb50c0a4",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 5,
+  "operationCount": 27,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b53f78226ed7c777a0e152a53badf3c75409926201ea876fd11e0c71b89d4623",
+    "operationsCsv": "59fa721c9dd9a6bccf45f09c16db5cfdf74fba98fd71f0d064d3164bdc071e1e",
+    "statusJson": "805a5554b2a38fc7d1a90e24ac16d254b7ecce6160456ead44a8a3884fd3666a"
+  }
+}

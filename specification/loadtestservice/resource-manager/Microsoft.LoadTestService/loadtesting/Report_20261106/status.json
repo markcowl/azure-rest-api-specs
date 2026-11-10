@@ -1,0 +1,42 @@
+{
+  "service": "loadtestservice",
+  "projectRoot": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/loadtesting",
+  "entrypoint": "specification/loadtestservice/resource-manager/Microsoft.LoadTestService/loadtesting/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "0f5020a807067b6dfc154b27fcbcd1bdb074d90889c46776b13bfc4bc0c3b047",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 22,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "91f6c6c359cf8c3bb2a4ebc0624e0099f4713a896d47a973c1e0ecdb17724ef7",
+    "operationsCsv": "4f6d6e67226826d44359afdb9dee8276a8ce37366ffc05fb7b7509c3c343a2b3",
+    "statusJson": "4864866d8bafbfa6ee33675a1535899e95abe3ec981465f1c9ccbcf9723f8797"
+  }
+}

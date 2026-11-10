@@ -1,0 +1,77 @@
+{
+  "service": "iothub",
+  "projectRoot": "specification/iothub/resource-manager/Microsoft.Devices/IoTHub",
+  "entrypoint": "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "4f27813369b9343bc9259d0c3a91bb689d3fd14c667ba2a2c0136d132c3d7527",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 7,
+  "operationCount": 32,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "IotHubDescription",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Devices/IotHubs/jobs",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/jobs/{jobId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.Devices/IotHubs",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L13"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 2,
+  "duplicateResourceErrorGroupCount": 1,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}; resource names: IotHub; IotHubDescription"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+      "resources": [
+        {
+          "resourceName": "IotHub",
+          "resourceType": "Microsoft.Devices/iotHubs",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/PrivateEndpointConnection.tsp#L15"
+        },
+        {
+          "resourceName": "IotHubDescription",
+          "resourceType": "Microsoft.Devices/IotHubs",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L13"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "7be4fe8f5260c1d15a3a9bb39e620a9c1a89c607a3c377ae1942f8fc88c07936",
+    "operationsCsv": "97c043d50f9d8feb12ad23ad75f69f24ed2427d494c9a4f30b1ff85b00d1aed6",
+    "statusJson": "7852ef594fc8a92ddef54fb2075efd1698a1dd75eb9a467e32415a792dcc7a25"
+  }
+}

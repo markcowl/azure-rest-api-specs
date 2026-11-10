@@ -1,0 +1,90 @@
+{
+  "service": "policyinsights",
+  "projectRoot": "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi",
+  "entrypoint": "specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "898a9d1d3a110e74f9fe4b05c04203b9c71275ae7a77390416dc3e59d10c06db",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 8,
+  "operationCount": 53,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 7,
+  "nameClashGroupCount": 2,
+  "nameClashGroups": [
+    {
+      "resourceName": "PolicyAttestation",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.PolicyInsights/attestations",
+          "resourceInstancePath": "/{resourceId}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L10"
+        },
+        {
+          "resourceType": "Microsoft.PolicyInsights/attestations",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L10"
+        },
+        {
+          "resourceType": "Microsoft.PolicyInsights/attestations",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/attestations/{attestationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L10"
+        }
+      ]
+    },
+    {
+      "resourceName": "PolicyRemediation",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.PolicyInsights/remediations",
+          "resourceInstancePath": "/{resourceId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L11"
+        },
+        {
+          "resourceType": "Microsoft.PolicyInsights/remediations",
+          "resourceInstancePath": "/providers/{managementGroupsNamespace}/managementGroups/{managementGroupId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L11"
+        },
+        {
+          "resourceType": "Microsoft.PolicyInsights/remediations",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L11"
+        },
+        {
+          "resourceType": "Microsoft.PolicyInsights/remediations",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PolicyInsights/remediations/{remediationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L11"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 4,
+    "total": 4
+  },
+  "outputHashes": {
+    "resourcesCsv": "623c7eb923cedb9a9eda58e9e67882459e7b69e49215de450a431e1a12532593",
+    "operationsCsv": "ff619fede8d83df978fc728e8d48bafc270f6619bbb26131f28b5c49a8d67ae3",
+    "statusJson": "c7d7ee8c9e8cd120b872fc9d16b6deec58dc89776bb5fe8bfb4a706283492203"
+  }
+}

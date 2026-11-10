@@ -1,0 +1,123 @@
+{
+  "service": "support",
+  "projectRoot": "specification/support/resource-manager/Microsoft.Support/Support",
+  "entrypoint": "specification/support/resource-manager/Microsoft.Support/Support/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "681662ec8cd818a92bc0803e44ef6cf09e3755ba0209b42776a5ea17ec909657",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 12,
+  "operationCount": 36,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 10,
+  "nameClashGroupCount": 5,
+  "nameClashGroups": [
+    {
+      "resourceName": "FileWorkspaces",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Support/fileWorkspaces",
+          "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.Support/fileWorkspaces",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L13"
+        }
+      ]
+    },
+    {
+      "resourceName": "FileWorkspacesFiles",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Support/fileWorkspaces/files",
+          "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.Support/fileWorkspaces/files",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L13"
+        }
+      ]
+    },
+    {
+      "resourceName": "SupportTickets",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Support/supportTickets",
+          "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.Support/supportTickets",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L15"
+        }
+      ]
+    },
+    {
+      "resourceName": "SupportTicketsChatTranscripts",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Support/supportTickets/chatTranscripts",
+          "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.Support/supportTickets/chatTranscripts",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L15"
+        }
+      ]
+    },
+    {
+      "resourceName": "SupportTicketsCommunications",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Support/supportTickets/communications",
+          "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.Support/supportTickets/communications",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L15"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "4d222f9e4c461d54db75b68d1ec5db7d10f33dca86cee9b6ccb07a2eee9df7ac",
+    "operationsCsv": "f2546a63e816a5fa8051ca5058bccc29a6d69431f8e838903270c0c5ec8e4398",
+    "statusJson": "9162643bc338facf106ea64059ac59c27b386a6c6eae57f153fa668ac00d2ee8"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "service": "apimanagement",
+  "projectRoot": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement",
+  "entrypoint": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "a5ad06b736649ef074263c458b622a7db8ff350544de22703c8fb49635f476f2",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 112,
+  "operationCount": 583,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 12,
+  "nameClashGroupCount": 5,
+  "nameClashGroups": [
+    {
+      "resourceName": "ApiManagementGroup",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.ApiManagement/service/groups/users",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.ApiManagement/service/groups",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14"
+        }
+      ]
+    },
+    {
+      "resourceName": "ApiManagementProduct",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.ApiManagement/service/products/apis",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.ApiManagement/service/products/groups",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.ApiManagement/service/products",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14"
+        }
+      ]
+    },
+    {
+      "resourceName": "ApiManagementServiceResource",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.ApiManagement/service/privateEndpointConnections",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/privateEndpointConnections/{privateEndpointConnectionName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ApiManagementServiceResource.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.ApiManagement/service",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ApiManagementServiceResource.tsp#L13"
+        }
+      ]
+    },
+    {
+      "resourceName": "ServiceWorkspaceGroup",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/groups/users",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users/{userId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14"
+        }
+      ]
+    },
+    {
+      "resourceName": "ServiceWorkspaceNotification",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 6,
+  "duplicateResourceErrorGroupCount": 3,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/apis/{}/tagdescriptions/{}; resource names: ApisTagDescriptions; TagDescriptionContract",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/privateendpointconnections/{}; resource names: ApiManagementServiceResource; ApiManagementServiceResourcePrivateEndpointConnection",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/templates/{}; resource names: EmailTemplateContract; ServiceTemplates"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/apis/{}/tagdescriptions/{}",
+      "resources": [
+        {
+          "resourceName": "ApisTagDescriptions",
+          "resourceType": "Microsoft.ApiManagement/service/apis/tagDescriptions",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/TagDescriptionContract.tsp#L14"
+        },
+        {
+          "resourceName": "TagDescriptionContract",
+          "resourceType": "Microsoft.ApiManagement/service/apis/tagDescriptions",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/TagDescriptionContract.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/privateendpointconnections/{}",
+      "resources": [
+        {
+          "resourceName": "ApiManagementServiceResource",
+          "resourceType": "Microsoft.ApiManagement/service/privateEndpointConnections",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ApiManagementServiceResource.tsp#L13"
+        },
+        {
+          "resourceName": "ApiManagementServiceResourcePrivateEndpointConnection",
+          "resourceType": "Microsoft.ApiManagement/service/privateEndpointConnections",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/PrivateEndpointConnection.tsp#L15"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/templates/{}",
+      "resources": [
+        {
+          "resourceName": "EmailTemplateContract",
+          "resourceType": "Microsoft.ApiManagement/service/templates",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/EmailTemplateContract.tsp#L14"
+        },
+        {
+          "resourceName": "ServiceTemplates",
+          "resourceType": "Microsoft.ApiManagement/service/templates",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/EmailTemplateContract.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "790e48300a9dd248162c5ddc53a62822c49a077fefb306da5d4673cc98539ed9",
+    "operationsCsv": "868571bb2415a056fe6bece57c909a9a8bbfd3cde8921e9571ab598d71ab4003",
+    "statusJson": "b3f290e0f8fc57f960a0023f52ff04900e0ae86c131db54fac4d38489c7d7769"
+  }
+}

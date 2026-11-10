@@ -14,6 +14,7 @@ project inventory to update when projects are added, removed, or moved.
 node eng/tools/typespec-arm-resource-data/cmd/typespec-arm-resource-data.js --service network --resume
 node eng/tools/typespec-arm-resource-data/cmd/typespec-arm-resource-data.js --project Microsoft.Compute/Compute/Compute --concurrency 2
 node eng/tools/typespec-arm-resource-data/cmd/typespec-arm-resource-data.js --report-directory Report_20261105 --source-ref upstream/main
+node eng/tools/typespec-arm-resource-data/cmd/typespec-arm-resource-data.js --report-directory Report_20261106 --source-ref upstream/main --arm-library-package-url https://pkg.pr.new/example.tgz --arm-library-package-version 0.74.0-pr.123.456 --arm-library-package-integrity sha512-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA== --arm-library-package-sha256 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef --arm-library-pr 123 --arm-library-pr-head-sha 0123456789abcdef0123456789abcdef01234567
 ```
 
 Each selected project receives a `resource-data/` directory. Successful projects contain
@@ -27,6 +28,12 @@ All selected projects are attempted before the command returns a nonzero status 
 Targeted reruns merge compatible, unselected records from the existing manifest.
 Use `--source-ref` when the report branch is ahead of the source revision so links and metadata are
 pinned to that source Git ref instead of `HEAD`.
+
+When overriding `@azure-tools/typespec-azure-resource-manager`, provide all
+`--arm-library-package-*` and `--arm-library-pr*` options together. The manifest and project status
+record the immutable package URL, version, integrity, SHA-256, PR number, and exact PR head commit;
+`--resume` invalidates results when any provenance changes. Omitting these options preserves the
+default installed-package behavior and metadata.
 
 Use `--report-directory` to create an isolated snapshot. The value must be a single portable
 directory name. For example, `Report_20261105` writes project reports beneath each project's

@@ -1,0 +1,108 @@
+{
+  "service": "nginx",
+  "projectRoot": "specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus",
+  "entrypoint": "specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "a2315f2def6360d2895e67d73bc1e2398bd2b19eeca115e9514c368870487a80",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 9,
+  "operationCount": 33,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 8,
+  "duplicateResourceErrorGroupCount": 4,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/nginx.nginxplus/nginxdeployments/{}/certificates/{}; resource names: NginxCertificate; ResourceGroupNginxCertificate",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/nginx.nginxplus/nginxdeployments/{}/configurations/{}; resource names: NginxConfigurationResponse; ResourceGroupNginxConfigurationResponse",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/nginx.nginxplus/nginxdeployments/{}/wafpolicies/{}; resource names: NginxDeploymentWafPolicy; ResourceGroupNginxDeploymentWafPolicy",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/nginx.nginxplus/nginxdeployments/{}; resource names: NginxDeployment; ResourceGroupNginxDeployment"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/nginx.nginxplus/nginxdeployments/{}",
+      "resources": [
+        {
+          "resourceName": "NginxDeployment",
+          "resourceType": "Nginx.NginxPlus/nginxDeployments",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L13"
+        },
+        {
+          "resourceName": "ResourceGroupNginxDeployment",
+          "resourceType": "Nginx.NginxPlus/nginxDeployments",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L13"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/nginx.nginxplus/nginxdeployments/{}/certificates/{}",
+      "resources": [
+        {
+          "resourceName": "NginxCertificate",
+          "resourceType": "Nginx.NginxPlus/nginxDeployments/certificates",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxCertificate.tsp#L14"
+        },
+        {
+          "resourceName": "ResourceGroupNginxCertificate",
+          "resourceType": "Nginx.NginxPlus/nginxDeployments/certificates",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxCertificate.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/nginx.nginxplus/nginxdeployments/{}/configurations/{}",
+      "resources": [
+        {
+          "resourceName": "NginxConfigurationResponse",
+          "resourceType": "Nginx.NginxPlus/nginxDeployments/configurations",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxConfigurationResponse.tsp#L14"
+        },
+        {
+          "resourceName": "ResourceGroupNginxConfigurationResponse",
+          "resourceType": "Nginx.NginxPlus/nginxDeployments/configurations",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxConfigurationResponse.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/nginx.nginxplus/nginxdeployments/{}/wafpolicies/{}",
+      "resources": [
+        {
+          "resourceName": "NginxDeploymentWafPolicy",
+          "resourceType": "Nginx.NginxPlus/nginxDeployments/wafPolicies",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L16"
+        },
+        {
+          "resourceName": "ResourceGroupNginxDeploymentWafPolicy",
+          "resourceType": "Nginx.NginxPlus/nginxDeployments/wafPolicies",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L16"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "71e80df35f67be13a74355c19d1dd7d78bfcc6dec6a2529452912fd45a9b2652",
+    "operationsCsv": "a62dfcc02b31c39458a09ad1234ce8da4a8bdc593080610f4234b0e8e8f3f816",
+    "statusJson": "83088e2bfab6e181416f8566819a691e0d655d04f3190b6276f3134b46905e2e"
+  }
+}

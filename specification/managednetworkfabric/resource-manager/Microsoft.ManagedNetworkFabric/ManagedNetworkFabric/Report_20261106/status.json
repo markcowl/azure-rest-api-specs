@@ -1,0 +1,60 @@
+{
+  "service": "managednetworkfabric",
+  "projectRoot": "specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric",
+  "entrypoint": "specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "6ee9a40b282efa32e1aeeca0c7255f2fc6161aff51a08838896c7ce9fe817ba1",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 29,
+  "operationCount": 269,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 2,
+  "duplicateResourceErrorGroupCount": 1,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.managednetworkfabric/networkfabrics/{}; resource names: NetworkFabric; NetworkFabricDeprecated"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.managednetworkfabric/networkfabrics/{}",
+      "resources": [
+        {
+          "resourceName": "NetworkFabric",
+          "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/resources/NetworkFabric.tsp#L10"
+        },
+        {
+          "resourceName": "NetworkFabricDeprecated",
+          "resourceType": "Microsoft.ManagedNetworkFabric/networkFabrics",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric/resources/NetworkFabric.tsp#L34"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9c27621083c1086ada18ab80e9daa870ea9e92f9986a8f9744e76c836f2c49c9",
+    "operationsCsv": "b95fff5cf255e7d0087625d42c58fd201b2c979f4ad66e8f825e734a987ba3f8",
+    "statusJson": "c67ba1d21ee8d4cc181ac4c067a09984d98fe4c740c05d896bf1e0234eb4ca35"
+  }
+}

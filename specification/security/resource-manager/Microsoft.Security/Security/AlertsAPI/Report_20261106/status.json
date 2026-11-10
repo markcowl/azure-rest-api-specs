@@ -1,0 +1,59 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "79f92d60096b11bec52e8802203a98ac7a55efb5e4be43305c94dfec9e862b93",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 12,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "LocationsAlerts",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Security/locations/alerts",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.Security/locations/alerts",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L15"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1c3626474a1a2f47e8c0c895a46e2ddb533cd18a86e29108cd11b34378d95de4",
+    "operationsCsv": "ff9025974503704e0c855b6a1771856b74479ff41ccf525d6f62f798fe37e43d",
+    "statusJson": "74a70f301acbd42e8d622c25e429f2653de4ffa0277ebcb3142487b7282437cd"
+  }
+}

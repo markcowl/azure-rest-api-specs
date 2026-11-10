@@ -1,0 +1,42 @@
+{
+  "service": "desktopvirtualization",
+  "projectRoot": "specification/desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/DesktopVirtualization",
+  "entrypoint": "specification/desktopvirtualization/resource-manager/Microsoft.DesktopVirtualization/DesktopVirtualization/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "275c73df1704693ee21f97af0cd339e1de3fedc4fe1795fc0ecd9620253a0a51",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 17,
+  "operationCount": 95,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "5642f5e30b14ab7b861b5f03585b075846e5f426626785f8766fc36f85b23d1d",
+    "operationsCsv": "e48d05055394510e675617c589e0b4748e0a1177c4f9f66f74c67ce4a798fe8a",
+    "statusJson": "9e425cffa26474878c4ca0fdd082e1178d7269b6df76b8a45bbd859f7863ca33"
+  }
+}

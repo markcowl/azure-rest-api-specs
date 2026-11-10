@@ -1,0 +1,92 @@
+{
+  "service": "securityinsights",
+  "projectRoot": "specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights",
+  "entrypoint": "specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "68af35353d28bdccab668d12d8d1200ac4af56a597e1a0d4265c8373528ad73b",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 46,
+  "operationCount": 164,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 6,
+  "duplicateResourceErrorGroupCount": 3,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.operationalinsights/workspaces/{}/providers/microsoft.securityinsights/automationrules/{}; resource names: ExternalResourceAutomationRule; WorkspacesAutomationRules",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.operationalinsights/workspaces/{}/providers/microsoft.securityinsights/entityqueries/{}; resource names: EntityQueries; ExternalResourceEntityQuery",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.operationalinsights/workspaces/{}/providers/microsoft.securityinsights/onboardingstates/{}; resource names: ExternalResourceSentinelOnboardingState; WorkspacesOnboardingStates"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.operationalinsights/workspaces/{}/providers/microsoft.securityinsights/automationrules/{}",
+      "resources": [
+        {
+          "resourceName": "ExternalResourceAutomationRule",
+          "resourceType": "Microsoft.SecurityInsights/automationRules",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/AutomationRule.tsp#L15"
+        },
+        {
+          "resourceName": "WorkspacesAutomationRules",
+          "resourceType": "Microsoft.SecurityInsights/automationRules",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/AutomationRule.tsp#L15"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.operationalinsights/workspaces/{}/providers/microsoft.securityinsights/entityqueries/{}",
+      "resources": [
+        {
+          "resourceName": "EntityQueries",
+          "resourceType": "Microsoft.SecurityInsights/entityQueries",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/EntityQuery.tsp#L15"
+        },
+        {
+          "resourceName": "ExternalResourceEntityQuery",
+          "resourceType": "Microsoft.SecurityInsights/entityQueries",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/EntityQuery.tsp#L15"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.operationalinsights/workspaces/{}/providers/microsoft.securityinsights/onboardingstates/{}",
+      "resources": [
+        {
+          "resourceName": "ExternalResourceSentinelOnboardingState",
+          "resourceType": "Microsoft.SecurityInsights/onboardingStates",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/SentinelOnboardingState.tsp#L14"
+        },
+        {
+          "resourceName": "WorkspacesOnboardingStates",
+          "resourceType": "Microsoft.SecurityInsights/onboardingStates",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/SentinelOnboardingState.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "397e73021b3d12679e46932986963aabd2da0329c620c4baf3c8754a22a98d1c",
+    "operationsCsv": "1ea45966cc75caf74b244967be86eea0767c9478db677c5f283b910665511bfa",
+    "statusJson": "dbd2d7c2644ae980b6692c3d1bba3c38921a0c5ffb4cc8a1811bb65bce134588"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "service": "confluent",
+  "projectRoot": "specification/confluent/resource-manager/Microsoft.Confluent/Confluent",
+  "entrypoint": "specification/confluent/resource-manager/Microsoft.Confluent/Confluent/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "f5e9fd6382fe79271169d74439e46b1864abf4c5bf58544e62b13da3acc9f415",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 12,
+  "operationCount": 68,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 10,
+  "duplicateResourceErrorGroupCount": 5,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}/environments/{}/clusters/{}/connectors/{}; resource names: ClustersConnectors; ConnectorResource",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}/environments/{}/clusters/{}/topics/{}; resource names: ClustersTopics; TopicRecord",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}/environments/{}/clusters/{}; resource names: EnvironmentsClusters; SCClusterRecord",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}/environments/{}; resource names: OrganizationsEnvironments; SCEnvironmentRecord",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}; resource names: OrganizationResource; Organizations"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}",
+      "resources": [
+        {
+          "resourceName": "OrganizationResource",
+          "resourceType": "Microsoft.Confluent/organizations",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L15"
+        },
+        {
+          "resourceName": "Organizations",
+          "resourceType": "Microsoft.Confluent/organizations",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L15"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}/environments/{}",
+      "resources": [
+        {
+          "resourceName": "OrganizationsEnvironments",
+          "resourceType": "Microsoft.Confluent/organizations/environments",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/SCEnvironmentRecord.tsp#L14"
+        },
+        {
+          "resourceName": "SCEnvironmentRecord",
+          "resourceType": "Microsoft.Confluent/organizations/environments",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/SCEnvironmentRecord.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}/environments/{}/clusters/{}",
+      "resources": [
+        {
+          "resourceName": "EnvironmentsClusters",
+          "resourceType": "Microsoft.Confluent/organizations/environments/clusters",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/SCClusterRecord.tsp#L14"
+        },
+        {
+          "resourceName": "SCClusterRecord",
+          "resourceType": "Microsoft.Confluent/organizations/environments/clusters",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/SCClusterRecord.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}/environments/{}/clusters/{}/connectors/{}",
+      "resources": [
+        {
+          "resourceName": "ClustersConnectors",
+          "resourceType": "Microsoft.Confluent/organizations/environments/clusters/connectors",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/ConnectorResource.tsp#L14"
+        },
+        {
+          "resourceName": "ConnectorResource",
+          "resourceType": "Microsoft.Confluent/organizations/environments/clusters/connectors",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/ConnectorResource.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.confluent/organizations/{}/environments/{}/clusters/{}/topics/{}",
+      "resources": [
+        {
+          "resourceName": "ClustersTopics",
+          "resourceType": "Microsoft.Confluent/organizations/environments/clusters/topics",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/TopicRecord.tsp#L14"
+        },
+        {
+          "resourceName": "TopicRecord",
+          "resourceType": "Microsoft.Confluent/organizations/environments/clusters/topics",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/TopicRecord.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9c5f7ce798c7a39b6e9686e59e83558065ee1033acdc7f3169b33482eaa7204a",
+    "operationsCsv": "b8ade193dab19bb783e0fa0264bb5a9a013005ef8a36fe0d096f9c8f7cc688e0",
+    "statusJson": "4940e3a395df75c878141d4465ac953e90177c917110da62063b7120a0086dc8"
+  }
+}

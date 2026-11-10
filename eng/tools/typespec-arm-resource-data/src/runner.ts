@@ -8,11 +8,11 @@ import { createReadme, createSummary } from "./aggregate.ts";
 import { discoverProjects, filterProjects } from "./discovery.ts";
 import { atomicWriteFile, hashFiles, replaceDirectory } from "./io.ts";
 import { sha256 } from "./report.ts";
-import type { Manifest, ProjectInventory, ProjectResult } from "./types.ts";
+import type { ArmLibraryProvenance, Manifest, ProjectInventory, ProjectResult } from "./types.ts";
 import type { WorkerRequest } from "./worker.ts";
 
 const execFileAsync = promisify(execFile);
-const toolVersion = "1.3.0";
+const toolVersion = "1.4.0";
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -27,6 +27,7 @@ export interface RunOptions {
   timeoutMs: number;
   resume: boolean;
   reportDirectory?: string;
+  armLibraryProvenance?: ArmLibraryProvenance;
 }
 
 export function validateReportDirectoryName(value: string): string {
@@ -43,6 +44,41 @@ export function validateReportDirectoryName(value: string): string {
     );
   }
   return value;
+}
+
+export function validateArmLibraryProvenance(value: ArmLibraryProvenance): ArmLibraryProvenance {
+  let packageUrl: URL;
+  try {
+    packageUrl = new URL(value.packageUrl);
+  } catch {
+    throw new Error("--arm-library-package-url must be an absolute URL.");
+  }
+  if (packageUrl.protocol !== "https:") {
+    throw new Error("--arm-library-package-url must use HTTPS.");
+  }
+  if (value.packageVersion.trim().length === 0) {
+    throw new Error("--arm-library-package-version must not be empty.");
+  }
+  if (!/^sha512-[A-Za-z0-9+/]+={0,2}$/.test(value.packageIntegrity)) {
+    throw new Error("--arm-library-package-integrity must be a SHA-512 SRI value.");
+  }
+  if (!/^[0-9a-f]{64}$/i.test(value.packageSha256)) {
+    throw new Error("--arm-library-package-sha256 must be a 64-character SHA-256 hash.");
+  }
+  if (!Number.isSafeInteger(value.pullRequest) || value.pullRequest < 1) {
+    throw new Error("--arm-library-pr must be a positive integer.");
+  }
+  if (!/^[0-9a-f]{40}$/i.test(value.prHeadSha)) {
+    throw new Error("--arm-library-pr-head-sha must be a 40-character Git commit SHA.");
+  }
+  return {
+    packageUrl: packageUrl.href,
+    packageVersion: value.packageVersion,
+    packageIntegrity: value.packageIntegrity,
+    packageSha256: value.packageSha256.toLowerCase(),
+    pullRequest: value.pullRequest,
+    prHeadSha: value.prHeadSha.toLowerCase(),
+  };
 }
 
 function projectOutputDirectory(
@@ -149,6 +185,8 @@ export async function canResume(
       result.toolVersion !== request.toolVersion ||
       result.dependencyLockHash !== request.dependencyLockHash ||
       result.projectInputHash !== request.projectInputHash ||
+      JSON.stringify(result.armLibraryProvenance) !==
+        JSON.stringify(request.armLibraryProvenance) ||
       result.reportDirectory !== request.reportDirectory
     ) {
       return undefined;
@@ -233,6 +271,9 @@ async function runPool<T, R>(
 export async function runReports(options: RunOptions): Promise<Manifest> {
   const repositoryRoot = resolve(options.repositoryRoot);
   const reportDirectory = validateReportDirectoryName(options.reportDirectory ?? "resource-data");
+  const armLibraryProvenance = options.armLibraryProvenance
+    ? validateArmLibraryProvenance(options.armLibraryProvenance)
+    : undefined;
   const sourceRef = options.sourceRef ?? "HEAD";
   const [sha, generatedAt, compilerVersion, armLibraryVersion, dependencyLockHash] =
     await Promise.all([
@@ -242,6 +283,11 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
       packageVersion(repositoryRoot, "@azure-tools/typespec-azure-resource-manager"),
       readFile(join(repositoryRoot, "pnpm-lock.yaml")).then(sha256),
     ]);
+  if (armLibraryProvenance && armLibraryVersion !== armLibraryProvenance.packageVersion) {
+    throw new Error(
+      `Installed ARM library version ${armLibraryVersion} does not match provenance version ${armLibraryProvenance.packageVersion}.`,
+    );
+  }
   const discoveredInventory = await discoverProjects(repositoryRoot);
   const inventory = filterProjects(discoveredInventory, options.services, options.projects);
   const discoveredByRoot = new Map(
@@ -255,6 +301,7 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
     if (
       previous.sourceSha === sha &&
       previous.dependencyLockHash === dependencyLockHash &&
+      JSON.stringify(previous.armLibraryProvenance) === JSON.stringify(armLibraryProvenance) &&
       previous.toolVersion === toolVersion
     ) {
       previousProjects = previous.projects;
@@ -293,6 +340,7 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
       toolVersion,
       compilerVersion,
       armLibraryVersion,
+      ...(armLibraryProvenance ? { armLibraryProvenance } : {}),
       diagnostics: { errors: 0, warnings: 0, total: 0 },
       outputHashes: { statusJson: "" },
     }));
@@ -323,6 +371,7 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
       toolVersion,
       compilerVersion,
       armLibraryVersion,
+      ...(armLibraryProvenance ? { armLibraryProvenance } : {}),
       reportDirectory,
     }),
   );
@@ -348,7 +397,7 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
       left.projectRoot.localeCompare(right.projectRoot),
     );
     return {
-      schemaVersion: 4,
+      schemaVersion: 5,
       generatedAt,
       repository: "Azure/azure-rest-api-specs",
       sourceSha: sha,
@@ -357,6 +406,7 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
       nodeVersion: process.version,
       compilerVersion,
       armLibraryVersion,
+      ...(armLibraryProvenance ? { armLibraryProvenance } : {}),
       reportDirectory,
       summary: createSummary(projects),
       projects,

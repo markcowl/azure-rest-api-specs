@@ -18,7 +18,10 @@ interface WorkspaceConfig {
 }
 
 interface Lockfile {
-  packages?: Record<string, { resolution?: { tarball?: string; gitHosted?: boolean } }>;
+  packages?: Record<
+    string,
+    { resolution?: { tarball?: string; gitHosted?: boolean; integrity?: string } }
+  >;
 }
 
 export function checkCatalogUsage(repoRoot: string): { errors: string[]; warnings: string[] } {
@@ -81,6 +84,19 @@ export function checkCatalogUsage(repoRoot: string): { errors: string[]; warning
   return { errors, warnings };
 }
 
+function isImmutablePkgPrNewResolution(resolution: {
+  tarball?: string;
+  integrity?: string;
+}): boolean {
+  if (!resolution.tarball || !resolution.integrity) return false;
+  try {
+    const url = new URL(resolution.tarball);
+    return url.hostname === "pkg.pr.new" && /^\/@[^/]+\/[^@/]+@[0-9a-f]{40}$/.test(url.pathname);
+  } catch {
+    return false;
+  }
+}
+
 export function checkLockfile(repoRoot: string): string[] {
   const documents = parseAllDocuments(readFileSync(join(repoRoot, "pnpm-lock.yaml"), "utf8"));
   const errors: string[] = [];
@@ -92,7 +108,11 @@ export function checkLockfile(repoRoot: string): string[] {
     const lockfile = document.toJS() as Lockfile;
     for (const [name, { resolution }] of Object.entries(lockfile.packages ?? {})) {
       // Git-hosted dependencies need their tarball URL; registry packages should be integrity-only.
-      if (resolution?.tarball !== undefined && resolution.gitHosted !== true) {
+      if (
+        resolution?.tarball !== undefined &&
+        resolution.gitHosted !== true &&
+        !isImmutablePkgPrNewResolution(resolution)
+      ) {
         errors.push(
           `pnpm-lock.yaml: "${name}" has a non-Git-hosted tarball resolution: ${resolution.tarball}. Regenerate the lockfile against the configured registry.`,
         );

@@ -1,0 +1,64 @@
+{
+  "service": "cosmos-db",
+  "projectRoot": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB",
+  "entrypoint": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "35d9d612bc62bb8abbf05069e69f2849a80290bf5babce98a0504fd52e05f060",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 59,
+  "operationCount": 301,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 3,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "ClusterResource",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.DocumentDB/cassandraClusters/backups",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups/{backupId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.DocumentDB/cassandraClusters/commands",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands/{commandId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b6e7f35bbbe3341edbdfcbfd4bd83500534d02f7051f68bc3518e85acfa55b63",
+    "operationsCsv": "8ff985b0d11b628ae0a6a66534d5874bf19a161ac3e2168f248393b991be3ea8",
+    "statusJson": "052cb175f5bb5fb525ac70d3804cddca6898188b9dc95906d8e16af0dcbf46af"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "service": "compute",
+  "projectRoot": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute",
+  "entrypoint": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "98fd4c138cd5e9c050fc117dbaa33966c93438e74c4a5125557572231e941b21",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 26,
+  "operationCount": 174,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 4,
+  "nameClashGroupCount": 2,
+  "nameClashGroups": [
+    {
+      "resourceName": "VirtualMachinesDiagnosticRunCommands",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Compute/virtualMachines/diagnosticRunCommands",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L19"
+        },
+        {
+          "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/diagnosticRunCommands",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L19"
+        }
+      ]
+    },
+    {
+      "resourceName": "VirtualMachinesRunCommands",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Compute/virtualMachines/runCommands",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L15"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "31b71e5c6ed2c95afa4ef09d255924589c2879337d0db6039a441a623b4e3ec0",
+    "operationsCsv": "19041e0ce1252a11c920491efd1a477fa32ce9ef13e48f8dda3403edc24af9c7",
+    "statusJson": "89a9c5c1570c88f3c38289152e82e973621e29b0c57399a7813921695cef6fa6"
+  }
+}

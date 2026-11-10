@@ -1,0 +1,59 @@
+{
+  "service": "security",
+  "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/TasksAPI",
+  "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/TasksAPI/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "0e2aebd03484ec9c34d31905252e74a10f5941057b6d261f1551894230dd8e09",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 3,
+  "operationCount": 6,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "LocationsTasks",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Security/locations/tasks",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/tasks/{taskName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/security/resource-manager/Microsoft.Security/Security/TasksAPI/SecurityTask.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.Security/locations/tasks",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/tasks/{taskName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/security/resource-manager/Microsoft.Security/Security/TasksAPI/SecurityTask.tsp#L15"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "12a7b41a9ce6ae9fb582a4788d6004a0ddace10ff39ce146845ef7376c6428bd",
+    "operationsCsv": "fd21cdb9318828b518b647b8fb024a26104f41e8286293f06643dcdf33fc5203",
+    "statusJson": "3694423e4d1324b3213f34090e05d315c4e7bba5429ef5a9679a5282c408763c"
+  }
+}

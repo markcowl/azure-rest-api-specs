@@ -134,7 +134,7 @@ describe("Markdown aggregation", () => {
       }),
     ];
     const manifest: Manifest = {
-      schemaVersion: 4,
+      schemaVersion: 5,
       generatedAt: "2026-01-01T00:00:00.000Z",
       repository: "Azure/azure-rest-api-specs",
       sourceSha: "abc",
@@ -205,7 +205,7 @@ describe("Markdown aggregation", () => {
       }),
     ];
     const manifest: Manifest = {
-      schemaVersion: 4,
+      schemaVersion: 5,
       generatedAt: "2026-01-01T00:00:00.000Z",
       repository: "Azure/azure-rest-api-specs",
       sourceSha: "abc",
@@ -270,7 +270,7 @@ describe("Markdown aggregation", () => {
       }),
     ];
     const manifest: Manifest = {
-      schemaVersion: 4,
+      schemaVersion: 5,
       generatedAt: "2026-11-05T00:00:00.000Z",
       repository: "Azure/azure-rest-api-specs",
       sourceSha: "abc",

@@ -1,0 +1,42 @@
+{
+  "service": "cloudhealth",
+  "projectRoot": "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth",
+  "entrypoint": "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "d1b1c1c3d91e5a2ea2a764b3531101d9b041487ed44dbc5dc5495ae58323e368",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 6,
+  "operationCount": 42,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "5d4f6280424f450a1aa759a42bc6cdff2668b98ad85b63b072615e68e7fd5852",
+    "operationsCsv": "752b03ea5d7133b2ce1dfd655dbccd218ada8f128e79d69c98a2db0a479a2872",
+    "statusJson": "54b8d13e6e8bae4c32cb3730753c601897d5e19f42c1d0517e43774759d9c4a7"
+  }
+}

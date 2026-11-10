@@ -3,7 +3,13 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { promisify } from "node:util";
 import { afterEach, describe, expect, it } from "vitest";
-import { canResume, runChild, runReports, validateReportDirectoryName } from "../src/runner.ts";
+import {
+  canResume,
+  runChild,
+  runReports,
+  validateArmLibraryProvenance,
+  validateReportDirectoryName,
+} from "../src/runner.ts";
 import { sha256 } from "../src/report.ts";
 import type { ProjectResult } from "../src/types.ts";
 import { runWorker, type WorkerRequest } from "../src/worker.ts";
@@ -83,6 +89,36 @@ describe("report runner", () => {
         "--report-directory must be a single portable directory name",
       );
     }
+  });
+
+  it("validates overridden ARM library provenance", () => {
+    expect(
+      validateArmLibraryProvenance({
+        packageUrl: "https://pkg.pr.new/example.tgz",
+        packageVersion: "0.74.0-pr.5976.4439",
+        packageIntegrity: `sha512-${"A".repeat(86)}==`,
+        packageSha256: "B".repeat(64),
+        pullRequest: 5976,
+        prHeadSha: "C".repeat(40),
+      }),
+    ).toEqual({
+      packageUrl: "https://pkg.pr.new/example.tgz",
+      packageVersion: "0.74.0-pr.5976.4439",
+      packageIntegrity: `sha512-${"A".repeat(86)}==`,
+      packageSha256: "b".repeat(64),
+      pullRequest: 5976,
+      prHeadSha: "c".repeat(40),
+    });
+    expect(() =>
+      validateArmLibraryProvenance({
+        packageUrl: "http://pkg.pr.new/example.tgz",
+        packageVersion: "0.74.0-pr.5976.4439",
+        packageIntegrity: `sha512-${"A".repeat(86)}==`,
+        packageSha256: "b".repeat(64),
+        pullRequest: 5976,
+        prHeadSha: "c".repeat(40),
+      }),
+    ).toThrow("--arm-library-package-url must use HTTPS");
   });
 
   it("generates a filtered, sorted manifest and index with client-only skips", async () => {
@@ -329,6 +365,19 @@ describe("report runner", () => {
     ).resolves.toBeUndefined();
     await expect(
       canResume(root, { ...workerRequest, toolVersion: "different-tool" }),
+    ).resolves.toBeUndefined();
+    await expect(
+      canResume(root, {
+        ...workerRequest,
+        armLibraryProvenance: {
+          packageUrl: "https://pkg.pr.new/example.tgz",
+          packageVersion: "0.74.0-pr.5976.4439",
+          packageIntegrity: `sha512-${"a".repeat(86)}==`,
+          packageSha256: "b".repeat(64),
+          pullRequest: 5976,
+          prHeadSha: "c".repeat(40),
+        },
+      }),
     ).resolves.toBeUndefined();
     await writeFile(join(output, "resources.csv"), "tampered\n");
     await expect(canResume(root, workerRequest)).resolves.toBeUndefined();

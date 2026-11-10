@@ -1,0 +1,59 @@
+{
+  "service": "keyvault",
+  "projectRoot": "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault",
+  "entrypoint": "specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "b224df5e0fa6873227331f458148b71049829c5fd43b3b6119ac29bd480a922f",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 13,
+  "operationCount": 45,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "KeysVersions",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.KeyVault/managedHSMs/keys/versions",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/managedHSMs/{name}/keys/{keyName}/versions/{keyVersion}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.KeyVault/vaults/keys/versions",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.KeyVault/vaults/{vaultName}/keys/{keyName}/versions/{keyVersion}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/Key.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 2,
+    "total": 2
+  },
+  "outputHashes": {
+    "resourcesCsv": "ddbada2d8fc193928454a8968cb1fc30ce723b084c55e5333bf7ce3b2a4be51d",
+    "operationsCsv": "df8350bdfe9672a15127b99075357126cae09ef262f008fc1212c9ae08110519",
+    "statusJson": "8e3e031f71c716e449af110fb6e5156beaf5eec5809ffacf5a070a4ae5529579"
+  }
+}

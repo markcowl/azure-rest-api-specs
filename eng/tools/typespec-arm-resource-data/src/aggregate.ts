@@ -162,6 +162,16 @@ export function createReadme(
     `- Node.js: \`${manifest.nodeVersion}\``,
     `- TypeSpec compiler: \`@typespec/compiler@${manifest.compilerVersion}\``,
     `- ARM library: \`@azure-tools/typespec-azure-resource-manager@${manifest.armLibraryVersion}\``,
+    ...(manifest.armLibraryProvenance
+      ? [
+          `- ARM library package: ${manifest.armLibraryProvenance.packageUrl}`,
+          `- ARM library package version: \`${manifest.armLibraryProvenance.packageVersion}\``,
+          `- ARM library package integrity: \`${manifest.armLibraryProvenance.packageIntegrity}\``,
+          `- ARM library package SHA-256: \`${manifest.armLibraryProvenance.packageSha256}\``,
+          `- ARM library pull request: Azure/typespec-azure#${manifest.armLibraryProvenance.pullRequest}`,
+          `- ARM library PR head commit: \`${manifest.armLibraryProvenance.prHeadSha}\``,
+        ]
+      : []),
     `- Report directory: \`${manifest.reportDirectory}\``,
     "",
     "## Totals",

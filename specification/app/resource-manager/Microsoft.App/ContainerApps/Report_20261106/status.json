@@ -1,0 +1,109 @@
+{
+  "service": "app",
+  "projectRoot": "specification/app/resource-manager/Microsoft.App/ContainerApps",
+  "entrypoint": "specification/app/resource-manager/Microsoft.App/ContainerApps/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "7329605e029b2f60b56aba74ae6f98d77ca425401caf906c13547af372df49cc",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 48,
+  "operationCount": 203,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 2,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "ContainerAppLabelHistory",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.App/containerApps/labelHistories",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L33"
+        },
+        {
+          "resourceType": "Microsoft.App/containerApps/labelHistory",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L15"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 6,
+  "duplicateResourceErrorGroupCount": 3,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.app/connectedenvironments/{}/daprcomponents/{}; resource names: ConnectedEnvironmentsDaprComponents; DaprComponent",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/providers/microsoft.app/logicapps/{}; resource names: LogicApp; LogicApps",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.app/managedenvironments/{}/managedcertificates/{}; resource names: ManagedCertificate; ManagedEnvironmentsManagedCertificates"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/connectedenvironments/{}/daprcomponents/{}",
+      "resources": [
+        {
+          "resourceName": "ConnectedEnvironmentsDaprComponents",
+          "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L14"
+        },
+        {
+          "resourceName": "DaprComponent",
+          "resourceType": "Microsoft.App/connectedEnvironments/daprComponents",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/providers/microsoft.app/logicapps/{}",
+      "resources": [
+        {
+          "resourceName": "LogicApp",
+          "resourceType": "Microsoft.App/logicApps",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L15"
+        },
+        {
+          "resourceName": "LogicApps",
+          "resourceType": "Microsoft.App/logicApps",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L15"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/managedenvironments/{}/managedcertificates/{}",
+      "resources": [
+        {
+          "resourceName": "ManagedCertificate",
+          "resourceType": "Microsoft.App/managedEnvironments/managedCertificates",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L14"
+        },
+        {
+          "resourceName": "ManagedEnvironmentsManagedCertificates",
+          "resourceType": "Microsoft.App/managedEnvironments/managedCertificates",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "9b08fbfb6ae97f9d226d8cd90b43093c64a46639cf3cc6764170a6c5f995d617",
+    "operationsCsv": "41d02cfda503e27f0bcb020eb5e506f31422c24c18e6a5f84f06f5ce3471fe34",
+    "statusJson": "e5dbe3e5add19453489639765c2b5bacc1f68afeff210a1731b9946d43f57ac0"
+  }
+}

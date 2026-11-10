@@ -76,6 +76,15 @@ export interface OutputHashes {
   errorsMd?: string;
 }
 
+export interface ArmLibraryProvenance {
+  packageUrl: string;
+  packageVersion: string;
+  packageIntegrity: string;
+  packageSha256: string;
+  pullRequest: number;
+  prHeadSha: string;
+}
+
 export interface ProjectResult {
   service: string;
   projectRoot: string;
@@ -99,13 +108,14 @@ export interface ProjectResult {
   toolVersion: string;
   compilerVersion: string;
   armLibraryVersion: string;
+  armLibraryProvenance?: ArmLibraryProvenance;
   diagnostics: DiagnosticSummary;
   outputHashes: OutputHashes;
   error?: string;
 }
 
 export interface Manifest {
-  schemaVersion: 4;
+  schemaVersion: 5;
   generatedAt: string;
   repository: string;
   sourceSha: string;
@@ -114,6 +124,7 @@ export interface Manifest {
   nodeVersion: string;
   compilerVersion: string;
   armLibraryVersion: string;
+  armLibraryProvenance?: ArmLibraryProvenance;
   reportDirectory: string;
   summary: ManifestSummary;
   projects: ProjectResult[];

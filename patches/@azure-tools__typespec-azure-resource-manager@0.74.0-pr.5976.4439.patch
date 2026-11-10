@@ -1,0 +1,31 @@
+diff --git a/dist/src/codefixes/delete-property.js b/dist/src/codefixes/delete-property.js
+index 0c2cd080598b7718ac85a01c11eaaea048edde46..cd0ee83828e70de18f457760d54a063e9461da25 100644
+--- a/dist/src/codefixes/delete-property.js
++++ b/dist/src/codefixes/delete-property.js
+@@ -1,5 +1,25 @@
+ import { defineCodeFix, getSourceLocation } from "@typespec/compiler";
+-import { skipTrivia } from "@typespec/compiler/ast";
++function skipTrivia(input, position, endPosition = input.length) {
++    endPosition = Math.min(endPosition, input.length);
++    while (position < endPosition) {
++        if (/\s/u.test(input[position])) {
++            position++;
++            continue;
++        }
++        if (input.startsWith("//", position)) {
++            const lineEnd = input.indexOf("\n", position + 2);
++            position = lineEnd === -1 ? endPosition : Math.min(lineEnd, endPosition);
++            continue;
++        }
++        if (input.startsWith("/*", position)) {
++            const commentEnd = input.indexOf("*/", position + 2);
++            position = commentEnd === -1 ? endPosition : Math.min(commentEnd + 2, endPosition);
++            continue;
++        }
++        break;
++    }
++    return position;
++}
+ export function createDeletePropertyCodeFix(node) {
+     return defineCodeFix({
+         id: "delete-property",

@@ -1,0 +1,76 @@
+{
+  "service": "quota",
+  "projectRoot": "specification/quota/resource-manager/Microsoft.Quota/Quota",
+  "entrypoint": "specification/quota/resource-manager/Microsoft.Quota/Quota/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "97cfb305b5ffd93e7ae78d1b2736bd6534d0f21146323ca1e5b18387e35e0545",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 18,
+  "operationCount": 45,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 4,
+  "duplicateResourceErrorGroupCount": 2,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /providers/microsoft.management/managementgroups/{}/providers/microsoft.quota/groupquotas/{}/subscriptions/{}; resource names: GroupQuotasSubscriptions; ManagementGroupGroupQuotaSubscriptionId",
+    "duplicate ARM resource instance path: /providers/microsoft.management/managementgroups/{}/providers/microsoft.quota/groupquotas/{}; resource names: ManagementGroupGroupQuotasEntity; ManagementGroupsGroupQuotas"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/providers/microsoft.management/managementgroups/{}/providers/microsoft.quota/groupquotas/{}",
+      "resources": [
+        {
+          "resourceName": "ManagementGroupGroupQuotasEntity",
+          "resourceType": "Microsoft.Quota/groupQuotas",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L13"
+        },
+        {
+          "resourceName": "ManagementGroupsGroupQuotas",
+          "resourceType": "Microsoft.Quota/groupQuotas",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L13"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/providers/microsoft.management/managementgroups/{}/providers/microsoft.quota/groupquotas/{}/subscriptions/{}",
+      "resources": [
+        {
+          "resourceName": "GroupQuotasSubscriptions",
+          "resourceType": "Microsoft.Quota/groupQuotas/subscriptions",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L14"
+        },
+        {
+          "resourceName": "ManagementGroupGroupQuotaSubscriptionId",
+          "resourceType": "Microsoft.Quota/groupQuotas/subscriptions",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "fa0a4d0eac941165a2db61b1d37cce325d5981a387477cb9d98855f9fa3f02e8",
+    "operationsCsv": "f5b3e29d478c49f2b567dc07f239cf88c3966c26ff7592945a17d826877877c5",
+    "statusJson": "c303582aa34eff6f02b56445f01a7e6d3819653aa5b3b443be8aaafc38c9d885"
+  }
+}

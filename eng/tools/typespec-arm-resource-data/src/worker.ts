@@ -1,7 +1,7 @@
-import { resolveArmResources } from "@azure-tools/typespec-azure-resource-manager";
 import { compile, NodeHost, resolveCompilerOptions } from "@typespec/compiler";
 import { readFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { replaceDirectory } from "./io.ts";
 import {
   collectRows,
@@ -12,7 +12,30 @@ import {
   resourcesCsv,
   sha256,
 } from "./report.ts";
-import type { ProjectInventory, ProjectResult } from "./types.ts";
+import type { ArmLibraryProvenance, ProjectInventory, ProjectResult } from "./types.ts";
+
+type ResolveArmResources =
+  typeof import("@azure-tools/typespec-azure-resource-manager").resolveArmResources;
+
+async function loadResolveArmResources(): Promise<ResolveArmResources> {
+  try {
+    return (await import("@azure-tools/typespec-azure-resource-manager")).resolveArmResources;
+  } catch (error) {
+    if (!(error instanceof SyntaxError) || !error.message.includes("skipTrivia")) throw error;
+    // PR 5976's package loads an unrelated codefix that requires a newer compiler AST export.
+    const packageJson = fileURLToPath(
+      import.meta.resolve("@azure-tools/typespec-azure-resource-manager/package.json"),
+    );
+    const resourceModule = pathToFileURL(
+      join(dirname(packageJson), "dist", "src", "resource.js"),
+    ).href;
+    return (
+      (await import(resourceModule)) as {
+        resolveArmResources: ResolveArmResources;
+      }
+    ).resolveArmResources;
+  }
+}
 
 export interface WorkerRequest {
   repositoryRoot: string;
@@ -23,6 +46,7 @@ export interface WorkerRequest {
   toolVersion: string;
   compilerVersion: string;
   armLibraryVersion: string;
+  armLibraryProvenance?: ArmLibraryProvenance;
   reportDirectory: string;
 }
 
@@ -75,6 +99,7 @@ export async function runWorker(request: WorkerRequest): Promise<ProjectResult> 
     toolVersion: request.toolVersion,
     compilerVersion: request.compilerVersion,
     armLibraryVersion: request.armLibraryVersion,
+    ...(request.armLibraryProvenance ? { armLibraryProvenance: request.armLibraryProvenance } : {}),
     reportDirectory: request.reportDirectory,
   } as const;
   try {
@@ -99,6 +124,7 @@ export async function runWorker(request: WorkerRequest): Promise<ProjectResult> 
     if (diagnosticSummary.errors > 0) {
       throw Object.assign(new Error("TypeSpec compilation reported errors."), { diagnostics });
     }
+    const resolveArmResources = await loadResolveArmResources();
     const provider = resolveArmResources(program);
     const rows = collectRows(
       program,
@@ -172,6 +198,7 @@ export async function writeWorkerFailure(
     toolVersion: request.toolVersion,
     compilerVersion: request.compilerVersion,
     armLibraryVersion: request.armLibraryVersion,
+    ...(request.armLibraryProvenance ? { armLibraryProvenance: request.armLibraryProvenance } : {}),
     reportDirectory: request.reportDirectory,
     status: "failed",
     resourceCount: 0,

@@ -1,0 +1,42 @@
+{
+  "service": "dnsresolver",
+  "projectRoot": "specification/dnsresolver/resource-manager/Microsoft.Network/DnsResolver",
+  "entrypoint": "specification/dnsresolver/resource-manager/Microsoft.Network/DnsResolver/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "9d9843b1a3ce4d1f3cf7da4bdc3f36bbb1e376b5c767b91c983cd704d571f6f5",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 10,
+  "operationCount": 55,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "089fca26742dea13b6110dd4686117bd0d6abf75c976983bed9fece47e28bf85",
+    "operationsCsv": "db77226fe24f7d2188793f165b494299ebbf04f8f0886eb641df8f5c0fdacc56",
+    "statusJson": "128aca993e74cb2caed1c1e7b7e8b9dea6ea770ec4eb47491dbaff81b17ac762"
+  }
+}

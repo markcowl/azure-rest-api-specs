@@ -1,0 +1,42 @@
+{
+  "service": "iotoperations",
+  "projectRoot": "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations",
+  "entrypoint": "specification/iotoperations/resource-manager/Microsoft.IoTOperations/IoTOperations/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "e1fdc82cde6c9b5b0efbec287681b1b76c49333e446c90a945168c2b847e4666",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 21,
+  "operationCount": 86,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2730f6880c4e175a8cffa8dd37a39a1c5624bdcb01a825e46550f7a8b75d1ec6",
+    "operationsCsv": "b5fbb2facf990e3127e79a6dfc742192b03bcd10de6862764ded3e46c35797ec",
+    "statusJson": "be30328c387b1c7576b0201c9425ca9d7bd645d6099e165525edeeb6e03b2f1a"
+  }
+}

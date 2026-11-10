@@ -21,6 +21,7 @@ allowBuilds:
   autorest: true
 
 overrides:
+  "@azure-tools/typespec-azure-resource-manager": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a"
   "@typespec/asset-emitter": "0.79.1"
   "get-uri": "^6.0.5"
   "js-yaml@^4.0.0": "^4.3.0"
@@ -112,3 +113,5 @@ catalog:
   yaml: ^2.4.2
   yargs: ^18.0.0
   zod: ^4.3.5
+patchedDependencies:
+  '@azure-tools/typespec-azure-resource-manager@0.74.0-pr.5976.4439': patches/@azure-tools__typespec-azure-resource-manager@0.74.0-pr.5976.4439.patch

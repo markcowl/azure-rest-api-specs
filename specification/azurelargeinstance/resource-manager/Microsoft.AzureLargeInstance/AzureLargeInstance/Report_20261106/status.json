@@ -1,0 +1,42 @@
+{
+  "service": "azurelargeinstance",
+  "projectRoot": "specification/azurelargeinstance/resource-manager/Microsoft.AzureLargeInstance/AzureLargeInstance",
+  "entrypoint": "specification/azurelargeinstance/resource-manager/Microsoft.AzureLargeInstance/AzureLargeInstance/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "1463102db76ad44c1cd89f8e06dc7c073b69762db578e426cd45e258274b4dd7",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 2,
+  "operationCount": 15,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "50180315c7c4270c611da9b0ad45c8542514bbcf6c5bf4e8597da7436e4fecad",
+    "operationsCsv": "1f38b65931c72672f33e63562cc0bbed55d5b720eb5d4af0989069a2d6f9edf4",
+    "statusJson": "28a613ddbfd1109378dd3bc63b37412d03e398d19a7c21916d07c26ad83c7186"
+  }
+}

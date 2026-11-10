@@ -1,0 +1,42 @@
+{
+  "service": "postgresql",
+  "projectRoot": "specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/PostgreSql",
+  "entrypoint": "specification/postgresql/resource-manager/Microsoft.DBforPostgreSQL/PostgreSql/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "58a05cd7511cf4774a2bde0d837cf5b20cf31299a4bea0822302ec7e099e7bc5",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 16,
+  "operationCount": 70,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 1,
+    "total": 1
+  },
+  "outputHashes": {
+    "resourcesCsv": "5f3c6c27709ff1764471ea9a5bb36a8584b27ad586dc61f8fcbb3840da414b7f",
+    "operationsCsv": "36d1af2611a37ddcd7a6eb8703a354e20c0e4df31729928d61990061063ed47f",
+    "statusJson": "72ffb6e9eaea9c03ce73814efb494830adc6ae04cb84652cb2b2294d63ae57dc"
+  }
+}

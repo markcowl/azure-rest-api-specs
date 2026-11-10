@@ -1,0 +1,75 @@
+{
+  "service": "devcenter",
+  "projectRoot": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter",
+  "entrypoint": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "f3ddc7ede45c0096b74569a478cdd05bb131b87cc195acef87a54d18193e5908",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 29,
+  "operationCount": 124,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 4,
+  "nameClashGroupCount": 2,
+  "nameClashGroups": [
+    {
+      "resourceName": "CatalogsImageDefinitions",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L15"
+        }
+      ]
+    },
+    {
+      "resourceName": "ImageDefinitionsBuilds",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L15"
+        },
+        {
+          "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L15"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "024434a0ed92b747ca25a208bd16427a14b1dc932ced511c2a286dea1f6918c8",
+    "operationsCsv": "9159b3964147d7ca7376fdcec1c1a9e832aae2f99982552dc3e382beea6fca60",
+    "statusJson": "d814a359b201eb250fea090d98ed5ec4946fd4b916d40c42068f9677cf96dab1"
+  }
+}

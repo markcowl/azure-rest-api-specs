@@ -1,0 +1,64 @@
+{
+  "service": "web",
+  "projectRoot": "specification/web/resource-manager/Microsoft.Web/AppService",
+  "entrypoint": "specification/web/resource-manager/Microsoft.Web/AppService/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "9b7734c70639a14ecc3af23134e35382df6ca778c0009a563584dcaf930a115d",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 151,
+  "operationCount": 760,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 3,
+  "nameClashGroupCount": 1,
+  "nameClashGroups": [
+    {
+      "resourceName": "HybridConnectionNamespace",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.Web/serverfarms/hybridConnectionNamespaces",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/serverfarms/{name}/hybridConnectionNamespaces/{namespaceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/web/resource-manager/Microsoft.Web/AppService/HybridConnection.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.Web/sites/hybridConnectionNamespaces",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/hybridConnectionNamespaces/{namespaceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/web/resource-manager/Microsoft.Web/AppService/HybridConnection.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.Web/sites/slots/hybridConnectionNamespaces",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/hybridConnectionNamespaces/{namespaceName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/web/resource-manager/Microsoft.Web/AppService/HybridConnection.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "69a95974fcc29dacc6532ecc261545e806dfb66507d7188f0f6c6b211a4a6466",
+    "operationsCsv": "be00164263dc1866b6aae9837d7a088ccf423b895a8c189f90f3fbc4f694ede6",
+    "statusJson": "82c859a3ea0494cf24be3f928dcf0a7342eec3079a28b7940a08598178e045da"
+  }
+}

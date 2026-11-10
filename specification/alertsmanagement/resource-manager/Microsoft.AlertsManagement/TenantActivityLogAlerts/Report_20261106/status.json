@@ -1,0 +1,42 @@
+{
+  "service": "alertsmanagement",
+  "projectRoot": "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/TenantActivityLogAlerts",
+  "entrypoint": "specification/alertsmanagement/resource-manager/Microsoft.AlertsManagement/TenantActivityLogAlerts/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "afa4dbd16b8752bd5cc406b40c145b890bde9cc429dbcc6c5ec8681eb06c3da1",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 1,
+  "operationCount": 5,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "539545d5a97a6a2901bb2ff553bb6cf41cfdd2cdc9b6d3d4e3f0b0ccf4e4eec0",
+    "operationsCsv": "6c4448ca18eda021d8bb6107188ec6a3d8d779866d2732ae9af6dd0ec046d25f",
+    "statusJson": "3a0a255cd610e73c911a24e17f8b1f93aaeb2c904dbc85dac90c3e1091eec656"
+  }
+}

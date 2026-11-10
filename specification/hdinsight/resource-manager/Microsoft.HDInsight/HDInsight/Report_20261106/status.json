@@ -1,0 +1,95 @@
+{
+  "service": "hdinsight",
+  "projectRoot": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight",
+  "entrypoint": "specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "60a11af361ae13a59bdb738ee77a7f5a4b110c04a7c8ca52f77e2aed7ada4c78",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 10,
+  "operationCount": 48,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 8,
+  "nameClashGroupCount": 2,
+  "nameClashGroups": [
+    {
+      "resourceName": "Application",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.HDInsight/clusters/applications/azureasyncoperations",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/applications/{applicationName}/azureasyncoperations/{operationId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Application.tsp#L14"
+        },
+        {
+          "resourceType": "Microsoft.HDInsight/clusters/applications",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/applications/{applicationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Application.tsp#L14"
+        }
+      ]
+    },
+    {
+      "resourceName": "Cluster",
+      "classification": "genuine",
+      "resources": [
+        {
+          "resourceType": "Microsoft.HDInsight/clusters/azureasyncoperations",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/azureasyncoperations/{operationId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.HDInsight/clusters/configurations",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/configurations/{configurationName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.HDInsight/clusters/extensions/azureAsyncOperations",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/{extensionName}/azureAsyncOperations/{operationId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.HDInsight/clusters/extensions",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/extensions/{extensionName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.HDInsight/clusters/scriptExecutionHistory",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}/scriptExecutionHistory/{scriptExecutionId}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L13"
+        },
+        {
+          "resourceType": "Microsoft.HDInsight/clusters",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.HDInsight/clusters/{clusterName}",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L13"
+        }
+      ]
+    }
+  ],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f3801e713309b964510dd9c73cf6e7d067e601152e95ec7b8a46560b71829989",
+    "operationsCsv": "aef1a5ca914a91730bd8356b5cbfc1fddb646e089a51301d0d9b8300a7bba75f",
+    "statusJson": "0b54f7c46d13af02618f4a807c033fbfd1345ef6a552d35542ce2bd7cc9da3ea"
+  }
+}

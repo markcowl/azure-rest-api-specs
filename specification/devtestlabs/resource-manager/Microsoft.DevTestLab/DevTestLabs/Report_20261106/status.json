@@ -1,0 +1,42 @@
+{
+  "service": "devtestlabs",
+  "projectRoot": "specification/devtestlabs/resource-manager/Microsoft.DevTestLab/DevTestLabs",
+  "entrypoint": "specification/devtestlabs/resource-manager/Microsoft.DevTestLab/DevTestLabs/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "89aff8b7dd4f056d0ac92fb20a7c66b65f1ee548310b64bf51b9603fa73e939d",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 22,
+  "operationCount": 129,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 0,
+  "duplicateResourceErrorGroupCount": 0,
+  "duplicateResourceErrorAnalysis": [],
+  "duplicateResourceErrorGroups": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d7a634d162a7876740abc95b4e4ffcd758360a2ae7cde989c06abf41ee234ec3",
+    "operationsCsv": "16108ab4db8a5fd392d53af14487443e2968df2c1c390b27506e3ecdf3aa0ae1",
+    "statusJson": "60035f14f9b7a98ddf043c17b35287c7c0e8be3bd0fe5fa5ba74e44d0ed2c6ea"
+  }
+}

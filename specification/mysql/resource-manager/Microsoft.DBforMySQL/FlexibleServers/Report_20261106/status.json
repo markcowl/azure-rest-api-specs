@@ -1,0 +1,60 @@
+{
+  "service": "mysql",
+  "projectRoot": "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers",
+  "entrypoint": "specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "d043df38dd414f7a0ffa20b731bcf79201d03a9ae2d1d027628dc50adc69a868",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 15,
+  "operationCount": 61,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 2,
+  "duplicateResourceErrorGroupCount": 1,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.dbformysql/flexibleservers/{}/backupsv2/{}; resource names: FlexibleServersBackupsV2; ServerBackupV2"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.dbformysql/flexibleservers/{}/backupsv2/{}",
+      "resources": [
+        {
+          "resourceName": "FlexibleServersBackupsV2",
+          "resourceType": "Microsoft.DBforMySQL/flexibleServers/backupsV2",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/ServerBackupV2.tsp#L17"
+        },
+        {
+          "resourceName": "ServerBackupV2",
+          "resourceType": "Microsoft.DBforMySQL/flexibleServers/backupsV2",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/mysql/resource-manager/Microsoft.DBforMySQL/FlexibleServers/ServerBackupV2.tsp#L17"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "74fdebf62a4c371b50b9189c3c720c206aeecaa47a27fb4ae3c5a4f0d139b535",
+    "operationsCsv": "85914b7ab9fa13e3abaf1c68943cc0dc12ced93e5b11956ec98445b656cbd4c1",
+    "statusJson": "265da45651e25cd379e2f65de88ddf7a55d50f2c8be426d2ff98a272014be409"
+  }
+}

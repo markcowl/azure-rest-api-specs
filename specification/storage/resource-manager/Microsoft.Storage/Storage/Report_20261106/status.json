@@ -1,0 +1,76 @@
+{
+  "service": "storage",
+  "projectRoot": "specification/storage/resource-manager/Microsoft.Storage/Storage",
+  "entrypoint": "specification/storage/resource-manager/Microsoft.Storage/Storage/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "25e6580ed12cabbca57863ab3c2b13b6657dfa0e",
+  "dependencyLockHash": "f8e57014440aa3498c900a8f2608799ca037b5d178aea42b2e17cbd3c2c362fc",
+  "projectInputHash": "02a0199a852b5c0be1718ed6418d1b5e514548546d35f23ca774794ed16a500a",
+  "toolVersion": "1.4.0",
+  "compilerVersion": "1.17.0",
+  "armLibraryVersion": "0.74.0-pr.5976.4439",
+  "armLibraryProvenance": {
+    "packageUrl": "https://pkg.pr.new/@azure-tools/typespec-azure-resource-manager@611ef4062b419b0a8297fd2f772e8fb751d4089a",
+    "packageVersion": "0.74.0-pr.5976.4439",
+    "packageIntegrity": "sha512-SnoFqkKT1Dp49hudLV5GJ1Jjk1ngr2XNyDVKidbGEUozwCLUCkesfSFHE0tWqWyN/JAfqnUq9fHzLOR7dZEqqw==",
+    "packageSha256": "f284a7d5ae0ccd7024da7018bfb3d2242993542186ef00cf39f7ab20cf669bba",
+    "pullRequest": 5976,
+    "prHeadSha": "611ef4062b419b0a8297fd2f772e8fb751d4089a"
+  },
+  "reportDirectory": "Report_20261106",
+  "status": "succeeded",
+  "resourceCount": 30,
+  "operationCount": 136,
+  "caseOnlyClashCount": 0,
+  "genuineClashCount": 0,
+  "nameClashGroupCount": 0,
+  "nameClashGroups": [],
+  "duplicateResourceErrorCount": 4,
+  "duplicateResourceErrorGroupCount": 2,
+  "duplicateResourceErrorAnalysis": [
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts/{}/blobservices/default/containers/{}/immutabilitypolicies/default; resource names: ContainersImmutabilityPolicies; ImmutabilityPolicy",
+    "duplicate ARM resource instance path: /subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts/{}/tableservices/default/tables/{}; resource names: Table; TableServicesTables"
+  ],
+  "duplicateResourceErrorGroups": [
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts/{}/blobservices/default/containers/{}/immutabilitypolicies/default",
+      "resources": [
+        {
+          "resourceName": "ContainersImmutabilityPolicies",
+          "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L14"
+        },
+        {
+          "resourceName": "ImmutabilityPolicy",
+          "resourceType": "Microsoft.Storage/storageAccounts/blobServices/containers/immutabilityPolicies",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L14"
+        }
+      ]
+    },
+    {
+      "normalizedInstancePath": "/subscriptions/{}/resourcegroups/{}/providers/microsoft.storage/storageaccounts/{}/tableservices/default/tables/{}",
+      "resources": [
+        {
+          "resourceName": "Table",
+          "resourceType": "Microsoft.Storage/storageAccounts/tableServices/tables",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L14"
+        },
+        {
+          "resourceName": "TableServicesTables",
+          "resourceType": "Microsoft.Storage/storageAccounts/tableServices/tables",
+          "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/25e6580ed12cabbca57863ab3c2b13b6657dfa0e/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L14"
+        }
+      ]
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 1,
+    "total": 1
+  },
+  "outputHashes": {
+    "resourcesCsv": "1e991b5df0d78bfa88a0aa90d44ef715473f74d225a3d0da8fa598ffaff61337",
+    "operationsCsv": "5431a157c29597b5934b5cdcd2c24a48cc2465478eb38cdb4f4f1a3d4dd46249",
+    "statusJson": "ef59b4ef13cde3780e891853c06a7895486b4cf2866c3a9e633fe95fa82a9eff"
+  }
+}
