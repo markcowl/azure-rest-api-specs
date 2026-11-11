@@ -97,9 +97,14 @@ stable and its released wire contract must be preserved.
 4. For removed schemas, resolve all updated references and prove equivalence of the
    replacement schema. Check for dangling local references. Do not call a schema
    deletion harmless simply because `typespec-next` contains it.
-5. Compare each change with the pinned `typespec-next` SHA. Distinguish exact matches,
-   similar changes, and changes unique to the stable upgrade. The `next` dependency
-   channel is not a stable version target or an approval of a contract change.
+5. Account for branch divergence: compare `main -> upgrade` with
+   `merge-base(main, typespec-next) -> typespec-next`, using semantic change sets,
+   not whole-file equality. Preserve main-only API changes; never overwrite a spec
+   or generated file with its `typespec-next` copy merely to make outputs match.
+   Reproduce every proposed suppression on the main-based upgrade: main-only specs
+   can require additional suppressions, and next-only warnings may not apply.
+   Distinguish exact matches, similar changes, and stable-only changes. The `next`
+   channel is not a stable target or an approval of a contract change.
 6. Run repository OpenAPI validation and breaking-change checks applicable to the
    changed files. Record exact commands, results, existing failures, and unavailable
    checks. Keep unresolved significant changes visible in the draft PR.
