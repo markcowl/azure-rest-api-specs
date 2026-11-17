@@ -6,6 +6,8 @@ Source: [Breaking Change (Cross-Version) job](https://github.com/Azure/azure-res
 
 The job compared the new `2026-11-01-preview` Swagger against the latest stable and preview versions. All seven errors are against stable `2025-01-01`. The job checks out `main` for the base; the base links below use the PR base SHA recorded for the run, `26ce488a14ba15eeba8382794d125946570e1d67`, rather than the moving branch.
 
+TypeSpec links point to the source at the head commit used by the job; the declarations may predate this PR.
+
 The code blocks show the full `outputOadMessage` diagnostic from the log, reformatted for readability. Each search string is copied verbatim from the original log line. Line numbers refer to the full output of `gh run view 43336269341 --repo Azure/azure-rest-api-specs --job 131593115560 --log`, not GitHub's per-step line numbers.
 
 ## Breaking changes compared to the latest stable version
@@ -42,6 +44,7 @@ Search the log for `"path":"definitions.PrivateEndpointConnectionProperties.prop
 ```
 
 - **New:** [common.json, line 5001](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/common.json#L5001) (source schema: [PrivateEndpointProvisioningState, line 5038](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/common.json#L5038))
+- **TypeSpec (head):** [provisioningState property](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L14261-L14262) (source schema: [PrivateEndpointProvisioningState](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L2875-L2930))
 - **Old:** [common.json, line 4729](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/common.json#L4729) (source schema: [PrivateEndpointProvisioningState, line 4766](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/common.json#L4766))
 
 **2. `definitions.PrivateEndpointProvisioningState`**
@@ -74,6 +77,7 @@ Search the log for `"path":"definitions.PrivateEndpointProvisioningState"`.
 ```
 
 - **New:** [common.json, line 5038](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/common.json#L5038)
+- **TypeSpec (head):** [PrivateEndpointProvisioningState and versioned variants](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L2875-L2930)
 - **Old:** [common.json, line 4766](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/common.json#L4766)
 
 ### [1027 - DefaultValueChanged](https://github.com/Azure/openapi-diff/tree/master/docs/rules/1027.md)
@@ -108,6 +112,7 @@ Search the log for `"path":"definitions.JobSchedule.properties.startTime"`.
 ```
 
 - **New:** [jobs.json, line 361](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/jobs.json#L361)
+- **TypeSpec (head):** [JobSchedule.startTime and its versioned defaults](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L9277-L9287)
 - **Old:** [jobs.json, line 361](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/jobs.json#L361)
 
 ### [1047 - XmsEnumChanged](https://github.com/Azure/openapi-diff/tree/master/docs/rules/1047.md)
@@ -142,6 +147,7 @@ Search the log for `"path":"definitions.DataMaskingFunction"`.
 ```
 
 - **New:** [common.json, line 1468](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/common.json#L1468)
+- **TypeSpec (head):** [DataMaskingFunction union](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L3399-L3402)
 - **Old:** [common.json, line 1444](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/common.json#L1444)
 
 **2. `definitions.DataMaskingRuleState`**
@@ -174,6 +180,7 @@ Search the log for `"path":"definitions.DataMaskingRuleState"`.
 ```
 
 - **New:** [common.json, line 1533](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/common.json#L1533)
+- **TypeSpec (head):** [DataMaskingRuleState union](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L3650-L3653)
 - **Old:** [common.json, line 1509](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/common.json#L1509)
 
 **3. `definitions.DataMaskingRuleProperties.properties.ruleState`**
@@ -206,6 +213,7 @@ Search the log for `"path":"definitions.DataMaskingRuleProperties.properties.rul
 ```
 
 - **New:** [dataMaskingRules.json, line 295](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/dataMaskingRules.json#L295) (source schema: [DataMaskingRuleState, line 1533](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/common.json#L1533))
+- **TypeSpec (head):** [ruleState property](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L7590-L7591) (source schema: [DataMaskingRuleState](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L3650-L3653))
 - **Old:** [dataMaskingRules.json, line 287](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/dataMaskingRules.json#L287) (source schema: [DataMaskingRuleState, line 1509](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/common.json#L1509))
 
 **4. `definitions.DataMaskingRuleProperties.properties.maskingFunction`**
@@ -238,4 +246,5 @@ Search the log for `"path":"definitions.DataMaskingRuleProperties.properties.mas
 ```
 
 - **New:** [dataMaskingRules.json, line 315](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/dataMaskingRules.json#L315) (source schema: [DataMaskingFunction, line 1468](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/preview/2026-11-01-preview/common.json#L1468))
+- **TypeSpec (head):** [maskingFunction property](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L7623-L7624) (source schema: [DataMaskingFunction](https://github.com/Azure/azure-rest-api-specs/blob/73e1d1d840a771665dd9ae83a7e1e356db0ca9f1/specification/sql/resource-manager/Microsoft.Sql/SQL/models.tsp#L3399-L3402))
 - **Old:** [dataMaskingRules.json, line 307](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/dataMaskingRules.json#L307) (source schema: [DataMaskingFunction, line 1444](https://github.com/Azure/azure-rest-api-specs/blob/26ce488a14ba15eeba8382794d125946570e1d67/specification/sql/resource-manager/Microsoft.Sql/SQL/stable/2025-01-01/common.json#L1444))
