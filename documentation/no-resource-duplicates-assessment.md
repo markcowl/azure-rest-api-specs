@@ -375,6 +375,25 @@ Elastic/ElasticRegionInfoResource.tsp declares the same provider namespace but i
 
 **Assessment:** Unknown; dormant source and blocked supplemental graph.
 
+## Comparison with the Report_20261106 duplicate resource errors
+
+The earlier [TypeSpec ARM resource data report](https://github.com/markcowl/azure-rest-api-specs/blob/arm-resource-data-all-specs/documentation/typespec-arm-resource-data/Report_20261106/README.md#duplicate-resource-errors) lists 31 duplicate groups in 13 projects at [`25e6580`](https://github.com/Azure/azure-rest-api-specs/commit/25e6580ed12cabbca57863ab3c2b13b6657dfa0e). It used a pre-release ARM library build (`0.74.0-pr.5976.4439`). All 16 findings in this report match a group in that report. The other 15 groups are accounted for below.
+
+- **Same violation in both reports (16 groups):** API Management private endpoint connections; Container Apps Dapr components, logic apps and managed certificates; Confluent organizations; Elastic monitors; Managed Network Fabric network fabrics; Nginx deployments and WAF policies; Quota group quotas and group quota subscriptions; Security Insights automation rules, entity queries and onboarding states; Storage immutability policies and tables.
+- **Fixed upstream between the two snapshots (14 groups):** each was removed by a merged fix, and this assessment found no violation for it at `6e858cc`.
+
+| Earlier group                                                                                            | Fix                                                                               |
+| -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| API Management `service/apis/tagDescriptions`, `service/templates`                                       | [#47949](https://github.com/Azure/azure-rest-api-specs/pull/47949) (`f5d8b5a7cd`) |
+| BotService `botServices/channels`                                                                        | [#48094](https://github.com/Azure/azure-rest-api-specs/pull/48094) (`63aae3d37d`) |
+| Confluent `organizations/environments`, `.../clusters`, `.../clusters/connectors`, `.../clusters/topics` | [#48095](https://github.com/Azure/azure-rest-api-specs/pull/48095) (`7463f27998`) |
+| Dashboard `grafana/privateEndpointConnections`                                                           | [#48177](https://github.com/Azure/azure-rest-api-specs/pull/48177) (`e10e36a4bc`) |
+| Elastic `monitors/monitoredSubscriptions`, `monitors/openAIIntegrations`, `monitors/tagRules`            | [#48183](https://github.com/Azure/azure-rest-api-specs/pull/48183) (`fef5254605`) |
+| MySQL `flexibleServers/backupsV2`                                                                        | [#48184](https://github.com/Azure/azure-rest-api-specs/pull/48184) (`eacc4548e7`) |
+| Nginx `nginxDeployments/certificates`, `nginxDeployments/configurations`                                 | [#48277](https://github.com/Azure/azure-rest-api-specs/pull/48277) (`3a76c11c29`) |
+
+- **Not a rule violation (1 group): IoTHub `Microsoft.Devices/iotHubs`.** The source is unchanged between snapshots. The earlier report groups records by lowercased type and path with parameter names removed, and it counts every resolved record. One of the two records is `IotHub` (`Microsoft.Devices/iotHubs`). It's a synthetic parent with no operations of its own, created by the lowercase `@segment("iotHubs")` parent in [PrivateEndpointConnection.tsp](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/PrivateEndpointConnection.tsp#L41) and [GroupIdInformation.tsp](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/GroupIdInformation.tsp#L43). The real resource, `IotHubDescription`, uses `Microsoft.Devices/IotHubs`. The rule only reports records that have their own GET or PUT, so it ignores this synthetic parent. Optional cleanup, not required by the rule: make the parent segment casing consistent, or reuse the `IotHubDescription` parent in those child operations.
+
 ## Coverage and limitations
 
 All 670 normal candidate entrypoints were attempted, plus one supplemental graph. 644 normal candidates compiled without errors; 26 did not compile independently. The supplemental graph also had compilation errors and is not counted as clean. The table retains failures and explains whether each is an imported fragment covered in a successful program, a shared/configuration container without its own declared service, or an unresolved supplemental assessment. A failed standalone helper compile does not invalidate a successful enclosing service compile, nor does it count as a clean standalone service.
