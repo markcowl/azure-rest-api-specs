@@ -4,7 +4,7 @@
 
 Assessed upstream [Azure/azure-rest-api-specs main at 6e858cc12c77](https://github.com/Azure/azure-rest-api-specs/commit/6e858cc12c77517bee29d619fcfe16e0e2d378d9), captured on 2026-11-17. This report is an inventory for later remediation decisions; no service sources, generated Swagger, suppressions or checked-in dependencies were changed.
 
-**16 distinct violations across 9 TypeSpec service projects.** 15 have suggested fixes; 1 is marked **Suggested fix unknown**. 0 findings were hidden by source-level suppression. A separate conditional finding from dormant NetApp source is not included in these totals. The coverage ledger accounts for 670 normal candidate entrypoints, one supplemental fragment check and 615 distinct declared services reached by successful compilations.
+**16 distinct violations across 9 TypeSpec service projects.** 15 have suggested fixes (13 replace legacy interface templates with simpler operation templates; 2 use a resource-name override, with the reason given), all prototyped and verified locally; 1 is marked **Suggested fix unknown**. 0 findings were hidden by source-level suppression. A separate conditional finding from dormant NetApp source is not included in these totals. The coverage ledger accounts for 670 normal candidate entrypoints, one supplemental fragment check and 615 distinct declared services reached by successful compilations.
 
 | Service project                                                                                                                                                                                                                                                                                           | Violations |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------: |
@@ -26,7 +26,7 @@ Assessed upstream [Azure/azure-rest-api-specs main at 6e858cc12c77](https://gith
 - **Explicit evaluation:** the rule is disabled in the central ARM ruleset in this release. Other configured lint rules were disabled for this focused assessment; compiler/type-checker and library validation errors were still retained. The published rule listener was invoked directly before suppression, using the compiler's project-source diagnostic filter. Every finding was also passed through `program.reportDiagnostic` to identify source-suppressed findings without editing sources. Its output and suppression handling were checked against normal explicit linter enablement.
 - **Identity:** the rule compares ARM resource type and full instance path case-insensitively, retaining parameter names. It reports subsequent logical records with an authored GET or PUT identity operation; synthetic ancestors without their own identity operations are excluded. Different scopes, parent paths, extension targets, singleton names and differently named path parameters are not flattened together.
 - **Counting:** 16 baseline diagnostic occurrences were deduplicated to 16 findings by diagnostic source location, both logical names, resource type and full instance path. The supplemental graph reported 1 additional conditional finding. Each item lists the diagnostic's source plus the colliding records' associated operation sources; one finding can require changing more than the operation named by the warning.
-- **Fix status:** suggestions are source/signature-reviewed candidates, not implemented fixes. In 0.74.0, interface-level `Legacy.LegacyOperations` and `Legacy.ExtensionOperations` use `ResourceName`, `Legacy.RoutedOperations` uses `RoutedResourceName`, and their operation templates use `OverrideResourceName` (not `ResourceNameOverride`). The similarly named standalone `Legacy.CreateOrUpdateAsync` does **not** expose that override, while `Legacy.Extension.CreateOrUpdateAsync` does. Later fix PRs should confirm unchanged HTTP paths, payloads, response codes, LRO behavior and intended resource grouping; generated SDK/resource metadata names may intentionally change.
+- **Fix status:** fixes prefer removing `Legacy.LegacyOperations`/`Legacy.ExtensionOperations` interface templates where they are used at the resource's standard `@autoRoute` path. Those templates exist for resources exposed at additional instance paths, and by design derive a different logical resource name, so mixing them with standard templates at the same path causes the duplicate. Standard operation templates (with `Error`/`Response`/`BaseParameters` parameters) or Legacy _operation_ templates (`Legacy.CreateOrReplaceSync/Async`, `Legacy.CustomPatchSync/Async`, `Legacy.Extension.*`, which support `OptionalRequestBody` and custom request models) produce the same HTTP API with less complexity. Upstream fixes [#48177](https://github.com/Azure/azure-rest-api-specs/pull/48177) and [#48277](https://github.com/Azure/azure-rest-api-specs/pull/48277) used this pattern. The `ResourceName`/`OverrideResourceName` override is the fallback, and is preferred only where a finding explains why. Every non-unknown fix was prototyped locally against the snapshot: the rule was enabled, the project recompiled and re-emitted, and the Swagger diff inspected. Swagger was unchanged or changed only in documentation (parameter descriptions/patterns now matching the resource's other operations); no wire-contract changes. Snippets show only the changed operations; `/* existing ... */` marks arguments to keep as-is. Prototypes were reverted.
 
 ## Violations
 
@@ -47,9 +47,42 @@ The standalone Legacy.CreateOrUpdateAsync PUT uses ApiManagementServiceResource 
 | `ApiManagementServiceResource`                          | [`Microsoft.ApiManagement.PrivateEndpointConnections.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/PrivateEndpointConnection.tsp#L29)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `ApiManagementServiceResourcePrivateEndpointConnection` | [`Microsoft.ApiManagement.PrivateEndpointConnections.getByName`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/PrivateEndpointConnection.tsp#L23); [`Microsoft.ApiManagement.PrivateEndpointConnections.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/PrivateEndpointConnection.tsp#L50); [`Microsoft.ApiManagement.PrivateEndpointConnections.listByService`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/PrivateEndpointConnection.tsp#L61) |
 
-**Suggested fix:** Re-express the PUT through Legacy.LegacyOperations with the same service-instance parent parameters and privateEndpointConnectionName child parameter, explicitly setting ResourceName = "ApiManagementServiceResourcePrivateEndpointConnection". Instantiate its CreateOrUpdateAsync with PrivateEndpointConnection as the resource identity, preserving Request = PrivateEndpointConnectionRequest and the existing Response/LRO overrides. This is a route-preserving candidate, not a recommendation to change the request model. Do not merely add OverrideResourceName to the existing standalone Legacy.CreateOrUpdateAsync: that standalone alias has no such parameter in 0.74.0. The specialized PrivateEndpoints PUT templates also lack a separate Request parameter, so a direct substitution needs additional contract review.
+**Suggested fix:** Keep a legacy _interface_ template here: declare a `Legacy.LegacyOperations` alias for the service-instance parent and `privateEndpointConnectionName` key, set `ResourceName = "ApiManagementServiceResourcePrivateEndpointConnection"`, and route the PUT through its `CreateOrUpdateAsync` with `PrivateEndpointConnection` as the resource while keeping `Request = PrivateEndpointConnectionRequest` and the existing response.
 
-**Assessment:** Candidate requires request/response and LRO comparison.
+```tsp
+alias PrivateEndpointConnectionLegacyOps = Azure.ResourceManager.Legacy.LegacyOperations<
+  {
+    ...ApiVersionParameter;
+    ...SubscriptionIdParameter;
+    ...ResourceGroupParameter;
+    ...Azure.ResourceManager.Legacy.Provider;
+
+    /** The name of the API Management service. */
+    @path @segment("service") @key
+    @pattern("^[a-zA-Z](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$") @minLength(1) @maxLength(50)
+    serviceName: string;
+  },
+  {
+    /** API revision identifier. ... */
+    @path @segment("privateEndpointConnections") @key
+    privateEndpointConnectionName: string;
+  },
+  ResourceName = "ApiManagementServiceResourcePrivateEndpointConnection"
+>;
+
+// in interface PrivateEndpointConnections
+createOrUpdate is PrivateEndpointConnectionLegacyOps.CreateOrUpdateAsync<
+  PrivateEndpointConnection,
+  Request = PrivateEndpointConnectionRequest,
+  Response = /* existing ArmResourceUpdatedResponse | ArmAcceptedLroResponse union */
+>;
+```
+
+Prototyped: rule clears; emitted Swagger unchanged.
+
+**Why the name override is preferred here:** the simpler alternatives were prototyped and rejected. `PrivateEndpointOperations.CreateOrReplaceAsync<ApiManagementServiceResource>` clears the rule, but the `PrivateEndpoints` templates have no `Request` parameter, so the PUT body changes from `PrivateEndpointConnectionRequest` to the common-types `PrivateEndpointConnection` (a wire-contract change). `Legacy.CreateOrReplaceAsync<PrivateEndpointConnection, PrivateEndpointConnectionRequest, BaseParameters = ...>` cannot place the service parent before the provider segment (`PrivateEndpointConnectionResource` has no `@parentResource`), so it fails with a duplicate `provider` parameter. The interface template is the only option that preserves both the route and the request model.
+
+**Assessment:** Name override via interface template (verified, contract preserving).
 
 ### app/resource-manager/Microsoft.App/ContainerApps
 
@@ -68,9 +101,31 @@ The standard PUT identifies DaprComponent, while the connected-environment legac
 | `ConnectedEnvironmentsDaprComponents` | [`Microsoft.App.ConnectedEnvironmentsDaprComponents.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L81); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L93); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L99); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.listSecrets`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L108) |
 | `DaprComponent`                       | [`Microsoft.App.ConnectedEnvironmentsDaprComponents.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L87); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L99); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.listSecrets`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L108)                                                                                                                                                                                                                                      |
 
-**Suggested fix:** Set ResourceName = "DaprComponent" on both connected-environment LegacyOperations aliases, DaprComponentOps and DaprComponentCustomErrorOps. This aligns GET, DELETE, list and action metadata with the existing standard PUT without changing their path parameters or custom error contracts. Keep the separate managed-environment DaprComponentOperationGroupOps routing unchanged.
+**Suggested fix:** Remove the connected-environment `LegacyOperations` aliases `DaprComponentOps` and `DaprComponentCustomErrorOps`. They are used at the same path as the standard PUT, so standard operation templates with an `Error` parameter express the same API.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+get is ArmResourceRead<DaprComponent, Error = DefaultErrorResponse>;
+delete is ArmResourceDeleteWithoutOkAsync<DaprComponent>;
+list is ArmResourceListByParent<
+  DaprComponent,
+  Response = ArmResponse<DaprComponentsCollection>,
+  Error = DefaultErrorResponse
+>;
+listSecrets is ArmResourceActionSync<
+  DaprComponent,
+  void,
+  ArmResponse<DaprSecretsCollection>,
+  Error = DefaultErrorResponse
+>;
+```
+
+Keep the managed-environment `DaprComponentOperationGroupOps`, which is on a different path.
+
+Prototyped together with #3 and #4: rule clears for all versions; Swagger is doc-only (`connectedEnvironmentName` description becomes "Name of the connectedEnvironment.", matching the PUT); no pageability change.
+
+**Fallback:** set `ResourceName = "DaprComponent"` on both aliases.
+
+**Assessment:** Simpler standard templates (verified).
 
 #### 3. Logic app extension legacy PUTs derive a plural logical name
 
@@ -87,9 +142,34 @@ Standard GET/DELETE resolve LogicApp, but the two version-gated legacy PUT decla
 | `LogicApp`     | [`Microsoft.App.LogicApps.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L59); [`Microsoft.App.LogicApps.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L89); [`Microsoft.App.LogicApps.deployWorkflowArtifacts`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L101); [`Microsoft.App.LogicApps.listWorkflowsConnections`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L114); [`Microsoft.App.LogicApps.invoke`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L129)                          |
 | `LogicApps`    | [`Microsoft.App.LogicApps.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L71); [`Microsoft.App.LogicApps.createOrUpdateStable`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L78); [`Microsoft.App.LogicApps.deployWorkflowArtifacts`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L101); [`Microsoft.App.LogicApps.listWorkflowsConnections`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L114); [`Microsoft.App.LogicApps.invoke`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/LogicApp.tsp#L129) |
 
-**Suggested fix:** Set ResourceName = "LogicApp" on LogicAppOps so both createOrUpdate and createOrUpdateStable align with the standard operations. Alternatively add OverrideResourceName = "LogicApp" to both PUT instantiations. Preserve LogicAppParentParameter, the repeated providers/Microsoft.App extension segment, version decorators and each PUT's response/body options.
+**Suggested fix:** Remove `LogicAppOps` and express both version-specific PUTs as `Legacy.CreateOrReplaceSync` operation templates. `LogicAppParentParameter` is passed as `BaseParameters`, so the extension route is unchanged.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+@sharedRoute
+@removed(Versions.v2026_01_01)
+@removed(Versions.v2026_07_01)
+createOrUpdate is Azure.ResourceManager.Legacy.CreateOrReplaceSync<
+  LogicApp,
+  BaseParameters = LogicAppParentParameter,
+  Error = DefaultErrorResponse
+>;
+
+@sharedRoute
+@added(Versions.v2026_01_01)
+createOrUpdateStable is Azure.ResourceManager.Legacy.CreateOrReplaceSync<
+  LogicApp,
+  BaseParameters = LogicAppParentParameter,
+  Response = ArmResourceUpdatedResponse<LogicApp> | ArmResourceCreatedSyncResponse<LogicApp>,
+  Error = DefaultErrorResponse,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped: rule clears; LogicApp Swagger unchanged.
+
+**Fallback:** set `ResourceName = "LogicApp"` on `LogicAppOps`.
+
+**Assessment:** Simpler Legacy operation template (verified).
 
 #### 4. Managed certificate legacy PUT is split from standard GET/PATCH/DELETE
 
@@ -106,9 +186,21 @@ ManagedCertificateOps derives ManagedEnvironmentsManagedCertificates for PUT, wh
 | `ManagedCertificate`                     | [`Microsoft.App.ManagedCertificates.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L58); [`Microsoft.App.ManagedCertificates.update`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L83); [`Microsoft.App.ManagedCertificates.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L92); [`Microsoft.App.ManagedCertificates.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L98) |
 | `ManagedEnvironmentsManagedCertificates` | [`Microsoft.App.ManagedCertificates.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L65); [`Microsoft.App.ManagedCertificates.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L98)                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-**Suggested fix:** Set ResourceName = "ManagedCertificate" on the ManagedCertificateOps LegacyOperations instantiation, or OverrideResourceName = "ManagedCertificate" on its createOrUpdate operation. Retain the custom success/error union, LRO headers and OptionalRequestBody = true.
+**Suggested fix:** Remove `ManagedCertificateOps` and use `Legacy.CreateOrReplaceAsync`, which supports an optional request body without the interface template.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+createOrUpdate is Azure.ResourceManager.Legacy.CreateOrReplaceAsync<
+  ManagedCertificate,
+  Response = /* existing success/error union */,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped: rule clears; Swagger doc-only (PUT `environmentName` now has the same description and `^[-\w\._\(\)]+$` pattern as GET/PATCH/DELETE).
+
+**Fallback:** set `ResourceName = "ManagedCertificate"` on `ManagedCertificateOps`.
+
+**Assessment:** Simpler Legacy operation template (verified).
 
 ### confluent/resource-manager/Microsoft.Confluent/Confluent
 
@@ -127,9 +219,27 @@ GET/DELETE identify OrganizationResource; PUT/PATCH from OrganizationResourceRol
 | `OrganizationResource` | [`Microsoft.Confluent.OrganizationResources.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L162); [`Microsoft.Confluent.OrganizationResources.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L192); [`Microsoft.Confluent.OrganizationResources.listByResourceGroup`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L205); [`Microsoft.Confluent.OrganizationResources.listBySubscription`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L214); [`Microsoft.Confluent.OrganizationResourceAPIKeyActions.getClusterAPIKey`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L69); [`Microsoft.Confluent.OrganizationResources.listRegions`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L223); [`Microsoft.Confluent.OrganizationResources.listUsers`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L235); [`Microsoft.Confluent.OrganizationResources.listServiceAccounts`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L247); [`Microsoft.Confluent.OrganizationResources.listInvitations`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L259); [`Microsoft.Confluent.OrganizationResources.inviteUser`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L271); [`Microsoft.Confluent.OrganizationResources.listEnvironments`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L283); [`Microsoft.Confluent.OrganizationResources.listClusters`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L295); [`Microsoft.Confluent.OrganizationResources.listRoleBindings`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L307); [`Microsoft.Confluent.OrganizationResources.createRoleBinding`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L319); [`Microsoft.Confluent.OrganizationResources.listRoleBindingNameList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L331); [`Microsoft.Confluent.OrganizationResources.linkSaaS`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L345); [`Microsoft.Confluent.OrganizationResources.latestLinkedSaaS`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L358)    |
 | `Organizations`        | [`Microsoft.Confluent.OrganizationResources.create`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L171); [`Microsoft.Confluent.OrganizationResources.update`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L181); [`Microsoft.Confluent.OrganizationResources.listByResourceGroup`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L205); [`Microsoft.Confluent.OrganizationResources.listBySubscription`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L214); [`Microsoft.Confluent.OrganizationResourceAPIKeyActions.getClusterAPIKey`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L69); [`Microsoft.Confluent.OrganizationResources.listRegions`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L223); [`Microsoft.Confluent.OrganizationResources.listUsers`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L235); [`Microsoft.Confluent.OrganizationResources.listServiceAccounts`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L247); [`Microsoft.Confluent.OrganizationResources.listInvitations`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L259); [`Microsoft.Confluent.OrganizationResources.inviteUser`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L271); [`Microsoft.Confluent.OrganizationResources.listEnvironments`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L283); [`Microsoft.Confluent.OrganizationResources.listClusters`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L295); [`Microsoft.Confluent.OrganizationResources.listRoleBindings`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L307); [`Microsoft.Confluent.OrganizationResources.createRoleBinding`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L319); [`Microsoft.Confluent.OrganizationResources.listRoleBindingNameList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L331); [`Microsoft.Confluent.OrganizationResources.linkSaaS`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L345); [`Microsoft.Confluent.OrganizationResources.latestLinkedSaaS`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/confluent/resource-manager/Microsoft.Confluent/Confluent/OrganizationResource.tsp#L358) |
 
-**Suggested fix:** Set ResourceName = "OrganizationResource" on OrganizationResourceRoleBindingIdOperationGroup's LegacyOperations instantiation, or set OverrideResourceName on both create and update. Preserve ResourceProviderDefaultErrorResponse, the patch model and optional request bodies. Do not change the separate role-binding/action routes merely because their helper interfaces have similar names.
+**Suggested fix:** Delete the `OrganizationResourceRoleBindingIdOperationGroup` interface (the `LegacyOperations` instantiation used only for the organization PUT/PATCH) and use Legacy operation templates. Keep the separate role-binding operations and actions interfaces.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+create is Azure.ResourceManager.Legacy.CreateOrReplaceAsync<
+  OrganizationResource,
+  Error = ResourceProviderDefaultErrorResponse,
+  OptionalRequestBody = true
+>;
+update is Azure.ResourceManager.Legacy.CustomPatchSync<
+  OrganizationResource,
+  PatchModel = OrganizationResourceUpdate,
+  Error = ResourceProviderDefaultErrorResponse,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped: rule clears; Swagger unchanged.
+
+**Fallback:** set `ResourceName = "OrganizationResource"` on the interface instantiation.
+
+**Assessment:** Simpler Legacy operation templates (verified).
 
 ### elastic/resource-manager/Microsoft.Elastic/Elastic
 
@@ -148,9 +258,27 @@ The two legacy helper interfaces derive Monitors, while standard GET and DELETE 
 | `ElasticMonitorResource` | [`Microsoft.Elastic.ElasticMonitorResources.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L96); [`Microsoft.Elastic.ElasticMonitorResources.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L130); [`Microsoft.Elastic.ElasticMonitorResources.listByResourceGroup`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L150); [`Microsoft.Elastic.ElasticMonitorResources.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L159); [`Microsoft.Elastic.ElasticMonitorResources.monitoredResourcesList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L170); [`Microsoft.Elastic.ElasticMonitorResources.deploymentInfoList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L181); [`Microsoft.Elastic.ElasticMonitorResources.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L192); [`Microsoft.Elastic.ElasticMonitorResources.billingInfoGet`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L204); [`Microsoft.Elastic.ElasticMonitorResources.connectedPartnerResourcesList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L216); [`Microsoft.Elastic.ElasticMonitorResources.vMHostList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L229); [`Microsoft.Elastic.ElasticMonitorResources.details`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L240); [`Microsoft.Elastic.ElasticMonitorResources.vMCollectionUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L252); [`Microsoft.Elastic.ElasticMonitorResources.upgradableVersionsDetails`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L264); [`Microsoft.Elastic.ElasticMonitorResources.upgrade`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L274); [`Microsoft.Elastic.ElasticMonitorResources.allTrafficFiltersList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L289); [`Microsoft.Elastic.ElasticMonitorResources.listAssociatedTrafficFiltersList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L302); [`Microsoft.Elastic.ElasticMonitorResources.createAndAssociateIPFilterCreate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L316); [`Microsoft.Elastic.ElasticMonitorResources.createAndAssociatePLFilterCreate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L349); [`Microsoft.Elastic.ElasticMonitorResources.associate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L386); [`Microsoft.Elastic.ElasticMonitorResources.detachAndDeleteTrafficFilterDelete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L406); [`Microsoft.Elastic.ElasticMonitorResources.detachTrafficFilterUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L425); [`Microsoft.Elastic.ElasticMonitorResources.trafficFiltersDelete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L445); [`Microsoft.Elastic.ElasticMonitorResources.resubscribe`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L463)     |
 | `Monitors`               | [`Microsoft.Elastic.ElasticMonitorResources.create`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L104); [`Microsoft.Elastic.ElasticMonitorResources.update`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L114); [`Microsoft.Elastic.ElasticMonitorResources.listByResourceGroup`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L150); [`Microsoft.Elastic.ElasticMonitorResources.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L159); [`Microsoft.Elastic.ElasticMonitorResources.monitoredResourcesList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L170); [`Microsoft.Elastic.ElasticMonitorResources.deploymentInfoList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L181); [`Microsoft.Elastic.ElasticMonitorResources.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L192); [`Microsoft.Elastic.ElasticMonitorResources.billingInfoGet`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L204); [`Microsoft.Elastic.ElasticMonitorResources.connectedPartnerResourcesList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L216); [`Microsoft.Elastic.ElasticMonitorResources.vMHostList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L229); [`Microsoft.Elastic.ElasticMonitorResources.details`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L240); [`Microsoft.Elastic.ElasticMonitorResources.vMCollectionUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L252); [`Microsoft.Elastic.ElasticMonitorResources.upgradableVersionsDetails`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L264); [`Microsoft.Elastic.ElasticMonitorResources.upgrade`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L274); [`Microsoft.Elastic.ElasticMonitorResources.allTrafficFiltersList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L289); [`Microsoft.Elastic.ElasticMonitorResources.listAssociatedTrafficFiltersList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L302); [`Microsoft.Elastic.ElasticMonitorResources.createAndAssociateIPFilterCreate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L316); [`Microsoft.Elastic.ElasticMonitorResources.createAndAssociatePLFilterCreate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L349); [`Microsoft.Elastic.ElasticMonitorResources.associate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L386); [`Microsoft.Elastic.ElasticMonitorResources.detachAndDeleteTrafficFilterDelete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L406); [`Microsoft.Elastic.ElasticMonitorResources.detachTrafficFilterUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L425); [`Microsoft.Elastic.ElasticMonitorResources.trafficFiltersDelete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L445); [`Microsoft.Elastic.ElasticMonitorResources.resubscribe`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/elastic/resource-manager/Microsoft.Elastic/Elastic/ElasticMonitorResource.tsp#L463) |
 
-**Suggested fix:** Set ResourceName = "ElasticMonitorResource" on both ElasticMonitorCreateOrUpdateResourceOps and ElasticMonitorUpdateResourceOps LegacyOperations instantiations. Alternatively set OverrideResourceName on both create and update. Preserve the different error defaults, optional bodies, PATCH response/body-root customization and DELETE softDelete query behavior.
+**Suggested fix:** Delete `ElasticMonitorCreateOrUpdateResourceOps` and `ElasticMonitorUpdateResourceOps` and use Legacy operation templates.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+create is Azure.ResourceManager.Legacy.CreateOrReplaceAsync<
+  ElasticMonitorResource,
+  Error = ResourceProviderDefaultErrorResponse,
+  OptionalRequestBody = true
+>;
+update is Azure.ResourceManager.Legacy.CustomPatchAsync<
+  ElasticMonitorResource,
+  PatchModel = ElasticMonitorResourceUpdateParameters,
+  Response = /* existing response */,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped: rule clears; Swagger doc-only (PUT/PATCH `monitorName` gains the "Monitor resource name" description used by GET/DELETE; pattern kept).
+
+**Fallback:** set `ResourceName = "ElasticMonitorResource"` on both interface instantiations.
+
+**Assessment:** Simpler Legacy operation templates (verified).
 
 ### managednetworkfabric/resource-manager/Microsoft.ManagedNetworkFabric/ManagedNetworkFabric
 
@@ -190,9 +318,21 @@ GET, PATCH and DELETE identify NginxDeployment. The Legacy.Extension PUT targets
 | `NginxDeployment`              | [`Nginx.NginxPlus.NginxDeployments.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L43); [`Nginx.NginxPlus.NginxDeployments.update`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L59); [`Nginx.NginxPlus.NginxDeployments.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L70); [`Nginx.NginxPlus.NginxDeployments.listByResourceGroup`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L75); [`Nginx.NginxPlus.NginxDeployments.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L83); [`Nginx.NginxPlus.NginxDeployments.wafPolicyList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L94); [`Nginx.NginxPlus.NginxDeployments.defaultWafPolicyList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L104) |
 | `ResourceGroupNginxDeployment` | [`Nginx.NginxPlus.NginxDeployments.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L48); [`Nginx.NginxPlus.NginxDeployments.listByResourceGroup`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L75); [`Nginx.NginxPlus.NginxDeployments.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L83); [`Nginx.NginxPlus.NginxDeployments.wafPolicyList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L94); [`Nginx.NginxPlus.NginxDeployments.defaultWafPolicyList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeployment.tsp#L104)                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
-**Suggested fix:** Add OverrideResourceName = "NginxDeployment" to the existing Legacy.Extension.CreateOrUpdateAsync instantiation. That extension alias supports the override in 0.74.0. Preserve Extension.ResourceGroup, OptionalRequestBody = true and the existing asynchronous contract; replacing it with a standard PUT is unnecessary for logical-name alignment.
+**Suggested fix:** Replace `Legacy.Extension.CreateOrUpdateAsync<Extension.ResourceGroup, NginxDeployment, ...>` with the non-extension `Legacy.CreateOrReplaceAsync`. The resource is an ordinary resource-group resource, so the extension form is unnecessary.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+create is Azure.ResourceManager.Legacy.CreateOrReplaceAsync<
+  NginxDeployment,
+  LroHeaders = /* existing headers */,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped with #9: rule clears; Swagger unchanged.
+
+**Fallback:** add `OverrideResourceName = "NginxDeployment"` to the existing extension instantiation.
+
+**Assessment:** Simpler Legacy operation template (verified).
 
 #### 9. Nginx WAF policy PUT adds a resource-group prefix to its logical identity
 
@@ -209,9 +349,22 @@ Standard GET/DELETE identify NginxDeploymentWafPolicy, while the Legacy.Extensio
 | `NginxDeploymentWafPolicy`              | [`Nginx.NginxPlus.NginxDeploymentWafPolicies.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L35); [`Nginx.NginxPlus.NginxDeploymentWafPolicies.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L53); [`Nginx.NginxPlus.NginxDeploymentWafPolicies.analysis`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L60) |
 | `ResourceGroupNginxDeploymentWafPolicy` | [`Nginx.NginxPlus.NginxDeploymentWafPolicies.create`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L41); [`Nginx.NginxPlus.NginxDeploymentWafPolicies.analysis`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/nginx/resource-manager/Nginx.NginxPlus/NginxPlus/NginxDeploymentWafPolicy.tsp#L60)                                                                                                                                                                                                                                                  |
 
-**Suggested fix:** Add OverrideResourceName = "NginxDeploymentWafPolicy" to the existing Legacy.Extension.CreateOrUpdateAsync instantiation. Preserve the deployment parent relationship, target scope, OptionalRequestBody, combined async/location headers and useFinalStateVia("azure-async-operation").
+**Suggested fix:** Same as #8: replace the `Legacy.Extension.CreateOrUpdateAsync` instantiation with `Legacy.CreateOrReplaceAsync<NginxDeploymentWafPolicy, ...>`. Keep the existing LRO headers and `useFinalStateVia`.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+@useFinalStateVia("azure-async-operation")
+create is Azure.ResourceManager.Legacy.CreateOrReplaceAsync<
+  NginxDeploymentWafPolicy,
+  LroHeaders = /* existing headers */,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped with #8: rule clears; Swagger unchanged.
+
+**Fallback:** add `OverrideResourceName = "NginxDeploymentWafPolicy"`.
+
+**Assessment:** Simpler Legacy operation template (verified).
 
 ### quota/resource-manager/Microsoft.Quota/Quota
 
@@ -230,9 +383,29 @@ Standard Extension GET/DELETE resolve ManagementGroupGroupQuotasEntity. Legacy.E
 | `ManagementGroupGroupQuotasEntity` | [`Microsoft.Quota.GroupQuotasEntities.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L101); [`Microsoft.Quota.GroupQuotasEntities.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L140); [`Microsoft.Quota.GroupQuotasEntities.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L152); [`Microsoft.Quota.GroupQuotasEntities.groupQuotaLimitsRequestList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L164); [`Microsoft.Quota.GroupQuotasEntities.groupQuotaUsagesList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L193)            |
 | `ManagementGroupsGroupQuotas`      | [`Microsoft.Quota.GroupQuotasEntities.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L110); [`Microsoft.Quota.GroupQuotasEntities.update`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L127); [`Microsoft.Quota.GroupQuotasEntities.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L152); [`Microsoft.Quota.GroupQuotasEntities.groupQuotaLimitsRequestList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L164); [`Microsoft.Quota.GroupQuotasEntities.groupQuotaUsagesList`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotasEntity.tsp#L193) |
 
-**Suggested fix:** Set ResourceName = "ManagementGroupGroupQuotasEntity" on GroupQuotasEntitiesOps, or OverrideResourceName on both createOrUpdate and update. Match the full standard extension identity, not merely "GroupQuotasEntity". Preserve the Microsoft.Management target path, extension provider, combined LRO headers, patch model and optional bodies; do not modify the differently routed groupQuotaOps helper.
+**Suggested fix:** Delete the `GroupQuotasEntitiesOps` `ExtensionOperations` alias and use `Legacy.Extension` operation templates with the same `Extension.ManagementGroup` target as the standard GET/DELETE.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+createOrUpdate is Azure.ResourceManager.Legacy.Extension.CreateOrReplaceAsync<
+  Extension.ManagementGroup<"managementGroupId">,
+  GroupQuotasEntity,
+  Response = /* existing response */,
+  OptionalRequestBody = true
+>;
+update is Azure.ResourceManager.Legacy.Extension.CustomPatchAsync<
+  Extension.ManagementGroup<"managementGroupId">,
+  GroupQuotasEntity,
+  PatchModel = GroupQuotasEntityPatch,
+  Response = /* existing response */,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped with #11: rule clears; Swagger doc-only (`managementGroupId` description now matches GET/DELETE).
+
+**Fallback:** set `ResourceName = "ManagementGroupGroupQuotasEntity"` on `GroupQuotasEntitiesOps`.
+
+**Assessment:** Simpler Legacy extension operation templates (verified).
 
 #### 11. Quota subscription legacy PUT/PATCH lose the standard management-group identity
 
@@ -249,9 +422,28 @@ Standard Extension GET/DELETE resolve ManagementGroupGroupQuotaSubscriptionId, w
 | `ManagementGroupGroupQuotaSubscriptionId` | [`Microsoft.Quota.GroupQuotaSubscriptionIds.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L72); [`Microsoft.Quota.GroupQuotaSubscriptionIds.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L110); [`Microsoft.Quota.GroupQuotaSubscriptionIds.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L122)           |
 | `GroupQuotasSubscriptions`                | [`Microsoft.Quota.GroupQuotaSubscriptionIds.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L81); [`Microsoft.Quota.GroupQuotaSubscriptionIds.update`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L98); [`Microsoft.Quota.GroupQuotaSubscriptionIds.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L122) |
 
-**Suggested fix:** Set ResourceName = "ManagementGroupGroupQuotaSubscriptionId" on GroupQuotaSubscriptionIdsOps's LegacyOperations instantiation, or OverrideResourceName on both createOrUpdate and update. Preserve managementGroupId, groupQuotaName and subscriptionId routing, the bodyless PUT (Request = void), bodyless PATCH model and existing response/LRO unions.
+**Suggested fix:** Delete `GroupQuotaSubscriptionIdsOps` and use `Legacy.Extension` operation templates, keeping the bodyless PUT/PATCH.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+createOrUpdate is Azure.ResourceManager.Legacy.Extension.CreateOrReplaceAsync<
+  Extension.ManagementGroup<"managementGroupId">,
+  GroupQuotaSubscriptionId,
+  void,
+  Response = /* existing response */
+>;
+update is Azure.ResourceManager.Legacy.Extension.CustomPatchAsync<
+  Extension.ManagementGroup<"managementGroupId">,
+  GroupQuotaSubscriptionId,
+  PatchModel = void,
+  Response = /* existing response */
+>;
+```
+
+Prototyped with #10: rule clears; Swagger doc-only (`managementGroupId` description; `subscriptionId` `$ref` inlined to an identical definition).
+
+**Fallback:** set `ResourceName = "ManagementGroupGroupQuotaSubscriptionId"`.
+
+**Assessment:** Simpler Legacy extension operation templates (verified).
 
 ### securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights
 
@@ -270,9 +462,22 @@ Standard Extension GET/DELETE resolve ExternalResourceAutomationRule. Automation
 | `ExternalResourceAutomationRule` | [`Microsoft.SecurityInsights.AutomationRules.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/AutomationRule.tsp#L79); [`Microsoft.SecurityInsights.AutomationRules.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/AutomationRule.tsp#L101); [`Microsoft.SecurityInsights.AutomationRules.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/AutomationRule.tsp#L117) |
 | `WorkspacesAutomationRules`      | [`Microsoft.SecurityInsights.AutomationRules.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/AutomationRule.tsp#L89); [`Microsoft.SecurityInsights.AutomationRules.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/AutomationRule.tsp#L117)                                                                                                                                                                                                                                                              |
 
-**Suggested fix:** Set ResourceName = "ExternalResourceAutomationRule" on AutomationRuleOps, or OverrideResourceName = "ExternalResourceAutomationRule" on createOrUpdate. Preserve the OperationalInsights workspace target, provider segments, CloudError override and OptionalRequestBody = true; the source explicitly retains this legacy template to allow an optional body.
+**Suggested fix:** Delete the `AutomationRuleOps` alias. The source keeps it only for the optional request body, which `Legacy.Extension.CreateOrReplaceSync` supports directly.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+createOrUpdate is Azure.ResourceManager.Legacy.Extension.CreateOrReplaceSync<
+  OperationalInsights,
+  AutomationRule,
+  Error = CloudError,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped with #13: rule clears; Swagger doc-only (PUT parameter descriptions now match GET/DELETE).
+
+**Fallback:** set `OverrideResourceName = "ExternalResourceAutomationRule"` on `createOrUpdate`.
+
+**Assessment:** Simpler Legacy extension operation template (verified).
 
 #### 13. Entity query legacy PUT disagrees with the external-resource extension identity
 
@@ -289,9 +494,22 @@ Standard Extension GET/DELETE identify ExternalResourceEntityQuery. EntityQuerie
 | `ExternalResourceEntityQuery` | [`Microsoft.SecurityInsights.EntityQueries.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/EntityQuery.tsp#L79); [`Microsoft.SecurityInsights.EntityQueries.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/EntityQuery.tsp#L97); [`Microsoft.SecurityInsights.EntityQueries.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/EntityQuery.tsp#L106) |
 | `EntityQueries`               | [`Microsoft.SecurityInsights.EntityQueries.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/EntityQuery.tsp#L88); [`Microsoft.SecurityInsights.EntityQueries.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/EntityQuery.tsp#L106)                                                                                                                                                                                                                                                        |
 
-**Suggested fix:** Set ResourceName = "ExternalResourceEntityQuery" on EntityQueriesOps's LegacyOperations instantiation, or OverrideResourceName on createOrUpdate. Preserve Request = CustomEntityQuery, OverrideErrorType = CloudError, the discriminated resource model and the workspace/provider route. Do not substitute the resource model for the custom request merely to adopt a standard template.
+**Suggested fix:** Delete `EntityQueriesOps` (and its `@@added`) and use `Legacy.Extension.CreateOrReplaceSync`, whose third argument keeps the custom `CustomEntityQuery` request body.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+createOrUpdate is Azure.ResourceManager.Legacy.Extension.CreateOrReplaceSync<
+  workspaceExternalResource,
+  EntityQuery,
+  CustomEntityQuery,
+  Error = CloudError
+>;
+```
+
+Prototyped with #12: rule clears; Swagger doc-only.
+
+**Fallback:** set `ResourceName = "ExternalResourceEntityQuery"` on `EntityQueriesOps`.
+
+**Assessment:** Simpler Legacy extension operation template (verified).
 
 #### 14. Sentinel onboarding legacy PUT disagrees with the external-resource extension identity
 
@@ -308,9 +526,22 @@ Standard Extension GET/DELETE identify ExternalResourceSentinelOnboardingState. 
 | `ExternalResourceSentinelOnboardingState` | [`Microsoft.SecurityInsights.SentinelOnboardingStates.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/SentinelOnboardingState.tsp#L117); [`Microsoft.SecurityInsights.SentinelOnboardingStates.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/SentinelOnboardingState.tsp#L135); [`Microsoft.SecurityInsights.SentinelOnboardingStates.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/SentinelOnboardingState.tsp#L144) |
 | `WorkspacesOnboardingStates`              | [`Microsoft.SecurityInsights.SentinelOnboardingStates.create`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/SentinelOnboardingState.tsp#L126); [`Microsoft.SecurityInsights.SentinelOnboardingStates.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights/SentinelOnboardingState.tsp#L144)                                                                                                                                                                                                                                                                                        |
 
-**Suggested fix:** Set ResourceName = "ExternalResourceSentinelOnboardingState" on SentinelOnboardingStatesOps, or OverrideResourceName on create. Preserve CloudError, OptionalRequestBody = true and the workspace extension path. The similarly named SentinelOnboardingStatesOperations helper is a separate LegacyOperations interface; leave unrelated operations/routes unchanged.
+**Suggested fix:** Use the name override: add `OverrideResourceName = "ExternalResourceSentinelOnboardingState"` to `create` (or `ResourceName` on `SentinelOnboardingStatesOps`). Leave `list` unchanged.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+create is SentinelOnboardingStatesOps.CreateOrUpdateSync<
+  SentinelOnboardingState,
+  ErrorType = CloudError,
+  OptionalRequestBody = true,
+  OverrideResourceName = "ExternalResourceSentinelOnboardingState"
+>;
+```
+
+Prototyped: rule clears; Swagger unchanged.
+
+**Why the override is preferred:** the list operation is single-page (C# alone marks it pageable through client.tsp), and there is no `Legacy.Extension` single-page list template. Removing the interface templates would need `Extension.ListByTarget` (pageable) plus replacing `@@markAsPageable(..., "csharp")` with `@@disablePageable(SentinelOnboardingStates.list, "!csharp")`. That was verified to work, but it is more complex than the override. A `Legacy.Extension` single-page list template (for example `Legacy.Extension.ListSinglePageByTarget`) would make the simpler fix possible and is worth requesting in Azure/typespec-azure.
+
+**Assessment:** Name override (verified); simpler template blocked by a library gap.
 
 ### storage/resource-manager/Microsoft.Storage/Storage
 
@@ -329,9 +560,27 @@ Standard GET/DELETE resolve ImmutabilityPolicy, while the legacy PUT derives Con
 | `ImmutabilityPolicy`             | [`Microsoft.Storage.ImmutabilityPolicies.getImmutabilityPolicy`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L81); [`Microsoft.Storage.ImmutabilityPolicies.deleteImmutabilityPolicy`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L119); [`Microsoft.Storage.ImmutabilityPolicies.lockImmutabilityPolicy`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L137); [`Microsoft.Storage.ImmutabilityPolicies.extendImmutabilityPolicy`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L156) |
 | `ContainersImmutabilityPolicies` | [`Microsoft.Storage.ImmutabilityPolicies.createOrUpdateImmutabilityPolicy`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L99); [`Microsoft.Storage.ImmutabilityPolicies.lockImmutabilityPolicy`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L137); [`Microsoft.Storage.ImmutabilityPolicies.extendImmutabilityPolicy`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/ImmutabilityPolicy.tsp#L156)                                                                                                                                                                                                                                                     |
 
-**Suggested fix:** Set ResourceName = "ImmutabilityPolicy" on CreateOrUpdateImmutabilityPolicyOps, or OverrideResourceName on createOrUpdateImmutabilityPolicy. Preserve both literal default segments, If-Match/ETag headers, ErrorResponse, the optional PUT body and compatibility-specific success responses. No singleton route or DELETE behavior change is needed.
+**Suggested fix:** Delete `CreateOrUpdateImmutabilityPolicyOps` and use `Legacy.CreateOrReplaceSync`, passing the `If-Match` header through `Parameters`.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+createOrUpdateImmutabilityPolicy is Azure.ResourceManager.Legacy.CreateOrReplaceSync<
+  ImmutabilityPolicy,
+  Parameters = {
+    /** (existing If-Match doc and #suppress) */
+    @header("If-Match")
+    `If-Match`?: string;
+  },
+  Response = ArmResourceUpdatedResponse<ImmutabilityPolicy> & ETagHeader,
+  Error = ErrorResponse,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped with #16: rule clears; Swagger unchanged.
+
+**Fallback:** set `ResourceName = "ImmutabilityPolicy"` on `CreateOrUpdateImmutabilityPolicyOps`.
+
+**Assessment:** Simpler Legacy operation template (verified).
 
 #### 16. Storage table legacy PUT/PATCH derive a collection-chain identity
 
@@ -348,9 +597,30 @@ Standard GET/DELETE identify Table, while TablesCreateOps PUT/PATCH identify Tab
 | `Table`               | [`Microsoft.Storage.Tables.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L71); [`Microsoft.Storage.Tables.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L99); [`Microsoft.Storage.Tables.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L108)    |
 | `TableServicesTables` | [`Microsoft.Storage.Tables.create`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L77); [`Microsoft.Storage.Tables.update`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L87); [`Microsoft.Storage.Tables.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/storage/resource-manager/Microsoft.Storage/Storage/Table.tsp#L108) |
 
-**Suggested fix:** Set ResourceName = "Table" on TablesCreateOps's LegacyOperations instantiation, or OverrideResourceName on both create and update. Preserve the literal tableServices/default segment, accountName/tableName constraints, CloudError, optional request bodies, response overrides and the existing third template argument; changing only the name does not require replacing those contracts.
+**Suggested fix:** Delete `TablesCreateOps` and use Legacy operation templates.
 
-**Assessment:** Direct logical-name alignment.
+```tsp
+create is Azure.ResourceManager.Legacy.CreateOrReplaceSync<
+  Table,
+  Response = ArmResourceUpdatedResponse<Table>,
+  Error = CloudError,
+  OptionalRequestBody = true
+>;
+@patch(#{ implicitOptionality: false })
+update is Azure.ResourceManager.Legacy.CustomPatchSync<
+  Table,
+  PatchModel = Table,
+  Response = ArmResourceUpdatedResponse<Table>,
+  Error = CloudError,
+  OptionalRequestBody = true
+>;
+```
+
+Prototyped with #15: rule clears; Swagger unchanged.
+
+**Fallback:** set `ResourceName = "Table"` on `TablesCreateOps`.
+
+**Assessment:** Simpler Legacy operation templates (verified).
 
 ## Supplemental dormant-source finding (excluded from baseline totals)
 
