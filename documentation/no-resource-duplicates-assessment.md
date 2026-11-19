@@ -6,8 +6,8 @@ Assessed upstream [Azure/azure-rest-api-specs main at 6e858cc12c77](https://gith
 
 **16 distinct violations across 9 TypeSpec service projects.** All 16 have suggested fixes, all verified locally:
 
-- 13 replace legacy interface templates with simpler operation templates.
-- 2 use a resource-name override, with the reason given.
+- 10 replace legacy interface templates with simpler operation templates.
+- 5 use a resource-name override, with the reason given. #2, #4 and #11 moved to overrides after CI showed the simpler templates changed parent-key parameter docs, patterns or locations.
 - 1 (#7) merges a version-split resource model by versioning its `properties` envelope.
 
 Each project now has a draft fix PR; see [Fix pull requests](#fix-pull-requests). 0 findings were hidden by source-level suppression. A separate conditional finding from dormant NetApp source, which isn't part of the spec project, is not included in these totals and needs no action. The coverage ledger accounts for 670 normal candidate entrypoints, one supplemental fragment check and 615 distinct declared services reached by successful compilations.
@@ -28,17 +28,17 @@ Each project now has a draft fix PR; see [Fix pull requests](#fix-pull-requests)
 
 All PRs are drafts. In each one the rule reports 0 hits, `tsp compile` succeeds and `npx tsv` passes.
 
-| PR                                                                 | Project              | Findings      | Swagger impact                                       |
-| ------------------------------------------------------------------ | -------------------- | ------------- | ---------------------------------------------------- |
-| [#48359](https://github.com/Azure/azure-rest-api-specs/pull/48359) | apimanagement        | #1            | None                                                 |
-| [#48355](https://github.com/Azure/azure-rest-api-specs/pull/48355) | containerapps        | #2, #3, #4    | Documentation only (parameter descriptions/pattern)  |
-| [#48354](https://github.com/Azure/azure-rest-api-specs/pull/48354) | confluent            | #5            | None                                                 |
-| [#48353](https://github.com/Azure/azure-rest-api-specs/pull/48353) | elastic              | #6            | Documentation only (`monitorName` description)       |
-| [#48356](https://github.com/Azure/azure-rest-api-specs/pull/48356) | managednetworkfabric | #7            | None                                                 |
-| [#48352](https://github.com/Azure/azure-rest-api-specs/pull/48352) | nginx                | #8, #9        | None                                                 |
-| [#48363](https://github.com/Azure/azure-rest-api-specs/pull/48363) | quota                | #10, #11      | Documentation only (`managementGroupId` description) |
-| [#48358](https://github.com/Azure/azure-rest-api-specs/pull/48358) | securityinsights     | #12, #13, #14 | Documentation only (#12)                             |
-| [#48357](https://github.com/Azure/azure-rest-api-specs/pull/48357) | storage              | #15, #16      | None                                                 |
+| PR                                                                 | Project              | Findings      | Swagger impact                                 |
+| ------------------------------------------------------------------ | -------------------- | ------------- | ---------------------------------------------- |
+| [#48359](https://github.com/Azure/azure-rest-api-specs/pull/48359) | apimanagement        | #1            | None                                           |
+| [#48355](https://github.com/Azure/azure-rest-api-specs/pull/48355) | containerapps        | #2, #3, #4    | None                                           |
+| [#48354](https://github.com/Azure/azure-rest-api-specs/pull/48354) | confluent            | #5            | None                                           |
+| [#48353](https://github.com/Azure/azure-rest-api-specs/pull/48353) | elastic              | #6            | Documentation only (`monitorName` description) |
+| [#48356](https://github.com/Azure/azure-rest-api-specs/pull/48356) | managednetworkfabric | #7            | None                                           |
+| [#48352](https://github.com/Azure/azure-rest-api-specs/pull/48352) | nginx                | #8, #9        | None                                           |
+| [#48363](https://github.com/Azure/azure-rest-api-specs/pull/48363) | quota                | #10, #11      | None                                           |
+| [#48358](https://github.com/Azure/azure-rest-api-specs/pull/48358) | securityinsights     | #12, #13, #14 | Documentation only (#12)                       |
+| [#48357](https://github.com/Azure/azure-rest-api-specs/pull/48357) | storage              | #15, #16      | None                                           |
 
 ## Method and interpretation
 
@@ -48,7 +48,7 @@ All PRs are drafts. In each one the rule reports 0 hits, `tsp compile` succeeds 
 - **Explicit evaluation:** the rule is disabled in the central ARM ruleset in this release. Other configured lint rules were disabled for this focused assessment; compiler/type-checker and library validation errors were still retained. The published rule listener was invoked directly before suppression, using the compiler's project-source diagnostic filter. Every finding was also passed through `program.reportDiagnostic` to identify source-suppressed findings without editing sources. Its output and suppression handling were checked against normal explicit linter enablement.
 - **Identity:** the rule compares ARM resource type and full instance path case-insensitively, retaining parameter names. It reports subsequent logical records with an authored GET or PUT identity operation; synthetic ancestors without their own identity operations are excluded. Different scopes, parent paths, extension targets, singleton names and differently named path parameters are not flattened together.
 - **Counting:** 16 baseline diagnostic occurrences were deduplicated to 16 findings by diagnostic source location, both logical names, resource type and full instance path. The supplemental graph reported 1 additional conditional finding. Each item lists the diagnostic's source plus the colliding records' associated operation sources; one finding can require changing more than the operation named by the warning.
-- **Fix status:** fixes prefer removing `Legacy.LegacyOperations`/`Legacy.ExtensionOperations` interface templates where they are used at the resource's standard `@autoRoute` path. Those templates exist for resources exposed at additional instance paths, and by design derive a different logical resource name, so mixing them with standard templates at the same path causes the duplicate. Standard operation templates (with `Error`/`Response`/`BaseParameters` parameters) or Legacy _operation_ templates (`Legacy.CreateOrReplaceSync/Async`, `Legacy.CustomPatchSync/Async`, `Legacy.Extension.*`, which support `OptionalRequestBody` and custom request models) produce the same HTTP API with less complexity. Upstream fixes [#48177](https://github.com/Azure/azure-rest-api-specs/pull/48177) and [#48277](https://github.com/Azure/azure-rest-api-specs/pull/48277) used this pattern. The `ResourceName`/`OverrideResourceName` override is the fallback, and is preferred only where a finding explains why. Every fix was prototyped locally against the snapshot: the rule was enabled, the project recompiled and re-emitted, and the Swagger diff inspected. Swagger was unchanged or changed only in documentation (parameter descriptions/patterns now matching the resource's other operations); no wire-contract changes. Snippets show only the changed operations; `/* existing ... */` marks arguments to keep as-is. Prototypes were reverted.
+- **Fix status:** fixes prefer removing `Legacy.LegacyOperations`/`Legacy.ExtensionOperations` interface templates where they are used at the resource's standard `@autoRoute` path. Those templates exist for resources exposed at additional instance paths, and by design derive a different logical resource name, so mixing them with standard templates at the same path causes the duplicate. Standard operation templates (with `Error`/`Response`/`BaseParameters` parameters) or Legacy _operation_ templates (`Legacy.CreateOrReplaceSync/Async`, `Legacy.CustomPatchSync/Async`, `Legacy.Extension.*`, which support `OptionalRequestBody` and custom request models) produce the same HTTP API with less complexity. Upstream fixes [#48177](https://github.com/Azure/azure-rest-api-specs/pull/48177) and [#48277](https://github.com/Azure/azure-rest-api-specs/pull/48277) used this pattern. The `ResourceName`/`OverrideResourceName` override is the fallback, and is preferred only where a finding explains why. Every fix was prototyped locally against the snapshot: the rule was enabled, the project recompiled and re-emitted, and the Swagger diff inspected. Swagger was unchanged or changed only in documentation (parameter descriptions/patterns now matching the resource's other operations); no wire-contract changes. CI's BreakingChange check treats an added parameter `pattern` or a changed parameter location as breaking. If the standard templates change a parent key that is copied from the resource's keys, `@@doc`/`@@pattern` can't target it (`invalid-ref`), so those findings use the name override. Snippets show only the changed operations; `/* existing ... */` marks arguments to keep as-is. Prototypes were reverted.
 
 ## Violations
 
@@ -123,7 +123,19 @@ The standard PUT identifies DaprComponent, while the connected-environment legac
 | `ConnectedEnvironmentsDaprComponents` | [`Microsoft.App.ConnectedEnvironmentsDaprComponents.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L81); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L93); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L99); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.listSecrets`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L108) |
 | `DaprComponent`                       | [`Microsoft.App.ConnectedEnvironmentsDaprComponents.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L87); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L99); [`Microsoft.App.ConnectedEnvironmentsDaprComponents.listSecrets`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/DaprComponent.tsp#L108)                                                                                                                                                                                                                                      |
 
-**Suggested fix:** Remove the connected-environment `LegacyOperations` aliases `DaprComponentOps` and `DaprComponentCustomErrorOps`. They are used at the same path as the standard PUT, so standard operation templates with an `Error` parameter express the same API.
+**Suggested fix (applied in #48355):** Set `ResourceName = "DaprComponent"` on both connected-environment aliases, `DaprComponentOps` and `DaprComponentCustomErrorOps`. Rule clears; Swagger is unchanged.
+
+```tsp
+alias DaprComponentOps = Azure.ResourceManager.Legacy.LegacyOperations<
+  { /* existing parent parameters */ },
+  { /* existing componentName key */ },
+  ResourceName = "DaprComponent"
+>;
+```
+
+**Why not the simpler templates:** the standard templates take the parent key `connectedEnvironmentName` from the resource's `KeysOf`/`ParentKeysOf`, so its Swagger description changes. LintDiff and BreakingChange both failed CI on that change. Those keys are copied by a decorator, so `@@doc(Op::parameters.connectedEnvironmentName, ...)` fails with `invalid-ref`. An explicit `BaseParameters` model fails with `duplicate-property`. The original documentation can't be restored with the standard templates.
+
+**Alternative (rejected):** remove the aliases and use standard operation templates with an `Error` parameter.
 
 ```tsp
 get is ArmResourceRead<DaprComponent, Error = DefaultErrorResponse>;
@@ -143,11 +155,9 @@ listSecrets is ArmResourceActionSync<
 
 Keep the managed-environment `DaprComponentOperationGroupOps`, which is on a different path.
 
-Prototyped together with #3 and #4: rule clears for all versions; Swagger is doc-only (`connectedEnvironmentName` description becomes "Name of the connectedEnvironment.", matching the PUT); no pageability change.
+With the alternative, the rule clears, but `connectedEnvironmentName` gets the description "Name of the connectedEnvironment.", which fails CI.
 
-**Fallback:** set `ResourceName = "DaprComponent"` on both aliases.
-
-**Assessment:** Simpler standard templates (verified).
+**Assessment:** Resource name override (verified in #48355; Swagger unchanged).
 
 #### 3. Logic app extension legacy PUTs derive a plural logical name
 
@@ -208,21 +218,11 @@ ManagedCertificateOps derives ManagedEnvironmentsManagedCertificates for PUT, wh
 | `ManagedCertificate`                     | [`Microsoft.App.ManagedCertificates.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L58); [`Microsoft.App.ManagedCertificates.update`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L83); [`Microsoft.App.ManagedCertificates.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L92); [`Microsoft.App.ManagedCertificates.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L98) |
 | `ManagedEnvironmentsManagedCertificates` | [`Microsoft.App.ManagedCertificates.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L65); [`Microsoft.App.ManagedCertificates.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/app/resource-manager/Microsoft.App/ContainerApps/ManagedCertificate.tsp#L98)                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
-**Suggested fix:** Remove `ManagedCertificateOps` and use `Legacy.CreateOrReplaceAsync`, which supports an optional request body without the interface template.
+**Suggested fix (applied in #48355):** Set `ResourceName = "ManagedCertificate"` on `ManagedCertificateOps`. Rule clears; Swagger is unchanged.
 
-```tsp
-createOrUpdate is Azure.ResourceManager.Legacy.CreateOrReplaceAsync<
-  ManagedCertificate,
-  Response = /* existing success/error union */,
-  OptionalRequestBody = true
->;
-```
+**Why not the simpler template:** `Legacy.CreateOrReplaceAsync` takes `environmentName` from the parent `ManagedEnvironment` key. That adds the pattern `^[-\w\._\(\)]+$` to the PUT parameter, which BreakingChange reports as ConstraintChanged, and changes its description. As with #2, the copied parent key can't be targeted by `@@doc`/`@@pattern`, and an explicit `BaseParameters` model fails with `duplicate-property`.
 
-Prototyped: rule clears; Swagger doc-only (PUT `environmentName` now has the same description and `^[-\w\._\(\)]+$` pattern as GET/PATCH/DELETE).
-
-**Fallback:** set `ResourceName = "ManagedCertificate"` on `ManagedCertificateOps`.
-
-**Assessment:** Simpler Legacy operation template (verified).
+**Assessment:** Resource name override (verified in #48355; Swagger unchanged).
 
 ### confluent/resource-manager/Microsoft.Confluent/Confluent
 
@@ -455,7 +455,7 @@ update is Azure.ResourceManager.Legacy.Extension.CustomPatchAsync<
 >;
 ```
 
-Prototyped with #11: rule clears; Swagger doc-only (`managementGroupId` description now matches GET/DELETE).
+Applied in #48363: rule clears; Swagger unchanged.
 
 **Fallback:** set `ResourceName = "ManagementGroupGroupQuotasEntity"` on `GroupQuotasEntitiesOps`.
 
@@ -476,7 +476,11 @@ Standard Extension GET/DELETE resolve ManagementGroupGroupQuotaSubscriptionId, w
 | `ManagementGroupGroupQuotaSubscriptionId` | [`Microsoft.Quota.GroupQuotaSubscriptionIds.get`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L72); [`Microsoft.Quota.GroupQuotaSubscriptionIds.delete`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L110); [`Microsoft.Quota.GroupQuotaSubscriptionIds.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L122)           |
 | `GroupQuotasSubscriptions`                | [`Microsoft.Quota.GroupQuotaSubscriptionIds.createOrUpdate`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L81); [`Microsoft.Quota.GroupQuotaSubscriptionIds.update`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L98); [`Microsoft.Quota.GroupQuotaSubscriptionIds.list`](https://github.com/Azure/azure-rest-api-specs/blob/6e858cc12c77517bee29d619fcfe16e0e2d378d9/specification/quota/resource-manager/Microsoft.Quota/Quota/GroupQuotaSubscriptionId.tsp#L122) |
 
-**Suggested fix:** Delete `GroupQuotaSubscriptionIdsOps` and use `Legacy.Extension` operation templates, keeping the bodyless PUT/PATCH.
+**Suggested fix (applied in #48363):** Keep `GroupQuotaSubscriptionIdsOps` and add `ResourceName = "ManagementGroupGroupQuotaSubscriptionId"`. This is the name the standard Extension GET/DELETE derive, so the override must match it rather than the model name. Rule clears; Swagger is unchanged.
+
+**Why not the simpler templates:** the `Legacy.Extension` templates make `subscriptionId` (the extension resource key) an inline method parameter, replacing the common client `$ref`. BreakingChange reports this as 4x ParameterLocationHasChanged.
+
+**Alternative (rejected):**
 
 ```tsp
 createOrUpdate is Azure.ResourceManager.Legacy.Extension.CreateOrReplaceAsync<
@@ -493,11 +497,7 @@ update is Azure.ResourceManager.Legacy.Extension.CustomPatchAsync<
 >;
 ```
 
-Prototyped with #10: rule clears; Swagger doc-only (`managementGroupId` description; `subscriptionId` `$ref` inlined to an identical definition).
-
-**Fallback:** set `ResourceName = "ManagementGroupGroupQuotaSubscriptionId"`.
-
-**Assessment:** Simpler Legacy extension operation templates (verified).
+**Assessment:** Resource name override (verified in #48363; Swagger unchanged).
 
 ### securityinsights/resource-manager/Microsoft.SecurityInsights/SecurityInsights
 
