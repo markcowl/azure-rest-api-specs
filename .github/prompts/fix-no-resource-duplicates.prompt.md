@@ -116,7 +116,8 @@ Read the installed template signatures rather than guessing operation names or a
    contract. Remove a redundant legacy interface and its augments only after checking all uses.
 2. **Prefer Legacy operation templates over Legacy interface templates** for optional/custom
    PUT or PATCH bodies, custom errors/responses, and equivalent standard paths. Examples include
-   `Legacy.CreateOrReplaceSync/Async`, `Legacy.CustomPatchSync/Async`, and `Legacy.Extension.*`.
+   `Legacy.CreateOrReplaceSync/Async`, `Legacy.CustomPatchSync/Async`, `Legacy.Extension.*`,
+   and `Legacy.PrivateEndpoints.*`.
    Preserve body optionality and all existing headers, decorators, versioning, and final-state
    behavior. Interface argument names such as `ErrorType` may differ from operation `Error`.
 3. **Use a logical-name override when simpler templates cannot preserve the contract.**
@@ -125,9 +126,11 @@ Read the installed template signatures rather than guessing operation names or a
    when it is needed or is simpler than recreating an unsupported operation.
 
    Known reasons to prefer an override:
-   - Private endpoint PUTs with a distinct request model: the current `PrivateEndpoints` templates
-     have no `Request` argument. Their `Parameters` argument cannot replace their existing body.
-     Instantiating them with the read resource does not preserve a different PUT request schema.
+   - Private endpoint PUTs for which the standard templates cannot preserve a distinct request
+     model: the current `PrivateEndpoints` templates have no `Request` argument, and `Parameters`
+     cannot replace their existing body. Check `Legacy.PrivateEndpoints.CreateOrReplace*`, which
+     accepts `Request`, before choosing a fallback; verify its logical resource identity, route,
+     and key metadata too. A matching request body alone does not prove equivalence.
    - Single-page extension list operations when no matching Legacy extension operation exists.
    - Parent-key documentation, constraints, or SDK parameter locations that change under standard
      templates. Keys injected by `KeysOf`/`ParentKeysOf` may not be addressable through
