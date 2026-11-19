@@ -9,19 +9,31 @@ and generated SDK surface. Do not replace assessment with a text search for lega
 
 ## Inputs and boundaries
 
-Use the repository, fork, and baseline supplied by the user. If absent, establish them before
+Use the repository and baseline supplied by the user. If absent, establish them before
 making changes. Common targets are `Azure/azure-rest-api-specs` / `main` and
 `Azure/azure-rest-api-specs-pr` / `RPSaaSMaster`; the private repository's default branch is not
 necessarily the requested branch.
 
-- Record upstream repository, exact baseline SHA, fork, report branch, and report path.
-- Verify the fork belongs to the user and has the expected upstream parent. For a private
+- Record upstream repository, exact baseline SHA, PR head repository, report repository,
+  report branch, and report path.
+- **PR head repository depends on the target:**
+  - `Azure/azure-rest-api-specs` (public): push fix branches to the **user's fork** and open PRs
+    from the fork. Never push fix branches to the public upstream.
+  - `Azure/azure-rest-api-specs-pr` (private): policy forbids PRs from forks. Push fix branches
+    **directly to `Azure/azure-rest-api-specs-pr`** and open PRs from that same repository.
+    Never open a private-repo PR whose head is a fork.
+- The private report may live on a branch of the user's private fork only if it is never
+  proposed as a PR. If the report itself must be proposed as a PR, publish it on a uniquely
+  named branch in `Azure/azure-rest-api-specs-pr` instead.
+- Verify any fork belongs to the user and has the expected upstream parent. For a private
   upstream, verify the fork is private. Keep private source, logs, reports, and PRs private;
   never publish them to the public repository, public gists, or external services.
 - Default to assessment followed by draft fix PRs. If the user asks for assessment only, stop
   after publishing the report. An analysis report is not permission to fix unrelated issues.
 - Keep report/prompt changes on an artifact branch; base each fix branch on the pinned upstream
   baseline, not on the artifact branch or another project's fix branch.
+- Follow the [branch safeguards](#branch-naming-and-push-safeguards) for every branch this
+  workflow creates, pushes, or updates, in either repository.
 - An earlier [assessment](../../documentation/no-resource-duplicates-assessment.md) may provide
   examples, but it is not evidence that the current target has the same findings.
 
@@ -44,6 +56,72 @@ Do not delegate shared-checkout setup to workers.
    install dependencies, alter shared links, or change global/shared Git settings.
 6. Use rollback tags before deploying changes across multiple branches. Never force-push
    without authorization; if authorized, verify the GitHub PR diff afterward.
+
+## Branch naming and push safeguards
+
+These rules are mandatory and override any convenience shortcut. Stop and report rather than
+improvise if a check fails.
+
+### Protected branches: never commit to, push to, or update
+
+Treat each of these as protected in every repository and fork, compared **case-insensitively**:
+
+- `main`, `master`, and the repository's default branch (query it; do not assume).
+- `RPSaaSMaster`, `RPSaaSDev`, `RPSaaSCanary`, `ARMCoreRPDev`, `InternalARMContracts`.
+- `release-*`, `merge-main-to-*`, and `dependabot/*`.
+- The selected baseline branch, whatever its name.
+- Any branch protected by a branch protection rule or active ruleset. Query
+  `gh api repos/<owner>/<repo>/rulesets` and `gh api repos/<owner>/<repo>/branches?protected=true`
+  for both the PR head repository and the upstream. If the query fails, assume every branch
+  outside the generated prefix below is protected.
+
+A protected branch may be used only as a read-only **baseline** (`git fetch`, then branch from the
+pinned SHA) and as a PR **base**. It must never be a checkout's push target or a PR head.
+
+### Unique-by-design branch names
+
+Generate every new branch name with this pattern, in this order, and never type one by hand:
+
+```text
+users/<github-login>/nrd/<kind>-<service>-<baseline-sha8>-<utc-yyyyMMddTHHmmssZ>
+```
+
+- `<github-login>`: the lowercase `gh api user --jq .login` result. The `users/<login>/` prefix is a
+  namespace no protected branch can occupy, and it matches existing `azure-rest-api-specs-pr` use.
+- `<kind>`: `fix` for fix PRs, `report` for report artifacts, `prompt` for prompt artifacts.
+- `<service>`: the lowercase specification folder, reduced to `[a-z0-9-]`; use `all` for reports.
+- `<baseline-sha8>`: the first eight characters of the pinned upstream baseline SHA.
+- `<utc-...>`: the UTC creation timestamp taken once per run (for example `20261119T235959Z`).
+
+Example: `users/markcowl/nrd/fix-confluent-36b384e7-20261119T235959Z`.
+
+Do not include protected branch names, or their casing variants, as name segments.
+Before creating or pushing a generated name, verify all of the following; stop if any fails:
+
+1. It matches
+   `^users/<login>/nrd/(fix|report|prompt)-[a-z0-9-]+-[0-9a-f]{8}-[0-9]{8}T[0-9]{6}Z$`.
+2. It does not match any protected name or pattern, case-insensitively.
+3. `git ls-remote --heads <head-remote> refs/heads/<name>` is empty, so the branch is new.
+   If it exists, generate a new timestamp; never reuse or overwrite it.
+4. `git -C <checkout> rev-parse --abbrev-ref HEAD` equals `<name>`.
+
+### Push rules
+
+- Push only with an explicit full refspec, `git -C <checkout> push <head-remote>
+  HEAD:refs/heads/<name>`. Never run bare `git push`, `--all`, `--mirror`, `--tags`,
+  `--force`, or `--delete` against a remote branch you did not create in this workflow.
+- `<head-remote>` must resolve to the PR head repository chosen in
+  [Inputs and boundaries](#inputs-and-boundaries): the user's fork for public PRs, or
+  `Azure/azure-rest-api-specs-pr` for private PRs. Verify with
+  `git remote get-url <head-remote>` before every push.
+- In a new independent clone, set `push.default` to `nothing` and do not create tracking for
+  protected branches. Do not change configuration in a shared checkout.
+- Existing PRs found during deduplication may be updated only if their head branch is in the
+  correct head repository, is not protected, and was created by this workflow or the user
+  explicitly authorizes the update. Otherwise create a new uniquely named branch and PR.
+- After pushing, confirm with `gh api repos/<head-repo>/branches/<url-encoded-name>` that the remote head
+  SHA equals the local commit. Confirm that every protected branch head is unchanged from
+  before the run.
 
 ## 2. Discover and evaluate the complete source graph
 
@@ -91,7 +169,9 @@ injecting an otherwise unimported file is supplemental, not a baseline violation
 
 ## 3. Write the assessment before fixing
 
-Publish a Markdown report on the artifact branch of the user's fork. Include:
+Publish a Markdown report on a uniquely named artifact branch
+(`users/<login>/nrd/report-all-...`) in the report repository chosen in
+[Inputs and boundaries](#inputs-and-boundaries). Include:
 
 - The pinned upstream SHA and source links; toolchain and exact reproducible commands.
 - Candidate counts, distinct successful services, failures/exclusions, suppressed findings, and
@@ -170,16 +250,24 @@ Keep unrelated existing warnings and suppression cleanups out of these PRs.
 
 ## 6. Open one draft PR per affected project
 
-Search for existing open fix PRs first; update them rather than creating duplicates. For new
-fix branches, use `fix-no-resource-duplicates-<service>` from the pinned upstream baseline.
+Search for existing open fix PRs first. Update one rather than creating a duplicate only when
+the [push rules](#push-rules) allow it. Create each new fix branch from the pinned upstream baseline
+SHA with a generated `users/<login>/nrd/fix-<service>-<baseline-sha8>-<utc>` name, after passing every
+[branch safeguard](#unique-by-design-branch-names).
 Stage only the assigned project's changes. Commit with a precise service-specific message and:
 
 ```text
 Co-authored-by: Copilot App <223556219+Copilot@users.noreply.github.com>
 ```
 
-Push only to the user's fork. Create **draft** PRs against the selected upstream repository and
-selected baseline branch, not an assumed default branch. Before writing the PR body, inspect
+Push only to the PR head repository: the user's fork for `Azure/azure-rest-api-specs`, or
+`Azure/azure-rest-api-specs-pr` **itself** (never a fork) for private PRs. Create
+**draft** PRs against the selected upstream repository and selected baseline branch, not an
+assumed default branch. For the private repository, create the PR with
+`gh pr create -R Azure/azure-rest-api-specs-pr --head <generated-branch> --base <baseline>`, without
+an `owner:` prefix. Then verify with `gh pr view` that `headRepositoryOwner` is `Azure`,
+`isCrossRepository` is `false`, and the base is the selected baseline. Close and recreate any
+private PR that fails this check. Before writing the PR body, inspect
 `.github/pull_request_template.md` and `.github/PULL_REQUEST_TEMPLATE/`; use the applicable
 template, preserving headings, comments, checklists, and ordering. Do not overwrite another
 session's PR edits.
