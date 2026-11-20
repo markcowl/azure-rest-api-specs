@@ -159,7 +159,24 @@ the difference; retain compilation failures as coverage limits.
 5. Save a coverage ledger: entrypoint, service declarations, compiler errors, rule diagnostics,
    suppression status, and compiled source paths. An unsuccessful compilation is **blocked**,
    never **clean**; partial findings from it must be marked incomplete.
-6. Deduplicate by diagnostic source location, colliding logical names, ARM type, and full
+6. Classify only the **blocked** candidates; successful compilations need no further
+   classification. For each blocked candidate, decide whether it is a spec, and if so whether
+   its failure is exempt by design:
+   - A spec is a directory containing a file named exactly `main.tsp` and a `tspconfig.yaml`.
+     A `main.tsp` with no `tspconfig.yaml` in the same directory (a shared or partial fragment)
+     and alternate names (`main-private.tsp`, `main-pvt.tsp`, `main.<anything>.tsp`,
+     `client.tsp`) are not automatic spec entrypoints. Report blocked non-spec files separately;
+     they are not coverage gaps.
+   - A blocked spec is exempt by design when it is listed in the root
+     `specification/suppressions.yaml` validation-failure list (for example
+     `tool: TypeSpecValidationAll`), or when any enclosing `suppressions.yaml` (service or
+     project level) has a `tool: TypeSpecValidation` entry whose `path` matches the spec and
+     that has no `rules:` list or lists a compile-related rule. Suppressions that list only
+     unrelated rules (for example tspconfig option rules such as `SdkTspConfigValidation`) do
+     not exempt a compile failure. Read suppressions at the assessed SHA.
+   - Any blocked spec that is not exempt is a genuine coverage gap. Record its compiler
+     errors in the report.
+7. Deduplicate by diagnostic source location, colliding logical names, ARM type, and full
    instance path. Retain the rule's case-insensitive semantics and parameter names. Do not merge
    different scopes, extension targets, singleton names, or parent paths.
 
