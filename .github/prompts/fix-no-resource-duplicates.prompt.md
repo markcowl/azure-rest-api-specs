@@ -174,6 +174,9 @@ the difference; retain compilation failures as coverage limits.
      compiler handles circular imports), so either file loads the same graph. Confirm from each
      compiled source graph that `client.tsp` is included, directly or transitively; compile
      `client.tsp` explicitly when it isn't, or when it is the only entrypoint.
+   - Repository policy makes `main.tsp` the only entrypoint (`main.tsp` imports `client.tsp`);
+     separate `client.tsp` entrypoints are legacy. Still analyze a `client.tsp`-only spec, but
+     note it in the report as an exception to the policy.
    - A blocked spec is exempt by design when it is listed in the root
      `specification/suppressions.yaml` validation-failure list (for example
      `tool: TypeSpecValidationAll`), or when any enclosing `suppressions.yaml` (service or
