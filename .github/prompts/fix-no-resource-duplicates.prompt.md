@@ -162,11 +162,18 @@ the difference; retain compilation failures as coverage limits.
 6. Classify only the **blocked** candidates; successful compilations need no further
    classification. For each blocked candidate, decide whether it is a spec, and if so whether
    its failure is exempt by design:
-   - A spec is a directory containing a file named exactly `main.tsp` and a `tspconfig.yaml`.
-     A `main.tsp` with no `tspconfig.yaml` in the same directory (a shared or partial fragment)
-     and alternate names (`main-private.tsp`, `main-pvt.tsp`, `main.<anything>.tsp`,
-     `client.tsp`) are not automatic spec entrypoints. Report blocked non-spec files separately;
-     they are not coverage gaps.
+   - A spec is a directory containing a `tspconfig.yaml` and an automatic entrypoint: a file
+     named exactly `client.tsp` or `main.tsp`. A `tspconfig.yaml` with `kind: project` can also
+     name an `entrypoint` (see the TypeSpec
+     [project configuration](https://typespec.io/docs/handbook/configuration/configuration/#project-configuration)
+     docs); honor it if present, though this is rare. A `main.tsp` with no `tspconfig.yaml` in
+     the same directory (a shared or partial fragment) and alternate names (`main-private.tsp`,
+     `main-pvt.tsp`, `main.<anything>.tsp`) are not automatic spec entrypoints. Report blocked
+     non-spec files separately; they are not coverage gaps.
+   - When a directory has both `client.tsp` and `main.tsp`, they usually import each other (the
+     compiler handles circular imports), so either file loads the same graph. Confirm from each
+     compiled source graph that `client.tsp` is included, directly or transitively; compile
+     `client.tsp` explicitly when it isn't, or when it is the only entrypoint.
    - A blocked spec is exempt by design when it is listed in the root
      `specification/suppressions.yaml` validation-failure list (for example
      `tool: TypeSpecValidationAll`), or when any enclosing `suppressions.yaml` (service or
