@@ -5,6 +5,8 @@
     "repository": "Azure/azure-rest-api-specs",
     "pullRequest": 47722,
     "revision": "c09430b2a48b813af056e78c409af4d431f2dbc8",
+    "livePullRequestHeadVerified": true,
+    "livePullRequestHeadRevision": "c09430b2a48b813af056e78c409af4d431f2dbc8",
     "project": "specification/network/resource-manager/Microsoft.Network/Network/Network",
     "entrypoint": "main.tsp",
     "entrypointImportsClient": true
@@ -33,7 +35,50 @@
   },
   "diagnostics": {
     "compiler": 0,
-    "http": 0
+    "http": 0,
+    "explicitLinterWarnings": 4
+  },
+  "explicitLinterRules": {
+    "configuration": "isolated temporary tspconfig with both rules explicitly enabled",
+    "command": "node node_modules\\@typespec\\compiler\\cmd\\tsp.js compile specification\\network\\resource-manager\\Microsoft.Network\\Network\\Network --no-emit --config <temporary-tspconfig> --pretty=false",
+    "@azure-tools/typespec-azure-resource-manager/no-resource-duplicates": {
+      "warnings": 1,
+      "diagnostics": [
+        {
+          "file": "StaticCidr.tsp",
+          "line": 78,
+          "target": "StaticCidrs.create",
+          "message": "Resource 'IpamPoolsStaticCidrs' resolves to the same resource type 'Microsoft.Network/networkManagers/ipamPools/staticCidrs' and instance path '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/networkManagers/{networkManagerName}/ipamPools/{poolName}/staticCidrs/{staticCidrName}' as resource 'StaticCidr'. Use consistent resource names and operation templates so this instance resolves to a single resource.",
+          "reportMapping": "StaticCidr duplicate resource key and persistent duplicate list association"
+        }
+      ]
+    },
+    "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict": {
+      "warnings": 3,
+      "diagnostics": [
+        {
+          "file": "ExpressRouteCrossConnection.tsp",
+          "line": 128,
+          "target": "ExpressRouteCrossConnections.listArpTable",
+          "message": "Resources must have unique names. Resource name 'ExpressRouteCrossConnection' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCrossConnections/{crossConnectionName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCrossConnections/{crossConnectionName}/peerings/{peeringName}/arpTables/{devicePath}'. Provide a unique resource name when instantiating the resource operations.",
+          "reportMapping": "False ExpressRouteCrossConnection resource occurrence for the arpTables action route"
+        },
+        {
+          "file": "ExpressRouteCrossConnection.tsp",
+          "line": 188,
+          "target": "ExpressRouteCrossConnections.listRoutesTable",
+          "message": "Resources must have unique names. Resource name 'ExpressRouteCrossConnection' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCrossConnections/{crossConnectionName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCrossConnections/{crossConnectionName}/peerings/{peeringName}/routeTables/{devicePath}'. Provide a unique resource name when instantiating the resource operations.",
+          "reportMapping": "False ExpressRouteCrossConnection resource occurrence for the routeTables action route"
+        },
+        {
+          "file": "ExpressRouteCrossConnection.tsp",
+          "line": 158,
+          "target": "ExpressRouteCrossConnections.listRoutesTableSummary",
+          "message": "Resources must have unique names. Resource name 'ExpressRouteCrossConnection' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCrossConnections/{crossConnectionName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/expressRouteCrossConnections/{crossConnectionName}/peerings/{peeringName}/routeTablesSummary/{devicePath}'. Provide a unique resource name when instantiating the resource operations.",
+          "reportMapping": "False ExpressRouteCrossConnection resource occurrence for the routeTablesSummary action route"
+        }
+      ]
+    }
   },
   "coverage": {
     "httpOperations": 841,
@@ -142,8 +187,10 @@
     "canonicalKeys": "passed",
     "sorting": "passed",
     "sourceLinks": "passed",
+    "sourceLinksOnIdentifyingText": "passed",
+    "explicitResourceRules": "passed with 4 expected warnings",
     "duplicateAnalysis": "passed",
     "assessmentLinks": "passed",
-    "validatedSourceLinkOccurrences": 1333
+    "validatedSourceLinkOccurrences": 1342
   }
 }
