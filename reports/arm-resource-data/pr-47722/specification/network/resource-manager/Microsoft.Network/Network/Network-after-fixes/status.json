@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "status": "succeeded",
+  "source": {
+    "repository": "markcowl/azure-rest-api-specs",
+    "pullRequest": 15,
+    "revision": "f5785b4fb704ad34a9b0835545274eeafe0c397e",
+    "baseBranch": "copilot/network-nested-project-consolidation",
+    "baseRevision": "c09430b2a48b813af056e78c409af4d431f2dbc8",
+    "upstreamPullRequest": "Azure/azure-rest-api-specs#47722",
+    "project": "specification/network/resource-manager/Microsoft.Network/Network/Network",
+    "entrypoint": "main.tsp",
+    "entrypointImportsClient": true
+  },
+  "exporter": {
+    "repository": "Azure/typespec-azure",
+    "mainBaseRevision": "d1e6acc8738ce9684c5f51eee13bf6e05ac6b1d0",
+    "revision": "8719b3d95d76a5b2144a3a5fcdcf184b665ebb6d",
+    "packages": {
+      "@azure-tools/typespec-data-exporter": "0.1.0",
+      "@azure-tools/typespec-arm-resource-data": "0.1.0",
+      "@azure-tools/typespec-azure-resource-manager": "0.74.0"
+    },
+    "overlaidPackages": [
+      "@azure-tools/typespec-data-exporter",
+      "@azure-tools/typespec-arm-resource-data",
+      "@azure-tools/typespec-azure-resource-manager"
+    ],
+    "azureCoreOverlayRequired": false
+  },
+  "toolchain": {
+    "node": "24.14.1",
+    "pnpm": "12.6.0",
+    "typespecCompiler": "1.18.0",
+    "command": "node node_modules\\@typespec\\compiler\\cmd\\tsp.js compile specification\\network\\resource-manager\\Microsoft.Network\\Network\\Network --emit @azure-tools/typespec-arm-resource-data --output-dir <temporary-output> --option \"@azure-tools/typespec-arm-resource-data.source-url-template=https://github.com/Azure/azure-rest-api-specs/blob/{revision}/specification/network/resource-manager/Microsoft.Network/Network/Network/{path}#L{line}\" --option \"@azure-tools/typespec-arm-resource-data.source-revision=f5785b4fb704ad34a9b0835545274eeafe0c397e\""
+  },
+  "diagnostics": {
+    "compiler": 0,
+    "http": 0,
+    "explicitLinterWarnings": 0
+  },
+  "explicitLinterRules": {
+    "configuration": "isolated temporary tspconfig with both rules explicitly enabled",
+    "command": "node node_modules\\@typespec\\compiler\\cmd\\tsp.js compile specification\\network\\resource-manager\\Microsoft.Network\\Network\\Network --no-emit --config <temporary-tspconfig>",
+    "@azure-tools/typespec-azure-resource-manager/no-resource-duplicates": {
+      "warnings": 0,
+      "diagnostics": []
+    },
+    "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict": {
+      "warnings": 0,
+      "diagnostics": []
+    }
+  },
+  "coverage": {
+    "httpOperations": 841,
+    "resolvedResourceOccurrences": 141,
+    "uniqueResourceKeys": 140,
+    "resourceAssociatedOperationRows": 800,
+    "uniqueResolvedOperationObjects": 800,
+    "uniqueCanonicalOperationKeys": 797,
+    "providerOperations": 28,
+    "providerOperationsWithArmListMetadata": 0,
+    "armMetadataOperationsAbsentFromResolvedAndProviderOutput": 13,
+    "uniqueHttpOperationsAbsentFromCsv": 41
+  },
+  "reports": {
+    "resources": {
+      "file": "resources.csv",
+      "rows": 141,
+      "expectedHeader": [
+        "resourceKey",
+        "resourceType",
+        "resourceInstancePath",
+        "resourceName",
+        "resourceDefinition",
+        "duplicateResourceError",
+        "duplicateResourceErrorAnalysis",
+        "bicepResource",
+        "readOperation",
+        "createOrUpdateOperation"
+      ],
+      "sortedWithEmitterComparator": true,
+      "sourceLinksPinnedToSourceRevision": true
+    },
+    "operations": {
+      "file": "operations.csv",
+      "rows": 800,
+      "expectedHeader": [
+        "operationKey",
+        "operationName",
+        "operationVerb",
+        "operationPath",
+        "operationKind",
+        "operationDefinition",
+        "resourceKey",
+        "resourceType",
+        "resourceInstancePath",
+        "resourceName"
+      ],
+      "sortedWithEmitterComparator": true,
+      "sourceLinksPinnedToSourceRevision": true
+    }
+  },
+  "resolvedFindings": {
+    "staticCidrResourceRows": 1,
+    "falseExpressRouteCrossConnectionResourceRows": 0,
+    "expressRouteCrossConnectionPeeringResourceRows": 1,
+    "providerResourceListsAssociated": 49,
+    "lostBaselineOperationKeys": 0
+  },
+  "duplicates": {
+    "resourceKeys": [
+      {
+        "resourceKey": "microsoft.network/expressrouteports|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/expressrouteports/{}",
+        "rows": 2,
+        "resourceNames": [
+          "ExpressRoutePort",
+          "ExpressRoutePort"
+        ],
+        "classification": "residual exact duplicate occurrence"
+      }
+    ],
+    "operationKeys": [
+      {
+        "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/bastionhosts/{}",
+        "rows": 2,
+        "classification": "expected version-disjoint alternatives at 2026-01-01"
+      },
+      {
+        "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/servicegateways/{}/updateaddresslocations",
+        "rows": 2,
+        "classification": "expected version-disjoint alternatives at 2025-09-01"
+      },
+      {
+        "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/servicegateways/{}/updateservices",
+        "rows": 2,
+        "classification": "expected version-disjoint alternatives at 2025-09-01"
+      }
+    ]
+  },
+  "residuals": {
+    "providerOperations": 28,
+    "connectionAnalyzerResolved": false,
+    "expressRoutePortOccurrences": 2,
+    "unassociatedArmMetadata": [
+      "ExpressRouteGateways.listByResourceGroup",
+      "ExpressRouteGateways.listBySubscription",
+      "FirewallPolicyIdpsSignaturesOverrides.list",
+      "NetworkSecurityPerimeterOperationStatusesOperationGroup.get",
+      "SwapResources.list",
+      "VmssNetworkInterfaceIPConfigurations.getVirtualMachineScaleSetIpConfiguration",
+      "VmssNetworkInterfaceIPConfigurations.listVirtualMachineScaleSetIpConfigurations",
+      "VmssNetworkInterfaces.getVirtualMachineScaleSetNetworkInterface",
+      "VmssNetworkInterfaces.listVirtualMachineScaleSetVMNetworkInterfaces",
+      "VmssNetworkInterfacesOperationGroup.listVirtualMachineScaleSetNetworkInterfaces",
+      "VmssPublicIPAddresses.getVirtualMachineScaleSetPublicIPAddress",
+      "VmssPublicIPAddresses.listVirtualMachineScaleSetVMPublicIPAddresses",
+      "VmssPublicIPAddressesOperationGroup.listVirtualMachineScaleSetPublicIPAddresses"
+    ]
+  },
+  "baselineComparison": {
+    "baselineRevision": "c09430b2a48b813af056e78c409af4d431f2dbc8",
+    "resourceRows": {
+      "before": 145,
+      "after": 141
+    },
+    "uniqueResourceKeys": {
+      "before": 143,
+      "after": 140
+    },
+    "operationRows": {
+      "before": 752,
+      "after": 800
+    },
+    "uniqueCanonicalOperationKeys": {
+      "before": 748,
+      "after": 797
+    },
+    "providerOperations": {
+      "before": 77,
+      "after": 28
+    },
+    "providerResourceLists": {
+      "before": 49,
+      "after": 0
+    },
+    "unassociatedArmMetadata": {
+      "before": 13,
+      "after": 13
+    }
+  },
+  "validation": {
+    "csvSchemas": "passed",
+    "csvParsing": "passed",
+    "canonicalKeys": "passed",
+    "sorting": "passed",
+    "sourceLinks": "passed",
+    "sourceLinkOccurrences": 1192,
+    "uniqueSourceLinks": 931,
+    "explicitResourceRules": "passed with zero diagnostics",
+    "generatedOpenApiUnchanged": true,
+    "comparisonAssertions": "passed"
+  }
+}
