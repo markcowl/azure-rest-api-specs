@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "status": "succeeded",
+  "source": {
+    "repository": "Azure/azure-rest-api-specs",
+    "pullRequest": 47722,
+    "revision": "c09430b2a48b813af056e78c409af4d431f2dbc8",
+    "project": "specification/network/resource-manager/Microsoft.Network/Network/Network",
+    "entrypoint": "main.tsp",
+    "entrypointImportsClient": true
+  },
+  "exporter": {
+    "repository": "Azure/typespec-azure",
+    "mainBaseRevision": "d1e6acc8738ce9684c5f51eee13bf6e05ac6b1d0",
+    "revision": "8719b3d95d76a5b2144a3a5fcdcf184b665ebb6d",
+    "packages": {
+      "@azure-tools/typespec-data-exporter": "0.1.0",
+      "@azure-tools/typespec-arm-resource-data": "0.1.0",
+      "@azure-tools/typespec-azure-resource-manager": "0.74.0"
+    },
+    "overlaidPackages": [
+      "@azure-tools/typespec-data-exporter",
+      "@azure-tools/typespec-arm-resource-data",
+      "@azure-tools/typespec-azure-resource-manager"
+    ],
+    "azureCoreOverlayRequired": false
+  },
+  "toolchain": {
+    "node": "24.14.1",
+    "pnpm": "12.6.0",
+    "typespecCompiler": "1.18.0",
+    "command": "node node_modules\\@typespec\\compiler\\cmd\\tsp.js compile specification\\network\\resource-manager\\Microsoft.Network\\Network\\Network --emit @azure-tools/typespec-arm-resource-data --output-dir <temporary-output> --option \"@azure-tools/typespec-arm-resource-data.source-url-template=https://github.com/Azure/azure-rest-api-specs/blob/{revision}/specification/network/resource-manager/Microsoft.Network/Network/Network/{path}#L{line}\" --option \"@azure-tools/typespec-arm-resource-data.source-revision=c09430b2a48b813af056e78c409af4d431f2dbc8\""
+  },
+  "diagnostics": {
+    "compiler": 0,
+    "http": 0
+  },
+  "coverage": {
+    "httpOperations": 841,
+    "resolvedResourceOccurrences": 145,
+    "uniqueResourceKeys": 143,
+    "resourceAssociatedOperationRows": 752,
+    "uniqueRepresentedHttpOperations": 751,
+    "providerOperations": 77,
+    "providerOperationsWithArmListMetadata": 49,
+    "providerOperationsWithoutArmResourceMetadata": 28,
+    "armMetadataOperationsAbsentFromResolvedAndProviderOutput": 13,
+    "uniqueHttpOperationsAbsentFromCsv": 90
+  },
+  "reports": {
+    "resources": {
+      "file": "resources.csv",
+      "rows": 145,
+      "expectedHeader": [
+        "resourceKey",
+        "resourceType",
+        "resourceInstancePath",
+        "resourceName",
+        "resourceDefinition",
+        "duplicateResourceError",
+        "duplicateResourceErrorAnalysis",
+        "bicepResource",
+        "readOperation",
+        "createOrUpdateOperation"
+      ],
+      "sortedWithEmitterComparator": true,
+      "sourceLinksPinnedToSourceRevision": true
+    },
+    "operations": {
+      "file": "operations.csv",
+      "rows": 752,
+      "expectedHeader": [
+        "operationKey",
+        "operationName",
+        "operationVerb",
+        "operationPath",
+        "operationKind",
+        "operationDefinition",
+        "resourceKey",
+        "resourceType",
+        "resourceInstancePath",
+        "resourceName"
+      ],
+      "sortedWithEmitterComparator": true,
+      "sourceLinksPinnedToSourceRevision": true
+    }
+  },
+  "duplicates": {
+    "resourceKeys": [
+      {
+        "resourceKey": "microsoft.network/expressrouteports|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/expressrouteports/{}",
+        "rows": 2,
+        "resourceNames": [
+          "ExpressRoutePort",
+          "ExpressRoutePort"
+        ],
+        "classification": "unexpected exact duplicate occurrence"
+      },
+      {
+        "resourceKey": "microsoft.network/networkmanagers/ipampools/staticcidrs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/networkmanagers/{}/ipampools/{}/staticcidrs/{}",
+        "rows": 2,
+        "resourceNames": [
+          "IpamPoolsStaticCidrs",
+          "StaticCidr"
+        ],
+        "classification": "distinct resolver identities sharing one canonical ARM path"
+      }
+    ],
+    "operationKeys": [
+      {
+        "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/networkmanagers/{}/ipampools/{}/staticcidrs",
+        "rows": 2,
+        "classification": "unexpected persistent duplicate in all six API-version projections"
+      },
+      {
+        "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/bastionhosts/{}",
+        "rows": 2,
+        "classification": "expected version-disjoint alternatives at 2026-01-01"
+      },
+      {
+        "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/servicegateways/{}/updateaddresslocations",
+        "rows": 2,
+        "classification": "expected version-disjoint alternatives at 2025-09-01"
+      },
+      {
+        "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.network/servicegateways/{}/updateservices",
+        "rows": 2,
+        "classification": "expected version-disjoint alternatives at 2025-09-01"
+      }
+    ]
+  },
+  "baselineComparison": {
+    "comparison": "PR-pinned dependency baseline",
+    "countsChanged": false,
+    "resourceRows": 145,
+    "operationRows": 752,
+    "httpOperations": 841
+  },
+  "validation": {
+    "csvSchemas": "passed",
+    "csvParsing": "passed",
+    "canonicalKeys": "passed",
+    "sorting": "passed",
+    "sourceLinks": "passed",
+    "duplicateAnalysis": "passed",
+    "assessmentLinks": "passed",
+    "validatedSourceLinkOccurrences": 1333
+  }
+}
