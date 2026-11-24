@@ -1,10 +1,4 @@
-import type {
-  Manifest,
-  ManifestSummary,
-  OperationRow,
-  ProjectResult,
-  TargetRuleDiagnostic,
-} from "./types.ts";
+import type { Manifest, ManifestSummary, ProjectResult, TargetRuleDiagnostic } from "./types.ts";
 
 function link(project: ProjectResult, file: string, reportDirectory: string): string {
   const aggregateDepth = reportDirectory === "resource-data" ? "../.." : "../../..";
@@ -53,66 +47,104 @@ function markdownLink(label: string, url: string): string {
   return url ? `[${label}](${url})` : `${label} (source unavailable)`;
 }
 
-function operationGroups(finding: TargetRuleDiagnostic): string[] {
-  const operations = finding.correlatedResources.flatMap((resource) => resource.operations);
-  const expectedKinds = ["read", "createOrUpdate", "update", "delete", "list", "action", "unknown"];
-  const normalizeKind = (operation: OperationRow) =>
-    expectedKinds.includes(operation.operationKind) ? operation.operationKind : "unknown";
-  const byKind = Map.groupBy(operations, normalizeKind);
-  const labels: Record<string, string> = {
-    read: "read",
-    createOrUpdate: "create/update",
-    update: "update",
-    delete: "delete",
-    list: "list",
-    action: "action",
-    unknown: "unknown",
-  };
-  return expectedKinds.map((kind) => {
-    const values = (byKind.get(kind) ?? [])
-      .map((operation) =>
-        markdownLink(
-          `\`${operation.operationName}\` (\`${operation.operationVerb} ${operation.operationPath}\`)`,
+function uniqueOperations(
+  resource: TargetRuleDiagnostic["correlatedResources"][number],
+): TargetRuleDiagnostic["correlatedResources"][number]["operations"] {
+  return [
+    ...new Map(
+      resource.operations.map((operation) => [
+        [
           operation.operationDefinition,
-        ),
-      )
-      .sort();
-    return `  - ${labels[kind]}: ${values.length > 0 ? values.join("; ") : "none"}`;
-  });
+          operation.operationName,
+          operation.operationVerb,
+          operation.operationKind,
+        ].join("|"),
+        operation,
+      ]),
+    ).values(),
+  ].sort((left, right) =>
+    [left.operationName, left.operationVerb, left.operationDefinition]
+      .join("|")
+      .localeCompare(
+        [right.operationName, right.operationVerb, right.operationDefinition].join("|"),
+      ),
+  );
 }
 
-function findingMarkdown(finding: TargetRuleDiagnostic): string {
+function resourceScope(path: string): string {
+  if (/\/billingProfiles\//i.test(path)) return "billing profile scope";
+  if (/\/billingAccounts\//i.test(path)) return "billing account scope";
+  if (/\/managementGroups\//i.test(path)) return "management group scope";
+  if (/\/resourceGroups\//i.test(path)) return "resource group scope";
+  if (/\/subscriptions\//i.test(path)) return "subscription scope";
+  if (/\/providers\//i.test(path)) return "tenant or provider scope";
+  return "custom scope";
+}
+
+function projectAggregateLink(project: ProjectResult, reportDirectory: string): string {
+  const depth = project.projectRoot.split("/").length + 1;
+  return (
+    "../".repeat(depth) + `documentation/typespec-arm-resource-data/${reportDirectory}/README.md`
+  );
+}
+
+function findingDetails(finding: TargetRuleDiagnostic): string {
   const resources =
     finding.correlatedResources.length === 0
-      ? ["  - No resolved resource records matched."]
-      : finding.correlatedResources.map((resource) => {
-          const label =
-            `\`${resource.resourceType}\` at \`${resource.resourceInstancePath}\` ` +
-            `(\`${resource.resourceKey}\`)`;
-          return `  - ${markdownLink(label, resource.authoredSource)}`;
-        });
+      ? ["- No resolved resource records matched."]
+      : finding.correlatedResources.flatMap((resource) => [
+          `- ${markdownLink(
+            `\`${resource.resourceType || "untyped resource"}\``,
+            resource.authoredSource,
+          )} — ${resourceScope(resource.resourceInstancePath)}`,
+          ...(uniqueOperations(resource).length === 0
+            ? ["  - No associated operations were resolved."]
+            : uniqueOperations(resource).map(
+                (operation) =>
+                  `  - ${markdownLink(
+                    `\`${operation.operationName}\``,
+                    operation.operationDefinition,
+                  )} — \`${operation.operationVerb.toUpperCase()}\` (${operation.operationKind})`,
+              )),
+        ]);
   return [
     `### ${finding.findingId}`,
     "",
-    `- Project: \`${finding.projectRoot}\``,
-    `- Diagnostic source: ${markdownLink(
+    `**Logical resource name:** \`${finding.resourceName}\`  `,
+    `**Diagnostic:** ${markdownLink(
       `\`${finding.sourceFile}:${finding.line}:${finding.column}\``,
       finding.sourceUrl,
-    )}`,
-    `- Logical resource name: \`${finding.resourceName}\``,
-    `- Diagnostic: ${finding.message}`,
-    `- Conflicting instance paths: ${finding.conflictingInstancePaths
-      .map((path) => `\`${path}\``)
-      .join("; ")}`,
-    `- Correlation: \`${finding.correlationState}\`${
+    )}  `,
+    `**Correlation:** \`${finding.correlationState}\`${
       finding.correlationReason ? ` - ${finding.correlationReason}` : ""
-    }`,
-    `- Suggested fix: ${finding.suggestedFix}`,
-    "- Resolved resources:",
-    ...resources,
-    "- Associated operations:",
-    ...operationGroups(finding),
+    }  `,
+    `**Recommendation (${finding.recommendation.kind}):** ${finding.recommendation.text}`,
     "",
+    "**Evidence:**",
+    "",
+    ...finding.recommendation.evidence.map((item) => `- ${item}`),
+    "",
+    "**Conflicting resources and operations:**",
+    "",
+    ...resources,
+    "",
+  ].join("\n");
+}
+
+export function createProjectReadme(project: ProjectResult): string {
+  return [
+    `# no-resource-name-conflict details`,
+    "",
+    `- Spec: \`${project.projectRoot}\``,
+    `- Source commit: \`${project.sourceSha}\``,
+    `- [Aggregate report](${projectAggregateLink(project, project.reportDirectory)})`,
+    `- [Machine-readable diagnostics](diagnostics.json)`,
+    "",
+    "## Conflicts",
+    "",
+    ...(project.targetDiagnostics.length === 0
+      ? ["- None", ""]
+      : project.targetDiagnostics.flatMap((finding) => [findingDetails(finding)])),
   ].join("\n");
 }
 
@@ -146,47 +178,9 @@ export function createReadme(
   const blocked = manifest.projects.filter(
     (project) => project.status === "blocked-rule-unavailable",
   );
-  const projectGroups = Map.groupBy(
-    [...manifest.projects].sort(
-      (left, right) =>
-        left.service.localeCompare(right.service) ||
-        left.projectRoot.localeCompare(right.projectRoot),
-    ),
-    (project) => project.service,
-  );
-  const directory = [...projectGroups.entries()].flatMap(([service, projects]) => [
-    `### ${service}`,
-    "",
-    "| Project | Status | Resources | Operations | Diagnostics | Reports |",
-    "| --- | --- | ---: | ---: | ---: | --- |",
-    ...projects.map((project) => {
-      const reports = [
-        `[status](${link(project, "status.json", reportDirectory)})`,
-        project.outputHashes.resourcesCsv
-          ? `[resources](${link(project, "resources.csv", reportDirectory)})`
-          : undefined,
-        project.outputHashes.operationsCsv
-          ? `[operations](${link(project, "operations.csv", reportDirectory)})`
-          : undefined,
-        project.outputHashes.diagnosticsJson
-          ? `[diagnostics](${link(project, "diagnostics.json", reportDirectory)})`
-          : undefined,
-        project.outputHashes.errorsMd
-          ? `[errors](${link(project, "errors.md", reportDirectory)})`
-          : undefined,
-      ]
-        .filter((value) => value !== undefined)
-        .join(" | ");
-      return (
-        `| \`${project.projectRoot}\` | ${project.status} | ${project.resourceCount} | ` +
-        `${project.operationCount} | ${project.diagnosticCount} | ${reports} |`
-      );
-    }),
-    "",
-  ]);
   const summary = manifest.summary;
   const incomplete = summary.failed + summary.timedOut + summary.skipped + summary.blocked > 0;
-  const findingsByProject =
+  const affectedSpecs =
     findings.length === 0
       ? ["- None", ""]
       : manifest.projects
@@ -194,9 +188,16 @@ export function createReadme(
           .flatMap((project) => [
             `### \`${project.projectRoot}\``,
             "",
-            ...project.targetDiagnostics.map((finding) =>
-              findingMarkdown(finding).replace(/^### /, "#### "),
-            ),
+            ...project.targetDiagnostics.map((finding) => {
+              const details = link(project, "README.md", reportDirectory);
+              return (
+                `- \`${finding.resourceName}\` (${finding.findingId}) — ` +
+                `${finding.correlatedResources.length} resolved resources; ` +
+                `[spec details](${details}) · ` +
+                `[conflict details](${details}#${finding.findingId.toLowerCase()})`
+              );
+            }),
+            "",
           ]);
   return [
     "# no-resource-name-conflict report",
@@ -254,9 +255,9 @@ export function createReadme(
     "",
     manifest.inventory.explanation,
     "",
-    "## Findings by project",
+    "## Affected specs",
     "",
-    ...findingsByProject,
+    ...affectedSpecs,
     "## Unmatched or partially matched diagnostics",
     "",
     ...(partial.length === 0
@@ -282,9 +283,10 @@ export function createReadme(
     "",
     projectList(skipped, reportDirectory),
     "",
-    "## Project directory",
+    "## Machine-readable report",
     "",
-    ...directory,
+    "- [Manifest](manifest.json)",
+    "",
     "## Reproduction",
     "",
     "```powershell",
@@ -299,8 +301,9 @@ export function createReadme(
         "successfully assessed. They are not classified as clean."
       : "Every discovered project was assessed; no failed, timed-out, skipped, or blocked projects remain.",
     "",
-    "Suggested fixes are based on the installed rule's documented remediation pattern. They were not " +
-      "applied to service sources and are not claimed as source-validated remediations.",
+    "Recommendations are derived from the resolved resources, associated operations, HTTP verbs, " +
+      "and linked TypeSpec declarations. A recommendation is explicitly marked indeterminate when " +
+      "that evidence does not establish one safe remediation.",
     "",
     "The generation timestamp is the only intentionally time-varying field in a rerun at the same " +
       "source, lockfile, tool source, and installed package versions.",

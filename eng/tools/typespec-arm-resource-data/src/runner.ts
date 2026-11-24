@@ -238,7 +238,12 @@ async function validateStoredResult(
       result.status === "succeeded-clean" ||
       result.status === "zero-resource";
     const required = successful
-      ? ["resourcesCsv", "operationsCsv", "diagnosticsJson"]
+      ? [
+          "resourcesCsv",
+          "operationsCsv",
+          "diagnosticsJson",
+          ...(result.status === "succeeded-findings" ? ["readmeMd"] : []),
+        ]
       : result.status === "failed-compilation" || result.status === "timed-out"
         ? ["errorsMd"]
         : [];
@@ -249,6 +254,7 @@ async function validateStoredResult(
       ["resources.csv", result.outputHashes.resourcesCsv],
       ["operations.csv", result.outputHashes.operationsCsv],
       ["diagnostics.json", result.outputHashes.diagnosticsJson],
+      ["README.md", result.outputHashes.readmeMd],
       ["errors.md", result.outputHashes.errorsMd],
     ];
     for (const [name, hash] of checks) {
@@ -494,6 +500,21 @@ export async function validateGeneratedReport(
     if (!(await validateStoredResult(repositoryRoot, project, manifest.reportDirectory))) {
       throw new Error(`Generated output validation failed for ${project.projectRoot}.`);
     }
+    if (!project.outputHashes.readmeMd) continue;
+    const projectDirectory = projectOutputDirectory(
+      repositoryRoot,
+      project.projectRoot,
+      manifest.reportDirectory,
+    );
+    const projectReadme = await readFile(join(projectDirectory, "README.md"), "utf8");
+    for (const match of projectReadme.matchAll(/\]\(([^)]+)\)/g)) {
+      const target = match[1];
+      if (/^[a-z]+:/i.test(target) || target.startsWith("#")) continue;
+      const resolved = resolve(projectDirectory, target.split("#", 1)[0]);
+      if (!(await stat(resolved)).isFile()) {
+        throw new Error(`Project README link does not resolve: ${target}`);
+      }
+    }
   }
   const aggregateDirectory = aggregateOutputDirectory(repositoryRoot, manifest.reportDirectory);
   const readme = await readFile(join(aggregateDirectory, "README.md"), "utf8");
@@ -562,7 +583,7 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
   try {
     const previous = JSON.parse(await readFile(manifestPath, "utf8")) as Manifest;
     if (
-      previous.schemaVersion === 6 &&
+      previous.schemaVersion === 7 &&
       previous.sourceSha === sourceSha &&
       previous.sourceLockHash === sourceLockHash &&
       previous.reportLockHash === reportLockHash &&
@@ -663,7 +684,7 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
       left.projectRoot.localeCompare(right.projectRoot),
     );
     return {
-      schemaVersion: 6,
+      schemaVersion: 7,
       repository: "Azure/azure-rest-api-specs",
       sourceSha,
       sourceTimestamp,

@@ -3,6 +3,7 @@ import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { join, relative, resolve } from "node:path";
 import { promisify } from "node:util";
 import { afterEach, describe, expect, it } from "vitest";
+import { createProjectReadme } from "../src/aggregate.ts";
 import {
   canResume,
   runChild,
@@ -373,13 +374,17 @@ describe("report runner", () => {
         resourcesCsv: sha256(resources),
         operationsCsv: sha256(operations),
         diagnosticsJson: sha256(diagnosticsJson),
+        readmeMd: "",
         statusJson: "",
       },
     } satisfies ProjectResult;
+    const readme = createProjectReadme(result);
+    result.outputHashes.readmeMd = sha256(readme);
     result.outputHashes.statusJson = sha256(`${JSON.stringify(result, null, 2)}\n`);
     await writeFile(join(output, "resources.csv"), resources);
     await writeFile(join(output, "operations.csv"), operations);
     await writeFile(join(output, "diagnostics.json"), diagnosticsJson);
+    await writeFile(join(output, "README.md"), readme);
     await writeFile(join(output, "status.json"), `${JSON.stringify(result, null, 2)}\n`);
 
     await expect(canResume(root, workerRequest)).resolves.toEqual(result);
@@ -448,14 +453,18 @@ describe("report runner", () => {
         resourcesCsv: sha256(resources),
         operationsCsv: sha256(operations),
         diagnosticsJson: sha256(diagnosticsJson),
+        readmeMd: "",
         statusJson: "",
       },
     } satisfies ProjectResult;
+    const readme = createProjectReadme(result);
+    result.outputHashes.readmeMd = sha256(readme);
     result.outputHashes.statusJson = sha256(`${JSON.stringify(result, null, 2)}\n`);
     for (const output of [firstOutput, secondOutput]) {
       await writeFile(join(output, "resources.csv"), resources);
       await writeFile(join(output, "operations.csv"), operations);
       await writeFile(join(output, "diagnostics.json"), diagnosticsJson);
+      await writeFile(join(output, "README.md"), readme);
       await writeFile(join(output, "status.json"), `${JSON.stringify(result, null, 2)}\n`);
     }
 
@@ -559,6 +568,9 @@ namespace Third {
     expect(first.targetDiagnostics[0]).toMatchObject({
       resourceName: "Widget",
       correlationState: "matched",
+      recommendation: {
+        kind: "override-operation-resource-name",
+      },
     });
     expect(first.targetDiagnostics[0].correlatedResources).toHaveLength(3);
     expect(first.targetDiagnostics[0].line).toBeLessThan(first.targetDiagnostics[1].line);
@@ -568,6 +580,10 @@ namespace Third {
     expect(
       JSON.parse(await readFile(join(fixture, "rule-conflict-report", "diagnostics.json"), "utf8")),
     ).toEqual(first.targetDiagnostics);
+    const details = await readFile(join(fixture, "rule-conflict-report", "README.md"), "utf8");
+    expect(details).toContain("**Conflicting resources and operations:**");
+    expect(details).toContain("— `GET` (read)");
+    expect(details).not.toContain("/widgets/{name}");
   });
 
   it("produces no target-rule finding for a controlled clean fixture", async () => {
@@ -614,5 +630,8 @@ namespace Second {
     expect(result.status).toBe("succeeded-clean");
     expect(result.diagnosticCount).toBe(0);
     expect(result.targetDiagnostics).toEqual([]);
+    await expect(
+      readFile(join(fixture, "rule-clean-report", "README.md"), "utf8"),
+    ).rejects.toThrow();
   });
 });

@@ -11,6 +11,7 @@ import type {
   NameClashGroup,
   OperationRow,
   ProjectInventory,
+  RecommendationKind,
   ResourceRow,
   TargetRuleDiagnostic,
 } from "./types.ts";
@@ -111,6 +112,20 @@ function sourceLink(
   sourceSha: string,
 ): string {
   return sourceDetails(target, repositoryRoot, sourceSha)?.url ?? "";
+}
+
+function sourceText(target: Type | Operation | DiagnosticTarget | undefined): string {
+  if (!target) return "";
+  try {
+    const location = getSourceLocation(target);
+    return location.file.text.slice(location.pos, location.end);
+  } catch {
+    return "";
+  }
+}
+
+function operationTarget(target: DiagnosticTarget | undefined): Operation | undefined {
+  return target && "kind" in target && target.kind === "Operation" ? target : undefined;
 }
 
 function operationRows(
@@ -250,6 +265,182 @@ function pathsMatchResources(paths: string[], resources: ResourceRow[]): number 
   return matched;
 }
 
+function uniqueOperations(operations: OperationRow[]): OperationRow[] {
+  return [
+    ...new Map(
+      operations.map((operation) => [
+        [
+          operation.operationDefinition,
+          operation.operationName,
+          operation.operationVerb,
+          operation.operationKind,
+        ].join("|"),
+        operation,
+      ]),
+    ).values(),
+  ].sort((left, right) =>
+    [left.operationDefinition, left.operationName, left.operationVerb, left.operationKind]
+      .join("|")
+      .localeCompare(
+        [
+          right.operationDefinition,
+          right.operationName,
+          right.operationVerb,
+          right.operationKind,
+        ].join("|"),
+      ),
+  );
+}
+
+function resourceNameSuggestion(
+  resourceName: string,
+  resourceType: string,
+  instancePath: string,
+): string {
+  const scopedSuffix = [
+    [/\/billingProfiles\//i, "BillingProfile"],
+    [/\/billingAccounts\//i, "BillingAccount"],
+    [/\/managementGroups\//i, "ManagementGroup"],
+    [/\/resourceGroups\//i, "ResourceGroup"],
+    [/\/subscriptions\//i, "Subscription"],
+  ].find(([pattern]) => (pattern as RegExp).test(instancePath))?.[1] as string | undefined;
+  const suffix = resourceType
+    .split("/")
+    .at(-1)
+    ?.replace(/[^a-zA-Z0-9]+(.)/g, (_, character: string) => character.toUpperCase())
+    .replace(/^./, (character) => character.toUpperCase());
+  if (scopedSuffix) return `${resourceName}${scopedSuffix}`;
+  if (!suffix || resourceName.toLowerCase().endsWith(suffix.toLowerCase())) {
+    return `${resourceName}Scoped`;
+  }
+  return `${resourceName}${suffix}`;
+}
+
+function createRecommendation(finding: {
+  resourceName: string;
+  correlatedResources: TargetRuleDiagnostic["correlatedResources"];
+  triggerOperation?: TargetRuleDiagnostic["triggerOperation"];
+}): TargetRuleDiagnostic["recommendation"] {
+  const trigger = finding.triggerOperation;
+  const triggerResource = finding.correlatedResources.find((resource) =>
+    resource.operations.some(
+      (operation) =>
+        operation.operationDefinition === trigger?.definition &&
+        operation.operationName === trigger.name,
+    ),
+  );
+  const targetResource = triggerResource ?? finding.correlatedResources.at(-1);
+  const suggestedName = resourceNameSuggestion(
+    finding.resourceName,
+    targetResource?.resourceType ?? "",
+    targetResource?.resourceInstancePath ?? "",
+  );
+  const allOperations = uniqueOperations(
+    finding.correlatedResources.flatMap((resource) => resource.operations),
+  );
+  const invalidActions = allOperations.filter(
+    (operation) =>
+      operation.operationKind === "action" &&
+      !["get", "post"].includes(operation.operationVerb.toLowerCase()),
+  );
+  const targetInvalidActions = targetResource
+    ? uniqueOperations(targetResource.operations).filter(
+        (operation) =>
+          operation.operationKind === "action" &&
+          !["get", "post"].includes(operation.operationVerb.toLowerCase()),
+      )
+    : [];
+  const evidence: string[] = [];
+  if (trigger) {
+    evidence.push(
+      `\`${trigger.name}\` is a \`${trigger.verb.toUpperCase()}\` ${trigger.kind} operation at [source](${trigger.definition}).`,
+    );
+    if (trigger.templateName) {
+      evidence.push(`It is instantiated from \`${trigger.templateName}\`.`);
+    }
+    if (trigger.interfaceName) {
+      evidence.push(
+        `It is declared in interface \`${trigger.interfaceName}\`${
+          trigger.interfaceDefinition ? ` at [source](${trigger.interfaceDefinition})` : ""
+        }.`,
+      );
+    }
+  }
+  if (targetResource) {
+    evidence.push(
+      `The conflicting operation resolves to \`${targetResource.resourceType || "an untyped resource"}\`.`,
+    );
+  }
+  if (invalidActions.length > 0) {
+    evidence.push(
+      `Lifecycle-looking operations classified as actions use unsupported action verbs: ${invalidActions
+        .map(
+          (operation) =>
+            `\`${operation.operationName}\` (\`${operation.operationVerb.toUpperCase()}\`, [source](${operation.operationDefinition}))`,
+        )
+        .join("; ")}.`,
+    );
+  }
+
+  const invalidTrigger =
+    trigger?.kind === "action" && !["get", "post"].includes(trigger.verb.toLowerCase());
+  let kind: RecommendationKind;
+  let text: string;
+  if (invalidTrigger || targetInvalidActions.length > 0) {
+    kind = "refactor-resource-interface";
+    text =
+      `Model the operations for \`${targetResource?.resourceType ?? finding.resourceName}\` as a ` +
+      `dedicated ARM resource interface, then give that interface a distinct logical resource name ` +
+      `such as \`${suggestedName}\`. Move ${targetInvalidActions
+        .map((operation) => `\`${operation.operationName}\``)
+        .join(", ")} out of action modeling: actions should use POST, or occasionally GET, never ` +
+      "PUT, PATCH, DELETE, or HEAD. Keep the existing wire routes unchanged.";
+  } else if (trigger?.templateName && !/^Arm[A-Z]/.test(trigger.templateName)) {
+    kind = "add-template-resource-name";
+    text =
+      `Give the operation set containing \`${trigger.name}\` a distinct logical resource name such ` +
+      `as \`${suggestedName}\`. Pass that name through the \`${trigger.templateName}\` invocation ` +
+      "using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing " +
+      `interface template \`${trigger.interfaceName ?? "that declares the operation"}\` and forward ` +
+      "it consistently to every lifecycle/list operation for this resource.";
+  } else if (trigger) {
+    kind = "override-operation-resource-name";
+    text =
+      `Set the optional resource-name argument on the ARM resource decorator for ` +
+      `\`${trigger.name}\` to a distinct value such as \`${suggestedName}\`, and use the same value ` +
+      "for every operation that belongs to this resolved resource. If the operations are currently " +
+      "declared independently, refactor them into one resource operation interface so the name is " +
+      "defined once.";
+  } else if (
+    finding.correlatedResources.length > 1 &&
+    finding.correlatedResources.every((resource) =>
+      resource.operations.every((operation) =>
+        ["get", "post"].includes(operation.operationVerb.toLowerCase()),
+      ),
+    )
+  ) {
+    kind = "group-operations";
+    text =
+      `The correlated declarations only use GET/POST operations, but the diagnostic does not identify ` +
+      "one declaration as the conflicting operation. Inspect the linked declarations and, if they are " +
+      `one conceptual resource, explicitly group them under one named resource \`${finding.resourceName}\`; ` +
+      "otherwise assign distinct names per resolved resource.";
+  } else {
+    kind = "indeterminate";
+    text =
+      "The emitted diagnostic and resolved operation inventory do not establish which declaration " +
+      "should own a new logical resource name. Inspect the linked declaration and its containing " +
+      "interface before choosing between a `ResourceName`, an operation-level override, or grouping " +
+      "the operations under one resource.";
+  }
+  if (invalidActions.length > 0 && kind !== "refactor-resource-interface") {
+    text += ` Separately remodel ${invalidActions
+      .map((operation) => `\`${operation.operationName}\``)
+      .join(", ")} as lifecycle operations because their verbs are not valid action verbs.`;
+  }
+  return { kind, text, evidence };
+}
+
 export function collectTargetDiagnostics(
   diagnostics: readonly Diagnostic[],
   rows: { resources: ResourceRow[]; operations: OperationRow[] },
@@ -265,6 +456,9 @@ export function collectTargetDiagnostics(
         diagnostic.target === NoTarget ? undefined : diagnostic.target,
         repositoryRoot,
         sourceSha,
+      );
+      const target = operationTarget(
+        diagnostic.target === NoTarget ? undefined : diagnostic.target,
       );
       const matchingResources = parsed
         ? rows.resources.filter((resource) => resource.resourceName === parsed.resourceName)
@@ -298,7 +492,26 @@ export function collectTargetDiagnostics(
       const sourceDescription = location?.url
         ? `the resource operation at ${location.url}`
         : "the later conflicting resource operation";
-      return {
+      const declaration = sourceText(target);
+      const templateName = /\bis\s+([A-Za-z_][A-Za-z0-9_.]*)\s*</.exec(declaration)?.[1];
+      const matchingOperation = location
+        ? rows.operations.find((operation) => operation.operationDefinition === location.url)
+        : undefined;
+      const interfaceDetails = target?.interface
+        ? sourceDetails(target.interface, repositoryRoot, sourceSha)
+        : undefined;
+      const triggerOperation = matchingOperation
+        ? {
+            name: matchingOperation.operationName,
+            verb: matchingOperation.operationVerb,
+            kind: matchingOperation.operationKind,
+            definition: matchingOperation.operationDefinition,
+            ...(templateName ? { templateName } : {}),
+            ...(target?.interface?.name ? { interfaceName: target.interface.name } : {}),
+            ...(interfaceDetails?.url ? { interfaceDefinition: interfaceDetails.url } : {}),
+          }
+        : undefined;
+      const finding: TargetRuleDiagnostic = {
         findingId: `NRNC-${sha256(key).slice(0, 12).toUpperCase()}`,
         code: String(diagnostic.code),
         severity: diagnostic.severity,
@@ -314,6 +527,7 @@ export function collectTargetDiagnostics(
         conflictingInstancePaths: parsed?.paths ?? [],
         correlationState,
         correlatedResources,
+        ...(triggerOperation ? { triggerOperation } : {}),
         ...(correlationState === "matched"
           ? {}
           : {
@@ -323,12 +537,19 @@ export function collectTargetDiagnostics(
                   ? `No resolved resource record had the exact logical name '${parsed.resourceName}'.`
                   : `Only ${matchedPaths} of ${parsed.paths.length} diagnostic path occurrences matched resolved resource records.`,
             }),
-        suggestedFix:
-          `Provide a unique explicit logical resource name for ${sourceDescription}, distinct from ` +
-          `'${parsed?.resourceName ?? "the conflicting name"}'. Keep the ARM path and wire API ` +
-          "unchanged; pass a distinct ResourceName or OverrideResourceName argument through the " +
-          "resource operation template as applicable. Do not suppress this rule.",
+        recommendation: {
+          kind: "indeterminate" as const,
+          text: "",
+          evidence: [],
+        },
+        suggestedFix: "",
       };
+      finding.recommendation = createRecommendation(finding);
+      finding.suggestedFix =
+        finding.recommendation.text ||
+        `Provide a unique explicit logical resource name for ${sourceDescription}, distinct from ` +
+          `'${parsed?.resourceName ?? "the conflicting name"}'.`;
+      return finding;
     });
 
   const deduplicated = new Map<string, TargetRuleDiagnostic>();

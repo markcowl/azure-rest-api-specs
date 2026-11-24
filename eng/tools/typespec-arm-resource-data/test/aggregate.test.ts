@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { createReadme, createSummary } from "../src/aggregate.ts";
+import { createProjectReadme, createReadme, createSummary } from "../src/aggregate.ts";
 import {
   targetRuleCode,
   targetRuleDocumentationUrl,
@@ -52,8 +52,22 @@ const finding: TargetRuleDiagnostic = {
       ],
     },
   ],
+  triggerOperation: {
+    name: "get",
+    verb: "get",
+    kind: "read",
+    definition:
+      "https://github.com/Azure/azure-rest-api-specs/blob/abc/specification/example/resource-manager/Microsoft.Example/main.tsp#L20",
+    templateName: "WidgetOps.Read",
+    interfaceName: "Widgets",
+  },
+  recommendation: {
+    kind: "add-template-resource-name",
+    text: "Pass a distinct ResourceName through `WidgetOps.Read` for `get` and its sibling operations.",
+    evidence: ["`get` is a `GET` read operation at [source](https://example.test)."],
+  },
   suggestedFix:
-    "Provide a unique explicit logical resource name for the later operation. Do not suppress this rule.",
+    "Pass a distinct ResourceName through `WidgetOps.Read` for `get` and its sibling operations.",
 };
 
 function result(overrides: Partial<ProjectResult> = {}): ProjectResult {
@@ -88,6 +102,7 @@ function result(overrides: Partial<ProjectResult> = {}): ProjectResult {
       resourcesCsv: "resources",
       operationsCsv: "operations",
       diagnosticsJson: "diagnostics",
+      readmeMd: "readme",
       statusJson: "status",
     },
     ...overrides,
@@ -96,7 +111,7 @@ function result(overrides: Partial<ProjectResult> = {}): ProjectResult {
 
 function manifest(projects: ProjectResult[]): Manifest {
   return {
-    schemaVersion: 6,
+    schemaVersion: 7,
     repository: "Azure/azure-rest-api-specs",
     sourceSha: "abc",
     sourceTimestamp: "2026-11-24T00:00:00Z",
@@ -140,30 +155,42 @@ function manifest(projects: ProjectResult[]): Manifest {
 }
 
 describe("Markdown aggregation", () => {
-  it("uses the required section order and renders actionable correlated findings", () => {
+  it("renders exactly one compact aggregate line per conflict with detail links", () => {
     const markdown = createReadme(manifest([result()]));
     const sections = [
       "## Source, rule, and tool metadata",
       "## Executive summary",
       "## Coverage",
-      "## Findings by project",
+      "## Affected specs",
       "## Unmatched or partially matched diagnostics",
       "## Failed and timed-out projects",
       "## Zero-resource projects",
       "## Skipped client-only projects",
-      "## Project directory",
+      "## Machine-readable report",
       "## Reproduction",
       "## Limitations",
     ];
     for (let index = 1; index < sections.length; index++) {
       expect(markdown.indexOf(sections[index - 1])).toBeLessThan(markdown.indexOf(sections[index]));
     }
-    expect(markdown).toContain("#### NRNC-ABC123");
-    expect(markdown).toContain("Logical resource name: `Widget`");
-    expect(markdown).toContain("Suggested fix: Provide a unique explicit logical resource name");
-    expect(markdown).toContain("read: [`get` (`get /widgets/{one}`)]");
+    expect(markdown.split("\n").filter((line) => line.includes("NRNC-ABC123"))).toHaveLength(1);
+    expect(markdown).toContain("- `Widget` (NRNC-ABC123) — 1 resolved resources; [spec details]");
     expect(markdown).toContain(
-      "../../../specification/example/resource-manager/Microsoft.Example/Example/Report_20261124_no-resource-name-conflict/diagnostics.json",
+      "../../../specification/example/resource-manager/Microsoft.Example/Example/Report_20261124_no-resource-name-conflict/README.md#nrnc-abc123",
+    );
+  });
+
+  it("renders operations under each resource without repeating HTTP paths", () => {
+    const markdown = createProjectReadme(result());
+    expect(markdown).toContain("### NRNC-ABC123");
+    expect(markdown).toContain(
+      "**Recommendation (add-template-resource-name):** Pass a distinct ResourceName",
+    );
+    expect(markdown).toContain("[`get`](https://github.com/");
+    expect(markdown).toContain("— `GET` (read)");
+    expect(markdown).not.toContain("/widgets/{one}");
+    expect(markdown.indexOf("Microsoft.Example/widgets")).toBeLessThan(
+      markdown.indexOf("[`get`](https://github.com/"),
     );
   });
 

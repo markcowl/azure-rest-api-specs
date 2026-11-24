@@ -2,6 +2,7 @@ import { compile, NodeHost, resolveCompilerOptions } from "@typespec/compiler";
 import { readFile } from "node:fs/promises";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
+import { createProjectReadme } from "./aggregate.ts";
 import { replaceDirectory } from "./io.ts";
 import {
   collectRows,
@@ -166,7 +167,7 @@ export async function runWorker(request: WorkerRequest): Promise<ProjectResult> 
       request.sourceSha,
     );
     const diagnosticsJson = targetDiagnosticsJson(targetDiagnostics);
-    const resultWithoutStatusHash = {
+    const resultWithoutStatusHash: ProjectResult = {
       ...base,
       status:
         targetDiagnostics.length > 0
@@ -201,14 +202,19 @@ export async function runWorker(request: WorkerRequest): Promise<ProjectResult> 
         resourcesCsv: sha256(resources),
         operationsCsv: sha256(operations),
         diagnosticsJson: sha256(diagnosticsJson),
+        readmeMd: undefined,
         statusJson: "",
       },
-    } satisfies ProjectResult;
+    };
+    const readme =
+      targetDiagnostics.length > 0 ? createProjectReadme(resultWithoutStatusHash) : undefined;
+    if (readme) resultWithoutStatusHash.outputHashes.readmeMd = sha256(readme);
     resultWithoutStatusHash.outputHashes.statusJson = sha256(statusJson(resultWithoutStatusHash));
     await replaceDirectory(outputDirectory, {
       "resources.csv": resources,
       "operations.csv": operations,
       "diagnostics.json": diagnosticsJson,
+      ...(readme ? { "README.md": readme } : {}),
       "status.json": statusJson(resultWithoutStatusHash),
     });
     return resultWithoutStatusHash;

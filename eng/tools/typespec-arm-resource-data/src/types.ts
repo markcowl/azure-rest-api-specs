@@ -95,6 +95,29 @@ export interface CorrelatedResource {
   operations: OperationRow[];
 }
 
+export type RecommendationKind =
+  | "add-template-resource-name"
+  | "override-operation-resource-name"
+  | "refactor-resource-interface"
+  | "group-operations"
+  | "indeterminate";
+
+export interface FindingRecommendation {
+  kind: RecommendationKind;
+  text: string;
+  evidence: string[];
+}
+
+export interface TriggerOperation {
+  name: string;
+  verb: string;
+  kind: string;
+  definition: string;
+  templateName?: string;
+  interfaceName?: string;
+  interfaceDefinition?: string;
+}
+
 export interface TargetRuleDiagnostic {
   findingId: string;
   code: string;
@@ -112,6 +135,8 @@ export interface TargetRuleDiagnostic {
   correlationState: CorrelationState;
   correlatedResources: CorrelatedResource[];
   correlationReason?: string;
+  triggerOperation?: TriggerOperation;
+  recommendation: FindingRecommendation;
   suggestedFix: string;
 }
 
@@ -119,6 +144,7 @@ export interface OutputHashes {
   resourcesCsv?: string;
   operationsCsv?: string;
   diagnosticsJson?: string;
+  readmeMd?: string;
   statusJson: string;
   errorsMd?: string;
 }
@@ -184,7 +210,7 @@ export interface InventoryReconciliation {
 }
 
 export interface Manifest {
-  schemaVersion: 6;
+  schemaVersion: 7;
   repository: string;
   sourceSha: string;
   sourceTimestamp: string;
