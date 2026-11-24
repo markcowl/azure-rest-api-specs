@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import { promisify } from "node:util";
 import { createReadme, createSummary } from "./aggregate.ts";
 import { discoverProjects, filterProjects } from "./discovery.ts";
-import { atomicWriteFile, hashFiles, replaceDirectory } from "./io.ts";
+import { atomicWriteFile, replaceDirectory } from "./io.ts";
 import { sha256 } from "./report.ts";
 import {
   referenceToolCommit,
@@ -185,26 +185,41 @@ async function inspectTargetRule(
   };
 }
 
-async function trackedProjectFiles(
+async function projectInputHash(
   repositoryRoot: string,
+  sourceSha: string,
   project: ProjectInventory,
   reportDirectory: string,
-): Promise<string[]> {
-  const { stdout } = await execFileAsync("git", ["ls-files", "--", project.root], {
+): Promise<string> {
+  const { stdout } = await execFileAsync("git", ["ls-tree", "-r", sourceSha, "--", project.root], {
     cwd: repositoryRoot,
     maxBuffer: 10 * 1024 * 1024,
   });
-  return stdout
+  const entries = stdout
     .split(/\r?\n/)
-    .map((path) => path.replaceAll("\\", "/"))
-    .filter((path) => path.endsWith(".tsp") || path.endsWith(".yaml") || path.endsWith(".json"))
+    .filter(Boolean)
+    .map((line) => {
+      const [metadata, rawPath] = line.split("\t", 2);
+      const path = rawPath.replaceAll("\\", "/");
+      const blob = metadata.split(" ")[2];
+      return { path, blob };
+    })
+    .filter(({ path }) => path.endsWith(".tsp") || path.endsWith(".yaml") || path.endsWith(".json"))
     .filter(
-      (path) =>
+      ({ path }) =>
         !path.startsWith(`${project.root}/resource-data/`) &&
         !path.startsWith(`${project.root}/${reportDirectory}/`) &&
         !new RegExp(`^${escapeRegExp(project.root)}/[^/]+/status\\.json$`).test(path),
     )
-    .map((path) => resolve(repositoryRoot, path));
+    .sort((left, right) => left.path.localeCompare(right.path));
+  const hash = createHash("sha256");
+  for (const entry of entries) {
+    hash.update(entry.path);
+    hash.update("\0");
+    hash.update(entry.blob);
+    hash.update("\0");
+  }
+  return hash.digest("hex");
 }
 
 async function validateStoredResult(
@@ -611,9 +626,11 @@ export async function runReports(options: RunOptions): Promise<Manifest> {
             sourceSha,
             sourceLockHash,
             reportLockHash,
-            projectInputHash: await hashFiles(
-              await trackedProjectFiles(repositoryRoot, project, reportDirectory),
+            projectInputHash: await projectInputHash(
               repositoryRoot,
+              sourceSha,
+              project,
+              reportDirectory,
             ),
             toolVersion,
             toolSourceCommit,
