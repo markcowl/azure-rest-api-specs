@@ -1,0 +1,318 @@
+{
+  "service": "devcenter",
+  "projectRoot": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter",
+  "entrypoint": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "938c2125950d4b9413a66aaf798bd97832b7bb68b9121a9d8b0a9aece4fac47c",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-findings",
+  "resourceCount": 29,
+  "operationCount": 124,
+  "diagnosticCount": 2,
+  "findingCount": 2,
+  "affectedLogicalNames": [
+    "CatalogsImageDefinitions",
+    "ImageDefinitionsBuilds"
+  ],
+  "correlatedResourceCount": 4,
+  "matchedDiagnosticCount": 2,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [
+    {
+      "findingId": "NRNC-CD7DC82E78F9",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'CatalogsImageDefinitions' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp",
+      "line": 139,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L139",
+      "projectRoot": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter",
+      "entrypoint": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/main.tsp",
+      "service": "devcenter",
+      "resourceName": "CatalogsImageDefinitions",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}",
+          "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+          "resourceName": "CatalogsImageDefinitions",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L15",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L15",
+          "operations": [
+            {
+              "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/buildimage",
+              "operationName": "buildImage",
+              "operationVerb": "post",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/buildImage",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L89",
+              "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}",
+              "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "resourceName": "CatalogsImageDefinitions"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}",
+              "operationName": "getByDevCenterCatalog",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L68",
+              "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}",
+              "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "resourceName": "CatalogsImageDefinitions"
+            },
+            {
+              "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/geterrordetails",
+              "operationName": "getErrorDetails",
+              "operationVerb": "post",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/getErrorDetails",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L82",
+              "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}",
+              "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "resourceName": "CatalogsImageDefinitions"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions",
+              "operationName": "listByDevCenterCatalog",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L71",
+              "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}",
+              "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "resourceName": "CatalogsImageDefinitions"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}",
+          "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+          "resourceName": "CatalogsImageDefinitions",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L15",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L15",
+          "operations": [
+            {
+              "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/buildimage",
+              "operationName": "buildImage",
+              "operationVerb": "post",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/buildImage",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L160",
+              "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}",
+              "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "resourceName": "CatalogsImageDefinitions"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}",
+              "operationName": "getByProjectCatalog",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L139",
+              "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}",
+              "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "resourceName": "CatalogsImageDefinitions"
+            },
+            {
+              "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/geterrordetails",
+              "operationName": "getErrorDetails",
+              "operationVerb": "post",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/getErrorDetails",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L153",
+              "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}",
+              "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "resourceName": "CatalogsImageDefinitions"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions",
+              "operationName": "listByProjectCatalog",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L142",
+              "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}",
+              "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}",
+              "resourceName": "CatalogsImageDefinitions"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L139, distinct from 'CatalogsImageDefinitions'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    },
+    {
+      "findingId": "NRNC-FCBEE75CB4F1",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ImageDefinitionsBuilds' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp",
+      "line": 152,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L152",
+      "projectRoot": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter",
+      "entrypoint": "specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/main.tsp",
+      "service": "devcenter",
+      "resourceName": "ImageDefinitionsBuilds",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+          "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+          "resourceName": "ImageDefinitionsBuilds",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L15",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L15",
+          "operations": [
+            {
+              "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/builds/{}/cancel",
+              "operationName": "cancel",
+              "operationVerb": "post",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}/cancel",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L86",
+              "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "resourceName": "ImageDefinitionsBuilds"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L77",
+              "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "resourceName": "ImageDefinitionsBuilds"
+            },
+            {
+              "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/builds/{}/getbuilddetails",
+              "operationName": "getBuildDetails",
+              "operationVerb": "post",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}/getBuildDetails",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L95",
+              "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "resourceName": "ImageDefinitionsBuilds"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/builds",
+              "operationName": "listByImageDefinition",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L80",
+              "resourceKey": "microsoft.devcenter/devcenters/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/devcenters/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "resourceType": "Microsoft.DevCenter/devcenters/catalogs/imageDefinitions/builds",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/devcenters/{devCenterName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "resourceName": "ImageDefinitionsBuilds"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+          "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+          "resourceName": "ImageDefinitionsBuilds",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L15",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L15",
+          "operations": [
+            {
+              "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/builds/{}/cancel",
+              "operationName": "cancel",
+              "operationVerb": "post",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}/cancel",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L161",
+              "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "resourceName": "ImageDefinitionsBuilds"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L152",
+              "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "resourceName": "ImageDefinitionsBuilds"
+            },
+            {
+              "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/builds/{}/getbuilddetails",
+              "operationName": "getBuildDetails",
+              "operationVerb": "post",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}/getBuildDetails",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L170",
+              "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "resourceName": "ImageDefinitionsBuilds"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/builds",
+              "operationName": "listByImageDefinition",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L155",
+              "resourceKey": "microsoft.devcenter/projects/catalogs/imagedefinitions/builds|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devcenter/projects/{}/catalogs/{}/imagedefinitions/{}/builds/{}",
+              "resourceType": "Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevCenter/projects/{projectName}/catalogs/{catalogName}/imageDefinitions/{imageDefinitionName}/builds/{buildName}",
+              "resourceName": "ImageDefinitionsBuilds"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L152, distinct from 'ImageDefinitionsBuilds'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 2,
+    "total": 2
+  },
+  "outputHashes": {
+    "resourcesCsv": "5c7a665ff473b05d1378f4b89475f9259b43f4ae959b2661a6f2582ef38ea1c7",
+    "operationsCsv": "ee05e972b04a894de52baaf1803a697f3b9a6198036d8e412fbfbb589bca2db3",
+    "diagnosticsJson": "bd10d5eb8d6e47fad79e3d2a6cd6f4e21c31da257c4fbb41db46fe607077e499",
+    "statusJson": "98bfb2c5967f9678f291a9be22fca458f2d65412fe44d4dc1025238933d98d6b"
+  }
+}

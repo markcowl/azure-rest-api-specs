@@ -1,0 +1,38 @@
+{
+  "service": "gcpconnector",
+  "projectRoot": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/BigQueryDataset",
+  "entrypoint": "specification/gcpconnector/resource-manager/Microsoft.GcpConnector/BigQueryDataset/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "8ef12a5aeabe8a9dd133ab96edf29e24a54cc899f76f8ff041d8159b30565303",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "2ef66a08d86284d8a6d1de7c3719fe32cb4db092ea0b25c728d25ab17c6c9690",
+    "operationsCsv": "6a0a69f2a449386eb01b884df2560b5d0fc7ba70e522c8c1c89f6a7172a915d9",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "c810d35321409df1d695b7f5388b75e712f5c05557716b757e9466c60351a140"
+  }
+}

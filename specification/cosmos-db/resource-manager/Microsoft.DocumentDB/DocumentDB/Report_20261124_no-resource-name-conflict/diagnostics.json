@@ -1,0 +1,466 @@
+[
+  {
+    "findingId": "NRNC-88CE4575F6EE",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'ClusterResource' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands/{commandId}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp",
+    "line": 162,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L162",
+    "projectRoot": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB",
+    "entrypoint": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/main.tsp",
+    "service": "cosmos-db",
+    "resourceName": "ClusterResource",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands/{commandId}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.documentdb/cassandraclusters/backups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/backups/{}",
+        "resourceType": "Microsoft.DocumentDB/cassandraClusters/backups",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups/{backupId}",
+        "resourceName": "ClusterResource",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/backups/{}",
+            "operationName": "getBackup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups/{backupId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L203",
+            "resourceKey": "microsoft.documentdb/cassandraclusters/backups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/backups/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters/backups",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups/{backupId}",
+            "resourceName": "ClusterResource"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.documentdb/cassandraclusters/commands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/commands/{}",
+        "resourceType": "Microsoft.DocumentDB/cassandraClusters/commands",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands/{commandId}",
+        "resourceName": "ClusterResource",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/commands/{}",
+            "operationName": "getCommandAsync",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands/{commandId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L162",
+            "resourceKey": "microsoft.documentdb/cassandraclusters/commands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/commands/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters/commands",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands/{commandId}",
+            "resourceName": "ClusterResource"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+        "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+        "resourceName": "ClusterResource",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "operationName": "createUpdate",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L59",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/deallocate",
+            "operationName": "deallocate",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/deallocate",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L228",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L87",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L54",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/invokecommand",
+            "operationName": "invokeCommand",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/invokeCommand",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L113",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/invokecommandasync",
+            "operationName": "invokeCommandAsync",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/invokeCommandAsync",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L129",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/backups",
+            "operationName": "listBackups",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L187",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters",
+            "operationName": "listByResourceGroup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L95",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.documentdb/cassandraclusters",
+            "operationName": "listBySubscription",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/cassandraClusters",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L104",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/commands",
+            "operationName": "listCommand",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L146",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/start",
+            "operationName": "start",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/start",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L240",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/status",
+            "operationName": "status",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/status",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L251",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L69",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L162, distinct from 'ClusterResource'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-EBB3A4E448DC",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'ClusterResource' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups/{backupId}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp",
+    "line": 203,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L203",
+    "projectRoot": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB",
+    "entrypoint": "specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/main.tsp",
+    "service": "cosmos-db",
+    "resourceName": "ClusterResource",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups/{backupId}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.documentdb/cassandraclusters/backups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/backups/{}",
+        "resourceType": "Microsoft.DocumentDB/cassandraClusters/backups",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups/{backupId}",
+        "resourceName": "ClusterResource",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/backups/{}",
+            "operationName": "getBackup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups/{backupId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L203",
+            "resourceKey": "microsoft.documentdb/cassandraclusters/backups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/backups/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters/backups",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups/{backupId}",
+            "resourceName": "ClusterResource"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.documentdb/cassandraclusters/commands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/commands/{}",
+        "resourceType": "Microsoft.DocumentDB/cassandraClusters/commands",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands/{commandId}",
+        "resourceName": "ClusterResource",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/commands/{}",
+            "operationName": "getCommandAsync",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands/{commandId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L162",
+            "resourceKey": "microsoft.documentdb/cassandraclusters/commands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/commands/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters/commands",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands/{commandId}",
+            "resourceName": "ClusterResource"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+        "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+        "resourceName": "ClusterResource",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "operationName": "createUpdate",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L59",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/deallocate",
+            "operationName": "deallocate",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/deallocate",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L228",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L87",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L54",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/invokecommand",
+            "operationName": "invokeCommand",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/invokeCommand",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L113",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/invokecommandasync",
+            "operationName": "invokeCommandAsync",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/invokeCommandAsync",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L129",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/backups",
+            "operationName": "listBackups",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/backups",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L187",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters",
+            "operationName": "listByResourceGroup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L95",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.documentdb/cassandraclusters",
+            "operationName": "listBySubscription",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.DocumentDB/cassandraClusters",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L104",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/commands",
+            "operationName": "listCommand",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/commands",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L146",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/start",
+            "operationName": "start",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/start",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L240",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}/status",
+            "operationName": "status",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}/status",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L251",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L69",
+            "resourceKey": "microsoft.documentdb/cassandraclusters|/subscriptions/{}/resourcegroups/{}/providers/microsoft.documentdb/cassandraclusters/{}",
+            "resourceType": "Microsoft.DocumentDB/cassandraClusters",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DocumentDB/cassandraClusters/{clusterName}",
+            "resourceName": "ClusterResource"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L203, distinct from 'ClusterResource'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "service": "monitor",
+  "projectRoot": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ActivityLogAlertsApi",
+  "entrypoint": "specification/monitor/resource-manager/Microsoft.Insights/Insights/ActivityLogAlertsApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "f95c24d60e954cccf294813fef11c394550cefb55e6a7e5610e1f7ffb73af7ae",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 1,
+  "operationCount": 6,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "b4019ef3fded8fc3b724300909bf9f24d903eb72a960d3d1ceb53313e12e3568",
+    "operationsCsv": "b190638e9e9e198c17cd43e34dc0128d09595e7a103f2c468f667011b1b0c408",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "80a601ec94fc8177cc567343a12733392b9aa256e53c2ec3d6865c6980d7e40e"
+  }
+}

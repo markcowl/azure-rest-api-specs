@@ -1,0 +1,38 @@
+{
+  "service": "cloudhealth",
+  "projectRoot": "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth",
+  "entrypoint": "specification/cloudhealth/resource-manager/Microsoft.CloudHealth/CloudHealth/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "0d0d09293885fec6d7b414d49e2e06a26e945a17f9e21d2f2e359480dbc2b5d3",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 6,
+  "operationCount": 32,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "d4b5bf424d3a2c9a69673aefd89ef7c17023e5e9d47d4e6f55a931afe03c6058",
+    "operationsCsv": "ea58e8c33eabb5ae0b92340de5779e1f1c6a9ec643b293adbffa2a9a400efc0d",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "b75cbf56b90a935e45d72cab34b05a0c7eb2ebd745278e51a75bafea2b6f172e"
+  }
+}

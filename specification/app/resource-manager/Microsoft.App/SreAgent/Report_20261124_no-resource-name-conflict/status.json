@@ -1,0 +1,38 @@
+{
+  "service": "app",
+  "projectRoot": "specification/app/resource-manager/Microsoft.App/SreAgent",
+  "entrypoint": "specification/app/resource-manager/Microsoft.App/SreAgent/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "4b8294b59d47ac708481eafd2ca0e1f27cd8b7771062f9479e6c25db4dd67c08",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 2,
+  "operationCount": 16,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "e66ae46cac3304b714473a1bb6efe9aeb5904a10b0451125e8bf410d672832f3",
+    "operationsCsv": "d72bfd9a145ee0bd89229d0875102abe23c8ac9264d267ec78e092f286d86e23",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "63804785b71fb2d5662a5bb939d1b0f591245f9cb24f4c5b850accadba5bac64"
+  }
+}

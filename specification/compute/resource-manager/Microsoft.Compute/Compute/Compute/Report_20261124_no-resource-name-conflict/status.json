@@ -1,0 +1,366 @@
+{
+  "service": "compute",
+  "projectRoot": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute",
+  "entrypoint": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "6076349df2cd12f3d1cc25e38219c3f90a37b04a768deceee4917ac9cafb98f2",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-findings",
+  "resourceCount": 26,
+  "operationCount": 174,
+  "diagnosticCount": 2,
+  "findingCount": 2,
+  "affectedLogicalNames": [
+    "VirtualMachinesDiagnosticRunCommands",
+    "VirtualMachinesRunCommands"
+  ],
+  "correlatedResourceCount": 4,
+  "matchedDiagnosticCount": 2,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [
+    {
+      "findingId": "NRNC-86EEA9334B75",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'VirtualMachinesDiagnosticRunCommands' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp",
+      "line": 136,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L136",
+      "projectRoot": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute",
+      "entrypoint": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/main.tsp",
+      "service": "compute",
+      "resourceName": "VirtualMachinesDiagnosticRunCommands",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.compute/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+          "resourceType": "Microsoft.Compute/virtualMachines/diagnosticRunCommands",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+          "resourceName": "VirtualMachinesDiagnosticRunCommands",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L19",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L19",
+          "operations": [
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L65",
+              "resourceKey": "microsoft.compute/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+              "operationName": "delete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+              "operationKind": "delete",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L87",
+              "resourceKey": "microsoft.compute/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands",
+              "operationName": "diagnosticListByVirtualMachine",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L102",
+              "resourceKey": "microsoft.compute/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+              "operationName": "getByVirtualMachine",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L50",
+              "resourceKey": "microsoft.compute/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            },
+            {
+              "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+              "operationName": "update",
+              "operationVerb": "patch",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+              "operationKind": "update",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L74",
+              "resourceKey": "microsoft.compute/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+          "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/diagnosticRunCommands",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+          "resourceName": "VirtualMachinesDiagnosticRunCommands",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L19",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L19",
+          "operations": [
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L153",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+              "operationName": "delete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+              "operationKind": "delete",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L179",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands",
+              "operationName": "diagnosticList",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L194",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L136",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            },
+            {
+              "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+              "operationName": "update",
+              "operationVerb": "patch",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+              "operationKind": "update",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L164",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/diagnosticruncommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/diagnosticruncommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/diagnosticRunCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/diagnosticRunCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesDiagnosticRunCommands"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L136, distinct from 'VirtualMachinesDiagnosticRunCommands'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    },
+    {
+      "findingId": "NRNC-1F7BAFD48789",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'VirtualMachinesRunCommands' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp",
+      "line": 158,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L158",
+      "projectRoot": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute",
+      "entrypoint": "specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/main.tsp",
+      "service": "compute",
+      "resourceName": "VirtualMachinesRunCommands",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.compute/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+          "resourceType": "Microsoft.Compute/virtualMachines/runCommands",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+          "resourceName": "VirtualMachinesRunCommands",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L15",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L15",
+          "operations": [
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L73",
+              "resourceKey": "microsoft.compute/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+              "operationName": "delete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+              "operationKind": "delete",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L94",
+              "resourceKey": "microsoft.compute/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+              "operationName": "getByVirtualMachine",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L59",
+              "resourceKey": "microsoft.compute/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands",
+              "operationName": "listByVirtualMachine",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L105",
+              "resourceKey": "microsoft.compute/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            },
+            {
+              "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+              "operationName": "update",
+              "operationVerb": "patch",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+              "operationKind": "update",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L82",
+              "resourceKey": "microsoft.compute/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+          "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+          "resourceName": "VirtualMachinesRunCommands",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L15",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L15",
+          "operations": [
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L174",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+              "operationName": "delete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+              "operationKind": "delete",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L199",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L158",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands",
+              "operationName": "list",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L213",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            },
+            {
+              "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+              "operationName": "update",
+              "operationVerb": "patch",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+              "operationKind": "update",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L185",
+              "resourceKey": "microsoft.compute/virtualmachinescalesets/virtualmachines/runcommands|/subscriptions/{}/resourcegroups/{}/providers/microsoft.compute/virtualmachinescalesets/{}/virtualmachines/{}/runcommands/{}",
+              "resourceType": "Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachineScaleSets/{vmScaleSetName}/virtualMachines/{instanceId}/runCommands/{runCommandName}",
+              "resourceName": "VirtualMachinesRunCommands"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L158, distinct from 'VirtualMachinesRunCommands'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 2,
+    "total": 2
+  },
+  "outputHashes": {
+    "resourcesCsv": "2994beae30a63d6ba3ddb92ac850c9323ce102709ad1e8a6d869b8015b3cf9cf",
+    "operationsCsv": "1aa6f0189ca261296307674a6ae8aa2d76bf2c8d334d5464f2e2426dce508f57",
+    "diagnosticsJson": "d08b6bc694f04dcf92eb4fa9da7f2960ec0ea875b058b9ce6046da96e86cc154",
+    "statusJson": "4cccbef804ed7f478660dee48db863f6f6c7abda374a392958255a66d5840a57"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "service": "applicationinsights",
+  "projectRoot": "specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbookTemplatesApi",
+  "entrypoint": "specification/applicationinsights/resource-manager/Microsoft.Insights/ApplicationInsights/WorkbookTemplatesApi/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "1e9d0daa99b05dfcf5f4b78e1409e7eaf5b81abd73d4af21191630c7db08d36e",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 1,
+  "operationCount": 5,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "aa66d7e1173546e164a584952d07b338a8c784be3d532027eec17e7130a17893",
+    "operationsCsv": "2dffe8826458aa5c24a2769b245eba04b97b9214862c79891ca4a02860056ccb",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "68a1a9b8788a7221406974b664a6e75d8f17696fb4d8435d4f58aec10eccbaf0"
+  }
+}

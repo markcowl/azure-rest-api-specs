@@ -1,0 +1,371 @@
+{
+  "service": "marketplacecatalog",
+  "projectRoot": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products",
+  "entrypoint": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "d8c8f8c089b2e21dfb2d3a847b2f0ca360a4ac7f2e847d0e92f062154d49b389",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-findings",
+  "resourceCount": 6,
+  "operationCount": 4,
+  "diagnosticCount": 3,
+  "findingCount": 3,
+  "affectedLogicalNames": [
+    "ProductSingle"
+  ],
+  "correlatedResourceCount": 4,
+  "matchedDiagnosticCount": 3,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [
+    {
+      "findingId": "NRNC-7D0FD533DCFD",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ProductSingle' is used by both '/providers/Microsoft.Marketplace/products/{productId}' and '/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp",
+      "line": 239,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L239",
+      "projectRoot": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products",
+      "entrypoint": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp",
+      "service": "marketplacecatalog",
+      "resourceName": "ProductSingle",
+      "conflictingInstancePaths": [
+        "/providers/Microsoft.Marketplace/products/{productId}",
+        "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/products/{}",
+              "operationName": "getByBillingProfile",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L311",
+              "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/products/{}",
+              "operationName": "getByBillingAccount",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L277",
+              "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/products|/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.marketplace/products/{}",
+              "operationName": "getByTenant",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L198",
+              "resourceKey": "microsoft.marketplace/products|/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/products|/subscriptions/{}/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/providers/microsoft.marketplace/products/{}",
+              "operationName": "getBySubscription",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L239",
+              "resourceKey": "microsoft.marketplace/products|/subscriptions/{}/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L239, distinct from 'ProductSingle'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    },
+    {
+      "findingId": "NRNC-D03142A6FF6C",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ProductSingle' is used by both '/providers/Microsoft.Marketplace/products/{productId}' and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp",
+      "line": 277,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L277",
+      "projectRoot": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products",
+      "entrypoint": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp",
+      "service": "marketplacecatalog",
+      "resourceName": "ProductSingle",
+      "conflictingInstancePaths": [
+        "/providers/Microsoft.Marketplace/products/{productId}",
+        "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/products/{}",
+              "operationName": "getByBillingProfile",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L311",
+              "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/products/{}",
+              "operationName": "getByBillingAccount",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L277",
+              "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/products|/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.marketplace/products/{}",
+              "operationName": "getByTenant",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L198",
+              "resourceKey": "microsoft.marketplace/products|/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/products|/subscriptions/{}/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/providers/microsoft.marketplace/products/{}",
+              "operationName": "getBySubscription",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L239",
+              "resourceKey": "microsoft.marketplace/products|/subscriptions/{}/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L277, distinct from 'ProductSingle'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    },
+    {
+      "findingId": "NRNC-1B95C01C42DF",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ProductSingle' is used by both '/providers/Microsoft.Marketplace/products/{productId}' and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp",
+      "line": 311,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L311",
+      "projectRoot": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products",
+      "entrypoint": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp",
+      "service": "marketplacecatalog",
+      "resourceName": "ProductSingle",
+      "conflictingInstancePaths": [
+        "/providers/Microsoft.Marketplace/products/{productId}",
+        "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/products/{}",
+              "operationName": "getByBillingProfile",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L311",
+              "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/products/{}",
+              "operationName": "getByBillingAccount",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L277",
+              "resourceKey": "microsoft.marketplace/products|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/products|/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.marketplace/products/{}",
+              "operationName": "getByTenant",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L198",
+              "resourceKey": "microsoft.marketplace/products|/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/products|/subscriptions/{}/providers/microsoft.marketplace/products/{}",
+          "resourceType": "Microsoft.Marketplace/products",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}",
+          "resourceName": "ProductSingle",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L31",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/providers/microsoft.marketplace/products/{}",
+              "operationName": "getBySubscription",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L239",
+              "resourceKey": "microsoft.marketplace/products|/subscriptions/{}/providers/microsoft.marketplace/products/{}",
+              "resourceType": "Microsoft.Marketplace/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Marketplace/products/{productId}",
+              "resourceName": "ProductSingle"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L311, distinct from 'ProductSingle'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 3,
+    "total": 3
+  },
+  "outputHashes": {
+    "resourcesCsv": "6c67a8a1c594c975780918e17ddc02cfffc014ed7e69cf46aa02540962b0e67f",
+    "operationsCsv": "9095b02756da14b13ec454ac15f9049e97385cbca087cbc4fb0e28a564a00065",
+    "diagnosticsJson": "5331f693f88d7a8125c0fae951eeb4656256746aaf90540a00bd3eafecfaba57",
+    "statusJson": "016ce3cac212305fb7beab0cc6d36050c4b7af094cd3f1991f2ea6c6da72bfbf"
+  }
+}

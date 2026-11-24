@@ -1,0 +1,38 @@
+{
+  "service": "serialconsole",
+  "projectRoot": "specification/serialconsole/resource-manager/Microsoft.SerialConsole/SerialConsole",
+  "entrypoint": "specification/serialconsole/resource-manager/Microsoft.SerialConsole/SerialConsole/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "1e65547120c0d22f182f388a3b9f775056951c8310ce8d66067d08db9341ba67",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 1,
+  "operationCount": 4,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "8f138ad6aa9e5645fec631791a04b1f260ec2bf4f06d50f81fdd960164136001",
+    "operationsCsv": "f008b9c099814f36c0c1b2a263c1887b09245a611163e61ffcb1177ba160cdf5",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "e51ae5eae8cd82be831d17619f0326d3abf9225401f40c3c974f9267a8d9df0f"
+  }
+}

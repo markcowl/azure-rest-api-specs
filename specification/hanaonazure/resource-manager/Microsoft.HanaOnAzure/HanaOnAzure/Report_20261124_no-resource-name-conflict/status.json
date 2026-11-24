@@ -1,0 +1,38 @@
+{
+  "service": "hanaonazure",
+  "projectRoot": "specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/HanaOnAzure",
+  "entrypoint": "specification/hanaonazure/resource-manager/Microsoft.HanaOnAzure/HanaOnAzure/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "089d1f7bbd76fd0d576d6e3df3508f015317e1095a8e40290e659c17199a19ab",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 2,
+  "operationCount": 9,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "46fbb429eecda89ca9117ff187c82aac9774bbb39e967c512c1ae08c584c2667",
+    "operationsCsv": "3bdb5586278a3110c86b8daf833d23ce01da37b12b8a1a46509d85ed9de4b515",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "ed8ac2209f8fce2abeea5ee3518e1040f12ff852eac55bfa61902ca6369604a5"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "service": "informatica",
+  "projectRoot": "specification/informatica/resource-manager/Informatica.DataManagement/Informatica",
+  "entrypoint": "specification/informatica/resource-manager/Informatica.DataManagement/Informatica/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "db83f8e89381fff9842c7c672c75d4ec54e64f0ca073820b62e0e664491462ab",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 2,
+  "operationCount": 16,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "6e9084ab5604bab13afb275f12e2b7a2850fd8ec51857f1d992157961c5d2b85",
+    "operationsCsv": "a40f99eef994fca2e1847d06755bdef451129d1b9c5bfb253480d7a79de4a504",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "591cf5dc9acf423ede5914af86d921913ec89df6f16d18df379df0b3c8508605"
+  }
+}

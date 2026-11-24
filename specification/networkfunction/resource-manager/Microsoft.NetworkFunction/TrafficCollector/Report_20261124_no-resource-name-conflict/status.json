@@ -1,0 +1,38 @@
+{
+  "service": "networkfunction",
+  "projectRoot": "specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector",
+  "entrypoint": "specification/networkfunction/resource-manager/Microsoft.NetworkFunction/TrafficCollector/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "ce109468878e8727c85f718a43f4d1c446a570a5a7c6b4d36f9e4164e71da2c9",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 2,
+  "operationCount": 11,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "245e2ff1fae48cbcf5d902c712f9d68198ae7fbd2fcbd83ed1168e5024f29a87",
+    "operationsCsv": "dee5f185577657bd85bb31ae8a843757d7aa9a2c255dcfdf323fa0e6a5b3a9ae",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "f8b20d8a85773f6cc94a56230244192d9744762e40fdb641add91c9c62490794"
+  }
+}

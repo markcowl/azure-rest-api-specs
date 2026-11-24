@@ -1,0 +1,260 @@
+[
+  {
+    "findingId": "NRNC-5A6F41F19845",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'IotHubDescription' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/jobs/{jobId}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp",
+    "line": 177,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L177",
+    "projectRoot": "specification/iothub/resource-manager/Microsoft.Devices/IoTHub",
+    "entrypoint": "specification/iothub/resource-manager/Microsoft.Devices/IoTHub/main.tsp",
+    "service": "iothub",
+    "resourceName": "IotHubDescription",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/jobs/{jobId}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.devices/iothubs/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/jobs/{}",
+        "resourceType": "Microsoft.Devices/IotHubs/jobs",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/jobs/{jobId}",
+        "resourceName": "IotHubDescription",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/jobs/{}",
+            "operationName": "getJob",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/jobs/{jobId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L177",
+            "resourceKey": "microsoft.devices/iothubs/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/jobs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs/jobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/jobs/{jobId}",
+            "resourceName": "IotHubDescription"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+        "resourceType": "Microsoft.Devices/IotHubs",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+        "resourceName": "IotHubDescription",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "operationName": "createOrUpdate",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L69",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L108",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/exportdevices",
+            "operationName": "exportDevices",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/exportDevices",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L288",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L62",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/routingendpointshealth",
+            "operationName": "getEndpointHealth",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{iotHubName}/routingEndpointsHealth",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L212",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/iothubkeys/{}/listkeys",
+            "operationName": "getKeysForKeyName",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/IotHubKeys/{keyName}/listkeys",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L267",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/quotametrics",
+            "operationName": "getQuotaMetrics",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/quotaMetrics",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L197",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/skus",
+            "operationName": "getValidSkus",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/skus",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L147",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/importdevices",
+            "operationName": "importDevices",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/importDevices",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L300",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs",
+            "operationName": "listByResourceGroup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L127",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.devices/iothubs",
+            "operationName": "listBySubscription",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Devices/IotHubs",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L137",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/jobs",
+            "operationName": "listJobs",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/jobs",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L162",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/listkeys",
+            "operationName": "listKeys",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}/listkeys",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L253",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/failover",
+            "operationName": "manualFailover",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{iotHubName}/failover",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L312",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/routing/routes/$testall",
+            "operationName": "testAllRoutes",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{iotHubName}/routing/routes/$testall",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L227",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}/routing/routes/$testnew",
+            "operationName": "testRoute",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{iotHubName}/routing/routes/$testnew",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L240",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L91",
+            "resourceKey": "microsoft.devices/iothubs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.devices/iothubs/{}",
+            "resourceType": "Microsoft.Devices/IotHubs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Devices/IotHubs/{resourceName}",
+            "resourceName": "IotHubDescription"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/iothub/resource-manager/Microsoft.Devices/IoTHub/IotHubDescription.tsp#L177, distinct from 'IotHubDescription'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  }
+]

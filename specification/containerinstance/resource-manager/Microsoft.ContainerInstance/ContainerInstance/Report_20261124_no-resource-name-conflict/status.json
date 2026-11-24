@@ -1,0 +1,38 @@
+{
+  "service": "containerinstance",
+  "projectRoot": "specification/containerinstance/resource-manager/Microsoft.ContainerInstance/ContainerInstance",
+  "entrypoint": "specification/containerinstance/resource-manager/Microsoft.ContainerInstance/ContainerInstance/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "3330b612840ce7ca52a305c4caab35ac38919f2c127f48131e857a8696363fd8",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 6,
+  "operationCount": 37,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "f245e2575715b5c881b31d83cf5300ebcca77467a45bf36ee51717074c68e585",
+    "operationsCsv": "d6b9462c7467aaf524f7ad2db355327ce7001b412fd4c916c161ae6966bd72fb",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "0dc284b53e35723a47db8e021fd8d3a99d0603850c49a492beb71376f969e629"
+  }
+}

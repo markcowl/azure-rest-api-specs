@@ -1,0 +1,128 @@
+[
+  {
+    "findingId": "NRNC-0E22E0B715C8",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'RoleAssignment' is used by both '/{roleAssignmentId}' and '/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp",
+    "line": 153,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L153",
+    "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment",
+    "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/main.tsp",
+    "service": "authorization",
+    "resourceName": "RoleAssignment",
+    "conflictingInstancePaths": [
+      "/{roleAssignmentId}",
+      "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "|/{}",
+        "resourceType": "",
+        "resourceInstancePath": "/{roleAssignmentId}",
+        "resourceName": "RoleAssignment",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "put|/{}",
+            "operationName": "createById",
+            "operationVerb": "put",
+            "operationPath": "/{roleAssignmentId}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L306",
+            "resourceKey": "|/{}",
+            "resourceType": "",
+            "resourceInstancePath": "/{roleAssignmentId}",
+            "resourceName": "RoleAssignment"
+          },
+          {
+            "operationKey": "delete|/{}",
+            "operationName": "deleteById",
+            "operationVerb": "delete",
+            "operationPath": "/{roleAssignmentId}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L315",
+            "resourceKey": "|/{}",
+            "resourceType": "",
+            "resourceInstancePath": "/{roleAssignmentId}",
+            "resourceName": "RoleAssignment"
+          },
+          {
+            "operationKey": "get|/{}",
+            "operationName": "getById",
+            "operationVerb": "get",
+            "operationPath": "/{roleAssignmentId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L291",
+            "resourceKey": "|/{}",
+            "resourceType": "",
+            "resourceInstancePath": "/{roleAssignmentId}",
+            "resourceName": "RoleAssignment"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.authorization/roleassignments|/{}/providers/microsoft.authorization/roleassignments/{}",
+        "resourceType": "Microsoft.Authorization/roleAssignments",
+        "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+        "resourceName": "RoleAssignment",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "put|/{}/providers/microsoft.authorization/roleassignments/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L158",
+            "resourceKey": "microsoft.authorization/roleassignments|/{}/providers/microsoft.authorization/roleassignments/{}",
+            "resourceType": "Microsoft.Authorization/roleAssignments",
+            "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+            "resourceName": "RoleAssignment"
+          },
+          {
+            "operationKey": "delete|/{}/providers/microsoft.authorization/roleassignments/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L166",
+            "resourceKey": "microsoft.authorization/roleassignments|/{}/providers/microsoft.authorization/roleassignments/{}",
+            "resourceType": "Microsoft.Authorization/roleAssignments",
+            "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+            "resourceName": "RoleAssignment"
+          },
+          {
+            "operationKey": "get|/{}/providers/microsoft.authorization/roleassignments/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L153",
+            "resourceKey": "microsoft.authorization/roleassignments|/{}/providers/microsoft.authorization/roleassignments/{}",
+            "resourceType": "Microsoft.Authorization/roleAssignments",
+            "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+            "resourceName": "RoleAssignment"
+          },
+          {
+            "operationKey": "get|/{}/providers/microsoft.authorization/roleassignments",
+            "operationName": "listForScope",
+            "operationVerb": "get",
+            "operationPath": "/{scope}/providers/Microsoft.Authorization/roleAssignments",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L175",
+            "resourceKey": "microsoft.authorization/roleassignments|/{}/providers/microsoft.authorization/roleassignments/{}",
+            "resourceType": "Microsoft.Authorization/roleAssignments",
+            "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/roleAssignments/{roleAssignmentName}",
+            "resourceName": "RoleAssignment"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L153, distinct from 'RoleAssignment'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  }
+]

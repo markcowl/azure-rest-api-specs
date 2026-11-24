@@ -1,0 +1,116 @@
+[
+  {
+    "findingId": "NRNC-83B6C2C28445",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'ContainerAppLabelHistory' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp",
+    "line": 138,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L138",
+    "projectRoot": "specification/app/resource-manager/Microsoft.App/ContainerApps",
+    "entrypoint": "specification/app/resource-manager/Microsoft.App/ContainerApps/main.tsp",
+    "service": "app",
+    "resourceName": "ContainerAppLabelHistory",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.app/containerapps/labelhistories|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistories/{}",
+        "resourceType": "Microsoft.App/containerApps/labelHistories",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}",
+        "resourceName": "ContainerAppLabelHistory",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L33",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L33",
+        "operations": [
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistories/{}",
+            "operationName": "deleteLabelHistory",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L144",
+            "resourceKey": "microsoft.app/containerapps/labelhistories|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistories/{}",
+            "resourceType": "Microsoft.App/containerApps/labelHistories",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}",
+            "resourceName": "ContainerAppLabelHistory"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistories/{}",
+            "operationName": "getLabelHistory",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L138",
+            "resourceKey": "microsoft.app/containerapps/labelhistories|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistories/{}",
+            "resourceType": "Microsoft.App/containerApps/labelHistories",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}",
+            "resourceName": "ContainerAppLabelHistory"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistories",
+            "operationName": "listLabelHistory",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L150",
+            "resourceKey": "microsoft.app/containerapps/labelhistories|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistories/{}",
+            "resourceType": "Microsoft.App/containerApps/labelHistories",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistories/{labelName}",
+            "resourceName": "ContainerAppLabelHistory"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.app/containerapps/labelhistory|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistory/{}",
+        "resourceType": "Microsoft.App/containerApps/labelHistory",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}",
+        "resourceName": "ContainerAppLabelHistory",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistory/{}",
+            "operationName": "deleteLabelHistory",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L112",
+            "resourceKey": "microsoft.app/containerapps/labelhistory|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistory/{}",
+            "resourceType": "Microsoft.App/containerApps/labelHistory",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}",
+            "resourceName": "ContainerAppLabelHistory"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistory/{}",
+            "operationName": "getLabelHistory",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L106",
+            "resourceKey": "microsoft.app/containerapps/labelhistory|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistory/{}",
+            "resourceType": "Microsoft.App/containerApps/labelHistory",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}",
+            "resourceName": "ContainerAppLabelHistory"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistory",
+            "operationName": "listLabelHistory",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L118",
+            "resourceKey": "microsoft.app/containerapps/labelhistory|/subscriptions/{}/resourcegroups/{}/providers/microsoft.app/containerapps/{}/labelhistory/{}",
+            "resourceType": "Microsoft.App/containerApps/labelHistory",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.App/containerApps/{containerAppName}/labelHistory/{labelName}",
+            "resourceName": "ContainerAppLabelHistory"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L138, distinct from 'ContainerAppLabelHistory'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  }
+]

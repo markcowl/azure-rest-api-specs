@@ -1,0 +1,1648 @@
+[
+  {
+    "findingId": "NRNC-3C1862CCCA52",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'AutomationAccount' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp",
+    "line": 116,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L116",
+    "projectRoot": "specification/automation/resource-manager/Microsoft.Automation/Automation",
+    "entrypoint": "specification/automation/resource-manager/Microsoft.Automation/Automation/main.tsp",
+    "service": "automation",
+    "resourceName": "AutomationAccount",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/nodecounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodecounts/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/nodecounts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodecounts/{}",
+            "operationName": "nodeCountInformationGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L116",
+            "resourceKey": "microsoft.automation/automationaccounts/nodecounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodecounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/nodecounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationmachineruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationMachineRuns",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns/{}",
+            "operationName": "getById",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L340",
+            "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationmachineruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationMachineRuns",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationRuns",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns/{}",
+            "operationName": "softwareUpdateConfigurationRunsGetById",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L399",
+            "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationRuns",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/agentregistrationinformation",
+            "operationName": "agentRegistrationInformationGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/agentRegistrationInformation",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L177",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/privatelinkresources",
+            "operationName": "automation",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/privateLinkResources",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L164",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/convertgraphrunbookcontent",
+            "operationName": "convertGraphRunbookContent",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/convertGraphRunbookContent",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L328",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "createOrUpdate",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L70",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L93",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/webhooks/generateuri",
+            "operationName": "generateUri",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/webhooks/generateUri",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L458",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L62",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs",
+            "operationName": "jobListByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L263",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/listkeys",
+            "operationName": "keysListByAutomationAccount",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/listKeys",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L252",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/linkedworkspace",
+            "operationName": "linkedWorkspaceGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/linkedWorkspace",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L291",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.automation/automationaccounts",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Automation/automationAccounts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L109",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/statistics",
+            "operationName": "listByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/statistics",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L215",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts",
+            "operationName": "listByResourceGroup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L101",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/listdeletedrunbooks",
+            "operationName": "listDeletedRunbooks",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/listDeletedRunbooks",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L204",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/agentregistrationinformation/regeneratekey",
+            "operationName": "regenerateKey",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/agentRegistrationInformation/regenerateKey",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L191",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns",
+            "operationName": "softwareUpdateConfigurationMachineRunsList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L360",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns",
+            "operationName": "softwareUpdateConfigurationRunsList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L419",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurations",
+            "operationName": "softwareUpdateConfigurationsList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurations",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L137",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L81",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/usages",
+            "operationName": "usagesListByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/usages",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L237",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L116, distinct from 'AutomationAccount'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-A088692069CA",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'AutomationAccount' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp",
+    "line": 340,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L340",
+    "projectRoot": "specification/automation/resource-manager/Microsoft.Automation/Automation",
+    "entrypoint": "specification/automation/resource-manager/Microsoft.Automation/Automation/main.tsp",
+    "service": "automation",
+    "resourceName": "AutomationAccount",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/nodecounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodecounts/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/nodecounts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodecounts/{}",
+            "operationName": "nodeCountInformationGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L116",
+            "resourceKey": "microsoft.automation/automationaccounts/nodecounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodecounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/nodecounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationmachineruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationMachineRuns",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns/{}",
+            "operationName": "getById",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L340",
+            "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationmachineruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationMachineRuns",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationRuns",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns/{}",
+            "operationName": "softwareUpdateConfigurationRunsGetById",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L399",
+            "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationRuns",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/agentregistrationinformation",
+            "operationName": "agentRegistrationInformationGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/agentRegistrationInformation",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L177",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/privatelinkresources",
+            "operationName": "automation",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/privateLinkResources",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L164",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/convertgraphrunbookcontent",
+            "operationName": "convertGraphRunbookContent",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/convertGraphRunbookContent",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L328",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "createOrUpdate",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L70",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L93",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/webhooks/generateuri",
+            "operationName": "generateUri",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/webhooks/generateUri",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L458",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L62",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs",
+            "operationName": "jobListByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L263",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/listkeys",
+            "operationName": "keysListByAutomationAccount",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/listKeys",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L252",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/linkedworkspace",
+            "operationName": "linkedWorkspaceGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/linkedWorkspace",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L291",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.automation/automationaccounts",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Automation/automationAccounts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L109",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/statistics",
+            "operationName": "listByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/statistics",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L215",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts",
+            "operationName": "listByResourceGroup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L101",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/listdeletedrunbooks",
+            "operationName": "listDeletedRunbooks",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/listDeletedRunbooks",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L204",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/agentregistrationinformation/regeneratekey",
+            "operationName": "regenerateKey",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/agentRegistrationInformation/regenerateKey",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L191",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns",
+            "operationName": "softwareUpdateConfigurationMachineRunsList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L360",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns",
+            "operationName": "softwareUpdateConfigurationRunsList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L419",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurations",
+            "operationName": "softwareUpdateConfigurationsList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurations",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L137",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L81",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/usages",
+            "operationName": "usagesListByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/usages",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L237",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L340, distinct from 'AutomationAccount'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-B225272ABDDE",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'AutomationAccount' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp",
+    "line": 399,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L399",
+    "projectRoot": "specification/automation/resource-manager/Microsoft.Automation/Automation",
+    "entrypoint": "specification/automation/resource-manager/Microsoft.Automation/Automation/main.tsp",
+    "service": "automation",
+    "resourceName": "AutomationAccount",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/nodecounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodecounts/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/nodecounts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodecounts/{}",
+            "operationName": "nodeCountInformationGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L116",
+            "resourceKey": "microsoft.automation/automationaccounts/nodecounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodecounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/nodecounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodecounts/{countType}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationmachineruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationMachineRuns",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns/{}",
+            "operationName": "getById",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L340",
+            "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationmachineruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationMachineRuns",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns/{softwareUpdateConfigurationMachineRunId}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationRuns",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns/{}",
+            "operationName": "softwareUpdateConfigurationRunsGetById",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L399",
+            "resourceKey": "microsoft.automation/automationaccounts/softwareupdateconfigurationruns|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/softwareUpdateConfigurationRuns",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns/{softwareUpdateConfigurationRunId}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+        "resourceName": "AutomationAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/agentregistrationinformation",
+            "operationName": "agentRegistrationInformationGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/agentRegistrationInformation",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L177",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/privatelinkresources",
+            "operationName": "automation",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/privateLinkResources",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L164",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/convertgraphrunbookcontent",
+            "operationName": "convertGraphRunbookContent",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/convertGraphRunbookContent",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L328",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "createOrUpdate",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L70",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L93",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/webhooks/generateuri",
+            "operationName": "generateUri",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/webhooks/generateUri",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L458",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L62",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs",
+            "operationName": "jobListByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L263",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/listkeys",
+            "operationName": "keysListByAutomationAccount",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/listKeys",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L252",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/linkedworkspace",
+            "operationName": "linkedWorkspaceGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/linkedWorkspace",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L291",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.automation/automationaccounts",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Automation/automationAccounts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L109",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/statistics",
+            "operationName": "listByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/statistics",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L215",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts",
+            "operationName": "listByResourceGroup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L101",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/listdeletedrunbooks",
+            "operationName": "listDeletedRunbooks",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/listDeletedRunbooks",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L204",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/agentregistrationinformation/regeneratekey",
+            "operationName": "regenerateKey",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/agentRegistrationInformation/regenerateKey",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L191",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationmachineruns",
+            "operationName": "softwareUpdateConfigurationMachineRunsList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationMachineRuns",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L360",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurationruns",
+            "operationName": "softwareUpdateConfigurationRunsList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurationRuns",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L419",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/softwareupdateconfigurations",
+            "operationName": "softwareUpdateConfigurationsList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/softwareUpdateConfigurations",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L137",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L81",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/usages",
+            "operationName": "usagesListByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/usages",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L237",
+            "resourceKey": "microsoft.automation/automationaccounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}",
+            "resourceName": "AutomationAccount"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L399, distinct from 'AutomationAccount'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-EE915EA109FE",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'DscNode' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports/{reportId}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp",
+    "line": 114,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L114",
+    "projectRoot": "specification/automation/resource-manager/Microsoft.Automation/Automation",
+    "entrypoint": "specification/automation/resource-manager/Microsoft.Automation/Automation/main.tsp",
+    "service": "automation",
+    "resourceName": "DscNode",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports/{reportId}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/nodes/reports|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}/reports/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/nodes/reports",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports/{reportId}",
+        "resourceName": "DscNode",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}/reports/{}",
+            "operationName": "nodeReportsGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports/{reportId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L114",
+            "resourceKey": "microsoft.automation/automationaccounts/nodes/reports|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}/reports/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/nodes/reports",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports/{reportId}",
+            "resourceName": "DscNode"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/nodes|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/nodes",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+        "resourceName": "DscNode",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L47",
+            "resourceKey": "microsoft.automation/automationaccounts/nodes|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/nodes",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+            "resourceName": "DscNode"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L30",
+            "resourceKey": "microsoft.automation/automationaccounts/nodes|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/nodes",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+            "resourceName": "DscNode"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes",
+            "operationName": "listByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L56",
+            "resourceKey": "microsoft.automation/automationaccounts/nodes|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/nodes",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+            "resourceName": "DscNode"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}/reports",
+            "operationName": "listByNode",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}/reports",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L92",
+            "resourceKey": "microsoft.automation/automationaccounts/nodes|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/nodes",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+            "resourceName": "DscNode"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L38",
+            "resourceKey": "microsoft.automation/automationaccounts/nodes|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/nodes/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/nodes",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/nodes/{nodeId}",
+            "resourceName": "DscNode"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L114, distinct from 'DscNode'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-21E5C489ADE8",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'Job' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/streams/{jobStreamId}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp",
+    "line": 180,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L180",
+    "projectRoot": "specification/automation/resource-manager/Microsoft.Automation/Automation",
+    "entrypoint": "specification/automation/resource-manager/Microsoft.Automation/Automation/main.tsp",
+    "service": "automation",
+    "resourceName": "Job",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/streams/{jobStreamId}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/jobs/streams|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}/streams/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/jobs/streams",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/streams/{jobStreamId}",
+        "resourceName": "Job",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L14",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L14",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}/streams/{}",
+            "operationName": "jobStreamGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/streams/{jobStreamId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L180",
+            "resourceKey": "microsoft.automation/automationaccounts/jobs/streams|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}/streams/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/jobs/streams",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/streams/{jobStreamId}",
+            "resourceName": "Job"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+        "resourceName": "Job",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L14",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L14",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L47",
+            "resourceKey": "microsoft.automation/automationaccounts/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "resourceName": "Job"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L30",
+            "resourceKey": "microsoft.automation/automationaccounts/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "resourceName": "Job"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}/output",
+            "operationName": "getOutput",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/output",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L67",
+            "resourceKey": "microsoft.automation/automationaccounts/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "resourceName": "Job"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}/runbookcontent",
+            "operationName": "getRunbookContent",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/runbookContent",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L95",
+            "resourceKey": "microsoft.automation/automationaccounts/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "resourceName": "Job"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}/streams",
+            "operationName": "listByJob",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/streams",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L207",
+            "resourceKey": "microsoft.automation/automationaccounts/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "resourceName": "Job"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}/resume",
+            "operationName": "resume",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/resume",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L161",
+            "resourceKey": "microsoft.automation/automationaccounts/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "resourceName": "Job"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}/stop",
+            "operationName": "stop",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/stop",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L142",
+            "resourceKey": "microsoft.automation/automationaccounts/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "resourceName": "Job"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}/suspend",
+            "operationName": "suspend",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}/suspend",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L123",
+            "resourceKey": "microsoft.automation/automationaccounts/jobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/jobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/jobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/jobs/{jobName}",
+            "resourceName": "Job"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L180, distinct from 'Job'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-75942DABE3DB",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'SourceControl' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp",
+    "line": 98,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L98",
+    "projectRoot": "specification/automation/resource-manager/Microsoft.Automation/Automation",
+    "entrypoint": "specification/automation/resource-manager/Microsoft.Automation/Automation/main.tsp",
+    "service": "automation",
+    "resourceName": "SourceControl",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs/streams|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs/streams",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams/{streamId}",
+        "resourceName": "SourceControl",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams/{}",
+            "operationName": "sourceControlSyncJobStreamsGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams/{streamId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L176",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs/streams|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs/streams",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams/{streamId}",
+            "resourceName": "SourceControl"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+        "resourceName": "SourceControl",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L98",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams",
+            "operationName": "listBySyncJob",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L154",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "operationName": "sourceControlSyncJobGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L118",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "resourceName": "SourceControl"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+        "resourceName": "SourceControl",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "operationName": "createOrUpdate",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L49",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L72",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L41",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols",
+            "operationName": "listByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L81",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams",
+            "operationName": "listBySyncJob",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L154",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs",
+            "operationName": "sourceControlSyncJobListByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L132",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L60",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L98, distinct from 'SourceControl'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-12A0F6A0940D",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'SourceControl' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams/{streamId}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp",
+    "line": 176,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L176",
+    "projectRoot": "specification/automation/resource-manager/Microsoft.Automation/Automation",
+    "entrypoint": "specification/automation/resource-manager/Microsoft.Automation/Automation/main.tsp",
+    "service": "automation",
+    "resourceName": "SourceControl",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams/{streamId}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs/streams|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs/streams",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams/{streamId}",
+        "resourceName": "SourceControl",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams/{}",
+            "operationName": "sourceControlSyncJobStreamsGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams/{streamId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L176",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs/streams|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs/streams",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams/{streamId}",
+            "resourceName": "SourceControl"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+        "resourceName": "SourceControl",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L98",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams",
+            "operationName": "listBySyncJob",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L154",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "operationName": "sourceControlSyncJobGet",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L118",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols/sourcecontrolsyncjobs|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}",
+            "resourceName": "SourceControl"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+        "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+        "resourceName": "SourceControl",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L14",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "operationName": "createOrUpdate",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L49",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L72",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L41",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols",
+            "operationName": "listByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L81",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs/{}/streams",
+            "operationName": "listBySyncJob",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs/{sourceControlSyncJobId}/streams",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L154",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}/sourcecontrolsyncjobs",
+            "operationName": "sourceControlSyncJobListByAutomationAccount",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}/sourceControlSyncJobs",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L132",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L60",
+            "resourceKey": "microsoft.automation/automationaccounts/sourcecontrols|/subscriptions/{}/resourcegroups/{}/providers/microsoft.automation/automationaccounts/{}/sourcecontrols/{}",
+            "resourceType": "Microsoft.Automation/automationAccounts/sourceControls",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Automation/automationAccounts/{automationAccountName}/sourceControls/{sourceControlName}",
+            "resourceName": "SourceControl"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L176, distinct from 'SourceControl'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  }
+]

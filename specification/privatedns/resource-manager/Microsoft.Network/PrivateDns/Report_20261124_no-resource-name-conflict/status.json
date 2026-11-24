@@ -1,0 +1,38 @@
+{
+  "service": "privatedns",
+  "projectRoot": "specification/privatedns/resource-manager/Microsoft.Network/PrivateDns",
+  "entrypoint": "specification/privatedns/resource-manager/Microsoft.Network/PrivateDns/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "443668a8c804a45e086a9d166d7e903bb70a3e2fd24d4addd08b125f8d9cba34",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 2,
+  "operationCount": 12,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "6401bfb64547570170a58e0c70a433fd5033b2d257085931df1085f87086ab3b",
+    "operationsCsv": "9a0a632d6dfc8fbbc34dbeb7538a97adb826706a542f8bb3af0a58b8c7773204",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "0af59aadee55c64aec3b6ec807ec9fa077aa12fd061c4d36b19f12507b86e7b8"
+  }
+}

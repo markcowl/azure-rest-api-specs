@@ -1,0 +1,131 @@
+{
+  "service": "marketplacecatalog",
+  "projectRoot": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus",
+  "entrypoint": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "ac214baf42bcc4adc3abff67317410ae78233a25336b16bc6d72625cf00ed52b",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-findings",
+  "resourceCount": 4,
+  "operationCount": 4,
+  "diagnosticCount": 1,
+  "findingCount": 1,
+  "affectedLogicalNames": [
+    "Sku"
+  ],
+  "correlatedResourceCount": 2,
+  "matchedDiagnosticCount": 1,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [
+    {
+      "findingId": "NRNC-80ABDA84AB6D",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'Sku' is used by both '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/skus/{skuId}' and '/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/skus/{skuId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp",
+      "line": 145,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L145",
+      "projectRoot": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus",
+      "entrypoint": "specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp",
+      "service": "marketplacecatalog",
+      "resourceName": "Sku",
+      "conflictingInstancePaths": [
+        "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/skus/{skuId}",
+        "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/skus/{skuId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.marketplace/skus|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/skus/{}",
+          "resourceType": "Microsoft.Marketplace/skus",
+          "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/skus/{skuId}",
+          "resourceName": "Sku",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L27",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L27",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/skus/{}",
+              "operationName": "getByBillingProfile",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/skus/{skuId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L145",
+              "resourceKey": "microsoft.marketplace/skus|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/skus/{}",
+              "resourceType": "Microsoft.Marketplace/skus",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/skus/{skuId}",
+              "resourceName": "Sku"
+            },
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/skus",
+              "operationName": "listByBillingProfile",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/skus",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L76",
+              "resourceKey": "microsoft.marketplace/skus|/providers/microsoft.billing/billingaccounts/{}/billingprofiles/{}/providers/microsoft.marketplace/skus/{}",
+              "resourceType": "Microsoft.Marketplace/skus",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/billingProfiles/{billingProfileId}/providers/Microsoft.Marketplace/skus/{skuId}",
+              "resourceName": "Sku"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.marketplace/skus|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/skus/{}",
+          "resourceType": "Microsoft.Marketplace/skus",
+          "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/skus/{skuId}",
+          "resourceName": "Sku",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L27",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L27",
+          "operations": [
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/skus/{}",
+              "operationName": "getByBillingAccount",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/skus/{skuId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L116",
+              "resourceKey": "microsoft.marketplace/skus|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/skus/{}",
+              "resourceType": "Microsoft.Marketplace/skus",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/skus/{skuId}",
+              "resourceName": "Sku"
+            },
+            {
+              "operationKey": "get|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/skus",
+              "operationName": "listByBillingAccount",
+              "operationVerb": "get",
+              "operationPath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/skus",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L36",
+              "resourceKey": "microsoft.marketplace/skus|/providers/microsoft.billing/billingaccounts/{}/providers/microsoft.marketplace/skus/{}",
+              "resourceType": "Microsoft.Marketplace/skus",
+              "resourceInstancePath": "/providers/Microsoft.Billing/billingAccounts/{billingAccountId}/providers/Microsoft.Marketplace/skus/{skuId}",
+              "resourceName": "Sku"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L145, distinct from 'Sku'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 1,
+    "total": 1
+  },
+  "outputHashes": {
+    "resourcesCsv": "ec5d1474f8b8ee99b5af7cc922da2018de6590c1fdbb58345b85bd2a674a6dac",
+    "operationsCsv": "3512347e789eeb54d547158331a1c2bbc758dde1e19cfb5d628089a63b6088ea",
+    "diagnosticsJson": "b2e96d2adde92faeea50cf0b30bfd95b33102f1808a25aea8863ab1ab9ae4716",
+    "statusJson": "9250444d2ec6129610d5b6cc005062e01980c6b1144c4231909412736f69a489"
+  }
+}

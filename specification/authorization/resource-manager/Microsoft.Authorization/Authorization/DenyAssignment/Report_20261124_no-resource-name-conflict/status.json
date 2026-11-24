@@ -1,0 +1,143 @@
+{
+  "service": "authorization",
+  "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment",
+  "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "468efb29545a04fef423ac2295e7e11fd6db8e6e7892257adcd38ec963750bcf",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-findings",
+  "resourceCount": 2,
+  "operationCount": 5,
+  "diagnosticCount": 1,
+  "findingCount": 1,
+  "affectedLogicalNames": [
+    "DenyAssignment"
+  ],
+  "correlatedResourceCount": 2,
+  "matchedDiagnosticCount": 1,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [
+    {
+      "findingId": "NRNC-D1395B591722",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'DenyAssignment' is used by both '/{denyAssignmentId}' and '/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp",
+      "line": 115,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L115",
+      "projectRoot": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment",
+      "entrypoint": "specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/main.tsp",
+      "service": "authorization",
+      "resourceName": "DenyAssignment",
+      "conflictingInstancePaths": [
+        "/{denyAssignmentId}",
+        "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "|/{}",
+          "resourceType": "",
+          "resourceInstancePath": "/{denyAssignmentId}",
+          "resourceName": "DenyAssignment",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L13",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L13",
+          "operations": [
+            {
+              "operationKey": "get|/{}",
+              "operationName": "getById",
+              "operationVerb": "get",
+              "operationPath": "/{denyAssignmentId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L191",
+              "resourceKey": "|/{}",
+              "resourceType": "",
+              "resourceInstancePath": "/{denyAssignmentId}",
+              "resourceName": "DenyAssignment"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.authorization/denyassignments|/{}/providers/microsoft.authorization/denyassignments/{}",
+          "resourceType": "Microsoft.Authorization/denyAssignments",
+          "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}",
+          "resourceName": "DenyAssignment",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L13",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L13",
+          "operations": [
+            {
+              "operationKey": "put|/{}/providers/microsoft.authorization/denyassignments/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L120",
+              "resourceKey": "microsoft.authorization/denyassignments|/{}/providers/microsoft.authorization/denyassignments/{}",
+              "resourceType": "Microsoft.Authorization/denyAssignments",
+              "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}",
+              "resourceName": "DenyAssignment"
+            },
+            {
+              "operationKey": "delete|/{}/providers/microsoft.authorization/denyassignments/{}",
+              "operationName": "delete",
+              "operationVerb": "delete",
+              "operationPath": "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}",
+              "operationKind": "delete",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L128",
+              "resourceKey": "microsoft.authorization/denyassignments|/{}/providers/microsoft.authorization/denyassignments/{}",
+              "resourceType": "Microsoft.Authorization/denyAssignments",
+              "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}",
+              "resourceName": "DenyAssignment"
+            },
+            {
+              "operationKey": "get|/{}/providers/microsoft.authorization/denyassignments/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L115",
+              "resourceKey": "microsoft.authorization/denyassignments|/{}/providers/microsoft.authorization/denyassignments/{}",
+              "resourceType": "Microsoft.Authorization/denyAssignments",
+              "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}",
+              "resourceName": "DenyAssignment"
+            },
+            {
+              "operationKey": "get|/{}/providers/microsoft.authorization/denyassignments",
+              "operationName": "listForScope",
+              "operationVerb": "get",
+              "operationPath": "/{scope}/providers/Microsoft.Authorization/denyAssignments",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L147",
+              "resourceKey": "microsoft.authorization/denyassignments|/{}/providers/microsoft.authorization/denyassignments/{}",
+              "resourceType": "Microsoft.Authorization/denyAssignments",
+              "resourceInstancePath": "/{scope}/providers/Microsoft.Authorization/denyAssignments/{denyAssignmentId}",
+              "resourceName": "DenyAssignment"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L115, distinct from 'DenyAssignment'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 1,
+    "total": 1
+  },
+  "outputHashes": {
+    "resourcesCsv": "7fa476d1e053c1227b3210dd11e047f989dd513d1e2c5c9df4749909ab617b9f",
+    "operationsCsv": "98fe86afc18aae2216c9b9b86327eccd88c3f5f0929685fb0505062e85af103e",
+    "diagnosticsJson": "cce84187935e1687f642555a797a53f9804baa827c71c65bdf993e1162e88e3f",
+    "statusJson": "2c09f04ddf89fea52d37aa55ae86df3572b3fee016c582261a3564622b5a769b"
+  }
+}

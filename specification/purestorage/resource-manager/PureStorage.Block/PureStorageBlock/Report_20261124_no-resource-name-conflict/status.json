@@ -1,0 +1,38 @@
+{
+  "service": "purestorage",
+  "projectRoot": "specification/purestorage/resource-manager/PureStorage.Block/PureStorageBlock",
+  "entrypoint": "specification/purestorage/resource-manager/PureStorage.Block/PureStorageBlock/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "e1b0a76f33ef60e044a6f5339cda6b3e163fdb09f0bbe82b5727de0c7da3f562",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 10,
+  "operationCount": 63,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "1ed8508db3323d445fc6037baf2854a516b3b08d1efe7ea9720343e42a9847fe",
+    "operationsCsv": "fdbe973d749f31bb8d87295c3f2115cdc7ce84181a31121284fffd21855933a4",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "0e8917327fb7f21a09d5f5d01df7a72d3623113fdd41c9a5ee6247ff38cb492e"
+  }
+}

@@ -1,0 +1,1176 @@
+{
+  "service": "apimanagement",
+  "projectRoot": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement",
+  "entrypoint": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "c833b0c0f54086aca58dd574d5b34bd802cfc98584c4462f43b2ec2a5485138f",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-findings",
+  "resourceCount": 109,
+  "operationCount": 581,
+  "diagnosticCount": 6,
+  "findingCount": 6,
+  "affectedLogicalNames": [
+    "ApiManagementGroup",
+    "ApiManagementProduct",
+    "ServiceWorkspaceGroup",
+    "ServiceWorkspaceNotification"
+  ],
+  "correlatedResourceCount": 10,
+  "matchedDiagnosticCount": 6,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [
+    {
+      "findingId": "NRNC-EA364DD9B64C",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ApiManagementGroup' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp",
+      "line": 330,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L330",
+      "projectRoot": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement",
+      "entrypoint": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/main.tsp",
+      "service": "apimanagement",
+      "resourceName": "ApiManagementGroup",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.apimanagement/service/groups/users|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}/users/{}",
+          "resourceType": "Microsoft.ApiManagement/service/groups/users",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}",
+          "resourceName": "ApiManagementGroup",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}/users/{}",
+              "operationName": "create",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L330",
+              "resourceKey": "microsoft.apimanagement/service/groups/users|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}/users/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups/users",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}",
+              "resourceName": "ApiManagementGroup"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L255",
+              "resourceKey": "microsoft.apimanagement/service/groups/users|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}/users/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups/users",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}",
+              "resourceName": "ApiManagementGroup"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+          "resourceType": "Microsoft.ApiManagement/service/groups",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+          "resourceName": "ApiManagementGroup",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "head|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}/users/{}",
+              "operationName": "checkEntityExists",
+              "operationVerb": "head",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L319",
+              "resourceKey": "microsoft.apimanagement/service/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "resourceName": "ApiManagementGroup"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L185",
+              "resourceKey": "microsoft.apimanagement/service/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "resourceName": "ApiManagementGroup"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "operationName": "delete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "operationKind": "delete",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L240",
+              "resourceKey": "microsoft.apimanagement/service/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "resourceName": "ApiManagementGroup"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L157",
+              "resourceKey": "microsoft.apimanagement/service/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "resourceName": "ApiManagementGroup"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}/users/{}",
+              "operationName": "groupUserDelete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users/{userId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L352",
+              "resourceKey": "microsoft.apimanagement/service/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "resourceName": "ApiManagementGroup"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}/users",
+              "operationName": "list",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}/users",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L286",
+              "resourceKey": "microsoft.apimanagement/service/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "resourceName": "ApiManagementGroup"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L255",
+              "resourceKey": "microsoft.apimanagement/service/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "resourceName": "ApiManagementGroup"
+            },
+            {
+              "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "operationName": "update",
+              "operationVerb": "patch",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "operationKind": "update",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L216",
+              "resourceKey": "microsoft.apimanagement/service/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/groups/{groupId}",
+              "resourceName": "ApiManagementGroup"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L330, distinct from 'ApiManagementGroup'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    },
+    {
+      "findingId": "NRNC-20EB9CD63E56",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ServiceWorkspaceGroup' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users/{userId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp",
+      "line": 580,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L580",
+      "projectRoot": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement",
+      "entrypoint": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/main.tsp",
+      "service": "apimanagement",
+      "resourceName": "ServiceWorkspaceGroup",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users/{userId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.apimanagement/service/workspaces/groups/users|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}/users/{}",
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/groups/users",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users/{userId}",
+          "resourceName": "ServiceWorkspaceGroup",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}/users/{}",
+              "operationName": "create",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users/{userId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L580",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups/users|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}/users/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups/users",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users/{userId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L505",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups/users|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}/users/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups/users",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users/{userId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/workspaces/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+          "resourceName": "ServiceWorkspaceGroup",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "head|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}/users/{}",
+              "operationName": "checkEntityExists",
+              "operationVerb": "head",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users/{userId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L569",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L435",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "operationName": "delete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "operationKind": "delete",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L490",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L407",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}/users",
+              "operationName": "list",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L536",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L505",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            },
+            {
+              "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "operationName": "update",
+              "operationVerb": "patch",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "operationKind": "update",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L466",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}/users/{}",
+              "operationName": "workspaceGroupUserDelete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}/users/{userId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L603",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/groups/{groupId}",
+              "resourceName": "ServiceWorkspaceGroup"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L580, distinct from 'ServiceWorkspaceGroup'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    },
+    {
+      "findingId": "NRNC-AEB38325FB87",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ServiceWorkspaceNotification' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp",
+      "line": 481,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L481",
+      "projectRoot": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement",
+      "entrypoint": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/main.tsp",
+      "service": "apimanagement",
+      "resourceName": "ServiceWorkspaceNotification",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientemails|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails/{}",
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}",
+          "resourceName": "ServiceWorkspaceNotification",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L438",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientemails|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails/{}",
+              "operationName": "workspaceNotificationRecipientEmailCreateOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L534",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientemails|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}",
+              "resourceName": "ServiceWorkspaceNotification"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientusers|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers/{}",
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}",
+          "resourceName": "ServiceWorkspaceNotification",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L438",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientusers|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers/{}",
+              "operationName": "workspaceNotificationRecipientUserCreateOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L481",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientusers|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}",
+              "resourceName": "ServiceWorkspaceNotification"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+          "resourceName": "ServiceWorkspaceNotification",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L420",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L414",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers",
+              "operationName": "listByNotification",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L461",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L438",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails",
+              "operationName": "workspaceNotificationRecipientEmailListByNotification",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L515",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L481, distinct from 'ServiceWorkspaceNotification'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    },
+    {
+      "findingId": "NRNC-193B3B296D57",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ServiceWorkspaceNotification' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp",
+      "line": 534,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L534",
+      "projectRoot": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement",
+      "entrypoint": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/main.tsp",
+      "service": "apimanagement",
+      "resourceName": "ServiceWorkspaceNotification",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientemails|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails/{}",
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}",
+          "resourceName": "ServiceWorkspaceNotification",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L438",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientemails|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails/{}",
+              "operationName": "workspaceNotificationRecipientEmailCreateOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L534",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientemails|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails/{email}",
+              "resourceName": "ServiceWorkspaceNotification"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientusers|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers/{}",
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}",
+          "resourceName": "ServiceWorkspaceNotification",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L438",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientusers|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers/{}",
+              "operationName": "workspaceNotificationRecipientUserCreateOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L481",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications/recipientusers|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers/{userId}",
+              "resourceName": "ServiceWorkspaceNotification"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+          "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+          "resourceName": "ServiceWorkspaceNotification",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L420",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L414",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientusers",
+              "operationName": "listByNotification",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientUsers",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L461",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L438",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}/recipientemails",
+              "operationName": "workspaceNotificationRecipientEmailListByNotification",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}/recipientEmails",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L515",
+              "resourceKey": "microsoft.apimanagement/service/workspaces/notifications|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/workspaces/{}/notifications/{}",
+              "resourceType": "Microsoft.ApiManagement/service/workspaces/notifications",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/workspaces/{workspaceId}/notifications/{notificationName}",
+              "resourceName": "ServiceWorkspaceNotification"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L534, distinct from 'ServiceWorkspaceNotification'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    },
+    {
+      "findingId": "NRNC-0FAD4B98EE2E",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ApiManagementProduct' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp",
+      "line": 339,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L339",
+      "projectRoot": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement",
+      "entrypoint": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/main.tsp",
+      "service": "apimanagement",
+      "resourceName": "ApiManagementProduct",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.apimanagement/service/products/apis|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+          "resourceType": "Microsoft.ApiManagement/service/products/apis",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+          "resourceName": "ApiManagementProduct",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L254",
+              "resourceKey": "microsoft.apimanagement/service/products/apis|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products/apis",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "operationName": "productApiCreateOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L339",
+              "resourceKey": "microsoft.apimanagement/service/products/apis|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products/apis",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "resourceName": "ApiManagementProduct"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/products/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+          "resourceType": "Microsoft.ApiManagement/service/products/groups",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+          "resourceName": "ApiManagementProduct",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L254",
+              "resourceKey": "microsoft.apimanagement/service/products/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "operationName": "productGroupCreateOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L421",
+              "resourceKey": "microsoft.apimanagement/service/products/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "resourceName": "ApiManagementProduct"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+          "resourceType": "Microsoft.ApiManagement/service/products",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+          "resourceName": "ApiManagementProduct",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "head|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "operationName": "checkEntityExists",
+              "operationVerb": "head",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L328",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L179",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "operationName": "delete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "operationKind": "delete",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L233",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L151",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/subscriptions",
+              "operationName": "list",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/subscriptions",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L458",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis",
+              "operationName": "listByProduct",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L295",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L254",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "operationName": "productApiDelete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L363",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "head|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "operationName": "productGroupCheckEntityExists",
+              "operationVerb": "head",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L410",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "operationName": "productGroupDelete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L444",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups",
+              "operationName": "productGroupListByProduct",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L377",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "operationName": "update",
+              "operationVerb": "patch",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "operationKind": "update",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L209",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L339, distinct from 'ApiManagementProduct'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    },
+    {
+      "findingId": "NRNC-A089353351F3",
+      "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+      "severity": "warning",
+      "message": "Resources must have unique names. Resource name 'ApiManagementProduct' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}'. Provide a unique resource name when instantiating the resource operations.",
+      "sourceFile": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp",
+      "line": 421,
+      "column": 3,
+      "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L421",
+      "projectRoot": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement",
+      "entrypoint": "specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/main.tsp",
+      "service": "apimanagement",
+      "resourceName": "ApiManagementProduct",
+      "conflictingInstancePaths": [
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+        "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}"
+      ],
+      "correlationState": "matched",
+      "correlatedResources": [
+        {
+          "resourceKey": "microsoft.apimanagement/service/products/apis|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+          "resourceType": "Microsoft.ApiManagement/service/products/apis",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+          "resourceName": "ApiManagementProduct",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L254",
+              "resourceKey": "microsoft.apimanagement/service/products/apis|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products/apis",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "operationName": "productApiCreateOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L339",
+              "resourceKey": "microsoft.apimanagement/service/products/apis|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products/apis",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "resourceName": "ApiManagementProduct"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/products/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+          "resourceType": "Microsoft.ApiManagement/service/products/groups",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+          "resourceName": "ApiManagementProduct",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L254",
+              "resourceKey": "microsoft.apimanagement/service/products/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "operationName": "productGroupCreateOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L421",
+              "resourceKey": "microsoft.apimanagement/service/products/groups|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products/groups",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "resourceName": "ApiManagementProduct"
+            }
+          ]
+        },
+        {
+          "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+          "resourceType": "Microsoft.ApiManagement/service/products",
+          "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+          "resourceName": "ApiManagementProduct",
+          "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L14",
+          "operations": [
+            {
+              "operationKey": "head|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "operationName": "checkEntityExists",
+              "operationVerb": "head",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L328",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "operationName": "createOrUpdate",
+              "operationVerb": "put",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "operationKind": "createOrUpdate",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L179",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "operationName": "delete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "operationKind": "delete",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L233",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "operationName": "get",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "operationKind": "read",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L151",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/subscriptions",
+              "operationName": "list",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/subscriptions",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L458",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis",
+              "operationName": "listByProduct",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L295",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products",
+              "operationName": "listByService",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products",
+              "operationKind": "list",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L254",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/apis/{}",
+              "operationName": "productApiDelete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/apis/{apiId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L363",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "head|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "operationName": "productGroupCheckEntityExists",
+              "operationVerb": "head",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L410",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups/{}",
+              "operationName": "productGroupDelete",
+              "operationVerb": "delete",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups/{groupId}",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L444",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}/groups",
+              "operationName": "productGroupListByProduct",
+              "operationVerb": "get",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}/groups",
+              "operationKind": "action",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L377",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            },
+            {
+              "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "operationName": "update",
+              "operationVerb": "patch",
+              "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "operationKind": "update",
+              "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L209",
+              "resourceKey": "microsoft.apimanagement/service/products|/subscriptions/{}/resourcegroups/{}/providers/microsoft.apimanagement/service/{}/products/{}",
+              "resourceType": "Microsoft.ApiManagement/service/products",
+              "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiManagement/service/{serviceName}/products/{productId}",
+              "resourceName": "ApiManagementProduct"
+            }
+          ]
+        }
+      ],
+      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L421, distinct from 'ApiManagementProduct'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    }
+  ],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 6,
+    "total": 6
+  },
+  "outputHashes": {
+    "resourcesCsv": "be8b58ff1698bcb756e15718f2b9881a425041577c6c389011ba5202bf5b4a56",
+    "operationsCsv": "a604240b9e174400aae4af06d1b6852d5aa0b64b13f2cbea936900aac6aeed43",
+    "diagnosticsJson": "5e705cf0adbcbb6447dcbc5a3380488cdcb34c65768163378591168947838e42",
+    "statusJson": "afc4f706cddef11e9e29727e7cbbb46b61bcd50089250dc593d912a8f13ad3ba"
+  }
+}

@@ -1,0 +1,224 @@
+[
+  {
+    "findingId": "NRNC-24C0A3AC2936",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'CognitiveServicesAccount' is used by both '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/testRaiExternalSafetyProvider/{safetyProviderName}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp",
+    "line": 282,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L282",
+    "projectRoot": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices",
+    "entrypoint": "specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/main.tsp",
+    "service": "cognitiveservices",
+    "resourceName": "CognitiveServicesAccount",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/testRaiExternalSafetyProvider/{safetyProviderName}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.cognitiveservices/accounts/testraiexternalsafetyprovider|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/testraiexternalsafetyprovider/{}",
+        "resourceType": "Microsoft.CognitiveServices/accounts/testRaiExternalSafetyProvider",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/testRaiExternalSafetyProvider/{safetyProviderName}",
+        "resourceName": "CognitiveServicesAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/testraiexternalsafetyprovider/{}",
+            "operationName": "createOrUpdate",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/testRaiExternalSafetyProvider/{safetyProviderName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L282",
+            "resourceKey": "microsoft.cognitiveservices/accounts/testraiexternalsafetyprovider|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/testraiexternalsafetyprovider/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts/testRaiExternalSafetyProvider",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/testRaiExternalSafetyProvider/{safetyProviderName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts",
+            "operationName": "listByResourceGroup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L198",
+            "resourceKey": "microsoft.cognitiveservices/accounts/testraiexternalsafetyprovider|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/testraiexternalsafetyprovider/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts/testRaiExternalSafetyProvider",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/testRaiExternalSafetyProvider/{safetyProviderName}",
+            "resourceName": "CognitiveServicesAccount"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+        "resourceType": "Microsoft.CognitiveServices/accounts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+        "resourceName": "CognitiveServicesAccount",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L145",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "delete|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "operationName": "delete",
+            "operationVerb": "delete",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "operationKind": "delete",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L185",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/evaluatedeploymentpolicies",
+            "operationName": "evaluateDeploymentPolicies",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/evaluateDeploymentPolicies",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L305",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L139",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.cognitiveservices/accounts",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.CognitiveServices/accounts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L204",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts",
+            "operationName": "listByResourceGroup",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L198",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/listkeys",
+            "operationName": "listKeys",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/listKeys",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L210",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/models",
+            "operationName": "listModels",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/models",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L257",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/skus",
+            "operationName": "listSkus",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/skus",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L226",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/usages",
+            "operationName": "listUsages",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/usages",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L238",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/privatelinkresources",
+            "operationName": "privateLinkResourcesList",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/privateLinkResources",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L270",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}/regeneratekey",
+            "operationName": "regenerateKey",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}/regenerateKey",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L216",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L165",
+            "resourceKey": "microsoft.cognitiveservices/accounts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.cognitiveservices/accounts/{}",
+            "resourceType": "Microsoft.CognitiveServices/accounts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CognitiveServices/accounts/{accountName}",
+            "resourceName": "CognitiveServicesAccount"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L282, distinct from 'CognitiveServicesAccount'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  }
+]

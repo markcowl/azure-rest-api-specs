@@ -1,0 +1,38 @@
+{
+  "service": "datamigration",
+  "projectRoot": "specification/datamigration/resource-manager/Microsoft.DataMigration/DataMigration",
+  "entrypoint": "specification/datamigration/resource-manager/Microsoft.DataMigration/DataMigration/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "7b6e992e58c6a9d8a69bb8e3c8efa6f8351676742935a6e488a26106bb6b1026",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 17,
+  "operationCount": 77,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "0b7ebea862d47429aee55f0348edb8ebb548873de21cde9c5bffb0be9b07016a",
+    "operationsCsv": "6fd166648ed44bb51889aee22c5ac3205970c277fff8cdd980b8cacb05b7b290",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "62ab27b10ed48401ab956db812ecdebda8965338191927e38ca8b199b18c18de"
+  }
+}

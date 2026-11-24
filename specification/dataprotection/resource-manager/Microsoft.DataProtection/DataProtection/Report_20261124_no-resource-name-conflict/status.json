@@ -1,0 +1,38 @@
+{
+  "service": "dataprotection",
+  "projectRoot": "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection",
+  "entrypoint": "specification/dataprotection/resource-manager/Microsoft.DataProtection/DataProtection/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "7e4992d2b39d0d353035ff968999b49a6b12dccec1c93de2cb9534c2c61c06cc",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 17,
+  "operationCount": 62,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "74d304be2f86e14ea11daba191174ddd822701c5488e008e10e30715735b8888",
+    "operationsCsv": "ad9c068158834d2cb789d9c74f581ba2b1b5c6fb6bcfe3fc0e02066b4381cb7a",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "a05eb811d5cfb5bf609df4a10735db90529037979ead08991ca07b9481e555b5"
+  }
+}

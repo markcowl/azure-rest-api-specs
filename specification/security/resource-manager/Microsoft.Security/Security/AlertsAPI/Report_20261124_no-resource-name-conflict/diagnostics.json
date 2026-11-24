@@ -1,0 +1,188 @@
+[
+  {
+    "findingId": "NRNC-92DE63B71BEA",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'LocationsAlerts' is used by both '/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}' and '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp",
+    "line": 144,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L144",
+    "projectRoot": "specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI",
+    "entrypoint": "specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/main.tsp",
+    "service": "security",
+    "resourceName": "LocationsAlerts",
+    "conflictingInstancePaths": [
+      "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+      "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}",
+        "resourceType": "Microsoft.Security/locations/alerts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+        "resourceName": "LocationsAlerts",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "operationName": "getSubscriptionLevel",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L56",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts",
+            "operationName": "listSubscriptionLevelByRegion",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L62",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}/activate",
+            "operationName": "updateSubscriptionLevelStateToActivate",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/activate",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L96",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}/dismiss",
+            "operationName": "updateSubscriptionLevelStateToDismiss",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/dismiss",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L72",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}/inprogress",
+            "operationName": "updateSubscriptionLevelStateToInProgress",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/inProgress",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L108",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}/resolve",
+            "operationName": "updateSubscriptionLevelStateToResolve",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/resolve",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L84",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}",
+        "resourceType": "Microsoft.Security/locations/alerts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+        "resourceName": "LocationsAlerts",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "operationName": "getResourceGroupLevel",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L144",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts",
+            "operationName": "listResourceGroupLevelByRegion",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L153",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}/activate",
+            "operationName": "updateResourceGroupLevelStateToActivate",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/activate",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L186",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}/dismiss",
+            "operationName": "updateResourceGroupLevelStateToDismiss",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/dismiss",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L174",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}/inprogress",
+            "operationName": "updateResourceGroupLevelStateToInProgress",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/inProgress",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L198",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}/resolve",
+            "operationName": "updateResourceGroupLevelStateToResolve",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}/resolve",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L162",
+            "resourceKey": "microsoft.security/locations/alerts|/subscriptions/{}/resourcegroups/{}/providers/microsoft.security/locations/{}/alerts/{}",
+            "resourceType": "Microsoft.Security/locations/alerts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/locations/{ascLocation}/alerts/{alertName}",
+            "resourceName": "LocationsAlerts"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L144, distinct from 'LocationsAlerts'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  }
+]

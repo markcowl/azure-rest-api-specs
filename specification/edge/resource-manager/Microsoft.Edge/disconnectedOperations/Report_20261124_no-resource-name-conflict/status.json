@@ -1,0 +1,38 @@
+{
+  "service": "edge",
+  "projectRoot": "specification/edge/resource-manager/Microsoft.Edge/disconnectedOperations",
+  "entrypoint": "specification/edge/resource-manager/Microsoft.Edge/disconnectedOperations/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "4995b5707bda01a2656b1d583304a4d1600c617fe93c3a4750098aaafa69dbe4",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 4,
+  "operationCount": 17,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "04dbe489ed6982fa2444c5d75ae3c2561f22fa7b9a05a5f921b693687b9f6755",
+    "operationsCsv": "bcfce965521f45c89636e2c4d3b72bc6fac9dfb71cee093ada5fe7ddf15817a2",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "ec199d626df2c3fb0c263f967919a20514752813a941d611a5736b7d420bb262"
+  }
+}

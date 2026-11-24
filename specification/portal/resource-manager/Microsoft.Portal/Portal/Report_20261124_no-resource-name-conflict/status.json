@@ -1,0 +1,38 @@
+{
+  "service": "portal",
+  "projectRoot": "specification/portal/resource-manager/Microsoft.Portal/Portal",
+  "entrypoint": "specification/portal/resource-manager/Microsoft.Portal/Portal/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "46d96945e1e220cbddbc72ce39ec6664a357c6f1cfa0b38236968b2a8817e76b",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 2,
+  "operationCount": 10,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "31fd952e655fdac06dcff495031869b3dbaf825cb5b75c15498735a9cd615636",
+    "operationsCsv": "5114ab2c862844c1aa48ac45cb32ad21d305a9970117ad48a99616e32d5956e0",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "ac935af487145b2d85e1430ba3ce04f8f9cd08fd48f0441582f9d0bc80c16047"
+  }
+}

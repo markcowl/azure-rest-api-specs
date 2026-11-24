@@ -1,0 +1,596 @@
+[
+  {
+    "findingId": "NRNC-9C9A815AD9F6",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'SupportTicketsChatTranscripts' is used by both '/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}' and '/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp",
+    "line": 70,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L70",
+    "projectRoot": "specification/support/resource-manager/Microsoft.Support/Support",
+    "entrypoint": "specification/support/resource-manager/Microsoft.Support/Support/main.tsp",
+    "service": "support",
+    "resourceName": "SupportTicketsChatTranscripts",
+    "conflictingInstancePaths": [
+      "/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+      "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.support/supporttickets/chattranscripts|/providers/microsoft.support/supporttickets/{}/chattranscripts/{}",
+        "resourceType": "Microsoft.Support/supportTickets/chatTranscripts",
+        "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+        "resourceName": "SupportTicketsChatTranscripts",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "get|/providers/microsoft.support/supporttickets/{}/chattranscripts/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L106",
+            "resourceKey": "microsoft.support/supporttickets/chattranscripts|/providers/microsoft.support/supporttickets/{}/chattranscripts/{}",
+            "resourceType": "Microsoft.Support/supportTickets/chatTranscripts",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+            "resourceName": "SupportTicketsChatTranscripts"
+          },
+          {
+            "operationKey": "get|/providers/microsoft.support/supporttickets/{}/chattranscripts",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L111",
+            "resourceKey": "microsoft.support/supporttickets/chattranscripts|/providers/microsoft.support/supporttickets/{}/chattranscripts/{}",
+            "resourceType": "Microsoft.Support/supportTickets/chatTranscripts",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+            "resourceName": "SupportTicketsChatTranscripts"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.support/supporttickets/chattranscripts|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/chattranscripts/{}",
+        "resourceType": "Microsoft.Support/supportTickets/chatTranscripts",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+        "resourceName": "SupportTicketsChatTranscripts",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/chattranscripts/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L70",
+            "resourceKey": "microsoft.support/supporttickets/chattranscripts|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/chattranscripts/{}",
+            "resourceType": "Microsoft.Support/supportTickets/chatTranscripts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+            "resourceName": "SupportTicketsChatTranscripts"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/chattranscripts",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L75",
+            "resourceKey": "microsoft.support/supporttickets/chattranscripts|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/chattranscripts/{}",
+            "resourceType": "Microsoft.Support/supportTickets/chatTranscripts",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/chatTranscripts/{chatTranscriptName}",
+            "resourceName": "SupportTicketsChatTranscripts"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L70, distinct from 'SupportTicketsChatTranscripts'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-B7E92876F475",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'SupportTicketsCommunications' is used by both '/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}' and '/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp",
+    "line": 72,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L72",
+    "projectRoot": "specification/support/resource-manager/Microsoft.Support/Support",
+    "entrypoint": "specification/support/resource-manager/Microsoft.Support/Support/main.tsp",
+    "service": "support",
+    "resourceName": "SupportTicketsCommunications",
+    "conflictingInstancePaths": [
+      "/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+      "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.support/supporttickets/communications|/providers/microsoft.support/supporttickets/{}/communications/{}",
+        "resourceType": "Microsoft.Support/supportTickets/communications",
+        "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+        "resourceName": "SupportTicketsCommunications",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "put|/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L141",
+            "resourceKey": "microsoft.support/supporttickets/communications|/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "resourceType": "Microsoft.Support/supportTickets/communications",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "resourceName": "SupportTicketsCommunications"
+          },
+          {
+            "operationKey": "get|/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L136",
+            "resourceKey": "microsoft.support/supporttickets/communications|/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "resourceType": "Microsoft.Support/supportTickets/communications",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "resourceName": "SupportTicketsCommunications"
+          },
+          {
+            "operationKey": "get|/providers/microsoft.support/supporttickets/{}/communications",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L155",
+            "resourceKey": "microsoft.support/supporttickets/communications|/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "resourceType": "Microsoft.Support/supportTickets/communications",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "resourceName": "SupportTicketsCommunications"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.support/supporttickets/communications|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/communications/{}",
+        "resourceType": "Microsoft.Support/supportTickets/communications",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+        "resourceName": "SupportTicketsCommunications",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L77",
+            "resourceKey": "microsoft.support/supporttickets/communications|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "resourceType": "Microsoft.Support/supportTickets/communications",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "resourceName": "SupportTicketsCommunications"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L72",
+            "resourceKey": "microsoft.support/supporttickets/communications|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "resourceType": "Microsoft.Support/supportTickets/communications",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "resourceName": "SupportTicketsCommunications"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/communications",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L91",
+            "resourceKey": "microsoft.support/supporttickets/communications|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/communications/{}",
+            "resourceType": "Microsoft.Support/supportTickets/communications",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/communications/{communicationName}",
+            "resourceName": "SupportTicketsCommunications"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L72, distinct from 'SupportTicketsCommunications'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-4BB1800F4C2B",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'FileWorkspacesFiles' is used by both '/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}' and '/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp",
+    "line": 67,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L67",
+    "projectRoot": "specification/support/resource-manager/Microsoft.Support/Support",
+    "entrypoint": "specification/support/resource-manager/Microsoft.Support/Support/main.tsp",
+    "service": "support",
+    "resourceName": "FileWorkspacesFiles",
+    "conflictingInstancePaths": [
+      "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+      "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.support/fileworkspaces/files|/providers/microsoft.support/fileworkspaces/{}/files/{}",
+        "resourceType": "Microsoft.Support/fileWorkspaces/files",
+        "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+        "resourceName": "FileWorkspacesFiles",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "put|/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L120",
+            "resourceKey": "microsoft.support/fileworkspaces/files|/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces/files",
+            "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "resourceName": "FileWorkspacesFiles"
+          },
+          {
+            "operationKey": "get|/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L115",
+            "resourceKey": "microsoft.support/fileworkspaces/files|/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces/files",
+            "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "resourceName": "FileWorkspacesFiles"
+          },
+          {
+            "operationKey": "get|/providers/microsoft.support/fileworkspaces/{}/files",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L129",
+            "resourceKey": "microsoft.support/fileworkspaces/files|/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces/files",
+            "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "resourceName": "FileWorkspacesFiles"
+          },
+          {
+            "operationKey": "post|/providers/microsoft.support/fileworkspaces/{}/files/{}/upload",
+            "operationName": "upload",
+            "operationVerb": "post",
+            "operationPath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}/upload",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L134",
+            "resourceKey": "microsoft.support/fileworkspaces/files|/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces/files",
+            "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "resourceName": "FileWorkspacesFiles"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.support/fileworkspaces/files|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}/files/{}",
+        "resourceType": "Microsoft.Support/fileWorkspaces/files",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+        "resourceName": "FileWorkspacesFiles",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L72",
+            "resourceKey": "microsoft.support/fileworkspaces/files|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces/files",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "resourceName": "FileWorkspacesFiles"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L67",
+            "resourceKey": "microsoft.support/fileworkspaces/files|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces/files",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "resourceName": "FileWorkspacesFiles"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}/files",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L81",
+            "resourceKey": "microsoft.support/fileworkspaces/files|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces/files",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "resourceName": "FileWorkspacesFiles"
+          },
+          {
+            "operationKey": "post|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}/files/{}/upload",
+            "operationName": "upload",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}/upload",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L86",
+            "resourceKey": "microsoft.support/fileworkspaces/files|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}/files/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces/files",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}/files/{fileName}",
+            "resourceName": "FileWorkspacesFiles"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L67, distinct from 'FileWorkspacesFiles'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-B4144C266C51",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'FileWorkspaces' is used by both '/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}' and '/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp",
+    "line": 44,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L44",
+    "projectRoot": "specification/support/resource-manager/Microsoft.Support/Support",
+    "entrypoint": "specification/support/resource-manager/Microsoft.Support/Support/main.tsp",
+    "service": "support",
+    "resourceName": "FileWorkspaces",
+    "conflictingInstancePaths": [
+      "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+      "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.support/fileworkspaces|/providers/microsoft.support/fileworkspaces/{}",
+        "resourceType": "Microsoft.Support/fileWorkspaces",
+        "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+        "resourceName": "FileWorkspaces",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "put|/providers/microsoft.support/fileworkspaces/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L83",
+            "resourceKey": "microsoft.support/fileworkspaces|/providers/microsoft.support/fileworkspaces/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces",
+            "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+            "resourceName": "FileWorkspaces"
+          },
+          {
+            "operationKey": "get|/providers/microsoft.support/fileworkspaces/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L78",
+            "resourceKey": "microsoft.support/fileworkspaces|/providers/microsoft.support/fileworkspaces/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces",
+            "resourceInstancePath": "/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+            "resourceName": "FileWorkspaces"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.support/fileworkspaces|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}",
+        "resourceType": "Microsoft.Support/fileWorkspaces",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+        "resourceName": "FileWorkspaces",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L13",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L13",
+        "operations": [
+          {
+            "operationKey": "put|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L50",
+            "resourceKey": "microsoft.support/fileworkspaces|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+            "resourceName": "FileWorkspaces"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L44",
+            "resourceKey": "microsoft.support/fileworkspaces|/subscriptions/{}/providers/microsoft.support/fileworkspaces/{}",
+            "resourceType": "Microsoft.Support/fileWorkspaces",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/fileWorkspaces/{fileWorkspaceName}",
+            "resourceName": "FileWorkspaces"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L44, distinct from 'FileWorkspaces'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  },
+  {
+    "findingId": "NRNC-F07F90E864A3",
+    "code": "@azure-tools/typespec-azure-resource-manager/no-resource-name-conflict",
+    "severity": "warning",
+    "message": "Resources must have unique names. Resource name 'SupportTickets' is used by both '/providers/Microsoft.Support/supportTickets/{supportTicketName}' and '/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}'. Provide a unique resource name when instantiating the resource operations.",
+    "sourceFile": "specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp",
+    "line": 65,
+    "column": 3,
+    "sourceUrl": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L65",
+    "projectRoot": "specification/support/resource-manager/Microsoft.Support/Support",
+    "entrypoint": "specification/support/resource-manager/Microsoft.Support/Support/main.tsp",
+    "service": "support",
+    "resourceName": "SupportTickets",
+    "conflictingInstancePaths": [
+      "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+      "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}"
+    ],
+    "correlationState": "matched",
+    "correlatedResources": [
+      {
+        "resourceKey": "microsoft.support/supporttickets|/providers/microsoft.support/supporttickets/{}",
+        "resourceType": "Microsoft.Support/supportTickets",
+        "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+        "resourceName": "SupportTickets",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "post|/providers/microsoft.support/supporttickets/{}/checknameavailability",
+            "operationName": "checkNameAvailability",
+            "operationVerb": "post",
+            "operationPath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}/checkNameAvailability",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L203",
+            "resourceKey": "microsoft.support/supporttickets|/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          },
+          {
+            "operationKey": "put|/providers/microsoft.support/supporttickets/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L159",
+            "resourceKey": "microsoft.support/supporttickets|/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          },
+          {
+            "operationKey": "get|/providers/microsoft.support/supporttickets/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L154",
+            "resourceKey": "microsoft.support/supporttickets|/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          },
+          {
+            "operationKey": "get|/providers/microsoft.support/supporttickets",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/providers/Microsoft.Support/supportTickets",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L182",
+            "resourceKey": "microsoft.support/supporttickets|/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          },
+          {
+            "operationKey": "patch|/providers/microsoft.support/supporttickets/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L173",
+            "resourceKey": "microsoft.support/supporttickets|/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          }
+        ]
+      },
+      {
+        "resourceKey": "microsoft.support/supporttickets|/subscriptions/{}/providers/microsoft.support/supporttickets/{}",
+        "resourceType": "Microsoft.Support/supportTickets",
+        "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+        "resourceName": "SupportTickets",
+        "resourceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L15",
+        "authoredSource": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L15",
+        "operations": [
+          {
+            "operationKey": "post|/subscriptions/{}/providers/microsoft.support/supporttickets/{}/checknameavailability",
+            "operationName": "checkNameAvailability",
+            "operationVerb": "post",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}/checkNameAvailability",
+            "operationKind": "action",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L114",
+            "resourceKey": "microsoft.support/supporttickets|/subscriptions/{}/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          },
+          {
+            "operationKey": "put|/subscriptions/{}/providers/microsoft.support/supporttickets/{}",
+            "operationName": "create",
+            "operationVerb": "put",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "operationKind": "createOrUpdate",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L70",
+            "resourceKey": "microsoft.support/supporttickets|/subscriptions/{}/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.support/supporttickets/{}",
+            "operationName": "get",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "operationKind": "read",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L65",
+            "resourceKey": "microsoft.support/supporttickets|/subscriptions/{}/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          },
+          {
+            "operationKey": "get|/subscriptions/{}/providers/microsoft.support/supporttickets",
+            "operationName": "list",
+            "operationVerb": "get",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets",
+            "operationKind": "list",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L93",
+            "resourceKey": "microsoft.support/supporttickets|/subscriptions/{}/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          },
+          {
+            "operationKey": "patch|/subscriptions/{}/providers/microsoft.support/supporttickets/{}",
+            "operationName": "update",
+            "operationVerb": "patch",
+            "operationPath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "operationKind": "update",
+            "operationDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L84",
+            "resourceKey": "microsoft.support/supporttickets|/subscriptions/{}/providers/microsoft.support/supporttickets/{}",
+            "resourceType": "Microsoft.Support/supportTickets",
+            "resourceInstancePath": "/subscriptions/{subscriptionId}/providers/Microsoft.Support/supportTickets/{supportTicketName}",
+            "resourceName": "SupportTickets"
+          }
+        ]
+      }
+    ],
+    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L65, distinct from 'SupportTickets'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+  }
+]

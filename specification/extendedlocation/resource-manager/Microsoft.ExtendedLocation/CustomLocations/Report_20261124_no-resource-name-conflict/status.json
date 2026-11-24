@@ -1,0 +1,38 @@
+{
+  "service": "extendedlocation",
+  "projectRoot": "specification/extendedlocation/resource-manager/Microsoft.ExtendedLocation/CustomLocations",
+  "entrypoint": "specification/extendedlocation/resource-manager/Microsoft.ExtendedLocation/CustomLocations/main.tsp",
+  "classification": "main-bearing",
+  "sourceSha": "965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6",
+  "sourceLockHash": "c9f31e6fdd233ffaa8e9937551dfe1fc2c532bc338992209e82470706de837a0",
+  "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
+  "projectInputHash": "8fb65628d39276b3cacf30fbead3a2f6d6232c4b0b5f16f9302d726a37669f66",
+  "toolVersion": "1.5.0",
+  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "compilerVersion": "1.18.0",
+  "armLibraryVersion": "0.74.0",
+  "rulesetVersion": "0.74.0",
+  "reportDirectory": "Report_20261124_no-resource-name-conflict",
+  "status": "succeeded-clean",
+  "resourceCount": 2,
+  "operationCount": 13,
+  "diagnosticCount": 0,
+  "findingCount": 0,
+  "affectedLogicalNames": [],
+  "correlatedResourceCount": 0,
+  "matchedDiagnosticCount": 0,
+  "partialDiagnosticCount": 0,
+  "unmatchedDiagnosticCount": 0,
+  "targetDiagnostics": [],
+  "diagnostics": {
+    "errors": 0,
+    "warnings": 0,
+    "total": 0
+  },
+  "outputHashes": {
+    "resourcesCsv": "8f786832ce9a69f2d00740ad3b7825c3f976ec57ed518032b513618db082dfcd",
+    "operationsCsv": "08f1521bc8db6894e094eeb3430c4f2f64d45ea4eb3ad7d36bea52c6351ba2dc",
+    "diagnosticsJson": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "statusJson": "5ece5a9d69e04f80511378ccc0a5a1abc7a58397c053dffe72115f353e181a2f"
+  }
+}
