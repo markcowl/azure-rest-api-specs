@@ -109,8 +109,30 @@ function aggregateOutputDirectory(repositoryRoot: string, reportDirectory: strin
 }
 
 async function packageVersion(repositoryRoot: string, packageName: string): Promise<string> {
-  const path = join(repositoryRoot, "node_modules", ...packageName.split("/"), "package.json");
-  return (JSON.parse(await readFile(path, "utf8")) as { version: string }).version;
+  const installedPath = join(
+    repositoryRoot,
+    "node_modules",
+    ...packageName.split("/"),
+    "package.json",
+  );
+  try {
+    return (JSON.parse(await readFile(installedPath, "utf8")) as { version: string }).version;
+  } catch (error) {
+    if (
+      packageName !== reportToolPackage ||
+      !(error instanceof Error && "code" in error && error.code === "ENOENT")
+    ) {
+      throw error;
+    }
+    const workspacePath = join(
+      repositoryRoot,
+      "eng",
+      "tools",
+      "typespec-arm-resource-data",
+      "package.json",
+    );
+    return (JSON.parse(await readFile(workspacePath, "utf8")) as { version: string }).version;
+  }
 }
 
 async function gitSha(repositoryRoot: string, ref: string): Promise<string> {
