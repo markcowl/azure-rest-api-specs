@@ -8,7 +8,7 @@
   "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
   "projectInputHash": "7b0e7594df375eed6becc0744cc6631f4dcc76d945b08bcc3d8314f6820787e4",
   "toolVersion": "1.5.0",
-  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "toolSourceCommit": "6ee60da1984fb32e4eefdf04be15158f58cb37a9",
   "compilerVersion": "1.18.0",
   "armLibraryVersion": "0.74.0",
   "rulesetVersion": "0.74.0",
@@ -138,7 +138,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/TasksAPI/SecurityTask.tsp#L174, distinct from 'LocationsTasks'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getResourceGroupLevelTask",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/TasksAPI/SecurityTask.tsp#L174",
+        "templateName": "TaskOps.Read",
+        "interfaceName": "Tasks",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/TasksAPI/SecurityTask.tsp#L172"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `getResourceGroupLevelTask` a distinct logical resource name such as `LocationsTasksResourceGroup`. Pass that name through the `TaskOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Tasks` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`getResourceGroupLevelTask` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/TasksAPI/SecurityTask.tsp#L174).",
+          "It is instantiated from `TaskOps.Read`.",
+          "It is declared in interface `Tasks` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/TasksAPI/SecurityTask.tsp#L172).",
+          "The conflicting operation resolves to `Microsoft.Security/locations/tasks`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `getResourceGroupLevelTask` a distinct logical resource name such as `LocationsTasksResourceGroup`. Pass that name through the `TaskOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Tasks` and forward it consistently to every lifecycle/list operation for this resource."
     }
   ],
   "diagnostics": {
@@ -149,7 +168,8 @@
   "outputHashes": {
     "resourcesCsv": "23b408948a8769705b5cbbb8b9435564f246140832d89bc75f15684562285f24",
     "operationsCsv": "341b845dfbe8bcbc0175a33df471190922707f376e12739c3765a8f45da09980",
-    "diagnosticsJson": "14ffa5d1f562977e3b652a8f19df2f9d326c3f62d12cc77b2454aa714407231c",
-    "statusJson": "a96391c17093ccb653402596b41a3ea17bbc8176c1af88ad5ba33aac07c093ac"
+    "diagnosticsJson": "a8b991ad16066d7d97e9b0764d31afd2d1467e58159fed08e12150536aa4b9f8",
+    "readmeMd": "35b273f628fc65e79a0b194d95b05f4af007bf7bf6fc667fff920e58f6846c1b",
+    "statusJson": "a958bb294cdf5081bf7d9749e08d49e6f4c5e8895e1e323ae1ea2f2991b3f3fc"
   }
 }

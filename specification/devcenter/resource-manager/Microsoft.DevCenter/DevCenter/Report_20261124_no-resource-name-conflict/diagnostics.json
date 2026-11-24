@@ -135,7 +135,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L139, distinct from 'CatalogsImageDefinitions'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getByProjectCatalog",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L139",
+      "templateName": "ProjectCatalogImageDefinitionOps.Read",
+      "interfaceName": "ProjectCatalogImageDefinitions",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L137"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `getByProjectCatalog` a distinct logical resource name such as `CatalogsImageDefinitionsResourceGroup`. Pass that name through the `ProjectCatalogImageDefinitionOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ProjectCatalogImageDefinitions` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`getByProjectCatalog` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L139).",
+        "It is instantiated from `ProjectCatalogImageDefinitionOps.Read`.",
+        "It is declared in interface `ProjectCatalogImageDefinitions` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinition.tsp#L137).",
+        "The conflicting operation resolves to `Microsoft.DevCenter/projects/catalogs/imageDefinitions`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `getByProjectCatalog` a distinct logical resource name such as `CatalogsImageDefinitionsResourceGroup`. Pass that name through the `ProjectCatalogImageDefinitionOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ProjectCatalogImageDefinitions` and forward it consistently to every lifecycle/list operation for this resource."
   },
   {
     "findingId": "NRNC-FCBEE75CB4F1",
@@ -273,6 +292,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L152, distinct from 'ImageDefinitionsBuilds'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "get",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L152",
+      "templateName": "ProjectCatalogImageDefinitionBuildOps.Read",
+      "interfaceName": "ProjectCatalogImageDefinitionBuild",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L150"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `get` a distinct logical resource name such as `ImageDefinitionsBuildsResourceGroup`. Pass that name through the `ProjectCatalogImageDefinitionBuildOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ProjectCatalogImageDefinitionBuild` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L152).",
+        "It is instantiated from `ProjectCatalogImageDefinitionBuildOps.Read`.",
+        "It is declared in interface `ProjectCatalogImageDefinitionBuild` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/devcenter/resource-manager/Microsoft.DevCenter/DevCenter/ImageDefinitionBuild.tsp#L150).",
+        "The conflicting operation resolves to `Microsoft.DevCenter/projects/catalogs/imageDefinitions/builds`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `ImageDefinitionsBuildsResourceGroup`. Pass that name through the `ProjectCatalogImageDefinitionBuildOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ProjectCatalogImageDefinitionBuild` and forward it consistently to every lifecycle/list operation for this resource."
   }
 ]

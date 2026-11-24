@@ -87,6 +87,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L127, distinct from 'KeysVersions'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getVersion",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L127",
+      "templateName": "ManagedHsmKeyOperationGroupOps.Read",
+      "interfaceName": "ManagedHsmKeyOperationGroup",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L124"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `getVersion` a distinct logical resource name such as `KeysVersionsResourceGroup`. Pass that name through the `ManagedHsmKeyOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ManagedHsmKeyOperationGroup` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`getVersion` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L127).",
+        "It is instantiated from `ManagedHsmKeyOperationGroupOps.Read`.",
+        "It is declared in interface `ManagedHsmKeyOperationGroup` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L124).",
+        "The conflicting operation resolves to `Microsoft.KeyVault/managedHSMs/keys/versions`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `getVersion` a distinct logical resource name such as `KeysVersionsResourceGroup`. Pass that name through the `ManagedHsmKeyOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ManagedHsmKeyOperationGroup` and forward it consistently to every lifecycle/list operation for this resource."
   }
 ]

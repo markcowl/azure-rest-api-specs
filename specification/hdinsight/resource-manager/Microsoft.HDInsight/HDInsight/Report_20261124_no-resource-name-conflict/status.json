@@ -8,7 +8,7 @@
   "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
   "projectInputHash": "e9f5d353cb935aed94b16574889a5475a638040aad0bdcce7e2e21e33b8b56a3",
   "toolVersion": "1.5.0",
-  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "toolSourceCommit": "6ee60da1984fb32e4eefdf04be15158f58cb37a9",
   "compilerVersion": "1.18.0",
   "armLibraryVersion": "0.74.0",
   "rulesetVersion": "0.74.0",
@@ -127,7 +127,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Application.tsp#L81, distinct from 'Application'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getAzureAsyncOperationStatus",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Application.tsp#L81",
+        "templateName": "ArmResourceRead",
+        "interfaceName": "Applications",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Application.tsp#L41"
+      },
+      "recommendation": {
+        "kind": "override-operation-resource-name",
+        "text": "Set the optional resource-name argument on the ARM resource decorator for `getAzureAsyncOperationStatus` to a distinct value such as `ApplicationResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+        "evidence": [
+          "`getAzureAsyncOperationStatus` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Application.tsp#L81).",
+          "It is instantiated from `ArmResourceRead`.",
+          "It is declared in interface `Applications` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Application.tsp#L41).",
+          "The conflicting operation resolves to `Microsoft.HDInsight/clusters/applications/azureasyncoperations`."
+        ]
+      },
+      "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getAzureAsyncOperationStatus` to a distinct value such as `ApplicationResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
     },
     {
       "findingId": "NRNC-35B285B4A6E1",
@@ -653,7 +672,27 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L172, distinct from 'Cluster'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getAzureAsyncOperationStatus",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L172",
+        "templateName": "ArmResourceRead",
+        "interfaceName": "Clusters",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L39"
+      },
+      "recommendation": {
+        "kind": "override-operation-resource-name",
+        "text": "Set the optional resource-name argument on the ARM resource decorator for `getAzureAsyncOperationStatus` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs.",
+        "evidence": [
+          "`getAzureAsyncOperationStatus` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L172).",
+          "It is instantiated from `ArmResourceRead`.",
+          "It is declared in interface `Clusters` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/Cluster.tsp#L39).",
+          "The conflicting operation resolves to `Microsoft.HDInsight/clusters/azureasyncoperations`.",
+          "Lifecycle-looking operations classified as actions use unsupported action verbs: `enableMonitoring` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L154)); `disableMonitoring` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L181)); `enableAzureMonitor` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L194)); `disableAzureMonitor` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L221)); `enableAzureMonitorAgent` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L234)); `disableAzureMonitorAgent` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L261))."
+        ]
+      },
+      "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getAzureAsyncOperationStatus` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs."
     },
     {
       "findingId": "NRNC-C160C51116EA",
@@ -1179,7 +1218,27 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L133, distinct from 'Cluster'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "get",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L133",
+        "templateName": "ArmResourceRead",
+        "interfaceName": "Configurations",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L97"
+      },
+      "recommendation": {
+        "kind": "override-operation-resource-name",
+        "text": "Set the optional resource-name argument on the ARM resource decorator for `get` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs.",
+        "evidence": [
+          "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L133).",
+          "It is instantiated from `ArmResourceRead`.",
+          "It is declared in interface `Configurations` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L97).",
+          "The conflicting operation resolves to `Microsoft.HDInsight/clusters/configurations`.",
+          "Lifecycle-looking operations classified as actions use unsupported action verbs: `enableMonitoring` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L154)); `disableMonitoring` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L181)); `enableAzureMonitor` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L194)); `disableAzureMonitor` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L221)); `enableAzureMonitorAgent` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L234)); `disableAzureMonitorAgent` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L261))."
+        ]
+      },
+      "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `get` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs."
     },
     {
       "findingId": "NRNC-FD986A51A151",
@@ -1705,7 +1764,27 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L295, distinct from 'Cluster'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "get",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L295",
+        "templateName": "ArmResourceRead",
+        "interfaceName": "Extensions",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L152"
+      },
+      "recommendation": {
+        "kind": "override-operation-resource-name",
+        "text": "Set the optional resource-name argument on the ARM resource decorator for `get` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs.",
+        "evidence": [
+          "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L295).",
+          "It is instantiated from `ArmResourceRead`.",
+          "It is declared in interface `Extensions` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L152).",
+          "The conflicting operation resolves to `Microsoft.HDInsight/clusters/extensions`.",
+          "Lifecycle-looking operations classified as actions use unsupported action verbs: `enableMonitoring` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L154)); `disableMonitoring` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L181)); `enableAzureMonitor` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L194)); `disableAzureMonitor` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L221)); `enableAzureMonitorAgent` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L234)); `disableAzureMonitorAgent` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L261))."
+        ]
+      },
+      "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `get` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs."
     },
     {
       "findingId": "NRNC-0A00CBBECCA1",
@@ -2231,7 +2310,27 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L335, distinct from 'Cluster'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getAzureAsyncOperationStatus",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L335",
+        "templateName": "ArmResourceRead",
+        "interfaceName": "Extensions",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L152"
+      },
+      "recommendation": {
+        "kind": "override-operation-resource-name",
+        "text": "Set the optional resource-name argument on the ARM resource decorator for `getAzureAsyncOperationStatus` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs.",
+        "evidence": [
+          "`getAzureAsyncOperationStatus` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L335).",
+          "It is instantiated from `ArmResourceRead`.",
+          "It is declared in interface `Extensions` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L152).",
+          "The conflicting operation resolves to `Microsoft.HDInsight/clusters/extensions/azureAsyncOperations`.",
+          "Lifecycle-looking operations classified as actions use unsupported action verbs: `enableMonitoring` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L154)); `disableMonitoring` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L181)); `enableAzureMonitor` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L194)); `disableAzureMonitor` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L221)); `enableAzureMonitorAgent` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L234)); `disableAzureMonitorAgent` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L261))."
+        ]
+      },
+      "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getAzureAsyncOperationStatus` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs."
     },
     {
       "findingId": "NRNC-C16B02268D6A",
@@ -2757,7 +2856,27 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L415, distinct from 'Cluster'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getExecutionDetail",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L415",
+        "templateName": "ArmResourceRead",
+        "interfaceName": "ScriptActions",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L362"
+      },
+      "recommendation": {
+        "kind": "override-operation-resource-name",
+        "text": "Set the optional resource-name argument on the ARM resource decorator for `getExecutionDetail` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs.",
+        "evidence": [
+          "`getExecutionDetail` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L415).",
+          "It is instantiated from `ArmResourceRead`.",
+          "It is declared in interface `ScriptActions` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L362).",
+          "The conflicting operation resolves to `Microsoft.HDInsight/clusters/scriptExecutionHistory`.",
+          "Lifecycle-looking operations classified as actions use unsupported action verbs: `enableMonitoring` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L154)); `disableMonitoring` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L181)); `enableAzureMonitor` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L194)); `disableAzureMonitor` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L221)); `enableAzureMonitorAgent` (`PUT`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L234)); `disableAzureMonitorAgent` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/hdinsight/resource-manager/Microsoft.HDInsight/HDInsight/routes.tsp#L261))."
+        ]
+      },
+      "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getExecutionDetail` to a distinct value such as `ClusterResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once. Separately remodel `enableMonitoring`, `disableMonitoring`, `enableAzureMonitor`, `disableAzureMonitor`, `enableAzureMonitorAgent`, `disableAzureMonitorAgent` as lifecycle operations because their verbs are not valid action verbs."
     }
   ],
   "diagnostics": {
@@ -2768,7 +2887,8 @@
   "outputHashes": {
     "resourcesCsv": "783fb6f9358d4812b4946644edee7b0da72ae6bf008e36d46cb66dc7b497a2e1",
     "operationsCsv": "5b300dcbbbd041f3efc891749bd17ec6a99d7915cef0dbdf79e21a5ac08a7934",
-    "diagnosticsJson": "100c6d7bbaaab7c9a1a11a6fa52f69ca2ae24740d823c61672bc0f4d61e5d97f",
-    "statusJson": "ef014703da31116502aded764bc35277fdb1082f4f2abc2e49e801a8c35627f5"
+    "diagnosticsJson": "b995bf714fe97cc22021bb09effb34b114d4525154f053e0fb3fa327c6a7709c",
+    "readmeMd": "9b96d2da7946ecd244ab75f7a2e43b401b61c67a30e351c2d8010bf725eb14eb",
+    "statusJson": "4a395f858f84b2d5ddd799991b72370a4244e0fe9454b1f0f15e448d877e7371"
   }
 }

@@ -8,7 +8,7 @@
   "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
   "projectInputHash": "cd4f469f0602b54fddd4cfcf73145824ddf105ef0ab18069fdbb4e09570084d8",
   "toolVersion": "1.5.0",
-  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "toolSourceCommit": "6ee60da1984fb32e4eefdf04be15158f58cb37a9",
   "compilerVersion": "1.18.0",
   "armLibraryVersion": "0.74.0",
   "rulesetVersion": "0.74.0",
@@ -256,7 +256,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L162, distinct from 'ClusterResource'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getCommandAsync",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L162",
+        "templateName": "ArmResourceRead",
+        "interfaceName": "ClusterResources",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L52"
+      },
+      "recommendation": {
+        "kind": "override-operation-resource-name",
+        "text": "Set the optional resource-name argument on the ARM resource decorator for `getCommandAsync` to a distinct value such as `ClusterResourceResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+        "evidence": [
+          "`getCommandAsync` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L162).",
+          "It is instantiated from `ArmResourceRead`.",
+          "It is declared in interface `ClusterResources` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L52).",
+          "The conflicting operation resolves to `Microsoft.DocumentDB/cassandraClusters/commands`."
+        ]
+      },
+      "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getCommandAsync` to a distinct value such as `ClusterResourceResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
     },
     {
       "findingId": "NRNC-EBB3A4E448DC",
@@ -488,7 +507,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L203, distinct from 'ClusterResource'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getBackup",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L203",
+        "templateName": "ArmResourceRead",
+        "interfaceName": "ClusterResources",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L52"
+      },
+      "recommendation": {
+        "kind": "override-operation-resource-name",
+        "text": "Set the optional resource-name argument on the ARM resource decorator for `getBackup` to a distinct value such as `ClusterResourceResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+        "evidence": [
+          "`getBackup` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L203).",
+          "It is instantiated from `ArmResourceRead`.",
+          "It is declared in interface `ClusterResources` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cosmos-db/resource-manager/Microsoft.DocumentDB/DocumentDB/ClusterResource.tsp#L52).",
+          "The conflicting operation resolves to `Microsoft.DocumentDB/cassandraClusters/backups`."
+        ]
+      },
+      "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getBackup` to a distinct value such as `ClusterResourceResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
     }
   ],
   "diagnostics": {
@@ -499,7 +537,8 @@
   "outputHashes": {
     "resourcesCsv": "d232fc78f41b2a54d89f35ecf49ca8f25fdfea90e2c17a265b291f2d6bcdc790",
     "operationsCsv": "2ef4d9875e9716d955130efd0b2153f68c9bde0754c977b1a23d5b24c05fa583",
-    "diagnosticsJson": "4af7a94ff5ff5b8070aa8cec3da8d9b11be82841182bd23f8fa18769f404400c",
-    "statusJson": "c47d6cf5a5bbf1aa716f0c281926e278fbd41b526922902461a0282b41046f0d"
+    "diagnosticsJson": "f4aec51aaafb920a9c0693538c2cf7c05307bdc6e6ac314b124a409636f46f34",
+    "readmeMd": "351209670edb2d158271994f3c1c5ac294190a4fa9adad070a68d5c38186d0df",
+    "statusJson": "99a9595359651d1b77ab535ae8cff2effbea8bc87200503ec10b0599ad5b6328"
   }
 }

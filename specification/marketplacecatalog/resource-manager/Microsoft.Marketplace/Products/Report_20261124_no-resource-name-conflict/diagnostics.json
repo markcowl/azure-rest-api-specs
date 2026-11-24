@@ -107,7 +107,24 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L239, distinct from 'ProductSingle'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getBySubscription",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L239",
+      "interfaceName": "ProductGet",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L196"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `getBySubscription` to a distinct value such as `ProductSingleSubscription`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`getBySubscription` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L239).",
+        "It is declared in interface `ProductGet` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L196).",
+        "The conflicting operation resolves to `Microsoft.Marketplace/products`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getBySubscription` to a distinct value such as `ProductSingleSubscription`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   },
   {
     "findingId": "NRNC-D03142A6FF6C",
@@ -217,7 +234,24 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L277, distinct from 'ProductSingle'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getByBillingAccount",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L277",
+      "interfaceName": "ProductGet",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L196"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `getByBillingAccount` to a distinct value such as `ProductSingleBillingAccount`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`getByBillingAccount` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L277).",
+        "It is declared in interface `ProductGet` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L196).",
+        "The conflicting operation resolves to `Microsoft.Marketplace/products`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getByBillingAccount` to a distinct value such as `ProductSingleBillingAccount`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   },
   {
     "findingId": "NRNC-1B95C01C42DF",
@@ -327,6 +361,23 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L311, distinct from 'ProductSingle'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getByBillingProfile",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L311",
+      "interfaceName": "ProductGet",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L196"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `getByBillingProfile` to a distinct value such as `ProductSingleBillingProfile`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`getByBillingProfile` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L311).",
+        "It is declared in interface `ProductGet` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Products/main.tsp#L196).",
+        "The conflicting operation resolves to `Microsoft.Marketplace/products`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getByBillingProfile` to a distinct value such as `ProductSingleBillingProfile`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   }
 ]

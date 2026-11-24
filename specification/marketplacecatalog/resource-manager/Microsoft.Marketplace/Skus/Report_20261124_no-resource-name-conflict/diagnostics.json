@@ -87,6 +87,23 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L145, distinct from 'Sku'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getByBillingProfile",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L145",
+      "interfaceName": "Skus",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L34"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `getByBillingProfile` to a distinct value such as `SkuBillingProfile`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`getByBillingProfile` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L145).",
+        "It is declared in interface `Skus` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/marketplacecatalog/resource-manager/Microsoft.Marketplace/Skus/main.tsp#L34).",
+        "The conflicting operation resolves to `Microsoft.Marketplace/skus`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getByBillingProfile` to a distinct value such as `SkuBillingProfile`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   }
 ]

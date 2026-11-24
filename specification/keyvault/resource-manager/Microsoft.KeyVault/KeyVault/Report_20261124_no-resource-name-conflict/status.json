@@ -8,7 +8,7 @@
   "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
   "projectInputHash": "324676c7ca4784f594100397c3a4e1ad038b8acf66811efe0bdb6bca974515b5",
   "toolVersion": "1.5.0",
-  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "toolSourceCommit": "6ee60da1984fb32e4eefdf04be15158f58cb37a9",
   "compilerVersion": "1.18.0",
   "armLibraryVersion": "0.74.0",
   "rulesetVersion": "0.74.0",
@@ -114,7 +114,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L127, distinct from 'KeysVersions'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getVersion",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L127",
+        "templateName": "ManagedHsmKeyOperationGroupOps.Read",
+        "interfaceName": "ManagedHsmKeyOperationGroup",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L124"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `getVersion` a distinct logical resource name such as `KeysVersionsResourceGroup`. Pass that name through the `ManagedHsmKeyOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ManagedHsmKeyOperationGroup` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`getVersion` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L127).",
+          "It is instantiated from `ManagedHsmKeyOperationGroupOps.Read`.",
+          "It is declared in interface `ManagedHsmKeyOperationGroup` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/keyvault/resource-manager/Microsoft.KeyVault/KeyVault/ManagedHsmKey.tsp#L124).",
+          "The conflicting operation resolves to `Microsoft.KeyVault/managedHSMs/keys/versions`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `getVersion` a distinct logical resource name such as `KeysVersionsResourceGroup`. Pass that name through the `ManagedHsmKeyOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ManagedHsmKeyOperationGroup` and forward it consistently to every lifecycle/list operation for this resource."
     }
   ],
   "diagnostics": {
@@ -125,7 +144,8 @@
   "outputHashes": {
     "resourcesCsv": "86a5c7c840aee01db263a181d5592c871a5954cadce1d02f4554fd9315cc34bb",
     "operationsCsv": "4ed4be1564f892d47dfc5a4fda523690a7f97ea9cbf1cb3386adaf7cc0c4e290",
-    "diagnosticsJson": "7b775c89911ddd5465c66639b67bce77229debc28d541740e29602692e1bfee6",
-    "statusJson": "d839ad038d2fe3be5b5841db0a5cb706fe0828f69de973a65518cc6360fe7e33"
+    "diagnosticsJson": "2cd183c1da257f4d94b4afc351ac2c8faf441b33b5e298bc78575dea10814bb1",
+    "readmeMd": "3afda8e474f7860cbdb58e6af48cadbf5c7e66508f0e7054b33399d4014e182e",
+    "statusJson": "9bb65200d39173cf00ec128293ad29d28ccb160d8c50ddf5f6d21f7e7cb49586"
   }
 }

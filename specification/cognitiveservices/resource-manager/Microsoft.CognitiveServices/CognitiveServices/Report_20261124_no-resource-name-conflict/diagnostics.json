@@ -219,6 +219,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L282, distinct from 'CognitiveServicesAccount'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "createOrUpdate",
+      "verb": "put",
+      "kind": "createOrUpdate",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L282",
+      "templateName": "AccountOps.CreateOrUpdateSync",
+      "interfaceName": "Accounts",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L137"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `createOrUpdate` a distinct logical resource name such as `CognitiveServicesAccountResourceGroup`. Pass that name through the `AccountOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Accounts` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`createOrUpdate` is a `PUT` createOrUpdate operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L282).",
+        "It is instantiated from `AccountOps.CreateOrUpdateSync`.",
+        "It is declared in interface `Accounts` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L137).",
+        "The conflicting operation resolves to `Microsoft.CognitiveServices/accounts/testRaiExternalSafetyProvider`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `createOrUpdate` a distinct logical resource name such as `CognitiveServicesAccountResourceGroup`. Pass that name through the `AccountOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Accounts` and forward it consistently to every lifecycle/list operation for this resource."
   }
 ]

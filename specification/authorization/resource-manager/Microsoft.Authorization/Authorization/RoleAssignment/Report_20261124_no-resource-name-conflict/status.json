@@ -8,7 +8,7 @@
   "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
   "projectInputHash": "efb6f9007d2139cfaa44bee4cdd9f75ce769caa4c08d279e6dcce989fa40e966",
   "toolVersion": "1.5.0",
-  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "toolSourceCommit": "6ee60da1984fb32e4eefdf04be15158f58cb37a9",
   "compilerVersion": "1.18.0",
   "armLibraryVersion": "0.74.0",
   "rulesetVersion": "0.74.0",
@@ -150,7 +150,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L153, distinct from 'RoleAssignment'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "get",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L153",
+        "templateName": "RoleAssignmentQuerysOps.Read",
+        "interfaceName": "RoleAssignments",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L151"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `get` a distinct logical resource name such as `RoleAssignmentRoleAssignments`. Pass that name through the `RoleAssignmentQuerysOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `RoleAssignments` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L153).",
+          "It is instantiated from `RoleAssignmentQuerysOps.Read`.",
+          "It is declared in interface `RoleAssignments` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L151).",
+          "The conflicting operation resolves to `Microsoft.Authorization/roleAssignments`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `RoleAssignmentRoleAssignments`. Pass that name through the `RoleAssignmentQuerysOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `RoleAssignments` and forward it consistently to every lifecycle/list operation for this resource."
     }
   ],
   "diagnostics": {
@@ -161,7 +180,8 @@
   "outputHashes": {
     "resourcesCsv": "3d12d61b6741ae89a458a63a5e7ff1ceca33479dcea558900161d97f09371589",
     "operationsCsv": "46801da918da9922edf969675d57bf2c2592afdca61892bd1d46eefc737c8731",
-    "diagnosticsJson": "b2948d9286166a61e519abe6d88b2fc25aed236405070bacc41b5afacc8f14b3",
-    "statusJson": "4b615fb3d869073a5f161ad13b47728973f5b3b6e3697f450983bc6a3233d630"
+    "diagnosticsJson": "a8dff7e5d2922314d8065ffb8a6957b72ce6728326a1233740187aa76ca6b5bf",
+    "readmeMd": "584f19ea2d2097bab78e026cfa1c3e412d8136d681115d3302e9d81e7ffe889c",
+    "statusJson": "5198b378d988f7d752419c57f9e876cc3b453a9b831ed9eb57f69b782dc5529f"
   }
 }

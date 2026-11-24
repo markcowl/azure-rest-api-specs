@@ -159,7 +159,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L136, distinct from 'VirtualMachinesDiagnosticRunCommands'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "get",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L136",
+      "templateName": "VirtualMachineScaleSetVMDiagnosticRunCommandOps.Read",
+      "interfaceName": "VirtualMachineScaleSetVMDiagnosticRunCommands",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L134"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `get` a distinct logical resource name such as `VirtualMachinesDiagnosticRunCommandsResourceGroup`. Pass that name through the `VirtualMachineScaleSetVMDiagnosticRunCommandOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `VirtualMachineScaleSetVMDiagnosticRunCommands` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L136).",
+        "It is instantiated from `VirtualMachineScaleSetVMDiagnosticRunCommandOps.Read`.",
+        "It is declared in interface `VirtualMachineScaleSetVMDiagnosticRunCommands` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineDiagnosticRunCommand.tsp#L134).",
+        "The conflicting operation resolves to `Microsoft.Compute/virtualMachineScaleSets/virtualMachines/diagnosticRunCommands`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `VirtualMachinesDiagnosticRunCommandsResourceGroup`. Pass that name through the `VirtualMachineScaleSetVMDiagnosticRunCommandOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `VirtualMachineScaleSetVMDiagnosticRunCommands` and forward it consistently to every lifecycle/list operation for this resource."
   },
   {
     "findingId": "NRNC-1F7BAFD48789",
@@ -321,6 +340,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L158, distinct from 'VirtualMachinesRunCommands'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "get",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L158",
+      "templateName": "VirtualMachineScaleSetVMRunCommandOps.Read",
+      "interfaceName": "VirtualMachineScaleSetVMRunCommands",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L156"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `get` a distinct logical resource name such as `VirtualMachinesRunCommandsResourceGroup`. Pass that name through the `VirtualMachineScaleSetVMRunCommandOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `VirtualMachineScaleSetVMRunCommands` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L158).",
+        "It is instantiated from `VirtualMachineScaleSetVMRunCommandOps.Read`.",
+        "It is declared in interface `VirtualMachineScaleSetVMRunCommands` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/compute/resource-manager/Microsoft.Compute/Compute/Compute/VirtualMachineRunCommand.tsp#L156).",
+        "The conflicting operation resolves to `Microsoft.Compute/virtualMachineScaleSets/virtualMachines/runCommands`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `VirtualMachinesRunCommandsResourceGroup`. Pass that name through the `VirtualMachineScaleSetVMRunCommandOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `VirtualMachineScaleSetVMRunCommands` and forward it consistently to every lifecycle/list operation for this resource."
   }
 ]

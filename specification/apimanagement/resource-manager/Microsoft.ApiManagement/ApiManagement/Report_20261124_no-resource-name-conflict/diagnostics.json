@@ -159,7 +159,27 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L330, distinct from 'ApiManagementGroup'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "create",
+      "verb": "put",
+      "kind": "createOrUpdate",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L330",
+      "templateName": "GroupContractOps.CreateOrUpdateSync",
+      "interfaceName": "GroupContracts",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L155"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `create` a distinct logical resource name such as `ApiManagementGroupResourceGroup`. Pass that name through the `GroupContractOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `GroupContracts` and forward it consistently to every lifecycle/list operation for this resource. Separately remodel `checkEntityExists`, `groupUserDelete` as lifecycle operations because their verbs are not valid action verbs.",
+      "evidence": [
+        "`create` is a `PUT` createOrUpdate operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L330).",
+        "It is instantiated from `GroupContractOps.CreateOrUpdateSync`.",
+        "It is declared in interface `GroupContracts` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L155).",
+        "The conflicting operation resolves to `Microsoft.ApiManagement/service/groups/users`.",
+        "Lifecycle-looking operations classified as actions use unsupported action verbs: `checkEntityExists` (`HEAD`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L319)); `groupUserDelete` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L352))."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `create` a distinct logical resource name such as `ApiManagementGroupResourceGroup`. Pass that name through the `GroupContractOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `GroupContracts` and forward it consistently to every lifecycle/list operation for this resource. Separately remodel `checkEntityExists`, `groupUserDelete` as lifecycle operations because their verbs are not valid action verbs."
   },
   {
     "findingId": "NRNC-20EB9CD63E56",
@@ -321,7 +341,27 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L580, distinct from 'ServiceWorkspaceGroup'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "create",
+      "verb": "put",
+      "kind": "createOrUpdate",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L580",
+      "templateName": "WorkspaceGroupOps.CreateOrUpdateSync",
+      "interfaceName": "WorkspaceGroup",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L405"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `create` a distinct logical resource name such as `ServiceWorkspaceGroupResourceGroup`. Pass that name through the `WorkspaceGroupOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `WorkspaceGroup` and forward it consistently to every lifecycle/list operation for this resource. Separately remodel `checkEntityExists`, `workspaceGroupUserDelete` as lifecycle operations because their verbs are not valid action verbs.",
+      "evidence": [
+        "`create` is a `PUT` createOrUpdate operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L580).",
+        "It is instantiated from `WorkspaceGroupOps.CreateOrUpdateSync`.",
+        "It is declared in interface `WorkspaceGroup` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L405).",
+        "The conflicting operation resolves to `Microsoft.ApiManagement/service/workspaces/groups/users`.",
+        "Lifecycle-looking operations classified as actions use unsupported action verbs: `checkEntityExists` (`HEAD`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L569)); `workspaceGroupUserDelete` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/GroupContract.tsp#L603))."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `create` a distinct logical resource name such as `ServiceWorkspaceGroupResourceGroup`. Pass that name through the `WorkspaceGroupOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `WorkspaceGroup` and forward it consistently to every lifecycle/list operation for this resource. Separately remodel `checkEntityExists`, `workspaceGroupUserDelete` as lifecycle operations because their verbs are not valid action verbs."
   },
   {
     "findingId": "NRNC-AEB38325FB87",
@@ -481,7 +521,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L481, distinct from 'ServiceWorkspaceNotification'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "workspaceNotificationRecipientUserCreateOrUpdate",
+      "verb": "put",
+      "kind": "createOrUpdate",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L481",
+      "templateName": "WorkspaceNotificationOps.CreateOrUpdateSync",
+      "interfaceName": "WorkspaceNotification",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L411"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `workspaceNotificationRecipientUserCreateOrUpdate` a distinct logical resource name such as `ServiceWorkspaceNotificationResourceGroup`. Pass that name through the `WorkspaceNotificationOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `WorkspaceNotification` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`workspaceNotificationRecipientUserCreateOrUpdate` is a `PUT` createOrUpdate operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L481).",
+        "It is instantiated from `WorkspaceNotificationOps.CreateOrUpdateSync`.",
+        "It is declared in interface `WorkspaceNotification` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L411).",
+        "The conflicting operation resolves to `Microsoft.ApiManagement/service/workspaces/notifications/recipientUsers`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `workspaceNotificationRecipientUserCreateOrUpdate` a distinct logical resource name such as `ServiceWorkspaceNotificationResourceGroup`. Pass that name through the `WorkspaceNotificationOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `WorkspaceNotification` and forward it consistently to every lifecycle/list operation for this resource."
   },
   {
     "findingId": "NRNC-193B3B296D57",
@@ -641,7 +700,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L534, distinct from 'ServiceWorkspaceNotification'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "workspaceNotificationRecipientEmailCreateOrUpdate",
+      "verb": "put",
+      "kind": "createOrUpdate",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L534",
+      "templateName": "WorkspaceNotificationOps.CreateOrUpdateSync",
+      "interfaceName": "WorkspaceNotification",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L411"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `workspaceNotificationRecipientEmailCreateOrUpdate` a distinct logical resource name such as `ServiceWorkspaceNotificationResourceGroup`. Pass that name through the `WorkspaceNotificationOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `WorkspaceNotification` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`workspaceNotificationRecipientEmailCreateOrUpdate` is a `PUT` createOrUpdate operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L534).",
+        "It is instantiated from `WorkspaceNotificationOps.CreateOrUpdateSync`.",
+        "It is declared in interface `WorkspaceNotification` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/NotificationContract.tsp#L411).",
+        "The conflicting operation resolves to `Microsoft.ApiManagement/service/workspaces/notifications/recipientEmails`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `workspaceNotificationRecipientEmailCreateOrUpdate` a distinct logical resource name such as `ServiceWorkspaceNotificationResourceGroup`. Pass that name through the `WorkspaceNotificationOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `WorkspaceNotification` and forward it consistently to every lifecycle/list operation for this resource."
   },
   {
     "findingId": "NRNC-0FAD4B98EE2E",
@@ -885,7 +963,27 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L339, distinct from 'ApiManagementProduct'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "productApiCreateOrUpdate",
+      "verb": "put",
+      "kind": "createOrUpdate",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L339",
+      "templateName": "ProductContractOps.CreateOrUpdateSync",
+      "interfaceName": "ProductContracts",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L149"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `productApiCreateOrUpdate` a distinct logical resource name such as `ApiManagementProductResourceGroup`. Pass that name through the `ProductContractOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ProductContracts` and forward it consistently to every lifecycle/list operation for this resource. Separately remodel `checkEntityExists`, `productApiDelete`, `productGroupCheckEntityExists`, `productGroupDelete` as lifecycle operations because their verbs are not valid action verbs.",
+      "evidence": [
+        "`productApiCreateOrUpdate` is a `PUT` createOrUpdate operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L339).",
+        "It is instantiated from `ProductContractOps.CreateOrUpdateSync`.",
+        "It is declared in interface `ProductContracts` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L149).",
+        "The conflicting operation resolves to `Microsoft.ApiManagement/service/products/apis`.",
+        "Lifecycle-looking operations classified as actions use unsupported action verbs: `checkEntityExists` (`HEAD`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L328)); `productApiDelete` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L363)); `productGroupCheckEntityExists` (`HEAD`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L410)); `productGroupDelete` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L444))."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `productApiCreateOrUpdate` a distinct logical resource name such as `ApiManagementProductResourceGroup`. Pass that name through the `ProductContractOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ProductContracts` and forward it consistently to every lifecycle/list operation for this resource. Separately remodel `checkEntityExists`, `productApiDelete`, `productGroupCheckEntityExists`, `productGroupDelete` as lifecycle operations because their verbs are not valid action verbs."
   },
   {
     "findingId": "NRNC-A089353351F3",
@@ -1129,6 +1227,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L421, distinct from 'ApiManagementProduct'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "productGroupCreateOrUpdate",
+      "verb": "put",
+      "kind": "createOrUpdate",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L421",
+      "templateName": "ProductContractOps.CreateOrUpdateSync",
+      "interfaceName": "ProductContracts",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L149"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `productGroupCreateOrUpdate` a distinct logical resource name such as `ApiManagementProductResourceGroup`. Pass that name through the `ProductContractOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ProductContracts` and forward it consistently to every lifecycle/list operation for this resource. Separately remodel `checkEntityExists`, `productApiDelete`, `productGroupCheckEntityExists`, `productGroupDelete` as lifecycle operations because their verbs are not valid action verbs.",
+      "evidence": [
+        "`productGroupCreateOrUpdate` is a `PUT` createOrUpdate operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L421).",
+        "It is instantiated from `ProductContractOps.CreateOrUpdateSync`.",
+        "It is declared in interface `ProductContracts` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L149).",
+        "The conflicting operation resolves to `Microsoft.ApiManagement/service/products/groups`.",
+        "Lifecycle-looking operations classified as actions use unsupported action verbs: `checkEntityExists` (`HEAD`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L328)); `productApiDelete` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L363)); `productGroupCheckEntityExists` (`HEAD`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L410)); `productGroupDelete` (`DELETE`, [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/apimanagement/resource-manager/Microsoft.ApiManagement/ApiManagement/ProductContract.tsp#L444))."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `productGroupCreateOrUpdate` a distinct logical resource name such as `ApiManagementProductResourceGroup`. Pass that name through the `ProductContractOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ProductContracts` and forward it consistently to every lifecycle/list operation for this resource. Separately remodel `checkEntityExists`, `productApiDelete`, `productGroupCheckEntityExists`, `productGroupDelete` as lifecycle operations because their verbs are not valid action verbs."
   }
 ]

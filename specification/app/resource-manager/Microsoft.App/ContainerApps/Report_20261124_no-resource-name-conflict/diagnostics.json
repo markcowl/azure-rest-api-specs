@@ -111,6 +111,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L138, distinct from 'ContainerAppLabelHistory'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getLabelHistory",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L138",
+      "templateName": "LabelHistoryOps.Read",
+      "interfaceName": "ContainerAppsLabelHistory",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L135"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `getLabelHistory` a distinct logical resource name such as `ContainerAppLabelHistoryResourceGroup`. Pass that name through the `LabelHistoryOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ContainerAppsLabelHistory` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`getLabelHistory` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L138).",
+        "It is instantiated from `LabelHistoryOps.Read`.",
+        "It is declared in interface `ContainerAppsLabelHistory` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/app/resource-manager/Microsoft.App/ContainerApps/LabelHistory.tsp#L135).",
+        "The conflicting operation resolves to `Microsoft.App/containerApps/labelHistories`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `getLabelHistory` a distinct logical resource name such as `ContainerAppLabelHistoryResourceGroup`. Pass that name through the `LabelHistoryOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ContainerAppsLabelHistory` and forward it consistently to every lifecycle/list operation for this resource."
   }
 ]

@@ -8,7 +8,7 @@
   "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
   "projectInputHash": "024c0a18a8602a030b1575364656b23de9b4979f7dfd0485f20b0945b0219db3",
   "toolVersion": "1.5.0",
-  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "toolSourceCommit": "6ee60da1984fb32e4eefdf04be15158f58cb37a9",
   "compilerVersion": "1.18.0",
   "armLibraryVersion": "0.74.0",
   "rulesetVersion": "0.74.0",
@@ -210,7 +210,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L229, distinct from 'SiteRecoveryReplicationProtectionClusterResource'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getOperationResults",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L229",
+        "templateName": "ReplicationProtectionClusterOperationGroupOps.Read",
+        "interfaceName": "ReplicationProtectionClusterOperationGroup",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L226"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `getOperationResults` a distinct logical resource name such as `SiteRecoveryReplicationProtectionClusterResourceResourceGroup`. Pass that name through the `ReplicationProtectionClusterOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ReplicationProtectionClusterOperationGroup` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`getOperationResults` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L229).",
+          "It is instantiated from `ReplicationProtectionClusterOperationGroupOps.Read`.",
+          "It is declared in interface `ReplicationProtectionClusterOperationGroup` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L226).",
+          "The conflicting operation resolves to `Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionClusters/operationResults`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `getOperationResults` a distinct logical resource name such as `SiteRecoveryReplicationProtectionClusterResourceResourceGroup`. Pass that name through the `ReplicationProtectionClusterOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ReplicationProtectionClusterOperationGroup` and forward it consistently to every lifecycle/list operation for this resource."
     }
   ],
   "diagnostics": {
@@ -221,7 +240,8 @@
   "outputHashes": {
     "resourcesCsv": "22ce1dcdda06b5c19bc0051de21844a1b0841ad8118ecb69cd822d021fa06e08",
     "operationsCsv": "aeddadd42355d7b98d9f7d0dca88228ea6a474b974946391a2cf9e2312d2f7c3",
-    "diagnosticsJson": "c006fde819d54210170ef5074635b05263ad20b62afb6f8ba05140012a0c88af",
-    "statusJson": "c1c9cd6d5c8e1e06e476186285105056cd37ebf57925aecb1937f781c2df343b"
+    "diagnosticsJson": "d1c9c77cc018f1e21625426da9b3ca68e48ad21aa9f439481c6bcdced10f3fd3",
+    "readmeMd": "0017b0cfb4abcb96f418d42353ac06a3c0da16670aa9882ca3fecbc95e249bbd",
+    "statusJson": "978523344c65d510ebd8c6fe39dea7f52863e624da0b87c2be9409cfc2e15b85"
   }
 }

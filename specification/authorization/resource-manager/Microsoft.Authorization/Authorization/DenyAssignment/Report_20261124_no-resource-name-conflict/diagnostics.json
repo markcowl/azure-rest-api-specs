@@ -99,6 +99,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L115, distinct from 'DenyAssignment'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "get",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L115",
+      "templateName": "Extension.Read",
+      "interfaceName": "DenyAssignments",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L113"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `get` a distinct logical resource name such as `DenyAssignmentDenyAssignments`. Pass that name through the `Extension.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `DenyAssignments` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L115).",
+        "It is instantiated from `Extension.Read`.",
+        "It is declared in interface `DenyAssignments` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/DenyAssignment/DenyAssignment.tsp#L113).",
+        "The conflicting operation resolves to `Microsoft.Authorization/denyAssignments`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `DenyAssignmentDenyAssignments`. Pass that name through the `Extension.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `DenyAssignments` and forward it consistently to every lifecycle/list operation for this resource."
   }
 ]

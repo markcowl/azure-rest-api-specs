@@ -335,7 +335,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L116, distinct from 'AutomationAccount'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "nodeCountInformationGet",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L116",
+      "templateName": "ArmResourceRead",
+      "interfaceName": "AutomationAccounts",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L60"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `nodeCountInformationGet` to a distinct value such as `AutomationAccountResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`nodeCountInformationGet` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L116).",
+        "It is instantiated from `ArmResourceRead`.",
+        "It is declared in interface `AutomationAccounts` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L60).",
+        "The conflicting operation resolves to `Microsoft.Automation/automationAccounts/nodecounts`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `nodeCountInformationGet` to a distinct value such as `AutomationAccountResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   },
   {
     "findingId": "NRNC-A088692069CA",
@@ -673,7 +692,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L340, distinct from 'AutomationAccount'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getById",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L340",
+      "templateName": "ArmResourceRead",
+      "interfaceName": "AutomationAccounts",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L60"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `getById` to a distinct value such as `AutomationAccountResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`getById` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L340).",
+        "It is instantiated from `ArmResourceRead`.",
+        "It is declared in interface `AutomationAccounts` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L60).",
+        "The conflicting operation resolves to `Microsoft.Automation/automationAccounts/softwareUpdateConfigurationMachineRuns`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `getById` to a distinct value such as `AutomationAccountResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   },
   {
     "findingId": "NRNC-B225272ABDDE",
@@ -1011,7 +1049,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L399, distinct from 'AutomationAccount'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "softwareUpdateConfigurationRunsGetById",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L399",
+      "templateName": "ArmResourceRead",
+      "interfaceName": "AutomationAccounts",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L60"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `softwareUpdateConfigurationRunsGetById` to a distinct value such as `AutomationAccountResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`softwareUpdateConfigurationRunsGetById` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L399).",
+        "It is instantiated from `ArmResourceRead`.",
+        "It is declared in interface `AutomationAccounts` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/AutomationAccount.tsp#L60).",
+        "The conflicting operation resolves to `Microsoft.Automation/automationAccounts/softwareUpdateConfigurationRuns`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `softwareUpdateConfigurationRunsGetById` to a distinct value such as `AutomationAccountResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   },
   {
     "findingId": "NRNC-EE915EA109FE",
@@ -1125,7 +1182,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L114, distinct from 'DscNode'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "nodeReportsGet",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L114",
+      "templateName": "ArmResourceRead",
+      "interfaceName": "DscNodes",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L28"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `nodeReportsGet` to a distinct value such as `DscNodeResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`nodeReportsGet` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L114).",
+        "It is instantiated from `ArmResourceRead`.",
+        "It is declared in interface `DscNodes` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/DscNode.tsp#L28).",
+        "The conflicting operation resolves to `Microsoft.Automation/automationAccounts/nodes/reports`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `nodeReportsGet` to a distinct value such as `DscNodeResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   },
   {
     "findingId": "NRNC-21E5C489ADE8",
@@ -1275,7 +1351,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L180, distinct from 'Job'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "jobStreamGet",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L180",
+      "templateName": "ArmResourceRead",
+      "interfaceName": "Jobs",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L27"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `jobStreamGet` to a distinct value such as `JobResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`jobStreamGet` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L180).",
+        "It is instantiated from `ArmResourceRead`.",
+        "It is declared in interface `Jobs` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/Job.tsp#L27).",
+        "The conflicting operation resolves to `Microsoft.Automation/automationAccounts/jobs/streams`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `jobStreamGet` to a distinct value such as `JobResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   },
   {
     "findingId": "NRNC-75942DABE3DB",
@@ -1459,7 +1554,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L98, distinct from 'SourceControl'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "create",
+      "verb": "put",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L98",
+      "templateName": "ArmResourceRead",
+      "interfaceName": "SourceControls",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L39"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `create` to a distinct value such as `SourceControlResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`create` is a `PUT` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L98).",
+        "It is instantiated from `ArmResourceRead`.",
+        "It is declared in interface `SourceControls` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L39).",
+        "The conflicting operation resolves to `Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `create` to a distinct value such as `SourceControlResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   },
   {
     "findingId": "NRNC-12A0F6A0940D",
@@ -1643,6 +1757,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L176, distinct from 'SourceControl'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "sourceControlSyncJobStreamsGet",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L176",
+      "templateName": "ArmResourceRead",
+      "interfaceName": "SourceControls",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L39"
+    },
+    "recommendation": {
+      "kind": "override-operation-resource-name",
+      "text": "Set the optional resource-name argument on the ARM resource decorator for `sourceControlSyncJobStreamsGet` to a distinct value such as `SourceControlResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once.",
+      "evidence": [
+        "`sourceControlSyncJobStreamsGet` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L176).",
+        "It is instantiated from `ArmResourceRead`.",
+        "It is declared in interface `SourceControls` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/automation/resource-manager/Microsoft.Automation/Automation/SourceControl.tsp#L39).",
+        "The conflicting operation resolves to `Microsoft.Automation/automationAccounts/sourceControls/sourceControlSyncJobs/streams`."
+      ]
+    },
+    "suggestedFix": "Set the optional resource-name argument on the ARM resource decorator for `sourceControlSyncJobStreamsGet` to a distinct value such as `SourceControlResourceGroup`, and use the same value for every operation that belongs to this resolved resource. If the operations are currently declared independently, refactor them into one resource operation interface so the name is defined once."
   }
 ]

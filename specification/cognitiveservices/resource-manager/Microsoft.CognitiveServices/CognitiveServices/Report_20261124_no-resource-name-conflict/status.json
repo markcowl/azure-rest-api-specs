@@ -8,7 +8,7 @@
   "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
   "projectInputHash": "fff61b13e3a5404f063c33a2e24e7e15727ad36c19ec6080dab0736f7e7cdda1",
   "toolVersion": "1.5.0",
-  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "toolSourceCommit": "6ee60da1984fb32e4eefdf04be15158f58cb37a9",
   "compilerVersion": "1.18.0",
   "armLibraryVersion": "0.74.0",
   "rulesetVersion": "0.74.0",
@@ -246,7 +246,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L282, distinct from 'CognitiveServicesAccount'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "createOrUpdate",
+        "verb": "put",
+        "kind": "createOrUpdate",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L282",
+        "templateName": "AccountOps.CreateOrUpdateSync",
+        "interfaceName": "Accounts",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L137"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `createOrUpdate` a distinct logical resource name such as `CognitiveServicesAccountResourceGroup`. Pass that name through the `AccountOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Accounts` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`createOrUpdate` is a `PUT` createOrUpdate operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L282).",
+          "It is instantiated from `AccountOps.CreateOrUpdateSync`.",
+          "It is declared in interface `Accounts` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/cognitiveservices/resource-manager/Microsoft.CognitiveServices/CognitiveServices/Account.tsp#L137).",
+          "The conflicting operation resolves to `Microsoft.CognitiveServices/accounts/testRaiExternalSafetyProvider`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `createOrUpdate` a distinct logical resource name such as `CognitiveServicesAccountResourceGroup`. Pass that name through the `AccountOps.CreateOrUpdateSync` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Accounts` and forward it consistently to every lifecycle/list operation for this resource."
     }
   ],
   "diagnostics": {
@@ -257,7 +276,8 @@
   "outputHashes": {
     "resourcesCsv": "1d96283472c02aeeffd61b74b97015feb8cc0889c3ae86b783baa36e6b2ee045",
     "operationsCsv": "9c7f8b1c68bb2f74e052e30bc09ea57c34bdd707ac854f7f3289b1da67d537df",
-    "diagnosticsJson": "0ee6254d588364ef53eafad2e987b565c2e0546e704242bf9efe7539a311c990",
-    "statusJson": "5f6fe28b81b381d1aa77fdbf149533203ef1a065b69a609fd8272d9432d98ea0"
+    "diagnosticsJson": "25835165a3fae20570173edaf9894e1d6db510cd764cbb689fbae4e002294aed",
+    "readmeMd": "6a89668020f33b58c4bc74edcbec6f0b916f3fa70f89540f74c4bca2455a3ef5",
+    "statusJson": "082b0ccad7c5b0c2f5939eb0513e9108b7d05ed1c1ba823d1700d00a498c478a"
   }
 }

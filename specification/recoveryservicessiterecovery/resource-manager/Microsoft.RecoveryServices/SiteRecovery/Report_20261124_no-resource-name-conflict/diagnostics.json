@@ -183,6 +183,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L229, distinct from 'SiteRecoveryReplicationProtectionClusterResource'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getOperationResults",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L229",
+      "templateName": "ReplicationProtectionClusterOperationGroupOps.Read",
+      "interfaceName": "ReplicationProtectionClusterOperationGroup",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L226"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `getOperationResults` a distinct logical resource name such as `SiteRecoveryReplicationProtectionClusterResourceResourceGroup`. Pass that name through the `ReplicationProtectionClusterOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ReplicationProtectionClusterOperationGroup` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`getOperationResults` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L229).",
+        "It is instantiated from `ReplicationProtectionClusterOperationGroupOps.Read`.",
+        "It is declared in interface `ReplicationProtectionClusterOperationGroup` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/recoveryservicessiterecovery/resource-manager/Microsoft.RecoveryServices/SiteRecovery/ReplicationProtectionCluster.tsp#L226).",
+        "The conflicting operation resolves to `Microsoft.RecoveryServices/vaults/replicationFabrics/replicationProtectionContainers/replicationProtectionClusters/operationResults`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `getOperationResults` a distinct logical resource name such as `SiteRecoveryReplicationProtectionClusterResourceResourceGroup`. Pass that name through the `ReplicationProtectionClusterOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ReplicationProtectionClusterOperationGroup` and forward it consistently to every lifecycle/list operation for this resource."
   }
 ]

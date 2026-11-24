@@ -8,7 +8,7 @@
   "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
   "projectInputHash": "ee6780e53aa995dc02b578ad1f25b25f6f3edf7eb551eec8a637b4c7af3816f7",
   "toolVersion": "1.5.0",
-  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "toolSourceCommit": "6ee60da1984fb32e4eefdf04be15158f58cb37a9",
   "compilerVersion": "1.18.0",
   "armLibraryVersion": "0.74.0",
   "rulesetVersion": "0.74.0",
@@ -210,7 +210,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L144, distinct from 'LocationsAlerts'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "getResourceGroupLevel",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L144",
+        "templateName": "AlertOperationGroupOps.Read",
+        "interfaceName": "AlertOperationGroup",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L142"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `getResourceGroupLevel` a distinct logical resource name such as `LocationsAlertsResourceGroup`. Pass that name through the `AlertOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `AlertOperationGroup` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`getResourceGroupLevel` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L144).",
+          "It is instantiated from `AlertOperationGroupOps.Read`.",
+          "It is declared in interface `AlertOperationGroup` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/security/resource-manager/Microsoft.Security/Security/AlertsAPI/Alert.tsp#L142).",
+          "The conflicting operation resolves to `Microsoft.Security/locations/alerts`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `getResourceGroupLevel` a distinct logical resource name such as `LocationsAlertsResourceGroup`. Pass that name through the `AlertOperationGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `AlertOperationGroup` and forward it consistently to every lifecycle/list operation for this resource."
     }
   ],
   "diagnostics": {
@@ -221,7 +240,8 @@
   "outputHashes": {
     "resourcesCsv": "8a10485b09d85c5c51afa9184e3b63dfe9de40cb796339cce40582cf77e04a99",
     "operationsCsv": "d2295de5003cabda26e4ecee34ee9090ab9c4f7e548a659e041d528240cb43c5",
-    "diagnosticsJson": "306bc8eb737688556f8acdcb7ce4da5d9c25f94388177ee07defb49623ad1595",
-    "statusJson": "74f8a7cbfc3a16cec4ba8f308556e4fae56e7c9aa00afe34c1f4e81512e10608"
+    "diagnosticsJson": "3baad1c5edac7274fdec8136247b15241cd890cfd01cc37f1a89bb0b19bad4a3",
+    "readmeMd": "7e3befbb98a95c0cdcb96eeb1d56c5007c24faac889b03bcb708f6972e9f2fc6",
+    "statusJson": "62686cfc71aad7a4d091c530e346d8c71a965911832359f8892b9fa7678c0765"
   }
 }

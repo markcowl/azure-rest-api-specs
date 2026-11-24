@@ -265,7 +265,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L89, distinct from 'PolicyAttestation'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getAtSubscription",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L89",
+      "templateName": "AttestationSubscriptionOps.Read",
+      "interfaceName": "Attestations",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L87"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `getAtSubscription` a distinct logical resource name such as `PolicyAttestationSubscription`. Pass that name through the `AttestationSubscriptionOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Attestations` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`getAtSubscription` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L89).",
+        "It is instantiated from `AttestationSubscriptionOps.Read`.",
+        "It is declared in interface `Attestations` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L87).",
+        "The conflicting operation resolves to `Microsoft.PolicyInsights/attestations`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `getAtSubscription` a distinct logical resource name such as `PolicyAttestationSubscription`. Pass that name through the `AttestationSubscriptionOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Attestations` and forward it consistently to every lifecycle/list operation for this resource."
   },
   {
     "findingId": "NRNC-5DB1F1F92D97",
@@ -533,7 +552,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L140, distinct from 'PolicyAttestation'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getAtResourceGroup",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L140",
+      "templateName": "AttestationResourceGroupOps.Read",
+      "interfaceName": "Attestations",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L87"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `getAtResourceGroup` a distinct logical resource name such as `PolicyAttestationResourceGroup`. Pass that name through the `AttestationResourceGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Attestations` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`getAtResourceGroup` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L140).",
+        "It is instantiated from `AttestationResourceGroupOps.Read`.",
+        "It is declared in interface `Attestations` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Attestation.tsp#L87).",
+        "The conflicting operation resolves to `Microsoft.PolicyInsights/attestations`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `getAtResourceGroup` a distinct logical resource name such as `PolicyAttestationResourceGroup`. Pass that name through the `AttestationResourceGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Attestations` and forward it consistently to every lifecycle/list operation for this resource."
   },
   {
     "findingId": "NRNC-836C68F3BC81",
@@ -1003,7 +1041,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L119, distinct from 'PolicyRemediation'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getAtManagementGroup",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L119",
+      "templateName": "RemediationManagementGroupOps.Read",
+      "interfaceName": "Remediations",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L117"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `getAtManagementGroup` a distinct logical resource name such as `PolicyRemediationManagementGroup`. Pass that name through the `RemediationManagementGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Remediations` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`getAtManagementGroup` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L119).",
+        "It is instantiated from `RemediationManagementGroupOps.Read`.",
+        "It is declared in interface `Remediations` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L117).",
+        "The conflicting operation resolves to `Microsoft.PolicyInsights/remediations`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `getAtManagementGroup` a distinct logical resource name such as `PolicyRemediationManagementGroup`. Pass that name through the `RemediationManagementGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Remediations` and forward it consistently to every lifecycle/list operation for this resource."
   },
   {
     "findingId": "NRNC-BAB95392BE87",
@@ -1473,7 +1530,26 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L173, distinct from 'PolicyRemediation'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getAtSubscription",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L173",
+      "templateName": "RemediationSubscriptionOps.Read",
+      "interfaceName": "Remediations",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L117"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `getAtSubscription` a distinct logical resource name such as `PolicyRemediationSubscription`. Pass that name through the `RemediationSubscriptionOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Remediations` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`getAtSubscription` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L173).",
+        "It is instantiated from `RemediationSubscriptionOps.Read`.",
+        "It is declared in interface `Remediations` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L117).",
+        "The conflicting operation resolves to `Microsoft.PolicyInsights/remediations`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `getAtSubscription` a distinct logical resource name such as `PolicyRemediationSubscription`. Pass that name through the `RemediationSubscriptionOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Remediations` and forward it consistently to every lifecycle/list operation for this resource."
   },
   {
     "findingId": "NRNC-6DAF29AF1800",
@@ -1943,6 +2019,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L257, distinct from 'PolicyRemediation'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "getAtResourceGroup",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L257",
+      "templateName": "RemediationResourceGroupOps.Read",
+      "interfaceName": "Remediations",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L117"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `getAtResourceGroup` a distinct logical resource name such as `PolicyRemediationResourceGroup`. Pass that name through the `RemediationResourceGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Remediations` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`getAtResourceGroup` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L257).",
+        "It is instantiated from `RemediationResourceGroupOps.Read`.",
+        "It is declared in interface `Remediations` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/policyinsights/resource-manager/Microsoft.PolicyInsights/PolicyInsights/PolicyInsightsApi/Remediation.tsp#L117).",
+        "The conflicting operation resolves to `Microsoft.PolicyInsights/remediations`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `getAtResourceGroup` a distinct logical resource name such as `PolicyRemediationResourceGroup`. Pass that name through the `RemediationResourceGroupOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Remediations` and forward it consistently to every lifecycle/list operation for this resource."
   }
 ]

@@ -8,7 +8,7 @@
   "reportLockHash": "70ffef339bcc28168d695defa7790bb1b060e2f9b196bd97ad14f75a2b7ca301",
   "projectInputHash": "8f8cd6e7b0412d62154735cb8e38390732c4d6fccca1182d45c33cc0ecbaaeea",
   "toolVersion": "1.5.0",
-  "toolSourceCommit": "d42a12e7e3e2ea4bc8f5dee418f591a8b524eef9",
+  "toolSourceCommit": "6ee60da1984fb32e4eefdf04be15158f58cb37a9",
   "compilerVersion": "1.18.0",
   "armLibraryVersion": "0.74.0",
   "rulesetVersion": "0.74.0",
@@ -118,7 +118,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L70, distinct from 'SupportTicketsChatTranscripts'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "get",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L70",
+        "templateName": "ChatTranscriptOps.Read",
+        "interfaceName": "ChatTranscripts",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L68"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `get` a distinct logical resource name such as `SupportTicketsChatTranscriptsSubscription`. Pass that name through the `ChatTranscriptOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ChatTranscripts` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L70).",
+          "It is instantiated from `ChatTranscriptOps.Read`.",
+          "It is declared in interface `ChatTranscripts` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/ChatTranscriptDetails.tsp#L68).",
+          "The conflicting operation resolves to `Microsoft.Support/supportTickets/chatTranscripts`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `SupportTicketsChatTranscriptsSubscription`. Pass that name through the `ChatTranscriptOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `ChatTranscripts` and forward it consistently to every lifecycle/list operation for this resource."
     },
     {
       "findingId": "NRNC-B7E92876F475",
@@ -232,7 +251,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L72, distinct from 'SupportTicketsCommunications'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "get",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L72",
+        "templateName": "CommunicationOps.Read",
+        "interfaceName": "Communications",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L70"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `get` a distinct logical resource name such as `SupportTicketsCommunicationsSubscription`. Pass that name through the `CommunicationOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Communications` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L72).",
+          "It is instantiated from `CommunicationOps.Read`.",
+          "It is declared in interface `Communications` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/CommunicationDetails.tsp#L70).",
+          "The conflicting operation resolves to `Microsoft.Support/supportTickets/communications`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `SupportTicketsCommunicationsSubscription`. Pass that name through the `CommunicationOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Communications` and forward it consistently to every lifecycle/list operation for this resource."
     },
     {
       "findingId": "NRNC-4BB1800F4C2B",
@@ -370,7 +408,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L67, distinct from 'FileWorkspacesFiles'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "get",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L67",
+        "templateName": "FileOps.Read",
+        "interfaceName": "Files",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L65"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `get` a distinct logical resource name such as `FileWorkspacesFilesSubscription`. Pass that name through the `FileOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Files` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L67).",
+          "It is instantiated from `FileOps.Read`.",
+          "It is declared in interface `Files` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileDetails.tsp#L65).",
+          "The conflicting operation resolves to `Microsoft.Support/fileWorkspaces/files`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `FileWorkspacesFilesSubscription`. Pass that name through the `FileOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `Files` and forward it consistently to every lifecycle/list operation for this resource."
     },
     {
       "findingId": "NRNC-B4144C266C51",
@@ -460,7 +517,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L44, distinct from 'FileWorkspaces'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "get",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L44",
+        "templateName": "FileWorkspaceOps.Read",
+        "interfaceName": "FileWorkspaces",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L42"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `get` a distinct logical resource name such as `FileWorkspacesSubscription`. Pass that name through the `FileWorkspaceOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `FileWorkspaces` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L44).",
+          "It is instantiated from `FileWorkspaceOps.Read`.",
+          "It is declared in interface `FileWorkspaces` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/FileWorkspaceDetails.tsp#L42).",
+          "The conflicting operation resolves to `Microsoft.Support/fileWorkspaces`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `FileWorkspacesSubscription`. Pass that name through the `FileWorkspaceOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `FileWorkspaces` and forward it consistently to every lifecycle/list operation for this resource."
     },
     {
       "findingId": "NRNC-F07F90E864A3",
@@ -622,7 +698,26 @@
           ]
         }
       ],
-      "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L65, distinct from 'SupportTickets'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+      "triggerOperation": {
+        "name": "get",
+        "verb": "get",
+        "kind": "read",
+        "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L65",
+        "templateName": "SupportTicketOps.Read",
+        "interfaceName": "SupportTickets",
+        "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L63"
+      },
+      "recommendation": {
+        "kind": "add-template-resource-name",
+        "text": "Give the operation set containing `get` a distinct logical resource name such as `SupportTicketsSubscription`. Pass that name through the `SupportTicketOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `SupportTickets` and forward it consistently to every lifecycle/list operation for this resource.",
+        "evidence": [
+          "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L65).",
+          "It is instantiated from `SupportTicketOps.Read`.",
+          "It is declared in interface `SupportTickets` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/support/resource-manager/Microsoft.Support/Support/SupportTicketDetails.tsp#L63).",
+          "The conflicting operation resolves to `Microsoft.Support/supportTickets`."
+        ]
+      },
+      "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `SupportTicketsSubscription`. Pass that name through the `SupportTicketOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `SupportTickets` and forward it consistently to every lifecycle/list operation for this resource."
     }
   ],
   "diagnostics": {
@@ -633,7 +728,8 @@
   "outputHashes": {
     "resourcesCsv": "2149f441f685eaebb9ca1c274117b369de59acc3903e7c76562f056e2bf20415",
     "operationsCsv": "c236b98084e614ccf8ec8ef3023572b1694841d7b90c220f9d8a980c71bec791",
-    "diagnosticsJson": "8d970ea525f98a3339845dca3fb1a0611a30b14a1023cfc64f2c1fe4ea7fc57a",
-    "statusJson": "49d8013308f07f0a817a4895c5d9965ccba279b1173cddd1c57e130e39fe0374"
+    "diagnosticsJson": "2f51e1298f64d922354442181b553f94166783f36784af6920f8fe0f649919f4",
+    "readmeMd": "56676e632b1e29fcd2b52c98ac0eb0c8fc22f41794b8eec9d1bd0adf147216ea",
+    "statusJson": "f5130e01a93752d3a8aace66f0b16f0228c9869b86589a34b0767de6c327bd0f"
   }
 }

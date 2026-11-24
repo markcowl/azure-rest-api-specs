@@ -123,6 +123,25 @@
         ]
       }
     ],
-    "suggestedFix": "Provide a unique explicit logical resource name for the resource operation at https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L153, distinct from 'RoleAssignment'. Keep the ARM path and wire API unchanged; pass a distinct ResourceName or OverrideResourceName argument through the resource operation template as applicable. Do not suppress this rule."
+    "triggerOperation": {
+      "name": "get",
+      "verb": "get",
+      "kind": "read",
+      "definition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L153",
+      "templateName": "RoleAssignmentQuerysOps.Read",
+      "interfaceName": "RoleAssignments",
+      "interfaceDefinition": "https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L151"
+    },
+    "recommendation": {
+      "kind": "add-template-resource-name",
+      "text": "Give the operation set containing `get` a distinct logical resource name such as `RoleAssignmentRoleAssignments`. Pass that name through the `RoleAssignmentQuerysOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `RoleAssignments` and forward it consistently to every lifecycle/list operation for this resource.",
+      "evidence": [
+        "`get` is a `GET` read operation at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L153).",
+        "It is instantiated from `RoleAssignmentQuerysOps.Read`.",
+        "It is declared in interface `RoleAssignments` at [source](https://github.com/Azure/azure-rest-api-specs/blob/965a33b4c632fb1aaf5f2ea02e6d603e1c81baa6/specification/authorization/resource-manager/Microsoft.Authorization/Authorization/RoleAssignment/RoleAssignment.tsp#L151).",
+        "The conflicting operation resolves to `Microsoft.Authorization/roleAssignments`."
+      ]
+    },
+    "suggestedFix": "Give the operation set containing `get` a distinct logical resource name such as `RoleAssignmentRoleAssignments`. Pass that name through the `RoleAssignmentQuerysOps.Read` invocation using its `OverrideResourceName` argument, or add a `ResourceName` parameter to the containing interface template `RoleAssignments` and forward it consistently to every lifecycle/list operation for this resource."
   }
 ]
